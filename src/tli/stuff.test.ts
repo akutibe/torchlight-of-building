@@ -615,3 +615,216 @@ test("calculate offense with FervorEff but fervor disabled", () => {
   expect(res?.critChance).toBeCloseTo(0.05);
   expect(res?.avgHitWithCrit).toBeCloseTo(102.5);
 });
+
+test("calculate offense with CritDmgPerFervor single affix", () => {
+  let loadout: Loadout = {
+    equipmentPage: {
+      mainHand: {
+        gearType: "sword",
+        affixes: [
+          { type: "GearBasePhysFlatDmg", value: 100 },
+          { type: "CritDmgPerFervor", value: 0.005 }, // +0.5% crit dmg per fervor point
+        ],
+      },
+    },
+    talentPage: {
+      affixes: [],
+      coreTalents: [],
+    },
+    divinityPage: {
+      slates: [],
+    },
+    customConfiguration: [],
+  };
+
+  let configuration: Configuration = {
+    fervor: {
+      enabled: true,
+      points: 100,
+    },
+  };
+
+  let res = calculateOffense(loadout, "[Test] Simple Attack", configuration);
+
+  // Base damage: 100
+  // Fervor: 100 points * 2% = 200% increased crit rating
+  // Crit chance: 0.05 * (1 + 2.0) = 0.15 (15%)
+  // CritDmgPerFervor: 0.005 * 100 = 0.5 (50% increased crit damage)
+  // Crit damage: 1.5 * (1 + 0.5) = 2.25
+  // AvgHitWithCrit: 100 * 0.15 * 2.25 + 100 * 0.85 = 33.75 + 85 = 118.75
+  expect(res?.avgHit).toBeCloseTo(100);
+  expect(res?.critChance).toBeCloseTo(0.15);
+  expect(res?.critDmgMult).toBeCloseTo(2.25);
+  expect(res?.avgHitWithCrit).toBeCloseTo(118.75);
+});
+
+test("calculate offense with multiple CritDmgPerFervor affixes stacking", () => {
+  let loadout: Loadout = {
+    equipmentPage: {
+      mainHand: {
+        gearType: "sword",
+        affixes: [
+          { type: "GearBasePhysFlatDmg", value: 100 },
+          { type: "CritDmgPerFervor", value: 0.005 }, // +0.5% per point
+        ],
+      },
+    },
+    talentPage: {
+      affixes: [
+        { type: "CritDmgPerFervor", value: 0.003 }, // +0.3% per point
+      ],
+      coreTalents: [],
+    },
+    divinityPage: {
+      slates: [],
+    },
+    customConfiguration: [],
+  };
+
+  let configuration: Configuration = {
+    fervor: {
+      enabled: true,
+      points: 100,
+    },
+  };
+
+  let res = calculateOffense(loadout, "[Test] Simple Attack", configuration);
+
+  // Base damage: 100
+  // Fervor: 100 points * 2% = 200% increased crit rating
+  // Crit chance: 0.05 * (1 + 2.0) = 0.15 (15%)
+  // CritDmgPerFervor total: (0.005 * 100) + (0.003 * 100) = 0.5 + 0.3 = 0.8
+  // Crit damage: 1.5 * (1 + 0.8) = 2.7
+  // AvgHitWithCrit: 100 * 0.15 * 2.7 + 100 * 0.85 = 40.5 + 85 = 125.5
+  expect(res?.avgHit).toBeCloseTo(100);
+  expect(res?.critChance).toBeCloseTo(0.15);
+  expect(res?.critDmgMult).toBeCloseTo(2.7);
+  expect(res?.avgHitWithCrit).toBeCloseTo(125.5);
+});
+
+test("calculate offense with CritDmgPerFervor with custom fervor points", () => {
+  let loadout: Loadout = {
+    equipmentPage: {
+      mainHand: {
+        gearType: "sword",
+        affixes: [
+          { type: "GearBasePhysFlatDmg", value: 100 },
+          { type: "CritDmgPerFervor", value: 0.01 }, // +1% crit dmg per fervor point
+        ],
+      },
+    },
+    talentPage: {
+      affixes: [],
+      coreTalents: [],
+    },
+    divinityPage: {
+      slates: [],
+    },
+    customConfiguration: [],
+  };
+
+  let configuration: Configuration = {
+    fervor: {
+      enabled: true,
+      points: 50,
+    },
+  };
+
+  let res = calculateOffense(loadout, "[Test] Simple Attack", configuration);
+
+  // Base damage: 100
+  // Fervor: 50 points * 2% = 100% increased crit rating
+  // Crit chance: 0.05 * (1 + 1.0) = 0.10 (10%)
+  // CritDmgPerFervor: 0.01 * 50 = 0.5 (50% increased crit damage)
+  // Crit damage: 1.5 * (1 + 0.5) = 2.25
+  // AvgHitWithCrit: 100 * 0.10 * 2.25 + 100 * 0.90 = 22.5 + 90 = 112.5
+  expect(res?.avgHit).toBeCloseTo(100);
+  expect(res?.critChance).toBeCloseTo(0.10);
+  expect(res?.critDmgMult).toBeCloseTo(2.25);
+  expect(res?.avgHitWithCrit).toBeCloseTo(112.5);
+});
+
+test("calculate offense with CritDmgPerFervor but fervor disabled", () => {
+  let loadout: Loadout = {
+    equipmentPage: {
+      mainHand: {
+        gearType: "sword",
+        affixes: [
+          { type: "GearBasePhysFlatDmg", value: 100 },
+          { type: "CritDmgPerFervor", value: 0.005 }, // +0.5% per point
+        ],
+      },
+    },
+    talentPage: {
+      affixes: [],
+      coreTalents: [],
+    },
+    divinityPage: {
+      slates: [],
+    },
+    customConfiguration: [],
+  };
+
+  let configuration: Configuration = {
+    fervor: {
+      enabled: false,
+      points: 100,
+    },
+  };
+
+  let res = calculateOffense(loadout, "[Test] Simple Attack", configuration);
+
+  // CritDmgPerFervor has no effect when fervor is disabled
+  // Crit chance: 0.05 (5%, no fervor bonus)
+  // Crit damage: 1.5 (no bonus)
+  // AvgHitWithCrit: 100 * 0.05 * 1.5 + 100 * 0.95 = 7.5 + 95 = 102.5
+  expect(res?.avgHit).toBeCloseTo(100);
+  expect(res?.critChance).toBeCloseTo(0.05);
+  expect(res?.critDmgMult).toBeCloseTo(1.5);
+  expect(res?.avgHitWithCrit).toBeCloseTo(102.5);
+});
+
+test("calculate offense with CritDmgPerFervor and other crit damage modifiers", () => {
+  let loadout: Loadout = {
+    equipmentPage: {
+      mainHand: {
+        gearType: "sword",
+        affixes: [
+          { type: "GearBasePhysFlatDmg", value: 100 },
+          { type: "CritDmgPerFervor", value: 0.005 }, // +0.5% per point
+          { type: "CritDmgPct", value: 0.3, modType: "global", addn: false }, // +30% increased
+        ],
+      },
+    },
+    talentPage: {
+      affixes: [],
+      coreTalents: [],
+    },
+    divinityPage: {
+      slates: [],
+    },
+    customConfiguration: [],
+  };
+
+  let configuration: Configuration = {
+    fervor: {
+      enabled: true,
+      points: 100,
+    },
+  };
+
+  let res = calculateOffense(loadout, "[Test] Simple Attack", configuration);
+
+  // Base damage: 100
+  // Fervor: 100 points * 2% = 200% increased crit rating
+  // Crit chance: 0.05 * (1 + 2.0) = 0.15 (15%)
+  // CritDmgPerFervor: 0.005 * 100 = 0.5 (50%)
+  // CritDmgPct: 0.3 (30%)
+  // Total increased crit damage: 0.5 + 0.3 = 0.8 (80%)
+  // Crit damage: 1.5 * (1 + 0.8) = 2.7
+  // AvgHitWithCrit: 100 * 0.15 * 2.7 + 100 * 0.85 = 40.5 + 85 = 125.5
+  expect(res?.avgHit).toBeCloseTo(100);
+  expect(res?.critChance).toBeCloseTo(0.15);
+  expect(res?.critDmgMult).toBeCloseTo(2.7);
+  expect(res?.avgHitWithCrit).toBeCloseTo(125.5);
+});

@@ -413,7 +413,10 @@ const calculateCritRating = (
   return 0.05 * (1 + inc);
 };
 
-const calculateCritDmg = (allAffixes: Affix.Affix[]): number => {
+const calculateCritDmg = (
+  allAffixes: Affix.Affix[],
+  configuration: Configuration
+): number => {
   let critDmgPctAffixes = filterAffix(allAffixes, "CritDmgPct");
   let mods = critDmgPctAffixes.map((a) => {
     return {
@@ -424,6 +427,23 @@ const calculateCritDmg = (allAffixes: Affix.Affix[]): number => {
       src: a.src,
     };
   });
+
+  // Handle CritDmgPerFervor affixes
+  if (configuration.fervor.enabled) {
+    let critDmgPerFervorAffixes = filterAffix(allAffixes, "CritDmgPerFervor");
+    critDmgPerFervorAffixes.forEach((a) => {
+      // Calculate bonus: value * fervor points
+      // Example: 0.005 (0.5%) * 100 points = 0.5 (50% increased crit damage)
+      let bonus = a.value * configuration.fervor.points;
+      mods.push({
+        type: "CritDmgPct",
+        value: bonus,
+        addn: false, // Treated as "increased" modifier
+        modType: "global",
+        src: a.src || "CritDmgPerFervor",
+      });
+    });
+  }
 
   let inc = calculateInc(mods.filter((m) => !m.addn).map((v) => v.value));
   let addn = calculateAddn(mods.filter((m) => m.addn).map((v) => v.value));
@@ -643,7 +663,7 @@ export const calculateOffense = (
   let aspd = calculateAspd(loadout, allAffixes);
   let dmgPcts = calculateDmgPcts(allAffixes);
   let critChance = calculateCritRating(allAffixes, configuration);
-  let critDmgMult = calculateCritDmg(allAffixes);
+  let critDmgMult = calculateCritDmg(allAffixes, configuration);
 
   let skillHit = calculateSkillHit(gearDmg, dmgPcts, skillConf);
   let avgHitWithCrit =
