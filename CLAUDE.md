@@ -105,6 +105,33 @@ The damage calculation system in [src/tli/](src/tli/) is the heart of this appli
 
 ## Code Conventions
 
+### Styling
+
+- **Use const arrow functions** instead of function declarations:
+  ```typescript
+  // ✓ Good
+  const parseAffix = (input: string): Affix | undefined => {
+    // ...
+  };
+
+  // ✗ Avoid
+  function parseAffix(input: string): Affix | undefined {
+    // ...
+  }
+  ```
+
+- **Single source of truth for types**: Derive types from const arrays using `as const` and `(typeof ARRAY)[number]`:
+  ```typescript
+  // ✓ Good - only update the array to add new types
+  export const DMG_MOD_TYPES = ["global", "fire", "cold", ...] as const;
+  export type DmgModType = (typeof DMG_MOD_TYPES)[number];
+
+  // ✗ Avoid - duplication requiring updates in multiple places
+  export const DMG_MOD_TYPES = ["global", "fire", "cold", ...];
+  export type DmgModType = "global" | "fire" | "cold" | ...;
+  ```
+### Domain-Specific Conventions
+
 When working with the damage calculation system:
 - Affixes use a discriminated union pattern with a `type` field - create them as object literals like `{ type: "DmgPct", value: 0.5, modType: "global", addn: false }`
 - Use the `findAffix` and `filterAffix` helper functions to safely extract affixes by type (pass the type string, e.g., `findAffix(affixes, "DmgPct")`)
