@@ -37,15 +37,17 @@ pnpm test src/tli/stuff.test.ts
 
 ```
 src/
-├── app/              # Next.js App Router pages
-│   ├── layout.tsx    # Root layout
-│   └── page.tsx      # Home page
-├── tli/              # Core damage calculation logic
-│   ├── affix.ts      # Affix classes (modifiers for gear/talents)
-│   ├── constants.ts  # Type definitions for damage/crit modifiers
-│   ├── stuff.ts      # Main calculation engine
-│   └── stuff.test.ts # Tests for calculations
-└── util/             # Currently empty
+├── app/                  # Next.js App Router pages
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Home page
+├── tli/                  # Core damage calculation logic
+│   ├── affix.ts          # Affix type definitions (discriminated union)
+│   ├── affix_parser.ts   # Parser for converting human-readable strings to Affix objects
+│   ├── affix_parser.test.ts # Tests for affix parser
+│   ├── constants.ts      # Const arrays and derived types for damage/crit modifiers
+│   ├── stuff.ts          # Main calculation engine
+│   └── stuff.test.ts     # Tests for calculations
+└── util/                 # Currently empty
 ```
 
 ## Architecture
@@ -61,7 +63,8 @@ The damage calculation system in [src/tli/](src/tli/) is the heart of this appli
   - `DivinityPage`: Divinity slates (additional modifier sources)
   - Custom configuration affixes
 - `Gear`: Individual equipment pieces with affixes
-- `Affix`: Modifiers that affect stats (defined as classes in [affix.ts](src/tli/affix.ts))
+- `Affix`: Modifiers that affect stats (discriminated union in [affix.ts](src/tli/affix.ts))
+- `Configuration`: Settings like fervor (enabled/disabled and points)
 
 **Calculation Flow:**
 1. Collect all affixes from loadout (`collectAffixes`)
@@ -83,7 +86,15 @@ The damage calculation system in [src/tli/](src/tli/) is the heart of this appli
 - **Stat scaling**: Main stats (STR, DEX, INT) provide damage bonuses at 0.5% per point
 
 **Main Entry Point:**
-- `calculateOffense(loadout, skill)` in [stuff.ts](src/tli/stuff.ts:648-676) is the public API that returns `OffenseSummary`
+- `calculateOffense(loadout, skill, configuration)` in [stuff.ts](src/tli/stuff.ts:648-676) is the public API that returns `OffenseSummary`
+
+**Special Systems:**
+- **Fervor**: Optional mechanic (enabled/disabled in `Configuration`) that provides crit rating bonus
+  - Base: 2% crit rating per fervor point
+  - Modified by `FervorEff` affixes (effectiveness multipliers that stack additively)
+  - Example: 100 points × 2% × (1 + 0.5 FervorEff) = 3.0 (300% increased crit rating)
+  - `CritDmgPerFervor` affixes scale crit damage with fervor points (treated as "increased" modifiers)
+  - Both mechanics only apply when fervor is enabled
 
 ## Technology Stack
 
@@ -133,9 +144,28 @@ The damage calculation system in [src/tli/](src/tli/) is the heart of this appli
 ### Domain-Specific Conventions
 
 When working with the damage calculation system:
-- Affixes use a discriminated union pattern with a `type` field - create them as object literals like `{ type: "DmgPct", value: 0.5, modType: "global", addn: false }`
-- Use the `findAffix` and `filterAffix` helper functions to safely extract affixes by type (pass the type string, e.g., `findAffix(affixes, "DmgPct")`)
-- Damage ranges use inclusive min/max: `{ min: number, max: number }`
-- Follow the "increased/additive" pattern: non-additive modifiers sum first, then additive modifiers multiply
-- When adding new skills, update `offensiveSkillConfs` array and add pattern matching in `calculateSkillHit`
-- When adding new affix types, add them to the discriminated union in [affix.ts](src/tli/affix.ts)
+- **Affixes**: Use discriminated union pattern with a `type` field - create as object literals like `{ type: "DmgPct", value: 0.5, modType: "global", addn: false }`
+- **Extracting affixes**: Use `findAffix(affixes, "DmgPct")` to get first match or `filterAffix(affixes, "DmgPct")` to get all matches (both provide type narrowing)
+- **Damage ranges**: Inclusive min/max `{ min: number, max: number }`
+- **Modifier stacking**: "increased/additive" pattern
+  - Non-additive (`addn: false`) modifiers sum first, then applied once
+  - Additive (`addn: true`) modifiers multiply sequentially
+- **Adding skills**: Update `offensiveSkillConfs` array and add pattern matching in `calculateSkillHit`
+- **Adding affix types**:
+  1. Add to discriminated union in [affix.ts](src/tli/affix.ts)
+  2. Handle in calculation functions in [stuff.ts](src/tli/stuff.ts)
+  3. Optionally add parser in [affix_parser.ts](src/tli/affix_parser.ts)
+
+### Affix Parser
+
+The affix parser ([affix_parser.ts](src/tli/affix_parser.ts)) converts human-readable strings to Affix objects:
+
+- **Main function**: `parseAffix(input: string): Affix | undefined`
+- **Returns**: First matching affix or `undefined` if no parser matches
+- **Pattern**: Individual parser functions for each affix type (e.g., `parseDmgPct`, `parseCritRatingPct`)
+- **Current parsers**:
+  - `parseDmgPct`: Parses damage percentage affixes
+    - Examples: `"+9% damage"` → global, `"+18% fire damage"` → fire type, `"+9% additional attack damage"` → attack type with addn flag
+  - `parseCritRatingPct`: Parses crit rating affixes
+    - Examples: `"+10% Critical Strike Rating"` → global, `"+10% Attack Critical Strike Rating"` → attack type
+- **Adding new parsers**: Create parser function returning `Extract<Affix, { type: "..." }> | undefined` and add to `parsers` array
