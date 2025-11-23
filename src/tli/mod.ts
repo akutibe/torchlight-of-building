@@ -1,7 +1,7 @@
 import { DmgModType, CritRatingModType, CritDmgModType } from "./constants";
 import { DmgRange } from "./stuff";
 
-export type Affix =
+export type Mod =
   | {
       type: "DmgPct";
       value: number;
@@ -203,4 +203,4 @@ export type Affix =
       src?: string;
     };
 
-export type AffixOfType<T> = Extract<Affix, { type: T }>;
+export type ModOfType<T> = Extract<Mod, { type: T }>;

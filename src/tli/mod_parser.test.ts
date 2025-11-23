@@ -1,8 +1,8 @@
 import { expect, test } from "vitest";
-import { parseAffix } from "./affix_parser";
+import { parseMod } from "./mod_parser";
 
 test("parse basic damage without type (global)", () => {
-  const result = parseAffix("+9% damage");
+  const result = parseMod("+9% damage");
   expect(result).toEqual({
     type: "DmgPct",
     value: 0.09,
@@ -12,7 +12,7 @@ test("parse basic damage without type (global)", () => {
 });
 
 test("parse typed damage", () => {
-  const result = parseAffix("+18% fire damage");
+  const result = parseMod("+18% fire damage");
   expect(result).toEqual({
     type: "DmgPct",
     value: 0.18,
@@ -22,7 +22,7 @@ test("parse typed damage", () => {
 });
 
 test("parse additional global damage", () => {
-  const result = parseAffix("+9% additional damage");
+  const result = parseMod("+9% additional damage");
   expect(result).toEqual({
     type: "DmgPct",
     value: 0.09,
@@ -32,7 +32,7 @@ test("parse additional global damage", () => {
 });
 
 test("parse additional typed damage", () => {
-  const result = parseAffix("+9% additional attack damage");
+  const result = parseMod("+9% additional attack damage");
   expect(result).toEqual({
     type: "DmgPct",
     value: 0.09,
@@ -42,7 +42,7 @@ test("parse additional typed damage", () => {
 });
 
 test("parse decimal damage", () => {
-  const result = parseAffix("+12.5% fire damage");
+  const result = parseMod("+12.5% fire damage");
   expect(result).toEqual({
     type: "DmgPct",
     value: 0.125,
@@ -52,12 +52,12 @@ test("parse decimal damage", () => {
 });
 
 test("return unrecognized for invalid damage type", () => {
-  const result = parseAffix("+10% invalid damage");
+  const result = parseMod("+10% invalid damage");
   expect(result).toBe("unrecognized");
 });
 
 test("parse global critical strike rating", () => {
-  const result = parseAffix("+10% Critical Strike Rating");
+  const result = parseMod("+10% Critical Strike Rating");
   expect(result).toEqual({
     type: "CritRatingPct",
     value: 0.1,
@@ -66,7 +66,7 @@ test("parse global critical strike rating", () => {
 });
 
 test("parse typed critical strike rating", () => {
-  const result = parseAffix("+10% Attack Critical Strike Rating");
+  const result = parseMod("+10% Attack Critical Strike Rating");
   expect(result).toEqual({
     type: "CritRatingPct",
     value: 0.1,
@@ -75,7 +75,7 @@ test("parse typed critical strike rating", () => {
 });
 
 test("parse crit rating with decimal percentage", () => {
-  const result = parseAffix("+12.5% Attack Critical Strike Rating");
+  const result = parseMod("+12.5% Attack Critical Strike Rating");
   expect(result).toEqual({
     type: "CritRatingPct",
     value: 0.125,
@@ -84,12 +84,12 @@ test("parse crit rating with decimal percentage", () => {
 });
 
 test("return unrecognized for invalid crit rating mod type", () => {
-  const result = parseAffix("+10% Fire Critical Strike Rating");
+  const result = parseMod("+10% Fire Critical Strike Rating");
   expect(result).toBe("unrecognized");
 });
 
 test("parse basic attack speed", () => {
-  const result = parseAffix("+6% attack speed");
+  const result = parseMod("+6% attack speed");
   expect(result).toEqual({
     type: "AspdPct",
     value: 0.06,
@@ -98,7 +98,7 @@ test("parse basic attack speed", () => {
 });
 
 test("parse additional attack speed", () => {
-  const result = parseAffix("+6% additional attack speed");
+  const result = parseMod("+6% additional attack speed");
   expect(result).toEqual({
     type: "AspdPct",
     value: 0.06,
@@ -107,7 +107,7 @@ test("parse additional attack speed", () => {
 });
 
 test("parse attack speed with decimal percentage", () => {
-  const result = parseAffix("+12.5% attack speed");
+  const result = parseMod("+12.5% attack speed");
   expect(result).toEqual({
     type: "AspdPct",
     value: 0.125,
@@ -116,7 +116,7 @@ test("parse attack speed with decimal percentage", () => {
 });
 
 test("parse basic cast speed", () => {
-  const result = parseAffix("+6% cast speed");
+  const result = parseMod("+6% cast speed");
   expect(result).toEqual({
     type: "CspdPct",
     value: 0.06,
@@ -125,7 +125,7 @@ test("parse basic cast speed", () => {
 });
 
 test("parse basic attack and cast speed", () => {
-  const result = parseAffix("+6% attack and cast speed");
+  const result = parseMod("+6% attack and cast speed");
   expect(result).toEqual({
     type: "AspdAndCspdPct",
     value: 0.06,
@@ -134,7 +134,7 @@ test("parse basic attack and cast speed", () => {
 });
 
 test("parse basic minion attack and cast speed", () => {
-  const result = parseAffix("+6% minion attack and cast speed");
+  const result = parseMod("+6% minion attack and cast speed");
   expect(result).toEqual({
     type: "MinionAspdAndCspdPct",
     value: 0.06,
@@ -143,7 +143,7 @@ test("parse basic minion attack and cast speed", () => {
 });
 
 test("parse attack block chance", () => {
-  const result = parseAffix("+4% Attack Block Chance");
+  const result = parseMod("+4% Attack Block Chance");
   expect(result).toEqual({
     type: "AttackBlockChancePct",
     value: 0.04,
@@ -151,7 +151,7 @@ test("parse attack block chance", () => {
 });
 
 test("parse spell block chance", () => {
-  const result = parseAffix("+4% Spell Block Chance");
+  const result = parseMod("+4% Spell Block Chance");
   expect(result).toEqual({
     type: "SpellBlockChancePct",
     value: 0.04,
@@ -159,7 +159,7 @@ test("parse spell block chance", () => {
 });
 
 test("parse max life", () => {
-  const result = parseAffix("+3% Max Life");
+  const result = parseMod("+3% Max Life");
   expect(result).toEqual({
     type: "MaxLifePct",
     value: 0.03,
@@ -167,7 +167,7 @@ test("parse max life", () => {
 });
 
 test("parse max energy shield", () => {
-  const result = parseAffix("+3% Max Energy Shield");
+  const result = parseMod("+3% Max Energy Shield");
   expect(result).toEqual({
     type: "MaxEnergyShieldPct",
     value: 0.03,
@@ -175,7 +175,7 @@ test("parse max energy shield", () => {
 });
 
 test("parse armor", () => {
-  const result = parseAffix("+5% Armor");
+  const result = parseMod("+5% Armor");
   expect(result).toEqual({
     type: "ArmorPct",
     value: 0.05,
@@ -183,7 +183,7 @@ test("parse armor", () => {
 });
 
 test("parse evasion", () => {
-  const result = parseAffix("+5% Evasion");
+  const result = parseMod("+5% Evasion");
   expect(result).toEqual({
     type: "EvasionPct",
     value: 0.05,
@@ -191,7 +191,7 @@ test("parse evasion", () => {
 });
 
 test("parse life regain", () => {
-  const result = parseAffix("1.5% Life Regain");
+  const result = parseMod("1.5% Life Regain");
   expect(result).toEqual({
     type: "LifeRegainPct",
     value: 0.015,
@@ -199,7 +199,7 @@ test("parse life regain", () => {
 });
 
 test("parse energy shield regain", () => {
-  const result = parseAffix("1.5% Energy Shield Regain");
+  const result = parseMod("1.5% Energy Shield Regain");
   expect(result).toEqual({
     type: "EnergyShieldRegainPct",
     value: 0.015,
@@ -207,7 +207,7 @@ test("parse energy shield regain", () => {
 });
 
 test("parse multistrike chance", () => {
-  const result = parseAffix("+32% chance to Multistrike");
+  const result = parseMod("+32% chance to Multistrike");
   expect(result).toEqual({
     type: "MultistrikeChancePct",
     value: 0.32,
@@ -215,7 +215,7 @@ test("parse multistrike chance", () => {
 });
 
 test("parse flat strength", () => {
-  const result = parseAffix("+6 Strength");
+  const result = parseMod("+6 Strength");
   expect(result).toEqual({
     type: "Str",
     value: 6,
@@ -223,7 +223,7 @@ test("parse flat strength", () => {
 });
 
 test("parse flat dexterity", () => {
-  const result = parseAffix("+6 Dexterity");
+  const result = parseMod("+6 Dexterity");
   expect(result).toEqual({
     type: "Dex",
     value: 6,
@@ -231,7 +231,7 @@ test("parse flat dexterity", () => {
 });
 
 test("parse percentage strength", () => {
-  const result = parseAffix("+4% Strength");
+  const result = parseMod("+4% Strength");
   expect(result).toEqual({
     type: "StrPct",
     value: 0.04,
@@ -239,7 +239,7 @@ test("parse percentage strength", () => {
 });
 
 test("parse percentage dexterity", () => {
-  const result = parseAffix("+4% Dexterity");
+  const result = parseMod("+4% Dexterity");
   expect(result).toEqual({
     type: "DexPct",
     value: 0.04,
@@ -247,7 +247,7 @@ test("parse percentage dexterity", () => {
 });
 
 test("parse fervor effect", () => {
-  const result = parseAffix("+4% Fervor effect");
+  const result = parseMod("+4% Fervor effect");
   expect(result).toEqual({
     type: "FervorEff",
     value: 0.04,
@@ -255,7 +255,7 @@ test("parse fervor effect", () => {
 });
 
 test("parse steep strike chance", () => {
-  const result = parseAffix("+12% Steep Strike chance");
+  const result = parseMod("+12% Steep Strike chance");
   expect(result).toEqual({
     type: "SteepStrikeChance",
     value: 0.12,

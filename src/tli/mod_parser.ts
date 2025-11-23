@@ -1,4 +1,4 @@
-import { Affix, AffixOfType } from "./affix";
+import { Mod, ModOfType } from "./mod";
 import {
   DmgModType,
   DMG_MOD_TYPES,
@@ -6,7 +6,7 @@ import {
   CRIT_RATING_MOD_TYPES,
 } from "./constants";
 
-type ParseResult = "unrecognized" | "unimplemented" | Affix;
+type ParseResult = "unrecognized" | "unimplemented" | Mod;
 
 const isValidDmgModType = (value: string): value is DmgModType => {
   return DMG_MOD_TYPES.includes(value as DmgModType);
@@ -18,7 +18,7 @@ const isValidCritRatingModType = (
   return CRIT_RATING_MOD_TYPES.includes(value as CritRatingModType);
 };
 
-const parseDmgPct = (input: string): AffixOfType<"DmgPct"> | undefined => {
+const parseDmgPct = (input: string): ModOfType<"DmgPct"> | undefined => {
   // Regex to parse: +9% [additional] [fire] damage
   const pattern =
     /^([+-])?(\d+(?:\.\d+)?)% (?:(additional) )?(?:(\w+) )?damage$/i;
@@ -54,7 +54,7 @@ const parseDmgPct = (input: string): AffixOfType<"DmgPct"> | undefined => {
 
 const parseCritRatingPct = (
   input: string
-): AffixOfType<"CritRatingPct"> | undefined => {
+): ModOfType<"CritRatingPct"> | undefined => {
   // Regex to parse: +10% [Attack] Critical Strike Rating
   // The type word comes before "Critical Strike Rating"
   const pattern =
@@ -86,7 +86,7 @@ const parseCritRatingPct = (
   };
 };
 
-const parseAspdPct = (input: string): AffixOfType<"AspdPct"> | undefined => {
+const parseAspdPct = (input: string): ModOfType<"AspdPct"> | undefined => {
   // Regex to parse: +6% [additional] attack speed
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% (?:(additional) )?attack speed$/i;
   const match = input.match(pattern);
@@ -108,7 +108,7 @@ const parseAspdPct = (input: string): AffixOfType<"AspdPct"> | undefined => {
   };
 };
 
-const parseCspdPct = (input: string): AffixOfType<"CspdPct"> | undefined => {
+const parseCspdPct = (input: string): ModOfType<"CspdPct"> | undefined => {
   // Regex to parse: +6% [additional] cast speed
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% (?:(additional) )?cast speed$/i;
   const match = input.match(pattern);
@@ -132,7 +132,7 @@ const parseCspdPct = (input: string): AffixOfType<"CspdPct"> | undefined => {
 
 const parseAspdAndCspdPct = (
   input: string
-): AffixOfType<"AspdAndCspdPct"> | undefined => {
+): ModOfType<"AspdAndCspdPct"> | undefined => {
   // Regex to parse: +6% [additional] attack and cast speed
   const pattern =
     /^([+-])?(\d+(?:\.\d+)?)% (?:(additional) )?attack and cast speed$/i;
@@ -157,7 +157,7 @@ const parseAspdAndCspdPct = (
 
 const parseMinionAspdAndCspdPct = (
   input: string
-): AffixOfType<"MinionAspdAndCspdPct"> | undefined => {
+): ModOfType<"MinionAspdAndCspdPct"> | undefined => {
   // Regex to parse: +6% [additional] minion attack and cast speed
   const pattern =
     /^([+-])?(\d+(?:\.\d+)?)% (?:(additional) )?minion attack and cast speed$/i;
@@ -182,7 +182,7 @@ const parseMinionAspdAndCspdPct = (
 
 const parseAttackBlockChancePct = (
   input: string
-): AffixOfType<"AttackBlockChancePct"> | undefined => {
+): ModOfType<"AttackBlockChancePct"> | undefined => {
   // Regex to parse: +4% Attack Block Chance
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% attack block chance$/i;
   const match = input.match(pattern);
@@ -197,7 +197,7 @@ const parseAttackBlockChancePct = (
 
 const parseSpellBlockChancePct = (
   input: string
-): AffixOfType<"SpellBlockChancePct"> | undefined => {
+): ModOfType<"SpellBlockChancePct"> | undefined => {
   // Regex to parse: +4% Spell Block Chance
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% spell block chance$/i;
   const match = input.match(pattern);
@@ -212,7 +212,7 @@ const parseSpellBlockChancePct = (
 
 const parseMaxLifePct = (
   input: string
-): AffixOfType<"MaxLifePct"> | undefined => {
+): ModOfType<"MaxLifePct"> | undefined => {
   // Regex to parse: +3% Max Life
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% max life$/i;
   const match = input.match(pattern);
@@ -227,7 +227,7 @@ const parseMaxLifePct = (
 
 const parseMaxEnergyShieldPct = (
   input: string
-): AffixOfType<"MaxEnergyShieldPct"> | undefined => {
+): ModOfType<"MaxEnergyShieldPct"> | undefined => {
   // Regex to parse: +3% Max Energy Shield
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% max energy shield$/i;
   const match = input.match(pattern);
@@ -242,7 +242,7 @@ const parseMaxEnergyShieldPct = (
 
 const parseArmorPct = (
   input: string
-): AffixOfType<"ArmorPct"> | undefined => {
+): ModOfType<"ArmorPct"> | undefined => {
   // Regex to parse: +5% Armor
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% armor$/i;
   const match = input.match(pattern);
@@ -257,7 +257,7 @@ const parseArmorPct = (
 
 const parseEvasionPct = (
   input: string
-): AffixOfType<"EvasionPct"> | undefined => {
+): ModOfType<"EvasionPct"> | undefined => {
   // Regex to parse: +5% Evasion
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% evasion$/i;
   const match = input.match(pattern);
@@ -272,7 +272,7 @@ const parseEvasionPct = (
 
 const parseLifeRegainPct = (
   input: string
-): AffixOfType<"LifeRegainPct"> | undefined => {
+): ModOfType<"LifeRegainPct"> | undefined => {
   // Regex to parse: 1.5% Life Regain
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% life regain$/i;
   const match = input.match(pattern);
@@ -287,7 +287,7 @@ const parseLifeRegainPct = (
 
 const parseEnergyShieldRegainPct = (
   input: string
-): AffixOfType<"EnergyShieldRegainPct"> | undefined => {
+): ModOfType<"EnergyShieldRegainPct"> | undefined => {
   // Regex to parse: 1.5% Energy Shield Regain
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% energy shield regain$/i;
   const match = input.match(pattern);
@@ -302,7 +302,7 @@ const parseEnergyShieldRegainPct = (
 
 const parseMultistrikeChancePct = (
   input: string
-): AffixOfType<"MultistrikeChancePct"> | undefined => {
+): ModOfType<"MultistrikeChancePct"> | undefined => {
   // Regex to parse: +32% chance to Multistrike
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% chance to multistrike$/i;
   const match = input.match(pattern);
@@ -315,7 +315,7 @@ const parseMultistrikeChancePct = (
   return { type: "MultistrikeChancePct", value };
 };
 
-const parseStr = (input: string): AffixOfType<"Str"> | undefined => {
+const parseStr = (input: string): ModOfType<"Str"> | undefined => {
   // Regex to parse: +6 Strength
   const pattern = /^([+-])?(\d+(?:\.\d+)?) strength$/i;
   const match = input.match(pattern);
@@ -328,7 +328,7 @@ const parseStr = (input: string): AffixOfType<"Str"> | undefined => {
   return { type: "Str", value };
 };
 
-const parseDex = (input: string): AffixOfType<"Dex"> | undefined => {
+const parseDex = (input: string): ModOfType<"Dex"> | undefined => {
   // Regex to parse: +6 Dexterity
   const pattern = /^([+-])?(\d+(?:\.\d+)?) dexterity$/i;
   const match = input.match(pattern);
@@ -341,7 +341,7 @@ const parseDex = (input: string): AffixOfType<"Dex"> | undefined => {
   return { type: "Dex", value };
 };
 
-const parseStrPct = (input: string): AffixOfType<"StrPct"> | undefined => {
+const parseStrPct = (input: string): ModOfType<"StrPct"> | undefined => {
   // Regex to parse: +4% Strength
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% strength$/i;
   const match = input.match(pattern);
@@ -354,7 +354,7 @@ const parseStrPct = (input: string): AffixOfType<"StrPct"> | undefined => {
   return { type: "StrPct", value };
 };
 
-const parseDexPct = (input: string): AffixOfType<"DexPct"> | undefined => {
+const parseDexPct = (input: string): ModOfType<"DexPct"> | undefined => {
   // Regex to parse: +4% Dexterity
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% dexterity$/i;
   const match = input.match(pattern);
@@ -369,7 +369,7 @@ const parseDexPct = (input: string): AffixOfType<"DexPct"> | undefined => {
 
 const parseFervorEff = (
   input: string
-): AffixOfType<"FervorEff"> | undefined => {
+): ModOfType<"FervorEff"> | undefined => {
   // Regex to parse: +4% Fervor effect
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% fervor effect$/i;
   const match = input.match(pattern);
@@ -384,7 +384,7 @@ const parseFervorEff = (
 
 const parseSteepStrikeChance = (
   input: string
-): AffixOfType<"SteepStrikeChance"> | undefined => {
+): ModOfType<"SteepStrikeChance"> | undefined => {
   // Regex to parse: +12% Steep Strike chance
   const pattern = /^([+-])?(\d+(?:\.\d+)?)% steep strike chance$/i;
   const match = input.match(pattern);
@@ -397,7 +397,7 @@ const parseSteepStrikeChance = (
   return { type: "SteepStrikeChance", value };
 };
 
-export const parseAffix = (input: string): ParseResult => {
+export const parseMod = (input: string): ParseResult => {
   const normalized = input.trim().toLowerCase();
 
   const parsers = [

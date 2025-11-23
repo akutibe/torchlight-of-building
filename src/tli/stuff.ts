@@ -1,7 +1,6 @@
 import * as R from "remeda";
 import { match } from "ts-pattern";
-import * as Affix from "./affix";
-import { Mod } from "./mods";
+import * as Mod from "./mod";
 import { DmgModType } from "./constants";
 
 let dummy40Armor = 0.11;
@@ -67,12 +66,12 @@ const emptyDamageRange = (): DmgRange => {
 };
 
 export interface TalentPage {
-  affixes: Affix.Affix[];
-  coreTalents: Affix.Affix[];
+  affixes: Mod.Mod[];
+  coreTalents: Mod.Mod[];
 }
 
 export interface DivinitySlate {
-  affixes: Affix.Affix[];
+  affixes: Mod.Mod[];
 }
 
 export interface DivinityPage {
@@ -97,7 +96,7 @@ export interface Gear {
     | "ring"
     | "sword"
     | "shield";
-  affixes: Affix.Affix[];
+  affixes: Mod.Mod[];
 }
 
 export interface GearPage {
@@ -117,7 +116,7 @@ export interface Loadout {
   equipmentPage: GearPage;
   talentPage: TalentPage;
   divinityPage: DivinityPage;
-  customConfiguration: Affix.Affix[];
+  customConfiguration: Mod.Mod[];
 }
 
 const calculateInc = (bonuses: number[]) => {
@@ -136,7 +135,7 @@ const calculateAddn = (bonuses: number[]) => {
   );
 };
 
-const collectAffixes = (loadout: Loadout): Affix.Affix[] => {
+export const collectMods = (loadout: Loadout): Mod.Mod[] => {
   return [
     ...loadout.divinityPage.slates.map((s) => s.affixes).flat(),
     ...loadout.talentPage.affixes,
@@ -189,35 +188,30 @@ const emptyGearDmg = (): GearDmg => {
   };
 };
 
-const findAffix = <T extends Affix.Affix["type"]>(
-  affixes: Affix.Affix[],
+const findAffix = <T extends Mod.Mod["type"]>(
+  mods: Mod.Mod[],
   type: T
-): Extract<Affix.Affix, { type: T }> | undefined => {
-  return affixes.find((a) => a.type === type) as
-    | Extract<Affix.Affix, { type: T }>
+): Extract<Mod.Mod, { type: T }> | undefined => {
+  return mods.find((a) => a.type === type) as
+    | Extract<Mod.Mod, { type: T }>
     | undefined;
 };
 
-const filterAffix = <T extends Affix.Affix["type"]>(
-  affixes: Affix.Affix[],
+const filterAffix = <T extends Mod.Mod["type"]>(
+  mods: Mod.Mod[],
   type: T
-): Extract<Affix.Affix, { type: T }>[] => {
-  return affixes.filter((a) => a.type === type) as Extract<
-    Affix.Affix,
+): Extract<Mod.Mod, { type: T }>[] => {
+  return mods.filter((a) => a.type === type) as Extract<
+    Mod.Mod,
     { type: T }
   >[];
 };
 
 // currently only calculating mainhand
 const calculateGearDmg = (
-  loadout: Loadout,
-  allAffixes: Affix.Affix[]
+  allMods: Mod.Mod[]
 ): GearDmg => {
-  let mh = loadout.equipmentPage.mainHand;
-  if (mh === undefined) {
-    return emptyGearDmg();
-  }
-  let basePhysDmg = findAffix(mh.affixes, "GearBasePhysFlatDmg");
+  let basePhysDmg = findAffix(allMods, "GearBasePhysFlatDmg");
   if (basePhysDmg === undefined) {
     return emptyGearDmg();
   }
@@ -232,7 +226,7 @@ const calculateGearDmg = (
   phys.max += basePhysDmg.value;
   let physBonusPct = 0;
 
-  let gearEleMinusPhysDmg = findAffix(mh.affixes, "GearPlusEleMinusPhysDmg");
+  let gearEleMinusPhysDmg = findAffix(allMods, "GearPlusEleMinusPhysDmg");
   if (gearEleMinusPhysDmg !== undefined) {
     physBonusPct -= 1;
 
@@ -246,12 +240,12 @@ const calculateGearDmg = (
     fire.max += max;
   }
 
-  let gearPhysDmgPct = findAffix(mh.affixes, "GearPhysDmgPct");
+  let gearPhysDmgPct = findAffix(allMods, "GearPhysDmgPct");
   if (gearPhysDmgPct !== undefined) {
     physBonusPct += gearPhysDmgPct.value;
   }
 
-  filterAffix(mh.affixes, "FlatGearDmg").forEach((a) => {
+  filterAffix(allMods, "FlatGearDmg").forEach((a) => {
     match(a.modType)
       .with("physical", () => {
         phys = addDR(phys, a.value);
@@ -272,7 +266,7 @@ const calculateGearDmg = (
   });
 
   let addnMHDmgMult = 1;
-  filterAffix(allAffixes, "AddnMainHandDmgPct").forEach((a) => {
+  filterAffix(allMods, "AddnMainHandDmgPct").forEach((a) => {
     addnMHDmgMult *= 1 + a.value;
   });
 
@@ -294,44 +288,25 @@ const calculateGearDmg = (
 };
 
 const calculateGearAspd = (
-  loadout: Loadout,
-  allAffixes: Affix.Affix[]
+  allMods: Mod.Mod[]
 ): number => {
-  let mh = loadout.equipmentPage.mainHand;
-  if (mh === undefined) {
-    return 0;
-  }
-  let baseAspd = findAffix(mh.affixes, "GearBaseAspd");
+  let baseAspd = findAffix(allMods, "GearBaseAspd");
   if (baseAspd === undefined) {
     return 0;
   }
   let gearAspdPctBonus = calculateInc(
-    filterAffix(mh.affixes, "GearAspdPct").map((b) => b.value)
+    filterAffix(allMods, "GearAspdPct").map((b) => b.value)
   );
   return baseAspd.value * (1 + gearAspdPctBonus);
 };
 
-const calculateDmgPcts = (
-  allAffixes: Affix.Affix[]
-): Extract<Mod, { type: "DmgPct" }>[] => {
-  let dmgPctAffixes = filterAffix(allAffixes, "DmgPct");
-  return dmgPctAffixes.map((a) => {
-    return {
-      type: "DmgPct",
-      value: a.value,
-      addn: a.addn,
-      modType: a.modType,
-      src: a.src,
-    };
-  });
-};
 
 const calculateCritRating = (
-  allAffixes: Affix.Affix[],
+  allMods: Mod.Mod[],
   configuration: Configuration
 ): number => {
-  let critRatingPctAffixes = filterAffix(allAffixes, "CritRatingPct");
-  let mods = critRatingPctAffixes.map((a) => {
+  let critRatingPctMods = filterAffix(allMods, "CritRatingPct");
+  let mods = critRatingPctMods.map((a) => {
     return {
       type: "CritRatingPct",
       value: a.value,
@@ -343,8 +318,8 @@ const calculateCritRating = (
   // Add fervor bonus if enabled
   if (configuration.fervor.enabled) {
     // Collect FervorEff modifiers and calculate total effectiveness
-    let fervorEffAffixes = filterAffix(allAffixes, "FervorEff");
-    let fervorEffTotal = calculateInc(fervorEffAffixes.map((a) => a.value));
+    let fervorEffMods = filterAffix(allMods, "FervorEff");
+    let fervorEffTotal = calculateInc(fervorEffMods.map((a) => a.value));
 
     // Base fervor: 2% per point, modified by FervorEff
     // Example: 100 points * 0.02 * (1 + 0.5) = 3.0 (with 50% FervorEff)
@@ -364,11 +339,11 @@ const calculateCritRating = (
 };
 
 const calculateCritDmg = (
-  allAffixes: Affix.Affix[],
+  allMods: Mod.Mod[],
   configuration: Configuration
 ): number => {
-  let critDmgPctAffixes = filterAffix(allAffixes, "CritDmgPct");
-  let mods = critDmgPctAffixes.map((a) => {
+  let critDmgPctMods = filterAffix(allMods, "CritDmgPct");
+  let mods = critDmgPctMods.map((a) => {
     return {
       type: "CritDmgPct",
       value: a.value,
@@ -378,10 +353,10 @@ const calculateCritDmg = (
     };
   });
 
-  // Handle CritDmgPerFervor affixes
+  // Handle CritDmgPerFervor mods
   if (configuration.fervor.enabled) {
-    let critDmgPerFervorAffixes = filterAffix(allAffixes, "CritDmgPerFervor");
-    critDmgPerFervorAffixes.forEach((a) => {
+    let critDmgPerFervorMods = filterAffix(allMods, "CritDmgPerFervor");
+    critDmgPerFervorMods.forEach((a) => {
       // Calculate bonus: value * fervor points
       // Example: 0.005 (0.5%) * 100 points = 0.5 (50% increased crit damage)
       let bonus = a.value * configuration.fervor.points;
@@ -401,18 +376,9 @@ const calculateCritDmg = (
   return 1.5 * (1 + inc) * addn;
 };
 
-const calculateAspdPcts = (
-  allAffixes: Affix.Affix[]
-): Extract<Mod, { type: "AspdPct" }>[] => {
-  let aspdPctAffixes = filterAffix(allAffixes, "AspdPct");
-  return aspdPctAffixes.map((a) => {
-    return { type: "AspdPct", value: a.value, addn: a.addn, src: a.src };
-  });
-};
-
-const calculateAspd = (loadout: Loadout, allAffixes: Affix.Affix[]): number => {
-  let gearAspd = calculateGearAspd(loadout, allAffixes);
-  let aspdPctMods = calculateAspdPcts(allAffixes);
+const calculateAspd = (allMods: Mod.Mod[]): number => {
+  let gearAspd = calculateGearAspd(allMods);
+  let aspdPctMods = filterAffix(allMods, "AspdPct");
   let inc = calculateInc(
     aspdPctMods.filter((m) => !m.addn).map((v) => v.value)
   );
@@ -450,7 +416,7 @@ interface DmgOverview {
 }
 
 const filterDmgPctMods = (
-  dmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
+  dmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
   dmgModTypes: DmgModType[]
 ) => {
   return dmgPctMods.filter((p) => dmgModTypes.includes(p.modType));
@@ -469,16 +435,16 @@ interface TotalDmgModsPerType {
   erosion: DmgModsAggr;
 }
 
-const calculateDmgInc = (mods: Extract<Mod, { type: "DmgPct" }>[]) => {
+const calculateDmgInc = (mods: Extract<Mod.Mod, { type: "DmgPct" }>[]) => {
   return calculateInc(mods.filter((m) => !m.addn).map((m) => m.value));
 };
 
-const calculateDmgAddn = (mods: Extract<Mod, { type: "DmgPct" }>[]) => {
+const calculateDmgAddn = (mods: Extract<Mod.Mod, { type: "DmgPct" }>[]) => {
   return calculateAddn(mods.filter((m) => m.addn).map((m) => m.value));
 };
 
 const getTotalDmgModsPerType = (
-  allDmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
+  allDmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration
 ): TotalDmgModsPerType => {
   let dmgModTypes = dmgModTypesForSkill(skillConf);
@@ -551,7 +517,7 @@ interface SkillHitOverview {
 
 const calculateSkillHit = (
   gearDmg: GearDmg,
-  allDmgPcts: Extract<Mod, { type: "DmgPct" }>[],
+  allDmgPcts: Extract<Mod.Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration
 ): SkillHitOverview => {
   let totalDmgModsPerType = getTotalDmgModsPerType(allDmgPcts, skillConf);
@@ -600,7 +566,7 @@ const calculateSkillHit = (
 
 // return undefined if skill unimplemented or it's not an offensive skill
 export const calculateOffense = (
-  loadout: Loadout,
+  mods: Mod.Mod[],
   skill: Skill,
   configuration: Configuration
 ): OffenseSummary | undefined => {
@@ -608,12 +574,11 @@ export const calculateOffense = (
   if (skillConf === undefined) {
     return undefined;
   }
-  let allAffixes = collectAffixes(loadout);
-  let gearDmg = calculateGearDmg(loadout, allAffixes);
-  let aspd = calculateAspd(loadout, allAffixes);
-  let dmgPcts = calculateDmgPcts(allAffixes);
-  let critChance = calculateCritRating(allAffixes, configuration);
-  let critDmgMult = calculateCritDmg(allAffixes, configuration);
+  let gearDmg = calculateGearDmg(mods);
+  let aspd = calculateAspd(mods);
+  let dmgPcts = filterAffix(mods, "DmgPct");
+  let critChance = calculateCritRating(mods, configuration);
+  let critDmgMult = calculateCritDmg(mods, configuration);
 
   let skillHit = calculateSkillHit(gearDmg, dmgPcts, skillConf);
   let avgHitWithCrit =
