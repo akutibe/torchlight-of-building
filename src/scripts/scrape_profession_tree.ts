@@ -2,7 +2,7 @@ import * as cheerio from "cheerio";
 
 interface TalentNode {
   nodeType: "micro" | "medium" | "legendary";
-  affixLines: string[];
+  rawAffix: string;
   position: { x: number; y: number };
   prerequisite?: { x: number; y: number };
   levelUpTime: number;
@@ -14,7 +14,7 @@ interface NodeData {
   gridX: number;
   gridY: number;
   type: "micro" | "medium" | "legendary";
-  affixLines: string[];
+  rawAffix: string;
   levelUpTime: number;
 }
 
@@ -45,7 +45,7 @@ const decodeHtmlEntities = (text: string): string => {
 /**
  * Parses affixes from HTML tooltip content
  */
-const parseAffixes = (htmlContent: string): string[] => {
+const parseAffix = (htmlContent: string): string => {
   const decoded = decodeHtmlEntities(htmlContent);
   const $ = cheerio.load(decoded);
 
@@ -53,16 +53,17 @@ const parseAffixes = (htmlContent: string): string[] => {
   $("div.fw-bold").remove();
   const text = $.text().trim();
 
-  if (!text) return [];
+  if (!text) return "";
 
   // Split by <br /> or <br> tags in the original HTML
-  const affixLines = decoded
+  const affix = decoded
     .replace(/<div[^>]*>.*?<\/div>/gi, "") // Remove div tags
     .split(/<br\s*\/?>/i) // Split by <br> tags
     .map((line) => cheerio.load(line).text().trim())
-    .filter((line) => line.length > 0);
+    .filter((line) => line.length > 0)
+    .join("\n");
 
-  return affixLines;
+  return affix;
 };
 
 /**
@@ -113,7 +114,7 @@ const scrapeProfessionTree = async (
 
       // Extract affixes from tooltip
       const tooltipHtml = $image.attr("data-bs-title") || "";
-      const affixLines = parseAffixes(tooltipHtml);
+      const rawAffix = parseAffix(tooltipHtml);
 
       // Find level-up time text element
       // The text is positioned slightly offset from the circle center
@@ -135,7 +136,7 @@ const scrapeProfessionTree = async (
         gridX,
         gridY,
         type,
-        affixLines,
+        rawAffix,
         levelUpTime,
       });
     });
@@ -191,7 +192,7 @@ const scrapeProfessionTree = async (
 
       return {
         nodeType: node.type,
-        affixLines: node.affixLines,
+        rawAffix: node.rawAffix,
         position: { x: node.gridX, y: node.gridY },
         ...(prerequisite && { prerequisite }),
         levelUpTime: node.levelUpTime,
