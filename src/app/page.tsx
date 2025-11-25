@@ -7,6 +7,7 @@ import {
   RawGear,
   RawAllocatedTalentNode,
 } from "@/src/tli/core";
+import { Skill, AVAILABLE_SKILLS } from "@/src/tli/offense";
 import {
   TalentTreeData,
   TalentNodeData,
@@ -45,6 +46,9 @@ const createEmptyLoadout = (): RawLoadout => ({
     tree3: { name: "Warrior", allocatedNodes: [] },
     tree4: { name: "Warrior", allocatedNodes: [] },
   },
+  skillPage: {
+    skills: [],
+  },
 });
 
 const loadFromStorage = (): RawLoadout => {
@@ -75,7 +79,7 @@ export default function Home() {
   const [selectedSlot, setSelectedSlot] = useState<GearSlot>("helmet");
   const [newAffix, setNewAffix] = useState("");
   const [mounted, setMounted] = useState(false);
-  const [activePage, setActivePage] = useState<"equipment" | "talents">(
+  const [activePage, setActivePage] = useState<"equipment" | "talents" | "skills">(
     "equipment",
   );
   const [activeTreeSlot, setActiveTreeSlot] = useState<
@@ -290,6 +294,50 @@ export default function Home() {
     });
   };
 
+  // Skill page handlers
+  const handleAddSkill = (skill: Skill): void => {
+    setLoadout((prev) => {
+      const currentSkills = prev.skillPage.skills;
+
+      // Prevent duplicates
+      if (currentSkills.some((s) => s.skill === skill)) {
+        return prev;
+      }
+
+      // Enforce 4-skill limit
+      if (currentSkills.length >= 4) {
+        return prev;
+      }
+
+      return {
+        ...prev,
+        skillPage: {
+          skills: [...currentSkills, { skill, enabled: true }],
+        },
+      };
+    });
+  };
+
+  const handleRemoveSkill = (index: number): void => {
+    setLoadout((prev) => ({
+      ...prev,
+      skillPage: {
+        skills: prev.skillPage.skills.filter((_, i) => i !== index),
+      },
+    }));
+  };
+
+  const handleToggleSkill = (index: number): void => {
+    setLoadout((prev) => ({
+      ...prev,
+      skillPage: {
+        skills: prev.skillPage.skills.map((s, i) =>
+          i === index ? { ...s, enabled: !s.enabled } : s
+        ),
+      },
+    }));
+  };
+
   // Helper component for talent nodes
   const TalentNodeDisplay = ({
     node,
@@ -421,6 +469,16 @@ export default function Home() {
             }`}
           >
             Talents
+          </button>
+          <button
+            onClick={() => setActivePage("skills")}
+            className={`px-6 py-3 font-medium transition-colors ${
+              activePage === "skills"
+                ? "border-b-2 border-blue-600 text-blue-600"
+                : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+            }`}
+          >
+            Skills
           </button>
         </div>
 
@@ -715,6 +773,93 @@ export default function Home() {
                 Loading tree...
               </div>
             )}
+          </div>
+        )}
+
+        {/* Skills Page */}
+        {activePage === "skills" && (
+          <div className="space-y-6">
+            <h2 className="text-xl font-bold mb-4 text-zinc-800 dark:text-zinc-200">
+              Skill Selection
+            </h2>
+
+            {/* Skill List */}
+            <div className="space-y-3">
+              {loadout.skillPage.skills.length === 0 ? (
+                <p className="text-zinc-500 dark:text-zinc-400">
+                  No skills selected. Add a skill below.
+                </p>
+              ) : (
+                loadout.skillPage.skills.map((skillEntry, index) => (
+                  <div
+                    key={index}
+                    className="bg-white dark:bg-zinc-800 p-4 rounded-lg shadow flex items-center justify-between"
+                  >
+                    <div className="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        checked={skillEntry.enabled}
+                        onChange={() => handleToggleSkill(index)}
+                        className="w-5 h-5"
+                      />
+                      <span
+                        className={
+                          skillEntry.enabled
+                            ? "text-zinc-900 dark:text-zinc-100"
+                            : "text-zinc-500 dark:text-zinc-500"
+                        }
+                      >
+                        {skillEntry.skill}
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => handleRemoveSkill(index)}
+                      className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded text-sm text-white"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                ))
+              )}
+            </div>
+
+            {/* Add Skill Section */}
+            <div className="bg-white dark:bg-zinc-800 p-4 rounded-lg shadow">
+              <h3 className="text-lg font-semibold mb-3 text-zinc-800 dark:text-zinc-200">
+                Add Skill
+              </h3>
+
+              {loadout.skillPage.skills.length >= 4 ? (
+                <p className="text-yellow-600 dark:text-yellow-500">
+                  Maximum of 4 skills reached
+                </p>
+              ) : (
+                <div className="flex gap-2">
+                  <select
+                    className="flex-1 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 rounded-lg px-3 py-2 text-zinc-900 dark:text-zinc-100"
+                    onChange={(e) => {
+                      if (e.target.value) {
+                        handleAddSkill(e.target.value as Skill);
+                        e.target.value = ""; // Reset selection
+                      }
+                    }}
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      Select a skill...
+                    </option>
+                    {AVAILABLE_SKILLS.filter(
+                      (skill) =>
+                        !loadout.skillPage.skills.some((s) => s.skill === skill)
+                    ).map((skill) => (
+                      <option key={skill} value={skill}>
+                        {skill}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
+            </div>
           </div>
         )}
 

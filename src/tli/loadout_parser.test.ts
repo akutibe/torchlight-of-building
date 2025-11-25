@@ -17,6 +17,9 @@ describe("parse_loadout", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     const result = parse_loadout(rawLoadout);
@@ -64,6 +67,9 @@ describe("parse_loadout", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     const result = parse_loadout(rawLoadout);
@@ -110,6 +116,9 @@ describe("parse_loadout", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     const result = parse_loadout(rawLoadout);
@@ -150,6 +159,9 @@ describe("parse_loadout", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     const result = parse_loadout(rawLoadout);
@@ -180,6 +192,9 @@ describe("parse_loadout", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     const result = parse_loadout(rawLoadout);
@@ -205,6 +220,9 @@ describe("parse_loadout", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     const result = parse_loadout(rawLoadout);
@@ -227,6 +245,9 @@ describe("parse_loadout", () => {
         tree2: { name: "Warrior", allocatedNodes: [] },
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
+      },
+      skillPage: {
+        skills: [],
       },
     };
 
@@ -252,6 +273,9 @@ describe("talent tree parsing", () => {
         tree2: { name: "Warrior", allocatedNodes: [] },
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
+      },
+      skillPage: {
+        skills: [],
       },
     };
 
@@ -281,6 +305,9 @@ describe("talent tree parsing", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     const result = parse_loadout(rawLoadout);
@@ -306,6 +333,9 @@ describe("talent tree parsing", () => {
         tree2: { name: "Warrior", allocatedNodes: [] },
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
+      },
+      skillPage: {
+        skills: [],
       },
     };
 
@@ -345,6 +375,9 @@ describe("talent tree parsing", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     const result = parse_loadout(rawLoadout);
@@ -370,6 +403,9 @@ describe("talent tree parsing", () => {
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
       },
+      skillPage: {
+        skills: [],
+      },
     };
 
     expect(() => parse_loadout(rawLoadout)).toThrow(
@@ -388,6 +424,9 @@ describe("talent tree parsing", () => {
         tree2: { name: "Warrior", allocatedNodes: [] },
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
+      },
+      skillPage: {
+        skills: [],
       },
     };
 
@@ -409,6 +448,9 @@ describe("talent tree parsing", () => {
         tree2: { name: "Warrior", allocatedNodes: [] },
         tree3: { name: "Warrior", allocatedNodes: [] },
         tree4: { name: "Warrior", allocatedNodes: [] },
+      },
+      skillPage: {
+        skills: [],
       },
     };
 

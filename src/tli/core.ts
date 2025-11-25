@@ -1,5 +1,6 @@
 import { Mod } from "./mod";
 import { TreeName } from "./talent_tree_types";
+import { Skill } from "./offense";
 
 export interface Affix {
   mods: Mod[];
@@ -126,7 +127,17 @@ export interface RawGearPage {
   offHand?: RawGear;
 }
 
+export interface RawSkill {
+  skill: Skill;
+  enabled: boolean;
+}
+
+export interface RawSkillPage {
+  skills: RawSkill[];
+}
+
 export interface RawLoadout {
   equipmentPage: RawGearPage;
   talentPage: RawTalentPage;
+  skillPage: RawSkillPage;
 }

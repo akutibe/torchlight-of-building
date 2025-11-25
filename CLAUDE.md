@@ -24,7 +24,7 @@ This is a Next.js 16 application built with React 19, TypeScript, and Tailwind C
 |------|---------------|
 | Setting up development | [docs/development.md](docs/development.md) |
 | Working on UI ([src/app/](src/app/)) | [docs/ui-patterns.md](docs/ui-patterns.md), [docs/data-models.md](docs/data-models.md) |
-| Working on calculations ([src/tli/stuff.ts](src/tli/stuff.ts)) | [docs/calculation-engine.md](docs/calculation-engine.md), [docs/data-models.md](docs/data-models.md) |
+| Working on calculations ([src/tli/offense.ts](src/tli/offense.ts)) | [docs/calculation-engine.md](docs/calculation-engine.md), [docs/data-models.md](docs/data-models.md) |
 | Working on parsers ([src/tli/mod_parser.ts](src/tli/mod_parser.ts)) | [docs/mod-parser.md](docs/mod-parser.md) |
 | Adding new mod types | [docs/mod-parser.md](docs/mod-parser.md), [docs/calculation-engine.md](docs/calculation-engine.md) |
 | Updating talent trees | [docs/development.md#talent-tree-data-system](docs/development.md#talent-tree-data-system) |

@@ -75,6 +75,12 @@ pnpm test src/tli/offense.test.ts
   export type DmgModType = "global" | "fire" | "cold" | ...;
   ```
 
+### Data Persistence
+
+- **No backwards compatibility required**: When adding new fields to `RawLoadout` or other localStorage-persisted types, backwards compatibility is NOT required
+- Old saves can be cleared/invalidated when the schema changes
+- Do not add migration logic in `loadFromStorage()` functions
+
 ## Talent Tree Data System
 
 Talent tree data is stored as TypeScript files in [src/tli/talent_data/](../src/tli/talent_data/), providing type safety and bundling with the application.
