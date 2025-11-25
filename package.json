@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "cheerio": "^1.1.2",

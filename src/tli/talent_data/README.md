@@ -15,10 +15,10 @@ export const WARRIOR: TalentTreeData = {
       rawAffix: "+10% physical damage",
       position: { x: 0, y: 0 },
       maxPoints: 3,
-      iconName: "physical_damage_icon"
+      iconName: "physical_damage_icon",
     },
     // ... more nodes
-  ]
+  ],
 } as const;
 ```
 
@@ -37,6 +37,7 @@ tsx src/scripts/save_all_profession_trees.ts
 ```
 
 This script:
+
 1. Fetches talent tree data for all professions and god/goddess trees
 2. Generates/updates TypeScript files in this directory
 3. Each tree is exported as a const object with type `TalentTreeData`

@@ -102,6 +102,7 @@ tsx src/scripts/save_all_profession_trees.ts
 ```
 
 This script:
+
 1. Fetches talent tree data for all professions and god/goddess trees from tlidb.com
 2. Generates TypeScript files in [src/tli/talent_data/](../src/tli/talent_data/)
 3. Each tree is exported as a const object with type `TalentTreeData`

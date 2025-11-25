@@ -4,6 +4,8 @@ import {
   DMG_MOD_TYPES,
   CritRatingModType,
   CRIT_RATING_MOD_TYPES,
+  CritDmgModType,
+  CRIT_DMG_MOD_TYPES,
 } from "./constants";
 
 type ParseResult = "unrecognized" | "unimplemented" | Mod;
@@ -16,6 +18,10 @@ const isValidCritRatingModType = (
   value: string,
 ): value is CritRatingModType => {
   return CRIT_RATING_MOD_TYPES.includes(value as CritRatingModType);
+};
+
+const isValidCritDmgModType = (value: string): value is CritDmgModType => {
+  return CRIT_DMG_MOD_TYPES.includes(value as CritDmgModType);
 };
 
 const parseDmgPct = (input: string): ModOfType<"DmgPct"> | undefined => {
@@ -83,6 +89,43 @@ const parseCritRatingPct = (
     type: "CritRatingPct",
     value,
     modType,
+  };
+};
+
+const parseCritDmgPct = (
+  input: string,
+): ModOfType<"CritDmgPct"> | undefined => {
+  // Regex to parse: +5% [additional] [Attack] Critical Strike Damage
+  // The type word comes before "Critical Strike Damage"
+  const pattern =
+    /^([+-])?(\d+(?:\.\d+)?)% (?:(additional) )?(?:(\w+) )?critical strike damage$/i;
+  const match = input.match(pattern);
+
+  if (!match) {
+    return undefined;
+  }
+
+  const percentageStr = match[2];
+  const hasAdditional = match[3] !== undefined;
+  const modTypeWord = match[4];
+
+  const value = parseFloat(percentageStr) / 100;
+  const addn = hasAdditional;
+
+  let modType: CritDmgModType = "global";
+  if (modTypeWord !== undefined) {
+    if (isValidCritDmgModType(modTypeWord)) {
+      modType = modTypeWord;
+    } else {
+      return undefined;
+    }
+  }
+
+  return {
+    type: "CritDmgPct",
+    value,
+    modType,
+    addn,
   };
 };
 
@@ -400,6 +443,7 @@ export const parseMod = (input: string): ParseResult => {
     // Offense
     parseDmgPct,
     parseCritRatingPct,
+    parseCritDmgPct,
     parseMinionAspdAndCspdPct,
     parseAspdAndCspdPct,
     parseAspdPct,
@@ -423,8 +467,6 @@ export const parseMod = (input: string): ParseResult => {
     parseSteepStrikeChance,
     parseMultistrikeChancePct,
     // Add more parsers here as they're implemented
-    // parseCritDmgPct,
-    // etc.
   ];
 
   for (const parser of parsers) {

@@ -360,6 +360,8 @@ Examples:
 
 ## Testing Parsers
 
+**IMPORTANT:** Always add tests to [src/tli/mod_parser.test.ts](../src/tli/mod_parser.test.ts) and run them using `pnpm test src/tli/mod_parser.test.ts`. Do NOT create ad-hoc test scripts or run standalone Node scripts for testing parsers.
+
 ### Unit Tests
 
 Test each parser with:
@@ -369,6 +371,45 @@ Test each parser with:
 - Decimal values
 - Optional keywords present/absent
 - Invalid input (should return `"unrecognized"`)
+
+**Example test structure:**
+
+```typescript
+test("parse global critical strike damage", () => {
+  const result = parseMod("+5% Critical Strike Damage");
+  expect(result).toEqual({
+    type: "CritDmgPct",
+    value: 0.05,
+    modType: "global",
+    addn: false,
+  });
+});
+
+test("parse additional critical strike damage", () => {
+  const result = parseMod("+10% additional Critical Strike Damage");
+  expect(result).toEqual({
+    type: "CritDmgPct",
+    value: 0.1,
+    modType: "global",
+    addn: true,
+  });
+});
+
+test("return unrecognized for invalid crit damage mod type", () => {
+  const result = parseMod("+10% Fire Critical Strike Damage");
+  expect(result).toBe("unrecognized");
+});
+```
+
+### Running Tests
+
+```bash
+# Run all mod parser tests
+pnpm test src/tli/mod_parser.test.ts
+
+# Run tests in watch mode during development
+pnpm test src/tli/mod_parser.test.ts --watch
+```
 
 ### Integration Tests
 

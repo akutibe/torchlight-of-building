@@ -78,7 +78,7 @@ const calculateInc = (bonuses: number[]) => {
   return R.pipe(
     bonuses,
     R.filter((b) => true),
-    R.sum()
+    R.sum(),
   );
 };
 
@@ -86,7 +86,7 @@ const calculateAddn = (bonuses: number[]) => {
   return R.pipe(
     bonuses,
     R.filter((b) => true),
-    R.reduce((b1, b2) => b1 * (1 + b2), 1)
+    R.reduce((b1, b2) => b1 * (1 + b2), 1),
   );
 };
 
@@ -97,7 +97,7 @@ const collectModsFromAffixes = (affixes: Affix[]): Mod.Mod[] => {
 export const collectMods = (loadout: Loadout): Mod.Mod[] => {
   return [
     ...collectModsFromAffixes(
-      loadout.divinityPage.slates.flatMap((s) => s.affixes)
+      loadout.divinityPage.slates.flatMap((s) => s.affixes),
     ),
     ...collectModsFromAffixes(loadout.talentPage.affixes),
     ...collectModsFromAffixes(loadout.equipmentPage.helmet?.affixes || []),
@@ -150,7 +150,7 @@ const emptyGearDmg = (): GearDmg => {
 
 const findAffix = <T extends Mod.Mod["type"]>(
   mods: Mod.Mod[],
-  type: T
+  type: T,
 ): Extract<Mod.Mod, { type: T }> | undefined => {
   return mods.find((a) => a.type === type) as
     | Extract<Mod.Mod, { type: T }>
@@ -159,7 +159,7 @@ const findAffix = <T extends Mod.Mod["type"]>(
 
 const filterAffix = <T extends Mod.Mod["type"]>(
   mods: Mod.Mod[],
-  type: T
+  type: T,
 ): Extract<Mod.Mod, { type: T }>[] => {
   return mods.filter((a) => a.type === type) as Extract<Mod.Mod, { type: T }>[];
 };
@@ -244,14 +244,14 @@ const calculateGearAspd = (allMods: Mod.Mod[]): number => {
     return 0;
   }
   let gearAspdPctBonus = calculateInc(
-    filterAffix(allMods, "GearAspdPct").map((b) => b.value)
+    filterAffix(allMods, "GearAspdPct").map((b) => b.value),
   );
   return baseAspd.value * (1 + gearAspdPctBonus);
 };
 
 const calculateCritRating = (
   allMods: Mod.Mod[],
-  configuration: Configuration
+  configuration: Configuration,
 ): number => {
   let critRatingPctMods = filterAffix(allMods, "CritRatingPct");
   let mods = critRatingPctMods.map((a) => {
@@ -288,7 +288,7 @@ const calculateCritRating = (
 
 const calculateCritDmg = (
   allMods: Mod.Mod[],
-  configuration: Configuration
+  configuration: Configuration,
 ): number => {
   let critDmgPctMods = filterAffix(allMods, "CritDmgPct");
   let mods = critDmgPctMods.map((a) => {
@@ -328,10 +328,10 @@ const calculateAspd = (allMods: Mod.Mod[]): number => {
   let gearAspd = calculateGearAspd(allMods);
   let aspdPctMods = filterAffix(allMods, "AspdPct");
   let inc = calculateInc(
-    aspdPctMods.filter((m) => !m.addn).map((v) => v.value)
+    aspdPctMods.filter((m) => !m.addn).map((v) => v.value),
   );
   let addn = calculateAddn(
-    aspdPctMods.filter((m) => m.addn).map((v) => v.value)
+    aspdPctMods.filter((m) => m.addn).map((v) => v.value),
   );
 
   return gearAspd * (1 + inc) * addn;
@@ -365,7 +365,7 @@ interface DmgOverview {
 
 const filterDmgPctMods = (
   dmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
-  dmgModTypes: DmgModType[]
+  dmgModTypes: DmgModType[],
 ) => {
   return dmgPctMods.filter((p) => dmgModTypes.includes(p.modType));
 };
@@ -393,7 +393,7 @@ const calculateDmgAddn = (mods: Extract<Mod.Mod, { type: "DmgPct" }>[]) => {
 
 const getTotalDmgModsPerType = (
   allDmgPctMods: Extract<Mod.Mod, { type: "DmgPct" }>[],
-  skillConf: SkillConfiguration
+  skillConf: SkillConfiguration,
 ): TotalDmgModsPerType => {
   let dmgModTypes = dmgModTypesForSkill(skillConf);
   let dmgModTypesForPhys: DmgModType[] = [...dmgModTypes, "physical"];
@@ -410,12 +410,12 @@ const getTotalDmgModsPerType = (
   let dmgPctModsForCold = filterDmgPctMods(allDmgPctMods, dmgModTypesForCold);
   let dmgPctModsForLightning = filterDmgPctMods(
     allDmgPctMods,
-    dmgModTypesForLightning
+    dmgModTypesForLightning,
   );
   let dmgPctModsForFire = filterDmgPctMods(allDmgPctMods, dmgModTypesForFire);
   let dmgPctModsForErosion = filterDmgPctMods(
     allDmgPctMods,
-    dmgModTypesForErosion
+    dmgModTypesForErosion,
   );
 
   return {
@@ -444,7 +444,7 @@ const getTotalDmgModsPerType = (
 
 const calculateDmgRange = (
   dmgRange: DmgRange,
-  dmgModsAggr: DmgModsAggr
+  dmgModsAggr: DmgModsAggr,
 ): DmgRange => {
   let mult = (1 + dmgModsAggr.inc) * dmgModsAggr.addn;
   return multDR(dmgRange, mult);
@@ -466,19 +466,19 @@ interface SkillHitOverview {
 const calculateSkillHit = (
   gearDmg: GearDmg,
   allDmgPcts: Extract<Mod.Mod, { type: "DmgPct" }>[],
-  skillConf: SkillConfiguration
+  skillConf: SkillConfiguration,
 ): SkillHitOverview => {
   let totalDmgModsPerType = getTotalDmgModsPerType(allDmgPcts, skillConf);
   let phys = calculateDmgRange(gearDmg.mainHand.phys, totalDmgModsPerType.phys);
   let cold = calculateDmgRange(gearDmg.mainHand.cold, totalDmgModsPerType.cold);
   let lightning = calculateDmgRange(
     gearDmg.mainHand.lightning,
-    totalDmgModsPerType.lightning
+    totalDmgModsPerType.lightning,
   );
   let fire = calculateDmgRange(gearDmg.mainHand.fire, totalDmgModsPerType.fire);
   let erosion = calculateDmgRange(
     gearDmg.mainHand.erosion,
-    totalDmgModsPerType.erosion
+    totalDmgModsPerType.erosion,
   );
   let total = {
     min: phys.min + cold.min + lightning.min + fire.min + erosion.min,
@@ -517,7 +517,7 @@ export const calculateOffense = (
   loadout: Loadout,
   mods: Mod.Mod[],
   skill: Skill,
-  configuration: Configuration
+  configuration: Configuration,
 ): OffenseSummary | undefined => {
   let skillConf = offensiveSkillConfs.find((c) => c.skill === skill);
   if (skillConf === undefined) {

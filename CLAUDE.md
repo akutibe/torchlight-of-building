@@ -7,6 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a Next.js 16 application built with React 19, TypeScript, and Tailwind CSS 4. It's a character build planner for "Torchlight Infinite" (TLI), a game with complex character builds involving equipment, talents, and divinity systems.
 
 **Main Components:**
+
 1. **Frontend UI** ([src/app/](src/app/)) - Interactive build planner interface
 2. **Calculation Engine** ([src/tli/](src/tli/)) - Damage calculator that computes DPS and other offensive stats
 
@@ -20,14 +21,14 @@ This is a Next.js 16 application built with React 19, TypeScript, and Tailwind C
 
 ## Quick Reference
 
-| Task | Documentation |
-|------|---------------|
-| Setting up development | [docs/development.md](docs/development.md) |
-| Working on UI ([src/app/](src/app/)) | [docs/ui-patterns.md](docs/ui-patterns.md), [docs/data-models.md](docs/data-models.md) |
-| Working on calculations ([src/tli/offense.ts](src/tli/offense.ts)) | [docs/calculation-engine.md](docs/calculation-engine.md), [docs/data-models.md](docs/data-models.md) |
-| Working on parsers ([src/tli/mod_parser.ts](src/tli/mod_parser.ts)) | [docs/mod-parser.md](docs/mod-parser.md) |
-| Adding new mod types | [docs/mod-parser.md](docs/mod-parser.md), [docs/calculation-engine.md](docs/calculation-engine.md) |
-| Updating talent trees | [docs/development.md#talent-tree-data-system](docs/development.md#talent-tree-data-system) |
+| Task                                                                | Documentation                                                                                        |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Setting up development                                              | [docs/development.md](docs/development.md)                                                           |
+| Working on UI ([src/app/](src/app/))                                | [docs/ui-patterns.md](docs/ui-patterns.md), [docs/data-models.md](docs/data-models.md)               |
+| Working on calculations ([src/tli/offense.ts](src/tli/offense.ts))  | [docs/calculation-engine.md](docs/calculation-engine.md), [docs/data-models.md](docs/data-models.md) |
+| Working on parsers ([src/tli/mod_parser.ts](src/tli/mod_parser.ts)) | [docs/mod-parser.md](docs/mod-parser.md)                                                             |
+| Adding new mod types                                                | [docs/mod-parser.md](docs/mod-parser.md), [docs/calculation-engine.md](docs/calculation-engine.md)   |
+| Updating talent trees                                               | [docs/development.md#talent-tree-data-system](docs/development.md#talent-tree-data-system)           |
 
 ## Documentation Guidelines
 

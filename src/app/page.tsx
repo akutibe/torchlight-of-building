@@ -79,9 +79,9 @@ export default function Home() {
   const [selectedSlot, setSelectedSlot] = useState<GearSlot>("helmet");
   const [newAffix, setNewAffix] = useState("");
   const [mounted, setMounted] = useState(false);
-  const [activePage, setActivePage] = useState<"equipment" | "talents" | "skills">(
-    "equipment",
-  );
+  const [activePage, setActivePage] = useState<
+    "equipment" | "talents" | "skills"
+  >("equipment");
   const [activeTreeSlot, setActiveTreeSlot] = useState<
     "tree1" | "tree2" | "tree3" | "tree4"
   >("tree1");
@@ -332,7 +332,7 @@ export default function Home() {
       ...prev,
       skillPage: {
         skills: prev.skillPage.skills.map((s, i) =>
-          i === index ? { ...s, enabled: !s.enabled } : s
+          i === index ? { ...s, enabled: !s.enabled } : s,
         ),
       },
     }));
@@ -850,7 +850,9 @@ export default function Home() {
                     </option>
                     {AVAILABLE_SKILLS.filter(
                       (skill) =>
-                        !loadout.skillPage.skills.some((s) => s.skill === skill)
+                        !loadout.skillPage.skills.some(
+                          (s) => s.skill === skill,
+                        ),
                     ).map((skill) => (
                       <option key={skill} value={skill}>
                         {skill}

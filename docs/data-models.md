@@ -257,17 +257,40 @@ All available talent trees:
 
 ```typescript
 type TreeName =
-  | "Warrior" | "Warlord" | "Onslaughter" | "The_Brave"
-  | "Marksman" | "Bladerunner" | "Druid" | "Assassin"
-  | "Magister" | "Arcanist" | "Elementalist" | "Prophet"
-  | "Shadowdancer" | "Ranger" | "Sentinel" | "Shadowmaster"
-  | "Psychic" | "Warlock" | "Lich" | "Machinist"
-  | "Steel_Vanguard" | "Alchemist" | "Artisan" | "Ronin"
-  | "God_of_War" | "God_of_Might" | "God_of_Machines"
-  | "Goddess_of_Hunting" | "Goddess_of_Knowledge" | "Goddess_of_Deception";
+  | "Warrior"
+  | "Warlord"
+  | "Onslaughter"
+  | "The_Brave"
+  | "Marksman"
+  | "Bladerunner"
+  | "Druid"
+  | "Assassin"
+  | "Magister"
+  | "Arcanist"
+  | "Elementalist"
+  | "Prophet"
+  | "Shadowdancer"
+  | "Ranger"
+  | "Sentinel"
+  | "Shadowmaster"
+  | "Psychic"
+  | "Warlock"
+  | "Lich"
+  | "Machinist"
+  | "Steel_Vanguard"
+  | "Alchemist"
+  | "Artisan"
+  | "Ronin"
+  | "God_of_War"
+  | "God_of_Might"
+  | "God_of_Machines"
+  | "Goddess_of_Hunting"
+  | "Goddess_of_Knowledge"
+  | "Goddess_of_Deception";
 ```
 
 **From const arrays:**
+
 ```typescript
 export const PROFESSION_TREES = ["Warrior", "Warlord", ...] as const;
 export const GOD_GODDESS_TREES = ["God_of_War", ...] as const;
@@ -353,6 +376,7 @@ export const AVAILABLE_SKILLS = offensiveSkillConfs.map((c) => c.skill);
 ```
 
 To add a new skill:
+
 1. Add entry to `offensiveSkillConfs` array in [src/tli/offense.ts](../src/tli/offense.ts)
 2. Skill type and UI dropdown automatically update via `AVAILABLE_SKILLS`
 

@@ -88,6 +88,71 @@ test("return unrecognized for invalid crit rating mod type", () => {
   expect(result).toBe("unrecognized");
 });
 
+test("parse global critical strike damage", () => {
+  const result = parseMod("+5% Critical Strike Damage");
+  expect(result).toEqual({
+    type: "CritDmgPct",
+    value: 0.05,
+    modType: "global",
+    addn: false,
+  });
+});
+
+test("parse additional critical strike damage", () => {
+  const result = parseMod("+10% additional Critical Strike Damage");
+  expect(result).toEqual({
+    type: "CritDmgPct",
+    value: 0.1,
+    modType: "global",
+    addn: true,
+  });
+});
+
+test("parse attack critical strike damage", () => {
+  const result = parseMod("+15% Attack Critical Strike Damage");
+  expect(result).toEqual({
+    type: "CritDmgPct",
+    value: 0.15,
+    modType: "attack",
+    addn: false,
+  });
+});
+
+test("parse spell critical strike damage", () => {
+  const result = parseMod("+20% Spell Critical Strike Damage");
+  expect(result).toEqual({
+    type: "CritDmgPct",
+    value: 0.2,
+    modType: "spell",
+    addn: false,
+  });
+});
+
+test("parse additional attack critical strike damage", () => {
+  const result = parseMod("+20% additional Attack Critical Strike Damage");
+  expect(result).toEqual({
+    type: "CritDmgPct",
+    value: 0.2,
+    modType: "attack",
+    addn: true,
+  });
+});
+
+test("parse crit damage with decimal percentage", () => {
+  const result = parseMod("+12.5% Critical Strike Damage");
+  expect(result).toEqual({
+    type: "CritDmgPct",
+    value: 0.125,
+    modType: "global",
+    addn: false,
+  });
+});
+
+test("return unrecognized for invalid crit damage mod type", () => {
+  const result = parseMod("+10% Fire Critical Strike Damage");
+  expect(result).toBe("unrecognized");
+});
+
 test("parse basic attack speed", () => {
   const result = parseMod("+6% attack speed");
   expect(result).toEqual({
