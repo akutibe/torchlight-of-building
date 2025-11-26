@@ -73,7 +73,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(60-80)Attack and Spell Critical Strike Rating",
+    craftableAffix: "+(60-80) Attack and Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Trinket",
@@ -89,7 +89,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Immune to Ignite<> Immune to Numbed",
+    craftableAffix: "Immune to Ignite\nImmune to Numbed",
   },
   {
     equipmentSlot: "Trinket",
@@ -97,7 +97,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Immune to Frostbite<> Immune to Numbed",
+    craftableAffix: "Immune to Frostbite\nImmune to Numbed",
   },
   {
     equipmentSlot: "Trinket",
@@ -113,7 +113,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "You can cast 1additional Curses",
+    craftableAffix: "You can cast 1 additional Curses",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

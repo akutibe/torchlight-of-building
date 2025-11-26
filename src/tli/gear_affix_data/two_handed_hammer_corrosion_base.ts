@@ -7,7 +7,7 @@ export const TWO_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(1-2)Main Skill Level",
+    craftableAffix: "+(1-2) Main Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -64,7 +64,7 @@ export const TWO_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Adds (7-10)- (14-17)Physical Damage to the gear",
+    craftableAffix: "Adds (7-10) - (14-17) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",

@@ -55,7 +55,7 @@ export const HELMET_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Immune to Blinding<> Immune to Paralysis",
+    craftableAffix: "Immune to Blinding\nImmune to Paralysis",
   },
   {
     equipmentSlot: "Helmet",

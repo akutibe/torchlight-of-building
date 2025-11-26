@@ -20,7 +20,7 @@ interface CraftingAffix {
  */
 const parseAffixText = (
   td: cheerio.Cheerio<any>,
-  $: cheerio.CheerioAPI
+  $: cheerio.CheerioAPI,
 ): string => {
   // Clone the element to avoid modifying the original
   const clone = td.clone();
@@ -115,7 +115,7 @@ const main = async () => {
       process.cwd(),
       ".garbage",
       "crafting",
-      "codex_crafting.html"
+      "codex_crafting.html",
     );
     const html = await readFile(htmlPath, "utf-8");
 
@@ -132,7 +132,7 @@ const main = async () => {
     await writeFile(outputPath, JSON.stringify(affixes, null, 2), "utf-8");
 
     console.log(
-      `✓ Successfully wrote ${affixes.length} affixes to ${outputPath}`
+      `✓ Successfully wrote ${affixes.length} affixes to ${outputPath}`,
     );
   } catch (error) {
     console.error("Error:", error);

@@ -47,7 +47,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+1% damage per 8stats",
+    craftableAffix: "+1% damage per 8 stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -95,7 +95,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+1% damage per 12stats",
+    craftableAffix: "+1% damage per 12 stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -128,7 +128,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
+      "+(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -145,7 +145,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "100% chance to gain a Barrier for every 5m you move<> +25% Barrier Shield",
+      "100% chance to gain a Barrier for every 5 m you move\n+25% Barrier Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -154,7 +154,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "80% chance to gain 1charge stacks when using a Terra Skill",
+      "80% chance to gain 1 charge stacks when using a Terra Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -171,7 +171,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
+      "+(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -203,7 +203,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "100% chance to gain a Barrier for every 5m you move",
+    craftableAffix: "100% chance to gain a Barrier for every 5 m you move",
   },
   {
     equipmentSlot: "Trinket",
@@ -212,7 +212,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "60% chance to gain 1charge stacks when using a Terra Skill",
+      "60% chance to gain 1 charge stacks when using a Terra Skill",
   },
   {
     equipmentSlot: "Trinket",

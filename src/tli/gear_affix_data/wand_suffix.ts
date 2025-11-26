@@ -8,7 +8,7 @@ export const WAND_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "-15% additional Cast Speed<> +(54-69)% additional Spell Damage",
+      "-15% additional Cast Speed\n+(54-69)% additional Spell Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -41,7 +41,7 @@ export const WAND_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -59,7 +59,7 @@ export const WAND_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+2Parabolic Projectile Split Quantity<> +(8-12)% additional Projectile Damage",
+      "+2 Parabolic Projectile Split Quantity\n+(8-12)% additional Projectile Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -67,7 +67,7 @@ export const WAND_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Terra Quantity +1<> +5% additional damage",
+    craftableAffix: "Max Terra Quantity +1\n+5% additional damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -76,7 +76,7 @@ export const WAND_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "-15% additional Cast Speed<> +(38-53)% additional Spell Damage",
+      "-15% additional Cast Speed\n+(38-53)% additional Spell Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -109,7 +109,7 @@ export const WAND_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,7 +127,7 @@ export const WAND_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+1Parabolic Projectile Split Quantity<> +(12-16)% additional Projectile Damage",
+      "+1 Parabolic Projectile Split Quantity\n+(12-16)% additional Projectile Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -135,7 +135,7 @@ export const WAND_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Terra Quantity +1<> +1% additional damage",
+    craftableAffix: "Max Terra Quantity +1\n+1% additional damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -143,7 +143,7 @@ export const WAND_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(126-163)Spell Critical Strike Rating",
+    craftableAffix: "+(126-163) Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -231,7 +231,7 @@ export const WAND_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(89-125)Spell Critical Strike Rating",
+    craftableAffix: "+(89-125) Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -279,7 +279,7 @@ export const WAND_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(34-47)% Cast Speed<> +(34-47)% Minion Cast Speed",
+    craftableAffix: "+(34-47)% Cast Speed\n+(34-47)% Minion Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -311,7 +311,7 @@ export const WAND_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(26-36)% Cast Speed<> +(26-36)% Minion Cast Speed",
+    craftableAffix: "+(26-36)% Cast Speed\n+(26-36)% Minion Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",

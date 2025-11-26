@@ -15,7 +15,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+3Max Fortitude Stacks",
+    craftableAffix: "+3 Max Fortitude Stacks",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -48,7 +48,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(5-7)% Armor DMG Mitigation Penetration<> +(5-7)% Armor DMG Mitigation Penetration for Minions",
+      "+(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -65,7 +65,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(6-8)% Elemental and Erosion Resistance Penetration<> +(6-8)% Elemental and Erosion Resistance Penetration for Minions",
+      "+(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -81,7 +81,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+1Max Fortitude Stacks",
+    craftableAffix: "+1 Max Fortitude Stacks",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -89,7 +89,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -97,7 +97,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -105,7 +105,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -161,7 +161,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(87-117)Max Energy Shield",
+    craftableAffix: "+(87-117) Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

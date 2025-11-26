@@ -7,7 +7,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1122Gear Armor",
+    craftableAffix: "+1122 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -15,7 +15,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1346Gear Armor",
+    craftableAffix: "+1346 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -23,7 +23,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1615Gear Armor",
+    craftableAffix: "+1615 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -31,7 +31,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+168Gear Armor",
+    craftableAffix: "+168 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -39,7 +39,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1777Gear Armor",
+    craftableAffix: "+1777 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -47,7 +47,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1920Gear Armor",
+    craftableAffix: "+1920 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -55,7 +55,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+235Gear Armor",
+    craftableAffix: "+235 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -63,7 +63,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+329Gear Armor",
+    craftableAffix: "+329 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -71,7 +71,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+461Gear Armor",
+    craftableAffix: "+461 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -79,7 +79,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+599Gear Armor",
+    craftableAffix: "+599 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -87,7 +87,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+779Gear Armor",
+    craftableAffix: "+779 Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -95,7 +95,7 @@ export const HELMET_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+935Gear Armor",
+    craftableAffix: "+935 Gear Armor",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

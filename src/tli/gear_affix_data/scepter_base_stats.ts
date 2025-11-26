@@ -7,7 +7,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -15,7 +15,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -23,7 +23,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -31,7 +31,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -39,7 +39,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -47,7 +47,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -55,7 +55,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -63,7 +63,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -71,7 +71,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -79,7 +79,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -87,7 +87,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -95,7 +95,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -103,7 +103,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -111,7 +111,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,7 +119,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,7 +127,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -135,7 +135,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -143,7 +143,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -151,7 +151,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -159,7 +159,7 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "500Critical Strike Rating<> 1.2Attack Speed",
+    craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

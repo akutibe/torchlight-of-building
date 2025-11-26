@@ -39,7 +39,7 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Terra Quantity +2<> +10% additional damage",
+    craftableAffix: "Max Terra Quantity +2\n+10% additional damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -79,7 +79,7 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Terra Quantity +2<> +1% additional damage",
+    craftableAffix: "Max Terra Quantity +2\n+1% additional damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -128,7 +128,7 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(66-94)% Attack and Cast Speed<> +(66-94)% Minion Attack and Cast Speed",
+      "+(66-94)% Attack and Cast Speed\n+(66-94)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -169,7 +169,7 @@ export const FIRE_CANNON_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(51-72)% Attack and Cast Speed<> +(51-72)% Minion Attack and Cast Speed",
+      "+(51-72)% Attack and Cast Speed\n+(51-72)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",

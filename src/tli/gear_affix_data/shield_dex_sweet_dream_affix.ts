@@ -33,7 +33,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35-40)Dexterity",
+    craftableAffix: "+(35-40) Dexterity",
   },
   {
     equipmentSlot: "Shield",
@@ -41,7 +41,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35-40)Intelligence",
+    craftableAffix: "+(35-40) Intelligence",
   },
   {
     equipmentSlot: "Shield",
@@ -49,7 +49,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35-40)Strength",
+    craftableAffix: "+(35-40) Strength",
   },
   {
     equipmentSlot: "Shield",
@@ -138,7 +138,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54-74)Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Shield",

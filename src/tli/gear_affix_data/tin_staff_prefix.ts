@@ -23,7 +23,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+4Jumps<> +(25-30)% additional damage",
+    craftableAffix: "+4 Jumps\n+(25-30)% additional damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -31,7 +31,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+7Spell Skill Level",
+    craftableAffix: "+7 Spell Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -79,7 +79,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+4Jumps<> +(18-20)% additional damage",
+    craftableAffix: "+4 Jumps\n+(18-20)% additional damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -87,7 +87,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+6Spell Skill Level",
+    craftableAffix: "+6 Spell Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -119,7 +119,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(181-234)Dexterity",
+    craftableAffix: "+(181-234) Dexterity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -127,7 +127,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(181-234)Intelligence",
+    craftableAffix: "+(181-234) Intelligence",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -135,7 +135,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(181-234)Strength",
+    craftableAffix: "+(181-234) Strength",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -143,7 +143,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(4-5)Main Skill Level",
+    craftableAffix: "+(4-5) Main Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -151,7 +151,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(127-180)Dexterity",
+    craftableAffix: "+(127-180) Dexterity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -159,7 +159,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(127-180)Intelligence",
+    craftableAffix: "+(127-180) Intelligence",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -167,7 +167,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(127-180)Strength",
+    craftableAffix: "+(127-180) Strength",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -175,7 +175,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+4Main Skill Level",
+    craftableAffix: "+4 Main Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -191,7 +191,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(361-468)Max Mana",
+    craftableAffix: "+(361-468) Max Mana",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -199,7 +199,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (166-168)- (215-226)Fire Damage to Spells",
+    craftableAffix: "Adds (166-168) - (215-226) Fire Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -207,7 +207,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (168-170)- (222-224)Cold Damage to Spells",
+    craftableAffix: "Adds (168-170) - (222-224) Cold Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -215,7 +215,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (179-181)- (211-213)Erosion Damage to Spells",
+    craftableAffix: "Adds (179-181) - (211-213) Erosion Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -223,7 +223,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (179-181)- (211-213)Physical Damage to Spells",
+    craftableAffix: "Adds (179-181) - (211-213) Physical Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -231,7 +231,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (19-21)- (371-373)Lightning Damage to Spells",
+    craftableAffix: "Adds (19-21) - (371-373) Lightning Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -247,7 +247,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(253-360)Max Mana",
+    craftableAffix: "+(253-360) Max Mana",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -255,7 +255,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (127-129)- (164-174)Fire Damage to Spells",
+    craftableAffix: "Adds (127-129) - (164-174) Fire Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -263,7 +263,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (128-130)- (170-172)Cold Damage to Spells",
+    craftableAffix: "Adds (128-130) - (170-172) Cold Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -271,7 +271,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (137-139)- (161-163)Erosion Damage to Spells",
+    craftableAffix: "Adds (137-139) - (161-163) Erosion Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -279,7 +279,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (137-139)- (161-163)Physical Damage to Spells",
+    craftableAffix: "Adds (137-139) - (161-163) Physical Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -287,7 +287,7 @@ export const TIN_STAFF_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (14-16)- (284-286)Lightning Damage to Spells",
+    craftableAffix: "Adds (14-16) - (284-286) Lightning Damage to Spells",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

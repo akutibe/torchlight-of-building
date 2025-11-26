@@ -8,7 +8,7 @@ export const SHIELD_INT_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+15% Armor Effective Rate for Non-Physical Damage<> +2400Gear Armor",
+      "+15% Armor Effective Rate for Non-Physical Damage\n+2400 Gear Armor",
   },
   {
     equipmentSlot: "Shield",
@@ -25,7 +25,7 @@ export const SHIELD_INT_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "All Passive Skill slots are supported by Lv. 30Precise: Restrain",
+      "All Passive Skill slots are supported by Lv. 30 Precise: Restrain",
   },
   {
     equipmentSlot: "Shield",
@@ -34,7 +34,7 @@ export const SHIELD_INT_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Converts 25% of Physical Damage taken to random Elemental Damage<> -25% Defense",
+      "Converts 25% of Physical Damage taken to random Elemental Damage\n-25% Defense",
   },
   {
     equipmentSlot: "Shield",
@@ -43,7 +43,7 @@ export const SHIELD_INT_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Energy Shield starts to Charge when Blocking<> +40% Energy Shield Charge Speed",
+      "Energy Shield starts to Charge when Blocking\n+40% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -60,7 +60,7 @@ export const SHIELD_INT_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Spell Damage will not further reduce Evasion by default<> +1680gear Evasion",
+      "Spell Damage will not further reduce Evasion by default\n+1680 gear Evasion",
   },
   {
     equipmentSlot: "Shield",

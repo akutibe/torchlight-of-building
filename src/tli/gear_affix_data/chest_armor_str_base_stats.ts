@@ -15,7 +15,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1091Gear Armor",
+    craftableAffix: "+1091 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -23,7 +23,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1309Gear Armor",
+    craftableAffix: "+1309 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -31,7 +31,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1571Gear Armor",
+    craftableAffix: "+1571 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -39,7 +39,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1885Gear Armor",
+    craftableAffix: "+1885 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -47,7 +47,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+196Gear Armor",
+    craftableAffix: "+196 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -55,7 +55,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+2073Gear Armor",
+    craftableAffix: "+2073 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -63,7 +63,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+2240Gear Armor",
+    craftableAffix: "+2240 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -71,7 +71,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+274Gear Armor",
+    craftableAffix: "+274 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -79,7 +79,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+384Gear Armor",
+    craftableAffix: "+384 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -87,7 +87,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+538Gear Armor",
+    craftableAffix: "+538 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -95,7 +95,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+699Gear Armor",
+    craftableAffix: "+699 Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -103,7 +103,7 @@ export const CHEST_ARMOR_STR_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+909Gear Armor",
+    craftableAffix: "+909 Gear Armor",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,7 +7,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+10Max Life",
+    craftableAffix: "+10 Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -15,7 +15,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+110Max Energy Shield",
+    craftableAffix: "+110 Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -23,7 +23,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+110Max Life",
+    craftableAffix: "+110 Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -31,7 +31,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+12Max Energy Shield",
+    craftableAffix: "+12 Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -39,7 +39,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+140Max Energy Shield",
+    craftableAffix: "+140 Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -47,7 +47,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+15Max Life",
+    craftableAffix: "+15 Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -55,7 +55,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+18Max Energy Shield",
+    craftableAffix: "+18 Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -63,7 +63,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+35Max Life",
+    craftableAffix: "+35 Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -71,7 +71,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+50Max Energy Shield",
+    craftableAffix: "+50 Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -79,7 +79,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+65Max Life",
+    craftableAffix: "+65 Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,7 +87,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+80Max Energy Shield",
+    craftableAffix: "+80 Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -95,7 +95,7 @@ export const BELT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+95Max Life",
+    craftableAffix: "+95 Max Life",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

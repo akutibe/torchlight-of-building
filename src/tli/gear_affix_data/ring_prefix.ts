@@ -31,7 +31,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+15% Max Mana. +(100-120)Skill Cost",
+    craftableAffix: "+15% Max Mana. +(100-120) Skill Cost",
   },
   {
     equipmentSlot: "Trinket",
@@ -39,7 +39,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Agility Blessing Stacks +1<> +5% additional damage",
+    craftableAffix: "Max Agility Blessing Stacks +1\n+5% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -47,7 +47,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Focus Blessing Stacks +1<> +5% additional damage",
+    craftableAffix: "Max Focus Blessing Stacks +1\n+5% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -55,7 +55,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Tenacity Blessing Stacks +1<> +5% additional damage",
+    craftableAffix: "Max Tenacity Blessing Stacks +1\n+5% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,7 +87,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+10% Max Mana. +80Skill Cost",
+    craftableAffix: "+10% Max Mana. +80 Skill Cost",
   },
   {
     equipmentSlot: "Trinket",
@@ -135,7 +135,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Dexterity",
+    craftableAffix: "+(61-78) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -143,7 +143,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Intelligence",
+    craftableAffix: "+(61-78) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -151,7 +151,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Strength",
+    craftableAffix: "+(61-78) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -159,7 +159,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (54-56)- (71-76)Fire Damage to Attacks and Spells",
+    craftableAffix: "Adds (54-56) - (71-76) Fire Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -167,15 +167,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (55-57)- (73-75)Cold Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "0",
-    craftableAffix: "Adds (55-57)- (73-75)Erosion Damage to Attacks and Spells",
+    craftableAffix: "Adds (55-57) - (73-75) Cold Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -184,7 +176,7 @@ export const RING_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Adds (58-60)- (71-73)Physical Damage to Attacks and Spells",
+      "Adds (55-57) - (73-75) Erosion Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -193,7 +185,16 @@ export const RING_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Adds (6-8)- (123-125)Lightning Damage to Attacks and Spells",
+      "Adds (58-60) - (71-73) Physical Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "0",
+    craftableAffix:
+      "Adds (6-8) - (123-125) Lightning Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -217,7 +218,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Dexterity",
+    craftableAffix: "+(43-60) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -225,7 +226,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Intelligence",
+    craftableAffix: "+(43-60) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -233,39 +234,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Strength",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (4-6)- (94-96)Lightning Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (42-44)- (54-59)Fire Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (42-44)- (56-58)Cold Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (42-44)- (56-58)Erosion Damage to Attacks and Spells",
+    craftableAffix: "+(43-60) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -274,7 +243,41 @@ export const RING_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Adds (44-46)- (54-56)Physical Damage to Attacks and Spells",
+      "Adds (4-6) - (94-96) Lightning Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix: "Adds (42-44) - (54-59) Fire Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix: "Adds (42-44) - (56-58) Cold Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix:
+      "Adds (42-44) - (56-58) Erosion Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix:
+      "Adds (44-46) - (54-56) Physical Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -282,7 +285,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121-156)Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -290,7 +293,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221-286)Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -298,7 +301,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(319-455)Max Energy Shield",
+    craftableAffix: "+(319-455) Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -330,7 +333,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(155-220)Max Life",
+    craftableAffix: "+(155-220) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -338,7 +341,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(245-350)Max Energy Shield",
+    craftableAffix: "+(245-350) Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -370,7 +373,7 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85-120)Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

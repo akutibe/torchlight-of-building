@@ -7,7 +7,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(136-176)Attack and Spell Critical Strike Rating",
+    craftableAffix: "+(136-176) Attack and Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -63,7 +63,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(96-135)Attack and Spell Critical Strike Rating",
+    craftableAffix: "+(96-135) Attack and Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -88,7 +88,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
+      "+(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -113,7 +113,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: 1s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1s<> +(40-60)% Cold Infiltration Effect",
+      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1 s\n+(40-60)% Cold Infiltration Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -130,7 +130,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
+      "+(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -163,7 +163,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: 1s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1s<> +(10-30)% Cold Infiltration Effect",
+      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1 s\n+(10-30)% Cold Infiltration Effect",
   },
   {
     equipmentSlot: "Chest Armor",

@@ -114,7 +114,7 @@ export const CROSSBOW_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(66-94)% Attack and Cast Speed<> +(66-94)% Minion Attack and Cast Speed",
+      "+(66-94)% Attack and Cast Speed\n+(66-94)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -155,7 +155,7 @@ export const CROSSBOW_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(51-72)% Attack and Cast Speed<> +(51-72)% Minion Attack and Cast Speed",
+      "+(51-72)% Attack and Cast Speed\n+(51-72)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",

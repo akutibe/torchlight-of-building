@@ -8,7 +8,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+120% Spell Amplification Aura<> -20% additional Spell Amplification Sealed Mana Compensation",
+      "+120% Spell Amplification Aura\n-20% additional Spell Amplification Sealed Mana Compensation",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,7 +17,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+15% additional Deterioration Damage<> 10% chance to inflict 1additional stack(s) of Deterioration",
+      "+15% additional Deterioration Damage\n10% chance to inflict 1 additional stack(s) of Deterioration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -33,7 +33,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "+35% additional damage<> -10% additional Cast Speed",
+    craftableAffix: "+35% additional damage\n-10% additional Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -42,7 +42,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Adds 200- 220Cold Damage to Spells when having at least 800Intelligence",
+      "Adds 200 - 220 Cold Damage to Spells when having at least 800 Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -51,7 +51,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
+      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5 m radius",
   },
   {
     equipmentSlot: "One-Handed",
@@ -60,7 +60,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Max Tenacity Blessing Stacks -1<> Max Focus Blessing Stacks +1<> Max Agility Blessing Stacks +1",
+      "Max Tenacity Blessing Stacks -1\nMax Focus Blessing Stacks +1\nMax Agility Blessing Stacks +1",
   },
   {
     equipmentSlot: "One-Handed",
@@ -68,7 +68,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "The Main Skill is supported by Lv. 25Control Spell",
+    craftableAffix: "The Main Skill is supported by Lv. 25 Control Spell",
   },
   {
     equipmentSlot: "One-Handed",
@@ -92,7 +92,7 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    craftableAffix: "+55Spell Critical Strike Rating",
+    craftableAffix: "+55 Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",

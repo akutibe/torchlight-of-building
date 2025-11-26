@@ -25,7 +25,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Max Agility Blessing Stacks +1<> +5% additional Minion Damage",
+      "Max Agility Blessing Stacks +1\n+5% additional Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -34,7 +34,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Max Focus Blessing Stacks +1<> +5% additional Minion Damage",
+      "Max Focus Blessing Stacks +1\n+5% additional Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -43,7 +43,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Max Tenacity Blessing Stacks +1<> +5% additional Minion Damage",
+      "Max Tenacity Blessing Stacks +1\n+5% additional Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -92,7 +92,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Dexterity",
+    craftableAffix: "+(61-78) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -100,7 +100,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Intelligence",
+    craftableAffix: "+(61-78) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -108,7 +108,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Strength",
+    craftableAffix: "+(61-78) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -116,7 +116,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (54-56)- (71-76)Fire Damage to Minions",
+    craftableAffix: "Adds (54-56) - (71-76) Fire Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -124,7 +124,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (55-57)- (73-75)Cold Damage to Minions",
+    craftableAffix: "Adds (55-57) - (73-75) Cold Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -132,7 +132,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (58-60)- (71-73)Erosion Damage to Minions",
+    craftableAffix: "Adds (58-60) - (71-73) Erosion Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -140,7 +140,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (58-60)- (71-73)Physical Damage to Minions",
+    craftableAffix: "Adds (58-60) - (71-73) Physical Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -148,7 +148,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (6-8)- (123-125)Lightning Damage to Minions",
+    craftableAffix: "Adds (6-8) - (123-125) Lightning Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -156,7 +156,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Dexterity",
+    craftableAffix: "+(43-60) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -164,7 +164,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Intelligence",
+    craftableAffix: "+(43-60) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -172,7 +172,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Strength",
+    craftableAffix: "+(43-60) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -180,7 +180,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "Adds (4-6)- (94-96)Lightning Damage to Minions",
+    craftableAffix: "Adds (4-6) - (94-96) Lightning Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -188,7 +188,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "Adds (42-44)- (54-59)Fire Damage to Minions",
+    craftableAffix: "Adds (42-44) - (54-59) Fire Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -196,7 +196,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "Adds (42-44)- (56-58)Cold Damage to Minions",
+    craftableAffix: "Adds (42-44) - (56-58) Cold Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -204,7 +204,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "Adds (44-46)- (54-56)Erosion Damage to Minions",
+    craftableAffix: "Adds (44-46) - (54-56) Erosion Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -212,7 +212,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "Adds (44-46)- (54-56)Physical Damage to Minions",
+    craftableAffix: "Adds (44-46) - (54-56) Physical Damage to Minions",
   },
   {
     equipmentSlot: "Trinket",
@@ -220,7 +220,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121-156)Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -236,7 +236,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221-286)Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -252,7 +252,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(319-455)Max Energy Shield",
+    craftableAffix: "+(319-455) Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -292,7 +292,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(155-220)Max Life",
+    craftableAffix: "+(155-220) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -308,7 +308,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(245-350)Max Energy Shield",
+    craftableAffix: "+(245-350) Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -340,7 +340,7 @@ export const SPIRIT_RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85-120)Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -95,7 +95,7 @@ export const RING_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Immune to Trauma<> Immune to Wilt",
+    craftableAffix: "Immune to Trauma\nImmune to Wilt",
   },
   {
     equipmentSlot: "Trinket",

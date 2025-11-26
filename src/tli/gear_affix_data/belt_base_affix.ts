@@ -56,7 +56,7 @@ export const BELT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Immune to Slow<> Immune to Weaken",
+    craftableAffix: "Immune to Slow\nImmune to Weaken",
   },
   {
     equipmentSlot: "Trinket",
@@ -64,7 +64,7 @@ export const BELT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Immune to Paralysis<> Immune to Blinding",
+    craftableAffix: "Immune to Paralysis\nImmune to Blinding",
   },
   {
     equipmentSlot: "Trinket",
@@ -72,7 +72,7 @@ export const BELT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -80,7 +80,7 @@ export const BELT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -88,7 +88,7 @@ export const BELT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -96,7 +96,7 @@ export const BELT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(40-60)Max Mana",
+    craftableAffix: "+(40-60) Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -136,7 +136,7 @@ export const BELT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54-74)Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -144,7 +144,7 @@ export const BELT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(87-117)Max Energy Shield",
+    craftableAffix: "+(87-117) Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

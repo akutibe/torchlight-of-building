@@ -8,7 +8,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(111-145)% gear Physical Damage<> Adds (69-71)- (85-87)Physical Damage to the gear",
+      "+(111-145)% gear Physical Damage\nAdds (69-71) - (85-87) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -40,7 +40,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+7to Attack Skill Level",
+    craftableAffix: "+7 to Attack Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -49,7 +49,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Adds (77-79)- (438-440)Elemental Damage to the gear<> -100% gear Physical Damage",
+      "Adds (77-79) - (438-440) Elemental Damage to the gear\n-100% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -82,7 +82,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(77-110)% gear Physical Damage<> Adds (53-55)- (65-67)Physical Damage to the gear",
+      "+(77-110)% gear Physical Damage\nAdds (53-55) - (65-67) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -90,7 +90,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+6to Attack Skill Level",
+    craftableAffix: "+6 to Attack Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -99,7 +99,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Adds (59-61)- (337-339)Elemental Damage to the gear<> -100% gear Physical Damage",
+      "Adds (59-61) - (337-339) Elemental Damage to the gear\n-100% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -107,7 +107,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(181-234)Dexterity",
+    craftableAffix: "+(181-234) Dexterity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -115,7 +115,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(181-234)Intelligence",
+    craftableAffix: "+(181-234) Intelligence",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -123,7 +123,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(181-234)Strength",
+    craftableAffix: "+(181-234) Strength",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -147,7 +147,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(127-180)Dexterity",
+    craftableAffix: "+(127-180) Dexterity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -155,7 +155,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(127-180)Intelligence",
+    craftableAffix: "+(127-180) Intelligence",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -163,7 +163,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(127-180)Strength",
+    craftableAffix: "+(127-180) Strength",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -187,7 +187,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (198-200)- (256-270)Fire Damage to the gear",
+    craftableAffix: "Adds (198-200) - (256-270) Fire Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -195,7 +195,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (200-202)- (266-268)Cold Damage to the gear",
+    craftableAffix: "Adds (200-202) - (266-268) Cold Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -203,7 +203,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (214-216)- (252-254)Erosion Damage to the gear",
+    craftableAffix: "Adds (214-216) - (252-254) Erosion Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -211,7 +211,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (22-24)- (444-446)Lightning Damage to the gear",
+    craftableAffix: "Adds (22-24) - (444-446) Lightning Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -219,7 +219,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (93-95)- (113-115)Physical Damage to the gear",
+    craftableAffix: "Adds (93-95) - (113-115) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -228,7 +228,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "Reaps (0.37-0.48)s of Wilt Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.37-0.48) s of Wilt Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -244,7 +244,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (152-154)- (197-208)Fire Damage to the gear",
+    craftableAffix: "Adds (152-154) - (197-208) Fire Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -252,7 +252,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (154-156)- (204-206)Cold Damage to the gear",
+    craftableAffix: "Adds (154-156) - (204-206) Cold Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -260,7 +260,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (165-167)- (193-195)Erosion Damage to the gear",
+    craftableAffix: "Adds (165-167) - (193-195) Erosion Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -268,7 +268,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (17-19)- (341-343)Lightning Damage to the gear",
+    craftableAffix: "Adds (17-19) - (341-343) Lightning Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -276,7 +276,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (71-73)- (87-89)Physical Damage to the gear",
+    craftableAffix: "Adds (71-73) - (87-89) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -285,7 +285,7 @@ export const FIRE_CANNON_PREFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "Reaps (0.25-0.36)s of Wilt Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.25-0.36) s of Wilt Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

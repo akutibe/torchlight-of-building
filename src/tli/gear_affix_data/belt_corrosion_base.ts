@@ -136,7 +136,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Owns 1additional stack(s) of Fortitude",
+    craftableAffix: "Owns 1 additional stack(s) of Fortitude",
   },
   {
     equipmentSlot: "Trinket",

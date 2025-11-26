@@ -32,7 +32,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20Blind Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Blind Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -41,7 +41,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20Timid Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Timid Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -50,7 +50,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20Entangled Pain Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Entangled Pain Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -58,7 +58,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+ 3Command per second",
+    craftableAffix: "+ 3 Command per second",
   },
   {
     equipmentSlot: "Trinket",
@@ -74,7 +74,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+32initial Growth for Spirit Magi",
+    craftableAffix: "+32 initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -98,7 +98,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -106,7 +106,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -114,7 +114,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -154,7 +154,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54-74)Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -171,7 +171,7 @@ export const SPIRIT_RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(87-117)Max Energy Shield",
+    craftableAffix: "+(87-117) Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

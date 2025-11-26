@@ -16,7 +16,7 @@ export const ROD_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(36-46)% additional damage for Synthetic Troop Minions when having at least 40Command",
+      "+(36-46)% additional damage for Synthetic Troop Minions when having at least 40 Command",
   },
   {
     equipmentSlot: "One-Handed",
@@ -59,7 +59,7 @@ export const ROD_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(26-35)% additional damage for Synthetic Troop Minions when having at least 40Command",
+      "+(26-35)% additional damage for Synthetic Troop Minions when having at least 40 Command",
   },
   {
     equipmentSlot: "One-Handed",
@@ -93,7 +93,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(126-163)Minion Critical Strike Rating",
+    craftableAffix: "+(126-163) Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -133,7 +133,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(89-125)Minion Critical Strike Rating",
+    craftableAffix: "+(89-125) Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -174,7 +174,7 @@ export const ROD_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "+(37-47)% Attack and Cast Speed<> +(37-47)% Minion Attack and Cast Speed",
+      "+(37-47)% Attack and Cast Speed\n+(37-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -182,7 +182,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Regenerates (181-234)Life per second",
+    craftableAffix: "Regenerates (181-234) Life per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -199,7 +199,7 @@ export const ROD_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "+(27-36)% Attack and Cast Speed<> +(27-36)% Minion Attack and Cast Speed",
+      "+(27-36)% Attack and Cast Speed\n+(27-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -231,7 +231,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Regenerates (130-180)Life per second",
+    craftableAffix: "Regenerates (130-180) Life per second",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

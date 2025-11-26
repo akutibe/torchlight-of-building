@@ -15,7 +15,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+12Dexterity",
+    craftableAffix: "+12 Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -23,7 +23,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+12Intelligence",
+    craftableAffix: "+12 Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -31,7 +31,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+12Strength",
+    craftableAffix: "+12 Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -39,7 +39,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+18Dexterity",
+    craftableAffix: "+18 Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -47,7 +47,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+18Intelligence",
+    craftableAffix: "+18 Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -55,7 +55,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+18Strength",
+    craftableAffix: "+18 Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -63,7 +63,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+24Dexterity",
+    craftableAffix: "+24 Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -71,7 +71,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+24Intelligence",
+    craftableAffix: "+24 Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -79,7 +79,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+24Strength",
+    craftableAffix: "+24 Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,7 +87,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+3Dexterity",
+    craftableAffix: "+3 Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -95,7 +95,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+3Intelligence",
+    craftableAffix: "+3 Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -103,7 +103,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+3Strength",
+    craftableAffix: "+3 Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -111,7 +111,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+5Dexterity",
+    craftableAffix: "+5 Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -119,7 +119,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+5Intelligence",
+    craftableAffix: "+5 Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -127,7 +127,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+5Strength",
+    craftableAffix: "+5 Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -135,7 +135,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+8Dexterity",
+    craftableAffix: "+8 Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -143,7 +143,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+8Intelligence",
+    craftableAffix: "+8 Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -151,7 +151,7 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+8Strength",
+    craftableAffix: "+8 Strength",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

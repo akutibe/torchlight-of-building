@@ -17,7 +17,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(9-10)% additional Cold Damage and +(16-18)% Cold Penetration when having at least 8stack(s) of Focus Blessing",
+      "+(9-10)% additional Cold Damage and +(16-18)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -26,7 +26,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(9-10)% additional Fire Damage and +(16-18)% Fire Penetration when having at least 8stack(s) of Tenacity Blessing",
+      "+(9-10)% additional Fire Damage and +(16-18)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -43,7 +43,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+3Active Skill Level",
+    craftableAffix: "+3 Active Skill Level",
   },
   {
     equipmentSlot: "Gloves",
@@ -61,7 +61,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(6-8)% additional Cold Damage and +(12-15)% Cold Penetration when having at least 8stack(s) of Focus Blessing",
+      "+(6-8)% additional Cold Damage and +(12-15)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -70,7 +70,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(6-8)% additional Fire Damage and +(12-15)% Fire Penetration when having at least 8stack(s) of Tenacity Blessing",
+      "+(6-8)% additional Fire Damage and +(12-15)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -87,7 +87,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+2Active Skill Level",
+    craftableAffix: "+2 Active Skill Level",
   },
   {
     equipmentSlot: "Gloves",
@@ -111,7 +111,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (54-56)- (71-76)Fire Damage to Attacks and Spells",
+    craftableAffix: "Adds (54-56) - (71-76) Fire Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -119,15 +119,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (55-57)- (73-75)Cold Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (INT)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "0",
-    craftableAffix: "Adds (55-57)- (73-75)Erosion Damage to Attacks and Spells",
+    craftableAffix: "Adds (55-57) - (73-75) Cold Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -136,7 +128,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Adds (58-60)- (71-73)Physical Damage to Attacks and Spells",
+      "Adds (55-57) - (73-75) Erosion Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -145,39 +137,16 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Adds (6-8)- (123-125)Lightning Damage to Attacks and Spells",
+      "Adds (58-60) - (71-73) Physical Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Prefix",
     craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (4-6)- (94-96)Lightning Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (INT)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (42-44)- (54-59)Fire Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (INT)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (42-44)- (56-58)Cold Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (INT)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (42-44)- (56-58)Erosion Damage to Attacks and Spells",
+    tier: "0",
+    craftableAffix:
+      "Adds (6-8) - (123-125) Lightning Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -186,7 +155,41 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Adds (44-46)- (54-56)Physical Damage to Attacks and Spells",
+      "Adds (4-6) - (94-96) Lightning Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix: "Adds (42-44) - (54-59) Fire Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix: "Adds (42-44) - (56-58) Cold Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix:
+      "Adds (42-44) - (56-58) Erosion Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix:
+      "Adds (44-46) - (54-56) Physical Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -210,7 +213,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121-156)Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Gloves",
@@ -218,7 +221,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221-286)Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Gloves",
@@ -234,7 +237,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(341-442)gear Energy Shield",
+    craftableAffix: "+(341-442) gear Energy Shield",
   },
   {
     equipmentSlot: "Gloves",
@@ -282,7 +285,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(155-220)Max Life",
+    craftableAffix: "+(155-220) Max Life",
   },
   {
     equipmentSlot: "Gloves",
@@ -298,7 +301,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(239-340)gear Energy Shield",
+    craftableAffix: "+(239-340) gear Energy Shield",
   },
   {
     equipmentSlot: "Gloves",
@@ -346,7 +349,7 @@ export const GLOVES_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85-120)Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

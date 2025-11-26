@@ -24,7 +24,7 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(110-130)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(110-130)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -49,7 +49,7 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+60% Steep Strike chance.<> +(49-62)% additional Steep Strike Damage",
+      "+60% Steep Strike chance.\n+(49-62)% additional Steep Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -98,7 +98,7 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(80-100)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(80-100)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -107,7 +107,7 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+46% Steep Strike chance.<> +(35-48)% additional Steep Strike Damage",
+      "+46% Steep Strike chance.\n+(35-48)% additional Steep Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -172,7 +172,7 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(66-94)% Attack and Cast Speed<> +(66-94)% Minion Attack and Cast Speed",
+      "+(66-94)% Attack and Cast Speed\n+(66-94)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -221,7 +221,7 @@ export const TWO_HANDED_SWORD_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(51-72)% Attack and Cast Speed<> +(51-72)% Minion Attack and Cast Speed",
+      "+(51-72)% Attack and Cast Speed\n+(51-72)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",

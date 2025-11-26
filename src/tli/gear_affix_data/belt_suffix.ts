@@ -122,7 +122,7 @@ export const BELT_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(10-12)% Elemental Resistance<> +(12-15)% chance to avoid Elemental Ailment",
+      "+(10-12)% Elemental Resistance\n+(12-15)% chance to avoid Elemental Ailment",
   },
   {
     equipmentSlot: "Trinket",
@@ -154,7 +154,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(49-62)initial Growth for Spirit Magi",
+    craftableAffix: "+(49-62) initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -170,7 +170,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Warcry is cast immediately<> +2Max Warcry Skill Charges",
+    craftableAffix: "Warcry is cast immediately\n+2 Max Warcry Skill Charges",
   },
   {
     equipmentSlot: "Trinket",
@@ -194,7 +194,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(35-48)initial Growth for Spirit Magi",
+    craftableAffix: "+(35-48) initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -211,7 +211,7 @@ export const BELT_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(7-9)% Elemental Resistance<> +(12-15)% chance to avoid Elemental Ailment",
+      "+(7-9)% Elemental Resistance\n+(12-15)% chance to avoid Elemental Ailment",
   },
   {
     equipmentSlot: "Trinket",
@@ -227,7 +227,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "Warcry is cast immediately<> +1Max Warcry Skill Charges",
+    craftableAffix: "Warcry is cast immediately\n+1 Max Warcry Skill Charges",
   },
   {
     equipmentSlot: "Trinket",
@@ -268,7 +268,7 @@ export const BELT_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "Reaps 0.16s of Damage Over Time when dealing Trauma Damage. The effect has a 1s cooldown against the same target",
+      "Reaps 0.16 s of Damage Over Time when dealing Trauma Damage. The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -277,7 +277,7 @@ export const BELT_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "Reaps 0.16s of Damage Over Time when inflicting Wilt . The effect has a 1s cooldown against the same target",
+      "Reaps 0.16 s of Damage Over Time when inflicting Wilt . The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -286,7 +286,7 @@ export const BELT_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "Reaps 0.16s of Damage Over Time when inflicting Ignite . The effect has a 1s cooldown against the same target",
+      "Reaps 0.16 s of Damage Over Time when inflicting Ignite . The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -327,7 +327,7 @@ export const BELT_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "Reaps 0.12s of Damage Over Time when dealing Trauma Damage. The effect has a 1s cooldown against the same target",
+      "Reaps 0.12 s of Damage Over Time when dealing Trauma Damage. The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -336,7 +336,7 @@ export const BELT_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "Reaps 0.12s of Damage Over Time when inflicting Wilt . The effect has a 1s cooldown against the same target",
+      "Reaps 0.12 s of Damage Over Time when inflicting Wilt . The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -345,7 +345,7 @@ export const BELT_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "Reaps 0.12s of Damage Over Time when inflicting Ignite . The effect has a 1s cooldown against the same target",
+      "Reaps 0.12 s of Damage Over Time when inflicting Ignite . The effect has a 1 s cooldown against the same target",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

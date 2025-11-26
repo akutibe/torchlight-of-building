@@ -8,7 +8,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(13-16)% Elemental Resistance<> +(13-16)% Erosion Resistance",
+      "+(13-16)% Elemental Resistance\n+(13-16)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -113,7 +113,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(9-12)% Elemental Resistance<> +(9-12)% Erosion Resistance",
+      "+(9-12)% Elemental Resistance\n+(9-12)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -170,7 +170,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+1Combo Points gained from Combo Starters<> +(3-5)% additional damage",
+      "+1 Combo Points gained from Combo Starters\n+(3-5)% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -179,7 +179,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "100% chance to gain a Barrier for every 5m you move<> +25% Barrier Shield",
+      "100% chance to gain a Barrier for every 5 m you move\n+25% Barrier Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -188,7 +188,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Inflicts (6-8)Frostbite Rating to Frostbitten enemies every second",
+      "Inflicts (6-8) Frostbite Rating to Frostbitten enemies every second",
   },
   {
     equipmentSlot: "Trinket",
@@ -245,7 +245,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+1Combo Points gained from Combo Starters<> +(1-2)% additional damage",
+      "+1 Combo Points gained from Combo Starters\n+(1-2)% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -253,7 +253,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "100% chance to gain a Barrier for every 5m you move",
+    craftableAffix: "100% chance to gain a Barrier for every 5 m you move",
   },
   {
     equipmentSlot: "Trinket",
@@ -262,7 +262,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Inflicts 5Frostbite Rating to Frostbitten enemies every second",
+      "Inflicts 5 Frostbite Rating to Frostbitten enemies every second",
   },
   {
     equipmentSlot: "Trinket",

@@ -23,7 +23,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(3-4)Spell Skill Level",
+    craftableAffix: "+(3-4) Spell Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -31,7 +31,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+2Jumps<> +(12-16)% additional damage",
+    craftableAffix: "+2 Jumps\n+(12-16)% additional damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -63,7 +63,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+2Jumps<> +(8-10)% additional damage",
+    craftableAffix: "+2 Jumps\n+(8-10)% additional damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -71,7 +71,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+3Spell Skill Level",
+    craftableAffix: "+3 Spell Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -87,7 +87,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3)Cold Skill Level",
+    craftableAffix: "+(2-3) Cold Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -95,7 +95,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3)Erosion Skill Level",
+    craftableAffix: "+(2-3) Erosion Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -103,7 +103,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3)Fire Skill Level",
+    craftableAffix: "+(2-3) Fire Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -111,7 +111,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3)Lightning Skill Level",
+    craftableAffix: "+(2-3) Lightning Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,7 +119,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3)Physical Skill Level",
+    craftableAffix: "+(2-3) Physical Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,7 +127,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Dexterity",
+    craftableAffix: "+(91-117) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -135,7 +135,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Intelligence",
+    craftableAffix: "+(91-117) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -143,7 +143,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Strength",
+    craftableAffix: "+(91-117) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -151,7 +151,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Dexterity",
+    craftableAffix: "+(64-90) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -159,7 +159,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Intelligence",
+    craftableAffix: "+(64-90) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -167,7 +167,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Strength",
+    craftableAffix: "+(64-90) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -175,7 +175,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+2Cold Skill Level",
+    craftableAffix: "+2 Cold Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -183,7 +183,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+2Erosion Skill Level",
+    craftableAffix: "+2 Erosion Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -191,7 +191,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+2Fire Skill Level",
+    craftableAffix: "+2 Fire Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -199,7 +199,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+2Lightning Skill Level",
+    craftableAffix: "+2 Lightning Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -207,7 +207,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+2Physical Skill Level",
+    craftableAffix: "+2 Physical Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -223,7 +223,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(181-234)Max Mana",
+    craftableAffix: "+(181-234) Max Mana",
   },
   {
     equipmentSlot: "One-Handed",
@@ -231,7 +231,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (82-84)- (106-113)Fire Damage to Spells",
+    craftableAffix: "Adds (82-84) - (106-113) Fire Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -239,7 +239,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (83-85)- (110-112)Cold Damage to Spells",
+    craftableAffix: "Adds (83-85) - (110-112) Cold Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -247,7 +247,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (87-89)- (106-108)Erosion Damage to Spells",
+    craftableAffix: "Adds (87-89) - (106-108) Erosion Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -255,7 +255,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (87-89)- (106-108)Physical Damage to Spells",
+    craftableAffix: "Adds (87-89) - (106-108) Physical Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -263,7 +263,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (9-11)- (184-186)Lightning Damage to Spells",
+    craftableAffix: "Adds (9-11) - (184-186) Lightning Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -271,7 +271,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(127-180)Max Mana",
+    craftableAffix: "+(127-180) Max Mana",
   },
   {
     equipmentSlot: "One-Handed",
@@ -287,7 +287,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (63-65)- (82-87)Fire Damage to Spells",
+    craftableAffix: "Adds (63-65) - (82-87) Fire Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -295,7 +295,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (64-66)- (85-87)Cold Damage to Spells",
+    craftableAffix: "Adds (64-66) - (85-87) Cold Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -303,7 +303,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (67-69)- (82-84)Erosion Damage to Spells",
+    craftableAffix: "Adds (67-69) - (82-84) Erosion Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -311,7 +311,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (67-69)- (82-84)Physical Damage to Spells",
+    craftableAffix: "Adds (67-69) - (82-84) Physical Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -319,7 +319,7 @@ export const WAND_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (7-9)- (142-144)Lightning Damage to Spells",
+    craftableAffix: "Adds (7-9) - (142-144) Lightning Damage to Spells",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

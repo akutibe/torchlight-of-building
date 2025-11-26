@@ -8,7 +8,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "-45% additional Damage Over Time taken when having at least 50000Armor",
+      "-45% additional Damage Over Time taken when having at least 50000 Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -57,7 +57,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5m radius",
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5 m radius",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -65,7 +65,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "You can cast 1additional Curses<> +(8-10)% curse effect",
+    craftableAffix: "You can cast 1 additional Curses\n+(8-10)% curse effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -74,7 +74,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "-40% additional Damage Over Time taken when having at least 50000Armor",
+      "-40% additional Damage Over Time taken when having at least 50000 Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -123,7 +123,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 4m radius",
+      "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 4 m radius",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -131,7 +131,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "You can cast 1additional Curses",
+    craftableAffix: "You can cast 1 additional Curses",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -155,7 +155,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(55-78)Strength",
+    craftableAffix: "+(55-78) Strength",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -163,7 +163,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Dexterity",
+    craftableAffix: "+(61-78) Dexterity",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -171,7 +171,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Intelligence",
+    craftableAffix: "+(61-78) Intelligence",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -195,7 +195,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(42-60)Strength",
+    craftableAffix: "+(42-60) Strength",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -203,7 +203,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Dexterity",
+    craftableAffix: "+(43-60) Dexterity",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -211,7 +211,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Intelligence",
+    craftableAffix: "+(43-60) Intelligence",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -219,7 +219,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121-156)Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -235,7 +235,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221-286)Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -243,7 +243,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(3361-4368)Gear Armor",
+    craftableAffix: "+(3361-4368) Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -283,7 +283,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(154-220)Max Life",
+    craftableAffix: "+(154-220) Max Life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -291,7 +291,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(2353-3360)Gear Armor",
+    craftableAffix: "+(2353-3360) Gear Armor",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -323,7 +323,7 @@ export const CHEST_ARMOR_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85-120)Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

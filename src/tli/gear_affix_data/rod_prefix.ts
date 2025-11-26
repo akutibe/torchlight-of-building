@@ -24,7 +24,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(3-4)Main Skill Level",
+    craftableAffix: "+(3-4) Main Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -32,7 +32,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(3-4)Minion Skill Level",
+    craftableAffix: "+(3-4) Minion Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,7 +57,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+3Main Skill Level",
+    craftableAffix: "+3 Main Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -65,7 +65,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+3Minion Skill Level",
+    craftableAffix: "+3 Minion Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,7 +73,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Dexterity",
+    craftableAffix: "+(91-117) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -81,7 +81,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Intelligence",
+    craftableAffix: "+(91-117) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,7 +89,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Strength",
+    craftableAffix: "+(91-117) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -98,7 +98,7 @@ export const ROD_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+1to Max Summonable Synthetic Troops<> +(10-12)% additional Minion Damage",
+      "+1 to Max Summonable Synthetic Troops\n+(10-12)% additional Minion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -114,7 +114,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Dexterity",
+    craftableAffix: "+(64-90) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -122,7 +122,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Intelligence",
+    craftableAffix: "+(64-90) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -130,7 +130,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Strength",
+    craftableAffix: "+(64-90) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -139,7 +139,7 @@ export const ROD_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+1to Max Summonable Synthetic Troops<> +(6-8)% additional Minion Damage",
+      "+1 to Max Summonable Synthetic Troops\n+(6-8)% additional Minion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -171,7 +171,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (82-84)- (106-113)Fire Damage to Minions",
+    craftableAffix: "Adds (82-84) - (106-113) Fire Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -179,7 +179,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (83-85)- (110-112)Cold Damage to Minions",
+    craftableAffix: "Adds (83-85) - (110-112) Cold Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -187,7 +187,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (87-89)- (106-108)Erosion Damage to Minions",
+    craftableAffix: "Adds (87-89) - (106-108) Erosion Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -195,7 +195,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (87-89)- (106-108)Physical Damage to Minions",
+    craftableAffix: "Adds (87-89) - (106-108) Physical Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -203,7 +203,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (9-11)- (184-186)Lightning Damage to Minions",
+    craftableAffix: "Adds (9-11) - (184-186) Lightning Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -227,7 +227,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (63-65)- (82-87)Fire Damage to Minions",
+    craftableAffix: "Adds (63-65) - (82-87) Fire Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -235,7 +235,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (64-66)- (85-87)Cold Damage to Minions",
+    craftableAffix: "Adds (64-66) - (85-87) Cold Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -243,7 +243,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (67-69)- (82-84)Erosion Damage to Minions",
+    craftableAffix: "Adds (67-69) - (82-84) Erosion Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -251,7 +251,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (67-69)- (82-84)Physical Damage to Minions",
+    craftableAffix: "Adds (67-69) - (82-84) Physical Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -259,7 +259,7 @@ export const ROD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (7-9)- (142-144)Lightning Damage to Minions",
+    craftableAffix: "Adds (7-9) - (142-144) Lightning Damage to Minions",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

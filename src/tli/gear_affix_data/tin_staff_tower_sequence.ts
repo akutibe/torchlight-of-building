@@ -8,7 +8,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+200% Spell Amplification Aura<> -30% additional Spell Amplification Sealed Mana Compensation",
+      "+200% Spell Amplification Aura\n-30% additional Spell Amplification Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,7 +17,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+30% additional Deterioration Damage<> 10% chance to inflict 2additional stack(s) of Deterioration",
+      "+30% additional Deterioration Damage\n10% chance to inflict 2 additional stack(s) of Deterioration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -33,7 +33,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "+70% additional damage<> -10% additional Cast Speed",
+    craftableAffix: "+70% additional damage\n-10% additional Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -42,7 +42,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Adds 420- 440Cold Damage to Spells when having at least 800Intelligence",
+      "Adds 420 - 440 Cold Damage to Spells when having at least 800 Intelligence",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -51,7 +51,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Enemies have a 30% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
+      "Enemies have a 30% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5 m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -60,7 +60,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Max Tenacity Blessing Stacks -2<> Max Focus Blessing Stacks +2<> Max Agility Blessing Stacks +2",
+      "Max Tenacity Blessing Stacks -2\nMax Focus Blessing Stacks +2\nMax Agility Blessing Stacks +2",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -69,7 +69,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "The Main Skill is supported by Lv. 25Control Spell<> +25% additional Spell Damage",
+      "The Main Skill is supported by Lv. 25 Control Spell\n+25% additional Spell Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -77,7 +77,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    craftableAffix: "+110Spell Critical Strike Rating",
+    craftableAffix: "+110 Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",

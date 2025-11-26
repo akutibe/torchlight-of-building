@@ -7,7 +7,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Shadow Quantity +2<> +(10-15)% additional Shadow Damage",
+    craftableAffix: "Shadow Quantity +2\n+(10-15)% additional Shadow Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -48,7 +48,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Shadow Quantity +2<> -5% additional Shadow Damage",
+    craftableAffix: "Shadow Quantity +2\n-5% additional Shadow Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -98,7 +98,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(33-47)% Attack and Cast Speed<> +(33-47)% Minion Attack and Cast Speed",
+      "+(33-47)% Attack and Cast Speed\n+(33-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -155,7 +155,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(26-36)% Attack and Cast Speed<> +(26-36)% Minion Attack and Cast Speed",
+      "+(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",

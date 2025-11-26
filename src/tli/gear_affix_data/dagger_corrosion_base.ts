@@ -16,7 +16,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "(5-8)% chance to inflict 1additional stacks of Wilt",
+    craftableAffix: "(5-8)% chance to inflict 1 additional stacks of Wilt",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,7 +57,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(5-10)Affliction inflicted per second",
+    craftableAffix: "+(5-10) Affliction inflicted per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,7 +73,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Adds (2-4)- (8-10)Physical Damage to the gear",
+    craftableAffix: "Adds (2-4) - (8-10) Physical Damage to the gear",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

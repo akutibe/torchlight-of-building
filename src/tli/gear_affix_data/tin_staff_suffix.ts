@@ -16,7 +16,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(110-130)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(110-130)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -40,7 +40,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+4Beams<> +(20-30)% additional damage",
+    craftableAffix: "+4 Beams\n+(20-30)% additional damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -48,7 +48,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Terra Quantity +2<> +10% additional damage",
+    craftableAffix: "Max Terra Quantity +2\n+10% additional damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -81,7 +81,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(80-100)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(80-100)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -89,7 +89,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+4Beams<> +(5-10)% additional damage",
+    craftableAffix: "+4 Beams\n+(5-10)% additional damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -97,7 +97,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Terra Quantity +2<> +1% additional damage",
+    craftableAffix: "Max Terra Quantity +2\n+1% additional damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -129,7 +129,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(251-325)Spell Critical Strike Rating",
+    craftableAffix: "+(251-325) Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -169,7 +169,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(176-250)Spell Critical Strike Rating",
+    craftableAffix: "+(176-250) Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -249,7 +249,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(73-94)% Cast Speed<> +(73-94)% Minion Cast Speed",
+    craftableAffix: "+(73-94)% Cast Speed\n+(73-94)% Minion Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -297,7 +297,7 @@ export const TIN_STAFF_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(51-72)% Cast Speed<> +(51-72)% Minion Cast Speed",
+    craftableAffix: "+(51-72)% Cast Speed\n+(51-72)% Minion Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",

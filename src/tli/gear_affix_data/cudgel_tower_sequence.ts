@@ -8,7 +8,7 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+120% gear Physical Damage<> -20% Attack Critical Strike Rating for this gear",
+      "+120% gear Physical Damage\n-20% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,7 +17,7 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+200% Fearless Aura<> -30% additional Fearless Sealed Mana Compensation",
+      "+200% Fearless Aura\n-30% additional Fearless Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -26,7 +26,7 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+30% additional Deterioration Damage<> 10% chance to inflict 2additional stack(s) of Deterioration",
+      "+30% additional Deterioration Damage\n10% chance to inflict 2 additional stack(s) of Deterioration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -35,7 +35,7 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+50% Elemental Damage for the gear<> -25% gear Physical Damage",
+      "+50% Elemental Damage for the gear\n-25% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -43,7 +43,7 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "Adds 1- 7Lightning Damage to Attacks per 10Dexterity",
+    craftableAffix: "Adds 1 - 7 Lightning Damage to Attacks per 10 Dexterity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -51,7 +51,7 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "Adds 2- 2Physical Damage to Attacks per 2260Armor",
+    craftableAffix: "Adds 2 - 2 Physical Damage to Attacks per 2260 Armor",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -59,16 +59,7 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "Adds 3- 5Fire Damage to Attacks per 10Strength",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Cudgel",
-    affixType: "Tower Sequence",
-    craftingPool: "Advanced",
-    tier: "",
-    craftableAffix:
-      "Enemies have a 30% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
+    craftableAffix: "Adds 3 - 5 Fire Damage to Attacks per 10 Strength",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -77,7 +68,16 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Main Skill is supported by Lv. 25Steamroll<> +25% additional Melee Damage",
+      "Enemies have a 30% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5 m radius",
+  },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Cudgel",
+    affixType: "Tower Sequence",
+    craftingPool: "Advanced",
+    tier: "",
+    craftableAffix:
+      "Main Skill is supported by Lv. 25 Steamroll\n+25% additional Melee Damage",
   },
   {
     equipmentSlot: "Two-Handed",

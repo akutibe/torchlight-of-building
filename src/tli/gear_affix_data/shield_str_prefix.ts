@@ -8,7 +8,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(26-33)% Armor DMG Mitigation Penetration<> +(26-33)% Armor DMG Mitigation Penetration for Minions",
+      "+(26-33)% Armor DMG Mitigation Penetration\n+(26-33)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Shield",
@@ -17,7 +17,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(29-39)% Elemental and Erosion Resistance Penetration<> Minion Damage penetrates (29-39)% Elemental Resistance",
+      "+(29-39)% Elemental and Erosion Resistance Penetration\nMinion Damage penetrates (29-39)% Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -25,7 +25,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(3-4)Active Skill Level",
+    craftableAffix: "+(3-4) Active Skill Level",
   },
   {
     equipmentSlot: "Shield",
@@ -34,7 +34,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(19-25)% Armor DMG Mitigation Penetration<> +(19-25)% Armor DMG Mitigation Penetration for Minions",
+      "+(19-25)% Armor DMG Mitigation Penetration\n+(19-25)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Shield",
@@ -43,7 +43,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(22-30)% Elemental and Erosion Resistance Penetration<> Minion Damage penetrates (22-30)% Elemental Resistance",
+      "+(22-30)% Elemental and Erosion Resistance Penetration\nMinion Damage penetrates (22-30)% Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -51,7 +51,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+3Active Skill Level",
+    craftableAffix: "+3 Active Skill Level",
   },
   {
     equipmentSlot: "Shield",
@@ -75,7 +75,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Dexterity",
+    craftableAffix: "+(91-117) Dexterity",
   },
   {
     equipmentSlot: "Shield",
@@ -83,7 +83,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Intelligence",
+    craftableAffix: "+(91-117) Intelligence",
   },
   {
     equipmentSlot: "Shield",
@@ -91,7 +91,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Strength",
+    craftableAffix: "+(91-117) Strength",
   },
   {
     equipmentSlot: "Shield",
@@ -115,7 +115,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Dexterity",
+    craftableAffix: "+(64-90) Dexterity",
   },
   {
     equipmentSlot: "Shield",
@@ -123,7 +123,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Intelligence",
+    craftableAffix: "+(64-90) Intelligence",
   },
   {
     equipmentSlot: "Shield",
@@ -131,7 +131,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Strength",
+    craftableAffix: "+(64-90) Strength",
   },
   {
     equipmentSlot: "Shield",
@@ -147,7 +147,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109-140)% damage<> +(109-140)% Minion Damage",
+    craftableAffix: "+(109-140)% damage\n+(109-140)% Minion Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -163,7 +163,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(331-429)Max Life",
+    craftableAffix: "+(331-429) Max Life",
   },
   {
     equipmentSlot: "Shield",
@@ -171,7 +171,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(4321-5616)Gear Armor",
+    craftableAffix: "+(4321-5616) Gear Armor",
   },
   {
     equipmentSlot: "Shield",
@@ -195,7 +195,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(232-330)Max Life",
+    craftableAffix: "+(232-330) Max Life",
   },
   {
     equipmentSlot: "Shield",
@@ -203,7 +203,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(3025-4320)Gear Armor",
+    craftableAffix: "+(3025-4320) Gear Armor",
   },
   {
     equipmentSlot: "Shield",
@@ -211,7 +211,7 @@ export const SHIELD_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77-108)% damage<> +(77-108)% Minion Damage",
+    craftableAffix: "+(77-108)% damage\n+(77-108)% Minion Damage",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

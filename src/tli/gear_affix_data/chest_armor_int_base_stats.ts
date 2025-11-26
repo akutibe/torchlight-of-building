@@ -23,7 +23,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+10gear Energy Shield",
+    craftableAffix: "+10 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -31,7 +31,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+100gear Energy Shield",
+    craftableAffix: "+100 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -39,7 +39,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+120gear Energy Shield",
+    craftableAffix: "+120 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -47,7 +47,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+140gear Energy Shield",
+    craftableAffix: "+140 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -55,7 +55,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+15gear Energy Shield",
+    craftableAffix: "+15 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -63,7 +63,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+170gear Energy Shield",
+    craftableAffix: "+170 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -71,7 +71,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+20gear Energy Shield",
+    craftableAffix: "+20 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -79,7 +79,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+30gear Energy Shield",
+    craftableAffix: "+30 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -87,7 +87,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+40gear Energy Shield",
+    craftableAffix: "+40 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -95,7 +95,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+50gear Energy Shield",
+    craftableAffix: "+50 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -103,7 +103,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+65gear Energy Shield",
+    craftableAffix: "+65 gear Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -111,7 +111,7 @@ export const CHEST_ARMOR_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+80gear Energy Shield",
+    craftableAffix: "+80 gear Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

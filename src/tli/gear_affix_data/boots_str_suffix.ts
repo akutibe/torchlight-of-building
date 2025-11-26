@@ -39,7 +39,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "For every 5m moved, gains 1stack(s) of Deflection",
+    craftableAffix: "For every 5 m moved, gains 1 stack(s) of Deflection",
   },
   {
     equipmentSlot: "Boots",
@@ -48,7 +48,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. (11-20)Blurry Steps upon starting to move. Interval: 1s",
+      "Triggers Lv. (11-20) Blurry Steps upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -88,7 +88,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "For every 6m moved, gains 1stack(s) of Deflection",
+    craftableAffix: "For every 6 m moved, gains 1 stack(s) of Deflection",
   },
   {
     equipmentSlot: "Boots",
@@ -97,7 +97,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Triggers Lv. (6-10)Blurry Steps upon starting to move. Interval: 1 s",
+      "Triggers Lv. (6-10) Blurry Steps upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -106,7 +106,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
+      "+(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -115,7 +115,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
+      "+(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -148,7 +148,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Has Hasten<> +(9-12)% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
+      "Has Hasten\n+(9-12)% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
   },
   {
     equipmentSlot: "Boots",
@@ -157,7 +157,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
+      "+(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -190,7 +190,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Has Hasten<> +(5-8)% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
+      "Has Hasten\n+(5-8)% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
   },
   {
     equipmentSlot: "Boots",

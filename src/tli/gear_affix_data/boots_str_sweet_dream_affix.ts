@@ -48,7 +48,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(5-7)% Armor DMG Mitigation Penetration<> +(5-7)% Armor DMG Mitigation Penetration for Minions",
+      "+(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Boots",
@@ -57,7 +57,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(6-8)% Elemental and Erosion Resistance Penetration<> +(6-8)% Elemental and Erosion Resistance Penetration for Minions",
+      "+(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
     equipmentSlot: "Boots",
@@ -65,7 +65,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "Boots",
@@ -73,7 +73,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "Boots",
@@ -81,7 +81,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "Boots",
@@ -129,7 +129,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54-74)Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -137,7 +137,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(760-960)Armor",
+    craftableAffix: "+(760-960) Armor",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

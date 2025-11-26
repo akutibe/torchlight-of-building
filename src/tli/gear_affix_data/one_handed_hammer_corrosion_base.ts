@@ -56,7 +56,7 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+1Main Skill Level",
+    craftableAffix: "+1 Main Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -64,7 +64,7 @@ export const ONE_HANDED_HAMMER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Adds (2-4)- (8-10)Physical Damage to the gear",
+    craftableAffix: "Adds (2-4) - (8-10) Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",

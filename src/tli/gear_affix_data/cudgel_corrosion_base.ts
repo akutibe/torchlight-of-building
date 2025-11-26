@@ -7,7 +7,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(1-2)Support Skill Level",
+    craftableAffix: "+(1-2) Support Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",

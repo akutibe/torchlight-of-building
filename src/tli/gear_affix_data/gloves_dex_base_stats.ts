@@ -7,7 +7,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1122gear Evasion",
+    craftableAffix: "+1122 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -15,7 +15,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1346gear Evasion",
+    craftableAffix: "+1346 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -23,7 +23,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1615gear Evasion",
+    craftableAffix: "+1615 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -31,7 +31,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+168gear Evasion",
+    craftableAffix: "+168 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -39,7 +39,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1777gear Evasion",
+    craftableAffix: "+1777 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -47,7 +47,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1920gear Evasion",
+    craftableAffix: "+1920 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -55,7 +55,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+235gear Evasion",
+    craftableAffix: "+235 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -63,7 +63,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+329gear Evasion",
+    craftableAffix: "+329 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -71,7 +71,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+461gear Evasion",
+    craftableAffix: "+461 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -79,7 +79,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+599gear Evasion",
+    craftableAffix: "+599 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -87,7 +87,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+779gear Evasion",
+    craftableAffix: "+779 gear Evasion",
   },
   {
     equipmentSlot: "Gloves",
@@ -95,7 +95,7 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+935gear Evasion",
+    craftableAffix: "+935 gear Evasion",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

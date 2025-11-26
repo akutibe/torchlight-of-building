@@ -72,7 +72,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+1Support Skill Level",
+    craftableAffix: "+1 Support Skill Level",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -80,7 +80,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+2Active Skill Level",
+    craftableAffix: "+2 Active Skill Level",
   },
   {
     equipmentSlot: "Chest Armor",

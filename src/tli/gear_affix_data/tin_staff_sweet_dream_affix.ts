@@ -7,7 +7,7 @@ export const TIN_STAFF_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Lucky Critical Strike<> (-50--80)% Critical Strike Rating",
+    craftableAffix: "Lucky Critical Strike\n(-50--80)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -16,7 +16,7 @@ export const TIN_STAFF_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5m radius",
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5 m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -88,7 +88,7 @@ export const TIN_STAFF_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Adds (32-34)- (40-42)Physical Damage to the gear",
+    craftableAffix: "Adds (32-34) - (40-42) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -136,7 +136,7 @@ export const TIN_STAFF_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1-2)- (28-32)Lightning Damage to Spells",
+    craftableAffix: "Adds (1-2) - (28-32) Lightning Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -144,7 +144,7 @@ export const TIN_STAFF_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13)- (14-19)Cold Damage to Spells",
+    craftableAffix: "Adds (10-13) - (14-19) Cold Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -152,7 +152,7 @@ export const TIN_STAFF_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13)- (14-19)Physical Damage to Spells",
+    craftableAffix: "Adds (10-13) - (14-19) Physical Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -160,7 +160,7 @@ export const TIN_STAFF_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (11-13)- (15-18)Erosion Damage to Spells",
+    craftableAffix: "Adds (11-13) - (15-18) Erosion Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -168,7 +168,7 @@ export const TIN_STAFF_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (9-14)- (15-20)Fire Damage to Spells",
+    craftableAffix: "Adds (9-14) - (15-20) Fire Damage to Spells",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

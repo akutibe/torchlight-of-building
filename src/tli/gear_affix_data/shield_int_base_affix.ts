@@ -31,7 +31,7 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35-40)Dexterity",
+    craftableAffix: "+(35-40) Dexterity",
   },
   {
     equipmentSlot: "Shield",
@@ -39,7 +39,7 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35-40)Intelligence",
+    craftableAffix: "+(35-40) Intelligence",
   },
   {
     equipmentSlot: "Shield",
@@ -47,7 +47,7 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35-40)Strength",
+    craftableAffix: "+(35-40) Strength",
   },
   {
     equipmentSlot: "Shield",
@@ -135,7 +135,7 @@ export const SHIELD_INT_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(87-117)Max Energy Shield",
+    craftableAffix: "+(87-117) Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

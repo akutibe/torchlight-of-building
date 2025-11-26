@@ -7,7 +7,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Lucky Critical Strike<> (-50--80)% Critical Strike Rating",
+    craftableAffix: "Lucky Critical Strike\n(-50--80)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -79,7 +79,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Adds (32-34)- (40-42)Physical Damage to the gear",
+    craftableAffix: "Adds (32-34) - (40-42) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -127,7 +127,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1-2)- (28-32)Lightning Damage to Attacks",
+    craftableAffix: "Adds (1-2) - (28-32) Lightning Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -135,7 +135,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13)- (14-19)Cold Damage to Attacks",
+    craftableAffix: "Adds (10-13) - (14-19) Cold Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -143,7 +143,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13)- (14-19)Physical Damage to Attacks",
+    craftableAffix: "Adds (10-13) - (14-19) Physical Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -151,7 +151,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (11-13)- (15-18)Erosion Damage to Attacks",
+    craftableAffix: "Adds (11-13) - (15-18) Erosion Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -159,7 +159,7 @@ export const TWO_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (9-14)- (15-20)Fire Damage to Attacks",
+    craftableAffix: "Adds (9-14) - (15-20) Fire Damage to Attacks",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

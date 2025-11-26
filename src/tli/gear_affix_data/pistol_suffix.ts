@@ -39,7 +39,7 @@ export const PISTOL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Terra Quantity +1<> +5% additional damage",
+    craftableAffix: "Max Terra Quantity +1\n+5% additional damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -79,7 +79,7 @@ export const PISTOL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Terra Quantity +1<> +1% additional damage",
+    craftableAffix: "Max Terra Quantity +1\n+1% additional damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -96,7 +96,7 @@ export const PISTOL_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(33-47)% Attack and Cast Speed<> +(33-47)% Minion Attack and Cast Speed",
+      "+(33-47)% Attack and Cast Speed\n+(33-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -153,7 +153,7 @@ export const PISTOL_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(26-36)% Attack and Cast Speed<> +(26-36)% Minion Attack and Cast Speed",
+      "+(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",

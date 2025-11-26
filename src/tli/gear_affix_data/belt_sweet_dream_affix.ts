@@ -56,7 +56,7 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -64,7 +64,7 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -72,7 +72,7 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -80,7 +80,7 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(40-60)Max Mana",
+    craftableAffix: "+(40-60) Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -120,7 +120,7 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54-74)Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -128,7 +128,7 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(87-117)Max Energy Shield",
+    craftableAffix: "+(87-117) Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

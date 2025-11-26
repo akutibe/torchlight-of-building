@@ -7,7 +7,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1091gear Evasion",
+    craftableAffix: "+1091 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -15,7 +15,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1309gear Evasion",
+    craftableAffix: "+1309 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -23,7 +23,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1571gear Evasion",
+    craftableAffix: "+1571 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -31,7 +31,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+1885gear Evasion",
+    craftableAffix: "+1885 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -39,7 +39,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+196gear Evasion",
+    craftableAffix: "+196 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -47,7 +47,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+2073gear Evasion",
+    craftableAffix: "+2073 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -55,7 +55,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+2240gear Evasion",
+    craftableAffix: "+2240 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -63,7 +63,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+274gear Evasion",
+    craftableAffix: "+274 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -71,7 +71,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+384gear Evasion",
+    craftableAffix: "+384 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -79,7 +79,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+538gear Evasion",
+    craftableAffix: "+538 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -87,7 +87,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+699gear Evasion",
+    craftableAffix: "+699 gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -95,7 +95,7 @@ export const CHEST_ARMOR_DEX_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+909gear Evasion",
+    craftableAffix: "+909 gear Evasion",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,7 +7,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+ (11-13)Command per second",
+    craftableAffix: "+ (11-13) Command per second",
   },
   {
     equipmentSlot: "Trinket",
@@ -15,7 +15,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(126-163)Minion Critical Strike Rating",
+    craftableAffix: "+(126-163) Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "Trinket",
@@ -24,7 +24,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(13-16)% Elemental Resistance<> +(13-16)% Erosion Resistance",
+      "+(13-16)% Elemental Resistance\n+(13-16)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -40,7 +40,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(81-104)initial Growth for Spirit Magi",
+    craftableAffix: "+(81-104) initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -48,7 +48,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+ (8-10)Command per second",
+    craftableAffix: "+ (8-10) Command per second",
   },
   {
     equipmentSlot: "Trinket",
@@ -64,7 +64,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(57-80)initial Growth for Spirit Magi",
+    craftableAffix: "+(57-80) initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -72,7 +72,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(89-125)Minion Critical Strike Rating",
+    craftableAffix: "+(89-125) Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "Trinket",
@@ -81,7 +81,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(9-12)% Elemental Resistance<> +(9-12)% Erosion Resistance",
+      "+(9-12)% Elemental Resistance\n+(9-12)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -90,7 +90,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
+      "+(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -124,7 +124,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
+      "+(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",

@@ -8,7 +8,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+120% Fearless Aura<> -20% additional Fearless Sealed Mana Compensation",
+      "+120% Fearless Aura\n-20% additional Fearless Sealed Mana Compensation",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,7 +17,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+15% additional Deterioration Damage<> 10% chance to inflict 1additional stack(s) of Deterioration",
+      "+15% additional Deterioration Damage\n10% chance to inflict 1 additional stack(s) of Deterioration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -26,7 +26,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+25% Elemental Damage for the gear<> -25% gear Physical Damage",
+      "+25% Elemental Damage for the gear\n-25% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -35,7 +35,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+80% gear Physical Damage<> -20% Attack Critical Strike Rating for this gear",
+      "+80% gear Physical Damage\n-20% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -43,7 +43,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "Adds 1- 1Physical Damage to Attacks per 2260Armor",
+    craftableAffix: "Adds 1 - 1 Physical Damage to Attacks per 2260 Armor",
   },
   {
     equipmentSlot: "One-Handed",
@@ -51,7 +51,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "Adds 1- 3Lightning Damage to Attacks per 10Dexterity",
+    craftableAffix: "Adds 1 - 3 Lightning Damage to Attacks per 10 Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -59,7 +59,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "Adds 2- 2Fire Damage to Attacks per 10Strength",
+    craftableAffix: "Adds 2 - 2 Fire Damage to Attacks per 10 Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -68,7 +68,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
+      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5 m radius",
   },
   {
     equipmentSlot: "One-Handed",
@@ -76,7 +76,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "Main Skill is supported by Lv. 25Steamroll",
+    craftableAffix: "Main Skill is supported by Lv. 25 Steamroll",
   },
   {
     equipmentSlot: "One-Handed",

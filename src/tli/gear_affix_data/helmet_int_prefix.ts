@@ -32,7 +32,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+1Max Spell Burst<> +10% additional Hit Damage for skills cast by Spell Burst",
+      "+1 Max Spell Burst\n+10% additional Hit Damage for skills cast by Spell Burst",
   },
   {
     equipmentSlot: "Helmet",
@@ -57,7 +57,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Max Terra Charge Stacks +1<> +30% Terra Charge Recovery Speed",
+      "Max Terra Charge Stacks +1\n+30% Terra Charge Recovery Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -89,7 +89,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+1Max Spell Burst",
+    craftableAffix: "+1 Max Spell Burst",
   },
   {
     equipmentSlot: "Helmet",
@@ -146,7 +146,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Dexterity",
+    craftableAffix: "+(61-78) Dexterity",
   },
   {
     equipmentSlot: "Helmet",
@@ -154,7 +154,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Intelligence",
+    craftableAffix: "+(61-78) Intelligence",
   },
   {
     equipmentSlot: "Helmet",
@@ -162,7 +162,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Strength",
+    craftableAffix: "+(61-78) Strength",
   },
   {
     equipmentSlot: "Helmet",
@@ -203,7 +203,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Dexterity",
+    craftableAffix: "+(43-60) Dexterity",
   },
   {
     equipmentSlot: "Helmet",
@@ -211,7 +211,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Intelligence",
+    craftableAffix: "+(43-60) Intelligence",
   },
   {
     equipmentSlot: "Helmet",
@@ -219,7 +219,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Strength",
+    craftableAffix: "+(43-60) Strength",
   },
   {
     equipmentSlot: "Helmet",
@@ -235,7 +235,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121-156)Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Helmet",
@@ -243,7 +243,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221-286)Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -251,7 +251,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(341-442)gear Energy Shield",
+    craftableAffix: "+(341-442) gear Energy Shield",
   },
   {
     equipmentSlot: "Helmet",
@@ -283,7 +283,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(155-220)Max Life",
+    craftableAffix: "+(155-220) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -291,7 +291,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(239-340)gear Energy Shield",
+    craftableAffix: "+(239-340) gear Energy Shield",
   },
   {
     equipmentSlot: "Helmet",
@@ -323,7 +323,7 @@ export const HELMET_INT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85-120)Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

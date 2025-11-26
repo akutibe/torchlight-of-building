@@ -40,7 +40,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -49,7 +49,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+30% Steep Strike chance.<> +(23-29)% additional Steep Strike Damage",
+      "+30% Steep Strike chance.\n+(23-29)% additional Steep Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -82,7 +82,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -99,7 +99,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+23% Steep Strike chance.<> +(16-22)% additional Steep Strike Damage",
+      "+23% Steep Strike chance.\n+(16-22)% additional Steep Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -116,7 +116,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(33-47)% Attack and Cast Speed<> +(33-47)% Minion Attack and Cast Speed",
+      "+(33-47)% Attack and Cast Speed\n+(33-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -165,7 +165,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(26-36)% Attack and Cast Speed<> +(26-36)% Minion Attack and Cast Speed",
+      "+(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",

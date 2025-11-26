@@ -16,7 +16,7 @@ export const BELT_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(386-500)% Critical Strike Rating against Traumatized enemies<> -30% additional Hit Damage",
+      "+(386-500)% Critical Strike Rating against Traumatized enemies\n-30% additional Hit Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -32,7 +32,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+1Ignite limit<> +5% additional Ignite Damage",
+    craftableAffix: "+1 Ignite limit\n+5% additional Ignite Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -65,7 +65,7 @@ export const BELT_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(271-385)% Critical Strike Rating against Traumatized enemies<> -30% additional Hit Damage",
+      "+(271-385)% Critical Strike Rating against Traumatized enemies\n-30% additional Hit Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -81,7 +81,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+1Ignite limit",
+    craftableAffix: "+1 Ignite limit",
   },
   {
     equipmentSlot: "Trinket",
@@ -129,7 +129,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Dexterity",
+    craftableAffix: "+(61-78) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -137,7 +137,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Intelligence",
+    craftableAffix: "+(61-78) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -145,7 +145,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Strength",
+    craftableAffix: "+(61-78) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -162,7 +162,7 @@ export const BELT_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Gains a stack of Fortitude when using a Melee Skill<> (-8--6)% additional damage taken",
+      "Gains a stack of Fortitude when using a Melee Skill\n(-8--6)% additional damage taken",
   },
   {
     equipmentSlot: "Trinket",
@@ -194,7 +194,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Dexterity",
+    craftableAffix: "+(43-60) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -202,7 +202,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Intelligence",
+    craftableAffix: "+(43-60) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -210,7 +210,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Strength",
+    craftableAffix: "+(43-60) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -227,7 +227,7 @@ export const BELT_PREFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Gains a stack of Fortitude when using a Melee Skill<> (-5--3)% additional damage taken",
+      "Gains a stack of Fortitude when using a Melee Skill\n(-5--3)% additional damage taken",
   },
   {
     equipmentSlot: "Trinket",
@@ -235,7 +235,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121-156)Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -243,7 +243,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221-286)Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -260,7 +260,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(351-455)Max Energy Shield",
+    craftableAffix: "+(351-455) Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -284,7 +284,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(155-220)Max Life",
+    craftableAffix: "+(155-220) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -301,7 +301,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(246-350)Max Energy Shield",
+    craftableAffix: "+(246-350) Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -325,7 +325,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85-120)Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

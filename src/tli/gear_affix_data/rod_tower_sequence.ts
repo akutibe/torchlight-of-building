@@ -7,7 +7,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "+ 10Command per second",
+    craftableAffix: "+ 10 Command per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -16,7 +16,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "-80Minion Critical Strike Rating<> +200% Minion Critical Strike Damage",
+      "-80 Minion Critical Strike Rating\n+200% Minion Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -25,7 +25,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+120% Radical Order Aura Effect<> -20% additional Radical Order Sealed Mana Compensation",
+      "+120% Radical Order Aura Effect\n-20% additional Radical Order Sealed Mana Compensation",
   },
   {
     equipmentSlot: "One-Handed",
@@ -33,7 +33,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "+80initial Growth for Spirit Magi",
+    craftableAffix: "+80 initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "One-Handed",
@@ -41,24 +41,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    craftableAffix: "The Main Skill is supported by a Lv. 25Servant Damage",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "Rod",
-    affixType: "Tower Sequence",
-    craftingPool: "Advanced",
-    tier: "",
-    craftableAffix:
-      "Triggers Lv. 10Entangled Pain Curse and Timid Curse when a Minion deals damage. Cooldown: 1s<> Minions can cast 1additional Curse(s)",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "Rod",
-    affixType: "Tower Sequence",
-    craftingPool: "Advanced",
-    tier: "",
-    craftableAffix: "Triggers Lv. 20Dark Gate when moving. Interval: 4s",
+    craftableAffix: "The Main Skill is supported by a Lv. 25 Servant Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -67,7 +50,24 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: 1s<> When Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: 1s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1s",
+      "Triggers Lv. 10 Entangled Pain Curse and Timid Curse when a Minion deals damage. Cooldown: 1 s\nMinions can cast 1 additional Curse(s)",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Rod",
+    affixType: "Tower Sequence",
+    craftingPool: "Advanced",
+    tier: "",
+    craftableAffix: "Triggers Lv. 20 Dark Gate when moving. Interval: 4 s",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Rod",
+    affixType: "Tower Sequence",
+    craftingPool: "Advanced",
+    tier: "",
+    craftableAffix:
+      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1 s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -91,7 +91,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    craftableAffix: "+55Minion Critical Strike Rating",
+    craftableAffix: "+55 Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",

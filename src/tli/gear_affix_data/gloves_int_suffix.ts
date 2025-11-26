@@ -8,7 +8,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(16-20)% Blur Effect<> Gains Blur for 1s after losing Blur",
+      "+(16-20)% Blur Effect\nGains Blur for 1 s after losing Blur",
   },
   {
     equipmentSlot: "Gloves",
@@ -33,7 +33,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+1Jumps<> +6% additional damage for every Jump (multiplies)",
+      "+1 Jumps\n+6% additional damage for every Jump (multiplies)",
   },
   {
     equipmentSlot: "Gloves",
@@ -42,7 +42,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(12-15)% Blur Effect<> Gains Blur for 1s after losing Blur",
+      "+(12-15)% Blur Effect\nGains Blur for 1 s after losing Blur",
   },
   {
     equipmentSlot: "Gloves",
@@ -67,7 +67,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+1Jumps<> +(4-5)% additional damage for every Jump (multiplies)",
+      "+1 Jumps\n+(4-5)% additional damage for every Jump (multiplies)",
   },
   {
     equipmentSlot: "Gloves",
@@ -76,7 +76,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(22-31)% Attack and Cast Speed<> +(22-31)% Minion Attack and Cast Speed",
+      "+(22-31)% Attack and Cast Speed\n+(22-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -84,7 +84,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(49-62)% Skill Area<> +(49-62)% Minion Skill Area",
+    craftableAffix: "+(49-62)% Skill Area\n+(49-62)% Minion Skill Area",
   },
   {
     equipmentSlot: "Gloves",
@@ -109,7 +109,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(17-24)% Attack and Cast Speed<> +(17-24)% Minion Attack and Cast Speed",
+      "+(17-24)% Attack and Cast Speed\n+(17-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -117,7 +117,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(35-48)% Skill Area<> +(35-48)% Minion Skill Area",
+    craftableAffix: "+(35-48)% Skill Area\n+(35-48)% Minion Skill Area",
   },
   {
     equipmentSlot: "Gloves",

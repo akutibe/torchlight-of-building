@@ -63,7 +63,7 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+1Mobility Skill Level",
+    craftableAffix: "+1 Mobility Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -103,7 +103,7 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Triggers Lv. 20Stoneskin when moving. Interval: 2s",
+    craftableAffix: "Triggers Lv. 20 Stoneskin when moving. Interval: 2 s",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

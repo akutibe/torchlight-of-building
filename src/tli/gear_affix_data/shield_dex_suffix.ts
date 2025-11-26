@@ -24,7 +24,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "Shield",
@@ -49,7 +49,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Sentry Quantity +1<> +5% additional damage",
+    craftableAffix: "Max Sentry Quantity +1\n+5% additional damage",
   },
   {
     equipmentSlot: "Shield",
@@ -74,7 +74,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "Shield",
@@ -116,7 +116,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(34-47)% Attack and Cast Speed<> +(34-47)% Minion Attack and Cast Speed",
+      "+(34-47)% Attack and Cast Speed\n+(34-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -148,7 +148,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+2Max Warcry Skill Charges",
+    craftableAffix: "+2 Max Warcry Skill Charges",
   },
   {
     equipmentSlot: "Shield",
@@ -165,7 +165,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(26-36)% Attack and Cast Speed<> +(26-36)% Minion Attack and Cast Speed",
+      "+(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -197,7 +197,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+1Max Warcry Skill Charges",
+    craftableAffix: "+1 Max Warcry Skill Charges",
   },
   {
     equipmentSlot: "Shield",
@@ -245,7 +245,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Regenerates (177-234)Life per second",
+    craftableAffix: "Regenerates (177-234) Life per second",
   },
   {
     equipmentSlot: "Shield",
@@ -301,7 +301,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Regenerates (136-180)Life per second",
+    craftableAffix: "Regenerates (136-180) Life per second",
   },
   {
     equipmentSlot: "Shield",

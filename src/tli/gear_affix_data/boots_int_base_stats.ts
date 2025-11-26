@@ -7,7 +7,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+103gear Energy Shield",
+    craftableAffix: "+103 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -15,7 +15,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+120gear Energy Shield",
+    craftableAffix: "+120 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -23,7 +23,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+13gear Energy Shield",
+    craftableAffix: "+13 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -31,7 +31,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+146gear Energy Shield",
+    craftableAffix: "+146 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -39,7 +39,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+18gear Energy Shield",
+    craftableAffix: "+18 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -47,7 +47,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+26gear Energy Shield",
+    craftableAffix: "+26 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -55,7 +55,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+35gear Energy Shield",
+    craftableAffix: "+35 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -63,7 +63,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+43gear Energy Shield",
+    craftableAffix: "+43 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -71,7 +71,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+56gear Energy Shield",
+    craftableAffix: "+56 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -79,7 +79,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+69gear Energy Shield",
+    craftableAffix: "+69 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -87,7 +87,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+86gear Energy Shield",
+    craftableAffix: "+86 gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -95,7 +95,7 @@ export const BOOTS_INT_BASE_STATS_AFFIXES = [
     affixType: "Base Stats",
     craftingPool: "",
     tier: "",
-    craftableAffix: "+9gear Energy Shield",
+    craftableAffix: "+9 gear Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

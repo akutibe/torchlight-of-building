@@ -32,7 +32,7 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -40,7 +40,7 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Max Terra Quantity +1<> +5% additional damage",
+    craftableAffix: "Max Terra Quantity +1\n+5% additional damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -65,7 +65,7 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
+      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -81,7 +81,7 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "Max Terra Quantity +1<> +1% additional damage",
+    craftableAffix: "Max Terra Quantity +1\n+1% additional damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -113,7 +113,7 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(37-47)% Cast Speed<> +(37-47)% Minion Cast Speed",
+    craftableAffix: "+(37-47)% Cast Speed\n+(37-47)% Minion Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -185,7 +185,7 @@ export const SCEPTER_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(26-36)% Cast Speed<> +(26-36)% Minion Cast Speed",
+    craftableAffix: "+(26-36)% Cast Speed\n+(26-36)% Minion Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",

@@ -56,7 +56,7 @@ export const ONE_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Adds (2-4)- (8-10)Physical Damage to the gear",
+    craftableAffix: "Adds (2-4) - (8-10) Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",

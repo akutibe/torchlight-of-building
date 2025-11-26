@@ -8,7 +8,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5m radius",
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5 m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -112,7 +112,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1-3)- (60-65)Lightning Damage to Spells",
+    craftableAffix: "Adds (1-3) - (60-65) Lightning Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -120,7 +120,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (24-29)- (34-39)Cold Damage to Spells",
+    craftableAffix: "Adds (24-29) - (34-39) Cold Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -128,7 +128,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (24-29)- (34-39)Fire Damage to Spells",
+    craftableAffix: "Adds (24-29) - (34-39) Fire Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -136,7 +136,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (25-30)- (33-38)Physical Damage to Spells",
+    craftableAffix: "Adds (25-30) - (33-38) Physical Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -144,7 +144,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (26-31)- (32-37)Erosion Damage to Spells",
+    craftableAffix: "Adds (26-31) - (32-37) Erosion Damage to Spells",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

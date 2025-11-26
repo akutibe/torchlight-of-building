@@ -41,7 +41,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+100% chance to gain 1 stack of Tenacity Blessing when casting a skill. Interval: 1s",
+      "+100% chance to gain 1 stack of Tenacity Blessing when casting a skill. Interval: 1 s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,7 +57,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -65,7 +65,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,7 +73,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,7 +97,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1-2)- (28-32)Lightning Damage to Minions",
+    craftableAffix: "Adds (1-2) - (28-32) Lightning Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -105,7 +105,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13)- (14-19)Cold Damage to Minions",
+    craftableAffix: "Adds (10-13) - (14-19) Cold Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -113,7 +113,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13)- (14-19)Physical Damage to Minions",
+    craftableAffix: "Adds (10-13) - (14-19) Physical Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -121,7 +121,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (11-13)- (15-18)Erosion Damage to Minions",
+    craftableAffix: "Adds (11-13) - (15-18) Erosion Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,7 +129,7 @@ export const ROD_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (9-14)- (15-20)Fire Damage to Minions",
+    craftableAffix: "Adds (9-14) - (15-20) Fire Damage to Minions",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -23,7 +23,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(3-4)to Attack Skill Level",
+    craftableAffix: "+(3-4) to Attack Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -48,7 +48,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Adds (62-64)- (356-358)Elemental Damage to the gear<> -100% gear Physical Damage",
+      "Adds (62-64) - (356-358) Elemental Damage to the gear\n-100% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -88,7 +88,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+3to Attack Skill Level",
+    craftableAffix: "+3 to Attack Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,7 +97,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Adds (47-49)- (272-274)Elemental Damage to the gear<> -100% gear Physical Damage",
+      "Adds (47-49) - (272-274) Elemental Damage to the gear\n-100% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -121,7 +121,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Dexterity",
+    craftableAffix: "+(91-117) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,7 +129,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Intelligence",
+    craftableAffix: "+(91-117) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -137,7 +137,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)Strength",
+    craftableAffix: "+(91-117) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -153,7 +153,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Dexterity",
+    craftableAffix: "+(64-90) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -161,7 +161,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Intelligence",
+    craftableAffix: "+(64-90) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -169,7 +169,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)Strength",
+    craftableAffix: "+(64-90) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -185,7 +185,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (161-163)- (208-220)Fire Damage to the gear",
+    craftableAffix: "Adds (161-163) - (208-220) Fire Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -193,7 +193,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (162-164)- (216-218)Cold Damage to the gear",
+    craftableAffix: "Adds (162-164) - (216-218) Cold Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -201,7 +201,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (174-176)- (204-206)Erosion Damage to the gear",
+    craftableAffix: "Adds (174-176) - (204-206) Erosion Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -209,7 +209,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (18-20)- (360-362)Lightning Damage to the gear",
+    craftableAffix: "Adds (18-20) - (360-362) Lightning Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -217,7 +217,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (47-49)- (57-59)Physical Damage to the gear",
+    craftableAffix: "Adds (47-49) - (57-59) Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -226,7 +226,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "Reaps (0.19-0.24)s of Wilt Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.19-0.24) s of Wilt Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -242,7 +242,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (123-125)- (160-169)Fire Damage to the gear",
+    craftableAffix: "Adds (123-125) - (160-169) Fire Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -250,7 +250,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (125-127)- (165-167)Cold Damage to the gear",
+    craftableAffix: "Adds (125-127) - (165-167) Cold Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -258,7 +258,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (133-135)- (157-159)Erosion Damage to the gear",
+    craftableAffix: "Adds (133-135) - (157-159) Erosion Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -266,7 +266,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (14-16)- (276-278)Lightning Damage to the gear",
+    craftableAffix: "Adds (14-16) - (276-278) Lightning Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -274,7 +274,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (36-38)- (44-46)Physical Damage to the gear",
+    craftableAffix: "Adds (36-38) - (44-46) Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -283,7 +283,7 @@ export const PISTOL_PREFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "Reaps (0.13-0.18)s of Wilt Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.13-0.18) s of Wilt Damage when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -8,7 +8,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "-45% additional Damage Over Time taken when having at least 50000Evasion",
+      "-45% additional Damage Over Time taken when having at least 50000 Evasion",
   },
   {
     equipmentSlot: "Helmet",
@@ -41,7 +41,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+1Max Spell Burst<> +10% additional Hit Damage for skills cast by Spell Burst",
+      "+1 Max Spell Burst\n+10% additional Hit Damage for skills cast by Spell Burst",
   },
   {
     equipmentSlot: "Helmet",
@@ -68,7 +68,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Max Terra Charge Stacks +1<> +30% Terra Charge Recovery Speed",
+      "Max Terra Charge Stacks +1\n+30% Terra Charge Recovery Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -77,7 +77,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "-40% additional Damage Over Time taken when having at least 50000Evasion",
+      "-40% additional Damage Over Time taken when having at least 50000 Evasion",
   },
   {
     equipmentSlot: "Helmet",
@@ -109,7 +109,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+1Max Spell Burst",
+    craftableAffix: "+1 Max Spell Burst",
   },
   {
     equipmentSlot: "Helmet",
@@ -168,7 +168,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Dexterity",
+    craftableAffix: "+(61-78) Dexterity",
   },
   {
     equipmentSlot: "Helmet",
@@ -176,7 +176,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Intelligence",
+    craftableAffix: "+(61-78) Intelligence",
   },
   {
     equipmentSlot: "Helmet",
@@ -184,7 +184,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)Strength",
+    craftableAffix: "+(61-78) Strength",
   },
   {
     equipmentSlot: "Helmet",
@@ -225,7 +225,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Dexterity",
+    craftableAffix: "+(43-60) Dexterity",
   },
   {
     equipmentSlot: "Helmet",
@@ -233,7 +233,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Intelligence",
+    craftableAffix: "+(43-60) Intelligence",
   },
   {
     equipmentSlot: "Helmet",
@@ -241,7 +241,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(43-60)Strength",
+    craftableAffix: "+(43-60) Strength",
   },
   {
     equipmentSlot: "Helmet",
@@ -257,7 +257,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121-156)Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Helmet",
@@ -265,7 +265,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221-286)Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -273,7 +273,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(2881-3744)gear Evasion",
+    craftableAffix: "+(2881-3744) gear Evasion",
   },
   {
     equipmentSlot: "Helmet",
@@ -297,7 +297,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(154-220)Max Life",
+    craftableAffix: "+(154-220) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -305,7 +305,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(2017-2880)gear Evasion",
+    craftableAffix: "+(2017-2880) gear Evasion",
   },
   {
     equipmentSlot: "Helmet",
@@ -329,7 +329,7 @@ export const HELMET_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85-120)Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

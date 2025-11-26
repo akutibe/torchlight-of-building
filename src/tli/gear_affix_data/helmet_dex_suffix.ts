@@ -7,7 +7,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(10-11)Support Skill Level",
+    craftableAffix: "+(10-11) Support Skill Level",
   },
   {
     equipmentSlot: "Helmet",
@@ -79,7 +79,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(6-9)Support Skill Level",
+    craftableAffix: "+(6-9) Support Skill Level",
   },
   {
     equipmentSlot: "Helmet",
@@ -95,7 +95,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(19-23)% Evasion<> +(111-143)Max Life",
+    craftableAffix: "+(19-23)% Evasion\n+(111-143) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -104,7 +104,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
+      "+(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -120,7 +120,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(49-62)% Skill Area<> +(49-62)% Minion Skill Area",
+    craftableAffix: "+(49-62)% Skill Area\n+(49-62)% Minion Skill Area",
   },
   {
     equipmentSlot: "Helmet",
@@ -144,7 +144,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(14-18)% Evasion<> +(78-110)Max Life",
+    craftableAffix: "+(14-18)% Evasion\n+(78-110) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -153,7 +153,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
+      "+(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -169,7 +169,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(35-48)% Skill Area<> +(35-48)% Minion Skill Area",
+    craftableAffix: "+(35-48)% Skill Area\n+(35-48)% Minion Skill Area",
   },
   {
     equipmentSlot: "Helmet",
@@ -241,7 +241,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Regenerates (121-156)Life per second",
+    craftableAffix: "Regenerates (121-156) Life per second",
   },
   {
     equipmentSlot: "Helmet",
@@ -297,7 +297,7 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Regenerates (85-120)Life per second",
+    craftableAffix: "Regenerates (85-120) Life per second",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

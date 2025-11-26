@@ -8,7 +8,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20Biting Cold Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Biting Cold Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,7 +17,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20Corruption Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Corruption Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -26,7 +26,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20Electrocute Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Electrocute Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -35,7 +35,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20Vulnerability Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Vulnerability Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -44,7 +44,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. 20Scorch Curse upon inflicting damage. Cooldown: 0.2 s",
+      "Triggers Lv. 20 Scorch Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -76,7 +76,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+1% damage per 27stats",
+    craftableAffix: "+1% damage per 27 stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -84,7 +84,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Adds 10Base Ailment Damage",
+    craftableAffix: "Adds 10 Base Ailment Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -92,7 +92,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -100,7 +100,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -108,7 +108,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20)Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -116,7 +116,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% damage<> +(20-24)% Minion Damage",
+    craftableAffix: "+(20-24)% damage\n+(20-24)% Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -164,7 +164,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54-74)Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -172,7 +172,7 @@ export const NECKLACE_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(87-117)Max Energy Shield",
+    craftableAffix: "+(87-117) Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -47,7 +47,7 @@ export const WAND_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+1Parabolic Projectile Split Quantity",
+    craftableAffix: "+1 Parabolic Projectile Split Quantity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -103,7 +103,7 @@ export const WAND_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1-2)- (28-32)Lightning Damage to Spells",
+    craftableAffix: "Adds (1-2) - (28-32) Lightning Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -111,7 +111,7 @@ export const WAND_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13)- (14-19)Cold Damage to Spells",
+    craftableAffix: "Adds (10-13) - (14-19) Cold Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,7 +119,7 @@ export const WAND_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13)- (14-19)Physical Damage to Spells",
+    craftableAffix: "Adds (10-13) - (14-19) Physical Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,7 +127,7 @@ export const WAND_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (11-13)- (15-18)Erosion Damage to Spells",
+    craftableAffix: "Adds (11-13) - (15-18) Erosion Damage to Spells",
   },
   {
     equipmentSlot: "One-Handed",
@@ -135,7 +135,7 @@ export const WAND_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (9-14)- (15-20)Fire Damage to Spells",
+    craftableAffix: "Adds (9-14) - (15-20) Fire Damage to Spells",
   },
 ] as const satisfies readonly BaseGearAffix[];
 
