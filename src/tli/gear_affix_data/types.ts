@@ -9,7 +9,7 @@ export const AFFIX_TYPES = [
   "Prefix",
   "Suffix",
   "Sweet Dream Affix",
-  "Tower Sequence"
+  "Tower Sequence",
 ] as const;
 
 export type AffixType = (typeof AFFIX_TYPES)[number];
@@ -52,7 +52,7 @@ export const EQUIPMENT_TYPE_KEYS = [
   "two_handed_axe",
   "two_handed_hammer",
   "two_handed_sword",
-  "wand"
+  "wand",
 ] as const;
 
 export type EquipmentTypeKey = (typeof EQUIPMENT_TYPE_KEYS)[number];
