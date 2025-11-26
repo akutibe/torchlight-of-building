@@ -7,9 +7,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Immune to Frostbite",
-    valueRanges: [],
-    rawAffix: "Immune to Frostbite",
+    craftableAffix: "Immune to Frostbite",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,11 +15,8 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Triggers Lv.  20 Biting Cold Curse upon inflicting damage. Cooldown:  0.2 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 20` Biting Cold Curse upon inflicting damage. Cooldown: ` 0.2` s",
+    craftableAffix:
+      "Triggers Lv. 20Biting Cold Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -29,11 +24,8 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Triggers Lv.  20 Corruption Curse upon inflicting damage. Cooldown:  0.2 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 20` Corruption Curse upon inflicting damage. Cooldown: ` 0.2` s",
+    craftableAffix:
+      "Triggers Lv. 20Corruption Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -41,11 +33,8 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Triggers Lv.  20 Electrocute Curse upon inflicting damage. Cooldown:  0.2 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 20` Electrocute Curse upon inflicting damage. Cooldown: ` 0.2` s",
+    craftableAffix:
+      "Triggers Lv. 20Electrocute Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -53,11 +42,8 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Triggers Lv.  20 Vulnerability Curse upon inflicting damage. Cooldown:  0.2 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 20` Vulnerability Curse upon inflicting damage. Cooldown: ` 0.2` s",
+    craftableAffix:
+      "Triggers Lv. 20Vulnerability Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -65,11 +51,8 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Triggers Lv.  20 Scorch Curse upon inflicting damage. Cooldown:  0.2 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 20` Scorch Curse upon inflicting damage. Cooldown: ` 0.2` s",
+    craftableAffix:
+      "Triggers Lv. 20Scorch Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -77,9 +60,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(11-15)% Movement Speed",
-    valueRanges: [],
-    rawAffix: "` +(11-15)`% Movement Speed",
+    craftableAffix: "+(11-15)% Movement Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,9 +68,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(2-3)% damage per stack of any Blessing",
-    valueRanges: [],
-    rawAffix: "` +(2-3)`% damage per stack of any Blessing",
+    craftableAffix: "+(2-3)% damage per stack of any Blessing",
   },
   {
     equipmentSlot: "Trinket",
@@ -97,9 +76,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(26-30)% chance to avoid Elemental Ailments",
-    valueRanges: [],
-    rawAffix: "` +(26-30)`% chance to avoid Elemental Ailments",
+    craftableAffix: "+(26-30)% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Trinket",
@@ -107,9 +84,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(6-8)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Sealed Mana Compensation",
+    craftableAffix: "+(6-8)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Trinket",
@@ -117,9 +92,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +1% damage per  27 stats",
-    valueRanges: [],
-    rawAffix: "` +1`% damage per ` 27` stats",
+    craftableAffix: "+1% damage per 27stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -127,9 +100,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "Adds  10 Base Ailment Damage",
-    valueRanges: [],
-    rawAffix: "Adds ` 10` Base Ailment Damage",
+    craftableAffix: "Adds 10Base Ailment Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -137,9 +108,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Dexterity",
+    craftableAffix: "+(15-20)Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -147,9 +116,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Intelligence",
+    craftableAffix: "+(15-20)Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -157,9 +124,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Strength",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Strength",
+    craftableAffix: "+(15-20)Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -167,9 +132,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% damage\n+(20-24)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% damage<> ` +(20-24)`% Minion Damage",
+    craftableAffix: "+(20-24)% damage<> +(20-24)% Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -177,9 +140,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(3-4)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(3-4)`% Elemental Resistance",
+    craftableAffix: "+(3-4)% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -187,9 +148,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -197,9 +156,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -207,9 +164,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -217,9 +172,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -227,9 +180,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(54-74) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(54-74)` Max Life",
+    craftableAffix: "+(54-74)Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -237,9 +188,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(87-117) Max Energy Shield",
-    valueRanges: [],
-    rawAffix: "` +(87-117)` Max Energy Shield",
+    craftableAffix: "+(87-117)Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

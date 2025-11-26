@@ -7,10 +7,8 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(16-20)% Blur Effect\nGains Blur for  1 s after losing Blur",
-    valueRanges: [],
-    rawAffix:
-      "` +(16-20)`% Blur Effect<> Gains Blur for ` 1` s after losing Blur",
+    craftableAffix:
+      "+(16-20)% Blur Effect<> Gains Blur for 1s after losing Blur",
   },
   {
     equipmentSlot: "Gloves",
@@ -18,9 +16,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(26-30)% additional damage while having Fervor",
-    valueRanges: [],
-    rawAffix: "` +(26-30)`% additional damage while having Fervor",
+    craftableAffix: "+(26-30)% additional damage while having Fervor",
   },
   {
     equipmentSlot: "Gloves",
@@ -28,9 +24,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(84-108)% Reaping Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(84-108)`% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(84-108)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -38,10 +32,8 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +1 Jumps\n+6% additional damage for every Jump (multiplies)",
-    valueRanges: [],
-    rawAffix:
-      "` +1` Jumps<> ` +6`% additional damage for every Jump (multiplies)",
+    craftableAffix:
+      "+1Jumps<> +6% additional damage for every Jump (multiplies)",
   },
   {
     equipmentSlot: "Gloves",
@@ -49,10 +41,8 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(12-15)% Blur Effect\nGains Blur for  1 s after losing Blur",
-    valueRanges: [],
-    rawAffix:
-      "` +(12-15)`% Blur Effect<> Gains Blur for ` 1` s after losing Blur",
+    craftableAffix:
+      "+(12-15)% Blur Effect<> Gains Blur for 1s after losing Blur",
   },
   {
     equipmentSlot: "Gloves",
@@ -60,9 +50,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(21-25)% additional damage while having Fervor",
-    valueRanges: [],
-    rawAffix: "` +(21-25)`% additional damage while having Fervor",
+    craftableAffix: "+(21-25)% additional damage while having Fervor",
   },
   {
     equipmentSlot: "Gloves",
@@ -70,9 +58,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(59-83)% Reaping Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(59-83)`% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(59-83)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -80,11 +66,8 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +1 Jumps\n+(4-5)% additional damage for every Jump (multiplies)",
-    valueRanges: [],
-    rawAffix:
-      "` +1` Jumps<> ` +(4-5)`% additional damage for every Jump (multiplies)",
+    craftableAffix:
+      "+1Jumps<> +(4-5)% additional damage for every Jump (multiplies)",
   },
   {
     equipmentSlot: "Gloves",
@@ -92,11 +75,8 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(22-31)% Attack and Cast Speed\n+(22-31)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(22-31)`% Attack and Cast Speed<> ` +(22-31)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(22-31)% Attack and Cast Speed<> +(22-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -104,9 +84,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(49-62)% Skill Area\n+(49-62)% Minion Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(49-62)`% Skill Area<> ` +(49-62)`% Minion Skill Area",
+    craftableAffix: "+(49-62)% Skill Area<> +(49-62)% Minion Skill Area",
   },
   {
     equipmentSlot: "Gloves",
@@ -114,9 +92,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(51-65)% Reaping Duration",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Reaping Duration",
+    craftableAffix: "+(51-65)% Reaping Duration",
   },
   {
     equipmentSlot: "Gloves",
@@ -124,9 +100,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Critical Strike Damage",
+    craftableAffix: "+(61-78)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -134,11 +108,8 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(17-24)% Attack and Cast Speed\n+(17-24)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(17-24)`% Attack and Cast Speed<> ` +(17-24)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(17-24)% Attack and Cast Speed<> +(17-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -146,9 +117,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(35-48)% Skill Area\n+(35-48)% Minion Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(35-48)`% Skill Area<> ` +(35-48)`% Minion Skill Area",
+    craftableAffix: "+(35-48)% Skill Area<> +(35-48)% Minion Skill Area",
   },
   {
     equipmentSlot: "Gloves",
@@ -156,9 +125,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(37-50)% Reaping Duration",
-    valueRanges: [],
-    rawAffix: "` +(37-50)`% Reaping Duration",
+    craftableAffix: "+(37-50)% Reaping Duration",
   },
   {
     equipmentSlot: "Gloves",
@@ -166,9 +133,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(44-60)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(44-60)`% Critical Strike Damage",
+    craftableAffix: "+(44-60)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -176,9 +141,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(111-156)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(111-156)`% Critical Strike Rating",
+    craftableAffix: "+(111-156)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Gloves",
@@ -186,9 +149,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Cold Resistance",
+    craftableAffix: "+(25-35)% Cold Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -196,9 +157,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Erosion Resistance",
+    craftableAffix: "+(25-35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -206,9 +165,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Fire Resistance",
+    craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -216,9 +173,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Lightning Resistance",
+    craftableAffix: "+(25-35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -226,9 +181,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(51-65)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Affliction Effect",
+    craftableAffix: "+(51-65)% Affliction Effect",
   },
   {
     equipmentSlot: "Gloves",
@@ -236,9 +189,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Regenerates  (121-156) Life per second",
-    valueRanges: [],
-    rawAffix: "Regenerates ` (121-156)` Life per second",
+    craftableAffix: "Regenerates (121-156)Life per second",
   },
   {
     equipmentSlot: "Gloves",
@@ -246,9 +197,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Cold Resistance",
+    craftableAffix: "+(19-27)% Cold Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -256,9 +205,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Erosion Resistance",
+    craftableAffix: "+(19-27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -266,9 +213,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Fire Resistance",
+    craftableAffix: "+(19-27)% Fire Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -276,9 +221,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Lightning Resistance",
+    craftableAffix: "+(19-27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -286,9 +229,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(36-50)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Affliction Effect",
+    craftableAffix: "+(36-50)% Affliction Effect",
   },
   {
     equipmentSlot: "Gloves",
@@ -296,9 +237,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(85-120)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(85-120)`% Critical Strike Rating",
+    craftableAffix: "+(85-120)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Gloves",
@@ -306,9 +245,7 @@ export const GLOVES_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Regenerates  (85-120) Life per second",
-    valueRanges: [],
-    rawAffix: "Regenerates ` (85-120)` Life per second",
+    craftableAffix: "Regenerates (85-120)Life per second",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

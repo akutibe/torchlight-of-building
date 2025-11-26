@@ -7,9 +7,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+  (11-13) Command per second",
-    valueRanges: [],
-    rawAffix: "+ ` (11-13)` Command per second",
+    craftableAffix: "+ (11-13)Command per second",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,9 +15,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(126-163) Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(126-163)` Minion Critical Strike Rating",
+    craftableAffix: "+(126-163)Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "Trinket",
@@ -27,10 +23,8 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(13-16)% Elemental Resistance\n+(13-16)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix:
-      "` +(13-16)`% Elemental Resistance<> ` +(13-16)`% Erosion Resistance",
+    craftableAffix:
+      "+(13-16)% Elemental Resistance<> +(13-16)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -38,9 +32,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(27-34)% chance for Minions to deal Double Damage",
-    valueRanges: [],
-    rawAffix: "` +(27-34)`% chance for Minions to deal Double Damage",
+    craftableAffix: "+(27-34)% chance for Minions to deal Double Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -48,9 +40,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(81-104) initial Growth for Spirit Magi",
-    valueRanges: [],
-    rawAffix: "` +(81-104)` initial Growth for Spirit Magi",
+    craftableAffix: "+(81-104)initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -58,9 +48,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "+  (8-10) Command per second",
-    valueRanges: [],
-    rawAffix: "+ ` (8-10)` Command per second",
+    craftableAffix: "+ (8-10)Command per second",
   },
   {
     equipmentSlot: "Trinket",
@@ -68,9 +56,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(19-26)% chance for Minions to deal Double Damage",
-    valueRanges: [],
-    rawAffix: "` +(19-26)`% chance for Minions to deal Double Damage",
+    craftableAffix: "+(19-26)% chance for Minions to deal Double Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -78,9 +64,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(57-80) initial Growth for Spirit Magi",
-    valueRanges: [],
-    rawAffix: "` +(57-80)` initial Growth for Spirit Magi",
+    craftableAffix: "+(57-80)initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -88,9 +72,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(89-125) Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(89-125)` Minion Critical Strike Rating",
+    craftableAffix: "+(89-125)Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "Trinket",
@@ -98,10 +80,8 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(9-12)% Elemental Resistance\n+(9-12)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix:
-      "` +(9-12)`% Elemental Resistance<> ` +(9-12)`% Erosion Resistance",
+    craftableAffix:
+      "+(9-12)% Elemental Resistance<> +(9-12)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -109,11 +89,8 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(25-31)`% Attack and Cast Speed<> ` +(25-31)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -121,9 +98,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(56-72)% Minion Max Life",
-    valueRanges: [],
-    rawAffix: "` +(56-72)`% Minion Max Life",
+    craftableAffix: "+(56-72)% Minion Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -131,9 +106,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78)% Minion Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Minion Critical Strike Damage",
+    craftableAffix: "+(61-78)% Minion Critical Strike Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -141,11 +114,8 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      "While Reconjuring , Spirit Magi regenerate  (16-20)% Life per second",
-    valueRanges: [],
-    rawAffix:
-      "While Reconjuring , Spirit Magi regenerate ` (16-20)`% Life per second",
+    craftableAffix:
+      "While Reconjuring , Spirit Magi regenerate (16-20)% Life per second",
   },
   {
     equipmentSlot: "Trinket",
@@ -153,11 +123,8 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(18-24)`% Attack and Cast Speed<> ` +(18-24)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -165,9 +132,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(40-55)% Minion Max Life",
-    valueRanges: [],
-    rawAffix: "` +(40-55)`% Minion Max Life",
+    craftableAffix: "+(40-55)% Minion Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -175,9 +140,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(44-60)% Minion Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(44-60)`% Minion Critical Strike Damage",
+    craftableAffix: "+(44-60)% Minion Critical Strike Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -185,11 +148,8 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      "While Reconjuring , Spirit Magi regenerate  (12-15)% Life per second",
-    valueRanges: [],
-    rawAffix:
-      "While Reconjuring , Spirit Magi regenerate ` (12-15)`% Life per second",
+    craftableAffix:
+      "While Reconjuring , Spirit Magi regenerate (12-15)% Life per second",
   },
   {
     equipmentSlot: "Trinket",
@@ -197,9 +157,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(121-156)% Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(121-156)`% Minion Critical Strike Rating",
+    craftableAffix: "+(121-156)% Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "Trinket",
@@ -207,9 +165,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Cold Resistance",
+    craftableAffix: "+(25-35)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -217,9 +173,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Erosion Resistance",
+    craftableAffix: "+(25-35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -227,9 +181,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Fire Resistance",
+    craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -237,9 +189,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Lightning Resistance",
+    craftableAffix: "+(25-35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -247,9 +197,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Cold Resistance",
+    craftableAffix: "+(19-27)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -257,9 +205,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Erosion Resistance",
+    craftableAffix: "+(19-27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -267,9 +213,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Fire Resistance",
+    craftableAffix: "+(19-27)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -277,9 +221,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Lightning Resistance",
+    craftableAffix: "+(19-27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -287,9 +229,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(87-120)% Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(87-120)`% Minion Critical Strike Rating",
+    craftableAffix: "+(87-120)% Minion Critical Strike Rating",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,11 +7,8 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +120% Precise Projectiles Aura effect\n-20% additional Precise Projectiles Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix:
-      "` +120`% Precise Projectiles Aura effect<> ` -20`% additional Precise Projectiles Sealed Mana Compensation",
+    craftableAffix:
+      "+120% Precise Projectiles Aura effect<> -20% additional Precise Projectiles Sealed Mana Compensation",
   },
   {
     equipmentSlot: "One-Handed",
@@ -19,11 +16,8 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +15% additional Deterioration Damage\n10% chance to inflict  1 additional stack(s) of Deterioration",
-    valueRanges: [],
-    rawAffix:
-      "` +15`% additional Deterioration Damage<> ` 10`% chance to inflict ` 1` additional stack(s) of Deterioration",
+    craftableAffix:
+      "+15% additional Deterioration Damage<> 10% chance to inflict 1additional stack(s) of Deterioration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -31,10 +25,8 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: " +25% Elemental Damage for the gear\n-25% gear Physical Damage",
-    valueRanges: [],
-    rawAffix:
-      "` +25`% Elemental Damage for the gear<> ` -25`% gear Physical Damage",
+    craftableAffix:
+      "+25% Elemental Damage for the gear<> -25% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -42,11 +34,8 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +80% gear Physical Damage\n-20% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix:
-      "` +80`% gear Physical Damage<> ` -20`% Attack Critical Strike Rating for this gear",
+    craftableAffix:
+      "+80% gear Physical Damage<> -20% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -54,9 +43,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds  1 -  1 Physical Damage to Attacks per  2260 Armor",
-    valueRanges: [],
-    rawAffix: "Adds ` 1` - ` 1` Physical Damage to Attacks per ` 2260` Armor",
+    craftableAffix: "Adds 1- 1Physical Damage to Attacks per 2260Armor",
   },
   {
     equipmentSlot: "One-Handed",
@@ -64,10 +51,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds  1 -  3 Lightning Damage to Attacks per  10 Dexterity",
-    valueRanges: [],
-    rawAffix:
-      "Adds ` 1` - ` 3` Lightning Damage to Attacks per ` 10` Dexterity",
+    craftableAffix: "Adds 1- 3Lightning Damage to Attacks per 10Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -75,9 +59,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds  2 -  2 Fire Damage to Attacks per  10 Strength",
-    valueRanges: [],
-    rawAffix: "Adds ` 2` - ` 2` Fire Damage to Attacks per ` 10` Strength",
+    craftableAffix: "Adds 2- 2Fire Damage to Attacks per 10Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -85,11 +67,8 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Enemies have a  15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  25% of their Max Life to enemies within a  5 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` 15`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` 25`% of their Max Life to enemies within a ` 5` m radius",
+    craftableAffix:
+      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,9 +76,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Main Skill is supported by Lv.  25 Multiple Projectiles",
-    valueRanges: [],
-    rawAffix: "Main Skill is supported by Lv. ` 25` Multiple Projectiles",
+    craftableAffix: "Main Skill is supported by Lv. 25Multiple Projectiles",
   },
   {
     equipmentSlot: "One-Handed",
@@ -107,9 +84,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +10% all stats",
-    valueRanges: [],
-    rawAffix: "` +10`% all stats",
+    craftableAffix: "+10% all stats",
   },
   {
     equipmentSlot: "One-Handed",
@@ -117,9 +92,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +10% additional damage on Critical Strike",
-    valueRanges: [],
-    rawAffix: "` +10`% additional damage on Critical Strike",
+    craftableAffix: "+10% additional damage on Critical Strike",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,9 +100,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +20% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +20`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+20% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -137,9 +108,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +6% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +6`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+6% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -147,9 +116,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% additional damage for Weapons",
-    valueRanges: [],
-    rawAffix: "` +8`% additional damage for Weapons",
+    craftableAffix: "+8% additional damage for Weapons",
   },
   {
     equipmentSlot: "One-Handed",
@@ -157,9 +124,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Cold Penetration",
-    valueRanges: [],
-    rawAffix: "` +8`% Cold Penetration",
+    craftableAffix: "+8% Cold Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -167,9 +132,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +8`% Erosion Resistance Penetration",
+    craftableAffix: "+8% Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -177,9 +140,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Fire Penetration",
-    valueRanges: [],
-    rawAffix: "` +8`% Fire Penetration",
+    craftableAffix: "+8% Fire Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -187,9 +148,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +8`% gear Attack Speed",
+    craftableAffix: "+8% gear Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -197,9 +156,7 @@ export const CANE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Lightning Penetration",
-    valueRanges: [],
-    rawAffix: "` +8`% Lightning Penetration",
+    craftableAffix: "+8% Lightning Penetration",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

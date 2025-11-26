@@ -11,20 +11,13 @@ interface RawAffix {
   affix: string;
 }
 
-interface ParsedAffix {
-  template: string;
-  valueRanges: Array<{ min: number; max: number }>;
-}
-
 interface BaseGearAffix {
   equipmentSlot: string;
   equipmentType: string;
   affixType: string;
   craftingPool: string;
   tier: string;
-  template: string;
-  valueRanges: Array<{ min: number; max: number }>;
-  rawAffix: string;
+  craftableAffix: string;
 }
 
 const normalizeEquipmentType = (type: string): string => {
@@ -43,36 +36,6 @@ const normalizeFileKey = (equipmentType: string, affixType: string): string => {
   return (
     normalizeEquipmentType(equipmentType) + "_" + normalizeAffixType(affixType)
   );
-};
-
-const parseAffixString = (affix: string): ParsedAffix => {
-  // First, replace <> with newline for multi-effect affixes
-  let template = affix.replace(/<>/g, "\n");
-  const valueRanges: Array<{ min: number; max: number }> = [];
-  let placeholderIndex = 0;
-
-  // Pattern 1 & 2: Range values like `+(17-24)` or `(-6--4)` (handles negatives)
-  // Important: Match the full pattern including prefix like `+`
-  const rangePattern = /`([+-]?)(\((-?\d+)-(-?\d+)\))`/g;
-  template = template.replace(
-    rangePattern,
-    (match, prefix, _rangeWithParens, min, max) => {
-      valueRanges.push({ min: parseInt(min, 10), max: parseInt(max, 10) });
-      return `${prefix}{${placeholderIndex++}}`;
-    },
-  );
-
-  // Pattern 3: Fixed values (embed directly)
-  const fixedPattern = /`(-?\d+(?:\.\d+)?)`/g;
-  template = template.replace(fixedPattern, (match, value) => value);
-
-  // Pattern 4: Remove remaining backticks
-  template = template.replace(/`/g, "");
-
-  // Pattern 5: Remove spaces after newlines
-  template = template.replace(/\n\s+/g, "\n");
-
-  return { template, valueRanges };
 };
 
 const toPascalCase = (str: string): string => {
@@ -123,11 +86,7 @@ const generateTypesFile = (
   affixTypes: string[],
   craftingPools: string[],
 ): string => {
-  return `import { DmgRange } from "../core";
-
-export type ValueRange = DmgRange;
-
-export const EQUIPMENT_SLOTS = ${JSON.stringify(equipmentSlots.sort(), null, 2)} as const;
+  return `export const EQUIPMENT_SLOTS = ${JSON.stringify(equipmentSlots.sort(), null, 2)} as const;
 
 export type EquipmentSlot = (typeof EQUIPMENT_SLOTS)[number];
 
@@ -149,69 +108,8 @@ export interface BaseGearAffix {
   affixType: AffixType;
   craftingPool: CraftingPool;
   tier: string;
-  template: string;
-  valueRanges: ValueRange[];
-  rawAffix: string;
+  craftableAffix: string;
 }
-`;
-};
-
-const generateCraftFile = (): string => {
-  return `import { ValueRange } from "./types";
-
-const interpolateValue = (range: ValueRange, percentage: number): number => {
-  if (percentage < 0 || percentage > 100) {
-    throw new Error(\`Percentage must be 0-100, got \${percentage}\`);
-  }
-  const value = range.min + (range.max - range.min) * (percentage / 100);
-  return Math.round(value);
-};
-
-/**
- * Crafts a single affix string by interpolating value ranges
- *
- * @param affix - The gear affix to craft
- * @param percentage - Value from 0-100 representing crafting quality
- * @returns The final affix string with interpolated values
- *
- * @example
- * craft({ template: "+{0}% Speed", valueRanges: [{ min: 17, max: 24 }] }, 0)   // "+17% Speed"
- * craft({ template: "+{0}% Speed", valueRanges: [{ min: 17, max: 24 }] }, 50)  // "+21% Speed"
- * craft({ template: "+{0}% Speed", valueRanges: [{ min: 17, max: 24 }] }, 100) // "+24% Speed"
- */
-export const craft = <T extends { template: string; valueRanges: ValueRange[] }>(
-  affix: T,
-  percentage: number
-): string => {
-  let result = affix.template;
-
-  affix.valueRanges.forEach((range, index) => {
-    const value = interpolateValue(range, percentage);
-    result = result.replace(\`{\${index}}\`, value.toString());
-  });
-
-  return result;
-};
-
-/**
- * Crafts an affix and returns lines as an array (splits on \\n)
- * Useful for multi-effect affixes which have newlines in their template
- *
- * @param affix - The gear affix to craft
- * @param percentage - Value from 0-100 representing crafting quality
- * @returns Array of affix lines
- *
- * @example
- * craftLines({ template: "+{0}% Armor Pen\\n+{1}% Armor Pen for Minions", valueRanges: [{ min: 5, max: 7 }, { min: 5, max: 7 }] }, 100)
- * // ["+7% Armor Pen", "+7% Armor Pen for Minions"]
- */
-export const craftLines = <T extends { template: string; valueRanges: ValueRange[] }>(
-  affix: T,
-  percentage: number
-): string[] => {
-  const crafted = craft(affix, percentage);
-  return crafted.split("\\n");
-};
 `;
 };
 
@@ -237,17 +135,13 @@ const main = async (): Promise<void> => {
     affixTypesSet.add(raw.affixType);
     craftingPoolsSet.add(raw.craftingPool);
 
-    const { template, valueRanges } = parseAffixString(raw.affix);
-
     const affixEntry: BaseGearAffix = {
       equipmentSlot: raw.equipmentSlot,
       equipmentType: raw.equipmentType,
       affixType: raw.affixType,
       craftingPool: raw.craftingPool,
       tier: raw.tier,
-      template,
-      valueRanges,
-      rawAffix: raw.affix,
+      craftableAffix: raw.affix,
     };
 
     if (!grouped.has(fileKey)) {
@@ -285,12 +179,6 @@ const main = async (): Promise<void> => {
   );
   await writeFile(typesPath, typesContent, "utf-8");
   console.log(`✓ Generated types.ts`);
-
-  // Generate craft.ts
-  const craftPath = join(outDir, "craft.ts");
-  const craftContent = generateCraftFile();
-  await writeFile(craftPath, craftContent, "utf-8");
-  console.log(`✓ Generated craft.ts`);
 
   // Generate all_affixes.ts
   const allAffixesPath = join(outDir, "all_affixes.ts");

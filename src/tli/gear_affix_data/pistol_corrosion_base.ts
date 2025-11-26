@@ -7,9 +7,7 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(1-2) Projectile Skill Level",
-    valueRanges: [],
-    rawAffix: "` +(1-2)` Projectile Skill Level",
+    craftableAffix: "+(1-2)Projectile Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,9 +15,7 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(15-25)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(15-25)`% gear Physical Damage",
+    craftableAffix: "+(15-25)% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -27,9 +23,7 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(25-30)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(25-30)`% Elemental Damage",
+    craftableAffix: "+(25-30)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -37,9 +31,7 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(25-30)% Projectile Speed",
-    valueRanges: [],
-    rawAffix: "` +(25-30)`% Projectile Speed",
+    craftableAffix: "+(25-30)% Projectile Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -47,9 +39,7 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(3-6)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(3-6)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(3-6)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,9 +47,8 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(4-8)% chance to gain 1 stack of Agility Blessing on defeat",
-    valueRanges: [],
-    rawAffix: "` +(4-8)`% chance to gain 1 stack of Agility Blessing on defeat",
+    craftableAffix:
+      "+(4-8)% chance to gain 1 stack of Agility Blessing on defeat",
   },
   {
     equipmentSlot: "One-Handed",
@@ -67,9 +56,7 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(5-8)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(5-8)`% gear Attack Speed",
+    craftableAffix: "+(5-8)% gear Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -77,9 +64,7 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (2-4) -  (8-10) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (2-4)` - ` (8-10)` Physical Damage to the gear",
+    craftableAffix: "Adds (2-4)- (8-10)Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -87,9 +72,7 @@ export const PISTOL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Damage Penetrates  (5-8)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "Damage Penetrates ` (5-8)`% Elemental Resistance",
+    craftableAffix: "Damage Penetrates (5-8)% Elemental Resistance",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

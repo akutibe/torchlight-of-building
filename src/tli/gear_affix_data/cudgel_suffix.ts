@@ -7,9 +7,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " (61-78)% additional damage applied to Life",
-    valueRanges: [],
-    rawAffix: "` (61-78)`% additional damage applied to Life",
+    craftableAffix: "(61-78)% additional damage applied to Life",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,9 +15,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(106-137)% additional damage against Frozen enemies",
-    valueRanges: [],
-    rawAffix: "` +(106-137)`% additional damage against Frozen enemies",
+    craftableAffix: "+(106-137)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -27,9 +23,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(251-325)% Demolisher Charge Restoration Speed",
-    valueRanges: [],
-    rawAffix: "` +(251-325)`% Demolisher Charge Restoration Speed",
+    craftableAffix: "+(251-325)% Demolisher Charge Restoration Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -37,9 +31,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(96-120)% Focus Damage Enhancement",
-    valueRanges: [],
-    rawAffix: "` +(96-120)`% Focus Damage Enhancement",
+    craftableAffix: "+(96-120)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -47,11 +39,8 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +60% Steep Strike chance.\n+(49-62)% additional Steep Strike Damage",
-    valueRanges: [],
-    rawAffix:
-      "` +60`% Steep Strike chance.<> ` +(49-62)`% additional Steep Strike Damage",
+    craftableAffix:
+      "+60% Steep Strike chance.<> +(49-62)% additional Steep Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -59,9 +48,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Max Channeled Stacks  +(3-4) ",
-    valueRanges: [],
-    rawAffix: "Max Channeled Stacks ` +(3-4)` ",
+    craftableAffix: "Max Channeled Stacks +(3-4)",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -69,9 +56,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Min Channeled Stacks  +(3-4) ",
-    valueRanges: [],
-    rawAffix: "Min Channeled Stacks ` +(3-4)` ",
+    craftableAffix: "Min Channeled Stacks +(3-4)",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -79,9 +64,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " (43-60)% additional damage applied to Life",
-    valueRanges: [],
-    rawAffix: "` (43-60)`% additional damage applied to Life",
+    craftableAffix: "(43-60)% additional damage applied to Life",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -89,9 +72,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(176-250)% Demolisher Charge Restoration Speed",
-    valueRanges: [],
-    rawAffix: "` +(176-250)`% Demolisher Charge Restoration Speed",
+    craftableAffix: "+(176-250)% Demolisher Charge Restoration Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -99,9 +80,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(70-90)% Focus Damage Enhancement",
-    valueRanges: [],
-    rawAffix: "` +(70-90)`% Focus Damage Enhancement",
+    craftableAffix: "+(70-90)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -109,9 +88,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(75-105)% additional damage against Frozen enemies",
-    valueRanges: [],
-    rawAffix: "` +(75-105)`% additional damage against Frozen enemies",
+    craftableAffix: "+(75-105)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -119,11 +96,8 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +46% Steep Strike chance.\n+(35-48)% additional Steep Strike Damage",
-    valueRanges: [],
-    rawAffix:
-      "` +46`% Steep Strike chance.<> ` +(35-48)`% additional Steep Strike Damage",
+    craftableAffix:
+      "+46% Steep Strike chance.<> +(35-48)% additional Steep Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -131,9 +105,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Max Channeled Stacks  +(1-2) ",
-    valueRanges: [],
-    rawAffix: "Max Channeled Stacks ` +(1-2)` ",
+    craftableAffix: "Max Channeled Stacks +(1-2)",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -141,9 +113,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Min Channeled Stacks  +(1-2) ",
-    valueRanges: [],
-    rawAffix: "Min Channeled Stacks ` +(1-2)` ",
+    craftableAffix: "Min Channeled Stacks +(1-2)",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -151,9 +121,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(120-140)% Focus Speed",
-    valueRanges: [],
-    rawAffix: "` +(120-140)`% Focus Speed",
+    craftableAffix: "+(120-140)% Focus Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -161,9 +129,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(151-195)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(151-195)`% Affliction Effect",
+    craftableAffix: "+(151-195)% Affliction Effect",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -171,9 +137,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(181-234)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(181-234)`% Critical Strike Damage",
+    craftableAffix: "+(181-234)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -181,9 +145,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(328-468)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(328-468)`% Critical Strike Rating",
+    craftableAffix: "+(328-468)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -191,9 +153,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(51-65)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(51-65)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -201,11 +161,8 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(66-94)% Attack and Cast Speed\n+(66-94)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(66-94)`% Attack and Cast Speed<> ` +(66-94)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(66-94)% Attack and Cast Speed<> +(66-94)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -213,9 +170,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(106-150)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(106-150)`% Affliction Effect",
+    craftableAffix: "+(106-150)% Affliction Effect",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -223,9 +178,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(127-180)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(127-180)`% Critical Strike Damage",
+    craftableAffix: "+(127-180)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -233,9 +186,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(252-360)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(252-360)`% Critical Strike Rating",
+    craftableAffix: "+(252-360)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -243,9 +194,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(36-50)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(36-50)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -253,11 +202,8 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(51-72)% Attack and Cast Speed\n+(51-72)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(51-72)`% Attack and Cast Speed<> ` +(51-72)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(51-72)% Attack and Cast Speed<> +(51-72)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -265,9 +211,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(90-110)% Focus Speed",
-    valueRanges: [],
-    rawAffix: "` +(90-110)`% Focus Speed",
+    craftableAffix: "+(90-110)% Focus Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -275,9 +219,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(217-281)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(217-281)`% Elemental Damage",
+    craftableAffix: "+(217-281)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -285,9 +227,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(217-281)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(217-281)`% Erosion Damage",
+    craftableAffix: "+(217-281)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -295,9 +235,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(217-281)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(217-281)`% Physical Damage",
+    craftableAffix: "+(217-281)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -305,9 +243,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(31-39)% Energy Shield Regain",
-    valueRanges: [],
-    rawAffix: "` +(31-39)`% Energy Shield Regain",
+    craftableAffix: "+(31-39)% Energy Shield Regain",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -315,9 +251,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(31-39)% Life Regain",
-    valueRanges: [],
-    rawAffix: "` +(31-39)`% Life Regain",
+    craftableAffix: "+(31-39)% Life Regain",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -325,9 +259,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(33-42)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(33-42)`% gear Attack Speed",
+    craftableAffix: "+(33-42)% gear Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -335,9 +267,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(152-216)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(152-216)`% Elemental Damage",
+    craftableAffix: "+(152-216)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -345,9 +275,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(152-216)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(152-216)`% Erosion Damage",
+    craftableAffix: "+(152-216)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -355,9 +283,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(152-216)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(152-216)`% Physical Damage",
+    craftableAffix: "+(152-216)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -365,9 +291,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(22-30)% Energy Shield Regain",
-    valueRanges: [],
-    rawAffix: "` +(22-30)`% Energy Shield Regain",
+    craftableAffix: "+(22-30)% Energy Shield Regain",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -375,9 +299,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(22-30)% Life Regain",
-    valueRanges: [],
-    rawAffix: "` +(22-30)`% Life Regain",
+    craftableAffix: "+(22-30)% Life Regain",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -385,9 +307,7 @@ export const CUDGEL_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(23-32)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(23-32)`% gear Attack Speed",
+    craftableAffix: "+(23-32)% gear Attack Speed",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

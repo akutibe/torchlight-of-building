@@ -7,9 +7,7 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(1-2) Projectile Skill Level",
-    valueRanges: [],
-    rawAffix: "` +(1-2)` Projectile Skill Level",
+    craftableAffix: "+(1-2)Projectile Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,9 +15,7 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(15-20)% Projectile Speed",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Projectile Speed",
+    craftableAffix: "+(15-20)% Projectile Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -27,9 +23,7 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(15-25)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(15-25)`% gear Physical Damage",
+    craftableAffix: "+(15-25)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -37,9 +31,7 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(3-6)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(3-6)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(3-6)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -47,9 +39,7 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(40-45)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-45)`% Elemental Damage",
+    craftableAffix: "+(40-45)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -57,9 +47,7 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(5-8)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(5-8)`% gear Attack Speed",
+    craftableAffix: "+(5-8)% gear Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -67,10 +55,8 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(6-12)% chance to gain 1 stack of Agility Blessing on defeat",
-    valueRanges: [],
-    rawAffix:
-      "` +(6-12)`% chance to gain 1 stack of Agility Blessing on defeat",
+    craftableAffix:
+      "+(6-12)% chance to gain 1 stack of Agility Blessing on defeat",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -78,9 +64,7 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (7-10) -  (14-17) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (7-10)` - ` (14-17)` Physical Damage to the gear",
+    craftableAffix: "Adds (7-10)- (14-17)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -88,9 +72,7 @@ export const BOW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Damage Penetrates  (8-12)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "Damage Penetrates ` (8-12)`% Elemental Resistance",
+    craftableAffix: "Damage Penetrates (8-12)% Elemental Resistance",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

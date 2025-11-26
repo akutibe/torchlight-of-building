@@ -7,9 +7,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Multistrikes deal  (61-78)% increasing damage",
-    valueRanges: [],
-    rawAffix: "Multistrikes deal ` (61-78)`% increasing damage",
+    craftableAffix: "Multistrikes deal (61-78)% increasing damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,9 +15,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(26-32)% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +(26-32)`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(26-32)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -27,9 +23,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(28-39)% Elemental and Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +(28-39)`% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(28-39)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -37,9 +31,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(3-4) to Attack Skill Level",
-    valueRanges: [],
-    rawAffix: "` +(3-4)` to Attack Skill Level",
+    craftableAffix: "+(3-4)to Attack Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -47,9 +39,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(31-39)% additional Ignite Damage",
-    valueRanges: [],
-    rawAffix: "` +(31-39)`% additional Ignite Damage",
+    craftableAffix: "+(31-39)% additional Ignite Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,11 +47,8 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      "Adds  (62-64) -  (356-358) Elemental Damage to the gear\n-100% gear Physical Damage",
-    valueRanges: [],
-    rawAffix:
-      "Adds ` (62-64)` - ` (356-358)` Elemental Damage to the gear<> ` -100`% gear Physical Damage",
+    craftableAffix:
+      "Adds (62-64)- (356-358)Elemental Damage to the gear<> -100% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -69,9 +56,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Multistrikes deal  (43-60)% increasing damage",
-    valueRanges: [],
-    rawAffix: "Multistrikes deal ` (43-60)`% increasing damage",
+    craftableAffix: "Multistrikes deal (43-60)% increasing damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -79,9 +64,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(18-25)% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +(18-25)`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(18-25)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,9 +72,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(22-30)% additional Ignite Damage",
-    valueRanges: [],
-    rawAffix: "` +(22-30)`% additional Ignite Damage",
+    craftableAffix: "+(22-30)% additional Ignite Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -99,9 +80,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(22-30)% Elemental and Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +(22-30)`% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(22-30)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -109,9 +88,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +3 to Attack Skill Level",
-    valueRanges: [],
-    rawAffix: "` +3` to Attack Skill Level",
+    craftableAffix: "+3to Attack Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,11 +96,8 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      "Adds  (47-49) -  (272-274) Elemental Damage to the gear\n-100% gear Physical Damage",
-    valueRanges: [],
-    rawAffix:
-      "Adds ` (47-49)` - ` (272-274)` Elemental Damage to the gear<> ` -100`% gear Physical Damage",
+    craftableAffix:
+      "Adds (47-49)- (272-274)Elemental Damage to the gear<> -100% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -131,9 +105,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(101-130)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(101-130)`% gear Physical Damage",
+    craftableAffix: "+(101-130)% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -141,9 +113,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(23-29)% Attack and Spell Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(23-29)`% Attack and Spell Block Chance",
+    craftableAffix: "+(23-29)% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "One-Handed",
@@ -151,9 +121,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(91-117) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(91-117)` Dexterity",
+    craftableAffix: "+(91-117)Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -161,9 +129,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(91-117) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(91-117)` Intelligence",
+    craftableAffix: "+(91-117)Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -171,9 +137,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(91-117) Strength",
-    valueRanges: [],
-    rawAffix: "` +(91-117)` Strength",
+    craftableAffix: "+(91-117)Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -181,9 +145,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(56-100)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(56-100)`% gear Physical Damage",
+    craftableAffix: "+(56-100)% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -191,9 +153,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(64-90) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(64-90)` Dexterity",
+    craftableAffix: "+(64-90)Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -201,9 +161,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(64-90) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(64-90)` Intelligence",
+    craftableAffix: "+(64-90)Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -211,9 +169,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(64-90) Strength",
-    valueRanges: [],
-    rawAffix: "` +(64-90)` Strength",
+    craftableAffix: "+(64-90)Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -221,9 +177,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(109-140)% Melee Damage",
-    valueRanges: [],
-    rawAffix: "` +(109-140)`% Melee Damage",
+    craftableAffix: "+(109-140)% Melee Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -231,9 +185,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (161-163) -  (208-220) Fire Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (161-163)` - ` (208-220)` Fire Damage to the gear",
+    craftableAffix: "Adds (161-163)- (208-220)Fire Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -241,9 +193,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (162-164) -  (216-218) Cold Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (162-164)` - ` (216-218)` Cold Damage to the gear",
+    craftableAffix: "Adds (162-164)- (216-218)Cold Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -251,9 +201,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (174-176) -  (204-206) Erosion Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (174-176)` - ` (204-206)` Erosion Damage to the gear",
+    craftableAffix: "Adds (174-176)- (204-206)Erosion Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -261,9 +209,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (18-20) -  (360-362) Lightning Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (18-20)` - ` (360-362)` Lightning Damage to the gear",
+    craftableAffix: "Adds (18-20)- (360-362)Lightning Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -271,9 +217,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (47-49) -  (57-59) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (47-49)` - ` (57-59)` Physical Damage to the gear",
+    craftableAffix: "Adds (47-49)- (57-59)Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -281,11 +225,8 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template:
-      "Reaps  (0.19-0.24) s of Ignite Damage when dealing Damage Over Time. The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` (0.19-0.24)` s of Ignite Damage when dealing Damage Over Time. The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps (0.19-0.24)s of Ignite Damage when dealing Damage Over Time. The effect has a 1s cooldown against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -293,9 +234,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(77-108)% Melee Damage",
-    valueRanges: [],
-    rawAffix: "` +(77-108)`% Melee Damage",
+    craftableAffix: "+(77-108)% Melee Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -303,9 +242,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (123-125) -  (160-169) Fire Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (123-125)` - ` (160-169)` Fire Damage to the gear",
+    craftableAffix: "Adds (123-125)- (160-169)Fire Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -313,9 +250,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (125-127) -  (165-167) Cold Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (125-127)` - ` (165-167)` Cold Damage to the gear",
+    craftableAffix: "Adds (125-127)- (165-167)Cold Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -323,9 +258,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (133-135) -  (157-159) Erosion Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (133-135)` - ` (157-159)` Erosion Damage to the gear",
+    craftableAffix: "Adds (133-135)- (157-159)Erosion Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -333,9 +266,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (14-16) -  (276-278) Lightning Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (14-16)` - ` (276-278)` Lightning Damage to the gear",
+    craftableAffix: "Adds (14-16)- (276-278)Lightning Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -343,9 +274,7 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (36-38) -  (44-46) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (36-38)` - ` (44-46)` Physical Damage to the gear",
+    craftableAffix: "Adds (36-38)- (44-46)Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -353,11 +282,8 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template:
-      "Reaps  (0.13-0.18) s of Ignite Damage when dealing Damage Over Time. The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` (0.13-0.18)` s of Ignite Damage when dealing Damage Over Time. The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps (0.13-0.18)s of Ignite Damage when dealing Damage Over Time. The effect has a 1s cooldown against the same target",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

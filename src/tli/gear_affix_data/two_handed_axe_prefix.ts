@@ -7,11 +7,8 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +(111-145)% gear Physical Damage\nAdds  (69-71) -  (85-87) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix:
-      "` +(111-145)`% gear Physical Damage<> Adds ` (69-71)` - ` (85-87)` Physical Damage to the gear",
+    craftableAffix:
+      "+(111-145)% gear Physical Damage<> Adds (69-71)- (85-87)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -19,9 +16,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(51-64)% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +(51-64)`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(51-64)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -29,9 +24,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(61-78)% additional Trauma Damage",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% additional Trauma Damage",
+    craftableAffix: "+(61-78)% additional Trauma Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -39,9 +32,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(61-78)% Elemental and Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(61-78)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -49,9 +40,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +7 to Attack Skill Level",
-    valueRanges: [],
-    rawAffix: "` +7` to Attack Skill Level",
+    craftableAffix: "+7to Attack Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -59,11 +48,8 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      "Adds  (77-79) -  (438-440) Elemental Damage to the gear\n-100% gear Physical Damage",
-    valueRanges: [],
-    rawAffix:
-      "Adds ` (77-79)` - ` (438-440)` Elemental Damage to the gear<> ` -100`% gear Physical Damage",
+    craftableAffix:
+      "Adds (77-79)- (438-440)Elemental Damage to the gear<> -100% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -71,9 +57,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(36-50)% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(36-50)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -81,9 +65,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(43-60)% additional Trauma Damage",
-    valueRanges: [],
-    rawAffix: "` +(43-60)`% additional Trauma Damage",
+    craftableAffix: "+(43-60)% additional Trauma Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -91,9 +73,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(43-60)% Elemental and Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +(43-60)`% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(43-60)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -101,11 +81,8 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +(77-110)% gear Physical Damage\nAdds  (53-55) -  (65-67) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix:
-      "` +(77-110)`% gear Physical Damage<> Adds ` (53-55)` - ` (65-67)` Physical Damage to the gear",
+    craftableAffix:
+      "+(77-110)% gear Physical Damage<> Adds (53-55)- (65-67)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -113,9 +90,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +6 to Attack Skill Level",
-    valueRanges: [],
-    rawAffix: "` +6` to Attack Skill Level",
+    craftableAffix: "+6to Attack Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -123,11 +98,8 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      "Adds  (59-61) -  (337-339) Elemental Damage to the gear\n-100% gear Physical Damage",
-    valueRanges: [],
-    rawAffix:
-      "Adds ` (59-61)` - ` (337-339)` Elemental Damage to the gear<> ` -100`% gear Physical Damage",
+    craftableAffix:
+      "Adds (59-61)- (337-339)Elemental Damage to the gear<> -100% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -135,9 +107,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(181-234) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(181-234)` Dexterity",
+    craftableAffix: "+(181-234)Dexterity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -145,9 +115,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(181-234) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(181-234)` Intelligence",
+    craftableAffix: "+(181-234)Intelligence",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -155,9 +123,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(181-234) Strength",
-    valueRanges: [],
-    rawAffix: "` +(181-234)` Strength",
+    craftableAffix: "+(181-234)Strength",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -165,9 +131,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(46-59)% Attack and Spell Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(46-59)`% Attack and Spell Block Chance",
+    craftableAffix: "+(46-59)% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -175,9 +139,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(81-104)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(81-104)`% gear Physical Damage",
+    craftableAffix: "+(81-104)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -185,9 +147,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(127-180) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(127-180)` Dexterity",
+    craftableAffix: "+(127-180)Dexterity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -195,9 +155,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(127-180) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(127-180)` Intelligence",
+    craftableAffix: "+(127-180)Intelligence",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -205,9 +163,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(127-180) Strength",
-    valueRanges: [],
-    rawAffix: "` +(127-180)` Strength",
+    craftableAffix: "+(127-180)Strength",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -215,9 +171,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(49-80)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(49-80)`% gear Physical Damage",
+    craftableAffix: "+(49-80)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -225,9 +179,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(217-281)% Melee Damage",
-    valueRanges: [],
-    rawAffix: "` +(217-281)`% Melee Damage",
+    craftableAffix: "+(217-281)% Melee Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -235,9 +187,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (198-200) -  (256-270) Fire Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (198-200)` - ` (256-270)` Fire Damage to the gear",
+    craftableAffix: "Adds (198-200)- (256-270)Fire Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -245,9 +195,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (200-202) -  (266-268) Cold Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (200-202)` - ` (266-268)` Cold Damage to the gear",
+    craftableAffix: "Adds (200-202)- (266-268)Cold Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -255,9 +203,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (214-216) -  (252-254) Erosion Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (214-216)` - ` (252-254)` Erosion Damage to the gear",
+    craftableAffix: "Adds (214-216)- (252-254)Erosion Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -265,9 +211,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (22-24) -  (444-446) Lightning Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (22-24)` - ` (444-446)` Lightning Damage to the gear",
+    craftableAffix: "Adds (22-24)- (444-446)Lightning Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -275,9 +219,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Adds  (93-95) -  (113-115) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (93-95)` - ` (113-115)` Physical Damage to the gear",
+    craftableAffix: "Adds (93-95)- (113-115)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -285,11 +227,8 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template:
-      "Reaps  (0.37-0.48) s of Trauma Damage when dealing Damage Over Time. The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` (0.37-0.48)` s of Trauma Damage when dealing Damage Over Time. The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps (0.37-0.48)s of Trauma Damage when dealing Damage Over Time. The effect has a 1s cooldown against the same target",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -297,9 +236,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(152-216)% Melee Damage",
-    valueRanges: [],
-    rawAffix: "` +(152-216)`% Melee Damage",
+    craftableAffix: "+(152-216)% Melee Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -307,9 +244,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (152-154) -  (197-208) Fire Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (152-154)` - ` (197-208)` Fire Damage to the gear",
+    craftableAffix: "Adds (152-154)- (197-208)Fire Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -317,9 +252,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (154-156) -  (204-206) Cold Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (154-156)` - ` (204-206)` Cold Damage to the gear",
+    craftableAffix: "Adds (154-156)- (204-206)Cold Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -327,9 +260,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (165-167) -  (193-195) Erosion Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (165-167)` - ` (193-195)` Erosion Damage to the gear",
+    craftableAffix: "Adds (165-167)- (193-195)Erosion Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -337,9 +268,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (17-19) -  (341-343) Lightning Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (17-19)` - ` (341-343)` Lightning Damage to the gear",
+    craftableAffix: "Adds (17-19)- (341-343)Lightning Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -347,9 +276,7 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Adds  (71-73) -  (87-89) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (71-73)` - ` (87-89)` Physical Damage to the gear",
+    craftableAffix: "Adds (71-73)- (87-89)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -357,11 +284,8 @@ export const TWO_HANDED_AXE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template:
-      "Reaps  (0.25-0.36) s of Trauma Damage when dealing Damage Over Time. The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` (0.25-0.36)` s of Trauma Damage when dealing Damage Over Time. The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps (0.25-0.36)s of Trauma Damage when dealing Damage Over Time. The effect has a 1s cooldown against the same target",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

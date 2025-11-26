@@ -7,9 +7,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (18-20)% of Physical Damage as Erosion Damage",
-    valueRanges: [],
-    rawAffix: "Adds ` (18-20)`% of Physical Damage as Erosion Damage",
+    craftableAffix: "Adds (18-20)% of Physical Damage as Erosion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,9 +15,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (18-20)% of Physical Damage as Fire Damage",
-    valueRanges: [],
-    rawAffix: "Adds ` (18-20)`% of Physical Damage as Fire Damage",
+    craftableAffix: "Adds (18-20)% of Physical Damage as Fire Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -27,9 +23,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (18-20)% of Physical Damage as Lightning Damage",
-    valueRanges: [],
-    rawAffix: "Adds ` (18-20)`% of Physical Damage as Lightning Damage",
+    craftableAffix: "Adds (18-20)% of Physical Damage as Lightning Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -37,9 +31,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (18-20)% of Physical Damage to Cold Damage",
-    valueRanges: [],
-    rawAffix: "Adds ` (18-20)`% of Physical Damage to Cold Damage",
+    craftableAffix: "Adds (18-20)% of Physical Damage to Cold Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -47,9 +39,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Immune to curse",
-    valueRanges: [],
-    rawAffix: "Immune to curse",
+    craftableAffix: "Immune to curse",
   },
   {
     equipmentSlot: "Trinket",
@@ -57,9 +47,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Agility Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Agility Blessing Stacks ` +1` ",
+    craftableAffix: "Max Agility Blessing Stacks +1",
   },
   {
     equipmentSlot: "Trinket",
@@ -67,9 +55,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks ` +1` ",
+    craftableAffix: "Max Focus Blessing Stacks +1",
   },
   {
     equipmentSlot: "Trinket",
@@ -77,9 +63,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Tenacity Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks ` +1` ",
+    craftableAffix: "Max Tenacity Blessing Stacks +1",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,11 +71,8 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Triggers Lv.  20 Blind Curse upon inflicting damage. Cooldown:  0.2 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 20` Blind Curse upon inflicting damage. Cooldown: ` 0.2` s",
+    craftableAffix:
+      "Triggers Lv. 20Blind Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -99,11 +80,8 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Triggers Lv.  20 Timid Curse upon inflicting damage. Cooldown:  0.2 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 20` Timid Curse upon inflicting damage. Cooldown: ` 0.2` s",
+    craftableAffix:
+      "Triggers Lv. 20Timid Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -111,11 +89,8 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Triggers Lv.  20 Entangled Pain Curse upon inflicting damage. Cooldown:  0.2 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 20` Entangled Pain Curse upon inflicting damage. Cooldown: ` 0.2` s",
+    craftableAffix:
+      "Triggers Lv. 20Entangled Pain Curse upon inflicting damage. Cooldown: 0.2 s",
   },
   {
     equipmentSlot: "Trinket",
@@ -123,9 +98,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(11-15)% Movement Speed",
-    valueRanges: [],
-    rawAffix: "` +(11-15)`% Movement Speed",
+    craftableAffix: "+(11-15)% Movement Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -133,9 +106,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(15-20)% Fervor effect",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Fervor effect",
+    craftableAffix: "+(15-20)% Fervor effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -143,11 +114,8 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(20-25)% chance to launch one more wave when casting a Barrage Skill",
-    valueRanges: [],
-    rawAffix:
-      "` +(20-25)`% chance to launch one more wave when casting a Barrage Skill",
+    craftableAffix:
+      "+(20-25)% chance to launch one more wave when casting a Barrage Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -155,9 +123,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "Gains Attack Aggression when casting an Attack Skill",
-    valueRanges: [],
-    rawAffix: "Gains Attack Aggression when casting an Attack Skill",
+    craftableAffix: "Gains Attack Aggression when casting an Attack Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -165,9 +131,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "Gains Spell Aggression when casting a Spell Skill",
-    valueRanges: [],
-    rawAffix: "Gains Spell Aggression when casting a Spell Skill",
+    craftableAffix: "Gains Spell Aggression when casting a Spell Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -175,9 +139,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "Immune to Wilt",
-    valueRanges: [],
-    rawAffix: "Immune to Wilt",
+    craftableAffix: "Immune to Wilt",
   },
   {
     equipmentSlot: "Trinket",
@@ -185,9 +147,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "Immune to Trauma",
-    valueRanges: [],
-    rawAffix: "Immune to Trauma",
+    craftableAffix: "Immune to Trauma",
   },
   {
     equipmentSlot: "Trinket",
@@ -195,9 +155,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Dexterity",
+    craftableAffix: "+(15-20)Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -205,9 +163,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Intelligence",
+    craftableAffix: "+(15-20)Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -215,9 +171,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Strength",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Strength",
+    craftableAffix: "+(15-20)Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -225,9 +179,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -235,9 +187,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -245,9 +195,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -255,9 +203,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -265,9 +211,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(54-74) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(54-74)` Max Life",
+    craftableAffix: "+(54-74)Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -275,9 +219,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(6-8)% Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Attack and Cast Speed",
+    craftableAffix: "+(6-8)% Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -285,9 +227,7 @@ export const RING_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(87-117) Max Energy Shield",
-    valueRanges: [],
-    rawAffix: "` +(87-117)` Max Energy Shield",
+    craftableAffix: "+(87-117)Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

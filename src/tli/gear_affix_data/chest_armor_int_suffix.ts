@@ -7,9 +7,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(136-176) Attack and Spell Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(136-176)` Attack and Spell Critical Strike Rating",
+    craftableAffix: "+(136-176)Attack and Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -17,9 +15,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(21-26)% Aura Effect",
-    valueRanges: [],
-    rawAffix: "` +(21-26)`% Aura Effect",
+    craftableAffix: "+(21-26)% Aura Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -27,9 +23,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(50-68)% chance to avoid Elemental Ailments",
-    valueRanges: [],
-    rawAffix: "` +(50-68)`% chance to avoid Elemental Ailments",
+    craftableAffix: "+(50-68)% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -37,9 +31,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(84-108)% Reaping Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(84-108)`% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(84-108)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -47,9 +39,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(15-20)% Aura Effect",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Aura Effect",
+    craftableAffix: "+(15-20)% Aura Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -57,9 +47,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(30-45)% chance to avoid Elemental Ailments",
-    valueRanges: [],
-    rawAffix: "` +(30-45)`% chance to avoid Elemental Ailments",
+    craftableAffix: "+(30-45)% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -67,9 +55,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(59-83)% Reaping Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(59-83)`% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(59-83)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -77,9 +63,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(96-135) Attack and Spell Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(96-135)` Attack and Spell Critical Strike Rating",
+    craftableAffix: "+(96-135)Attack and Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -87,9 +71,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(11-13)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(11-13)`% Elemental Resistance",
+    craftableAffix: "+(11-13)% Elemental Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -97,9 +79,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(19-23)% Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(19-23)`% Intelligence",
+    craftableAffix: "+(19-23)% Intelligence",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -107,11 +87,8 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(25-31)`% Attack and Cast Speed<> ` +(25-31)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -119,9 +96,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(51-65)% Reaping Duration",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Reaping Duration",
+    craftableAffix: "+(51-65)% Reaping Duration",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -129,9 +104,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Critical Strike Damage",
+    craftableAffix: "+(61-78)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -139,11 +112,8 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy:  1 s\nWhen Minions deal damage, inflicts Cold Infiltration . Interval for each enemy:  1 s\n+(40-60)% Cold Infiltration Effect",
-    valueRanges: [],
-    rawAffix:
-      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: ` 1` s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: ` 1` s<> ` +(40-60)`% Cold Infiltration Effect",
+    craftableAffix:
+      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: 1s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1s<> +(40-60)% Cold Infiltration Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -151,9 +121,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(14-18)% Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(14-18)`% Intelligence",
+    craftableAffix: "+(14-18)% Intelligence",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -161,11 +129,8 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(18-24)`% Attack and Cast Speed<> ` +(18-24)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -173,9 +138,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(36-50)% Reaping Duration",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Reaping Duration",
+    craftableAffix: "+(36-50)% Reaping Duration",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -183,9 +146,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(44-60)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(44-60)`% Critical Strike Damage",
+    craftableAffix: "+(44-60)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -193,9 +154,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(8-10)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(8-10)`% Elemental Resistance",
+    craftableAffix: "+(8-10)% Elemental Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -203,11 +162,8 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy:  1 s\nWhen Minions deal damage, inflicts Cold Infiltration . Interval for each enemy:  1 s\n+(10-30)% Cold Infiltration Effect",
-    valueRanges: [],
-    rawAffix:
-      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: ` 1` s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: ` 1` s<> ` +(10-30)`% Cold Infiltration Effect",
+    craftableAffix:
+      "Inflicts Cold Infiltration when dealing damage. Interval for each enemy: 1s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1s<> +(10-30)% Cold Infiltration Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -215,9 +171,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(121-156)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(121-156)`% Critical Strike Rating",
+    craftableAffix: "+(121-156)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -225,9 +179,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Cold Resistance",
+    craftableAffix: "+(25-35)% Cold Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -235,9 +187,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Erosion Resistance",
+    craftableAffix: "+(25-35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -245,9 +195,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Fire Resistance",
+    craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -255,9 +203,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Lightning Resistance",
+    craftableAffix: "+(25-35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -265,9 +211,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(51-65)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Affliction Effect",
+    craftableAffix: "+(51-65)% Affliction Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -275,9 +219,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(61-78)% Mana Regeneration Speed",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Mana Regeneration Speed",
+    craftableAffix: "+(61-78)% Mana Regeneration Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -285,9 +227,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Cold Resistance",
+    craftableAffix: "+(19-27)% Cold Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -295,9 +235,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Erosion Resistance",
+    craftableAffix: "+(19-27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -305,9 +243,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Fire Resistance",
+    craftableAffix: "+(19-27)% Fire Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -315,9 +251,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Lightning Resistance",
+    craftableAffix: "+(19-27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -325,9 +259,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(36-50)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Affliction Effect",
+    craftableAffix: "+(36-50)% Affliction Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -335,9 +267,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(43-60)% Mana Regeneration Speed",
-    valueRanges: [],
-    rawAffix: "` +(43-60)`% Mana Regeneration Speed",
+    craftableAffix: "+(43-60)% Mana Regeneration Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -345,9 +275,7 @@ export const CHEST_ARMOR_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(87-120)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(87-120)`% Critical Strike Rating",
+    craftableAffix: "+(87-120)% Critical Strike Rating",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,9 +7,7 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(10-15)% Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(10-15)`% Skill Area",
+    craftableAffix: "+(10-15)% Skill Area",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,9 +15,7 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(15-25)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(15-25)`% gear Physical Damage",
+    craftableAffix: "+(15-25)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -27,9 +23,7 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(3-6)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(3-6)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(3-6)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -37,9 +31,7 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(40-45)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-45)`% Elemental Damage",
+    craftableAffix: "+(40-45)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -47,9 +39,7 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(5-8)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(5-8)`% gear Attack Speed",
+    craftableAffix: "+(5-8)% gear Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -57,10 +47,8 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(6-12)% chance to gain 1 stack of Tenacity Blessing on defeat",
-    valueRanges: [],
-    rawAffix:
-      "` +(6-12)`% chance to gain 1 stack of Tenacity Blessing on defeat",
+    craftableAffix:
+      "+(6-12)% chance to gain 1 stack of Tenacity Blessing on defeat",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -68,9 +56,7 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (7-10) -  (14-17) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (7-10)` - ` (14-17)` Physical Damage to the gear",
+    craftableAffix: "Adds (7-10)- (14-17)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -78,9 +64,8 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Eliminates enemies under  (5-8)% Life upon inflicting damage",
-    valueRanges: [],
-    rawAffix: "Eliminates enemies under ` (5-8)`% Life upon inflicting damage",
+    craftableAffix:
+      "Eliminates enemies under (5-8)% Life upon inflicting damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -88,11 +73,8 @@ export const TWO_HANDED_AXE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template:
-      "Enemies have a  30% chance to explode when defeated, dealing Secondary Physical Damage equal to  (5-10)% of their Max Life to enemies within a 5m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` 30`% chance to explode when defeated, dealing Secondary Physical Damage equal to ` (5-10)`% of their Max Life to enemies within a 5m radius",
+    craftableAffix:
+      "Enemies have a 30% chance to explode when defeated, dealing Secondary Physical Damage equal to (5-10)% of their Max Life to enemies within a 5m radius",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

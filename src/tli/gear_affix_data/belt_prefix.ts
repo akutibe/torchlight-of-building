@@ -7,9 +7,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " (-18--16)% additional damage taken at Low Mana",
-    valueRanges: [],
-    rawAffix: "` (-18--16)`% additional damage taken at Low Mana",
+    craftableAffix: "(-18--16)% additional damage taken at Low Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,11 +15,8 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +(386-500)% Critical Strike Rating against Traumatized enemies\n-30% additional Hit Damage",
-    valueRanges: [],
-    rawAffix:
-      "` +(386-500)`% Critical Strike Rating against Traumatized enemies<> ` -30`% additional Hit Damage",
+    craftableAffix:
+      "+(386-500)% Critical Strike Rating against Traumatized enemies<> -30% additional Hit Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -29,9 +24,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(51-65)% Deterioration Damage",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Deterioration Damage",
+    craftableAffix: "+(51-65)% Deterioration Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -39,9 +32,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +1 Ignite limit\n+5% additional Ignite Damage",
-    valueRanges: [],
-    rawAffix: "` +1` Ignite limit<> ` +5`% additional Ignite Damage",
+    craftableAffix: "+1Ignite limit<> +5% additional Ignite Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -49,9 +40,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Max Channeled Stacks  +2 ",
-    valueRanges: [],
-    rawAffix: "Max Channeled Stacks ` +2` ",
+    craftableAffix: "Max Channeled Stacks +2",
   },
   {
     equipmentSlot: "Trinket",
@@ -59,9 +48,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Min Channeled Stacks  +2 ",
-    valueRanges: [],
-    rawAffix: "Min Channeled Stacks ` +2` ",
+    craftableAffix: "Min Channeled Stacks +2",
   },
   {
     equipmentSlot: "Trinket",
@@ -69,9 +56,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " (-15--12)% additional damage taken at Low Mana",
-    valueRanges: [],
-    rawAffix: "` (-15--12)`% additional damage taken at Low Mana",
+    craftableAffix: "(-15--12)% additional damage taken at Low Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -79,11 +64,8 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +(271-385)% Critical Strike Rating against Traumatized enemies\n-30% additional Hit Damage",
-    valueRanges: [],
-    rawAffix:
-      "` +(271-385)`% Critical Strike Rating against Traumatized enemies<> ` -30`% additional Hit Damage",
+    craftableAffix:
+      "+(271-385)% Critical Strike Rating against Traumatized enemies<> -30% additional Hit Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -91,9 +73,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(36-50)% Deterioration Damage",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Deterioration Damage",
+    craftableAffix: "+(36-50)% Deterioration Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -101,9 +81,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +1 Ignite limit",
-    valueRanges: [],
-    rawAffix: "` +1` Ignite limit",
+    craftableAffix: "+1Ignite limit",
   },
   {
     equipmentSlot: "Trinket",
@@ -111,9 +89,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Max Channeled Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Channeled Stacks ` +1` ",
+    craftableAffix: "Max Channeled Stacks +1",
   },
   {
     equipmentSlot: "Trinket",
@@ -121,9 +97,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Min Channeled Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Min Channeled Stacks ` +1` ",
+    craftableAffix: "Min Channeled Stacks +1",
   },
   {
     equipmentSlot: "Trinket",
@@ -131,9 +105,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(16-20)% Attack and Spell Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(16-20)`% Attack and Spell Block Chance",
+    craftableAffix: "+(16-20)% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -141,9 +113,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(21-26)% Defense",
-    valueRanges: [],
-    rawAffix: "` +(21-26)`% Defense",
+    craftableAffix: "+(21-26)% Defense",
   },
   {
     equipmentSlot: "Trinket",
@@ -151,9 +121,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(33-42)% Deterioration Chance",
-    valueRanges: [],
-    rawAffix: "` +(33-42)`% Deterioration Chance",
+    craftableAffix: "+(33-42)% Deterioration Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -161,9 +129,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Dexterity",
+    craftableAffix: "+(61-78)Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -171,9 +137,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Intelligence",
+    craftableAffix: "+(61-78)Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -181,9 +145,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Strength",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Strength",
+    craftableAffix: "+(61-78)Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -191,9 +153,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "Barrage Skills  +(26-32)% damage increase per wave",
-    valueRanges: [],
-    rawAffix: "Barrage Skills ` +(26-32)`% damage increase per wave",
+    craftableAffix: "Barrage Skills +(26-32)% damage increase per wave",
   },
   {
     equipmentSlot: "Trinket",
@@ -201,11 +161,8 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      "Gains a stack of Fortitude when using a Melee Skill\n(-8--6)% additional damage taken",
-    valueRanges: [],
-    rawAffix:
-      "Gains a stack of Fortitude when using a Melee Skill<> ` (-8--6)`% additional damage taken",
+    craftableAffix:
+      "Gains a stack of Fortitude when using a Melee Skill<> (-8--6)% additional damage taken",
   },
   {
     equipmentSlot: "Trinket",
@@ -213,9 +170,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(12-15)% Attack and Spell Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(12-15)`% Attack and Spell Block Chance",
+    craftableAffix: "+(12-15)% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -223,9 +178,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(15-20)% Defense",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Defense",
+    craftableAffix: "+(15-20)% Defense",
   },
   {
     equipmentSlot: "Trinket",
@@ -233,9 +186,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(23-32)% Deterioration Chance",
-    valueRanges: [],
-    rawAffix: "` +(23-32)`% Deterioration Chance",
+    craftableAffix: "+(23-32)% Deterioration Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -243,9 +194,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Dexterity",
+    craftableAffix: "+(43-60)Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -253,9 +202,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Intelligence",
+    craftableAffix: "+(43-60)Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -263,9 +210,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Strength",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Strength",
+    craftableAffix: "+(43-60)Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -273,9 +218,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "Barrage Skills  +(20-25)% damage increase per wave",
-    valueRanges: [],
-    rawAffix: "Barrage Skills ` +(20-25)`% damage increase per wave",
+    craftableAffix: "Barrage Skills +(20-25)% damage increase per wave",
   },
   {
     equipmentSlot: "Trinket",
@@ -283,11 +226,8 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      "Gains a stack of Fortitude when using a Melee Skill\n(-5--3)% additional damage taken",
-    valueRanges: [],
-    rawAffix:
-      "Gains a stack of Fortitude when using a Melee Skill<> ` (-5--3)`% additional damage taken",
+    craftableAffix:
+      "Gains a stack of Fortitude when using a Melee Skill<> (-5--3)% additional damage taken",
   },
   {
     equipmentSlot: "Trinket",
@@ -295,9 +235,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(121-156) Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(121-156)` Max Mana",
+    craftableAffix: "+(121-156)Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -305,9 +243,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(221-286) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(221-286)` Max Life",
+    craftableAffix: "+(221-286)Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -315,11 +251,8 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template:
-      " +(24-30)% chance for Attacks to inflict Taunt on enemies on hit",
-    valueRanges: [],
-    rawAffix:
-      "` +(24-30)`% chance for Attacks to inflict Taunt on enemies on hit",
+    craftableAffix:
+      "+(24-30)% chance for Attacks to inflict Taunt on enemies on hit",
   },
   {
     equipmentSlot: "Trinket",
@@ -327,9 +260,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(351-455) Max Energy Shield",
-    valueRanges: [],
-    rawAffix: "` +(351-455)` Max Energy Shield",
+    craftableAffix: "+(351-455)Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -337,9 +268,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(66-94)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(66-94)`% Minion Damage",
+    craftableAffix: "+(66-94)% Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -347,9 +276,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(73-94)% damage",
-    valueRanges: [],
-    rawAffix: "` +(73-94)`% damage",
+    craftableAffix: "+(73-94)% damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -357,9 +284,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(155-220) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(155-220)` Max Life",
+    craftableAffix: "+(155-220)Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -367,11 +292,8 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template:
-      " +(17-23)% chance for Attacks to inflict Taunt on enemies on hit",
-    valueRanges: [],
-    rawAffix:
-      "` +(17-23)`% chance for Attacks to inflict Taunt on enemies on hit",
+    craftableAffix:
+      "+(17-23)% chance for Attacks to inflict Taunt on enemies on hit",
   },
   {
     equipmentSlot: "Trinket",
@@ -379,9 +301,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(246-350) Max Energy Shield",
-    valueRanges: [],
-    rawAffix: "` +(246-350)` Max Energy Shield",
+    craftableAffix: "+(246-350)Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -389,9 +309,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(51-72)% damage",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% damage",
+    craftableAffix: "+(51-72)% damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -399,9 +317,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(51-72)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% Minion Damage",
+    craftableAffix: "+(51-72)% Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -409,9 +325,7 @@ export const BELT_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(85-120) Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(85-120)` Max Mana",
+    craftableAffix: "+(85-120)Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

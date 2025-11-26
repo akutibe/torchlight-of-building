@@ -7,9 +7,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(151-195)% Minion Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(151-195)`% Minion Critical Strike Damage",
+    craftableAffix: "+(151-195)% Minion Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,11 +15,8 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +(36-46)% additional damage for Synthetic Troop Minions when having at least  40 Command",
-    valueRanges: [],
-    rawAffix:
-      "` +(36-46)`% additional damage for Synthetic Troop Minions when having at least ` 40` Command",
+    craftableAffix:
+      "+(36-46)% additional damage for Synthetic Troop Minions when having at least 40Command",
   },
   {
     equipmentSlot: "One-Handed",
@@ -29,11 +24,8 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +(41-52)% additional Spirit Magus Enhanced Skill Damage and Ailment Damage dealt by Enhanced Skills",
-    valueRanges: [],
-    rawAffix:
-      "` +(41-52)`% additional Spirit Magus Enhanced Skill Damage and Ailment Damage dealt by Enhanced Skills",
+    craftableAffix:
+      "+(41-52)% additional Spirit Magus Enhanced Skill Damage and Ailment Damage dealt by Enhanced Skills",
   },
   {
     equipmentSlot: "One-Handed",
@@ -41,9 +33,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(41-52)% chance for Minions to deal Double Damage",
-    valueRanges: [],
-    rawAffix: "` +(41-52)`% chance for Minions to deal Double Damage",
+    craftableAffix: "+(41-52)% chance for Minions to deal Double Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -51,11 +41,8 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +(61-78)% additional Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate .",
-    valueRanges: [],
-    rawAffix:
-      "` +(61-78)`% additional Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate .",
+    craftableAffix:
+      "+(61-78)% additional Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate .",
   },
   {
     equipmentSlot: "One-Handed",
@@ -63,9 +50,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(106-150)% Minion Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(106-150)`% Minion Critical Strike Damage",
+    craftableAffix: "+(106-150)% Minion Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,11 +58,8 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +(26-35)% additional damage for Synthetic Troop Minions when having at least  40 Command",
-    valueRanges: [],
-    rawAffix:
-      "` +(26-35)`% additional damage for Synthetic Troop Minions when having at least ` 40` Command",
+    craftableAffix:
+      "+(26-35)% additional damage for Synthetic Troop Minions when having at least 40Command",
   },
   {
     equipmentSlot: "One-Handed",
@@ -85,11 +67,8 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +(29-40)% additional Spirit Magus Enhanced Skill Damage and Ailment Damage dealt by Enhanced Skills",
-    valueRanges: [],
-    rawAffix:
-      "` +(29-40)`% additional Spirit Magus Enhanced Skill Damage and Ailment Damage dealt by Enhanced Skills",
+    craftableAffix:
+      "+(29-40)% additional Spirit Magus Enhanced Skill Damage and Ailment Damage dealt by Enhanced Skills",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,9 +76,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(29-40)% chance for Minions to deal Double Damage",
-    valueRanges: [],
-    rawAffix: "` +(29-40)`% chance for Minions to deal Double Damage",
+    craftableAffix: "+(29-40)% chance for Minions to deal Double Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -107,11 +84,8 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +(43-60)% additional Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate .",
-    valueRanges: [],
-    rawAffix:
-      "` +(43-60)`% additional Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate .",
+    craftableAffix:
+      "+(43-60)% additional Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate .",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,9 +93,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(126-163) Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(126-163)` Minion Critical Strike Rating",
+    craftableAffix: "+(126-163)Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,9 +101,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(181-234)% Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(181-234)`% Minion Critical Strike Rating",
+    craftableAffix: "+(181-234)% Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -139,9 +109,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(73-94)% Minion Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(73-94)`% Minion Skill Area",
+    craftableAffix: "+(73-94)% Minion Skill Area",
   },
   {
     equipmentSlot: "One-Handed",
@@ -149,9 +117,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(127-180)% Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(127-180)`% Minion Critical Strike Rating",
+    craftableAffix: "+(127-180)% Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -159,9 +125,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(51-72)% Minion Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% Minion Skill Area",
+    craftableAffix: "+(51-72)% Minion Skill Area",
   },
   {
     equipmentSlot: "One-Handed",
@@ -169,9 +133,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(89-125) Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(89-125)` Minion Critical Strike Rating",
+    craftableAffix: "+(89-125)Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -179,9 +141,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(109-140)% Minion Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(109-140)`% Minion Elemental Damage",
+    craftableAffix: "+(109-140)% Minion Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -189,9 +149,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(109-140)% Minion Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(109-140)`% Minion Erosion Damage",
+    craftableAffix: "+(109-140)% Minion Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -199,9 +157,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(109-140)% Physical Damage for Minions",
-    valueRanges: [],
-    rawAffix: "` +(109-140)`% Physical Damage for Minions",
+    craftableAffix: "+(109-140)% Physical Damage for Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -209,9 +165,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-31)% Energy Shield Charge Speed",
-    valueRanges: [],
-    rawAffix: "` +(25-31)`% Energy Shield Charge Speed",
+    craftableAffix: "+(25-31)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -219,11 +173,8 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template:
-      " +(37-47)% Attack and Cast Speed\n+(37-47)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(37-47)`% Attack and Cast Speed<> ` +(37-47)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(37-47)% Attack and Cast Speed<> +(37-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -231,9 +182,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Regenerates  (181-234) Life per second",
-    valueRanges: [],
-    rawAffix: "Regenerates ` (181-234)` Life per second",
+    craftableAffix: "Regenerates (181-234)Life per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -241,9 +190,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(18-24)% Energy Shield Charge Speed",
-    valueRanges: [],
-    rawAffix: "` +(18-24)`% Energy Shield Charge Speed",
+    craftableAffix: "+(18-24)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -251,11 +198,8 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template:
-      " +(27-36)% Attack and Cast Speed\n+(27-36)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(27-36)`% Attack and Cast Speed<> ` +(27-36)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(27-36)% Attack and Cast Speed<> +(27-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -263,9 +207,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(77-108)% Minion Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(77-108)`% Minion Elemental Damage",
+    craftableAffix: "+(77-108)% Minion Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -273,9 +215,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(77-108)% Minion Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(77-108)`% Minion Erosion Damage",
+    craftableAffix: "+(77-108)% Minion Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -283,9 +223,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(77-108)% Physical Damage for Minions",
-    valueRanges: [],
-    rawAffix: "` +(77-108)`% Physical Damage for Minions",
+    craftableAffix: "+(77-108)% Physical Damage for Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -293,9 +231,7 @@ export const ROD_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Regenerates  (130-180) Life per second",
-    valueRanges: [],
-    rawAffix: "Regenerates ` (130-180)` Life per second",
+    craftableAffix: "Regenerates (130-180)Life per second",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

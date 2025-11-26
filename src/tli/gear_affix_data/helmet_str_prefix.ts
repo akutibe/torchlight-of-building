@@ -7,11 +7,8 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " -45% additional Damage Over Time taken when having at least  50000 Armor",
-    valueRanges: [],
-    rawAffix:
-      "` -45`% additional Damage Over Time taken when having at least ` 50000` Armor",
+    craftableAffix:
+      "-45% additional Damage Over Time taken when having at least 50000Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -19,9 +16,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " (-20--16)% additional Damage dealt by Nearby enemies",
-    valueRanges: [],
-    rawAffix: "` (-20--16)`% additional Damage dealt by Nearby enemies",
+    craftableAffix: "(-20--16)% additional Damage dealt by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",
@@ -29,9 +24,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " (21-26)% of damage is taken from Mana before life",
-    valueRanges: [],
-    rawAffix: "` (21-26)`% of damage is taken from Mana before life",
+    craftableAffix: "(21-26)% of damage is taken from Mana before life",
   },
   {
     equipmentSlot: "Helmet",
@@ -39,9 +32,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(21-26)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(21-26)`% Sealed Mana Compensation",
+    craftableAffix: "+(21-26)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Helmet",
@@ -49,11 +40,8 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +1 Max Spell Burst\n+10% additional Hit Damage for skills cast by Spell Burst",
-    valueRanges: [],
-    rawAffix:
-      "` +1` Max Spell Burst<> ` +10`% additional Hit Damage for skills cast by Spell Burst",
+    craftableAffix:
+      "+1Max Spell Burst<> +10% additional Hit Damage for skills cast by Spell Burst",
   },
   {
     equipmentSlot: "Helmet",
@@ -61,9 +49,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Converts  (16-20)% of Physical Damage taken to Fire Damage",
-    valueRanges: [],
-    rawAffix: "Converts ` (16-20)`% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (16-20)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -71,9 +57,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Converts  (36-45)% of Erosion Damage taken to Fire Damage",
-    valueRanges: [],
-    rawAffix: "Converts ` (36-45)`% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -81,10 +65,8 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Max Terra Charge Stacks  +1 \n+30% Terra Charge Recovery Speed",
-    valueRanges: [],
-    rawAffix:
-      "Max Terra Charge Stacks ` +1` <> ` +30`% Terra Charge Recovery Speed",
+    craftableAffix:
+      "Max Terra Charge Stacks +1<> +30% Terra Charge Recovery Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -92,11 +74,8 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " -40% additional Damage Over Time taken when having at least  50000 Armor",
-    valueRanges: [],
-    rawAffix:
-      "` -40`% additional Damage Over Time taken when having at least ` 50000` Armor",
+    craftableAffix:
+      "-40% additional Damage Over Time taken when having at least 50000Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -104,9 +83,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " (-15--12)% additional Damage dealt by Nearby enemies",
-    valueRanges: [],
-    rawAffix: "` (-15--12)`% additional Damage dealt by Nearby enemies",
+    craftableAffix: "(-15--12)% additional Damage dealt by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",
@@ -114,9 +91,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " (15-20)% of damage is taken from Mana before life",
-    valueRanges: [],
-    rawAffix: "` (15-20)`% of damage is taken from Mana before life",
+    craftableAffix: "(15-20)% of damage is taken from Mana before life",
   },
   {
     equipmentSlot: "Helmet",
@@ -124,9 +99,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(15-20)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Sealed Mana Compensation",
+    craftableAffix: "+(15-20)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Helmet",
@@ -134,9 +107,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +1 Max Spell Burst",
-    valueRanges: [],
-    rawAffix: "` +1` Max Spell Burst",
+    craftableAffix: "+1Max Spell Burst",
   },
   {
     equipmentSlot: "Helmet",
@@ -144,9 +115,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Converts  (12-15)% of Physical Damage taken to Fire Damage",
-    valueRanges: [],
-    rawAffix: "Converts ` (12-15)`% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -154,9 +123,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Converts  (27-35)% of Erosion Damage taken to Fire Damage",
-    valueRanges: [],
-    rawAffix: "Converts ` (27-35)`% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -164,9 +131,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Max Terra Charge Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Terra Charge Stacks ` +1` ",
+    craftableAffix: "Max Terra Charge Stacks +1",
   },
   {
     equipmentSlot: "Helmet",
@@ -174,9 +139,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(14-17)% Block Ratio",
-    valueRanges: [],
-    rawAffix: "` +(14-17)`% Block Ratio",
+    craftableAffix: "+(14-17)% Block Ratio",
   },
   {
     equipmentSlot: "Helmet",
@@ -184,9 +147,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(46-59)% Projectile Speed",
-    valueRanges: [],
-    rawAffix: "` +(46-59)`% Projectile Speed",
+    craftableAffix: "+(46-59)% Projectile Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -194,11 +155,8 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(51-65)% chance to gain 1 stack of Tenacity Blessing on defeat",
-    valueRanges: [],
-    rawAffix:
-      "` +(51-65)`% chance to gain 1 stack of Tenacity Blessing on defeat",
+    craftableAffix:
+      "+(51-65)% chance to gain 1 stack of Tenacity Blessing on defeat",
   },
   {
     equipmentSlot: "Helmet",
@@ -206,9 +164,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Dexterity",
+    craftableAffix: "+(61-78)Dexterity",
   },
   {
     equipmentSlot: "Helmet",
@@ -216,9 +172,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Intelligence",
+    craftableAffix: "+(61-78)Intelligence",
   },
   {
     equipmentSlot: "Helmet",
@@ -226,9 +180,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Strength",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Strength",
+    craftableAffix: "+(61-78)Strength",
   },
   {
     equipmentSlot: "Helmet",
@@ -236,9 +188,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78)% Barrier Shield",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Barrier Shield",
+    craftableAffix: "+(61-78)% Barrier Shield",
   },
   {
     equipmentSlot: "Helmet",
@@ -246,9 +196,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(10-13)% Block Ratio",
-    valueRanges: [],
-    rawAffix: "` +(10-13)`% Block Ratio",
+    craftableAffix: "+(10-13)% Block Ratio",
   },
   {
     equipmentSlot: "Helmet",
@@ -256,9 +204,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(33-45)% Projectile Speed",
-    valueRanges: [],
-    rawAffix: "` +(33-45)`% Projectile Speed",
+    craftableAffix: "+(33-45)% Projectile Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -266,11 +212,8 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(37-50)% chance to gain 1 stack of Tenacity Blessing on defeat",
-    valueRanges: [],
-    rawAffix:
-      "` +(37-50)`% chance to gain 1 stack of Tenacity Blessing on defeat",
+    craftableAffix:
+      "+(37-50)% chance to gain 1 stack of Tenacity Blessing on defeat",
   },
   {
     equipmentSlot: "Helmet",
@@ -278,9 +221,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Dexterity",
+    craftableAffix: "+(43-60)Dexterity",
   },
   {
     equipmentSlot: "Helmet",
@@ -288,9 +229,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Intelligence",
+    craftableAffix: "+(43-60)Intelligence",
   },
   {
     equipmentSlot: "Helmet",
@@ -298,9 +237,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Strength",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Strength",
+    craftableAffix: "+(43-60)Strength",
   },
   {
     equipmentSlot: "Helmet",
@@ -308,9 +245,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60)% Barrier Shield",
-    valueRanges: [],
-    rawAffix: "` +(43-60)`% Barrier Shield",
+    craftableAffix: "+(43-60)% Barrier Shield",
   },
   {
     equipmentSlot: "Helmet",
@@ -318,9 +253,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(121-156) Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(121-156)` Max Mana",
+    craftableAffix: "+(121-156)Max Mana",
   },
   {
     equipmentSlot: "Helmet",
@@ -328,9 +261,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(221-286) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(221-286)` Max Life",
+    craftableAffix: "+(221-286)Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -338,9 +269,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(2622-3744) Gear Armor",
-    valueRanges: [],
-    rawAffix: "` +(2622-3744)` Gear Armor",
+    craftableAffix: "+(2622-3744)Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -348,9 +277,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(73-94)% damage",
-    valueRanges: [],
-    rawAffix: "` +(73-94)`% damage",
+    craftableAffix: "+(73-94)% damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -358,9 +285,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(73-94)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(73-94)`% Minion Damage",
+    craftableAffix: "+(73-94)% Minion Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -368,9 +293,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(154-220) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(154-220)` Max Life",
+    craftableAffix: "+(154-220)Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -378,9 +301,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(2017-2880) Gear Armor",
-    valueRanges: [],
-    rawAffix: "` +(2017-2880)` Gear Armor",
+    craftableAffix: "+(2017-2880)Gear Armor",
   },
   {
     equipmentSlot: "Helmet",
@@ -388,9 +309,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(51-72)% damage",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% damage",
+    craftableAffix: "+(51-72)% damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -398,9 +317,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(51-72)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% Minion Damage",
+    craftableAffix: "+(51-72)% Minion Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -408,9 +325,7 @@ export const HELMET_STR_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(85-120) Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(85-120)` Max Mana",
+    craftableAffix: "+(85-120)Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

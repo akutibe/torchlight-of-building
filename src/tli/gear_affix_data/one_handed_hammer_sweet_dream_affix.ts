@@ -7,9 +7,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Agility Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Agility Blessing Stacks ` +1` ",
+    craftableAffix: "Max Agility Blessing Stacks +1",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,9 +15,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks ` +1` ",
+    craftableAffix: "Max Focus Blessing Stacks +1",
   },
   {
     equipmentSlot: "One-Handed",
@@ -27,9 +23,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Tenacity Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks ` +1` ",
+    craftableAffix: "Max Tenacity Blessing Stacks +1",
   },
   {
     equipmentSlot: "One-Handed",
@@ -37,11 +31,8 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(12-16)% additional damage when a Skill consumes Demolisher Charge",
-    valueRanges: [],
-    rawAffix:
-      "` +(12-16)`% additional damage when a Skill consumes Demolisher Charge",
+    craftableAffix:
+      "+(12-16)% additional damage when a Skill consumes Demolisher Charge",
   },
   {
     equipmentSlot: "One-Handed",
@@ -49,9 +40,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(5-7)% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +(5-7)`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(5-7)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -59,9 +48,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(6-8)% Elemental and Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(6-8)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -69,9 +56,8 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: "Eliminates enemies under  (5-7)% Life upon inflicting damage",
-    valueRanges: [],
-    rawAffix: "Eliminates enemies under ` (5-7)`% Life upon inflicting damage",
+    craftableAffix:
+      "Eliminates enemies under (5-7)% Life upon inflicting damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -79,9 +65,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Elemental Damage",
+    craftableAffix: "+(20-24)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,9 +73,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Erosion Damage",
+    craftableAffix: "+(20-24)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -99,9 +81,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Melee Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Melee Damage",
+    craftableAffix: "+(20-24)% Melee Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -109,9 +89,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Physical Damage",
+    craftableAffix: "+(20-24)% Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,9 +97,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(6-8)% Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Attack Speed",
+    craftableAffix: "+(6-8)% Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,9 +105,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (1-2) -  (28-32) Lightning Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (1-2)` - ` (28-32)` Lightning Damage to Attacks",
+    craftableAffix: "Adds (1-2)- (28-32)Lightning Damage to Attacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -139,9 +113,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (10-13) -  (14-19) Cold Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (10-13)` - ` (14-19)` Cold Damage to Attacks",
+    craftableAffix: "Adds (10-13)- (14-19)Cold Damage to Attacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -149,9 +121,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (10-13) -  (14-19) Physical Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (10-13)` - ` (14-19)` Physical Damage to Attacks",
+    craftableAffix: "Adds (10-13)- (14-19)Physical Damage to Attacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -159,9 +129,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (11-13) -  (15-18) Erosion Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (11-13)` - ` (15-18)` Erosion Damage to Attacks",
+    craftableAffix: "Adds (11-13)- (15-18)Erosion Damage to Attacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -169,9 +137,7 @@ export const ONE_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (9-14) -  (15-20) Fire Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (9-14)` - ` (15-20)` Fire Damage to Attacks",
+    craftableAffix: "Adds (9-14)- (15-20)Fire Damage to Attacks",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,9 +7,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(23-29)% additional Evasion while moving",
-    valueRanges: [],
-    rawAffix: "` +(23-29)`% additional Evasion while moving",
+    craftableAffix: "+(23-29)% additional Evasion while moving",
   },
   {
     equipmentSlot: "Boots",
@@ -17,9 +15,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(27-34)% Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(27-34)`% Cooldown Recovery Speed",
+    craftableAffix: "+(27-34)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -27,9 +23,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(50-68)% chance to avoid Elemental Ailments",
-    valueRanges: [],
-    rawAffix: "` +(50-68)`% chance to avoid Elemental Ailments",
+    craftableAffix: "+(50-68)% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Boots",
@@ -37,9 +31,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(84-108)% Reaping Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(84-108)`% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(84-108)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -47,9 +39,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "For every  5 m moved, gains  1 stack(s) of Deflection",
-    valueRanges: [],
-    rawAffix: "For every ` 5` m moved, gains ` 1` stack(s) of Deflection",
+    craftableAffix: "For every 5m moved, gains 1stack(s) of Deflection",
   },
   {
     equipmentSlot: "Boots",
@@ -57,11 +47,8 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      "Triggers Lv.  (11-20) Blurry Steps upon starting to move. Interval:  1 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` (11-20)` Blurry Steps upon starting to move. Interval: ` 1` s",
+    craftableAffix:
+      "Triggers Lv. (11-20)Blurry Steps upon starting to move. Interval: 1s",
   },
   {
     equipmentSlot: "Boots",
@@ -69,9 +56,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(17-22)% additional Evasion while moving",
-    valueRanges: [],
-    rawAffix: "` +(17-22)`% additional Evasion while moving",
+    craftableAffix: "+(17-22)% additional Evasion while moving",
   },
   {
     equipmentSlot: "Boots",
@@ -79,9 +64,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(19-26)% Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(19-26)`% Cooldown Recovery Speed",
+    craftableAffix: "+(19-26)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -89,9 +72,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(30-45)% chance to avoid Elemental Ailments",
-    valueRanges: [],
-    rawAffix: "` +(30-45)`% chance to avoid Elemental Ailments",
+    craftableAffix: "+(30-45)% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Boots",
@@ -99,9 +80,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(59-83)% Reaping Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(59-83)`% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(59-83)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -109,9 +88,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "For every  6 m moved, gains  1 stack(s) of Deflection",
-    valueRanges: [],
-    rawAffix: "For every ` 6` m moved, gains ` 1` stack(s) of Deflection",
+    craftableAffix: "For every 6m moved, gains 1stack(s) of Deflection",
   },
   {
     equipmentSlot: "Boots",
@@ -119,11 +96,8 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      "Triggers Lv.  (6-10) Blurry Steps upon starting to move. Interval:  1 s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` (6-10)` Blurry Steps upon starting to move. Interval: ` 1` s",
+    craftableAffix:
+      "Triggers Lv. (6-10)Blurry Steps upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -131,11 +105,8 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(25-31)`% Attack and Cast Speed<> ` +(25-31)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -143,11 +114,8 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(25-31)`% Attack and Cast Speed<> ` +(25-31)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -155,9 +123,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(41-52)% Movement Speed",
-    valueRanges: [],
-    rawAffix: "` +(41-52)`% Movement Speed",
+    craftableAffix: "+(41-52)% Movement Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -165,9 +131,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(51-65)% Reaping Duration",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Reaping Duration",
+    craftableAffix: "+(51-65)% Reaping Duration",
   },
   {
     equipmentSlot: "Boots",
@@ -175,9 +139,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Critical Strike Damage",
+    craftableAffix: "+(61-78)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -185,11 +147,8 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      "Has Hasten\n+(9-12)% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
-    valueRanges: [],
-    rawAffix:
-      "Has Hasten<> ` +(9-12)`% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
+    craftableAffix:
+      "Has Hasten<> +(9-12)% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
   },
   {
     equipmentSlot: "Boots",
@@ -197,11 +156,8 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(18-24)`% Attack and Cast Speed<> ` +(18-24)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -209,9 +165,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(29-40)% Movement Speed",
-    valueRanges: [],
-    rawAffix: "` +(29-40)`% Movement Speed",
+    craftableAffix: "+(29-40)% Movement Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -219,9 +173,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(36-50)% Reaping Duration",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Reaping Duration",
+    craftableAffix: "+(36-50)% Reaping Duration",
   },
   {
     equipmentSlot: "Boots",
@@ -229,9 +181,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(44-60)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(44-60)`% Critical Strike Damage",
+    craftableAffix: "+(44-60)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -239,11 +189,8 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      "Has Hasten\n+(5-8)% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
-    valueRanges: [],
-    rawAffix:
-      "Has Hasten<> ` +(5-8)`% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
+    craftableAffix:
+      "Has Hasten<> +(5-8)% Attack Speed, Cast Speed, and Movement Speed when having Hasten",
   },
   {
     equipmentSlot: "Boots",
@@ -251,9 +198,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(121-156)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(121-156)`% Critical Strike Rating",
+    craftableAffix: "+(121-156)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Boots",
@@ -261,9 +206,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Cold Resistance",
+    craftableAffix: "+(25-35)% Cold Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -271,9 +214,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Erosion Resistance",
+    craftableAffix: "+(25-35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -281,9 +222,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Fire Resistance",
+    craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -291,9 +230,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Lightning Resistance",
+    craftableAffix: "+(25-35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -301,9 +238,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(51-65)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Affliction Effect",
+    craftableAffix: "+(51-65)% Affliction Effect",
   },
   {
     equipmentSlot: "Boots",
@@ -311,9 +246,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Regenerates  4% of Life per second while moving",
-    valueRanges: [],
-    rawAffix: "Regenerates ` 4`% of Life per second while moving",
+    craftableAffix: "Regenerates 4% of Life per second while moving",
   },
   {
     equipmentSlot: "Boots",
@@ -321,9 +254,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Cold Resistance",
+    craftableAffix: "+(19-27)% Cold Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -331,9 +262,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Erosion Resistance",
+    craftableAffix: "+(19-27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -341,9 +270,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Fire Resistance",
+    craftableAffix: "+(19-27)% Fire Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -351,9 +278,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Lightning Resistance",
+    craftableAffix: "+(19-27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -361,9 +286,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(36-50)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Affliction Effect",
+    craftableAffix: "+(36-50)% Affliction Effect",
   },
   {
     equipmentSlot: "Boots",
@@ -371,9 +294,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(87-120)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(87-120)`% Critical Strike Rating",
+    craftableAffix: "+(87-120)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Boots",
@@ -381,9 +302,7 @@ export const BOOTS_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Regenerates  3% of Life per second while moving",
-    valueRanges: [],
-    rawAffix: "Regenerates ` 3`% of Life per second while moving",
+    craftableAffix: "Regenerates 3% of Life per second while moving",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

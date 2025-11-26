@@ -7,9 +7,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Lucky Critical Strike\n(-50--80)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "Lucky Critical Strike<> ` (-50--80)`% Critical Strike Rating",
+    craftableAffix: "Lucky Critical Strike<> (-50--80)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,11 +15,8 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Enemies have a  (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  (15-25)% of their Max Life to enemies within a  5 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` (20-25)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` (15-25)`% of their Max Life to enemies within a ` 5` m radius",
+    craftableAffix:
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -29,9 +24,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Agility Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Agility Blessing Stacks ` +1` ",
+    craftableAffix: "Max Agility Blessing Stacks +1",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -39,9 +32,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks ` +1` ",
+    craftableAffix: "Max Focus Blessing Stacks +1",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -49,9 +40,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Tenacity Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks ` +1` ",
+    craftableAffix: "Max Tenacity Blessing Stacks +1",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -59,11 +48,8 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(14-16)% additional damage when a Skill consumes Demolisher Charge",
-    valueRanges: [],
-    rawAffix:
-      "` +(14-16)`% additional damage when a Skill consumes Demolisher Charge",
+    craftableAffix:
+      "+(14-16)% additional damage when a Skill consumes Demolisher Charge",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -71,9 +57,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(24-32)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(24-32)`% gear Physical Damage",
+    craftableAffix: "+(24-32)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -81,9 +65,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(5-7)% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +(5-7)`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(5-7)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -91,9 +73,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(6-8)% Elemental and Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(6-8)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -101,9 +81,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: "Adds  (32-34) -  (40-42) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (32-34)` - ` (40-42)` Physical Damage to the gear",
+    craftableAffix: "Adds (32-34)- (40-42)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -111,9 +89,8 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: "Eliminates enemies under  (5-7)% Life upon inflicting damage",
-    valueRanges: [],
-    rawAffix: "Eliminates enemies under ` (5-7)`% Life upon inflicting damage",
+    craftableAffix:
+      "Eliminates enemies under (5-7)% Life upon inflicting damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -121,9 +98,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Elemental Damage",
+    craftableAffix: "+(20-24)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -131,9 +106,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Erosion Damage",
+    craftableAffix: "+(20-24)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -141,9 +114,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Melee Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Melee Damage",
+    craftableAffix: "+(20-24)% Melee Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -151,9 +122,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Physical Damage",
+    craftableAffix: "+(20-24)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -161,9 +130,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(6-8)% Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Attack Speed",
+    craftableAffix: "+(6-8)% Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -171,9 +138,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (1-2) -  (28-32) Lightning Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (1-2)` - ` (28-32)` Lightning Damage to Attacks",
+    craftableAffix: "Adds (1-2)- (28-32)Lightning Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -181,9 +146,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (10-13) -  (14-19) Cold Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (10-13)` - ` (14-19)` Cold Damage to Attacks",
+    craftableAffix: "Adds (10-13)- (14-19)Cold Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -191,9 +154,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (10-13) -  (14-19) Physical Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (10-13)` - ` (14-19)` Physical Damage to Attacks",
+    craftableAffix: "Adds (10-13)- (14-19)Physical Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -201,9 +162,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (11-13) -  (15-18) Erosion Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (11-13)` - ` (15-18)` Erosion Damage to Attacks",
+    craftableAffix: "Adds (11-13)- (15-18)Erosion Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -211,9 +170,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (9-14) -  (15-20) Fire Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (9-14)` - ` (15-20)` Fire Damage to Attacks",
+    craftableAffix: "Adds (9-14)- (15-20)Fire Damage to Attacks",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

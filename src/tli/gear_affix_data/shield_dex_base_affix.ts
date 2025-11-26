@@ -7,9 +7,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: " +(4-5)% Max Elemental and Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(4-5)`% Max Elemental and Erosion Resistance",
+    craftableAffix: "+(4-5)% Max Elemental and Erosion Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -17,10 +15,8 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Converts  (12-15)% of Physical Damage taken to Lightning Damage",
-    valueRanges: [],
-    rawAffix:
-      "Converts ` (12-15)`% of Physical Damage taken to Lightning Damage",
+    craftableAffix:
+      "Converts (12-15)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -28,10 +24,8 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Converts  (27-35)% of Erosion Damage taken to Lightning Damage",
-    valueRanges: [],
-    rawAffix:
-      "Converts ` (27-35)`% of Erosion Damage taken to Lightning Damage",
+    craftableAffix:
+      "Converts (27-35)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -39,9 +33,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(35-40) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(35-40)` Dexterity",
+    craftableAffix: "+(35-40)Dexterity",
   },
   {
     equipmentSlot: "Shield",
@@ -49,9 +41,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(35-40) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(35-40)` Intelligence",
+    craftableAffix: "+(35-40)Intelligence",
   },
   {
     equipmentSlot: "Shield",
@@ -59,9 +49,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(35-40) Strength",
-    valueRanges: [],
-    rawAffix: "` +(35-40)` Strength",
+    craftableAffix: "+(35-40)Strength",
   },
   {
     equipmentSlot: "Shield",
@@ -69,9 +57,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(6-8)% additional damage",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% additional damage",
+    craftableAffix: "+(6-8)% additional damage",
   },
   {
     equipmentSlot: "Shield",
@@ -79,9 +65,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(10-14)% Evasion",
-    valueRanges: [],
-    rawAffix: "` +(10-14)`% Evasion",
+    craftableAffix: "+(10-14)% Evasion",
   },
   {
     equipmentSlot: "Shield",
@@ -89,9 +73,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Elemental Damage",
+    craftableAffix: "+(20-24)% Elemental Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -99,9 +81,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Erosion Damage",
+    craftableAffix: "+(20-24)% Erosion Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -109,9 +89,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Physical Damage",
+    craftableAffix: "+(20-24)% Physical Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -119,9 +97,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -129,9 +105,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -139,9 +113,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -149,9 +121,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -159,9 +129,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(54-74) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(54-74)` Max Life",
+    craftableAffix: "+(54-74)Max Life",
   },
   {
     equipmentSlot: "Shield",
@@ -169,9 +137,7 @@ export const SHIELD_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(8-10)% Attack and Spell Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(8-10)`% Attack and Spell Block Chance",
+    craftableAffix: "+(8-10)% Attack and Spell Block Chance",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,9 +7,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: " +(17-24)% Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(17-24)`% Cooldown Recovery Speed",
+    craftableAffix: "+(17-24)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -17,9 +15,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: " +(20-25)% Movement Speed",
-    valueRanges: [],
-    rawAffix: "` +(20-25)`% Movement Speed",
+    craftableAffix: "+(20-25)% Movement Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -27,9 +23,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: " +(3-5)% Max Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(3-5)`% Max Elemental Resistance",
+    craftableAffix: "+(3-5)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -37,9 +31,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Converts  (12-15)% of Physical Damage taken to Fire Damage",
-    valueRanges: [],
-    rawAffix: "Converts ` (12-15)`% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -47,9 +39,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Converts  (27-35)% of Erosion Damage taken to Fire Damage",
-    valueRanges: [],
-    rawAffix: "Converts ` (27-35)`% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -57,11 +47,8 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
-    valueRanges: [],
-    rawAffix:
-      "` +(5-7)`% Armor DMG Mitigation Penetration<> ` +(5-7)`% Armor DMG Mitigation Penetration for Minions",
+    craftableAffix:
+      "+(5-7)% Armor DMG Mitigation Penetration<> +(5-7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Boots",
@@ -69,11 +56,8 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
-    valueRanges: [],
-    rawAffix:
-      "` +(6-8)`% Elemental and Erosion Resistance Penetration<> ` +(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
+    craftableAffix:
+      "+(6-8)% Elemental and Erosion Resistance Penetration<> +(6-8)% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
     equipmentSlot: "Boots",
@@ -81,9 +65,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Dexterity",
+    craftableAffix: "+(15-20)Dexterity",
   },
   {
     equipmentSlot: "Boots",
@@ -91,9 +73,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Intelligence",
+    craftableAffix: "+(15-20)Intelligence",
   },
   {
     equipmentSlot: "Boots",
@@ -101,9 +81,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Strength",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Strength",
+    craftableAffix: "+(15-20)Strength",
   },
   {
     equipmentSlot: "Boots",
@@ -111,9 +89,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Skill Area",
+    craftableAffix: "+(20-24)% Skill Area",
   },
   {
     equipmentSlot: "Boots",
@@ -121,9 +97,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -131,9 +105,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -141,9 +113,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -151,9 +121,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Boots",
@@ -161,9 +129,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(54-74) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(54-74)` Max Life",
+    craftableAffix: "+(54-74)Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -171,9 +137,7 @@ export const BOOTS_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(760-960) Armor",
-    valueRanges: [],
-    rawAffix: "` +(760-960)` Armor",
+    craftableAffix: "+(760-960)Armor",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

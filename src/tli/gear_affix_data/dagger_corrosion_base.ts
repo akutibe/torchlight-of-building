@@ -7,11 +7,8 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template:
-      "Wilted enemies defeated by you will explode, dealing Secondary Erosion Damage equal to  (5-10)% of their Max Life to enemies within a 5m radius",
-    valueRanges: [],
-    rawAffix:
-      "Wilted enemies defeated by you will explode, dealing Secondary Erosion Damage equal to ` (5-10)`% of their Max Life to enemies within a 5m radius",
+    craftableAffix:
+      "Wilted enemies defeated by you will explode, dealing Secondary Erosion Damage equal to (5-10)% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "One-Handed",
@@ -19,9 +16,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " (5-8)% chance to inflict  1 additional stacks of Wilt",
-    valueRanges: [],
-    rawAffix: "` (5-8)`% chance to inflict ` 1` additional stacks of Wilt",
+    craftableAffix: "(5-8)% chance to inflict 1additional stacks of Wilt",
   },
   {
     equipmentSlot: "One-Handed",
@@ -29,9 +24,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(15-25)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(15-25)`% gear Physical Damage",
+    craftableAffix: "+(15-25)% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -39,9 +32,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(25-30)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(25-30)`% Elemental Damage",
+    craftableAffix: "+(25-30)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -49,9 +40,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(3-6)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(3-6)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(3-6)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -59,9 +48,8 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(4-8)% chance to gain 1 stack of Focus Blessing on defeat",
-    valueRanges: [],
-    rawAffix: "` +(4-8)`% chance to gain 1 stack of Focus Blessing on defeat",
+    craftableAffix:
+      "+(4-8)% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
     equipmentSlot: "One-Handed",
@@ -69,9 +57,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(5-10) Affliction inflicted per second",
-    valueRanges: [],
-    rawAffix: "` +(5-10)` Affliction inflicted per second",
+    craftableAffix: "+(5-10)Affliction inflicted per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -79,9 +65,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(5-8)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(5-8)`% gear Attack Speed",
+    craftableAffix: "+(5-8)% gear Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,9 +73,7 @@ export const DAGGER_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (2-4) -  (8-10) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (2-4)` - ` (8-10)` Physical Damage to the gear",
+    craftableAffix: "Adds (2-4)- (8-10)Physical Damage to the gear",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

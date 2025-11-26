@@ -7,9 +7,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: " +(3-5)% Max Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(3-5)`% Max Elemental Resistance",
+    craftableAffix: "+(3-5)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -17,11 +15,8 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
-    valueRanges: [],
-    rawAffix:
-      "` +(5-7)`% Armor DMG Mitigation Penetration<> ` +(5-7)`% Armor DMG Mitigation Penetration for Minions",
+    craftableAffix:
+      "+(5-7)% Armor DMG Mitigation Penetration<> +(5-7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Gloves",
@@ -29,9 +24,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(6-8)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Sealed Mana Compensation",
+    craftableAffix: "+(6-8)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Gloves",
@@ -39,11 +32,8 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
-    valueRanges: [],
-    rawAffix:
-      "` +(6-8)`% Elemental and Erosion Resistance Penetration<> ` +(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
+    craftableAffix:
+      "+(6-8)% Elemental and Erosion Resistance Penetration<> +(6-8)% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
     equipmentSlot: "Gloves",
@@ -51,9 +41,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(7-8)% Aura Effect",
-    valueRanges: [],
-    rawAffix: "` +(7-8)`% Aura Effect",
+    craftableAffix: "+(7-8)% Aura Effect",
   },
   {
     equipmentSlot: "Gloves",
@@ -61,9 +49,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +100% chance to Paralyze the target on hit",
-    valueRanges: [],
-    rawAffix: "` +100`% chance to Paralyze the target on hit",
+    craftableAffix: "+100% chance to Paralyze the target on hit",
   },
   {
     equipmentSlot: "Gloves",
@@ -71,9 +57,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(12-20)% Critical Strike Damage Mitigation",
-    valueRanges: [],
-    rawAffix: "` +(12-20)`% Critical Strike Damage Mitigation",
+    craftableAffix: "+(12-20)% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Gloves",
@@ -81,9 +65,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Dexterity",
+    craftableAffix: "+(15-20)Dexterity",
   },
   {
     equipmentSlot: "Gloves",
@@ -91,9 +73,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Intelligence",
+    craftableAffix: "+(15-20)Intelligence",
   },
   {
     equipmentSlot: "Gloves",
@@ -101,9 +81,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Strength",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Strength",
+    craftableAffix: "+(15-20)Strength",
   },
   {
     equipmentSlot: "Gloves",
@@ -111,9 +89,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Skill Area",
+    craftableAffix: "+(20-24)% Skill Area",
   },
   {
     equipmentSlot: "Gloves",
@@ -121,9 +97,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -131,9 +105,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -141,9 +113,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -151,9 +121,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -161,9 +129,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(54-74) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(54-74)` Max Life",
+    craftableAffix: "+(54-74)Max Life",
   },
   {
     equipmentSlot: "Gloves",
@@ -171,9 +137,7 @@ export const GLOVES_DEX_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(760-960) Evasion",
-    valueRanges: [],
-    rawAffix: "` +(760-960)` Evasion",
+    craftableAffix: "+(760-960)Evasion",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

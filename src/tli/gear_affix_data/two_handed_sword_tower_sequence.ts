@@ -7,11 +7,8 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +120% gear Physical Damage\n-20% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix:
-      "` +120`% gear Physical Damage<> ` -20`% Attack Critical Strike Rating for this gear",
+    craftableAffix:
+      "+120% gear Physical Damage<> -20% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -19,11 +16,8 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +200% Fearless Aura\n-30% additional Fearless Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix:
-      "` +200`% Fearless Aura<> ` -30`% additional Fearless Sealed Mana Compensation",
+    craftableAffix:
+      "+200% Fearless Aura<> -30% additional Fearless Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -31,11 +25,8 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +30% additional Deterioration Damage\n10% chance to inflict  2 additional stack(s) of Deterioration",
-    valueRanges: [],
-    rawAffix:
-      "` +30`% additional Deterioration Damage<> ` 10`% chance to inflict ` 2` additional stack(s) of Deterioration",
+    craftableAffix:
+      "+30% additional Deterioration Damage<> 10% chance to inflict 2additional stack(s) of Deterioration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -43,10 +34,8 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: " +50% Elemental Damage for the gear\n-25% gear Physical Damage",
-    valueRanges: [],
-    rawAffix:
-      "` +50`% Elemental Damage for the gear<> ` -25`% gear Physical Damage",
+    craftableAffix:
+      "+50% Elemental Damage for the gear<> -25% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -54,10 +43,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds  1 -  7 Lightning Damage to Attacks per  10 Dexterity",
-    valueRanges: [],
-    rawAffix:
-      "Adds ` 1` - ` 7` Lightning Damage to Attacks per ` 10` Dexterity",
+    craftableAffix: "Adds 1- 7Lightning Damage to Attacks per 10Dexterity",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -65,9 +51,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds  2 -  2 Physical Damage to Attacks per  2260 Armor",
-    valueRanges: [],
-    rawAffix: "Adds ` 2` - ` 2` Physical Damage to Attacks per ` 2260` Armor",
+    craftableAffix: "Adds 2- 2Physical Damage to Attacks per 2260Armor",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -75,9 +59,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds  3 -  5 Fire Damage to Attacks per  10 Strength",
-    valueRanges: [],
-    rawAffix: "Adds ` 3` - ` 5` Fire Damage to Attacks per ` 10` Strength",
+    craftableAffix: "Adds 3- 5Fire Damage to Attacks per 10Strength",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -85,11 +67,8 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Enemies have a  30% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  25% of their Max Life to enemies within a  5 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` 30`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` 25`% of their Max Life to enemies within a ` 5` m radius",
+    craftableAffix:
+      "Enemies have a 30% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -97,11 +76,8 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Main Skill is supported by Lv.  25 Steamroll\n+25% additional Melee Damage",
-    valueRanges: [],
-    rawAffix:
-      "Main Skill is supported by Lv. ` 25` Steamroll<> ` +25`% additional Melee Damage",
+    craftableAffix:
+      "Main Skill is supported by Lv. 25Steamroll<> +25% additional Melee Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -109,9 +85,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +12% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +12`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+12% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -119,9 +93,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% all stats",
-    valueRanges: [],
-    rawAffix: "` +16`% all stats",
+    craftableAffix: "+16% all stats",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -129,9 +101,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% additional damage for Weapons",
-    valueRanges: [],
-    rawAffix: "` +16`% additional damage for Weapons",
+    craftableAffix: "+16% additional damage for Weapons",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -139,9 +109,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Cold Penetration",
-    valueRanges: [],
-    rawAffix: "` +16`% Cold Penetration",
+    craftableAffix: "+16% Cold Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -149,9 +117,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +16`% Erosion Resistance Penetration",
+    craftableAffix: "+16% Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -159,9 +125,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Fire Penetration",
-    valueRanges: [],
-    rawAffix: "` +16`% Fire Penetration",
+    craftableAffix: "+16% Fire Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -169,9 +133,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Lightning Penetration",
-    valueRanges: [],
-    rawAffix: "` +16`% Lightning Penetration",
+    craftableAffix: "+16% Lightning Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -179,9 +141,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +20% additional damage on Critical Strike",
-    valueRanges: [],
-    rawAffix: "` +20`% additional damage on Critical Strike",
+    craftableAffix: "+20% additional damage on Critical Strike",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -189,9 +149,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +20% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +20`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+20% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -199,9 +157,7 @@ export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +8`% gear Attack Speed",
+    craftableAffix: "+8% gear Attack Speed",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

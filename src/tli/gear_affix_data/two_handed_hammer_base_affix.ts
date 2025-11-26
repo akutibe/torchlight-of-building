@@ -7,9 +7,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Lucky Critical Strike\n(-40--50)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "Lucky Critical Strike<> ` (-40--50)`% Critical Strike Rating",
+    craftableAffix: "Lucky Critical Strike<> (-40--50)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,11 +15,8 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Enemies have a  (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  (15-25)% of their Max Life to enemies within a  5 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` (20-25)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` (15-25)`% of their Max Life to enemies within a ` 5` m radius",
+    craftableAffix:
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -29,9 +24,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Agility Blessing Stacks  +2 ",
-    valueRanges: [],
-    rawAffix: "Max Agility Blessing Stacks ` +2` ",
+    craftableAffix: "Max Agility Blessing Stacks +2",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -39,9 +32,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks  +2 ",
-    valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks ` +2` ",
+    craftableAffix: "Max Focus Blessing Stacks +2",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -49,9 +40,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Tenacity Blessing Stacks  +2 ",
-    valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks ` +2` ",
+    craftableAffix: "Max Tenacity Blessing Stacks +2",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -59,9 +48,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(10-14)% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +(10-14)`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(10-14)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -69,9 +56,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(12-16)% Elemental and Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +(12-16)`% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(12-16)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -79,11 +64,8 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(28-32)% additional damage when a Skill consumes Demolisher Charge",
-    valueRanges: [],
-    rawAffix:
-      "` +(28-32)`% additional damage when a Skill consumes Demolisher Charge",
+    craftableAffix:
+      "+(28-32)% additional damage when a Skill consumes Demolisher Charge",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -91,9 +73,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(48-64)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(48-64)`% gear Physical Damage",
+    craftableAffix: "+(48-64)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -101,9 +81,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "Adds  (64-68) -  (80-84) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (64-68)` - ` (80-84)` Physical Damage to the gear",
+    craftableAffix: "Adds (64-68)- (80-84)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -111,10 +89,8 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "Eliminates enemies under  (10-14)% Life upon inflicting damage",
-    valueRanges: [],
-    rawAffix:
-      "Eliminates enemies under ` (10-14)`% Life upon inflicting damage",
+    craftableAffix:
+      "Eliminates enemies under (10-14) % Life upon inflicting damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -122,9 +98,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(12-16)% Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(12-16)`% Attack Speed",
+    craftableAffix: "+(12-16)% Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -132,9 +106,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(40-48)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Elemental Damage",
+    craftableAffix: "+(40-48)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -142,9 +114,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(40-48)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Erosion Damage",
+    craftableAffix: "+(40-48)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -152,9 +122,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(40-48)% Melee Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Melee Damage",
+    craftableAffix: "+(40-48)% Melee Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -162,9 +130,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(40-48)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Physical Damage",
+    craftableAffix: "+(40-48)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -172,9 +138,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (1-3) -  (60-65) Lightning Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (1-3)` - ` (60-65)` Lightning Damage to Attacks",
+    craftableAffix: "Adds (1-3)- (60-65)Lightning Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -182,9 +146,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (24-29) -  (34-39) Cold Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (24-29)` - ` (34-39)` Cold Damage to Attacks",
+    craftableAffix: "Adds (24-29)- (34-39)Cold Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -192,9 +154,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (24-29) -  (34-39) Fire Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (24-29)` - ` (34-39)` Fire Damage to Attacks",
+    craftableAffix: "Adds (24-29)- (34-39)Fire Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -202,9 +162,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (25-30) -  (33-38) Physical Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (25-30)` - ` (33-38)` Physical Damage to Attacks",
+    craftableAffix: "Adds (25-30)- (33-38)Physical Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -212,9 +170,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (26-31) -  (32-37) Erosion Damage to Attacks",
-    valueRanges: [],
-    rawAffix: "Adds ` (26-31)` - ` (32-37)` Erosion Damage to Attacks",
+    craftableAffix: "Adds (26-31)- (32-37)Erosion Damage to Attacks",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

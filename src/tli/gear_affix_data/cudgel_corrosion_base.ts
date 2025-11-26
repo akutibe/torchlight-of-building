@@ -7,9 +7,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(1-2) Support Skill Level",
-    valueRanges: [],
-    rawAffix: "` +(1-2)` Support Skill Level",
+    craftableAffix: "+(1-2)Support Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,9 +15,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(18-24)% Cast Speed",
-    valueRanges: [],
-    rawAffix: "` +(18-24)`% Cast Speed",
+    craftableAffix: "+(18-24)% Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -27,9 +23,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(35-45)% Spell Damage",
-    valueRanges: [],
-    rawAffix: "` +(35-45)`% Spell Damage",
+    craftableAffix: "+(35-45)% Spell Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -37,9 +31,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(40-48)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Critical Strike Damage",
+    craftableAffix: "+(40-48)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -47,9 +39,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(50-60)% Spell Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(50-60)`% Spell Critical Strike Rating",
+    craftableAffix: "+(50-60)% Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -57,9 +47,8 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(6-12)% chance to gain 1 stack of Focus Blessing on defeat",
-    valueRanges: [],
-    rawAffix: "` +(6-12)`% chance to gain 1 stack of Focus Blessing on defeat",
+    craftableAffix:
+      "+(6-12)% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -67,9 +56,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(8-15)% Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(8-15)`% Cooldown Recovery Speed",
+    craftableAffix: "+(8-15)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -77,9 +64,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (7-12)% of Elemental Damage as Erosion Damage",
-    valueRanges: [],
-    rawAffix: "Adds ` (7-12)`% of Elemental Damage as Erosion Damage",
+    craftableAffix: "Adds (7-12)% of Elemental Damage as Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -87,9 +72,7 @@ export const CUDGEL_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Damage Penetrates  (8-12)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "Damage Penetrates ` (8-12)`% Elemental Resistance",
+    craftableAffix: "Damage Penetrates (8-12)% Elemental Resistance",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,11 +7,8 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template:
-      "Enemies have a  (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  (15-25)% of their Max Life to enemies within a  5 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` (20-25)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` (15-25)`% of their Max Life to enemies within a ` 5` m radius",
+    craftableAffix:
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -19,9 +16,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Agility Blessing Stacks  +2 ",
-    valueRanges: [],
-    rawAffix: "Max Agility Blessing Stacks ` +2` ",
+    craftableAffix: "Max Agility Blessing Stacks +2",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -29,9 +24,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks  +2 ",
-    valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks ` +2` ",
+    craftableAffix: "Max Focus Blessing Stacks +2",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -39,9 +32,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Tenacity Blessing Stacks  +2 ",
-    valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks ` +2` ",
+    craftableAffix: "Max Tenacity Blessing Stacks +2",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -49,9 +40,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(10-14)% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +(10-14)`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(10-14)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -59,9 +48,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(12-16)% additional damage when channeling",
-    valueRanges: [],
-    rawAffix: "` +(12-16)`% additional damage when channeling",
+    craftableAffix: "+(12-16)% additional damage when channeling",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -69,9 +56,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(12-16)% additional Spell Damage",
-    valueRanges: [],
-    rawAffix: "` +(12-16)`% additional Spell Damage",
+    craftableAffix: "+(12-16)% additional Spell Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -79,9 +64,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(12-16)% Elemental and Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +(12-16)`% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(12-16)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -89,9 +72,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(12-16)% Cast Speed",
-    valueRanges: [],
-    rawAffix: "` +(12-16)`% Cast Speed",
+    craftableAffix: "+(12-16)% Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -99,9 +80,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(40-48)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Elemental Damage",
+    craftableAffix: "+(40-48)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -109,9 +88,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(40-48)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Erosion Damage",
+    craftableAffix: "+(40-48)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -119,9 +96,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(40-48)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Physical Damage",
+    craftableAffix: "+(40-48)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -129,9 +104,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(40-48)% Spell Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-48)`% Spell Damage",
+    craftableAffix: "+(40-48)% Spell Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -139,9 +112,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (1-3) -  (60-65) Lightning Damage to Spells",
-    valueRanges: [],
-    rawAffix: "Adds ` (1-3)` - ` (60-65)` Lightning Damage to Spells",
+    craftableAffix: "Adds (1-3)- (60-65)Lightning Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -149,9 +120,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (24-29) -  (34-39) Cold Damage to Spells",
-    valueRanges: [],
-    rawAffix: "Adds ` (24-29)` - ` (34-39)` Cold Damage to Spells",
+    craftableAffix: "Adds (24-29)- (34-39)Cold Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -159,9 +128,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (24-29) -  (34-39) Fire Damage to Spells",
-    valueRanges: [],
-    rawAffix: "Adds ` (24-29)` - ` (34-39)` Fire Damage to Spells",
+    craftableAffix: "Adds (24-29)- (34-39)Fire Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -169,9 +136,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (25-30) -  (33-38) Physical Damage to Spells",
-    valueRanges: [],
-    rawAffix: "Adds ` (25-30)` - ` (33-38)` Physical Damage to Spells",
+    craftableAffix: "Adds (25-30)- (33-38)Physical Damage to Spells",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -179,9 +144,7 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (26-31) -  (32-37) Erosion Damage to Spells",
-    valueRanges: [],
-    rawAffix: "Adds ` (26-31)` - ` (32-37)` Erosion Damage to Spells",
+    craftableAffix: "Adds (26-31)- (32-37)Erosion Damage to Spells",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

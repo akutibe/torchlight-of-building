@@ -7,9 +7,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(26-33)% additional Defense gained from Shield",
-    valueRanges: [],
-    rawAffix: "` +(26-33)`% additional Defense gained from Shield",
+    craftableAffix: "+(26-33)% additional Defense gained from Shield",
   },
   {
     equipmentSlot: "Shield",
@@ -17,9 +15,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(48-60)% Focus Damage Enhancement",
-    valueRanges: [],
-    rawAffix: "` +(48-60)`% Focus Damage Enhancement",
+    craftableAffix: "+(48-60)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "Shield",
@@ -27,11 +23,8 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least  8 Combo Point(s)",
-    valueRanges: [],
-    rawAffix:
-      "` +(55-65)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least ` 8` Combo Point(s)",
+    craftableAffix:
+      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
   },
   {
     equipmentSlot: "Shield",
@@ -39,9 +32,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(9-10)% Max Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(9-10)`% Max Elemental Resistance",
+    craftableAffix: "+(9-10)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -49,9 +40,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +2% Cast Speed and Skill Area for every  5% of Spell Block",
-    valueRanges: [],
-    rawAffix: "` +2`% Cast Speed and Skill Area for every ` 5`% of Spell Block",
+    craftableAffix: "+2% Cast Speed and Skill Area for every 5% of Spell Block",
   },
   {
     equipmentSlot: "Shield",
@@ -59,9 +48,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Max Sentry Quantity  +1 \n+5% additional damage",
-    valueRanges: [],
-    rawAffix: "Max Sentry Quantity ` +1` <> ` +5`% additional damage",
+    craftableAffix: "Max Sentry Quantity +1<> +5% additional damage",
   },
   {
     equipmentSlot: "Shield",
@@ -69,9 +56,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(19-25)% additional Defense gained from Shield",
-    valueRanges: [],
-    rawAffix: "` +(19-25)`% additional Defense gained from Shield",
+    craftableAffix: "+(19-25)% additional Defense gained from Shield",
   },
   {
     equipmentSlot: "Shield",
@@ -79,9 +64,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(35-45)% Focus Damage Enhancement",
-    valueRanges: [],
-    rawAffix: "` +(35-45)`% Focus Damage Enhancement",
+    craftableAffix: "+(35-45)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "Shield",
@@ -89,11 +72,8 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least  8 Combo Point(s)",
-    valueRanges: [],
-    rawAffix:
-      "` +(40-50)`% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least ` 8` Combo Point(s)",
+    craftableAffix:
+      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8Combo Point(s)",
   },
   {
     equipmentSlot: "Shield",
@@ -101,9 +81,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(7-8)% Max Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(7-8)`% Max Elemental Resistance",
+    craftableAffix: "+(7-8)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -111,9 +89,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +1% Cast Speed and Skill Area for every  3% of Spell Block",
-    valueRanges: [],
-    rawAffix: "` +1`% Cast Speed and Skill Area for every ` 3`% of Spell Block",
+    craftableAffix: "+1% Cast Speed and Skill Area for every 3% of Spell Block",
   },
   {
     equipmentSlot: "Shield",
@@ -121,9 +97,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Max Sentry Quantity  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Sentry Quantity ` +1` ",
+    craftableAffix: "Max Sentry Quantity +1",
   },
   {
     equipmentSlot: "Shield",
@@ -131,9 +105,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(165-234)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(165-234)`% Critical Strike Rating",
+    craftableAffix: "+(165-234)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Shield",
@@ -141,11 +113,8 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(34-47)% Attack and Cast Speed\n+(34-47)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(34-47)`% Attack and Cast Speed<> ` +(34-47)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(34-47)% Attack and Cast Speed<> +(34-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -153,9 +122,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(49-72)% Warcry Effect",
-    valueRanges: [],
-    rawAffix: "` +(49-72)`% Warcry Effect",
+    craftableAffix: "+(49-72)% Warcry Effect",
   },
   {
     equipmentSlot: "Shield",
@@ -163,9 +130,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(60-70)% Focus Speed",
-    valueRanges: [],
-    rawAffix: "` +(60-70)`% Focus Speed",
+    craftableAffix: "+(60-70)% Focus Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -173,9 +138,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(83-117)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(83-117)`% Critical Strike Damage",
+    craftableAffix: "+(83-117)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -183,9 +146,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(91-117)% Mana Regeneration Speed",
-    valueRanges: [],
-    rawAffix: "` +(91-117)`% Mana Regeneration Speed",
+    craftableAffix: "+(91-117)% Mana Regeneration Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -193,9 +154,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +2 Max Warcry Skill Charges",
-    valueRanges: [],
-    rawAffix: "` +2` Max Warcry Skill Charges",
+    craftableAffix: "+2Max Warcry Skill Charges",
   },
   {
     equipmentSlot: "Shield",
@@ -203,9 +162,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(127-180)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(127-180)`% Critical Strike Rating",
+    craftableAffix: "+(127-180)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Shield",
@@ -213,11 +170,8 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(26-36)`% Attack and Cast Speed<> ` +(26-36)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(26-36)% Attack and Cast Speed<> +(26-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -225,9 +179,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(37-48)% Warcry Effect",
-    valueRanges: [],
-    rawAffix: "` +(37-48)`% Warcry Effect",
+    craftableAffix: "+(37-48)% Warcry Effect",
   },
   {
     equipmentSlot: "Shield",
@@ -235,9 +187,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(45-54)% Focus Speed",
-    valueRanges: [],
-    rawAffix: "` +(45-54)`% Focus Speed",
+    craftableAffix: "+(45-54)% Focus Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -245,9 +195,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(64-90)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(64-90)`% Critical Strike Damage",
+    craftableAffix: "+(64-90)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -255,9 +203,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(64-90)% Mana Regeneration Speed",
-    valueRanges: [],
-    rawAffix: "` +(64-90)`% Mana Regeneration Speed",
+    craftableAffix: "+(64-90)% Mana Regeneration Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -265,9 +211,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +1 Max Warcry Skill Charges",
-    valueRanges: [],
-    rawAffix: "` +1` Max Warcry Skill Charges",
+    craftableAffix: "+1Max Warcry Skill Charges",
   },
   {
     equipmentSlot: "Shield",
@@ -275,9 +219,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(15-18)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(15-18)`% Elemental Resistance",
+    craftableAffix: "+(15-18)% Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -285,9 +227,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-31)% Energy Shield Charge Speed",
-    valueRanges: [],
-    rawAffix: "` +(25-31)`% Energy Shield Charge Speed",
+    craftableAffix: "+(25-31)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -295,9 +235,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(41-45)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(41-45)`% Cold Resistance",
+    craftableAffix: "+(41-45)% Cold Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -305,9 +243,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(41-45)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(41-45)`% Erosion Resistance",
+    craftableAffix: "+(41-45)% Erosion Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -315,9 +251,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(41-45)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(41-45)`% Fire Resistance",
+    craftableAffix: "+(41-45)% Fire Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -325,9 +259,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(41-45)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(41-45)`% Lightning Resistance",
+    craftableAffix: "+(41-45)% Lightning Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -335,9 +267,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Restores  (5-6)% Energy Shield on Block. Interval: 0.3s",
-    valueRanges: [],
-    rawAffix: "Restores ` (5-6)`% Energy Shield on Block. Interval: 0.3s",
+    craftableAffix: "Restores (5-6)% Energy Shield on Block. Interval: 0.3s",
   },
   {
     equipmentSlot: "Shield",
@@ -345,9 +275,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(10-14)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(10-14)`% Elemental Resistance",
+    craftableAffix: "+(10-14)% Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -355,9 +283,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(18-24)% Energy Shield Charge Speed",
-    valueRanges: [],
-    rawAffix: "` +(18-24)`% Energy Shield Charge Speed",
+    craftableAffix: "+(18-24)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -365,9 +291,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(29-40)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(29-40)`% Cold Resistance",
+    craftableAffix: "+(29-40)% Cold Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -375,9 +299,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(29-40)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(29-40)`% Erosion Resistance",
+    craftableAffix: "+(29-40)% Erosion Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -385,9 +307,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(29-40)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(29-40)`% Fire Resistance",
+    craftableAffix: "+(29-40)% Fire Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -395,9 +315,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(29-40)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(29-40)`% Lightning Resistance",
+    craftableAffix: "+(29-40)% Lightning Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -405,9 +323,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Restores  4% Energy Shield on Block. Interval: 0.3s",
-    valueRanges: [],
-    rawAffix: "Restores ` 4`% Energy Shield on Block. Interval: 0.3s",
+    craftableAffix: "Restores 4% Energy Shield on Block. Interval: 0.3s",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

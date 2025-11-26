@@ -7,11 +7,8 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +120% Deep Pain Aura\n-20% additional Deep Pain Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix:
-      "` +120`% Deep Pain Aura<> ` -20`% additional Deep Pain Sealed Mana Compensation",
+    craftableAffix:
+      "+120% Deep Pain Aura<> -20% additional Deep Pain Sealed Mana Compensation",
   },
   {
     equipmentSlot: "One-Handed",
@@ -19,9 +16,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: " +160 Affliction inflicted per second",
-    valueRanges: [],
-    rawAffix: "` +160` Affliction inflicted per second",
+    craftableAffix: "+160Affliction inflicted per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -29,11 +24,8 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +25% Movement Speed when standing on a Terra Skill. The effect lasts  2 s.\n+100% Skill Area when standing on a Terra Skill. Lasts for  2 s",
-    valueRanges: [],
-    rawAffix:
-      "` +25`% Movement Speed when standing on a Terra Skill. The effect lasts ` 2` s.<> ` +100`% Skill Area when standing on a Terra Skill. Lasts for ` 2` s",
+    craftableAffix:
+      "+25% Movement Speed when standing on a Terra Skill. The effect lasts 2s.<> +100% Skill Area when standing on a Terra Skill. Lasts for 2s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -41,11 +33,8 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Enemies have a  15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  25% of their Max Life to enemies within a  5 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` 15`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` 25`% of their Max Life to enemies within a ` 5` m radius",
+    craftableAffix:
+      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "One-Handed",
@@ -53,9 +42,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Main Skill is supported by Lv.  25 Cataclysm",
-    valueRanges: [],
-    rawAffix: "Main Skill is supported by Lv. ` 25` Cataclysm",
+    craftableAffix: "Main Skill is supported by Lv. 25Cataclysm",
   },
   {
     equipmentSlot: "One-Handed",
@@ -63,11 +50,8 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Max Tenacity Blessing Stacks  +1 \nMax Focus Blessing Stacks  -1 \nMax Agility Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix:
-      "Max Tenacity Blessing Stacks ` +1` <> Max Focus Blessing Stacks ` -1` <> Max Agility Blessing Stacks ` +1` ",
+    craftableAffix:
+      "Max Tenacity Blessing Stacks +1<> Max Focus Blessing Stacks -1<> Max Agility Blessing Stacks +1",
   },
   {
     equipmentSlot: "One-Handed",
@@ -75,9 +59,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Triggers Lv.  30 Black Hole when moving. Interval:  1.5 s",
-    valueRanges: [],
-    rawAffix: "Triggers Lv. ` 30` Black Hole when moving. Interval: ` 1.5` s",
+    craftableAffix: "Triggers Lv. 30Black Hole when moving. Interval: 1.5s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -85,11 +67,8 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Upon inflicting damage,  +5% additional Ailment Damage (multiplies) for every type of Ailment the enemy has",
-    valueRanges: [],
-    rawAffix:
-      "Upon inflicting damage, ` +5`% additional Ailment Damage (multiplies) for every type of Ailment the enemy has",
+    craftableAffix:
+      "Upon inflicting damage, +5% additional Ailment Damage (multiplies) for every type of Ailment the enemy has",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,9 +76,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " -10% All Resistance when the enemy has max Affliction",
-    valueRanges: [],
-    rawAffix: "` -10`% All Resistance when the enemy has max Affliction",
+    craftableAffix: "-10% All Resistance when the enemy has max Affliction",
   },
   {
     equipmentSlot: "One-Handed",
@@ -107,9 +84,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +12% Ailment Duration",
-    valueRanges: [],
-    rawAffix: "` +12`% Ailment Duration",
+    craftableAffix: "+12% Ailment Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -117,9 +92,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +12% Movement Speed",
-    valueRanges: [],
-    rawAffix: "` +12`% Movement Speed",
+    craftableAffix: "+12% Movement Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,10 +100,8 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16 Affliction inflicted per second\n+24% Affliction Effect",
-    valueRanges: [],
-    rawAffix:
-      "` +16` Affliction inflicted per second<> ` +24`% Affliction Effect",
+    craftableAffix:
+      "+16Affliction inflicted per second<> +24% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -138,9 +109,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +25% Reaping Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +25`% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+25% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -148,9 +117,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +30% Reaping Duration",
-    valueRanges: [],
-    rawAffix: "` +30`% Reaping Duration",
+    craftableAffix: "+30% Reaping Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -158,9 +125,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Blur Effect",
-    valueRanges: [],
-    rawAffix: "` +8`% Blur Effect",
+    craftableAffix: "+8% Blur Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -168,9 +133,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% all stats",
-    valueRanges: [],
-    rawAffix: "` +8`% all stats",
+    craftableAffix: "+8% all stats",
   },
   {
     equipmentSlot: "One-Handed",
@@ -178,9 +141,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% additional Damage Over Time",
-    valueRanges: [],
-    rawAffix: "` +8`% additional Damage Over Time",
+    craftableAffix: "+8% additional Damage Over Time",
   },
   {
     equipmentSlot: "One-Handed",
@@ -188,9 +149,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "Max Terra Charge Stacks  -1 \nMax Terra Quantity  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Terra Charge Stacks ` -1` <> Max Terra Quantity ` +1` ",
+    craftableAffix: "Max Terra Charge Stacks -1<> Max Terra Quantity +1",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

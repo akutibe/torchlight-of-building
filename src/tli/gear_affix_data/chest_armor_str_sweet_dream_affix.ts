@@ -7,9 +7,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: " +(13-14)% Armor Effective Rate for Non-Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(13-14)`% Armor Effective Rate for Non-Physical Damage",
+    craftableAffix: "+(13-14)% Armor Effective Rate for Non-Physical Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -17,9 +15,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: " +(3-5)% Max Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(3-5)`% Max Elemental Resistance",
+    craftableAffix: "+(3-5)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -27,9 +23,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: " +3 Max Fortitude Stacks",
-    valueRanges: [],
-    rawAffix: "` +3` Max Fortitude Stacks",
+    craftableAffix: "+3Max Fortitude Stacks",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -37,9 +31,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Converts  (12-15)% of Physical Damage taken to Fire Damage",
-    valueRanges: [],
-    rawAffix: "Converts ` (12-15)`% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -47,9 +39,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Converts  (27-35)% of Erosion Damage taken to Fire Damage",
-    valueRanges: [],
-    rawAffix: "Converts ` (27-35)`% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -57,9 +47,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Takes 10 True Damage every 0.1s",
-    valueRanges: [],
-    rawAffix: "Takes 10 True Damage every 0.1s",
+    craftableAffix: "Takes 10 True Damage every 0.1s",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -67,11 +55,8 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
-    valueRanges: [],
-    rawAffix:
-      "` +(5-7)`% Armor DMG Mitigation Penetration<> ` +(5-7)`% Armor DMG Mitigation Penetration for Minions",
+    craftableAffix:
+      "+(5-7)% Armor DMG Mitigation Penetration<> +(5-7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -79,9 +64,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(6-8)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Sealed Mana Compensation",
+    craftableAffix: "+(6-8)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -89,11 +72,8 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
-    valueRanges: [],
-    rawAffix:
-      "` +(6-8)`% Elemental and Erosion Resistance Penetration<> ` +(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
+    craftableAffix:
+      "+(6-8)% Elemental and Erosion Resistance Penetration<> +(6-8)% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -101,9 +81,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(7-8)% Aura Effect",
-    valueRanges: [],
-    rawAffix: "` +(7-8)`% Aura Effect",
+    craftableAffix: "+(7-8)% Aura Effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -111,9 +89,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +1 Max Fortitude Stacks",
-    valueRanges: [],
-    rawAffix: "` +1` Max Fortitude Stacks",
+    craftableAffix: "+1Max Fortitude Stacks",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -121,9 +97,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Dexterity",
+    craftableAffix: "+(15-20)Dexterity",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -131,9 +105,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Intelligence",
+    craftableAffix: "+(15-20)Intelligence",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -141,9 +113,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Strength",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Strength",
+    craftableAffix: "+(15-20)Strength",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -151,9 +121,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Skill Area",
+    craftableAffix: "+(20-24)% Skill Area",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -161,9 +129,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -171,9 +137,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -181,9 +145,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -191,9 +153,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(5-10)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(5-10)`% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -201,9 +161,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(54-74) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(54-74)` Max Life",
+    craftableAffix: "+(54-74)Max Life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -211,9 +169,7 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Regenerates  (0.5-1.0)% Life per second",
-    valueRanges: [],
-    rawAffix: "Regenerates ` (0.5-1.0)`% Life per second",
+    craftableAffix: "Regenerates (0.5-1.0)% Life per second",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

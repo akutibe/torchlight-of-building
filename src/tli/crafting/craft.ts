@@ -1,4 +1,4 @@
-import { ValueRange } from "../gear_affix_data/types";
+export type ValueRange = { min: number; max: number };
 
 const interpolateValue = (range: ValueRange, percentage: number): number => {
   if (percentage < 0 || percentage > 100) {
@@ -9,28 +9,31 @@ const interpolateValue = (range: ValueRange, percentage: number): number => {
 };
 
 /**
- * Crafts a single affix string by interpolating value ranges
+ * Crafts a single affix string by interpolating value ranges from the craftableAffix format
  *
- * @param affix - The gear affix to craft
+ * @param affix - The gear affix with craftableAffix property
  * @param percentage - Value from 0-100 representing crafting quality
  * @returns The final affix string with interpolated values
  *
  * @example
- * craft({ template: "+{0}% Speed", valueRanges: [{ min: 17, max: 24 }] }, 0)   // "+17% Speed"
- * craft({ template: "+{0}% Speed", valueRanges: [{ min: 17, max: 24 }] }, 50)  // "+21% Speed"
- * craft({ template: "+{0}% Speed", valueRanges: [{ min: 17, max: 24 }] }, 100) // "+24% Speed"
+ * craft({ craftableAffix: "+(17-24)% Speed" }, 0)   // "+17% Speed"
+ * craft({ craftableAffix: "+(17-24)% Speed" }, 50)  // "+21% Speed"
+ * craft({ craftableAffix: "+(17-24)% Speed" }, 100) // "+24% Speed"
  */
-export const craft = <
-  T extends { template: string; valueRanges: ValueRange[] },
->(
+export const craft = <T extends { craftableAffix: string }>(
   affix: T,
   percentage: number,
 ): string => {
-  let result = affix.template;
+  let result = affix.craftableAffix;
 
-  affix.valueRanges.forEach((range, index) => {
-    const value = interpolateValue(range, percentage);
-    result = result.replace(`{${index}}`, value.toString());
+  // Pattern to match range values like (17-24) or (-6--4)
+  const rangePattern = /\((-?\d+)-(-?\d+)\)/g;
+
+  result = result.replace(rangePattern, (match, minStr, maxStr) => {
+    const min = parseInt(minStr, 10);
+    const max = parseInt(maxStr, 10);
+    const value = interpolateValue({ min, max }, percentage);
+    return value.toString();
   });
 
   return result;

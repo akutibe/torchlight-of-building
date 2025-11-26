@@ -7,11 +7,8 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " -45% additional Damage Over Time taken when having at least  50000 Evasion",
-    valueRanges: [],
-    rawAffix:
-      "` -45`% additional Damage Over Time taken when having at least ` 50000` Evasion",
+    craftableAffix:
+      "-45% additional Damage Over Time taken when having at least 50000Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -19,9 +16,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " (21-26)% of damage is taken from Mana before life",
-    valueRanges: [],
-    rawAffix: "` (21-26)`% of damage is taken from Mana before life",
+    craftableAffix: "(21-26)% of damage is taken from Mana before life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -29,9 +24,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(21-26)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(21-26)`% Sealed Mana Compensation",
+    craftableAffix: "+(21-26)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -39,9 +32,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(21-26)% additional Evasion",
-    valueRanges: [],
-    rawAffix: "` +(21-26)`% additional Evasion",
+    craftableAffix: "+(21-26)% additional Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -49,10 +40,8 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Converts  (16-20)% of Physical Damage taken to Lightning Damage",
-    valueRanges: [],
-    rawAffix:
-      "Converts ` (16-20)`% of Physical Damage taken to Lightning Damage",
+    craftableAffix:
+      "Converts (16-20)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -60,10 +49,8 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Converts  (36-45)% of Erosion Damage taken to Lightning Damage",
-    valueRanges: [],
-    rawAffix:
-      "Converts ` (36-45)`% of Erosion Damage taken to Lightning Damage",
+    craftableAffix:
+      "Converts (36-45)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -71,11 +58,8 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      "Enemies have a  (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  (15-25)% of their Max Life to enemies within a  5 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` (20-25)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` (15-25)`% of their Max Life to enemies within a ` 5` m radius",
+    craftableAffix:
+      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -83,9 +67,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "You can cast  1 additional Curses\n+(8-10)% curse effect",
-    valueRanges: [],
-    rawAffix: "You can cast ` 1` additional Curses<> ` +(8-10)`% curse effect",
+    craftableAffix: "You can cast 1additional Curses<> +(8-10)% curse effect",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -93,11 +75,8 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " -40% additional Damage Over Time taken when having at least  50000 Evasion",
-    valueRanges: [],
-    rawAffix:
-      "` -40`% additional Damage Over Time taken when having at least ` 50000` Evasion",
+    craftableAffix:
+      "-40% additional Damage Over Time taken when having at least 50000Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -105,9 +84,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " (15-20)% of damage is taken from Mana before life",
-    valueRanges: [],
-    rawAffix: "` (15-20)`% of damage is taken from Mana before life",
+    craftableAffix: "(15-20)% of damage is taken from Mana before life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -115,9 +92,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(15-20)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Sealed Mana Compensation",
+    craftableAffix: "+(15-20)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -125,9 +100,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(15-20)% additional Evasion",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% additional Evasion",
+    craftableAffix: "+(15-20)% additional Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -135,10 +108,8 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Converts  (12-15)% of Physical Damage taken to Lightning Damage",
-    valueRanges: [],
-    rawAffix:
-      "Converts ` (12-15)`% of Physical Damage taken to Lightning Damage",
+    craftableAffix:
+      "Converts (12-15)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -146,10 +117,8 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Converts  (27-35)% of Erosion Damage taken to Lightning Damage",
-    valueRanges: [],
-    rawAffix:
-      "Converts ` (27-35)`% of Erosion Damage taken to Lightning Damage",
+    craftableAffix:
+      "Converts (27-35)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -157,11 +126,8 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      "Enemies have a  (10-15)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  (15-25)% of their Max Life to enemies within a  4 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` (10-15)`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` (15-25)`% of their Max Life to enemies within a ` 4` m radius",
+    craftableAffix:
+      "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 4m radius",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -169,9 +135,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "You can cast  1 additional Curses",
-    valueRanges: [],
-    rawAffix: "You can cast ` 1` additional Curses",
+    craftableAffix: "You can cast 1additional Curses",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -179,9 +143,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(16-20)% Attack and Spell Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(16-20)`% Attack and Spell Block Chance",
+    craftableAffix: "+(16-20)% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -189,9 +151,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(46-59)% Projectile Speed",
-    valueRanges: [],
-    rawAffix: "` +(46-59)`% Projectile Speed",
+    craftableAffix: "+(46-59)% Projectile Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -199,9 +159,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Dexterity",
+    craftableAffix: "+(61-78)Dexterity",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -209,9 +167,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Intelligence",
+    craftableAffix: "+(61-78)Intelligence",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -219,9 +175,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Strength",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Strength",
+    craftableAffix: "+(61-78)Strength",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -229,9 +183,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(12-15)% Attack and Spell Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(12-15)`% Attack and Spell Block Chance",
+    craftableAffix: "+(12-15)% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -239,9 +191,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(33-45)% Projectile Speed",
-    valueRanges: [],
-    rawAffix: "` +(33-45)`% Projectile Speed",
+    craftableAffix: "+(33-45)% Projectile Speed",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -249,9 +199,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Dexterity",
+    craftableAffix: "+(43-60)Dexterity",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -259,9 +207,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Intelligence",
+    craftableAffix: "+(43-60)Intelligence",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -269,9 +215,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Strength",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Strength",
+    craftableAffix: "+(43-60)Strength",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -279,9 +223,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(121-156) Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(121-156)` Max Mana",
+    craftableAffix: "+(121-156)Max Mana",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -289,9 +231,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(17-21)% Max Life",
-    valueRanges: [],
-    rawAffix: "` +(17-21)`% Max Life",
+    craftableAffix: "+(17-21)% Max Life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -299,9 +239,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(221-286) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(221-286)` Max Life",
+    craftableAffix: "+(221-286)Max Life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -309,9 +247,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(3361-4368) gear Evasion",
-    valueRanges: [],
-    rawAffix: "` +(3361-4368)` gear Evasion",
+    craftableAffix: "+(3361-4368)gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -319,9 +255,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(61-78)% Critical Strike Damage Mitigation",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Critical Strike Damage Mitigation",
+    craftableAffix: "+(61-78)% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -329,9 +263,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(73-94)% damage",
-    valueRanges: [],
-    rawAffix: "` +(73-94)`% damage",
+    craftableAffix: "+(73-94)% damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -339,9 +271,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(73-94)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(73-94)`% Minion Damage",
+    craftableAffix: "+(73-94)% Minion Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -349,9 +279,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(12-16)% Max Life",
-    valueRanges: [],
-    rawAffix: "` +(12-16)`% Max Life",
+    craftableAffix: "+(12-16)% Max Life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -359,9 +287,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(154-220) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(154-220)` Max Life",
+    craftableAffix: "+(154-220)Max Life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -369,9 +295,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(2353-3360) gear Evasion",
-    valueRanges: [],
-    rawAffix: "` +(2353-3360)` gear Evasion",
+    craftableAffix: "+(2353-3360)gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -379,9 +303,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(43-60)% Critical Strike Damage Mitigation",
-    valueRanges: [],
-    rawAffix: "` +(43-60)`% Critical Strike Damage Mitigation",
+    craftableAffix: "+(43-60)% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -389,9 +311,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(51-72)% damage",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% damage",
+    craftableAffix: "+(51-72)% damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -399,9 +319,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(51-72)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% Minion Damage",
+    craftableAffix: "+(51-72)% Minion Damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -409,9 +327,7 @@ export const CHEST_ARMOR_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(85-120) Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(85-120)` Max Mana",
+    craftableAffix: "+(85-120)Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,9 +7,7 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(10-16)% Cast Speed",
-    valueRanges: [],
-    rawAffix: "` +(10-16)`% Cast Speed",
+    craftableAffix: "+(10-16)% Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,9 +15,7 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(20-30)% Spell Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-30)`% Spell Damage",
+    craftableAffix: "+(20-30)% Spell Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -27,9 +23,7 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(25-32)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(25-32)`% Critical Strike Damage",
+    craftableAffix: "+(25-32)% Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -37,9 +31,7 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(30-40)% Spell Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(30-40)`% Spell Critical Strike Rating",
+    craftableAffix: "+(30-40)% Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -47,9 +39,8 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(4-8)% chance to gain 1 stack of Focus Blessing on defeat",
-    valueRanges: [],
-    rawAffix: "` +(4-8)`% chance to gain 1 stack of Focus Blessing on defeat",
+    craftableAffix:
+      "+(4-8)% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,11 +48,8 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template:
-      " +(5-8)% chance to trigger the Main Spell Skill 1 additional time when using it",
-    valueRanges: [],
-    rawAffix:
-      "` +(5-8)`% chance to trigger the Main Spell Skill 1 additional time when using it",
+    craftableAffix:
+      "+(5-8)% chance to trigger the Main Spell Skill 1 additional time when using it",
   },
   {
     equipmentSlot: "One-Handed",
@@ -69,9 +57,7 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(6-10)% Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(6-10)`% Cooldown Recovery Speed",
+    craftableAffix: "+(6-10)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -79,9 +65,7 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (5-8)% of Elemental Damage as Erosion Damage",
-    valueRanges: [],
-    rawAffix: "Adds ` (5-8)`% of Elemental Damage as Erosion Damage",
+    craftableAffix: "Adds (5-8)% of Elemental Damage as Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,9 +73,7 @@ export const WAND_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Damage Penetrates  (5-8)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "Damage Penetrates ` (5-8)`% Elemental Resistance",
+    craftableAffix: "Damage Penetrates (5-8)% Elemental Resistance",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

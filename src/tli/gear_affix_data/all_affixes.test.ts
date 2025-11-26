@@ -11,9 +11,7 @@ describe("BaseGearAffix type system", () => {
     expect(firstAffix).toHaveProperty("affixType");
     expect(firstAffix).toHaveProperty("craftingPool");
     expect(firstAffix).toHaveProperty("tier");
-    expect(firstAffix).toHaveProperty("template");
-    expect(firstAffix).toHaveProperty("valueRanges");
-    expect(firstAffix).toHaveProperty("rawAffix");
+    expect(firstAffix).toHaveProperty("craftableAffix");
   });
 
   test("ALL_GEAR_AFFIXES contains all 5625 affixes", () => {
@@ -57,24 +55,33 @@ describe("BaseGearAffix type system", () => {
     expect(prefixAffixes.length).toBeGreaterThan(0);
   });
 
-  test("all affixes have valid templates", () => {
+  test("all affixes have valid craftableAffix strings", () => {
     for (const affix of ALL_GEAR_AFFIXES) {
-      // Some affixes in the source data have empty strings (placeholders)
-      // Just verify that template is defined
-      expect(affix.template).toBeDefined();
-
-      // For non-empty templates, verify placeholder count matches value ranges
-      if (affix.template.length > 0) {
-        const placeholderCount = (affix.template.match(/\{\d+\}/g) || [])
-          .length;
-        expect(placeholderCount).toBe(affix.valueRanges.length);
-      }
+      // Verify that craftableAffix is defined
+      expect(affix.craftableAffix).toBeDefined();
+      expect(typeof affix.craftableAffix).toBe("string");
     }
   });
 
-  test("all affixes have no remaining backticks in template", () => {
-    for (const affix of ALL_GEAR_AFFIXES) {
-      expect(affix.template).not.toContain("`");
+  test("craftableAffix strings contain value ranges in expected format", () => {
+    // Find affixes with ranges and verify format
+    const affixesWithRanges = ALL_GEAR_AFFIXES.filter((affix) =>
+      /\(\d+-\d+\)/.test(affix.craftableAffix),
+    );
+    expect(affixesWithRanges.length).toBeGreaterThan(0);
+
+    // Verify range format (min-max)
+    for (const affix of affixesWithRanges.slice(0, 100)) {
+      const ranges = affix.craftableAffix.match(/\((\d+)-(\d+)\)/g);
+      if (ranges) {
+        for (const range of ranges) {
+          const [min, max] = range
+            .slice(1, -1)
+            .split("-")
+            .map((n) => parseInt(n, 10));
+          expect(min).toBeLessThanOrEqual(max);
+        }
+      }
     }
   });
 });

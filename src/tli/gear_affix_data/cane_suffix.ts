@@ -7,9 +7,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(41-52)% chance to deal Double Damage",
-    valueRanges: [],
-    rawAffix: "` +(41-52)`% chance to deal Double Damage",
+    craftableAffix: "+(41-52)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,9 +15,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(48-60)% Focus Damage Enhancement",
-    valueRanges: [],
-    rawAffix: "` +(48-60)`% Focus Damage Enhancement",
+    craftableAffix: "+(48-60)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -27,9 +23,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(54-69)% additional damage against Frozen enemies",
-    valueRanges: [],
-    rawAffix: "` +(54-69)`% additional damage against Frozen enemies",
+    craftableAffix: "+(54-69)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "One-Handed",
@@ -37,9 +31,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(29-40)% chance to deal Double Damage",
-    valueRanges: [],
-    rawAffix: "` +(29-40)`% chance to deal Double Damage",
+    craftableAffix: "+(29-40)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -47,9 +39,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(35-45)% Focus Damage Enhancement",
-    valueRanges: [],
-    rawAffix: "` +(35-45)`% Focus Damage Enhancement",
+    craftableAffix: "+(35-45)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,9 +47,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(38-53)% additional damage against Frozen enemies",
-    valueRanges: [],
-    rawAffix: "` +(38-53)`% additional damage against Frozen enemies",
+    craftableAffix: "+(38-53)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "One-Handed",
@@ -67,9 +55,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(166-234)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(166-234)`% Critical Strike Rating",
+    craftableAffix: "+(166-234)% Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -77,11 +63,8 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(33-47)% Attack and Cast Speed\n+(33-47)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(33-47)`% Attack and Cast Speed<> ` +(33-47)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(33-47)% Attack and Cast Speed<> +(33-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,9 +72,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(47-64)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(47-64)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(47-64)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -99,9 +80,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(60-70)% Focus Speed",
-    valueRanges: [],
-    rawAffix: "` +(60-70)`% Focus Speed",
+    craftableAffix: "+(60-70)% Focus Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -109,9 +88,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(91-117)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(91-117)`% Critical Strike Damage",
+    craftableAffix: "+(91-117)% Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,9 +96,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(128-180)% Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +(128-180)`% Critical Strike Rating",
+    craftableAffix: "+(128-180)% Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,11 +104,8 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(26-36)`% Attack and Cast Speed<> ` +(26-36)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(26-36)% Attack and Cast Speed<> +(26-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -141,9 +113,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(36-50)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(36-50)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -151,9 +121,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(45-54)% Focus Speed",
-    valueRanges: [],
-    rawAffix: "` +(45-54)`% Focus Speed",
+    craftableAffix: "+(45-54)% Focus Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -161,9 +129,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(64-90)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(64-90)`% Critical Strike Damage",
+    craftableAffix: "+(64-90)% Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -171,9 +137,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(109-140)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(109-140)`% Elemental Damage",
+    craftableAffix: "+(109-140)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -181,9 +145,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(109-140)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(109-140)`% Erosion Damage",
+    craftableAffix: "+(109-140)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -191,9 +153,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(109-140)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(109-140)`% Physical Damage",
+    craftableAffix: "+(109-140)% Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -201,9 +161,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(19-23)% Energy Shield Regain",
-    valueRanges: [],
-    rawAffix: "` +(19-23)`% Energy Shield Regain",
+    craftableAffix: "+(19-23)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -211,9 +169,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(19-23)% Life Regain",
-    valueRanges: [],
-    rawAffix: "` +(19-23)`% Life Regain",
+    craftableAffix: "+(19-23)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -221,9 +177,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(29-41)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(29-41)`% gear Attack Speed",
+    craftableAffix: "+(29-41)% gear Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -231,9 +185,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(14-18)% Energy Shield Regain",
-    valueRanges: [],
-    rawAffix: "` +(14-18)`% Energy Shield Regain",
+    craftableAffix: "+(14-18)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -241,9 +193,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(14-18)% Life Regain",
-    valueRanges: [],
-    rawAffix: "` +(14-18)`% Life Regain",
+    craftableAffix: "+(14-18)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -251,9 +201,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(23-32)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(23-32)`% gear Attack Speed",
+    craftableAffix: "+(23-32)% gear Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -261,9 +209,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(77-108)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(77-108)`% Elemental Damage",
+    craftableAffix: "+(77-108)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -271,9 +217,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(77-108)% Erosion Damage",
-    valueRanges: [],
-    rawAffix: "` +(77-108)`% Erosion Damage",
+    craftableAffix: "+(77-108)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -281,9 +225,7 @@ export const CANE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(77-108)% Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(77-108)`% Physical Damage",
+    craftableAffix: "+(77-108)% Physical Damage",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,9 +7,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(22-31)% Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(22-31)`% Cooldown Recovery Speed",
+    craftableAffix: "+(22-31)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,9 +15,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(25-31)% Skill Effect Duration",
-    valueRanges: [],
-    rawAffix: "` +(25-31)`% Skill Effect Duration",
+    craftableAffix: "+(25-31)% Skill Effect Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -27,9 +23,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(27-34)% Wilt Duration",
-    valueRanges: [],
-    rawAffix: "` +(27-34)`% Wilt Duration",
+    craftableAffix: "+(27-34)% Wilt Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -37,9 +31,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(27-34)% chance to deal Double Damage",
-    valueRanges: [],
-    rawAffix: "` +(27-34)`% chance to deal Double Damage",
+    craftableAffix: "+(27-34)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -47,9 +39,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(33-42)% additional Deterioration Duration",
-    valueRanges: [],
-    rawAffix: "` +(33-42)`% additional Deterioration Duration",
+    craftableAffix: "+(33-42)% additional Deterioration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -57,9 +47,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(37-54)% Freeze Duration",
-    valueRanges: [],
-    rawAffix: "` +(37-54)`% Freeze Duration",
+    craftableAffix: "+(37-54)% Freeze Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -67,11 +55,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template:
-      " +(40-50)% chance to launch one more wave when casting a Barrage Skill",
-    valueRanges: [],
-    rawAffix:
-      "` +(40-50)`% chance to launch one more wave when casting a Barrage Skill",
+    craftableAffix:
+      "+(40-50)% chance to launch one more wave when casting a Barrage Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -79,9 +64,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(17-24)% Cooldown Recovery Speed",
-    valueRanges: [],
-    rawAffix: "` +(17-24)`% Cooldown Recovery Speed",
+    craftableAffix: "+(17-24)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -89,9 +72,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(18-24)% Skill Effect Duration",
-    valueRanges: [],
-    rawAffix: "` +(18-24)`% Skill Effect Duration",
+    craftableAffix: "+(18-24)% Skill Effect Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -99,9 +80,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(19-26)% Wilt Duration",
-    valueRanges: [],
-    rawAffix: "` +(19-26)`% Wilt Duration",
+    craftableAffix: "+(19-26)% Wilt Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -109,9 +88,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(19-26)% chance to deal Double Damage",
-    valueRanges: [],
-    rawAffix: "` +(19-26)`% chance to deal Double Damage",
+    craftableAffix: "+(19-26)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -119,9 +96,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(23-32)% additional Deterioration Duration",
-    valueRanges: [],
-    rawAffix: "` +(23-32)`% additional Deterioration Duration",
+    craftableAffix: "+(23-32)% additional Deterioration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -129,9 +104,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(28-36)% Freeze Duration",
-    valueRanges: [],
-    rawAffix: "` +(28-36)`% Freeze Duration",
+    craftableAffix: "+(28-36)% Freeze Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -139,11 +112,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template:
-      " +(30-37)% chance to launch one more wave when casting a Barrage Skill",
-    valueRanges: [],
-    rawAffix:
-      "` +(30-37)`% chance to launch one more wave when casting a Barrage Skill",
+    craftableAffix:
+      "+(30-37)% chance to launch one more wave when casting a Barrage Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -151,11 +121,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(10-12)% Elemental Resistance\n+(12-15)% chance to avoid Elemental Ailment",
-    valueRanges: [],
-    rawAffix:
-      "` +(10-12)`% Elemental Resistance<> ` +(12-15)`% chance to avoid Elemental Ailment",
+    craftableAffix:
+      "+(10-12)% Elemental Resistance<> +(12-15)% chance to avoid Elemental Ailment",
   },
   {
     equipmentSlot: "Trinket",
@@ -163,9 +130,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(13-16)% Ailment Duration",
-    valueRanges: [],
-    rawAffix: "` +(13-16)`% Ailment Duration",
+    craftableAffix: "+(13-16)% Ailment Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -173,9 +138,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(33-42)% Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(33-42)`% Max Mana",
+    craftableAffix: "+(33-42)% Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -183,9 +146,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(37-47)% Focus Speed",
-    valueRanges: [],
-    rawAffix: "` +(37-47)`% Focus Speed",
+    craftableAffix: "+(37-47)% Focus Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -193,9 +154,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(49-62) initial Growth for Spirit Magi",
-    valueRanges: [],
-    rawAffix: "` +(49-62)` initial Growth for Spirit Magi",
+    craftableAffix: "+(49-62)initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -203,9 +162,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(51-65)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Affliction Effect",
+    craftableAffix: "+(51-65)% Affliction Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -213,9 +170,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "Warcry is cast immediately\n+2 Max Warcry Skill Charges",
-    valueRanges: [],
-    rawAffix: "Warcry is cast immediately<> ` +2` Max Warcry Skill Charges",
+    craftableAffix: "Warcry is cast immediately<> +2Max Warcry Skill Charges",
   },
   {
     equipmentSlot: "Trinket",
@@ -223,9 +178,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(23-32)% Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(23-32)`% Max Mana",
+    craftableAffix: "+(23-32)% Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -233,9 +186,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(26-36)% Focus Speed",
-    valueRanges: [],
-    rawAffix: "` +(26-36)`% Focus Speed",
+    craftableAffix: "+(26-36)% Focus Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -243,9 +194,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(35-48) initial Growth for Spirit Magi",
-    valueRanges: [],
-    rawAffix: "` +(35-48)` initial Growth for Spirit Magi",
+    craftableAffix: "+(35-48)initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -253,9 +202,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(36-50)% Affliction Effect",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Affliction Effect",
+    craftableAffix: "+(36-50)% Affliction Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -263,11 +210,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(7-9)% Elemental Resistance\n+(12-15)% chance to avoid Elemental Ailment",
-    valueRanges: [],
-    rawAffix:
-      "` +(7-9)`% Elemental Resistance<> ` +(12-15)`% chance to avoid Elemental Ailment",
+    craftableAffix:
+      "+(7-9)% Elemental Resistance<> +(12-15)% chance to avoid Elemental Ailment",
   },
   {
     equipmentSlot: "Trinket",
@@ -275,9 +219,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(8-12)% Ailment Duration",
-    valueRanges: [],
-    rawAffix: "` +(8-12)`% Ailment Duration",
+    craftableAffix: "+(8-12)% Ailment Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -285,9 +227,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "Warcry is cast immediately\n+1 Max Warcry Skill Charges",
-    valueRanges: [],
-    rawAffix: "Warcry is cast immediately<> ` +1` Max Warcry Skill Charges",
+    craftableAffix: "Warcry is cast immediately<> +1Max Warcry Skill Charges",
   },
   {
     equipmentSlot: "Trinket",
@@ -295,9 +235,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Cold Resistance",
+    craftableAffix: "+(25-35)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -305,9 +243,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Erosion Resistance",
+    craftableAffix: "+(25-35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -315,9 +251,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Fire Resistance",
+    craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -325,9 +259,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Lightning Resistance",
+    craftableAffix: "+(25-35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -335,11 +267,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template:
-      "Reaps  0.16 s of Damage Over Time when dealing Trauma Damage. The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` 0.16` s of Damage Over Time when dealing Trauma Damage. The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps 0.16s of Damage Over Time when dealing Trauma Damage. The effect has a 1s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -347,11 +276,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template:
-      "Reaps  0.16 s of Damage Over Time when inflicting Wilt . The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` 0.16` s of Damage Over Time when inflicting Wilt . The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps 0.16s of Damage Over Time when inflicting Wilt . The effect has a 1s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -359,11 +285,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template:
-      "Reaps  0.16 s of Damage Over Time when inflicting Ignite . The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` 0.16` s of Damage Over Time when inflicting Ignite . The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps 0.16s of Damage Over Time when inflicting Ignite . The effect has a 1s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -371,9 +294,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Cold Resistance",
+    craftableAffix: "+(19-27)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -381,9 +302,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Erosion Resistance",
+    craftableAffix: "+(19-27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -391,9 +310,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Fire Resistance",
+    craftableAffix: "+(19-27)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -401,9 +318,7 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Lightning Resistance",
+    craftableAffix: "+(19-27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -411,11 +326,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template:
-      "Reaps  0.12 s of Damage Over Time when dealing Trauma Damage. The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` 0.12` s of Damage Over Time when dealing Trauma Damage. The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps 0.12s of Damage Over Time when dealing Trauma Damage. The effect has a 1s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -423,11 +335,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template:
-      "Reaps  0.12 s of Damage Over Time when inflicting Wilt . The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` 0.12` s of Damage Over Time when inflicting Wilt . The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps 0.12s of Damage Over Time when inflicting Wilt . The effect has a 1s cooldown against the same target",
   },
   {
     equipmentSlot: "Trinket",
@@ -435,11 +344,8 @@ export const BELT_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template:
-      "Reaps  0.12 s of Damage Over Time when inflicting Ignite . The effect has a  1 s cooldown against the same target",
-    valueRanges: [],
-    rawAffix:
-      "Reaps ` 0.12` s of Damage Over Time when inflicting Ignite . The effect has a ` 1` s cooldown against the same target",
+    craftableAffix:
+      "Reaps 0.12s of Damage Over Time when inflicting Ignite . The effect has a 1s cooldown against the same target",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

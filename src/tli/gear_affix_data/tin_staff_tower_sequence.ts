@@ -7,11 +7,8 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +200% Spell Amplification Aura\n-30% additional Spell Amplification Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix:
-      "` +200`% Spell Amplification Aura<> ` -30`% additional Spell Amplification Sealed Mana Compensation",
+    craftableAffix:
+      "+200% Spell Amplification Aura<> -30% additional Spell Amplification Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -19,11 +16,8 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +30% additional Deterioration Damage\n10% chance to inflict  2 additional stack(s) of Deterioration",
-    valueRanges: [],
-    rawAffix:
-      "` +30`% additional Deterioration Damage<> ` 10`% chance to inflict ` 2` additional stack(s) of Deterioration",
+    craftableAffix:
+      "+30% additional Deterioration Damage<> 10% chance to inflict 2additional stack(s) of Deterioration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -31,9 +25,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: " +50% additional Hit Damage for skills cast by Spell Burst",
-    valueRanges: [],
-    rawAffix: "` +50`% additional Hit Damage for skills cast by Spell Burst",
+    craftableAffix: "+50% additional Hit Damage for skills cast by Spell Burst",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -41,9 +33,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: " +70% additional damage\n-10% additional Cast Speed",
-    valueRanges: [],
-    rawAffix: "` +70`% additional damage<> ` -10`% additional Cast Speed",
+    craftableAffix: "+70% additional damage<> -10% additional Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -51,11 +41,8 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Adds  420 -  440 Cold Damage to Spells when having at least  800 Intelligence",
-    valueRanges: [],
-    rawAffix:
-      "Adds ` 420` - ` 440` Cold Damage to Spells when having at least ` 800` Intelligence",
+    craftableAffix:
+      "Adds 420- 440Cold Damage to Spells when having at least 800Intelligence",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -63,11 +50,8 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Enemies have a  30% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  25% of their Max Life to enemies within a  5 m radius",
-    valueRanges: [],
-    rawAffix:
-      "Enemies have a ` 30`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` 25`% of their Max Life to enemies within a ` 5` m radius",
+    craftableAffix:
+      "Enemies have a 30% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -75,11 +59,8 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Max Tenacity Blessing Stacks  -2 \nMax Focus Blessing Stacks  +2 \nMax Agility Blessing Stacks  +2 ",
-    valueRanges: [],
-    rawAffix:
-      "Max Tenacity Blessing Stacks ` -2` <> Max Focus Blessing Stacks ` +2` <> Max Agility Blessing Stacks ` +2` ",
+    craftableAffix:
+      "Max Tenacity Blessing Stacks -2<> Max Focus Blessing Stacks +2<> Max Agility Blessing Stacks +2",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -87,11 +68,8 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "The Main Skill is supported by Lv.  25 Control Spell\n+25% additional Spell Damage",
-    valueRanges: [],
-    rawAffix:
-      "The Main Skill is supported by Lv. ` 25` Control Spell<> ` +25`% additional Spell Damage",
+    craftableAffix:
+      "The Main Skill is supported by Lv. 25Control Spell<> +25% additional Spell Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -99,9 +77,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +110 Spell Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +110` Spell Critical Strike Rating",
+    craftableAffix: "+110Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -109,9 +85,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +12% Armor DMG Mitigation Penetration",
-    valueRanges: [],
-    rawAffix: "` +12`% Armor DMG Mitigation Penetration",
+    craftableAffix: "+12% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -119,9 +93,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% all stats",
-    valueRanges: [],
-    rawAffix: "` +16`% all stats",
+    craftableAffix: "+16% all stats",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -129,9 +101,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% additional Spell Damage",
-    valueRanges: [],
-    rawAffix: "` +16`% additional Spell Damage",
+    craftableAffix: "+16% additional Spell Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -139,9 +109,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Cold Penetration",
-    valueRanges: [],
-    rawAffix: "` +16`% Cold Penetration",
+    craftableAffix: "+16% Cold Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -149,9 +117,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Erosion Resistance Penetration",
-    valueRanges: [],
-    rawAffix: "` +16`% Erosion Resistance Penetration",
+    craftableAffix: "+16% Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -159,9 +125,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Fire Penetration",
-    valueRanges: [],
-    rawAffix: "` +16`% Fire Penetration",
+    craftableAffix: "+16% Fire Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -169,9 +133,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Lightning Penetration",
-    valueRanges: [],
-    rawAffix: "` +16`% Lightning Penetration",
+    craftableAffix: "+16% Lightning Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -179,9 +141,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +20% additional damage on Critical Strike",
-    valueRanges: [],
-    rawAffix: "` +20`% additional damage on Critical Strike",
+    craftableAffix: "+20% additional damage on Critical Strike",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -189,9 +149,7 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +32% Cast Speed",
-    valueRanges: [],
-    rawAffix: "` +32`% Cast Speed",
+    craftableAffix: "+32% Cast Speed",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

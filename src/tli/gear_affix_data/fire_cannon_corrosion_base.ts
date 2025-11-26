@@ -7,9 +7,8 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " -30% additional Damage Over Time taken while standing still",
-    valueRanges: [],
-    rawAffix: "` -30`% additional Damage Over Time taken while standing still",
+    craftableAffix:
+      "-30% additional Damage Over Time taken while standing still",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -17,9 +16,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(10-15)% Skill Area",
-    valueRanges: [],
-    rawAffix: "` +(10-15)`% Skill Area",
+    craftableAffix: "+(10-15)% Skill Area",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -27,9 +24,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(15-25)% gear Physical Damage",
-    valueRanges: [],
-    rawAffix: "` +(15-25)`% gear Physical Damage",
+    craftableAffix: "+(15-25)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -37,9 +32,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(3-6)% Attack Critical Strike Rating for this gear",
-    valueRanges: [],
-    rawAffix: "` +(3-6)`% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(3-6)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -47,9 +40,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(40-45)% Elemental Damage",
-    valueRanges: [],
-    rawAffix: "` +(40-45)`% Elemental Damage",
+    craftableAffix: "+(40-45)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -57,9 +48,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(5-8)% gear Attack Speed",
-    valueRanges: [],
-    rawAffix: "` +(5-8)`% gear Attack Speed",
+    craftableAffix: "+(5-8)% gear Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -67,10 +56,8 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(6-12)% chance to gain 1 stack of Tenacity Blessing on defeat",
-    valueRanges: [],
-    rawAffix:
-      "` +(6-12)`% chance to gain 1 stack of Tenacity Blessing on defeat",
+    craftableAffix:
+      "+(6-12)% chance to gain 1 stack of Tenacity Blessing on defeat",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -78,9 +65,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Adds  (7-10) -  (14-17) Physical Damage to the gear",
-    valueRanges: [],
-    rawAffix: "Adds ` (7-10)` - ` (14-17)` Physical Damage to the gear",
+    craftableAffix: "Adds (7-10)- (14-17)Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -88,9 +73,7 @@ export const FIRE_CANNON_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Parabolic Projectile Splits quantity  +(1-2) ",
-    valueRanges: [],
-    rawAffix: "Parabolic Projectile Splits quantity ` +(1-2)` ",
+    craftableAffix: "Parabolic Projectile Splits quantity +(1-2)",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

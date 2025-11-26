@@ -7,9 +7,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks  +1 ",
-    valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks ` +1` ",
+    craftableAffix: "Max Focus Blessing Stacks +1",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,9 +15,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(5-7)% Armor DMG Mitigation Penetration for Minions",
-    valueRanges: [],
-    rawAffix: "` +(5-7)`% Armor DMG Mitigation Penetration for Minions",
+    craftableAffix: "+(5-7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -27,9 +23,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: " +(6-8)% additional Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% additional Minion Damage",
+    craftableAffix: "+(6-8)% additional Minion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -37,11 +31,8 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +100% chance to gain 1 stack of Focus Blessing when casting a Summon Skill. Interval:  1 s",
-    valueRanges: [],
-    rawAffix:
-      "` +100`% chance to gain 1 stack of Focus Blessing when casting a Summon Skill. Interval: ` 1` s",
+    craftableAffix:
+      "+100% chance to gain 1 stack of Focus Blessing when casting a Summon Skill. Interval: 1 s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -49,11 +40,8 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template:
-      " +100% chance to gain 1 stack of Tenacity Blessing when casting a skill. Interval:  1 s",
-    valueRanges: [],
-    rawAffix:
-      "` +100`% chance to gain 1 stack of Tenacity Blessing when casting a skill. Interval: ` 1` s",
+    craftableAffix:
+      "+100% chance to gain 1 stack of Tenacity Blessing when casting a skill. Interval: 1s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -61,9 +49,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: "Minion Damage penetrates  (6-8)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "Minion Damage penetrates ` (6-8)`% Elemental Resistance",
+    craftableAffix: "Minion Damage penetrates (6-8)% Elemental Resistance",
   },
   {
     equipmentSlot: "One-Handed",
@@ -71,9 +57,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Dexterity",
+    craftableAffix: "+(15-20)Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -81,9 +65,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Intelligence",
+    craftableAffix: "+(15-20)Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -91,9 +73,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(15-20) Strength",
-    valueRanges: [],
-    rawAffix: "` +(15-20)` Strength",
+    craftableAffix: "+(15-20)Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -101,9 +81,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(20-24)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(20-24)`% Minion Damage",
+    craftableAffix: "+(20-24)% Minion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -111,9 +89,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: " +(6-8)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix: "` +(6-8)`% Minion Attack and Cast Speed",
+    craftableAffix: "+(6-8)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -121,9 +97,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (1-2) -  (28-32) Lightning Damage to Minions",
-    valueRanges: [],
-    rawAffix: "Adds ` (1-2)` - ` (28-32)` Lightning Damage to Minions",
+    craftableAffix: "Adds (1-2)- (28-32)Lightning Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -131,9 +105,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (10-13) -  (14-19) Cold Damage to Minions",
-    valueRanges: [],
-    rawAffix: "Adds ` (10-13)` - ` (14-19)` Cold Damage to Minions",
+    craftableAffix: "Adds (10-13)- (14-19)Cold Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -141,9 +113,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (10-13) -  (14-19) Physical Damage to Minions",
-    valueRanges: [],
-    rawAffix: "Adds ` (10-13)` - ` (14-19)` Physical Damage to Minions",
+    craftableAffix: "Adds (10-13)- (14-19)Physical Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -151,9 +121,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (11-13) -  (15-18) Erosion Damage to Minions",
-    valueRanges: [],
-    rawAffix: "Adds ` (11-13)` - ` (15-18)` Erosion Damage to Minions",
+    craftableAffix: "Adds (11-13)- (15-18)Erosion Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -161,9 +129,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "Adds  (9-14) -  (15-20) Fire Damage to Minions",
-    valueRanges: [],
-    rawAffix: "Adds ` (9-14)` - ` (15-20)` Fire Damage to Minions",
+    craftableAffix: "Adds (9-14)- (15-20)Fire Damage to Minions",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

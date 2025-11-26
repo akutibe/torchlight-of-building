@@ -7,9 +7,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(1-2)% Max Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(1-2)`% Max Cold Resistance",
+    craftableAffix: "+(1-2)% Max Cold Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -17,9 +15,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(1-2)% Max Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(1-2)`% Max Fire Resistance",
+    craftableAffix: "+(1-2)% Max Fire Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -27,9 +23,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(1-2)% Max Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(1-2)`% Max Lightning Resistance",
+    craftableAffix: "+(1-2)% Max Lightning Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -37,9 +31,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(12-15)% Spell Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(12-15)`% Spell Block Chance",
+    craftableAffix: "+(12-15)% Spell Block Chance",
   },
   {
     equipmentSlot: "Shield",
@@ -47,9 +39,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(3-5)% Max Energy Shield",
-    valueRanges: [],
-    rawAffix: "` +(3-5)`% Max Energy Shield",
+    craftableAffix: "+(3-5)% Max Energy Shield",
   },
   {
     equipmentSlot: "Shield",
@@ -57,9 +47,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(3-5)% Max Life",
-    valueRanges: [],
-    rawAffix: "` +(3-5)`% Max Life",
+    craftableAffix: "+(3-5)% Max Life",
   },
   {
     equipmentSlot: "Shield",
@@ -67,9 +55,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(5-8)% Block Ratio",
-    valueRanges: [],
-    rawAffix: "` +(5-8)`% Block Ratio",
+    craftableAffix: "+(5-8)% Block Ratio",
   },
   {
     equipmentSlot: "Shield",
@@ -77,9 +63,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(8-12)% Attack Block Chance",
-    valueRanges: [],
-    rawAffix: "` +(8-12)`% Attack Block Chance",
+    craftableAffix: "+(8-12)% Attack Block Chance",
   },
   {
     equipmentSlot: "Shield",
@@ -87,9 +71,7 @@ export const SHIELD_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Has a  (5-10)% chance to avoid Blocked damage",
-    valueRanges: [],
-    rawAffix: "Has a ` (5-10)`% chance to avoid Blocked damage",
+    craftableAffix: "Has a (5-10)% chance to avoid Blocked damage",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

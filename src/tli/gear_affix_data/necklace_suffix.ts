@@ -7,9 +7,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(21-26)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(21-26)`% Sealed Mana Compensation",
+    craftableAffix: "+(21-26)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,9 +15,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(21-26)% Aura Effect",
-    valueRanges: [],
-    rawAffix: "` +(21-26)`% Aura Effect",
+    craftableAffix: "+(21-26)% Aura Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -27,9 +23,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(33-42)% additional Deterioration Duration",
-    valueRanges: [],
-    rawAffix: "` +(33-42)`% additional Deterioration Duration",
+    craftableAffix: "+(33-42)% additional Deterioration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -37,9 +31,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(37-54)% Freeze Duration",
-    valueRanges: [],
-    rawAffix: "` +(37-54)`% Freeze Duration",
+    craftableAffix: "+(37-54)% Freeze Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -47,9 +39,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(7-8)% damage per stack of any Blessing",
-    valueRanges: [],
-    rawAffix: "` +(7-8)`% damage per stack of any Blessing",
+    craftableAffix: "+(7-8)% damage per stack of any Blessing",
   },
   {
     equipmentSlot: "Trinket",
@@ -57,9 +47,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +1% damage per  8 stats",
-    valueRanges: [],
-    rawAffix: "` +1`% damage per ` 8` stats",
+    craftableAffix: "+1% damage per 8stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -67,9 +55,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(15-20)% Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Sealed Mana Compensation",
+    craftableAffix: "+(15-20)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Trinket",
@@ -77,9 +63,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(15-20)% Aura Effect",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Aura Effect",
+    craftableAffix: "+(15-20)% Aura Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,9 +71,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(23-32)% additional Deterioration Duration",
-    valueRanges: [],
-    rawAffix: "` +(23-32)`% additional Deterioration Duration",
+    craftableAffix: "+(23-32)% additional Deterioration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -97,9 +79,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(28-36)% Freeze Duration",
-    valueRanges: [],
-    rawAffix: "` +(28-36)`% Freeze Duration",
+    craftableAffix: "+(28-36)% Freeze Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -107,9 +87,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(5-6)% damage per stack of any Blessing",
-    valueRanges: [],
-    rawAffix: "` +(5-6)`% damage per stack of any Blessing",
+    craftableAffix: "+(5-6)% damage per stack of any Blessing",
   },
   {
     equipmentSlot: "Trinket",
@@ -117,9 +95,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +1% damage per  12 stats",
-    valueRanges: [],
-    rawAffix: "` +1`% damage per ` 12` stats",
+    craftableAffix: "+1% damage per 12stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -127,9 +103,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(11-13)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(11-13)`% Elemental Resistance",
+    craftableAffix: "+(11-13)% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -137,9 +111,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(11-13)% all stats",
-    valueRanges: [],
-    rawAffix: "` +(11-13)`% all stats",
+    craftableAffix: "+(11-13)% all stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -147,9 +119,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(19-23)% Blessing Duration",
-    valueRanges: [],
-    rawAffix: "` +(19-23)`% Blessing Duration",
+    craftableAffix: "+(19-23)% Blessing Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -157,11 +127,8 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " +(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(25-31)`% Attack and Cast Speed<> ` +(25-31)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(25-31)% Attack and Cast Speed<> +(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -169,9 +136,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(61-78)`% Critical Strike Damage",
+    craftableAffix: "+(61-78)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -179,11 +144,8 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      " 100% chance to gain a Barrier for every  5 m you move\n+25% Barrier Shield",
-    valueRanges: [],
-    rawAffix:
-      "` 100`% chance to gain a Barrier for every ` 5` m you move<> ` +25`% Barrier Shield",
+    craftableAffix:
+      "100% chance to gain a Barrier for every 5m you move<> +25% Barrier Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -191,10 +153,8 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " 80% chance to gain  1 charge stacks when using a Terra Skill",
-    valueRanges: [],
-    rawAffix:
-      "` 80`% chance to gain ` 1` charge stacks when using a Terra Skill",
+    craftableAffix:
+      "80% chance to gain 1charge stacks when using a Terra Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -202,9 +162,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(14-18)% Blessing Duration",
-    valueRanges: [],
-    rawAffix: "` +(14-18)`% Blessing Duration",
+    craftableAffix: "+(14-18)% Blessing Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -212,11 +170,8 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      " +(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix:
-      "` +(18-24)`% Attack and Cast Speed<> ` +(18-24)`% Minion Attack and Cast Speed",
+    craftableAffix:
+      "+(18-24)% Attack and Cast Speed<> +(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -224,9 +179,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(42-60)% Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +(42-60)`% Critical Strike Damage",
+    craftableAffix: "+(42-60)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -234,9 +187,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(8-10)% Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(8-10)`% Elemental Resistance",
+    craftableAffix: "+(8-10)% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -244,9 +195,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(8-10)% all stats",
-    valueRanges: [],
-    rawAffix: "` +(8-10)`% all stats",
+    craftableAffix: "+(8-10)% all stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -254,9 +203,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " 100% chance to gain a Barrier for every  5 m you move",
-    valueRanges: [],
-    rawAffix: "` 100`% chance to gain a Barrier for every ` 5` m you move",
+    craftableAffix: "100% chance to gain a Barrier for every 5m you move",
   },
   {
     equipmentSlot: "Trinket",
@@ -264,10 +211,8 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " 60% chance to gain  1 charge stacks when using a Terra Skill",
-    valueRanges: [],
-    rawAffix:
-      "` 60`% chance to gain ` 1` charge stacks when using a Terra Skill",
+    craftableAffix:
+      "60% chance to gain 1charge stacks when using a Terra Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -275,9 +220,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Cold Resistance",
+    craftableAffix: "+(25-35)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -285,9 +228,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Erosion Resistance",
+    craftableAffix: "+(25-35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -295,9 +236,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Fire Resistance",
+    craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -305,9 +244,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(25-35)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(25-35)`% Lightning Resistance",
+    craftableAffix: "+(25-35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -315,9 +252,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(46-59)% Projectile Speed",
-    valueRanges: [],
-    rawAffix: "` +(46-59)`% Projectile Speed",
+    craftableAffix: "+(46-59)% Projectile Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -325,9 +260,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Cold Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Cold Resistance",
+    craftableAffix: "+(19-27)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -335,9 +268,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Erosion Resistance",
+    craftableAffix: "+(19-27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -345,9 +276,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Fire Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Fire Resistance",
+    craftableAffix: "+(19-27)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -355,9 +284,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(19-27)% Lightning Resistance",
-    valueRanges: [],
-    rawAffix: "` +(19-27)`% Lightning Resistance",
+    craftableAffix: "+(19-27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -365,9 +292,7 @@ export const NECKLACE_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(33-45)% Projectile Speed",
-    valueRanges: [],
-    rawAffix: "` +(33-45)`% Projectile Speed",
+    craftableAffix: "+(33-45)% Projectile Speed",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

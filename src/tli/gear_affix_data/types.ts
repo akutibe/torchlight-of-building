@@ -1,7 +1,3 @@
-import { DmgRange } from "../core";
-
-export type ValueRange = DmgRange;
-
 export const EQUIPMENT_SLOTS = [
   "Boots",
   "Chest Armor",
@@ -86,7 +82,5 @@ export interface BaseGearAffix {
   affixType: AffixType;
   craftingPool: CraftingPool;
   tier: string;
-  template: string;
-  valueRanges: ValueRange[];
-  rawAffix: string;
+  craftableAffix: string;
 }

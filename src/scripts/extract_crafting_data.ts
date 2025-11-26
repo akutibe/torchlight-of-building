@@ -32,7 +32,11 @@ const parseAffixText = (
     $(elem).replaceWith(text);
 
     // Remove leading space from next text node if present
-    if (nextSibling && nextSibling.type === "text" && nextSibling.data?.startsWith(" ")) {
+    if (
+      nextSibling &&
+      nextSibling.type === "text" &&
+      nextSibling.data?.startsWith(" ")
+    ) {
       nextSibling.data = nextSibling.data.slice(1);
     }
   });

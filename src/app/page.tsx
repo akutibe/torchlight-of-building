@@ -80,10 +80,7 @@ const getFilteredAffixes = (
 };
 
 const formatAffixOption = (affix: BaseGearAffix): string => {
-  let display = affix.template;
-  affix.valueRanges.forEach((range, index) => {
-    display = display.replace(`{${index}}`, `{${range.min}-${range.max}}`);
-  });
+  let display = affix.craftableAffix;
   if (display.length > 80) {
     display = display.substring(0, 77) + "...";
   }
@@ -1281,10 +1278,7 @@ export default function Home() {
 
             {/* Panel Content */}
             {debugPanelExpanded && (
-              <div
-                className="p-4 overflow-auto"
-                style={{ maxHeight: "400px" }}
-              >
+              <div className="p-4 overflow-auto" style={{ maxHeight: "400px" }}>
                 <pre className="text-xs font-mono text-zinc-900 dark:text-zinc-100 whitespace-pre-wrap break-words">
                   {JSON.stringify(loadout, null, 2)}
                 </pre>

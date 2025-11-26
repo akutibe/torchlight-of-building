@@ -7,9 +7,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " (-6--4)% additional Physical Damage taken",
-    valueRanges: [],
-    rawAffix: "` (-6--4)`% additional Physical Damage taken",
+    craftableAffix: "(-6--4)% additional Physical Damage taken",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -17,9 +15,8 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(10-15)% Attack and Spell Block Chance while standing still",
-    valueRanges: [],
-    rawAffix: "` +(10-15)`% Attack and Spell Block Chance while standing still",
+    craftableAffix:
+      "+(10-15)% Attack and Spell Block Chance while standing still",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -27,9 +24,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(15-20)% Max Energy Shield",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Max Energy Shield",
+    craftableAffix: "+(15-20)% Max Energy Shield",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -37,9 +32,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(15-20)% Max Life",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Max Life",
+    craftableAffix: "+(15-20)% Max Life",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -47,9 +40,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(3-5)% Max Elemental Resistance",
-    valueRanges: [],
-    rawAffix: "` +(3-5)`% Max Elemental Resistance",
+    craftableAffix: "+(3-5)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -57,9 +48,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(30-50)% gear Evasion",
-    valueRanges: [],
-    rawAffix: "` +(30-50)`% gear Evasion",
+    craftableAffix: "+(30-50)% gear Evasion",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -67,9 +56,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(50-70)% damage",
-    valueRanges: [],
-    rawAffix: "` +(50-70)`% damage",
+    craftableAffix: "+(50-70)% damage",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -77,9 +64,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +(8-10)% Elemental and Erosion Resistance",
-    valueRanges: [],
-    rawAffix: "` +(8-10)`% Elemental and Erosion Resistance",
+    craftableAffix: "+(8-10)% Elemental and Erosion Resistance",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -87,9 +72,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +1 Support Skill Level",
-    valueRanges: [],
-    rawAffix: "` +1` Support Skill Level",
+    craftableAffix: "+1Support Skill Level",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -97,9 +80,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " +2 Active Skill Level",
-    valueRanges: [],
-    rawAffix: "` +2` Active Skill Level",
+    craftableAffix: "+2Active Skill Level",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -107,9 +88,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: " 50% chance to gain Hardened when you are hit",
-    valueRanges: [],
-    rawAffix: "` 50`% chance to gain Hardened when you are hit",
+    craftableAffix: "50% chance to gain Hardened when you are hit",
   },
   {
     equipmentSlot: "Chest Armor",
@@ -117,9 +96,7 @@ export const CHEST_ARMOR_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Immune to Elemental Ailments",
-    valueRanges: [],
-    rawAffix: "Immune to Elemental Ailments",
+    craftableAffix: "Immune to Elemental Ailments",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

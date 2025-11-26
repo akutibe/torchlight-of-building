@@ -7,9 +7,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "[Beacon]  +2 Max Spell Burst",
-    valueRanges: [],
-    rawAffix: "[Beacon] ` +2` Max Spell Burst",
+    craftableAffix: "[Beacon] +2Max Spell Burst",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,9 +15,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Multistrikes deal  (36-52)% increasing damage",
-    valueRanges: [],
-    rawAffix: "Multistrikes deal ` (36-52)`% increasing damage",
+    craftableAffix: "Multistrikes deal (36-52)% increasing damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -27,9 +23,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +(51-65)% Deterioration Damage",
-    valueRanges: [],
-    rawAffix: "` +(51-65)`% Deterioration Damage",
+    craftableAffix: "+(51-65)% Deterioration Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -37,9 +31,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +3 Active Skill Level",
-    valueRanges: [],
-    rawAffix: "` +3` Active Skill Level",
+    craftableAffix: "+3Active Skill Level",
   },
   {
     equipmentSlot: "Trinket",
@@ -47,9 +39,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: " +3 Minion Skill Level",
-    valueRanges: [],
-    rawAffix: "` +3` Minion Skill Level",
+    craftableAffix: "+3Minion Skill Level",
   },
   {
     equipmentSlot: "Trinket",
@@ -57,9 +47,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Have Fervor\n+5% additional damage",
-    valueRanges: [],
-    rawAffix: "Have Fervor<> ` +5`% additional damage",
+    craftableAffix: "Have Fervor<> +5% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -67,9 +55,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Multistrikes deal  (28-40)% increasing damage",
-    valueRanges: [],
-    rawAffix: "Multistrikes deal ` (28-40)`% increasing damage",
+    craftableAffix: "Multistrikes deal (28-40)% increasing damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -77,9 +63,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(1-2) Active Skill Level",
-    valueRanges: [],
-    rawAffix: "` +(1-2)` Active Skill Level",
+    craftableAffix: "+(1-2)Active Skill Level",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,9 +71,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +(36-50)% Deterioration Damage",
-    valueRanges: [],
-    rawAffix: "` +(36-50)`% Deterioration Damage",
+    craftableAffix: "+(36-50)% Deterioration Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -97,9 +79,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +1 Max Spell Burst",
-    valueRanges: [],
-    rawAffix: "` +1` Max Spell Burst",
+    craftableAffix: "+1Max Spell Burst",
   },
   {
     equipmentSlot: "Trinket",
@@ -107,9 +87,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: " +2 Minion Skill Level",
-    valueRanges: [],
-    rawAffix: "` +2` Minion Skill Level",
+    craftableAffix: "+2Minion Skill Level",
   },
   {
     equipmentSlot: "Trinket",
@@ -117,9 +95,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Have Fervor",
-    valueRanges: [],
-    rawAffix: "Have Fervor",
+    craftableAffix: "Have Fervor",
   },
   {
     equipmentSlot: "Trinket",
@@ -127,9 +103,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(21-26)% Defense",
-    valueRanges: [],
-    rawAffix: "` +(21-26)`% Defense",
+    craftableAffix: "+(21-26)% Defense",
   },
   {
     equipmentSlot: "Trinket",
@@ -137,9 +111,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(31-39)% Sealed Mana Compensation for Energy Fortress",
-    valueRanges: [],
-    rawAffix: "` +(31-39)`% Sealed Mana Compensation for Energy Fortress",
+    craftableAffix: "+(31-39)% Sealed Mana Compensation for Energy Fortress",
   },
   {
     equipmentSlot: "Trinket",
@@ -147,9 +119,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(31-39)% Sealed Mana Compensation for Nimbleness",
-    valueRanges: [],
-    rawAffix: "` +(31-39)`% Sealed Mana Compensation for Nimbleness",
+    craftableAffix: "+(31-39)% Sealed Mana Compensation for Nimbleness",
   },
   {
     equipmentSlot: "Trinket",
@@ -157,9 +127,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(31-39)% Sealed Mana Compensation for Steadfast",
-    valueRanges: [],
-    rawAffix: "` +(31-39)`% Sealed Mana Compensation for Steadfast",
+    craftableAffix: "+(31-39)% Sealed Mana Compensation for Steadfast",
   },
   {
     equipmentSlot: "Trinket",
@@ -167,9 +135,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(33-42)% Deterioration Chance",
-    valueRanges: [],
-    rawAffix: "` +(33-42)`% Deterioration Chance",
+    craftableAffix: "+(33-42)% Deterioration Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -177,9 +143,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(49-62) initial Growth for Spirit Magi",
-    valueRanges: [],
-    rawAffix: "` +(49-62)` initial Growth for Spirit Magi",
+    craftableAffix: "+(49-62)initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -187,9 +151,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Dexterity",
+    craftableAffix: "+(61-78)Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -197,9 +159,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Intelligence",
+    craftableAffix: "+(61-78)Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -207,9 +167,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: " +(61-78) Strength",
-    valueRanges: [],
-    rawAffix: "` +(61-78)` Strength",
+    craftableAffix: "+(61-78)Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -217,11 +175,8 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      "Gains Attack Aggression when casting an Attack Skill\n+(40-60)% Attack Aggression Effect",
-    valueRanges: [],
-    rawAffix:
-      "Gains Attack Aggression when casting an Attack Skill<> ` +(40-60)`% Attack Aggression Effect",
+    craftableAffix:
+      "Gains Attack Aggression when casting an Attack Skill<> +(40-60)% Attack Aggression Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -229,11 +184,8 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template:
-      "Gains Spell Aggression when casting a Spell Skill\n+(40-60)% Spell Aggression Effect",
-    valueRanges: [],
-    rawAffix:
-      "Gains Spell Aggression when casting a Spell Skill<> ` +(40-60)`% Spell Aggression Effect",
+    craftableAffix:
+      "Gains Spell Aggression when casting a Spell Skill<> +(40-60)% Spell Aggression Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -241,9 +193,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(15-20)% Defense",
-    valueRanges: [],
-    rawAffix: "` +(15-20)`% Defense",
+    craftableAffix: "+(15-20)% Defense",
   },
   {
     equipmentSlot: "Trinket",
@@ -251,9 +201,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(22-30)% Sealed Mana Compensation for Energy Fortress",
-    valueRanges: [],
-    rawAffix: "` +(22-30)`% Sealed Mana Compensation for Energy Fortress",
+    craftableAffix: "+(22-30)% Sealed Mana Compensation for Energy Fortress",
   },
   {
     equipmentSlot: "Trinket",
@@ -261,9 +209,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(22-30)% Sealed Mana Compensation for Nimbleness",
-    valueRanges: [],
-    rawAffix: "` +(22-30)`% Sealed Mana Compensation for Nimbleness",
+    craftableAffix: "+(22-30)% Sealed Mana Compensation for Nimbleness",
   },
   {
     equipmentSlot: "Trinket",
@@ -271,9 +217,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(22-30)% Sealed Mana Compensation for Steadfast",
-    valueRanges: [],
-    rawAffix: "` +(22-30)`% Sealed Mana Compensation for Steadfast",
+    craftableAffix: "+(22-30)% Sealed Mana Compensation for Steadfast",
   },
   {
     equipmentSlot: "Trinket",
@@ -281,9 +225,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(23-32)% Deterioration Chance",
-    valueRanges: [],
-    rawAffix: "` +(23-32)`% Deterioration Chance",
+    craftableAffix: "+(23-32)% Deterioration Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -291,9 +233,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(35-48) initial Growth for Spirit Magi",
-    valueRanges: [],
-    rawAffix: "` +(35-48)` initial Growth for Spirit Magi",
+    craftableAffix: "+(35-48)initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -301,9 +241,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Dexterity",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Dexterity",
+    craftableAffix: "+(43-60)Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -311,9 +249,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Intelligence",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Intelligence",
+    craftableAffix: "+(43-60)Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -321,9 +257,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: " +(43-60) Strength",
-    valueRanges: [],
-    rawAffix: "` +(43-60)` Strength",
+    craftableAffix: "+(43-60)Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -331,11 +265,8 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      "Gains Attack Aggression when casting an Attack Skill\n+(10-30)% Attack Aggression Effect",
-    valueRanges: [],
-    rawAffix:
-      "Gains Attack Aggression when casting an Attack Skill<> ` +(10-30)`% Attack Aggression Effect",
+    craftableAffix:
+      "Gains Attack Aggression when casting an Attack Skill<> +(10-30)% Attack Aggression Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -343,11 +274,8 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template:
-      "Gains Spell Aggression when casting a Spell Skill\n+(10-30)% Spell Aggression Effect",
-    valueRanges: [],
-    rawAffix:
-      "Gains Spell Aggression when casting a Spell Skill<> ` +(10-30)`% Spell Aggression Effect",
+    craftableAffix:
+      "Gains Spell Aggression when casting a Spell Skill<> +(10-30)% Spell Aggression Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -355,9 +283,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(121-156) Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(121-156)` Max Mana",
+    craftableAffix: "+(121-156)Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -365,9 +291,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(221-286) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(221-286)` Max Life",
+    craftableAffix: "+(221-286)Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -375,9 +299,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(319-455) Max Energy Shield",
-    valueRanges: [],
-    rawAffix: "` +(319-455)` Max Energy Shield",
+    craftableAffix: "+(319-455)Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -385,9 +307,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(37-47)% Armor",
-    valueRanges: [],
-    rawAffix: "` +(37-47)`% Armor",
+    craftableAffix: "+(37-47)% Armor",
   },
   {
     equipmentSlot: "Trinket",
@@ -395,9 +315,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(37-47)% Evasion",
-    valueRanges: [],
-    rawAffix: "` +(37-47)`% Evasion",
+    craftableAffix: "+(37-47)% Evasion",
   },
   {
     equipmentSlot: "Trinket",
@@ -405,9 +323,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(66-94)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(66-94)`% Minion Damage",
+    craftableAffix: "+(66-94)% Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -415,9 +331,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: " +(73-94)% damage",
-    valueRanges: [],
-    rawAffix: "` +(73-94)`% damage",
+    craftableAffix: "+(73-94)% damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -425,9 +339,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(155-220) Max Life",
-    valueRanges: [],
-    rawAffix: "` +(155-220)` Max Life",
+    craftableAffix: "+(155-220)Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -435,9 +347,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(245-350) Max Energy Shield",
-    valueRanges: [],
-    rawAffix: "` +(245-350)` Max Energy Shield",
+    craftableAffix: "+(245-350)Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -445,9 +355,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(27-36)% Armor",
-    valueRanges: [],
-    rawAffix: "` +(27-36)`% Armor",
+    craftableAffix: "+(27-36)% Armor",
   },
   {
     equipmentSlot: "Trinket",
@@ -455,9 +363,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(27-36)% Evasion",
-    valueRanges: [],
-    rawAffix: "` +(27-36)`% Evasion",
+    craftableAffix: "+(27-36)% Evasion",
   },
   {
     equipmentSlot: "Trinket",
@@ -465,9 +371,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(51-72)% damage",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% damage",
+    craftableAffix: "+(51-72)% damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -475,9 +379,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(51-72)% Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +(51-72)`% Minion Damage",
+    craftableAffix: "+(51-72)% Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -485,9 +387,7 @@ export const NECKLACE_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: " +(85-120) Max Mana",
-    valueRanges: [],
-    rawAffix: "` +(85-120)` Max Mana",
+    craftableAffix: "+(85-120)Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

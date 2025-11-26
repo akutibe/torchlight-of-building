@@ -7,9 +7,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "+  10 Command per second",
-    valueRanges: [],
-    rawAffix: "+ ` 10` Command per second",
+    craftableAffix: "+ 10Command per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,11 +15,8 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " -80 Minion Critical Strike Rating\n+200% Minion Critical Strike Damage",
-    valueRanges: [],
-    rawAffix:
-      "` -80` Minion Critical Strike Rating<> ` +200`% Minion Critical Strike Damage",
+    craftableAffix:
+      "-80Minion Critical Strike Rating<> +200% Minion Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -29,11 +24,8 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      " +120% Radical Order Aura Effect\n-20% additional Radical Order Sealed Mana Compensation",
-    valueRanges: [],
-    rawAffix:
-      "` +120`% Radical Order Aura Effect<> ` -20`% additional Radical Order Sealed Mana Compensation",
+    craftableAffix:
+      "+120% Radical Order Aura Effect<> -20% additional Radical Order Sealed Mana Compensation",
   },
   {
     equipmentSlot: "One-Handed",
@@ -41,9 +33,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: " +80 initial Growth for Spirit Magi",
-    valueRanges: [],
-    rawAffix: "` +80` initial Growth for Spirit Magi",
+    craftableAffix: "+80initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "One-Handed",
@@ -51,9 +41,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "The Main Skill is supported by a Lv.  25 Servant Damage",
-    valueRanges: [],
-    rawAffix: "The Main Skill is supported by a Lv. ` 25` Servant Damage",
+    craftableAffix: "The Main Skill is supported by a Lv. 25Servant Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -61,11 +49,8 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "Triggers Lv.  10 Entangled Pain Curse and Timid Curse when a Minion deals damage. Cooldown:  1 s\nMinions can cast  1 additional Curse(s)",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. ` 10` Entangled Pain Curse and Timid Curse when a Minion deals damage. Cooldown: ` 1` s<> Minions can cast ` 1` additional Curse(s)",
+    craftableAffix:
+      "Triggers Lv. 10Entangled Pain Curse and Timid Curse when a Minion deals damage. Cooldown: 1s<> Minions can cast 1additional Curse(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,9 +58,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Triggers Lv.  20 Dark Gate when moving. Interval:  4 s",
-    valueRanges: [],
-    rawAffix: "Triggers Lv. ` 20` Dark Gate when moving. Interval: ` 4` s",
+    craftableAffix: "Triggers Lv. 20Dark Gate when moving. Interval: 4s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -83,11 +66,8 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template:
-      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy:  1 s\nWhen Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy:  1 s\nWhen Minions deal damage, inflicts Cold Infiltration . Interval for each enemy:  1 s",
-    valueRanges: [],
-    rawAffix:
-      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: ` 1` s<> When Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: ` 1` s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: ` 1` s",
+    craftableAffix:
+      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: 1s<> When Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: 1s<> When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -95,9 +75,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +16% Minion Attack and Cast Speed",
-    valueRanges: [],
-    rawAffix: "` +16`% Minion Attack and Cast Speed",
+    craftableAffix: "+16% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -105,9 +83,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +40% Minion Critical Strike Damage",
-    valueRanges: [],
-    rawAffix: "` +40`% Minion Critical Strike Damage",
+    craftableAffix: "+40% Minion Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -115,9 +91,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +55 Minion Critical Strike Rating",
-    valueRanges: [],
-    rawAffix: "` +55` Minion Critical Strike Rating",
+    craftableAffix: "+55Minion Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -125,9 +99,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +6% Armor DMG Mitigation Penetration for Minions",
-    valueRanges: [],
-    rawAffix: "` +6`% Armor DMG Mitigation Penetration for Minions",
+    craftableAffix: "+6% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -135,9 +107,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% all stats",
-    valueRanges: [],
-    rawAffix: "` +8`% all stats",
+    craftableAffix: "+8% all stats",
   },
   {
     equipmentSlot: "One-Handed",
@@ -145,9 +115,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% additional Minion Damage",
-    valueRanges: [],
-    rawAffix: "` +8`% additional Minion Damage",
+    craftableAffix: "+8% additional Minion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -155,9 +123,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Cold Penetration for Minions",
-    valueRanges: [],
-    rawAffix: "` +8`% Cold Penetration for Minions",
+    craftableAffix: "+8% Cold Penetration for Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -165,9 +131,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Erosion Penetration for Minions",
-    valueRanges: [],
-    rawAffix: "` +8`% Erosion Penetration for Minions",
+    craftableAffix: "+8% Erosion Penetration for Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -175,9 +139,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Lightning Penetration for Minions",
-    valueRanges: [],
-    rawAffix: "` +8`% Lightning Penetration for Minions",
+    craftableAffix: "+8% Lightning Penetration for Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -185,9 +147,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: " +8% Minion Fire Penetration",
-    valueRanges: [],
-    rawAffix: "` +8`% Minion Fire Penetration",
+    craftableAffix: "+8% Minion Fire Penetration",
   },
 ] as const satisfies readonly BaseGearAffix[];
 
