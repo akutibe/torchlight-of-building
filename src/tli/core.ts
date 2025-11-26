@@ -1,6 +1,7 @@
 import { Mod } from "./mod";
 import { TreeName } from "./talent_tree_types";
 import { Skill } from "./offense";
+import { EquipmentType } from "./gear_affix_data/types";
 
 export interface Affix {
   mods: Mod[];
@@ -112,6 +113,7 @@ export interface RawGear {
     | "sword"
     | "shield";
   affixes: string[];
+  equipmentType?: EquipmentType;
 }
 
 export interface RawGearPage {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   RawLoadout,
   RawGearPage,
@@ -20,6 +20,13 @@ import {
   canDeallocateNode,
   isPrerequisiteSatisfied,
 } from "@/src/tli/talent_tree";
+import {
+  EquipmentType,
+  EquipmentSlot,
+  BaseGearAffix,
+} from "@/src/tli/gear_affix_data/types";
+import { ALL_GEAR_AFFIXES } from "@/src/tli/gear_affix_data/all_affixes";
+import { craft } from "@/src/tli/crafting/craft";
 
 type GearSlot = keyof RawGearPage;
 
@@ -35,6 +42,53 @@ const GEAR_SLOTS: { key: GearSlot; label: string }[] = [
   { key: "mainHand", label: "Main Hand" },
   { key: "offHand", label: "Off Hand" },
 ];
+
+const SLOT_TO_EQUIPMENT_SLOT: Record<GearSlot, EquipmentSlot[]> = {
+  helmet: ["Helmet"],
+  chest: ["Chest Armor"],
+  gloves: ["Gloves"],
+  boots: ["Boots"],
+  belt: ["Trinket"],
+  neck: ["Trinket"],
+  leftRing: ["Trinket"],
+  rightRing: ["Trinket"],
+  mainHand: ["One-Handed", "Two-Handed"],
+  offHand: ["Shield", "One-Handed"],
+};
+
+const getValidEquipmentTypes = (slot: GearSlot): EquipmentType[] => {
+  const validEquipSlots = SLOT_TO_EQUIPMENT_SLOT[slot];
+  const types = new Set<EquipmentType>();
+
+  ALL_GEAR_AFFIXES.forEach((affix) => {
+    if (validEquipSlots.includes(affix.equipmentSlot)) {
+      types.add(affix.equipmentType);
+    }
+  });
+
+  return Array.from(types).sort();
+};
+
+const getFilteredAffixes = (
+  equipmentType: EquipmentType,
+  affixType: "Prefix" | "Suffix"
+): BaseGearAffix[] => {
+  return ALL_GEAR_AFFIXES.filter(
+    (affix) =>
+      affix.equipmentType === equipmentType && affix.affixType === affixType
+  );
+};
+
+const formatAffixOption = (affix: BaseGearAffix): string => {
+  let display = affix.template;
+  affix.valueRanges.forEach((range, index) => {
+    display = display.replace(`{${index}}`, `{${range.min}-${range.max}}`);
+  });
+  if (display.length > 80) {
+    display = display.substring(0, 77) + "...";
+  }
+  return display;
+};
 
 const STORAGE_KEY = "tli-planner-loadout";
 
@@ -74,6 +128,99 @@ const saveToStorage = (loadout: RawLoadout): void => {
   }
 };
 
+interface AffixSlotState {
+  affixIndex: number | null;
+  percentage: number;
+}
+
+interface AffixSlotProps {
+  slotIndex: number;
+  affixType: "Prefix" | "Suffix";
+  affixes: BaseGearAffix[];
+  selection: AffixSlotState;
+  onAffixSelect: (slotIndex: number, value: string) => void;
+  onSliderChange: (slotIndex: number, value: string) => void;
+  onClear: (slotIndex: number) => void;
+}
+
+const AffixSlotComponent: React.FC<AffixSlotProps> = ({
+  slotIndex,
+  affixType,
+  affixes,
+  selection,
+  onAffixSelect,
+  onSliderChange,
+  onClear,
+}) => {
+  const selectedAffix =
+    selection.affixIndex !== null ? affixes[selection.affixIndex] : null;
+  const craftedText = selectedAffix
+    ? craft(selectedAffix, selection.percentage)
+    : "";
+
+  return (
+    <div className="bg-zinc-50 dark:bg-zinc-700 p-4 rounded-lg">
+      {/* Affix Dropdown */}
+      <select
+        value={selection.affixIndex !== null ? selection.affixIndex : ""}
+        onChange={(e) => onAffixSelect(slotIndex, e.target.value)}
+        className="w-full px-3 py-2 mb-3 border border-zinc-300 dark:border-zinc-600 rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <option value="">&lt;Select {affixType}&gt;</option>
+        {affixes.map((affix, idx) => (
+          <option key={idx} value={idx}>
+            {formatAffixOption(affix)}
+          </option>
+        ))}
+      </select>
+
+      {/* Slider and Preview (only show if affix selected) */}
+      {selectedAffix && (
+        <>
+          {/* Quality Slider */}
+          <div className="mb-3">
+            <div className="flex justify-between items-center mb-1">
+              <label className="text-xs text-zinc-600 dark:text-zinc-400">
+                Quality
+              </label>
+              <span className="text-xs font-medium text-zinc-800 dark:text-zinc-200">
+                {selection.percentage}%
+              </span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value={selection.percentage}
+              onChange={(e) => onSliderChange(slotIndex, e.target.value)}
+              className="w-full h-2 bg-zinc-300 dark:bg-zinc-600 rounded-lg appearance-none cursor-pointer"
+            />
+          </div>
+
+          {/* Crafted Preview */}
+          <div className="bg-white dark:bg-zinc-800 p-3 rounded border border-zinc-200 dark:border-zinc-600">
+            <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-1">
+              {craftedText}
+            </div>
+            <div className="text-xs text-zinc-500 dark:text-zinc-400">
+              Tier {selectedAffix.tier}
+              {selectedAffix.craftingPool && ` | ${selectedAffix.craftingPool}`}
+            </div>
+          </div>
+
+          {/* Clear Button */}
+          <button
+            onClick={() => onClear(slotIndex)}
+            className="mt-2 text-xs text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 font-medium"
+          >
+            Clear
+          </button>
+        </>
+      )}
+    </div>
+  );
+};
+
 export default function Home() {
   const [loadout, setLoadout] = useState<RawLoadout>(createEmptyLoadout);
   const [selectedSlot, setSelectedSlot] = useState<GearSlot>("helmet");
@@ -93,6 +240,13 @@ export default function Home() {
     tree3: null,
     tree4: null,
   });
+  const [selectedEquipmentType, setSelectedEquipmentType] =
+    useState<EquipmentType | null>(null);
+  const [affixSelections, setAffixSelections] = useState<AffixSlotState[]>(
+    Array(6)
+      .fill(null)
+      .map(() => ({ affixIndex: null, percentage: 50 }))
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -126,6 +280,92 @@ export default function Home() {
   ]);
 
   const selectedGear = loadout.equipmentPage[selectedSlot];
+
+  const prefixAffixes = useMemo(
+    () =>
+      selectedEquipmentType
+        ? getFilteredAffixes(selectedEquipmentType, "Prefix")
+        : [],
+    [selectedEquipmentType]
+  );
+
+  const suffixAffixes = useMemo(
+    () =>
+      selectedEquipmentType
+        ? getFilteredAffixes(selectedEquipmentType, "Suffix")
+        : [],
+    [selectedEquipmentType]
+  );
+
+  useEffect(() => {
+    const gear = loadout.equipmentPage[selectedSlot];
+    if (gear?.equipmentType) {
+      setSelectedEquipmentType(gear.equipmentType);
+    } else {
+      setSelectedEquipmentType(null);
+    }
+    setAffixSelections(
+      Array(6)
+        .fill(null)
+        .map(() => ({ affixIndex: null, percentage: 50 }))
+    );
+  }, [selectedSlot, loadout.equipmentPage]);
+
+  useEffect(() => {
+    if (!selectedEquipmentType) return;
+
+    const affixes: string[] = [];
+
+    affixSelections.forEach((selection, idx) => {
+      if (selection.affixIndex === null) return;
+
+      const affixType = idx < 3 ? "Prefix" : "Suffix";
+      const filteredAffixes =
+        affixType === "Prefix" ? prefixAffixes : suffixAffixes;
+      const selectedAffix = filteredAffixes[selection.affixIndex];
+
+      const craftedText = craft(selectedAffix, selection.percentage);
+      affixes.push(craftedText);
+    });
+
+    setLoadout((prev) => ({
+      ...prev,
+      equipmentPage: {
+        ...prev.equipmentPage,
+        [selectedSlot]: {
+          gearType: getGearType(selectedSlot),
+          equipmentType: selectedEquipmentType,
+          affixes,
+        },
+      },
+    }));
+  }, [
+    affixSelections,
+    selectedEquipmentType,
+    prefixAffixes,
+    suffixAffixes,
+    selectedSlot,
+  ]);
+
+  const getCraftedText = (slotIndex: number): string => {
+    const selection = affixSelections[slotIndex];
+    if (selection.affixIndex === null) return "";
+
+    const affixType = slotIndex < 3 ? "Prefix" : "Suffix";
+    const filteredAffixes = affixType === "Prefix" ? prefixAffixes : suffixAffixes;
+    const selectedAffix = filteredAffixes[selection.affixIndex];
+
+    return craft(selectedAffix, selection.percentage);
+  };
+
+  const getSelectedAffix = (slotIndex: number): BaseGearAffix | null => {
+    const selection = affixSelections[slotIndex];
+    if (selection.affixIndex === null) return null;
+
+    const affixType = slotIndex < 3 ? "Prefix" : "Suffix";
+    const filteredAffixes = affixType === "Prefix" ? prefixAffixes : suffixAffixes;
+    return filteredAffixes[selection.affixIndex];
+  };
 
   const getGearType = (slot: GearSlot): RawGear["gearType"] => {
     if (slot === "leftRing" || slot === "rightRing") return "ring";
@@ -176,6 +416,50 @@ export default function Home() {
           [selectedSlot]: { ...currentGear, affixes: updatedAffixes },
         },
       };
+    });
+  };
+
+  const handleEquipmentTypeChange = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    const newType = e.target.value as EquipmentType;
+    setSelectedEquipmentType(newType);
+
+    setAffixSelections(
+      Array(6)
+        .fill(null)
+        .map(() => ({ affixIndex: null, percentage: 50 }))
+    );
+  };
+
+  const handleAffixSelect = (slotIndex: number, value: string) => {
+    const affixIndex = value === "" ? null : parseInt(value);
+
+    setAffixSelections((prev) => {
+      const updated = [...prev];
+      updated[slotIndex] = {
+        affixIndex,
+        percentage: affixIndex === null ? 50 : updated[slotIndex].percentage,
+      };
+      return updated;
+    });
+  };
+
+  const handleSliderChange = (slotIndex: number, value: string) => {
+    const percentage = parseInt(value);
+
+    setAffixSelections((prev) => {
+      const updated = [...prev];
+      updated[slotIndex] = { ...updated[slotIndex], percentage };
+      return updated;
+    });
+  };
+
+  const handleClearAffix = (slotIndex: number) => {
+    setAffixSelections((prev) => {
+      const updated = [...prev];
+      updated[slotIndex] = { affixIndex: null, percentage: 50 };
+      return updated;
     });
   };
 
@@ -510,60 +794,81 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Affix Manager */}
+            {/* Gear Crafting UI */}
             <div className="mb-8 bg-white dark:bg-zinc-800 rounded-lg p-6 shadow">
               <h2 className="text-xl font-semibold mb-4 text-zinc-800 dark:text-zinc-200">
-                Affixes for{" "}
+                Craft Gear for{" "}
                 {GEAR_SLOTS.find((s) => s.key === selectedSlot)?.label}
               </h2>
 
-              {/* Affix List */}
-              <div className="mb-4">
-                {!selectedGear || selectedGear.affixes.length === 0 ? (
-                  <p className="text-zinc-500 dark:text-zinc-400 italic">
-                    No affixes yet. Add one below!
-                  </p>
-                ) : (
-                  <ul className="space-y-2">
-                    {selectedGear.affixes.map((affix, index) => (
-                      <li
-                        key={index}
-                        className="flex items-center justify-between bg-zinc-50 dark:bg-zinc-700 px-4 py-2 rounded"
-                      >
-                        <span className="text-zinc-800 dark:text-zinc-200">
-                          {affix}
-                        </span>
-                        <button
-                          onClick={() => handleDeleteAffix(index)}
-                          className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 font-medium"
-                        >
-                          Delete
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+              {/* Equipment Type Selector */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium mb-2 text-zinc-800 dark:text-zinc-200">
+                  Equipment Type
+                </label>
+                <select
+                  value={selectedEquipmentType || ""}
+                  onChange={handleEquipmentTypeChange}
+                  className="w-full px-4 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">Select equipment type...</option>
+                  {getValidEquipmentTypes(selectedSlot).map((type) => (
+                    <option key={type} value={type}>
+                      {type}
+                    </option>
+                  ))}
+                </select>
               </div>
 
-              {/* Add Affix Input */}
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  value={newAffix}
-                  onChange={(e) => setNewAffix(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") handleAddAffix();
-                  }}
-                  placeholder="e.g., +10% fire damage"
-                  className="flex-1 px-4 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button
-                  onClick={handleAddAffix}
-                  className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                >
-                  Add
-                </button>
-              </div>
+              {selectedEquipmentType ? (
+                <>
+                  {/* Prefix Section */}
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold mb-3 text-zinc-800 dark:text-zinc-200">
+                      Prefixes (3 max)
+                    </h3>
+                    <div className="space-y-4">
+                      {[0, 1, 2].map((slotIndex) => (
+                        <AffixSlotComponent
+                          key={slotIndex}
+                          slotIndex={slotIndex}
+                          affixType="Prefix"
+                          affixes={prefixAffixes}
+                          selection={affixSelections[slotIndex]}
+                          onAffixSelect={handleAffixSelect}
+                          onSliderChange={handleSliderChange}
+                          onClear={handleClearAffix}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Suffix Section */}
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold mb-3 text-zinc-800 dark:text-zinc-200">
+                      Suffixes (3 max)
+                    </h3>
+                    <div className="space-y-4">
+                      {[3, 4, 5].map((slotIndex) => (
+                        <AffixSlotComponent
+                          key={slotIndex}
+                          slotIndex={slotIndex}
+                          affixType="Suffix"
+                          affixes={suffixAffixes}
+                          selection={affixSelections[slotIndex]}
+                          onAffixSelect={handleAffixSelect}
+                          onSliderChange={handleSliderChange}
+                          onClear={handleClearAffix}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <p className="text-zinc-500 dark:text-zinc-400 italic text-center py-8">
+                  Select an equipment type to begin crafting affixes
+                </p>
+              )}
             </div>
           </>
         )}
