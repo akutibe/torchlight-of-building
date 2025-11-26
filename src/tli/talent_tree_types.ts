@@ -39,7 +39,6 @@ export const PROFESSION_TREES = [
 
 export const ALL_TREES = R.concat(GOD_GODDESS_TREES, PROFESSION_TREES);
 
-
 export type TreeName = (typeof ALL_TREES)[number];
 
 export const isProfessionName = (name: string): name is TreeName => {

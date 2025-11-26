@@ -7,14 +7,9 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "{0}% Cursed Effect",
-    valueRanges: [
-      {
-        min: -50,
-        max: -30,
-      },
-    ],
-    rawAffix: "`(-50--30)`% Cursed Effect",
+    template: " (-50--30)% Cursed Effect",
+    valueRanges: [],
+    rawAffix: "` (-50--30)`% Cursed Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -22,14 +17,9 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Sealed Mana Compensation",
-    valueRanges: [
-      {
-        min: 10,
-        max: 15,
-      },
-    ],
-    rawAffix: "`+(10-15)`% Sealed Mana Compensation",
+    template: " +(10-15)% Sealed Mana Compensation",
+    valueRanges: [],
+    rawAffix: "` +(10-15)`% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Helmet",
@@ -37,14 +27,9 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Max Energy Shield",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`% Max Energy Shield",
+    template: " +(15-20)% Max Energy Shield",
+    valueRanges: [],
+    rawAffix: "` +(15-20)`% Max Energy Shield",
   },
   {
     equipmentSlot: "Helmet",
@@ -52,14 +37,9 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Max Life",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`% Max Life",
+    template: " +(15-20)% Max Life",
+    valueRanges: [],
+    rawAffix: "` +(15-20)`% Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -67,14 +47,9 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% gear Evasion",
-    valueRanges: [
-      {
-        min: 30,
-        max: 50,
-      },
-    ],
-    rawAffix: "`+(30-50)`% gear Evasion",
+    template: " +(30-50)% gear Evasion",
+    valueRanges: [],
+    rawAffix: "` +(30-50)`% gear Evasion",
   },
   {
     equipmentSlot: "Helmet",
@@ -82,14 +57,9 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% damage",
-    valueRanges: [
-      {
-        min: 50,
-        max: 70,
-      },
-    ],
-    rawAffix: "`+(50-70)`% damage",
+    template: " +(50-70)% damage",
+    valueRanges: [],
+    rawAffix: "` +(50-70)`% damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -107,9 +77,9 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks +1",
+    template: "Max Focus Blessing Stacks  +1 ",
     valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks `+1`",
+    rawAffix: "Max Focus Blessing Stacks ` +1` ",
   },
   {
     equipmentSlot: "Helmet",
@@ -118,15 +88,10 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     craftingPool: "",
     tier: "0",
     template:
-      "Triggers Lv. {0}Timid Curse upon inflicting damage. Cooldown: 0.3s",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
+      "Triggers Lv.  (15-20) Timid Curse upon inflicting damage. Cooldown:  0.3 s",
+    valueRanges: [],
     rawAffix:
-      "Triggers Lv. `(15-20)`Timid Curse upon inflicting damage. Cooldown: `0.3`s",
+      "Triggers Lv. ` (15-20)` Timid Curse upon inflicting damage. Cooldown: ` 0.3` s",
   },
   {
     equipmentSlot: "Helmet",
@@ -135,15 +100,10 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES = [
     craftingPool: "",
     tier: "0",
     template:
-      "Triggers Lv. {0}Entangled Pain Curse upon inflicting damage. Cooldown: 0.3s",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
+      "Triggers Lv.  (15-20) Entangled Pain Curse upon inflicting damage. Cooldown:  0.3 s",
+    valueRanges: [],
     rawAffix:
-      "Triggers Lv. `(15-20)`Entangled Pain Curse upon inflicting damage. Cooldown: `0.3`s",
+      "Triggers Lv. ` (15-20)` Entangled Pain Curse upon inflicting damage. Cooldown: ` 0.3` s",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

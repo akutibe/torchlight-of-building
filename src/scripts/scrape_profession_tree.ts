@@ -1,6 +1,10 @@
 import * as cheerio from "cheerio";
 import { TalentTreeData, TalentNodeData } from "../tli/core";
-import { ALL_TREES, isProfessionName, TreeName } from "../tli/talent_tree_types";
+import {
+  ALL_TREES,
+  isProfessionName,
+  TreeName,
+} from "../tli/talent_tree_types";
 
 interface NodeData {
   cx: number;
@@ -65,7 +69,7 @@ const parseAffix = (htmlContent: string): string => {
  * Scrapes the profession tree page and returns all talent nodes
  */
 const scrapeProfessionTree = async (
-  professionName: string
+  professionName: string,
 ): Promise<TalentTreeData> => {
   if (!isProfessionName(professionName)) {
     throw Error();
@@ -77,7 +81,7 @@ const scrapeProfessionTree = async (
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(
-        `Failed to fetch: ${response.status} ${response.statusText}`
+        `Failed to fetch: ${response.status} ${response.statusText}`,
       );
     }
 
@@ -126,7 +130,7 @@ const scrapeProfessionTree = async (
         (_, el) => {
           const y = parseFloat($(el).attr("y") || "0");
           return Math.abs(y - (cy + 26)) < 5; // Allow small tolerance
-        }
+        },
       );
 
       const maxPoints = parseInt($levelUpText.text() || "0", 10);
@@ -153,7 +157,7 @@ const scrapeProfessionTree = async (
     const findNodeByEdge = (
       edgeX: number,
       edgeY: number,
-      isRightEdge: boolean
+      isRightEdge: boolean,
     ): NodeData | undefined => {
       // Convert edge coordinate to center coordinate
       const cx = isRightEdge ? edgeX - CIRCLE_RADIUS : edgeX + CIRCLE_RADIUS;

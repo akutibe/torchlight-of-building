@@ -7,14 +7,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Blur Effect",
-    valueRanges: [
-      {
-        min: 6,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(6-8)`% Blur Effect",
+    template: " +(6-8)% Blur Effect",
+    valueRanges: [],
+    rawAffix: "` +(6-8)`% Blur Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -22,9 +17,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Agility Blessing Stacks +1",
+    template: "Max Agility Blessing Stacks  +1 ",
     valueRanges: [],
-    rawAffix: "Max Agility Blessing Stacks `+1`",
+    rawAffix: "Max Agility Blessing Stacks ` +1` ",
   },
   {
     equipmentSlot: "One-Handed",
@@ -32,9 +27,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks +1",
+    template: "Max Focus Blessing Stacks  +1 ",
     valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks `+1`",
+    rawAffix: "Max Focus Blessing Stacks ` +1` ",
   },
   {
     equipmentSlot: "One-Handed",
@@ -42,9 +37,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Tenacity Blessing Stacks +1",
+    template: "Max Tenacity Blessing Stacks  +1 ",
     valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks `+1`",
+    rawAffix: "Max Tenacity Blessing Stacks ` +1` ",
   },
   {
     equipmentSlot: "One-Handed",
@@ -52,14 +47,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "+{0}% Reaping Cooldown Recovery Speed",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`% Reaping Cooldown Recovery Speed",
+    template: " +(15-20)% Reaping Cooldown Recovery Speed",
+    valueRanges: [],
+    rawAffix: "` +(15-20)`% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -67,14 +57,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "+{0}% additional Damage Over Time",
-    valueRanges: [
-      {
-        min: 6,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(6-8)`% additional Damage Over Time",
+    template: " +(6-8)% additional Damage Over Time",
+    valueRanges: [],
+    rawAffix: "` +(6-8)`% additional Damage Over Time",
   },
   {
     equipmentSlot: "One-Handed",
@@ -82,14 +67,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    template: "+{0}% Elemental and Erosion Resistance Penetration",
-    valueRanges: [
-      {
-        min: 6,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(6-8)`% Elemental and Erosion Resistance Penetration",
+    template: " +(6-8)% Elemental and Erosion Resistance Penetration",
+    valueRanges: [],
+    rawAffix: "` +(6-8)`% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,14 +77,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Affliction Effect",
-    valueRanges: [
-      {
-        min: 10,
-        max: 14,
-      },
-    ],
-    rawAffix: "`+(10-14)`% Affliction Effect",
+    template: " +(10-14)% Affliction Effect",
+    valueRanges: [],
+    rawAffix: "` +(10-14)`% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -112,14 +87,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Dexterity",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Dexterity",
+    template: " +(15-20) Dexterity",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,14 +97,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Intelligence",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Intelligence",
+    template: " +(15-20) Intelligence",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -142,14 +107,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Strength",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Strength",
+    template: " +(15-20) Strength",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -157,14 +117,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Elemental Damage",
-    valueRanges: [
-      {
-        min: 20,
-        max: 24,
-      },
-    ],
-    rawAffix: "`+(20-24)`% Elemental Damage",
+    template: " +(20-24)% Elemental Damage",
+    valueRanges: [],
+    rawAffix: "` +(20-24)`% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -172,14 +127,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Erosion Damage",
-    valueRanges: [
-      {
-        min: 20,
-        max: 24,
-      },
-    ],
-    rawAffix: "`+(20-24)`% Erosion Damage",
+    template: " +(20-24)% Erosion Damage",
+    valueRanges: [],
+    rawAffix: "` +(20-24)`% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -187,14 +137,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Physical Damage",
-    valueRanges: [
-      {
-        min: 20,
-        max: 24,
-      },
-    ],
-    rawAffix: "`+(20-24)`% Physical Damage",
+    template: " +(20-24)% Physical Damage",
+    valueRanges: [],
+    rawAffix: "` +(20-24)`% Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -202,14 +147,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Spell Damage",
-    valueRanges: [
-      {
-        min: 20,
-        max: 24,
-      },
-    ],
-    rawAffix: "`+(20-24)`% Spell Damage",
+    template: " +(20-24)% Spell Damage",
+    valueRanges: [],
+    rawAffix: "` +(20-24)`% Spell Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -217,14 +157,9 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Reaping Duration",
-    valueRanges: [
-      {
-        min: 8,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(8-10)`% Reaping Duration",
+    template: " +(8-10)% Reaping Duration",
+    valueRanges: [],
+    rawAffix: "` +(8-10)`% Reaping Duration",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -8,10 +8,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     template:
-      "-45% additional Damage Over Time taken when having at least 50000Evasion",
+      " -45% additional Damage Over Time taken when having at least  50000 Evasion",
     valueRanges: [],
     rawAffix:
-      "`-45`% additional Damage Over Time taken when having at least `50000`Evasion",
+      "` -45`% additional Damage Over Time taken when having at least ` 50000` Evasion",
   },
   {
     equipmentSlot: "Boots",
@@ -19,14 +19,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "{0}% of damage is taken from Mana before life",
-    valueRanges: [
-      {
-        min: 21,
-        max: 26,
-      },
-    ],
-    rawAffix: "`(21-26)`% of damage is taken from Mana before life",
+    template: " (21-26)% of damage is taken from Mana before life",
+    valueRanges: [],
+    rawAffix: "` (21-26)`% of damage is taken from Mana before life",
   },
   {
     equipmentSlot: "Boots",
@@ -34,14 +29,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+{0}% additional Max Life",
-    valueRanges: [
-      {
-        min: 16,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(16-20)`% additional Max Life",
+    template: " +(16-20)% additional Max Life",
+    valueRanges: [],
+    rawAffix: "` +(16-20)`% additional Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -50,15 +40,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     template:
-      "+{0}% Spell Burst Charge Speed\n+10% chance to immediately gain 1stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
-    valueRanges: [
-      {
-        min: 31,
-        max: 40,
-      },
-    ],
+      " +(31-40)% Spell Burst Charge Speed\n+10% chance to immediately gain  1 stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
+    valueRanges: [],
     rawAffix:
-      "`+(31-40)`% Spell Burst Charge Speed<> `+10`% chance to immediately gain `1`stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
+      "` +(31-40)`% Spell Burst Charge Speed<> ` +10`% chance to immediately gain ` 1` stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
   },
   {
     equipmentSlot: "Boots",
@@ -66,14 +51,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+{0}% chance to avoid Spell Damage",
-    valueRanges: [
-      {
-        min: 31,
-        max: 40,
-      },
-    ],
-    rawAffix: "`+(31-40)`% chance to avoid Spell Damage",
+    template: " +(31-40)% chance to avoid Spell Damage",
+    valueRanges: [],
+    rawAffix: "` +(31-40)`% chance to avoid Spell Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -81,14 +61,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "70% chance to gain Blur per {0}m you move",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`70`% chance to gain Blur per `(5-10)`m you move",
+    template: " 70% chance to gain Blur per  (5-10) m you move",
+    valueRanges: [],
+    rawAffix: "` 70`% chance to gain Blur per ` (5-10)` m you move",
   },
   {
     equipmentSlot: "Boots",
@@ -96,15 +71,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Converts {0}% of Physical Damage taken to Lightning Damage",
-    valueRanges: [
-      {
-        min: 16,
-        max: 20,
-      },
-    ],
+    template: "Converts  (16-20)% of Physical Damage taken to Lightning Damage",
+    valueRanges: [],
     rawAffix:
-      "Converts `(16-20)`% of Physical Damage taken to Lightning Damage",
+      "Converts ` (16-20)`% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -112,14 +82,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Converts {0}% of Erosion Damage taken to Lightning Damage",
-    valueRanges: [
-      {
-        min: 36,
-        max: 45,
-      },
-    ],
-    rawAffix: "Converts `(36-45)`% of Erosion Damage taken to Lightning Damage",
+    template: "Converts  (36-45)% of Erosion Damage taken to Lightning Damage",
+    valueRanges: [],
+    rawAffix:
+      "Converts ` (36-45)`% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -127,14 +93,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Triggers Lv. {0}Aim while standing still. Interval: 1s",
-    valueRanges: [
-      {
-        min: 11,
-        max: 20,
-      },
-    ],
-    rawAffix: "Triggers Lv. `(11-20)`Aim while standing still. Interval: `1`s",
+    template: "Triggers Lv.  (11-20) Aim while standing still. Interval:  1 s",
+    valueRanges: [],
+    rawAffix:
+      "Triggers Lv. ` (11-20)` Aim while standing still. Interval: ` 1` s",
   },
   {
     equipmentSlot: "Boots",
@@ -143,10 +105,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     template:
-      "-40% additional Damage Over Time taken when having at least 50000Evasion",
+      " -40% additional Damage Over Time taken when having at least  50000 Evasion",
     valueRanges: [],
     rawAffix:
-      "`-40`% additional Damage Over Time taken when having at least `50000`Evasion",
+      "` -40`% additional Damage Over Time taken when having at least ` 50000` Evasion",
   },
   {
     equipmentSlot: "Boots",
@@ -154,14 +116,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "{0}% of damage is taken from Mana before life",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`(15-20)`% of damage is taken from Mana before life",
+    template: " (15-20)% of damage is taken from Mana before life",
+    valueRanges: [],
+    rawAffix: "` (15-20)`% of damage is taken from Mana before life",
   },
   {
     equipmentSlot: "Boots",
@@ -169,14 +126,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "+{0}% additional Max Life",
-    valueRanges: [
-      {
-        min: 12,
-        max: 15,
-      },
-    ],
-    rawAffix: "`+(12-15)`% additional Max Life",
+    template: " +(12-15)% additional Max Life",
+    valueRanges: [],
+    rawAffix: "` +(12-15)`% additional Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -185,15 +137,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     template:
-      "+{0}% Spell Burst Charge Speed\n+10% chance to immediately gain 1stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
-    valueRanges: [
-      {
-        min: 21,
-        max: 30,
-      },
-    ],
+      " +(21-30)% Spell Burst Charge Speed\n+10% chance to immediately gain  1 stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
+    valueRanges: [],
     rawAffix:
-      "`+(21-30)`% Spell Burst Charge Speed<> `+10`% chance to immediately gain `1`stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
+      "` +(21-30)`% Spell Burst Charge Speed<> ` +10`% chance to immediately gain ` 1` stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
   },
   {
     equipmentSlot: "Boots",
@@ -201,14 +148,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "+{0}% chance to avoid Spell Damage",
-    valueRanges: [
-      {
-        min: 26,
-        max: 30,
-      },
-    ],
-    rawAffix: "`+(26-30)`% chance to avoid Spell Damage",
+    template: " +(26-30)% chance to avoid Spell Damage",
+    valueRanges: [],
+    rawAffix: "` +(26-30)`% chance to avoid Spell Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -216,14 +158,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "50% chance to gain Blur per {0}m you move",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`50`% chance to gain Blur per `(5-10)`m you move",
+    template: " 50% chance to gain Blur per  (5-10) m you move",
+    valueRanges: [],
+    rawAffix: "` 50`% chance to gain Blur per ` (5-10)` m you move",
   },
   {
     equipmentSlot: "Boots",
@@ -231,15 +168,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Converts {0}% of Physical Damage taken to Lightning Damage",
-    valueRanges: [
-      {
-        min: 12,
-        max: 15,
-      },
-    ],
+    template: "Converts  (12-15)% of Physical Damage taken to Lightning Damage",
+    valueRanges: [],
     rawAffix:
-      "Converts `(12-15)`% of Physical Damage taken to Lightning Damage",
+      "Converts ` (12-15)`% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -247,14 +179,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Converts {0}% of Erosion Damage taken to Lightning Damage",
-    valueRanges: [
-      {
-        min: 27,
-        max: 35,
-      },
-    ],
-    rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Lightning Damage",
+    template: "Converts  (27-35)% of Erosion Damage taken to Lightning Damage",
+    valueRanges: [],
+    rawAffix:
+      "Converts ` (27-35)`% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -262,14 +190,10 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Triggers Lv. {0}Aim while standing still. Interval: 1s",
-    valueRanges: [
-      {
-        min: 6,
-        max: 10,
-      },
-    ],
-    rawAffix: "Triggers Lv. `(6-10)`Aim while standing still. Interval: `1`s",
+    template: "Triggers Lv.  (6-10) Aim while standing still. Interval:  1 s",
+    valueRanges: [],
+    rawAffix:
+      "Triggers Lv. ` (6-10)` Aim while standing still. Interval: ` 1` s",
   },
   {
     equipmentSlot: "Boots",
@@ -277,14 +201,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Attack and Spell Block Chance",
-    valueRanges: [
-      {
-        min: 16,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(16-20)`% Attack and Spell Block Chance",
+    template: " +(16-20)% Attack and Spell Block Chance",
+    valueRanges: [],
+    rawAffix: "` +(16-20)`% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Boots",
@@ -292,14 +211,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Projectile Speed",
-    valueRanges: [
-      {
-        min: 46,
-        max: 59,
-      },
-    ],
-    rawAffix: "`+(46-59)`% Projectile Speed",
+    template: " +(46-59)% Projectile Speed",
+    valueRanges: [],
+    rawAffix: "` +(46-59)`% Projectile Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -307,9 +221,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+2Cold Skill Level",
+    template: " +2 Cold Skill Level",
     valueRanges: [],
-    rawAffix: "`+2`Cold Skill Level",
+    rawAffix: "` +2` Cold Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -317,9 +231,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+2Erosion Skill Level",
+    template: " +2 Erosion Skill Level",
     valueRanges: [],
-    rawAffix: "`+2`Erosion Skill Level",
+    rawAffix: "` +2` Erosion Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -327,9 +241,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+2Fire Skill Level",
+    template: " +2 Fire Skill Level",
     valueRanges: [],
-    rawAffix: "`+2`Fire Skill Level",
+    rawAffix: "` +2` Fire Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -337,9 +251,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+2Lightning Skill Level",
+    template: " +2 Lightning Skill Level",
     valueRanges: [],
-    rawAffix: "`+2`Lightning Skill Level",
+    rawAffix: "` +2` Lightning Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -347,9 +261,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+2Minion Skill Level",
+    template: " +2 Minion Skill Level",
     valueRanges: [],
-    rawAffix: "`+2`Minion Skill Level",
+    rawAffix: "` +2` Minion Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -357,9 +271,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+2Physical Skill Level",
+    template: " +2 Physical Skill Level",
     valueRanges: [],
-    rawAffix: "`+2`Physical Skill Level",
+    rawAffix: "` +2` Physical Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -367,39 +281,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Attack and Spell Block Chance",
-    valueRanges: [
-      {
-        min: 12,
-        max: 15,
-      },
-    ],
-    rawAffix: "`+(12-15)`% Attack and Spell Block Chance",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (DEX)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    template: "+{0}% Projectile Speed",
-    valueRanges: [
-      {
-        min: 33,
-        max: 45,
-      },
-    ],
-    rawAffix: "`+(33-45)`% Projectile Speed",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (DEX)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    template: "+1Cold Skill Level",
+    template: " +(12-15)% Attack and Spell Block Chance",
     valueRanges: [],
-    rawAffix: "`+1`Cold Skill Level",
+    rawAffix: "` +(12-15)`% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Boots",
@@ -407,9 +291,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+1Erosion Skill Level",
+    template: " +(33-45)% Projectile Speed",
     valueRanges: [],
-    rawAffix: "`+1`Erosion Skill Level",
+    rawAffix: "` +(33-45)`% Projectile Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -417,9 +301,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+1Fire Skill Level",
+    template: " +1 Cold Skill Level",
     valueRanges: [],
-    rawAffix: "`+1`Fire Skill Level",
+    rawAffix: "` +1` Cold Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -427,9 +311,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+1Lightning Skill Level",
+    template: " +1 Erosion Skill Level",
     valueRanges: [],
-    rawAffix: "`+1`Lightning Skill Level",
+    rawAffix: "` +1` Erosion Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -437,9 +321,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+1Minion Skill Level",
+    template: " +1 Fire Skill Level",
     valueRanges: [],
-    rawAffix: "`+1`Minion Skill Level",
+    rawAffix: "` +1` Fire Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -447,9 +331,29 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+1Physical Skill Level",
+    template: " +1 Lightning Skill Level",
     valueRanges: [],
-    rawAffix: "`+1`Physical Skill Level",
+    rawAffix: "` +1` Lightning Skill Level",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (DEX)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    template: " +1 Minion Skill Level",
+    valueRanges: [],
+    rawAffix: "` +1` Minion Skill Level",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (DEX)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    template: " +1 Physical Skill Level",
+    valueRanges: [],
+    rawAffix: "` +1` Physical Skill Level",
   },
   {
     equipmentSlot: "Boots",
@@ -457,14 +361,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}Max Mana",
-    valueRanges: [
-      {
-        min: 121,
-        max: 156,
-      },
-    ],
-    rawAffix: "`+(121-156)`Max Mana",
+    template: " +(121-156) Max Mana",
+    valueRanges: [],
+    rawAffix: "` +(121-156)` Max Mana",
   },
   {
     equipmentSlot: "Boots",
@@ -472,14 +371,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}Max Life",
-    valueRanges: [
-      {
-        min: 221,
-        max: 286,
-      },
-    ],
-    rawAffix: "`+(221-286)`Max Life",
+    template: " +(221-286) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(221-286)` Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -487,14 +381,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}gear Evasion",
-    valueRanges: [
-      {
-        min: 2881,
-        max: 3744,
-      },
-    ],
-    rawAffix: "`+(2881-3744)`gear Evasion",
+    template: " +(2881-3744) gear Evasion",
+    valueRanges: [],
+    rawAffix: "` +(2881-3744)` gear Evasion",
   },
   {
     equipmentSlot: "Boots",
@@ -502,14 +391,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Critical Strike Damage Mitigation",
-    valueRanges: [
-      {
-        min: 61,
-        max: 78,
-      },
-    ],
-    rawAffix: "`+(61-78)`% Critical Strike Damage Mitigation",
+    template: " +(61-78)% Critical Strike Damage Mitigation",
+    valueRanges: [],
+    rawAffix: "` +(61-78)`% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Boots",
@@ -517,14 +401,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% damage",
-    valueRanges: [
-      {
-        min: 73,
-        max: 94,
-      },
-    ],
-    rawAffix: "`+(73-94)`% damage",
+    template: " +(73-94)% damage",
+    valueRanges: [],
+    rawAffix: "` +(73-94)`% damage",
   },
   {
     equipmentSlot: "Boots",
@@ -532,14 +411,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Minion Damage",
-    valueRanges: [
-      {
-        min: 73,
-        max: 94,
-      },
-    ],
-    rawAffix: "`+(73-94)`% Minion Damage",
+    template: " +(73-94)% Minion Damage",
+    valueRanges: [],
+    rawAffix: "` +(73-94)`% Minion Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -547,14 +421,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}Max Life",
-    valueRanges: [
-      {
-        min: 154,
-        max: 220,
-      },
-    ],
-    rawAffix: "`+(154-220)`Max Life",
+    template: " +(154-220) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(154-220)` Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -562,14 +431,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}gear Evasion",
-    valueRanges: [
-      {
-        min: 2017,
-        max: 2880,
-      },
-    ],
-    rawAffix: "`+(2017-2880)`gear Evasion",
+    template: " +(2017-2880) gear Evasion",
+    valueRanges: [],
+    rawAffix: "` +(2017-2880)` gear Evasion",
   },
   {
     equipmentSlot: "Boots",
@@ -577,14 +441,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Critical Strike Damage Mitigation",
-    valueRanges: [
-      {
-        min: 43,
-        max: 60,
-      },
-    ],
-    rawAffix: "`+(43-60)`% Critical Strike Damage Mitigation",
+    template: " +(43-60)% Critical Strike Damage Mitigation",
+    valueRanges: [],
+    rawAffix: "` +(43-60)`% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Boots",
@@ -592,14 +451,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% damage",
-    valueRanges: [
-      {
-        min: 51,
-        max: 72,
-      },
-    ],
-    rawAffix: "`+(51-72)`% damage",
+    template: " +(51-72)% damage",
+    valueRanges: [],
+    rawAffix: "` +(51-72)`% damage",
   },
   {
     equipmentSlot: "Boots",
@@ -607,14 +461,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Minion Damage",
-    valueRanges: [
-      {
-        min: 51,
-        max: 72,
-      },
-    ],
-    rawAffix: "`+(51-72)`% Minion Damage",
+    template: " +(51-72)% Minion Damage",
+    valueRanges: [],
+    rawAffix: "` +(51-72)`% Minion Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -622,14 +471,9 @@ export const BOOTS_DEX_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}Max Mana",
-    valueRanges: [
-      {
-        min: 85,
-        max: 120,
-      },
-    ],
-    rawAffix: "`+(85-120)`Max Mana",
+    template: " +(85-120) Max Mana",
+    valueRanges: [],
+    rawAffix: "` +(85-120)` Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

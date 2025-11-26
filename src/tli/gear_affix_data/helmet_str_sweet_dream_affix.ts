@@ -7,141 +7,93 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Armor Effective Rate for Non-Physical Damage",
-    valueRanges: [
-      {
-        min: 13,
-        max: 14,
-      },
-    ],
-    rawAffix: "`+(13-14)`% Armor Effective Rate for Non-Physical Damage",
-  },
-  {
-    equipmentSlot: "Helmet",
-    equipmentType: "Helmet (STR)",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "0",
-    template: "+{0}% Max Elemental Resistance",
-    valueRanges: [
-      {
-        min: 3,
-        max: 5,
-      },
-    ],
-    rawAffix: "`+(3-5)`% Max Elemental Resistance",
-  },
-  {
-    equipmentSlot: "Helmet",
-    equipmentType: "Helmet (STR)",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "0",
-    template: "Converts {0}% of Physical Damage taken to Fire Damage",
-    valueRanges: [
-      {
-        min: 12,
-        max: 15,
-      },
-    ],
-    rawAffix: "Converts `(12-15)`% of Physical Damage taken to Fire Damage",
-  },
-  {
-    equipmentSlot: "Helmet",
-    equipmentType: "Helmet (STR)",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "0",
-    template: "Converts {0}% of Erosion Damage taken to Fire Damage",
-    valueRanges: [
-      {
-        min: 27,
-        max: 35,
-      },
-    ],
-    rawAffix: "Converts `(27-35)`% of Erosion Damage taken to Fire Damage",
-  },
-  {
-    equipmentSlot: "Helmet",
-    equipmentType: "Helmet (STR)",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "1",
-    template:
-      "+{0}% Armor DMG Mitigation Penetration\n+{1}% Armor DMG Mitigation Penetration for Minions",
-    valueRanges: [
-      {
-        min: 5,
-        max: 7,
-      },
-      {
-        min: 5,
-        max: 7,
-      },
-    ],
-    rawAffix:
-      "`+(5-7)`% Armor DMG Mitigation Penetration<> `+(5-7)`% Armor DMG Mitigation Penetration for Minions",
-  },
-  {
-    equipmentSlot: "Helmet",
-    equipmentType: "Helmet (STR)",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "1",
-    template: "+{0}% Sealed Mana Compensation",
-    valueRanges: [
-      {
-        min: 6,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(6-8)`% Sealed Mana Compensation",
-  },
-  {
-    equipmentSlot: "Helmet",
-    equipmentType: "Helmet (STR)",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "1",
-    template:
-      "+{0}% Elemental and Erosion Resistance Penetration\n+{1}% Elemental and Erosion Resistance Penetration for Minions",
-    valueRanges: [
-      {
-        min: 6,
-        max: 8,
-      },
-      {
-        min: 6,
-        max: 8,
-      },
-    ],
-    rawAffix:
-      "`+(6-8)`% Elemental and Erosion Resistance Penetration<> `+(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
-  },
-  {
-    equipmentSlot: "Helmet",
-    equipmentType: "Helmet (STR)",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "1",
-    template: "+{0}% Aura Effect",
-    valueRanges: [
-      {
-        min: 7,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(7-8)`% Aura Effect",
-  },
-  {
-    equipmentSlot: "Helmet",
-    equipmentType: "Helmet (STR)",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "1",
-    template: "Nearby enemies within 15m have Frail",
+    template: " +(13-14)% Armor Effective Rate for Non-Physical Damage",
     valueRanges: [],
-    rawAffix: "Nearby enemies within `15`m have Frail",
+    rawAffix: "` +(13-14)`% Armor Effective Rate for Non-Physical Damage",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "0",
+    template: " +(3-5)% Max Elemental Resistance",
+    valueRanges: [],
+    rawAffix: "` +(3-5)`% Max Elemental Resistance",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "0",
+    template: "Converts  (12-15)% of Physical Damage taken to Fire Damage",
+    valueRanges: [],
+    rawAffix: "Converts ` (12-15)`% of Physical Damage taken to Fire Damage",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "0",
+    template: "Converts  (27-35)% of Erosion Damage taken to Fire Damage",
+    valueRanges: [],
+    rawAffix: "Converts ` (27-35)`% of Erosion Damage taken to Fire Damage",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    template:
+      " +(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
+    valueRanges: [],
+    rawAffix:
+      "` +(5-7)`% Armor DMG Mitigation Penetration<> ` +(5-7)`% Armor DMG Mitigation Penetration for Minions",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    template: " +(6-8)% Sealed Mana Compensation",
+    valueRanges: [],
+    rawAffix: "` +(6-8)`% Sealed Mana Compensation",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    template:
+      " +(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
+    valueRanges: [],
+    rawAffix:
+      "` +(6-8)`% Elemental and Erosion Resistance Penetration<> ` +(6-8)`% Elemental and Erosion Resistance Penetration for Minions",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    template: " +(7-8)% Aura Effect",
+    valueRanges: [],
+    rawAffix: "` +(7-8)`% Aura Effect",
+  },
+  {
+    equipmentSlot: "Helmet",
+    equipmentType: "Helmet (STR)",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    template: "Nearby enemies within  15 m have Frail",
+    valueRanges: [],
+    rawAffix: "Nearby enemies within ` 15` m have Frail",
   },
   {
     equipmentSlot: "Helmet",
@@ -149,14 +101,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Dexterity",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Dexterity",
+    template: " +(15-20) Dexterity",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Dexterity",
   },
   {
     equipmentSlot: "Helmet",
@@ -164,14 +111,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Intelligence",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Intelligence",
+    template: " +(15-20) Intelligence",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Intelligence",
   },
   {
     equipmentSlot: "Helmet",
@@ -179,14 +121,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Strength",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Strength",
+    template: " +(15-20) Strength",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Strength",
   },
   {
     equipmentSlot: "Helmet",
@@ -194,14 +131,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Skill Area",
-    valueRanges: [
-      {
-        min: 20,
-        max: 24,
-      },
-    ],
-    rawAffix: "`+(20-24)`% Skill Area",
+    template: " +(20-24)% Skill Area",
+    valueRanges: [],
+    rawAffix: "` +(20-24)`% Skill Area",
   },
   {
     equipmentSlot: "Helmet",
@@ -209,14 +141,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Cold Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Cold Resistance",
+    template: " +(5-10)% Cold Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Cold Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -224,14 +151,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Erosion Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Erosion Resistance",
+    template: " +(5-10)% Erosion Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Erosion Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -239,14 +161,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Fire Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Fire Resistance",
+    template: " +(5-10)% Fire Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Fire Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -254,14 +171,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Lightning Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Lightning Resistance",
+    template: " +(5-10)% Lightning Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Lightning Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -269,14 +181,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Max Life",
-    valueRanges: [
-      {
-        min: 54,
-        max: 74,
-      },
-    ],
-    rawAffix: "`+(54-74)`Max Life",
+    template: " +(54-74) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(54-74)` Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -284,14 +191,9 @@ export const HELMET_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Armor",
-    valueRanges: [
-      {
-        min: 760,
-        max: 960,
-      },
-    ],
-    rawAffix: "`+(760-960)`Armor",
+    template: " +(760-960) Armor",
+    valueRanges: [],
+    rawAffix: "` +(760-960)` Armor",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,69 +7,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+{0}% Armor DMG Mitigation Penetration",
-    valueRanges: [
-      {
-        min: 18,
-        max: 22,
-      },
-    ],
-    rawAffix: "`+(18-22)`% Armor DMG Mitigation Penetration",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    template: "+{0}% Elemental and Erosion Resistance Penetration",
-    valueRanges: [
-      {
-        min: 21,
-        max: 26,
-      },
-    ],
-    rawAffix: "`+(21-26)`% Elemental and Erosion Resistance Penetration",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    template: "+{0}% Deterioration Damage",
-    valueRanges: [
-      {
-        min: 51,
-        max: 65,
-      },
-    ],
-    rawAffix: "`+(51-65)`% Deterioration Damage",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    template: "+15% Max Mana. +{0}Skill Cost",
-    valueRanges: [
-      {
-        min: 100,
-        max: 120,
-      },
-    ],
-    rawAffix: "`+15`% Max Mana. `+(100-120)`Skill Cost",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    template: "Max Agility Blessing Stacks +1\n+5% additional damage",
+    template: " +(18-22)% Armor DMG Mitigation Penetration",
     valueRanges: [],
-    rawAffix: "Max Agility Blessing Stacks `+1`<> `+5`% additional damage",
+    rawAffix: "` +(18-22)`% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Trinket",
@@ -77,9 +17,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Max Focus Blessing Stacks +1\n+5% additional damage",
+    template: " +(21-26)% Elemental and Erosion Resistance Penetration",
     valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks `+1`<> `+5`% additional damage",
+    rawAffix: "` +(21-26)`% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,64 +27,49 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "Max Tenacity Blessing Stacks +1\n+5% additional damage",
+    template: " +(51-65)% Deterioration Damage",
     valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks `+1`<> `+5`% additional damage",
+    rawAffix: "` +(51-65)`% Deterioration Damage",
   },
   {
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
     affixType: "Prefix",
     craftingPool: "Ultimate",
-    tier: "1",
-    template: "+{0}% Armor DMG Mitigation Penetration",
-    valueRanges: [
-      {
-        min: 13,
-        max: 17,
-      },
-    ],
-    rawAffix: "`+(13-17)`% Armor DMG Mitigation Penetration",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    template: "+{0}% Elemental and Erosion Resistance Penetration",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`% Elemental and Erosion Resistance Penetration",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    template: "+{0}% Deterioration Damage",
-    valueRanges: [
-      {
-        min: 36,
-        max: 50,
-      },
-    ],
-    rawAffix: "`+(36-50)`% Deterioration Damage",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Ring",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    template: "+10% Max Mana. +80Skill Cost",
+    tier: "0",
+    template: " +15% Max Mana.  +(100-120) Skill Cost",
     valueRanges: [],
-    rawAffix: "`+10`% Max Mana. `+80`Skill Cost",
+    rawAffix: "` +15`% Max Mana. ` +(100-120)` Skill Cost",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    template: "Max Agility Blessing Stacks  +1 \n+5% additional damage",
+    valueRanges: [],
+    rawAffix: "Max Agility Blessing Stacks ` +1` <> ` +5`% additional damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    template: "Max Focus Blessing Stacks  +1 \n+5% additional damage",
+    valueRanges: [],
+    rawAffix: "Max Focus Blessing Stacks ` +1` <> ` +5`% additional damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    template: "Max Tenacity Blessing Stacks  +1 \n+5% additional damage",
+    valueRanges: [],
+    rawAffix: "Max Tenacity Blessing Stacks ` +1` <> ` +5`% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -152,9 +77,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Max Agility Blessing Stacks +1",
+    template: " +(13-17)% Armor DMG Mitigation Penetration",
     valueRanges: [],
-    rawAffix: "Max Agility Blessing Stacks `+1`",
+    rawAffix: "` +(13-17)`% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Trinket",
@@ -162,9 +87,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Max Focus Blessing Stacks +1",
+    template: " +(15-20)% Elemental and Erosion Resistance Penetration",
     valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks `+1`",
+    rawAffix: "` +(15-20)`% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Trinket",
@@ -172,9 +97,49 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "Max Tenacity Blessing Stacks +1",
+    template: " +(36-50)% Deterioration Damage",
     valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks `+1`",
+    rawAffix: "` +(36-50)`% Deterioration Damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    template: " +10% Max Mana.  +80 Skill Cost",
+    valueRanges: [],
+    rawAffix: "` +10`% Max Mana. ` +80` Skill Cost",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    template: "Max Agility Blessing Stacks  +1 ",
+    valueRanges: [],
+    rawAffix: "Max Agility Blessing Stacks ` +1` ",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    template: "Max Focus Blessing Stacks  +1 ",
+    valueRanges: [],
+    rawAffix: "Max Focus Blessing Stacks ` +1` ",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    template: "Max Tenacity Blessing Stacks  +1 ",
+    valueRanges: [],
+    rawAffix: "Max Tenacity Blessing Stacks ` +1` ",
   },
   {
     equipmentSlot: "Trinket",
@@ -182,14 +147,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Attack and Spell Block Chance",
-    valueRanges: [
-      {
-        min: 16,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(16-20)`% Attack and Spell Block Chance",
+    template: " +(16-20)% Attack and Spell Block Chance",
+    valueRanges: [],
+    rawAffix: "` +(16-20)`% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -197,14 +157,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Deterioration Chance",
-    valueRanges: [
-      {
-        min: 33,
-        max: 42,
-      },
-    ],
-    rawAffix: "`+(33-42)`% Deterioration Chance",
+    template: " +(33-42)% Deterioration Chance",
+    valueRanges: [],
+    rawAffix: "` +(33-42)`% Deterioration Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -212,14 +167,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}Dexterity",
-    valueRanges: [
-      {
-        min: 61,
-        max: 78,
-      },
-    ],
-    rawAffix: "`+(61-78)`Dexterity",
+    template: " +(61-78) Dexterity",
+    valueRanges: [],
+    rawAffix: "` +(61-78)` Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -227,14 +177,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}Intelligence",
-    valueRanges: [
-      {
-        min: 61,
-        max: 78,
-      },
-    ],
-    rawAffix: "`+(61-78)`Intelligence",
+    template: " +(61-78) Intelligence",
+    valueRanges: [],
+    rawAffix: "` +(61-78)` Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -242,14 +187,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}Strength",
-    valueRanges: [
-      {
-        min: 61,
-        max: 78,
-      },
-    ],
-    rawAffix: "`+(61-78)`Strength",
+    template: " +(61-78) Strength",
+    valueRanges: [],
+    rawAffix: "` +(61-78)` Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -257,18 +197,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "Adds {0}- {1}Fire Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 54,
-        max: 56,
-      },
-      {
-        min: 71,
-        max: 76,
-      },
-    ],
-    rawAffix: "Adds `(54-56)`- `(71-76)`Fire Damage to Attacks and Spells",
+    template: "Adds  (54-56) -  (71-76) Fire Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix: "Adds ` (54-56)` - ` (71-76)` Fire Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -276,18 +207,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "Adds {0}- {1}Cold Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 55,
-        max: 57,
-      },
-      {
-        min: 73,
-        max: 75,
-      },
-    ],
-    rawAffix: "Adds `(55-57)`- `(73-75)`Cold Damage to Attacks and Spells",
+    template: "Adds  (55-57) -  (73-75) Cold Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix: "Adds ` (55-57)` - ` (73-75)` Cold Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -295,18 +217,10 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "Adds {0}- {1}Erosion Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 55,
-        max: 57,
-      },
-      {
-        min: 73,
-        max: 75,
-      },
-    ],
-    rawAffix: "Adds `(55-57)`- `(73-75)`Erosion Damage to Attacks and Spells",
+    template: "Adds  (55-57) -  (73-75) Erosion Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix:
+      "Adds ` (55-57)` - ` (73-75)` Erosion Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -314,18 +228,10 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "Adds {0}- {1}Physical Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 58,
-        max: 60,
-      },
-      {
-        min: 71,
-        max: 73,
-      },
-    ],
-    rawAffix: "Adds `(58-60)`- `(71-73)`Physical Damage to Attacks and Spells",
+    template: "Adds  (58-60) -  (71-73) Physical Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix:
+      "Adds ` (58-60)` - ` (71-73)` Physical Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -333,18 +239,10 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "Adds {0}- {1}Lightning Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 6,
-        max: 8,
-      },
-      {
-        min: 123,
-        max: 125,
-      },
-    ],
-    rawAffix: "Adds `(6-8)`- `(123-125)`Lightning Damage to Attacks and Spells",
+    template: "Adds  (6-8) -  (123-125) Lightning Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix:
+      "Adds ` (6-8)` - ` (123-125)` Lightning Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -352,14 +250,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Attack and Spell Block Chance",
-    valueRanges: [
-      {
-        min: 12,
-        max: 15,
-      },
-    ],
-    rawAffix: "`+(12-15)`% Attack and Spell Block Chance",
+    template: " +(12-15)% Attack and Spell Block Chance",
+    valueRanges: [],
+    rawAffix: "` +(12-15)`% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -367,14 +260,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Deterioration Chance",
-    valueRanges: [
-      {
-        min: 23,
-        max: 32,
-      },
-    ],
-    rawAffix: "`+(23-32)`% Deterioration Chance",
+    template: " +(23-32)% Deterioration Chance",
+    valueRanges: [],
+    rawAffix: "` +(23-32)`% Deterioration Chance",
   },
   {
     equipmentSlot: "Trinket",
@@ -382,14 +270,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}Dexterity",
-    valueRanges: [
-      {
-        min: 43,
-        max: 60,
-      },
-    ],
-    rawAffix: "`+(43-60)`Dexterity",
+    template: " +(43-60) Dexterity",
+    valueRanges: [],
+    rawAffix: "` +(43-60)` Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -397,14 +280,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}Intelligence",
-    valueRanges: [
-      {
-        min: 43,
-        max: 60,
-      },
-    ],
-    rawAffix: "`+(43-60)`Intelligence",
+    template: " +(43-60) Intelligence",
+    valueRanges: [],
+    rawAffix: "` +(43-60)` Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -412,14 +290,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}Strength",
-    valueRanges: [
-      {
-        min: 43,
-        max: 60,
-      },
-    ],
-    rawAffix: "`+(43-60)`Strength",
+    template: " +(43-60) Strength",
+    valueRanges: [],
+    rawAffix: "` +(43-60)` Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -427,18 +300,10 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "Adds {0}- {1}Lightning Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 4,
-        max: 6,
-      },
-      {
-        min: 94,
-        max: 96,
-      },
-    ],
-    rawAffix: "Adds `(4-6)`- `(94-96)`Lightning Damage to Attacks and Spells",
+    template: "Adds  (4-6) -  (94-96) Lightning Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix:
+      "Adds ` (4-6)` - ` (94-96)` Lightning Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -446,18 +311,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "Adds {0}- {1}Fire Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 42,
-        max: 44,
-      },
-      {
-        min: 54,
-        max: 59,
-      },
-    ],
-    rawAffix: "Adds `(42-44)`- `(54-59)`Fire Damage to Attacks and Spells",
+    template: "Adds  (42-44) -  (54-59) Fire Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix: "Adds ` (42-44)` - ` (54-59)` Fire Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -465,18 +321,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "Adds {0}- {1}Cold Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 42,
-        max: 44,
-      },
-      {
-        min: 56,
-        max: 58,
-      },
-    ],
-    rawAffix: "Adds `(42-44)`- `(56-58)`Cold Damage to Attacks and Spells",
+    template: "Adds  (42-44) -  (56-58) Cold Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix: "Adds ` (42-44)` - ` (56-58)` Cold Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -484,18 +331,10 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "Adds {0}- {1}Erosion Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 42,
-        max: 44,
-      },
-      {
-        min: 56,
-        max: 58,
-      },
-    ],
-    rawAffix: "Adds `(42-44)`- `(56-58)`Erosion Damage to Attacks and Spells",
+    template: "Adds  (42-44) -  (56-58) Erosion Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix:
+      "Adds ` (42-44)` - ` (56-58)` Erosion Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -503,18 +342,10 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "Adds {0}- {1}Physical Damage to Attacks and Spells",
-    valueRanges: [
-      {
-        min: 44,
-        max: 46,
-      },
-      {
-        min: 54,
-        max: 56,
-      },
-    ],
-    rawAffix: "Adds `(44-46)`- `(54-56)`Physical Damage to Attacks and Spells",
+    template: "Adds  (44-46) -  (54-56) Physical Damage to Attacks and Spells",
+    valueRanges: [],
+    rawAffix:
+      "Adds ` (44-46)` - ` (54-56)` Physical Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Trinket",
@@ -522,14 +353,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}Max Mana",
-    valueRanges: [
-      {
-        min: 121,
-        max: 156,
-      },
-    ],
-    rawAffix: "`+(121-156)`Max Mana",
+    template: " +(121-156) Max Mana",
+    valueRanges: [],
+    rawAffix: "` +(121-156)` Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -537,14 +363,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}Max Life",
-    valueRanges: [
-      {
-        min: 221,
-        max: 286,
-      },
-    ],
-    rawAffix: "`+(221-286)`Max Life",
+    template: " +(221-286) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(221-286)` Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -552,14 +373,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}Max Energy Shield",
-    valueRanges: [
-      {
-        min: 319,
-        max: 455,
-      },
-    ],
-    rawAffix: "`+(319-455)`Max Energy Shield",
+    template: " +(319-455) Max Energy Shield",
+    valueRanges: [],
+    rawAffix: "` +(319-455)` Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -567,14 +383,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Armor",
-    valueRanges: [
-      {
-        min: 37,
-        max: 47,
-      },
-    ],
-    rawAffix: "`+(37-47)`% Armor",
+    template: " +(37-47)% Armor",
+    valueRanges: [],
+    rawAffix: "` +(37-47)`% Armor",
   },
   {
     equipmentSlot: "Trinket",
@@ -582,14 +393,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Evasion",
-    valueRanges: [
-      {
-        min: 37,
-        max: 47,
-      },
-    ],
-    rawAffix: "`+(37-47)`% Evasion",
+    template: " +(37-47)% Evasion",
+    valueRanges: [],
+    rawAffix: "` +(37-47)`% Evasion",
   },
   {
     equipmentSlot: "Trinket",
@@ -597,14 +403,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% damage",
-    valueRanges: [
-      {
-        min: 73,
-        max: 94,
-      },
-    ],
-    rawAffix: "`+(73-94)`% damage",
+    template: " +(73-94)% damage",
+    valueRanges: [],
+    rawAffix: "` +(73-94)`% damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -612,14 +413,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}Max Life",
-    valueRanges: [
-      {
-        min: 155,
-        max: 220,
-      },
-    ],
-    rawAffix: "`+(155-220)`Max Life",
+    template: " +(155-220) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(155-220)` Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -627,14 +423,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}Max Energy Shield",
-    valueRanges: [
-      {
-        min: 245,
-        max: 350,
-      },
-    ],
-    rawAffix: "`+(245-350)`Max Energy Shield",
+    template: " +(245-350) Max Energy Shield",
+    valueRanges: [],
+    rawAffix: "` +(245-350)` Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -642,14 +433,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Armor",
-    valueRanges: [
-      {
-        min: 27,
-        max: 36,
-      },
-    ],
-    rawAffix: "`+(27-36)`% Armor",
+    template: " +(27-36)% Armor",
+    valueRanges: [],
+    rawAffix: "` +(27-36)`% Armor",
   },
   {
     equipmentSlot: "Trinket",
@@ -657,14 +443,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Evasion",
-    valueRanges: [
-      {
-        min: 27,
-        max: 36,
-      },
-    ],
-    rawAffix: "`+(27-36)`% Evasion",
+    template: " +(27-36)% Evasion",
+    valueRanges: [],
+    rawAffix: "` +(27-36)`% Evasion",
   },
   {
     equipmentSlot: "Trinket",
@@ -672,14 +453,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% damage",
-    valueRanges: [
-      {
-        min: 51,
-        max: 72,
-      },
-    ],
-    rawAffix: "`+(51-72)`% damage",
+    template: " +(51-72)% damage",
+    valueRanges: [],
+    rawAffix: "` +(51-72)`% damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -687,14 +463,9 @@ export const RING_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}Max Mana",
-    valueRanges: [
-      {
-        min: 85,
-        max: 120,
-      },
-    ],
-    rawAffix: "`+(85-120)`Max Mana",
+    template: " +(85-120) Max Mana",
+    valueRanges: [],
+    rawAffix: "` +(85-120)` Max Mana",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

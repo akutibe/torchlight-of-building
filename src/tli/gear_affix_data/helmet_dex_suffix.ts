@@ -7,14 +7,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+{0}Support Skill Level",
-    valueRanges: [
-      {
-        min: 10,
-        max: 11,
-      },
-    ],
-    rawAffix: "`+(10-11)`Support Skill Level",
+    template: " +(10-11) Support Skill Level",
+    valueRanges: [],
+    rawAffix: "` +(10-11)` Support Skill Level",
   },
   {
     equipmentSlot: "Helmet",
@@ -22,14 +17,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+{0}% additional damage taken by Nearby enemies",
-    valueRanges: [
-      {
-        min: 25,
-        max: 31,
-      },
-    ],
-    rawAffix: "`+(25-31)`% additional damage taken by Nearby enemies",
+    template: " +(25-31)% additional damage taken by Nearby enemies",
+    valueRanges: [],
+    rawAffix: "` +(25-31)`% additional damage taken by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",
@@ -37,14 +27,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+{0}% Numbed Effect",
-    valueRanges: [
-      {
-        min: 41,
-        max: 52,
-      },
-    ],
-    rawAffix: "`+(41-52)`% Numbed Effect",
+    template: " +(41-52)% Numbed Effect",
+    valueRanges: [],
+    rawAffix: "` +(41-52)`% Numbed Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -52,14 +37,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+{0}% chance to avoid Elemental Ailments",
-    valueRanges: [
-      {
-        min: 50,
-        max: 68,
-      },
-    ],
-    rawAffix: "`+(50-68)`% chance to avoid Elemental Ailments",
+    template: " +(50-68)% chance to avoid Elemental Ailments",
+    valueRanges: [],
+    rawAffix: "` +(50-68)`% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Helmet",
@@ -67,14 +47,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    template: "+{0}% Reaping Cooldown Recovery Speed",
-    valueRanges: [
-      {
-        min: 84,
-        max: 108,
-      },
-    ],
-    rawAffix: "`+(84-108)`% Reaping Cooldown Recovery Speed",
+    template: " +(84-108)% Reaping Cooldown Recovery Speed",
+    valueRanges: [],
+    rawAffix: "` +(84-108)`% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -82,14 +57,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "+{0}% additional damage taken by Nearby enemies",
-    valueRanges: [
-      {
-        min: 18,
-        max: 24,
-      },
-    ],
-    rawAffix: "`+(18-24)`% additional damage taken by Nearby enemies",
+    template: " +(18-24)% additional damage taken by Nearby enemies",
+    valueRanges: [],
+    rawAffix: "` +(18-24)`% additional damage taken by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",
@@ -97,14 +67,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "+{0}% Numbed Effect",
-    valueRanges: [
-      {
-        min: 29,
-        max: 40,
-      },
-    ],
-    rawAffix: "`+(29-40)`% Numbed Effect",
+    template: " +(29-40)% Numbed Effect",
+    valueRanges: [],
+    rawAffix: "` +(29-40)`% Numbed Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -112,14 +77,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "+{0}% chance to avoid Elemental Ailments",
-    valueRanges: [
-      {
-        min: 30,
-        max: 45,
-      },
-    ],
-    rawAffix: "`+(30-45)`% chance to avoid Elemental Ailments",
+    template: " +(30-45)% chance to avoid Elemental Ailments",
+    valueRanges: [],
+    rawAffix: "` +(30-45)`% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Helmet",
@@ -127,14 +87,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "+{0}% Reaping Cooldown Recovery Speed",
-    valueRanges: [
-      {
-        min: 59,
-        max: 83,
-      },
-    ],
-    rawAffix: "`+(59-83)`% Reaping Cooldown Recovery Speed",
+    template: " +(59-83)% Reaping Cooldown Recovery Speed",
+    valueRanges: [],
+    rawAffix: "` +(59-83)`% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -142,14 +97,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    template: "+{0}Support Skill Level",
-    valueRanges: [
-      {
-        min: 6,
-        max: 9,
-      },
-    ],
-    rawAffix: "`+(6-9)`Support Skill Level",
+    template: " +(6-9) Support Skill Level",
+    valueRanges: [],
+    rawAffix: "` +(6-9)` Support Skill Level",
   },
   {
     equipmentSlot: "Helmet",
@@ -157,14 +107,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "{0}% chance to gain a Barrier on defeat",
-    valueRanges: [
-      {
-        min: 11,
-        max: 15,
-      },
-    ],
-    rawAffix: "`(11-15)`% chance to gain a Barrier on defeat",
+    template: " (11-15)% chance to gain a Barrier on defeat",
+    valueRanges: [],
+    rawAffix: "` (11-15)`% chance to gain a Barrier on defeat",
   },
   {
     equipmentSlot: "Helmet",
@@ -172,18 +117,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Evasion\n+{1}Max Life",
-    valueRanges: [
-      {
-        min: 19,
-        max: 23,
-      },
-      {
-        min: 111,
-        max: 143,
-      },
-    ],
-    rawAffix: "`+(19-23)`% Evasion<> `+(111-143)`Max Life",
+    template: " +(19-23)% Evasion\n+(111-143) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(19-23)`% Evasion<> ` +(111-143)` Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -191,19 +127,11 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Attack and Cast Speed\n+{1}% Minion Attack and Cast Speed",
-    valueRanges: [
-      {
-        min: 25,
-        max: 31,
-      },
-      {
-        min: 25,
-        max: 31,
-      },
-    ],
+    template:
+      " +(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
+    valueRanges: [],
     rawAffix:
-      "`+(25-31)`% Attack and Cast Speed<> `+(25-31)`% Minion Attack and Cast Speed",
+      "` +(25-31)`% Attack and Cast Speed<> ` +(25-31)`% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -211,14 +139,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Focus Speed",
-    valueRanges: [
-      {
-        min: 37,
-        max: 47,
-      },
-    ],
-    rawAffix: "`+(37-47)`% Focus Speed",
+    template: " +(37-47)% Focus Speed",
+    valueRanges: [],
+    rawAffix: "` +(37-47)`% Focus Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -226,18 +149,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Skill Area\n+{1}% Minion Skill Area",
-    valueRanges: [
-      {
-        min: 49,
-        max: 62,
-      },
-      {
-        min: 49,
-        max: 62,
-      },
-    ],
-    rawAffix: "`+(49-62)`% Skill Area<> `+(49-62)`% Minion Skill Area",
+    template: " +(49-62)% Skill Area\n+(49-62)% Minion Skill Area",
+    valueRanges: [],
+    rawAffix: "` +(49-62)`% Skill Area<> ` +(49-62)`% Minion Skill Area",
   },
   {
     equipmentSlot: "Helmet",
@@ -245,14 +159,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Reaping Duration",
-    valueRanges: [
-      {
-        min: 51,
-        max: 65,
-      },
-    ],
-    rawAffix: "`+(51-65)`% Reaping Duration",
+    template: " +(51-65)% Reaping Duration",
+    valueRanges: [],
+    rawAffix: "` +(51-65)`% Reaping Duration",
   },
   {
     equipmentSlot: "Helmet",
@@ -260,14 +169,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    template: "+{0}% Critical Strike Damage",
-    valueRanges: [
-      {
-        min: 61,
-        max: 78,
-      },
-    ],
-    rawAffix: "`+(61-78)`% Critical Strike Damage",
+    template: " +(61-78)% Critical Strike Damage",
+    valueRanges: [],
+    rawAffix: "` +(61-78)`% Critical Strike Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -275,18 +179,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Evasion\n+{1}Max Life",
-    valueRanges: [
-      {
-        min: 14,
-        max: 18,
-      },
-      {
-        min: 78,
-        max: 110,
-      },
-    ],
-    rawAffix: "`+(14-18)`% Evasion<> `+(78-110)`Max Life",
+    template: " +(14-18)% Evasion\n+(78-110) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(14-18)`% Evasion<> ` +(78-110)` Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -294,19 +189,11 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Attack and Cast Speed\n+{1}% Minion Attack and Cast Speed",
-    valueRanges: [
-      {
-        min: 18,
-        max: 24,
-      },
-      {
-        min: 18,
-        max: 24,
-      },
-    ],
+    template:
+      " +(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
+    valueRanges: [],
     rawAffix:
-      "`+(18-24)`% Attack and Cast Speed<> `+(18-24)`% Minion Attack and Cast Speed",
+      "` +(18-24)`% Attack and Cast Speed<> ` +(18-24)`% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -314,14 +201,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Focus Speed",
-    valueRanges: [
-      {
-        min: 26,
-        max: 36,
-      },
-    ],
-    rawAffix: "`+(26-36)`% Focus Speed",
+    template: " +(26-36)% Focus Speed",
+    valueRanges: [],
+    rawAffix: "` +(26-36)`% Focus Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -329,18 +211,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Skill Area\n+{1}% Minion Skill Area",
-    valueRanges: [
-      {
-        min: 35,
-        max: 48,
-      },
-      {
-        min: 35,
-        max: 48,
-      },
-    ],
-    rawAffix: "`+(35-48)`% Skill Area<> `+(35-48)`% Minion Skill Area",
+    template: " +(35-48)% Skill Area\n+(35-48)% Minion Skill Area",
+    valueRanges: [],
+    rawAffix: "` +(35-48)`% Skill Area<> ` +(35-48)`% Minion Skill Area",
   },
   {
     equipmentSlot: "Helmet",
@@ -348,14 +221,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Reaping Duration",
-    valueRanges: [
-      {
-        min: 36,
-        max: 50,
-      },
-    ],
-    rawAffix: "`+(36-50)`% Reaping Duration",
+    template: " +(36-50)% Reaping Duration",
+    valueRanges: [],
+    rawAffix: "` +(36-50)`% Reaping Duration",
   },
   {
     equipmentSlot: "Helmet",
@@ -363,14 +231,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    template: "+{0}% Critical Strike Damage",
-    valueRanges: [
-      {
-        min: 44,
-        max: 60,
-      },
-    ],
-    rawAffix: "`+(44-60)`% Critical Strike Damage",
+    template: " +(44-60)% Critical Strike Damage",
+    valueRanges: [],
+    rawAffix: "` +(44-60)`% Critical Strike Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -378,14 +241,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Critical Strike Rating",
-    valueRanges: [
-      {
-        min: 121,
-        max: 156,
-      },
-    ],
-    rawAffix: "`+(121-156)`% Critical Strike Rating",
+    template: " +(121-156)% Critical Strike Rating",
+    valueRanges: [],
+    rawAffix: "` +(121-156)`% Critical Strike Rating",
   },
   {
     equipmentSlot: "Helmet",
@@ -393,14 +251,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Cold Resistance",
-    valueRanges: [
-      {
-        min: 25,
-        max: 35,
-      },
-    ],
-    rawAffix: "`+(25-35)`% Cold Resistance",
+    template: " +(25-35)% Cold Resistance",
+    valueRanges: [],
+    rawAffix: "` +(25-35)`% Cold Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -408,14 +261,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Erosion Resistance",
-    valueRanges: [
-      {
-        min: 25,
-        max: 35,
-      },
-    ],
-    rawAffix: "`+(25-35)`% Erosion Resistance",
+    template: " +(25-35)% Erosion Resistance",
+    valueRanges: [],
+    rawAffix: "` +(25-35)`% Erosion Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -423,14 +271,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Fire Resistance",
-    valueRanges: [
-      {
-        min: 25,
-        max: 35,
-      },
-    ],
-    rawAffix: "`+(25-35)`% Fire Resistance",
+    template: " +(25-35)% Fire Resistance",
+    valueRanges: [],
+    rawAffix: "` +(25-35)`% Fire Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -438,14 +281,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Lightning Resistance",
-    valueRanges: [
-      {
-        min: 25,
-        max: 35,
-      },
-    ],
-    rawAffix: "`+(25-35)`% Lightning Resistance",
+    template: " +(25-35)% Lightning Resistance",
+    valueRanges: [],
+    rawAffix: "` +(25-35)`% Lightning Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -453,14 +291,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "+{0}% Affliction Effect",
-    valueRanges: [
-      {
-        min: 51,
-        max: 65,
-      },
-    ],
-    rawAffix: "`+(51-65)`% Affliction Effect",
+    template: " +(51-65)% Affliction Effect",
+    valueRanges: [],
+    rawAffix: "` +(51-65)`% Affliction Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -468,14 +301,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    template: "Regenerates {0}Life per second",
-    valueRanges: [
-      {
-        min: 121,
-        max: 156,
-      },
-    ],
-    rawAffix: "Regenerates `(121-156)`Life per second",
+    template: "Regenerates  (121-156) Life per second",
+    valueRanges: [],
+    rawAffix: "Regenerates ` (121-156)` Life per second",
   },
   {
     equipmentSlot: "Helmet",
@@ -483,14 +311,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Cold Resistance",
-    valueRanges: [
-      {
-        min: 19,
-        max: 27,
-      },
-    ],
-    rawAffix: "`+(19-27)`% Cold Resistance",
+    template: " +(19-27)% Cold Resistance",
+    valueRanges: [],
+    rawAffix: "` +(19-27)`% Cold Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -498,14 +321,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Erosion Resistance",
-    valueRanges: [
-      {
-        min: 19,
-        max: 27,
-      },
-    ],
-    rawAffix: "`+(19-27)`% Erosion Resistance",
+    template: " +(19-27)% Erosion Resistance",
+    valueRanges: [],
+    rawAffix: "` +(19-27)`% Erosion Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -513,14 +331,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Fire Resistance",
-    valueRanges: [
-      {
-        min: 19,
-        max: 27,
-      },
-    ],
-    rawAffix: "`+(19-27)`% Fire Resistance",
+    template: " +(19-27)% Fire Resistance",
+    valueRanges: [],
+    rawAffix: "` +(19-27)`% Fire Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -528,14 +341,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Lightning Resistance",
-    valueRanges: [
-      {
-        min: 19,
-        max: 27,
-      },
-    ],
-    rawAffix: "`+(19-27)`% Lightning Resistance",
+    template: " +(19-27)% Lightning Resistance",
+    valueRanges: [],
+    rawAffix: "` +(19-27)`% Lightning Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -543,14 +351,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Affliction Effect",
-    valueRanges: [
-      {
-        min: 36,
-        max: 50,
-      },
-    ],
-    rawAffix: "`+(36-50)`% Affliction Effect",
+    template: " +(36-50)% Affliction Effect",
+    valueRanges: [],
+    rawAffix: "` +(36-50)`% Affliction Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -558,14 +361,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "+{0}% Critical Strike Rating",
-    valueRanges: [
-      {
-        min: 87,
-        max: 120,
-      },
-    ],
-    rawAffix: "`+(87-120)`% Critical Strike Rating",
+    template: " +(87-120)% Critical Strike Rating",
+    valueRanges: [],
+    rawAffix: "` +(87-120)`% Critical Strike Rating",
   },
   {
     equipmentSlot: "Helmet",
@@ -573,14 +371,9 @@ export const HELMET_DEX_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    template: "Regenerates {0}Life per second",
-    valueRanges: [
-      {
-        min: 85,
-        max: 120,
-      },
-    ],
-    rawAffix: "Regenerates `(85-120)`Life per second",
+    template: "Regenerates  (85-120) Life per second",
+    valueRanges: [],
+    rawAffix: "Regenerates ` (85-120)` Life per second",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -7,14 +7,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Cooldown Recovery Speed",
-    valueRanges: [
-      {
-        min: 20,
-        max: 26,
-      },
-    ],
-    rawAffix: "`+(20-26)`% Cooldown Recovery Speed",
+    template: " +(20-26)% Cooldown Recovery Speed",
+    valueRanges: [],
+    rawAffix: "` +(20-26)`% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -22,14 +17,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Skill Effect Duration",
-    valueRanges: [
-      {
-        min: 20,
-        max: 26,
-      },
-    ],
-    rawAffix: "`+(20-26)`% Skill Effect Duration",
+    template: " +(20-26)% Skill Effect Duration",
+    valueRanges: [],
+    rawAffix: "` +(20-26)`% Skill Effect Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -37,14 +27,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: "+{0}% Movement Speed",
-    valueRanges: [
-      {
-        min: 11,
-        max: 15,
-      },
-    ],
-    rawAffix: "`+(11-15)`% Movement Speed",
+    template: " +(11-15)% Movement Speed",
+    valueRanges: [],
+    rawAffix: "` +(11-15)`% Movement Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -53,15 +38,10 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     template:
-      "+{0}% chance to launch one more wave when casting a Barrage Skill",
-    valueRanges: [
-      {
-        min: 20,
-        max: 25,
-      },
-    ],
+      " +(20-25)% chance to launch one more wave when casting a Barrage Skill",
+    valueRanges: [],
     rawAffix:
-      "`+(20-25)`% chance to launch one more wave when casting a Barrage Skill",
+      "` +(20-25)`% chance to launch one more wave when casting a Barrage Skill",
   },
   {
     equipmentSlot: "Trinket",
@@ -69,14 +49,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: "+{0}% Sealed Mana Compensation",
-    valueRanges: [
-      {
-        min: 6,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(6-8)`% Sealed Mana Compensation",
+    template: " +(6-8)% Sealed Mana Compensation",
+    valueRanges: [],
+    rawAffix: "` +(6-8)`% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Trinket",
@@ -84,14 +59,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: "+{0}% Aura Effect",
-    valueRanges: [
-      {
-        min: 7,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(7-8)`% Aura Effect",
+    template: " +(7-8)% Aura Effect",
+    valueRanges: [],
+    rawAffix: "` +(7-8)`% Aura Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -99,14 +69,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Dexterity",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Dexterity",
+    template: " +(15-20) Dexterity",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -114,14 +79,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Intelligence",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Intelligence",
+    template: " +(15-20) Intelligence",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -129,14 +89,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Strength",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Strength",
+    template: " +(15-20) Strength",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -144,14 +99,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Max Mana",
-    valueRanges: [
-      {
-        min: 40,
-        max: 60,
-      },
-    ],
-    rawAffix: "`+(40-60)`Max Mana",
+    template: " +(40-60) Max Mana",
+    valueRanges: [],
+    rawAffix: "` +(40-60)` Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -159,14 +109,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Cold Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Cold Resistance",
+    template: " +(5-10)% Cold Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -174,14 +119,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Erosion Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Erosion Resistance",
+    template: " +(5-10)% Erosion Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -189,14 +129,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Fire Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Fire Resistance",
+    template: " +(5-10)% Fire Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -204,14 +139,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Lightning Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Lightning Resistance",
+    template: " +(5-10)% Lightning Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -219,14 +149,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Max Life",
-    valueRanges: [
-      {
-        min: 54,
-        max: 74,
-      },
-    ],
-    rawAffix: "`+(54-74)`Max Life",
+    template: " +(54-74) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(54-74)` Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -234,14 +159,9 @@ export const BELT_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Max Energy Shield",
-    valueRanges: [
-      {
-        min: 87,
-        max: 117,
-      },
-    ],
-    rawAffix: "`+(87-117)`Max Energy Shield",
+    template: " +(87-117) Max Energy Shield",
+    valueRanges: [],
+    rawAffix: "` +(87-117)` Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

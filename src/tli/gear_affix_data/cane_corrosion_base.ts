@@ -7,14 +7,9 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Cast Speed",
-    valueRanges: [
-      {
-        min: 10,
-        max: 16,
-      },
-    ],
-    rawAffix: "`+(10-16)`% Cast Speed",
+    template: " +(10-16)% Cast Speed",
+    valueRanges: [],
+    rawAffix: "` +(10-16)`% Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -22,14 +17,9 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Spell Damage",
-    valueRanges: [
-      {
-        min: 20,
-        max: 30,
-      },
-    ],
-    rawAffix: "`+(20-30)`% Spell Damage",
+    template: " +(20-30)% Spell Damage",
+    valueRanges: [],
+    rawAffix: "` +(20-30)`% Spell Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -37,14 +27,9 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Critical Strike Damage",
-    valueRanges: [
-      {
-        min: 25,
-        max: 32,
-      },
-    ],
-    rawAffix: "`+(25-32)`% Critical Strike Damage",
+    template: " +(25-32)% Critical Strike Damage",
+    valueRanges: [],
+    rawAffix: "` +(25-32)`% Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -52,14 +37,9 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Spell Critical Strike Rating",
-    valueRanges: [
-      {
-        min: 30,
-        max: 40,
-      },
-    ],
-    rawAffix: "`+(30-40)`% Spell Critical Strike Rating",
+    template: " +(30-40)% Spell Critical Strike Rating",
+    valueRanges: [],
+    rawAffix: "` +(30-40)`% Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -67,14 +47,9 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% chance to gain 1 stack of Focus Blessing on defeat",
-    valueRanges: [
-      {
-        min: 4,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(4-8)`% chance to gain 1 stack of Focus Blessing on defeat",
+    template: " +(4-8)% chance to gain 1 stack of Focus Blessing on defeat",
+    valueRanges: [],
+    rawAffix: "` +(4-8)`% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
     equipmentSlot: "One-Handed",
@@ -83,15 +58,10 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     craftingPool: "",
     tier: "0",
     template:
-      "+{0}% chance to trigger the Main Spell Skill 1 additional time when using it",
-    valueRanges: [
-      {
-        min: 5,
-        max: 8,
-      },
-    ],
+      " +(5-8)% chance to trigger the Main Spell Skill 1 additional time when using it",
+    valueRanges: [],
     rawAffix:
-      "`+(5-8)`% chance to trigger the Main Spell Skill 1 additional time when using it",
+      "` +(5-8)`% chance to trigger the Main Spell Skill 1 additional time when using it",
   },
   {
     equipmentSlot: "One-Handed",
@@ -99,14 +69,9 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "+{0}% Cooldown Recovery Speed",
-    valueRanges: [
-      {
-        min: 6,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(6-10)`% Cooldown Recovery Speed",
+    template: " +(6-10)% Cooldown Recovery Speed",
+    valueRanges: [],
+    rawAffix: "` +(6-10)`% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -114,14 +79,9 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Adds {0}% of Elemental Damage as Erosion Damage",
-    valueRanges: [
-      {
-        min: 5,
-        max: 8,
-      },
-    ],
-    rawAffix: "Adds `(5-8)`% of Elemental Damage as Erosion Damage",
+    template: "Adds  (5-8)% of Elemental Damage as Erosion Damage",
+    valueRanges: [],
+    rawAffix: "Adds ` (5-8)`% of Elemental Damage as Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,14 +89,9 @@ export const CANE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    template: "Damage Penetrates {0}% Elemental Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 8,
-      },
-    ],
-    rawAffix: "Damage Penetrates `(5-8)`% Elemental Resistance",
+    template: "Damage Penetrates  (5-8)% Elemental Resistance",
+    valueRanges: [],
+    rawAffix: "Damage Penetrates ` (5-8)`% Elemental Resistance",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -8,10 +8,10 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     template:
-      "+15% Armor Effective Rate for Non-Physical Damage\n+2400Gear Armor",
+      " +15% Armor Effective Rate for Non-Physical Damage\n+2400 Gear Armor",
     valueRanges: [],
     rawAffix:
-      "`+15`% Armor Effective Rate for Non-Physical Damage<> `+2400`Gear Armor",
+      "` +15`% Armor Effective Rate for Non-Physical Damage<> ` +2400` Gear Armor",
   },
   {
     equipmentSlot: "Shield",
@@ -19,21 +19,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "+8% Block Ratio Upper limit",
+    template: " +8% Block Ratio Upper limit",
     valueRanges: [],
-    rawAffix: "`+8`% Block Ratio Upper limit",
-  },
-  {
-    equipmentSlot: "Shield",
-    equipmentType: "Shield (STR)",
-    affixType: "Tower Sequence",
-    craftingPool: "Advanced",
-    tier: "",
-    template:
-      "All Passive Skill slots are supported by Lv. 30Precise: Restrain",
-    valueRanges: [],
-    rawAffix:
-      "All Passive Skill slots are supported by Lv. `30`Precise: Restrain",
+    rawAffix: "` +8`% Block Ratio Upper limit",
   },
   {
     equipmentSlot: "Shield",
@@ -42,10 +30,22 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     template:
-      "Converts 25% of Physical Damage taken to random Elemental Damage\n-25% Defense",
+      "All Passive Skill slots are supported by Lv.  30 Precise: Restrain",
     valueRanges: [],
     rawAffix:
-      "Converts `25`% of Physical Damage taken to random Elemental Damage<> `-25`% Defense",
+      "All Passive Skill slots are supported by Lv. ` 30` Precise: Restrain",
+  },
+  {
+    equipmentSlot: "Shield",
+    equipmentType: "Shield (STR)",
+    affixType: "Tower Sequence",
+    craftingPool: "Advanced",
+    tier: "",
+    template:
+      "Converts  25% of Physical Damage taken to random Elemental Damage\n-25% Defense",
+    valueRanges: [],
+    rawAffix:
+      "Converts ` 25`% of Physical Damage taken to random Elemental Damage<> ` -25`% Defense",
   },
   {
     equipmentSlot: "Shield",
@@ -57,7 +57,7 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
       "Energy Shield starts to Charge when Blocking\n+40% Energy Shield Charge Speed",
     valueRanges: [],
     rawAffix:
-      "Energy Shield starts to Charge when Blocking<> `+40`% Energy Shield Charge Speed",
+      "Energy Shield starts to Charge when Blocking<> ` +40`% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -76,10 +76,10 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     template:
-      "Spell Damage will not further reduce Evasion by default\n+1680gear Evasion",
+      "Spell Damage will not further reduce Evasion by default\n+1680 gear Evasion",
     valueRanges: [],
     rawAffix:
-      "Spell Damage will not further reduce Evasion by default<> `+1680`gear Evasion",
+      "Spell Damage will not further reduce Evasion by default<> ` +1680` gear Evasion",
   },
   {
     equipmentSlot: "Shield",
@@ -87,9 +87,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+10% Attack and Spell Block Chance",
+    template: " +10% Attack and Spell Block Chance",
     valueRanges: [],
-    rawAffix: "`+10`% Attack and Spell Block Chance",
+    rawAffix: "` +10`% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Shield",
@@ -97,9 +97,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+12% Movement Speed",
+    template: " +12% Movement Speed",
     valueRanges: [],
-    rawAffix: "`+12`% Movement Speed",
+    rawAffix: "` +12`% Movement Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -107,9 +107,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+15% Max Life and Max Mana",
+    template: " +15% Max Life and Max Mana",
     valueRanges: [],
-    rawAffix: "`+15`% Max Life and Max Mana",
+    rawAffix: "` +15`% Max Life and Max Mana",
   },
   {
     equipmentSlot: "Shield",
@@ -117,9 +117,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+40% Defense from Shield",
+    template: " +40% Defense from Shield",
     valueRanges: [],
-    rawAffix: "`+40`% Defense from Shield",
+    rawAffix: "` +40`% Defense from Shield",
   },
   {
     equipmentSlot: "Shield",
@@ -127,9 +127,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+40% Critical Strike Damage",
+    template: " +40% Critical Strike Damage",
     valueRanges: [],
-    rawAffix: "`+40`% Critical Strike Damage",
+    rawAffix: "` +40`% Critical Strike Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -137,9 +137,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+8% Elemental Resistance",
+    template: " +8% Elemental Resistance",
     valueRanges: [],
-    rawAffix: "`+8`% Elemental Resistance",
+    rawAffix: "` +8`% Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -147,9 +147,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+8% all stats",
+    template: " +8% all stats",
     valueRanges: [],
-    rawAffix: "`+8`% all stats",
+    rawAffix: "` +8`% all stats",
   },
   {
     equipmentSlot: "Shield",
@@ -157,9 +157,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+80% Critical Strike Rating",
+    template: " +80% Critical Strike Rating",
     valueRanges: [],
-    rawAffix: "`+80`% Critical Strike Rating",
+    rawAffix: "` +80`% Critical Strike Rating",
   },
   {
     equipmentSlot: "Shield",
@@ -167,9 +167,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "Restores 3% Energy Shield on Block. Interval: 0.3s",
+    template: "Restores  3% Energy Shield on Block. Interval: 0.3s",
     valueRanges: [],
-    rawAffix: "Restores `3`% Energy Shield on Block. Interval: 0.3s",
+    rawAffix: "Restores ` 3`% Energy Shield on Block. Interval: 0.3s",
   },
   {
     equipmentSlot: "Shield",
@@ -177,9 +177,9 @@ export const SHIELD_STR_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "Restores 3% Life on Block. Interval: 0.3s",
+    template: "Restores  3% Life on Block. Interval: 0.3s",
     valueRanges: [],
-    rawAffix: "Restores `3`% Life on Block. Interval: 0.3s",
+    rawAffix: "Restores ` 3`% Life on Block. Interval: 0.3s",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

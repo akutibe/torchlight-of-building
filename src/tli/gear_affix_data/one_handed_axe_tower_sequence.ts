@@ -8,10 +8,10 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     template:
-      "+120% Fearless Aura\n-20% additional Fearless Sealed Mana Compensation",
+      " +120% Fearless Aura\n-20% additional Fearless Sealed Mana Compensation",
     valueRanges: [],
     rawAffix:
-      "`+120`% Fearless Aura<> `-20`% additional Fearless Sealed Mana Compensation",
+      "` +120`% Fearless Aura<> ` -20`% additional Fearless Sealed Mana Compensation",
   },
   {
     equipmentSlot: "One-Handed",
@@ -20,10 +20,10 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     template:
-      "+15% additional Deterioration Damage\n10% chance to inflict 1additional stack(s) of Deterioration",
+      " +15% additional Deterioration Damage\n10% chance to inflict  1 additional stack(s) of Deterioration",
     valueRanges: [],
     rawAffix:
-      "`+15`% additional Deterioration Damage<> `10`% chance to inflict `1`additional stack(s) of Deterioration",
+      "` +15`% additional Deterioration Damage<> ` 10`% chance to inflict ` 1` additional stack(s) of Deterioration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -31,10 +31,10 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "+25% Elemental Damage for the gear\n-25% gear Physical Damage",
+    template: " +25% Elemental Damage for the gear\n-25% gear Physical Damage",
     valueRanges: [],
     rawAffix:
-      "`+25`% Elemental Damage for the gear<> `-25`% gear Physical Damage",
+      "` +25`% Elemental Damage for the gear<> ` -25`% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -43,10 +43,10 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     template:
-      "+80% gear Physical Damage\n-20% Attack Critical Strike Rating for this gear",
+      " +80% gear Physical Damage\n-20% Attack Critical Strike Rating for this gear",
     valueRanges: [],
     rawAffix:
-      "`+80`% gear Physical Damage<> `-20`% Attack Critical Strike Rating for this gear",
+      "` +80`% gear Physical Damage<> ` -20`% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -54,9 +54,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds 1- 1Physical Damage to Attacks per 2260Armor",
+    template: "Adds  1 -  1 Physical Damage to Attacks per  2260 Armor",
     valueRanges: [],
-    rawAffix: "Adds `1`- `1`Physical Damage to Attacks per `2260`Armor",
+    rawAffix: "Adds ` 1` - ` 1` Physical Damage to Attacks per ` 2260` Armor",
   },
   {
     equipmentSlot: "One-Handed",
@@ -64,9 +64,10 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds 1- 3Lightning Damage to Attacks per 10Dexterity",
+    template: "Adds  1 -  3 Lightning Damage to Attacks per  10 Dexterity",
     valueRanges: [],
-    rawAffix: "Adds `1`- `3`Lightning Damage to Attacks per `10`Dexterity",
+    rawAffix:
+      "Adds ` 1` - ` 3` Lightning Damage to Attacks per ` 10` Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -74,9 +75,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Adds 2- 2Fire Damage to Attacks per 10Strength",
+    template: "Adds  2 -  2 Fire Damage to Attacks per  10 Strength",
     valueRanges: [],
-    rawAffix: "Adds `2`- `2`Fire Damage to Attacks per `10`Strength",
+    rawAffix: "Adds ` 2` - ` 2` Fire Damage to Attacks per ` 10` Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -85,10 +86,10 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     template:
-      "Enemies have a 15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to 25% of their Max Life to enemies within a 5m radius",
+      "Enemies have a  15% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to  25% of their Max Life to enemies within a  5 m radius",
     valueRanges: [],
     rawAffix:
-      "Enemies have a `15`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to `25`% of their Max Life to enemies within a `5`m radius",
+      "Enemies have a ` 15`% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to ` 25`% of their Max Life to enemies within a ` 5` m radius",
   },
   {
     equipmentSlot: "One-Handed",
@@ -96,9 +97,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Advanced",
     tier: "",
-    template: "Main Skill is supported by Lv. 25Steamroll",
+    template: "Main Skill is supported by Lv.  25 Steamroll",
     valueRanges: [],
-    rawAffix: "Main Skill is supported by Lv. `25`Steamroll",
+    rawAffix: "Main Skill is supported by Lv. ` 25` Steamroll",
   },
   {
     equipmentSlot: "One-Handed",
@@ -106,9 +107,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+10% all stats",
+    template: " +10% all stats",
     valueRanges: [],
-    rawAffix: "`+10`% all stats",
+    rawAffix: "` +10`% all stats",
   },
   {
     equipmentSlot: "One-Handed",
@@ -116,9 +117,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+10% additional damage on Critical Strike",
+    template: " +10% additional damage on Critical Strike",
     valueRanges: [],
-    rawAffix: "`+10`% additional damage on Critical Strike",
+    rawAffix: "` +10`% additional damage on Critical Strike",
   },
   {
     equipmentSlot: "One-Handed",
@@ -126,9 +127,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+20% Attack Critical Strike Rating for this gear",
+    template: " +20% Attack Critical Strike Rating for this gear",
     valueRanges: [],
-    rawAffix: "`+20`% Attack Critical Strike Rating for this gear",
+    rawAffix: "` +20`% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -136,9 +137,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+6% Armor DMG Mitigation Penetration",
+    template: " +6% Armor DMG Mitigation Penetration",
     valueRanges: [],
-    rawAffix: "`+6`% Armor DMG Mitigation Penetration",
+    rawAffix: "` +6`% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -146,9 +147,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+8% additional damage for Weapons",
+    template: " +8% additional damage for Weapons",
     valueRanges: [],
-    rawAffix: "`+8`% additional damage for Weapons",
+    rawAffix: "` +8`% additional damage for Weapons",
   },
   {
     equipmentSlot: "One-Handed",
@@ -156,9 +157,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+8% Cold Penetration",
+    template: " +8% Cold Penetration",
     valueRanges: [],
-    rawAffix: "`+8`% Cold Penetration",
+    rawAffix: "` +8`% Cold Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -166,9 +167,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+8% Erosion Resistance Penetration",
+    template: " +8% Erosion Resistance Penetration",
     valueRanges: [],
-    rawAffix: "`+8`% Erosion Resistance Penetration",
+    rawAffix: "` +8`% Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -176,9 +177,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+8% Fire Penetration",
+    template: " +8% Fire Penetration",
     valueRanges: [],
-    rawAffix: "`+8`% Fire Penetration",
+    rawAffix: "` +8`% Fire Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -186,9 +187,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+8% gear Attack Speed",
+    template: " +8% gear Attack Speed",
     valueRanges: [],
-    rawAffix: "`+8`% gear Attack Speed",
+    rawAffix: "` +8`% gear Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -196,9 +197,9 @@ export const ONE_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     affixType: "Tower Sequence",
     craftingPool: "Intermediate",
     tier: "",
-    template: "+8% Lightning Penetration",
+    template: " +8% Lightning Penetration",
     valueRanges: [],
-    rawAffix: "`+8`% Lightning Penetration",
+    rawAffix: "` +8`% Lightning Penetration",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

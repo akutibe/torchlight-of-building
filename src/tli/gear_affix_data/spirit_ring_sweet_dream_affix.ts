@@ -7,9 +7,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Focus Blessing Stacks +1",
+    template: "Max Focus Blessing Stacks  +1 ",
     valueRanges: [],
-    rawAffix: "Max Focus Blessing Stacks `+1`",
+    rawAffix: "Max Focus Blessing Stacks ` +1` ",
   },
   {
     equipmentSlot: "Trinket",
@@ -17,21 +17,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    template: "Max Tenacity Blessing Stacks +1",
+    template: "Max Tenacity Blessing Stacks  +1 ",
     valueRanges: [],
-    rawAffix: "Max Tenacity Blessing Stacks `+1`",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Spirit Ring",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "0",
-    template:
-      "Triggers Lv. 20Frost Touch Curse upon inflicting damage. Cooldown: 0.2s",
-    valueRanges: [],
-    rawAffix:
-      "Triggers Lv. `20`Frost Touch Curse upon inflicting damage. Cooldown: `0.2`s",
+    rawAffix: "Max Tenacity Blessing Stacks ` +1` ",
   },
   {
     equipmentSlot: "Trinket",
@@ -40,10 +28,10 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     template:
-      "Triggers Lv. 20Blind Curse upon inflicting damage. Cooldown: 0.2s",
+      "Triggers Lv.  20 Frost Touch Curse upon inflicting damage. Cooldown:  0.2 s",
     valueRanges: [],
     rawAffix:
-      "Triggers Lv. `20`Blind Curse upon inflicting damage. Cooldown: `0.2`s",
+      "Triggers Lv. ` 20` Frost Touch Curse upon inflicting damage. Cooldown: ` 0.2` s",
   },
   {
     equipmentSlot: "Trinket",
@@ -52,10 +40,10 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     template:
-      "Triggers Lv. 20Timid Curse upon inflicting damage. Cooldown: 0.2s",
+      "Triggers Lv.  20 Blind Curse upon inflicting damage. Cooldown:  0.2 s",
     valueRanges: [],
     rawAffix:
-      "Triggers Lv. `20`Timid Curse upon inflicting damage. Cooldown: `0.2`s",
+      "Triggers Lv. ` 20` Blind Curse upon inflicting damage. Cooldown: ` 0.2` s",
   },
   {
     equipmentSlot: "Trinket",
@@ -64,20 +52,22 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     template:
-      "Triggers Lv. 20Entangled Pain Curse upon inflicting damage. Cooldown: 0.2s",
+      "Triggers Lv.  20 Timid Curse upon inflicting damage. Cooldown:  0.2 s",
     valueRanges: [],
     rawAffix:
-      "Triggers Lv. `20`Entangled Pain Curse upon inflicting damage. Cooldown: `0.2`s",
+      "Triggers Lv. ` 20` Timid Curse upon inflicting damage. Cooldown: ` 0.2` s",
   },
   {
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
     affixType: "Sweet Dream Affix",
     craftingPool: "",
-    tier: "1",
-    template: "+ 3Command per second",
+    tier: "0",
+    template:
+      "Triggers Lv.  20 Entangled Pain Curse upon inflicting damage. Cooldown:  0.2 s",
     valueRanges: [],
-    rawAffix: "+ `3`Command per second",
+    rawAffix:
+      "Triggers Lv. ` 20` Entangled Pain Curse upon inflicting damage. Cooldown: ` 0.2` s",
   },
   {
     equipmentSlot: "Trinket",
@@ -85,24 +75,29 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    template: "+{0}% Movement Speed",
-    valueRanges: [
-      {
-        min: 11,
-        max: 15,
-      },
-    ],
-    rawAffix: "`+(11-15)`% Movement Speed",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Spirit Ring",
-    affixType: "Sweet Dream Affix",
-    craftingPool: "",
-    tier: "1",
-    template: "+32initial Growth for Spirit Magi",
+    template: "+  3 Command per second",
     valueRanges: [],
-    rawAffix: "`+32`initial Growth for Spirit Magi",
+    rawAffix: "+ ` 3` Command per second",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    template: " +(11-15)% Movement Speed",
+    valueRanges: [],
+    rawAffix: "` +(11-15)`% Movement Speed",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Spirit Ring",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    template: " +32 initial Growth for Spirit Magi",
+    valueRanges: [],
+    rawAffix: "` +32` initial Growth for Spirit Magi",
   },
   {
     equipmentSlot: "Trinket",
@@ -111,10 +106,10 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     template:
-      "When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 2s",
+      "When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy:  2 s",
     valueRanges: [],
     rawAffix:
-      "When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: `2`s",
+      "When Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: ` 2` s",
   },
   {
     equipmentSlot: "Trinket",
@@ -123,10 +118,10 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     template:
-      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: 2s",
+      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy:  2 s",
     valueRanges: [],
     rawAffix:
-      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: `2`s",
+      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: ` 2` s",
   },
   {
     equipmentSlot: "Trinket",
@@ -135,10 +130,10 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     template:
-      "When Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: 2s",
+      "When Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy:  2 s",
     valueRanges: [],
     rawAffix:
-      "When Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: `2`s",
+      "When Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: ` 2` s",
   },
   {
     equipmentSlot: "Trinket",
@@ -146,14 +141,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Dexterity",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Dexterity",
+    template: " +(15-20) Dexterity",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -161,14 +151,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Intelligence",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Intelligence",
+    template: " +(15-20) Intelligence",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -176,14 +161,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Strength",
-    valueRanges: [
-      {
-        min: 15,
-        max: 20,
-      },
-    ],
-    rawAffix: "`+(15-20)`Strength",
+    template: " +(15-20) Strength",
+    valueRanges: [],
+    rawAffix: "` +(15-20)` Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -191,14 +171,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Cold Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Cold Resistance",
+    template: " +(5-10)% Cold Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -206,14 +181,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Erosion Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Erosion Resistance",
+    template: " +(5-10)% Erosion Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -221,14 +191,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Fire Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Fire Resistance",
+    template: " +(5-10)% Fire Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -236,14 +201,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Lightning Resistance",
-    valueRanges: [
-      {
-        min: 5,
-        max: 10,
-      },
-    ],
-    rawAffix: "`+(5-10)`% Lightning Resistance",
+    template: " +(5-10)% Lightning Resistance",
+    valueRanges: [],
+    rawAffix: "` +(5-10)`% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -251,14 +211,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Max Life",
-    valueRanges: [
-      {
-        min: 54,
-        max: 74,
-      },
-    ],
-    rawAffix: "`+(54-74)`Max Life",
+    template: " +(54-74) Max Life",
+    valueRanges: [],
+    rawAffix: "` +(54-74)` Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -266,14 +221,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}% Minion Movement Speed, Attack Speed, and Cast Speed",
-    valueRanges: [
-      {
-        min: 6,
-        max: 8,
-      },
-    ],
-    rawAffix: "`+(6-8)`% Minion Movement Speed, Attack Speed, and Cast Speed",
+    template: " +(6-8)% Minion Movement Speed, Attack Speed, and Cast Speed",
+    valueRanges: [],
+    rawAffix: "` +(6-8)`% Minion Movement Speed, Attack Speed, and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -281,14 +231,9 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    template: "+{0}Max Energy Shield",
-    valueRanges: [
-      {
-        min: 87,
-        max: 117,
-      },
-    ],
-    rawAffix: "`+(87-117)`Max Energy Shield",
+    template: " +(87-117) Max Energy Shield",
+    valueRanges: [],
+    rawAffix: "` +(87-117)` Max Energy Shield",
   },
 ] as const satisfies readonly BaseGearAffix[];
 

@@ -71,11 +71,11 @@ const getValidEquipmentTypes = (slot: GearSlot): EquipmentType[] => {
 
 const getFilteredAffixes = (
   equipmentType: EquipmentType,
-  affixType: "Prefix" | "Suffix"
+  affixType: "Prefix" | "Suffix",
 ): BaseGearAffix[] => {
   return ALL_GEAR_AFFIXES.filter(
     (affix) =>
-      affix.equipmentType === equipmentType && affix.affixType === affixType
+      affix.equipmentType === equipmentType && affix.affixType === affixType,
   );
 };
 
@@ -245,7 +245,7 @@ export default function Home() {
   const [affixSelections, setAffixSelections] = useState<AffixSlotState[]>(
     Array(6)
       .fill(null)
-      .map(() => ({ affixIndex: null, percentage: 50 }))
+      .map(() => ({ affixIndex: null, percentage: 50 })),
   );
   const skipLoadoutUpdateRef = useRef(false);
 
@@ -287,7 +287,7 @@ export default function Home() {
       selectedEquipmentType
         ? getFilteredAffixes(selectedEquipmentType, "Prefix")
         : [],
-    [selectedEquipmentType]
+    [selectedEquipmentType],
   );
 
   const suffixAffixes = useMemo(
@@ -295,7 +295,7 @@ export default function Home() {
       selectedEquipmentType
         ? getFilteredAffixes(selectedEquipmentType, "Suffix")
         : [],
-    [selectedEquipmentType]
+    [selectedEquipmentType],
   );
 
   useEffect(() => {
@@ -309,7 +309,7 @@ export default function Home() {
     setAffixSelections(
       Array(6)
         .fill(null)
-        .map(() => ({ affixIndex: null, percentage: 50 }))
+        .map(() => ({ affixIndex: null, percentage: 50 })),
     );
     setTimeout(() => {
       skipLoadoutUpdateRef.current = false;
@@ -354,7 +354,8 @@ export default function Home() {
     if (selection.affixIndex === null) return "";
 
     const affixType = slotIndex < 3 ? "Prefix" : "Suffix";
-    const filteredAffixes = affixType === "Prefix" ? prefixAffixes : suffixAffixes;
+    const filteredAffixes =
+      affixType === "Prefix" ? prefixAffixes : suffixAffixes;
     const selectedAffix = filteredAffixes[selection.affixIndex];
 
     return craft(selectedAffix, selection.percentage);
@@ -365,7 +366,8 @@ export default function Home() {
     if (selection.affixIndex === null) return null;
 
     const affixType = slotIndex < 3 ? "Prefix" : "Suffix";
-    const filteredAffixes = affixType === "Prefix" ? prefixAffixes : suffixAffixes;
+    const filteredAffixes =
+      affixType === "Prefix" ? prefixAffixes : suffixAffixes;
     return filteredAffixes[selection.affixIndex];
   };
 
@@ -422,7 +424,7 @@ export default function Home() {
   };
 
   const handleEquipmentTypeChange = (
-    e: React.ChangeEvent<HTMLSelectElement>
+    e: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     const newType = e.target.value as EquipmentType;
     setSelectedEquipmentType(newType);
@@ -430,7 +432,7 @@ export default function Home() {
     setAffixSelections(
       Array(6)
         .fill(null)
-        .map(() => ({ affixIndex: null, percentage: 50 }))
+        .map(() => ({ affixIndex: null, percentage: 50 })),
     );
   };
 
