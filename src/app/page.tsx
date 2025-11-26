@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import {
   RawLoadout,
   RawGearPage,
@@ -247,6 +247,7 @@ export default function Home() {
       .fill(null)
       .map(() => ({ affixIndex: null, percentage: 50 }))
   );
+  const skipLoadoutUpdateRef = useRef(false);
 
   useEffect(() => {
     setMounted(true);
@@ -298,6 +299,7 @@ export default function Home() {
   );
 
   useEffect(() => {
+    skipLoadoutUpdateRef.current = true;
     const gear = loadout.equipmentPage[selectedSlot];
     if (gear?.equipmentType) {
       setSelectedEquipmentType(gear.equipmentType);
@@ -309,10 +311,13 @@ export default function Home() {
         .fill(null)
         .map(() => ({ affixIndex: null, percentage: 50 }))
     );
-  }, [selectedSlot, loadout.equipmentPage]);
+    setTimeout(() => {
+      skipLoadoutUpdateRef.current = false;
+    }, 0);
+  }, [selectedSlot]);
 
   useEffect(() => {
-    if (!selectedEquipmentType) return;
+    if (!selectedEquipmentType || skipLoadoutUpdateRef.current) return;
 
     const affixes: string[] = [];
 
@@ -328,24 +333,21 @@ export default function Home() {
       affixes.push(craftedText);
     });
 
-    setLoadout((prev) => ({
-      ...prev,
-      equipmentPage: {
-        ...prev.equipmentPage,
-        [selectedSlot]: {
-          gearType: getGearType(selectedSlot),
-          equipmentType: selectedEquipmentType,
-          affixes,
+    setLoadout((prev) => {
+      const slot = selectedSlot;
+      return {
+        ...prev,
+        equipmentPage: {
+          ...prev.equipmentPage,
+          [slot]: {
+            gearType: getGearType(slot),
+            equipmentType: selectedEquipmentType,
+            affixes,
+          },
         },
-      },
-    }));
-  }, [
-    affixSelections,
-    selectedEquipmentType,
-    prefixAffixes,
-    suffixAffixes,
-    selectedSlot,
-  ]);
+      };
+    });
+  }, [affixSelections, selectedEquipmentType, prefixAffixes, suffixAffixes]);
 
   const getCraftedText = (slotIndex: number): string => {
     const selection = affixSelections[slotIndex];
