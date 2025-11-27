@@ -1,4 +1,4 @@
-import { BaseGearAffix } from "../gear_data_types";
+import { BaseGearAffix } from "../../tli/gear_data_types";
 
 export const TWO_HANDED_SWORD_TOWER_SEQUENCE_AFFIXES = [
   {

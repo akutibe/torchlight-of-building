@@ -1,5 +1,5 @@
 import { expect, test, describe } from "vitest";
-import { BOOTS_DEX_BASE_AFFIX_AFFIXES } from "./boots_dex_base_affix";
+import { BOOTS_DEX_BASE_AFFIX_AFFIXES } from "../data/gear_affix/boots_dex_base_affix";
 import { ALL_GEAR_AFFIXES } from "./all_affixes";
 import type { BaseGearAffix } from "./gear_data_types";
 

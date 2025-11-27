@@ -1,4 +1,4 @@
-import { BaseGearAffix } from "../gear_data_types";
+import { BaseGearAffix } from "../../tli/gear_data_types";
 
 export const ONE_HANDED_SWORD_BASE_STATS_AFFIXES = [
   {
