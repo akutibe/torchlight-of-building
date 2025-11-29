@@ -5,524 +5,524 @@ export const Destinies = [
     type: "Dual Kismet",
     name: "Bird in a Pond",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nImmune to crowd control effects\n-25% Defense",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nImmune to crowd control effects\n-25% Defense",
   },
   {
     type: "Dual Kismet",
     name: "Bounded Holy Maiden",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nUnable to inflict Ignite, Numbed, Wilt, and Trauma\nInflicts Paralysis, Blind, Weaken, Slow, Taunt, and\nFrostbite on hit\n-60% Crowd Control Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nUnable to inflict Ignite, Numbed, Wilt, and Trauma\nInflicts Paralysis, Blind, Weaken, Slow, Taunt, and Frostbite on hit\n-60% Crowd Control Effect",
   },
   {
     type: "Dual Kismet",
     name: "Butterfly in a Bottle",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nImmune to Trauma, Wilt, and Ignite\n-8% Elemental Resistance",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nImmune to Trauma, Wilt, and Ignite\n-8% Elemental Resistance",
   },
   {
     type: "Dual Kismet",
     name: "Dark Moon",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Erosion\nMagus\n+30% Origin of Spirit Magus Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Erosion Magus\n+30% Origin of Spirit Magus Effect",
   },
   {
     type: "Dual Kismet",
     name: "Destiny's Betrayal",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page: Changes the negative\neffects from Dream Interpretation into positive\neffects",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page: Changes the negative effects from Dream Interpretation into positive effects",
   },
   {
     type: "Dual Kismet",
     name: "Echidna",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains Lv. 20 Precise: Acuteness Focus\n+60% Focus Buff Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains Lv. 20 Precise: Acuteness Focus\n+60% Focus Buff Effect",
   },
   {
     type: "Dual Kismet",
     name: "Evil Flame",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n15% chance to cause an explosion when defeating a Cursed\nenemy with an Attack or Spell, dealing Physical Damage\nequal to 25% of its Max Life\n+15% Skill Area",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n15% chance to cause an explosion when defeating a Cursed enemy with an Attack or Spell, dealing Physical Damage equal to 25% of its Max Life\n+15% Skill Area",
   },
   {
     type: "Dual Kismet",
     name: "Fire in the Stone",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+100% Fire Resistance when you have Steadfast\n-25% Lightning Resistance\n-25% Cold Resistance",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+100% Fire Resistance when you have Steadfast\n-25% Lightning Resistance\n-25% Cold Resistance",
   },
   {
     type: "Dual Kismet",
     name: "Fire Plume",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Fire\nMagus\n+30% Origin of Spirit Magus Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Fire Magus\n+30% Origin of Spirit Magus Effect",
   },
   {
     type: "Dual Kismet",
     name: "Fish in a Cage",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nImmune to Elemental Ailments\n-25% Erosion Resistance",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nImmune to Elemental Ailments\n-25% Erosion Resistance",
   },
   {
     type: "Dual Kismet",
     name: "Flash Flood",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nHalves Spell Burst Upper\nLimit\n+8% additional Attack and Cast Speed for every Spell Burst triggered\nrecently, up to 40%",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nHalves Spell Burst Upper Limit\n+8% additional Attack and Cast Speed for every Spell Burst triggered recently, up to 40%",
   },
   {
     type: "Dual Kismet",
     name: "Ghost Bee",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+96% Shadow Tracking Area\n+96% Shadow Strike Skill Area",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+96% Shadow Tracking Area\n+96% Shadow Strike Skill Area",
   },
   {
     type: "Dual Kismet",
     name: "God's Fall",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+2 to all skills' level\nWhen casting a skill, lose 5% of current Life and Energy\nShield",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+2 to all skills' level\nWhen casting a skill, lose 5% of current Life and Energy Shield",
   },
   {
     type: "Dual Kismet",
     name: "Great Library",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nAdditionally increases damage by 2% (stacks) for every\nunique Kismet installed\nReduces your damage taken by 1% (multiplies) for every\nunique Kismet installed",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nAdditionally increases damage by 2% (stacks) for every unique Kismet installed\nReduces your damage taken by 1% (multiplies) for every unique Kismet installed",
   },
   {
     type: "Dual Kismet",
     name: "Hanging Bird",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nEvading has the Lucky effect when having at least 3 stacks\nof Deflection\n-50% additional Evasion",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nEvading has the Lucky effect when having at least 3 stacks of Deflection\n-50% additional Evasion",
   },
   {
     type: "Dual Kismet",
     name: "Hatch Out",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n-5 to Aura Skill Level and +30% Sealed Mana Compensation\nwhen you have no Energy Shield",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-5 to Aura Skill Level and +30% Sealed Mana Compensation when you have no Energy Shield",
   },
   {
     type: "Dual Kismet",
     name: "Headless",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n-50% Helmet Defense\n+100% Chest Armor Defense",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-50% Helmet Defense\n+100% Chest Armor Defense",
   },
   {
     type: "Dual Kismet",
     name: "Heartless",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n-100% additional Chest Armor Defense\n+30% additional Helmet, Glove, and Boot Defense",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-100% additional Chest Armor Defense\n+30% additional Helmet, Glove, and Boot Defense",
   },
   {
     type: "Dual Kismet",
     name: "Hot Ice",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nUnable to Freeze\n-75% inflicted Frostbite Rating",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nUnable to Freeze\n-75% inflicted Frostbite Rating",
   },
   {
     type: "Dual Kismet",
     name: "Hunter's Hand",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nTriggers the Main Active Skill 0.5s after using an Attack\nHorizontal Projectile Skill. Interval: 1s\nTriggers the Main Active Skill 1s after using an Attack\nHorizontal Projectile Skill. Interval: 1s\nTriggers the Main Active Skill 1.5s after using an Attack\nHorizontal Projectile Skill. Interval: 1s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nTriggers the Main Active Skill 0.5s after using an Attack Horizontal Projectile Skill. Interval: 1s\nTriggers the Main Active Skill 1s after using an Attack Horizontal Projectile Skill. Interval: 1s\nTriggers the Main Active Skill 1.5s after using an Attack Horizontal Projectile Skill. Interval: 1s",
   },
   {
     type: "Dual Kismet",
     name: "Ice Flower",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Frost\nMagus\n+30% Origin of Spirit Magus Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Frost Magus\n+30% Origin of Spirit Magus Effect",
   },
   {
     type: "Dual Kismet",
     name: "Iron Wall",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nDual Wielding provides 30% Block Ratio instead of 30%\nAttack Block Chance",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nDual Wielding provides 30% Block Ratio instead of 30% Attack Block Chance",
   },
   {
     type: "Dual Kismet",
     name: "Mammoth",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nTriggers Lv. 20 Resurrection Warcry on hit. Interval:\n3s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nTriggers Lv. 20 Resurrection Warcry on hit. Interval: 3s",
   },
   {
     type: "Dual Kismet",
     name: "Mechanical Tree",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+10% additional Synthetic Troop Minion Damage for every\nSpirit Magus\n+8% additional Spirit Magi Damage for every Synthetic\nTroop",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+10% additional Synthetic Troop Minion Damage for every Spirit Magus\n+8% additional Spirit Magi Damage for every Synthetic Troop",
   },
   {
     type: "Dual Kismet",
     name: "Mighty Arrow",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n-25% additional Projectile Speed and -25% Projectile\nDuration\n+25% additional Attack Horizontal Projectile Damage taken\nby nearby enemies",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-25% additional Projectile Speed and -25% Projectile Duration\n+25% additional Attack Horizontal Projectile Damage taken by nearby enemies",
   },
   {
     type: "Dual Kismet",
     name: "Mirror Cracks",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n-3 to Defensive Skill Level\n+45% Defensive Skill Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-3 to Defensive Skill Level\n+45% Defensive Skill Effect",
   },
   {
     type: "Dual Kismet",
     name: "Mountain God",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nAdds 2% Armor to Barrier Shield",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nAdds 2% Armor to Barrier Shield",
   },
   {
     type: "Dual Kismet",
     name: "Peerless",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+1 Combo Finisher charge\nThe time before Combo Sequence resets is fixed at 0.3s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+1 Combo Finisher charge\nThe time before Combo Sequence resets is fixed at 0.3s",
   },
   {
     type: "Dual Kismet",
     name: "Pendulum",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains 1 stack of Deflection for every 5m\nof movement\n10% chance to gain 3 stacks of Deflection when gaining\nDeflection",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains 1 stack of Deflection for every 5m of movement\n10% chance to gain 3 stacks of Deflection when gaining Deflection",
   },
   {
     type: "Dual Kismet",
     name: "Perched River",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+2 to Spell Burst Upper\nLimit\nCritical Strikes have the Unlucky effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+2 to Spell Burst Upper Limit\nCritical Strikes have the Unlucky effect",
   },
   {
     type: "Dual Kismet",
     name: "Plague Source",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n0.5s after dealing Damage Over Time, Reaps 3s of Damage\nOver Time. Cooldown: 99s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n0.5s after dealing Damage Over Time, Reaps 3s of Damage Over Time. Cooldown: 99s",
   },
   {
     type: "Dual Kismet",
     name: "Pointer",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+1 Max Deflection\nGains 1 additional stack of Deflection",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+1 Max Deflection\nGains 1 additional stack of Deflection",
   },
   {
     type: "Dual Kismet",
     name: "Prophet",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nInjury Buffer is fixed at 0\nRestores 10% Missing Life when taking Hit Damage. Interval:\n0.05s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nInjury Buffer is fixed at 0\nRestores 10% Missing Life when taking Hit Damage. Interval: 0.05s",
   },
   {
     type: "Dual Kismet",
     name: "Queen Ant",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+3% additional Ultimate Damage and Ailment Damage dealt by\nUltimate (multiplies) for all Spirit Magi for every\nUltimate used by a Spirit Magus recently. Stacks up to 3\ntimes",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+3% additional Ultimate Damage and Ailment Damage dealt by Ultimate (multiplies) for all Spirit Magi for every Ultimate used by a Spirit Magus recently. Stacks up to 3 times",
   },
   {
     type: "Dual Kismet",
     name: "Rock Core",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Rock\nMagus\n+30% Origin of Spirit Magus Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Rock Magus\n+30% Origin of Spirit Magus Effect",
   },
   {
     type: "Dual Kismet",
     name: "Shadow",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+2,000 Evasion\n-20% Chance to Avoid Damage\n+30% Movement Speed after evading. The effect falls off to\n0 within 10s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+2,000 Evasion\n-20% Chance to Avoid Damage\n+30% Movement Speed after evading. The effect falls off to 0 within 10s",
   },
   {
     type: "Dual Kismet",
     name: "Sky Piercer",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+50% Attack Horizontal Projectile Speed and +10% additional\nAttack Horizontal Projectile Damage within 3s after using a\nMobility Skill",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+50% Attack Horizontal Projectile Speed and +10% additional Attack Horizontal Projectile Damage within 3s after using a Mobility Skill",
   },
   {
     type: "Dual Kismet",
     name: "Solid Rock",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains a stack of Fortitude when using a\nMelee Skill\n+2 Max Fortitude Stacks",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains a stack of Fortitude when using a Melee Skill\n+2 Max Fortitude Stacks",
   },
   {
     type: "Dual Kismet",
     name: "Spindle",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nTriggers Lv. 25 Corruption upon inflicting damage.\nCooldown: 0.2s\n-50% Curse Skill Area",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nTriggers Lv. 25 Corruption upon inflicting damage. Cooldown: 0.2s\n-50% Curse Skill Area",
   },
   {
     type: "Dual Kismet",
     name: "Spirit Orb",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains Void Orbs every 0.5s\nwhile standing still. Stacks up to 5 times",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains Void Orbs every 0.5s while standing still. Stacks up to 5 times",
   },
   {
     type: "Dual Kismet",
     name: "Star-Chasing Arrow",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n+15% additional damage for Attack Horizontal\nProjectiles\nUpon inflicting damage to distant enemies, Attack\nHorizontal Projectiles have a 30% chance to refresh the\ncooldown of Mobility Skills. Interval: 0.5s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+15% additional damage for Attack Horizontal Projectiles\nUpon inflicting damage to distant enemies, Attack Horizontal Projectiles have a 30% chance to refresh the cooldown of Mobility Skills. Interval: 0.5s",
   },
   {
     type: "Dual Kismet",
     name: "Sun Slash",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains Blazing Sun",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains Blazing Sun",
   },
   {
     type: "Dual Kismet",
     name: "Three-Eyed Cat",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n-5% Sealed Mana Compensation\n+30% additional damage when simultaneously affected by\nAura, Focus, and Origin of Spirit Magus",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-5% Sealed Mana Compensation\n+30% additional damage when simultaneously affected by Aura, Focus, and Origin of Spirit Magus",
   },
   {
     type: "Dual Kismet",
     name: "Thunder Branch",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Thunder\nMagus\n+30% Origin of Spirit Magus Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains the Origin of Spirit Magus Effect of a Lv. 20 Thunder Magus\n+30% Origin of Spirit Magus Effect",
   },
   {
     type: "Dual Kismet",
     name: "Twin Cities",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nEvery 4s, alternate between gaining Lv. 12 Delayed Pain and\nFrost Shield for 5s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nEvery 4s, alternate between gaining Lv. 12 Delayed Pain and Frost Shield for 5s",
   },
   {
     type: "Dual Kismet",
     name: "Two-Headed Crow",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nYou can inflict 1 additional Curse\nEnemies are immune to Curse until they have max\nAffliction",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nYou can inflict 1 additional Curse\nEnemies are immune to Curse until they have max Affliction",
   },
   {
     type: "Dual Kismet",
     name: "Unholy Grail",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\n-40% Restoration Duration for Restoration Skills\nWhen casting a Restoration Skill, gains 4 stacks of a\nrandom Blessing",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-40% Restoration Duration for Restoration Skills\nWhen casting a Restoration Skill, gains 4 stacks of a random Blessing",
   },
   {
     type: "Dual Kismet",
     name: "Viper",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nGains Lv. 20 Precise: Corrosion Focus\n+60% Focus Buff Effect",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains Lv. 20 Precise: Corrosion Focus\n+60% Focus Buff Effect",
   },
   {
     type: "Dual Kismet",
     name: "Witch's Cauldron",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nWhen at full Energy Shield, removes all Energy Shields,\n+20% additional Max Mana, and +10% additional Spell Damage\nfor 4s",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nWhen at full Energy Shield, removes all Energy Shields, +20% additional Max Mana, and +10% additional Spell Damage for 4s",
   },
   {
     type: "Dual Kismet",
     name: "Wraith",
     effect:
-      "Activates the following effects when there are 2 of\nthis Kismet on the same pact page:\nAdds 25% Non-Erosion Damage as Erosion Damage",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nAdds 25% Non-Erosion Damage as Erosion Damage",
   },
   {
     type: "Kismet",
     name: "Ascetic",
     effect:
-      "+(1.7â€“1.9)%\nDouble Damage Chance for Combo Finishers for every\n1 Combo Point(s) consumed",
+      "+(1.7-1.9)% Double Damage Chance for Combo Finishers for every 1 Combo Point(s) consumed",
   },
   {
     type: "Kismet",
     name: "Ashes",
     effect:
-      "+(10â€“12)%\nadditional Fire Damage against Ignited enemies\n-50% chance to Ignite targets",
+      "+(10-12)% additional Fire Damage against Ignited enemies\n-50% chance to Ignite targets",
   },
   {
     type: "Kismet",
     name: "Black Square",
     effect:
-      "+(8â€“10)%\nMax Energy Shield\n+5% additional Damage Over\nTime\n-10% additional Energy Shield\nCharge Interval",
+      "+(8-10)% Max Energy Shield\n+5% additional Damage Over Time\n-10% additional Energy Shield Charge Interval",
   },
   {
     type: "Kismet",
     name: "Bouquet",
     effect:
-      "+(3â€“4)%\nadditional Spirit Magi Damage for every Spirit Magus you\nhave",
+      "+(3-4)% additional Spirit Magi Damage for every Spirit Magus you have",
   },
   {
     type: "Kismet",
     name: "Civet",
-    effect: "Gains a stack of Agility Blessing per\n0.5 s when moving",
+    effect: "Gains a stack of Agility Blessing per 0.5 s when moving",
   },
   {
     type: "Kismet",
     name: "Creek",
     effect:
-      "Restoration Skills gain 1\nCharging Progress every second\n+(6â€“9)%\nMovement Speed while the Restoration Skill lasts",
+      "Restoration Skills gain 1 Charging Progress every second\n+(6-9)% Movement Speed while the Restoration Skill lasts",
   },
   {
     type: "Kismet",
     name: "Double Blade",
     effect:
-      "+(12â€“15)%\nMain-Hand Weapon\nCritical Strike Rating and adds (10â€“12) - (15â€“17) Physical Damage to\nthe Off-Hand Weapon while\nDual Wielding",
+      "+(12-15)% Main-Hand Weapon Critical Strike Rating and adds (10-12) - (15-17) Physical Damage to the Off-Hand Weapon while Dual Wielding",
   },
   {
     type: "Kismet",
     name: "Fisherman",
     effect:
-      "+(100â€“120)%\nMark Effect when an Elite is in\nproximity\nThe knockback direction is reversed for\nHorizontal Projectiles",
+      "+(100-120)% Mark Effect when an Elite is in proximity\nThe knockback direction is reversed for Horizontal Projectiles",
   },
   {
     type: "Kismet",
     name: "Fluffy Ball",
-    effect: "+(40â€“60)%\nCritical Strike Damage Mitigation",
+    effect: "+(40-60)% Critical Strike Damage Mitigation",
   },
   {
     type: "Kismet",
     name: "Giant",
     effect:
-      "+(4â€“6)%\nchance to deal Triple Damage for Attack Skills when holding\na Two-Handed Weapon",
+      "+(4-6)% chance to deal Triple Damage for Attack Skills when holding a Two-Handed Weapon",
   },
   {
     type: "Kismet",
     name: "Giant Bear",
-    effect: "+(50â€“60)%\nMelee Attack Critical Strike Damage against Elites",
+    effect: "+(50-60)% Melee Attack Critical Strike Damage against Elites",
   },
   {
     type: "Kismet",
     name: "Green Shoot",
     effect:
-      "+(50â€“60)\ninitial Growth for Spirit\nMagi\nSpirit Magi +20% Cooldown Recovery\nSpeed",
+      "+(50-60) initial Growth for Spirit Magi\nSpirit Magi +20% Cooldown Recovery Speed",
   },
   {
     type: "Kismet",
     name: "Growth Ring",
     effect:
-      "+(10â€“15)%\nTerra Skill Duration\n+50% chance to +100% Skill Area when casting a Terra\nSkill\n+50% chance to -75% additional Skill Area when casting a\nTerra Skill",
+      "+(10-15)% Terra Skill Duration\n+50% chance to +100% Skill Area when casting a Terra Skill\n+50% chance to -75% additional Skill Area when casting a Terra Skill",
   },
   {
     type: "Kismet",
     name: "Guard",
     effect:
-      "+(5â€“6)%\nadditional Sentry Skill Cast Frequency\n+1 Sentry quantity that can be\ndeployed at a time",
+      "+(5-6)% additional Sentry Skill Cast Frequency\n+1 Sentry quantity that can be deployed at a time",
   },
   {
     type: "Kismet",
     name: "Guillotine",
     effect:
-      "+(4â€“6)%\nSteep Strike\nchance.\n+(4â€“6)%\nadditional Steep Strike Damage",
+      "+(4-6)% Steep Strike chance.\n+(4-6)% additional Steep Strike Damage",
   },
   {
     type: "Kismet",
     name: "Hawk",
     effect:
-      "Immune to Blinding\nBlinds nearby enemies when using an Attack\nProjectile Skill",
+      "Immune to Blinding\nBlinds nearby enemies when using an Attack Projectile Skill",
   },
   {
     type: "Kismet",
     name: "Hound",
     effect:
-      "+(16â€“20)%\nchance to Multistrike\nMultistrikes deal\n(8â€“10)%\nincreasing damage",
+      "+(16-20)% chance to Multistrike\nMultistrikes deal (8-10)% increasing damage",
   },
   {
     type: "Kismet",
     name: "Hunter",
     effect:
-      "Projectile Damage increases with the distance traveled,\ndealing up to +(70â€“100)% damage to\ndistant enemies\nProjectile Damage increases with the distance traveled,\nincreasing the Critical Strike Rating by up to +(70â€“100)% against\ndistant enemies",
+      "Projectile Damage increases with the distance traveled, dealing up to +(70-100)% damage to distant enemies\nProjectile Damage increases with the distance traveled, increasing the Critical Strike Rating by up to +(70-100)% against distant enemies",
   },
   {
     type: "Kismet",
     name: "Ice Soul",
-    effect: "Inflicts Frostbite on\nnearby enemies",
+    effect: "Inflicts Frostbite on nearby enemies",
   },
   {
     type: "Kismet",
     name: "Leader",
-    effect: "+ 2 Command per second\n+(15â€“20)%\nMinion Max Life",
+    effect: "+ 2 Command per second\n+(15-20)% Minion Max Life",
   },
   {
     type: "Kismet",
     name: "Lion",
     effect:
-      "For each time Warcry has been cast recently,\n+(4â€“5)% Warcry\nEffect. Stacks up to 3\ntime(s)",
+      "For each time Warcry has been cast recently, +(4-5)% Warcry Effect. Stacks up to 3 time(s)",
   },
   {
     type: "Kismet",
     name: "Longevity Tree",
-    effect: "+(2â€“3)% Max\nElemental Resistance",
+    effect: "+(2-3)% Max Elemental Resistance",
   },
   {
     type: "Kismet",
     name: "Mercury Bottle",
-    effect: "+(70â€“80)\nAffliction inflicted per\nsecond",
+    effect: "+(70-80) Affliction inflicted per second",
   },
   {
     type: "Kismet",
     name: "Mouth of the Spring",
     effect:
-      "+(12â€“15)%\nSpell Burst Charge\nSpeed\n-5% additional damage taken when\nSpell Burst Charge is\nactivated",
+      "+(12-15)% Spell Burst Charge Speed\n-5% additional damage taken when Spell Burst Charge is activated",
   },
   {
     type: "Kismet",
     name: "Pale Fox",
-    effect: "Gains 1 stack(s) of\nFocus Blessing when\nusing a Non-Main Skill",
+    effect: "Gains 1 stack(s) of Focus Blessing when using a Non-Main Skill",
   },
   {
     type: "Kismet",
     name: "Prosthetics",
     effect:
-      "+(9â€“12)%\nPhysique for Synthetic Troop Minions\n+(9â€“12)% chance\nfor Synthetic Troop Minions to deal Double Damage",
+      "+(9-12)% Physique for Synthetic Troop Minions\n+(9-12)% chance for Synthetic Troop Minions to deal Double Damage",
   },
   {
     type: "Kismet",
     name: "Red Leech",
     effect:
-      "+(100â€“150)%\nCritical Strike Rating against Traumatized enemies\n-30% Critical Strike Damage\nagainst Traumatized enemies",
+      "+(100-150)% Critical Strike Rating against Traumatized enemies\n-30% Critical Strike Damage against Traumatized enemies",
   },
   {
     type: "Kismet",
     name: "Ripple",
     effect:
-      "When activating Spell Burst, +(8â€“10)% Skill Area for\neach time Spell Burst is activated",
+      "When activating Spell Burst, +(8-10)% Skill Area for each time Spell Burst is activated",
   },
   {
     type: "Kismet",
     name: "Sacred Crest",
-    effect: "(-60â€“-40)%\nCursed Effect",
+    effect: "(-60--40)% Cursed Effect",
   },
   {
     type: "Kismet",
     name: "Scale",
     effect:
-      "+(35â€“40)%\nAttack Damage for each unique type of weapon equipped while\nDual Wielding",
+      "+(35-40)% Attack Damage for each unique type of weapon equipped while Dual Wielding",
   },
   {
     type: "Kismet",
     name: "Scorpion Stinger",
     effect:
-      "+(3â€“5)%\nSkill Effect Duration\n+2% Reaping Cooldown Recovery\nSpeed for each Reap dealt recently, up to 20%",
+      "+(3-5)% Skill Effect Duration\n+2% Reaping Cooldown Recovery Speed for each Reap dealt recently, up to 20%",
   },
   {
     type: "Kismet",
     name: "Screw",
     effect:
-      "+(120â€“150)\nMinion Critical Strike Rating\n-1% additional Minion Attack and\nCast Speed for every 2 Synthetic\nTroop Minions you have",
+      "+(120-150) Minion Critical Strike Rating\n-1% additional Minion Attack and Cast Speed for every 2 Synthetic Troop Minions you have",
   },
   {
     type: "Kismet",
     name: "Shackles",
     effect:
-      "Gains (40â€“45)% Movement Speed\nwhen consuming Demolisher Charge. The effect gradually\nfalls off to 0 within 1 s.",
+      "Gains (40-45)% Movement Speed when consuming Demolisher Charge. The effect gradually falls off to 0 within 1 s.",
   },
   {
     type: "Kismet",
     name: "Shadow Mage",
     effect:
-      "+(40â€“50)%\nSentry Duration\n+10% additional Cast Speed for\nSentry Skills",
+      "+(40-50)% Sentry Duration\n+10% additional Cast Speed for Sentry Skills",
   },
   {
     type: "Kismet",
     name: "Shield",
     effect:
-      "+(16â€“20)%\nDefense when holding a Shield\n+(4â€“5)%\nMovement Speed when holding a Shield",
+      "+(16-20)% Defense when holding a Shield\n+(4-5)% Movement Speed when holding a Shield",
   },
   {
     type: "Kismet",
     name: "Spades",
     effect:
-      "+(8â€“10)%\nMax Life\n+5% additional Damage Over\nTime\nRegenerates 1% Life per\nsecond",
+      "+(8-10)% Max Life\n+5% additional Damage Over Time\nRegenerates 1% Life per second",
   },
   {
     type: "Kismet",
     name: "Spider Fluid",
     effect:
-      "+1% damage per stack of\nWilt inflicted\nrecently. Stacks up to 80\ntime(s)\nAdds 5 Base Wilt Damage",
+      "+1% damage per stack of Wilt inflicted recently. Stacks up to 80 time(s)\nAdds 5 Base Wilt Damage",
   },
   {
     type: "Kismet",
     name: "Star Trail",
-    effect: "+45% for the effects of Micro\nFates in all Pact Branches",
+    effect: "+45% for the effects of Micro Fates in all Pact Branches",
   },
   {
     type: "Kismet",
     name: "Stone Bear",
-    effect: "Gains 1 stack(s) of\nTenacity Blessing when\nRegaining",
+    effect: "Gains 1 stack(s) of Tenacity Blessing when Regaining",
   },
   {
     type: "Kismet",
@@ -533,499 +533,499 @@ export const Destinies = [
     type: "Kismet",
     name: "Tiger Roar",
     effect:
-      "+100% chance to inflict\nIntimidated on hit\n+(10â€“12)%\nadditional damage against Low Life enemies",
+      "+100% chance to inflict Intimidated on hit\n+(10-12)% additional damage against Low Life enemies",
   },
   {
     type: "Kismet",
     name: "Tiger's Chain",
     effect:
-      "When casting Combo Starters, Reverse Knocks Back\nenemies within 8 m by (1.5â€“2) m\nThe effective radius is affected by Skill Area bonuses\n+8% Knockback Distance for\neach Combo Finisher cast recently. Stacks up to\n5 time(s)\n+(4â€“6)%\nadditional Combo Skill Damage",
+      "When casting Combo Starters, Reverse Knocks Back enemies within 8 m by (1.5-2) m\nThe effective radius is affected by Skill Area bonuses\n+8% Knockback Distance for each Combo Finisher cast recently. Stacks up to 5 time(s)\n+(4-6)% additional Combo Skill Damage",
   },
   {
     type: "Kismet",
     name: "Volcano",
     effect:
-      "-15% chance to Ignite targets\nWhen Ignite is inflicted,\nIgnite spreads and\n+(10â€“12)%\nadditional Ignite Damage taken by\nNearby enemies",
+      "-15% chance to Ignite targets\nWhen Ignite is inflicted, Ignite spreads and +(10-12)% additional Ignite Damage taken by Nearby enemies",
   },
   {
     type: "Kismet",
     name: "War Hammer",
     effect:
-      "+(50â€“60)%\nDemolisher Charge\nRestoration Speed when wielding a hammer",
+      "+(50-60)% Demolisher Charge Restoration Speed when wielding a hammer",
   },
   {
     type: "Kismet",
     name: "Wind Chime",
-    effect: "Spirit Magi +(12â€“15)% chance to use an\nEnhanced Skill",
+    effect: "Spirit Magi +(12-15)% chance to use an Enhanced Skill",
   },
   {
     type: "Kismet",
     name: "Witch Cloak",
-    effect: "(8â€“10)% of\ndamage is taken from Mana before life",
+    effect: "(8-10)% of damage is taken from Mana before life",
   },
   {
     type: "Medium Fate",
     name: "Affliction Effect",
-    effect: "+(20â€“26)%\nAffliction Effect",
+    effect: "+(20-26)% Affliction Effect",
   },
   {
     type: "Medium Fate",
     name: "Armor",
-    effect: "+(14â€“18)%\nArmor",
+    effect: "+(14-18)% Armor",
   },
   {
     type: "Medium Fate",
     name: "Attack Block Chance",
-    effect: "+(12â€“15)%\nAttack Block Chance",
+    effect: "+(12-15)% Attack Block Chance",
   },
   {
     type: "Medium Fate",
     name: "Attack Cast Speed",
     effect:
-      "+(10â€“12)%\nAttack and Cast Speed\n+(10â€“12)%\nMinion Attack and Cast Speed",
+      "+(10-12)% Attack and Cast Speed\n+(10-12)% Minion Attack and Cast Speed",
   },
   {
     type: "Medium Fate",
     name: "Attack Damage",
-    effect: "+(28â€“36)%\nAttack Damage",
+    effect: "+(28-36)% Attack Damage",
   },
   {
     type: "Medium Fate",
     name: "Aura Effect",
-    effect: "+(5â€“7)%\nAura Effect",
+    effect: "+(5-7)% Aura Effect",
   },
   {
     type: "Medium Fate",
     name: "Block Ratio",
-    effect: "+(4â€“6)%\nBlock Ratio",
+    effect: "+(4-6)% Block Ratio",
   },
   {
     type: "Medium Fate",
     name: "Cold Resistance",
-    effect: "+(10â€“14)%\nCold Resistance",
+    effect: "+(10-14)% Cold Resistance",
   },
   {
     type: "Medium Fate",
     name: "Command",
-    effect: "+ (2â€“4)\nCommand per second",
+    effect: "+ (2-4) Command per second",
   },
   {
     type: "Medium Fate",
     name: "Critical Strike Damage",
     effect:
-      "+(24â€“30)%\nCritical Strike Damage\n+(24â€“30)%\nMinion Critical Strike Damage",
+      "+(24-30)% Critical Strike Damage\n+(24-30)% Minion Critical Strike Damage",
   },
   {
     type: "Medium Fate",
     name: "Critical Strike Rating",
     effect:
-      "+(48â€“60)%\nCritical Strike Rating\n+(48â€“60)%\nMinion Critical Strike Rating",
+      "+(48-60)% Critical Strike Rating\n+(48-60)% Minion Critical Strike Rating",
   },
   {
     type: "Medium Fate",
     name: "Curse Effect",
-    effect: "+(4â€“6)%\ncurse effect",
+    effect: "+(4-6)% curse effect",
   },
   {
     type: "Medium Fate",
     name: "Dexterity",
-    effect: "+(24â€“30)\nDexterity",
+    effect: "+(24-30) Dexterity",
   },
   {
     type: "Medium Fate",
     name: "Double Damage Chance",
     effect:
-      "+(4â€“6)%\nchance to deal Double Damage\n+(4â€“6)% chance\nfor Minions to deal Double Damage",
+      "+(4-6)% chance to deal Double Damage\n+(4-6)% chance for Minions to deal Double Damage",
   },
   {
     type: "Medium Fate",
     name: "Energy Shield",
-    effect: "+(10â€“12)%\nMax Energy Shield",
+    effect: "+(10-12)% Max Energy Shield",
   },
   {
     type: "Medium Fate",
     name: "Energy Shield Charge Speed",
-    effect: "+(6â€“10)%\nEnergy Shield Charge Speed",
+    effect: "+(6-10)% Energy Shield Charge Speed",
   },
   {
     type: "Medium Fate",
     name: "Energy Shield Restored on Defeat",
-    effect: "Restores (0.2â€“0.4)% of Energy Shield\non defeat",
+    effect: "Restores (0.2-0.4)% of Energy Shield on defeat",
   },
   {
     type: "Medium Fate",
     name: "Erosion Resistance",
-    effect: "+(10â€“14)%\nErosion Resistance",
+    effect: "+(10-14)% Erosion Resistance",
   },
   {
     type: "Medium Fate",
     name: "Evade",
-    effect: "+(14â€“18)%\nEvasion",
+    effect: "+(14-18)% Evasion",
   },
   {
     type: "Medium Fate",
     name: "Fire Resistance",
-    effect: "+(10â€“14)%\nFire Resistance",
+    effect: "+(10-14)% Fire Resistance",
   },
   {
     type: "Medium Fate",
     name: "Focus Speed",
-    effect: "+(14â€“18)%\nFocus Speed",
+    effect: "+(14-18)% Focus Speed",
   },
   {
     type: "Medium Fate",
     name: "Growth",
-    effect: "+(20â€“24)\ninitial Growth for Spirit\nMagi",
+    effect: "+(20-24) initial Growth for Spirit Magi",
   },
   {
     type: "Medium Fate",
     name: "Intelligence",
-    effect: "+(24â€“30)\nIntelligence",
+    effect: "+(24-30) Intelligence",
   },
   {
     type: "Medium Fate",
     name: "Life Regeneration",
-    effect: "+(6â€“10)%\nLife Regeneration Speed",
+    effect: "+(6-10)% Life Regeneration Speed",
   },
   {
     type: "Medium Fate",
     name: "Life Restored on Defeat",
-    effect: "Restores (0.4â€“0.6)% of Life on\ndefeat",
+    effect: "Restores (0.4-0.6)% of Life on defeat",
   },
   {
     type: "Medium Fate",
     name: "Lightning Resistance",
-    effect: "+(10â€“14)%\nLightning Resistance",
+    effect: "+(10-14)% Lightning Resistance",
   },
   {
     type: "Medium Fate",
     name: "Mana%",
-    effect: "+(12â€“16)%\nMax Mana",
+    effect: "+(12-16)% Max Mana",
   },
   {
     type: "Medium Fate",
     name: "Max Cold Resistance",
-    effect: "+(2â€“4)%\nMax Cold\nResistance",
+    effect: "+(2-4)% Max Cold Resistance",
   },
   {
     type: "Medium Fate",
     name: "Max Erosion Resistance",
-    effect: "+(2â€“4)%\nMax Erosion\nResistance",
+    effect: "+(2-4)% Max Erosion Resistance",
   },
   {
     type: "Medium Fate",
     name: "Max Fire Resistance",
-    effect: "+(2â€“4)%\nMax Fire\nResistance",
+    effect: "+(2-4)% Max Fire Resistance",
   },
   {
     type: "Medium Fate",
     name: "Max Lightning Resistance",
-    effect: "+(2â€“4)%\nMax Lightning\nResistance",
+    effect: "+(2-4)% Max Lightning Resistance",
   },
   {
     type: "Medium Fate",
     name: "Movement Speed",
-    effect: "+(4â€“6)%\nMovement Speed",
+    effect: "+(4-6)% Movement Speed",
   },
   {
     type: "Medium Fate",
     name: "Multistrike Chance",
-    effect: "+(20â€“24)%\nchance to Multistrike",
+    effect: "+(20-24)% chance to Multistrike",
   },
   {
     type: "Medium Fate",
     name: "Multistrike Increment",
-    effect: "Multistrikes deal\n(10â€“12)%\nincreasing damage",
+    effect: "Multistrikes deal (10-12)% increasing damage",
   },
   {
     type: "Medium Fate",
     name: "Numbed Chance and Effect",
-    effect: "+(10â€“12)%\nNumbed chance\n+(10â€“12)%\nNumbed Effect",
+    effect: "+(10-12)% Numbed chance\n+(10-12)% Numbed Effect",
   },
   {
     type: "Medium Fate",
     name: "Origin of Spirit Magus",
-    effect: "+(15â€“18)%\nOrigin of Spirit Magus\neffect",
+    effect: "+(15-18)% Origin of Spirit Magus effect",
   },
   {
     type: "Medium Fate",
     name: "Reaping Duration",
-    effect: "+(20â€“26)%\nReaping Duration",
+    effect: "+(20-26)% Reaping Duration",
   },
   {
     type: "Medium Fate",
     name: "Seal Compensation",
-    effect: "+(4â€“6)%\nSealed Mana Compensation",
+    effect: "+(4-6)% Sealed Mana Compensation",
   },
   {
     type: "Medium Fate",
     name: "Spell Block Chance",
-    effect: "+(12â€“15)%\nSpell Block Chance",
+    effect: "+(12-15)% Spell Block Chance",
   },
   {
     type: "Medium Fate",
     name: "Spell Damage",
-    effect: "+(28â€“36)%\nSpell Damage\n+(28â€“36)%\nMinion Damage",
+    effect: "+(28-36)% Spell Damage\n+(28-36)% Minion Damage",
   },
   {
     type: "Medium Fate",
     name: "Strength",
-    effect: "+(24â€“30)\nStrength",
+    effect: "+(24-30) Strength",
   },
   {
     type: "Micro Fate",
     name: "Affliction Effect",
-    effect: "+(10â€“13)%\nAffliction Effect",
+    effect: "+(10-13)% Affliction Effect",
   },
   {
     type: "Micro Fate",
     name: "Armor",
-    effect: "+(7â€“9)%\nArmor",
+    effect: "+(7-9)% Armor",
   },
   {
     type: "Micro Fate",
     name: "Attack Block Chance",
-    effect: "+(6â€“8)%\nAttack Block Chance",
+    effect: "+(6-8)% Attack Block Chance",
   },
   {
     type: "Micro Fate",
     name: "Attack Cast Speed",
     effect:
-      "+(4â€“6)%\nAttack and Cast Speed\n+(4â€“6)% Minion\nAttack and Cast Speed",
+      "+(4-6)% Attack and Cast Speed\n+(4-6)% Minion Attack and Cast Speed",
   },
   {
     type: "Micro Fate",
     name: "Attack Damage",
-    effect: "+(14â€“18)%\nAttack Damage",
+    effect: "+(14-18)% Attack Damage",
   },
   {
     type: "Micro Fate",
     name: "Aura Effect",
-    effect: "+(2â€“3)%\nAura Effect",
+    effect: "+(2-3)% Aura Effect",
   },
   {
     type: "Micro Fate",
     name: "Block Ratio",
-    effect: "+(1â€“3)%\nBlock Ratio",
+    effect: "+(1-3)% Block Ratio",
   },
   {
     type: "Micro Fate",
     name: "Cold Resistance",
-    effect: "+(5â€“7)%\nCold Resistance",
+    effect: "+(5-7)% Cold Resistance",
   },
   {
     type: "Micro Fate",
     name: "Command",
-    effect: "+ (1â€“2)\nCommand per second",
+    effect: "+ (1-2) Command per second",
   },
   {
     type: "Micro Fate",
     name: "Critical Strike Damage",
     effect:
-      "+(12â€“15)%\nCritical Strike Damage\n+(12â€“15)%\nMinion Critical Strike Damage",
+      "+(12-15)% Critical Strike Damage\n+(12-15)% Minion Critical Strike Damage",
   },
   {
     type: "Micro Fate",
     name: "Critical Strike Rating",
     effect:
-      "+(24â€“30)%\nCritical Strike Rating\n+(24â€“30)%\nMinion Critical Strike Rating",
+      "+(24-30)% Critical Strike Rating\n+(24-30)% Minion Critical Strike Rating",
   },
   {
     type: "Micro Fate",
     name: "Curse Effect",
-    effect: "+(1â€“3)%\ncurse effect",
+    effect: "+(1-3)% curse effect",
   },
   {
     type: "Micro Fate",
     name: "Deterioration Chance",
-    effect: "+(2â€“4)%\nDeterioration\nChance",
+    effect: "+(2-4)% Deterioration Chance",
   },
   {
     type: "Micro Fate",
     name: "Deterioration Duration",
-    effect: "+(3â€“5)%\nadditional Deterioration\nDuration",
+    effect: "+(3-5)% additional Deterioration Duration",
   },
   {
     type: "Micro Fate",
     name: "Dexterity",
-    effect: "+(12â€“15)\nDexterity",
+    effect: "+(12-15) Dexterity",
   },
   {
     type: "Micro Fate",
     name: "Double Damage Chance",
     effect:
-      "+(1â€“3)%\nchance to deal Double Damage\n+(1â€“3)% chance\nfor Minions to deal Double Damage",
+      "+(1-3)% chance to deal Double Damage\n+(1-3)% chance for Minions to deal Double Damage",
   },
   {
     type: "Micro Fate",
     name: "Energy Shield",
-    effect: "+(5â€“6)% Max\nEnergy Shield",
+    effect: "+(5-6)% Max Energy Shield",
   },
   {
     type: "Micro Fate",
     name: "Energy Shield Charge Speed",
-    effect: "+(3â€“5)%\nEnergy Shield Charge Speed",
+    effect: "+(3-5)% Energy Shield Charge Speed",
   },
   {
     type: "Micro Fate",
     name: "Energy Shield Restored on Defeat",
-    effect: "Restores (0.1â€“0.2)% of Energy Shield\non defeat",
+    effect: "Restores (0.1-0.2)% of Energy Shield on defeat",
   },
   {
     type: "Micro Fate",
     name: "Erosion Resistance",
-    effect: "+(5â€“7)%\nErosion Resistance",
+    effect: "+(5-7)% Erosion Resistance",
   },
   {
     type: "Micro Fate",
     name: "Evade",
-    effect: "+(7â€“9)%\nEvasion",
+    effect: "+(7-9)% Evasion",
   },
   {
     type: "Micro Fate",
     name: "Fire Resistance",
-    effect: "+(5â€“7)%\nFire Resistance",
+    effect: "+(5-7)% Fire Resistance",
   },
   {
     type: "Micro Fate",
     name: "Focus Speed",
-    effect: "+(7â€“9)%\nFocus Speed",
+    effect: "+(7-9)% Focus Speed",
   },
   {
     type: "Micro Fate",
     name: "Growth",
-    effect: "+(10â€“12)\ninitial Growth for Spirit\nMagi",
+    effect: "+(10-12) initial Growth for Spirit Magi",
   },
   {
     type: "Micro Fate",
     name: "Ignite Damage Mitigation",
     effect:
-      "(-36â€“-30)%\nadditional Ignite Damage taken\n(-36â€“-30)%\nIgnite Effect\nreceived",
+      "(-36--30)% additional Ignite Damage taken\n(-36--30)% Ignite Effect received",
   },
   {
     type: "Micro Fate",
     name: "Intelligence",
-    effect: "+(12â€“15)\nIntelligence",
+    effect: "+(12-15) Intelligence",
   },
   {
     type: "Micro Fate",
     name: "Life Regeneration",
-    effect: "+(3â€“5)%\nLife Regeneration Speed",
+    effect: "+(3-5)% Life Regeneration Speed",
   },
   {
     type: "Micro Fate",
     name: "Life Restored on Defeat",
-    effect: "Restores (0.2â€“0.3)% of Life on\ndefeat",
+    effect: "Restores (0.2-0.3)% of Life on defeat",
   },
   {
     type: "Micro Fate",
     name: "Lightning Resistance",
-    effect: "+(5â€“7)%\nLightning Resistance",
+    effect: "+(5-7)% Lightning Resistance",
   },
   {
     type: "Micro Fate",
     name: "Mana%",
-    effect: "+(6â€“8)% Max\nMana",
+    effect: "+(6-8)% Max Mana",
   },
   {
     type: "Micro Fate",
     name: "Max Cold Resistance",
-    effect: "+(1â€“2)%\nMax Cold\nResistance",
+    effect: "+(1-2)% Max Cold Resistance",
   },
   {
     type: "Micro Fate",
     name: "Max Erosion Resistance",
-    effect: "+(1â€“2)%\nMax Erosion\nResistance",
+    effect: "+(1-2)% Max Erosion Resistance",
   },
   {
     type: "Micro Fate",
     name: "Max Fire Resistance",
-    effect: "+(1â€“2)%\nMax Fire\nResistance",
+    effect: "+(1-2)% Max Fire Resistance",
   },
   {
     type: "Micro Fate",
     name: "Max Lightning Resistance",
-    effect: "+(1â€“2)%\nMax Lightning\nResistance",
+    effect: "+(1-2)% Max Lightning Resistance",
   },
   {
     type: "Micro Fate",
     name: "Movement Speed",
-    effect: "+(1â€“3)%\nMovement Speed",
+    effect: "+(1-3)% Movement Speed",
   },
   {
     type: "Micro Fate",
     name: "Multistrike Chance",
-    effect: "+(10â€“12)%\nchance to Multistrike",
+    effect: "+(10-12)% chance to Multistrike",
   },
   {
     type: "Micro Fate",
     name: "Multistrike Increment",
-    effect: "Multistrikes deal\n(4â€“6)%\nincreasing damage",
+    effect: "Multistrikes deal (4-6)% increasing damage",
   },
   {
     type: "Micro Fate",
     name: "Numbed Chance and Effect",
-    effect: "+(4â€“6)%\nNumbed chance\n+(4â€“6)%\nNumbed Effect",
+    effect: "+(4-6)% Numbed chance\n+(4-6)% Numbed Effect",
   },
   {
     type: "Micro Fate",
     name: "Numbed Effect Mitigation",
-    effect: "(-55â€“-45)%\nNumbed Effect\nreceived",
+    effect: "(-55--45)% Numbed Effect received",
   },
   {
     type: "Micro Fate",
     name: "Origin of Spirit Magus",
-    effect: "+(7â€“9)%\nOrigin of Spirit Magus\neffect",
+    effect: "+(7-9)% Origin of Spirit Magus effect",
   },
   {
     type: "Micro Fate",
     name: "Paralysis Effect Mitigation",
-    effect: "(-55â€“-45)%\nParalysis Effect received",
+    effect: "(-55--45)% Paralysis Effect received",
   },
   {
     type: "Micro Fate",
     name: "Reaping Duration",
-    effect: "+(10â€“13)%\nReaping Duration",
+    effect: "+(10-13)% Reaping Duration",
   },
   {
     type: "Micro Fate",
     name: "Seal Compensation",
-    effect: "+(1â€“3)%\nSealed Mana Compensation",
+    effect: "+(1-3)% Sealed Mana Compensation",
   },
   {
     type: "Micro Fate",
     name: "Slow Effect Mitigation",
-    effect: "(-55â€“-45)%\nSlow Effect\nreceived",
+    effect: "(-55--45)% Slow Effect received",
   },
   {
     type: "Micro Fate",
     name: "Spell Block Chance",
-    effect: "+(6â€“8)%\nSpell Block Chance",
+    effect: "+(6-8)% Spell Block Chance",
   },
   {
     type: "Micro Fate",
     name: "Spell Damage",
-    effect: "+(14â€“18)%\nSpell Damage\n+(14â€“18)%\nMinion Damage",
+    effect: "+(14-18)% Spell Damage\n+(14-18)% Minion Damage",
   },
   {
     type: "Micro Fate",
     name: "Strength",
-    effect: "+(12â€“15)\nStrength",
+    effect: "+(12-15) Strength",
   },
   {
     type: "Micro Fate",
     name: "Trauma Damage Mitigation",
-    effect: "(-36â€“-30)%\nTrauma Damage taken",
+    effect: "(-36--30)% Trauma Damage taken",
   },
   {
     type: "Micro Fate",
     name: "Weaken Effect Mitigation",
-    effect: "(-55â€“-45)%\nWeaken Effect received",
+    effect: "(-55--45)% Weaken Effect received",
   },
   {
     type: "Micro Fate",
     name: "Wilt Damage Mitigation",
-    effect: "(-36â€“-30)%\nWilt Damage taken",
+    effect: "(-36--30)% Wilt Damage taken",
   },
   {
     type: "Undetermined Fate",

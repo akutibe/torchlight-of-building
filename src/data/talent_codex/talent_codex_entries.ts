@@ -7,7 +7,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Affliction",
     effect:
-      "+30 Affliction inflicted\nper second\n+30% additional Affliction effect (Max\nDivinity Effect: 1)",
+      "+30 Affliction inflicted per second\n+30% additional Affliction effect (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -15,7 +15,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Deceiver's Might",
     effect:
-      "+1 to Max Tenacity Blessing\nStacks if you have taken damage in the last 8s\n+1 to Max Agility Blessing\nStacks if you have used a Mobility Skill in the last 8s\n+1 to Max Focus Blessing Stacks\nif you have landed a Critical Strike or Reaped in the last\n8s (Max Divinity Effect: 1)",
+      "+1 to Max Tenacity Blessing Stacks if you have taken damage in the last 8s\n+1 to Max Agility Blessing Stacks if you have used a Mobility Skill in the last 8s\n+1 to Max Focus Blessing Stacks if you have landed a Critical Strike or Reaped in the last 8s (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -23,14 +23,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Forbidden Power",
     effect:
-      "+35% additional Erosion\nDamage\n-10% Elemental Resistance (Max Divinity\nEffect: 1)",
+      "+35% additional Erosion Damage\n-10% Elemental Resistance (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
     tree: "Goddess of Deception",
     type: "Core",
     name: "Mixture",
-    effect: "+50% Deterioration Chance\n(Max Divinity Effect: 1)",
+    effect: "+50% Deterioration Chance (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -38,7 +38,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Plague",
     effect:
-      "+20% Movement Speed when\ndefeating Wilted enemies\nrecently\n+15% additional Wilt Damage (Max\nDivinity Effect: 1)",
+      "+20% Movement Speed when defeating Wilted enemies recently\n+15% additional Wilt Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -46,14 +46,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Subtle Impact",
     effect:
-      "Blur gains an\nadditional effect: +25% additional Damage Over Time (Max\nDivinity Effect: 1)",
+      "Blur gains an additional effect: +25% additional Damage Over Time (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
     tree: "Goddess of Deception",
     type: "Legendary Medium",
     name: "",
-    effect: "+100% chance to gain\nBlur on defeat (Max\nDivinity Effect: 1)",
+    effect: "+100% chance to gain Blur on defeat (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -68,14 +68,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "10% chance to inflict\n1 additional stack(s) of\nDeterioration\n-15% additional Deterioration\nDuration",
+      "10% chance to inflict 1 additional stack(s) of Deterioration\n-15% additional Deterioration Duration",
   },
   {
     god: "Deception",
     tree: "Goddess of Deception",
     type: "Legendary Medium",
     name: "",
-    effect: "8% additional damage applied\nto Life",
+    effect: "8% additional damage applied to Life",
   },
   {
     god: "Deception",
@@ -103,14 +103,14 @@ export const TalentCodexEntries = [
     tree: "Goddess of Deception",
     type: "Medium",
     name: "",
-    effect: "+5% Max Life\nRegenerates 0.5% Life per\nsecond",
+    effect: "+5% Max Life\nRegenerates 0.5% Life per second",
   },
   {
     god: "Deception",
     tree: "Goddess of Deception",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+10% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+10% Critical Strike Damage",
   },
   {
     god: "Deception",
@@ -124,7 +124,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Deception",
     type: "Medium",
     name: "",
-    effect: "+8% Deterioration\nChance",
+    effect: "+8% Deterioration Chance",
   },
   {
     god: "Deception",
@@ -132,7 +132,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "Reaps 0.09 s of Damage Over Time when dealing Damage\nOver Time. The effect has a 6 s\ncooldown against the same target",
+      "Reaps 0.09 s of Damage Over Time when dealing Damage Over Time. The effect has a 6 s cooldown against the same target",
   },
   {
     god: "Deception",
@@ -188,7 +188,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Deception",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "Deception",
@@ -209,7 +209,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Deception",
     type: "Micro",
     name: "",
-    effect: "+6 Affliction inflicted\nper second\n+9% Damage Over Time",
+    effect: "+6 Affliction inflicted per second\n+9% Damage Over Time",
   },
   {
     god: "Deception",
@@ -230,7 +230,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Deception",
     type: "Micro",
     name: "",
-    effect: "+4% Deterioration\nDamage",
+    effect: "+4% Deterioration Damage",
   },
   {
     god: "Deception",
@@ -245,7 +245,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Indifference",
     effect:
-      "+1% additional damage and\n+1% additional Minion Damage for\nevery 5 remaining Energy, up to\n+50% additional damage (Max\nDivinity Effect: 1)",
+      "+1% additional damage and +1% additional Minion Damage for every 5 remaining Energy, up to +50% additional damage (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -261,7 +261,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Stab In The Back",
     effect:
-      "While Blur is active, loses\nBlur after casting a\nMain Skill, and the skill deals +35% additional damage (Max Divinity Effect:\n1)",
+      "While Blur is active, loses Blur after casting a Main Skill, and the skill deals +35% additional damage (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -269,7 +269,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Ward",
     effect:
-      "Adds 13% of Sealed Mana as\nEnergy Shield\nAdds 13% of Sealed Life as Energy\nShield (Max Divinity Effect: 1)",
+      "Adds 13% of Sealed Mana as Energy Shield\nAdds 13% of Sealed Life as Energy Shield (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -277,7 +277,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% Max Energy Shield\nGains Blur when Energy\nShield starts to Charge (Max Divinity\nEffect: 1)",
+      "+10% Max Energy Shield\nGains Blur when Energy Shield starts to Charge (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -285,14 +285,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "0.2% Blur effect for every\n1% of Life lost (Max Divinity Effect: 1)",
+      "0.2% Blur effect for every 1% of Life lost (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
     tree: "Lich",
     type: "Legendary Medium",
     name: "",
-    effect: "+1 all skills' level (Max\nDivinity Effect: 1)",
+    effect: "+1 all skills' level (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -300,21 +300,21 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+8% Cooldown Recovery\nSpeed\n+1 Max Charges (Max Divinity\nEffect: 1)",
+      "+8% Cooldown Recovery Speed\n+1 Max Charges (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
     tree: "Lich",
     type: "Legendary Medium",
     name: "",
-    effect: "+10% additional damage when\nhaving both Sealed Mana and Life",
+    effect: "+10% additional damage when having both Sealed Mana and Life",
   },
   {
     god: "Deception",
     tree: "Lich",
     type: "Legendary Medium",
     name: "",
-    effect: "+8% Sealed Mana Compensation\n(Max Divinity Effect: 1)",
+    effect: "+8% Sealed Mana Compensation (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -350,7 +350,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+6% Attack and Cast Speed\n+6% Minion Attack and Cast\nSpeed\n-4 Skill Cost",
+      "+6% Attack and Cast Speed\n+6% Minion Attack and Cast Speed\n-4 Skill Cost",
   },
   {
     god: "Deception",
@@ -358,7 +358,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Critical Strike\nRating\n+20% Minion Critical Strike\nRating\n+5% Critical Strike Damage\n+5% Minion Critical Strike\nDamage",
+      "+20% Critical Strike Rating\n+20% Minion Critical Strike Rating\n+5% Critical Strike Damage\n+5% Minion Critical Strike Damage",
   },
   {
     god: "Deception",
@@ -372,7 +372,7 @@ export const TalentCodexEntries = [
     tree: "Lich",
     type: "Medium",
     name: "",
-    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast\nSpeed",
+    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast Speed",
   },
   {
     god: "Deception",
@@ -386,7 +386,7 @@ export const TalentCodexEntries = [
     tree: "Lich",
     type: "Medium",
     name: "",
-    effect: "+3% Sealed Mana\nCompensation",
+    effect: "+3% Sealed Mana Compensation",
   },
   {
     god: "Deception",
@@ -421,14 +421,14 @@ export const TalentCodexEntries = [
     tree: "Lich",
     type: "Micro",
     name: "",
-    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast\nSpeed",
+    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast Speed",
   },
   {
     god: "Deception",
     tree: "Lich",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating\n+15% Minion Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating\n+15% Minion Critical Strike Rating",
   },
   {
     god: "Deception",
@@ -470,14 +470,14 @@ export const TalentCodexEntries = [
     tree: "Lich",
     type: "Micro",
     name: "",
-    effect: "1.5% Sealed Mana\nCompensation",
+    effect: "1.5% Sealed Mana Compensation",
   },
   {
     god: "Deception",
     tree: "Lich",
     type: "Micro",
     name: "",
-    effect: "1.5% Cooldown Recovery\nSpeed",
+    effect: "1.5% Cooldown Recovery Speed",
   },
   {
     god: "Deception",
@@ -492,7 +492,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Holiness",
     effect:
-      "-95% Cursed Effect\n-25% additional damage taken from\nCursed enemies (Max Divinity Effect: 1)",
+      "-95% Cursed Effect\n-25% additional damage taken from Cursed enemies (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -500,7 +500,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "More With Less",
     effect:
-      "+30% additional Damage Over\nTime\n-10% additional Damage Over Time\nDuration (Max Divinity Effect: 1)",
+      "+30% additional Damage Over Time\n-10% additional Damage Over Time Duration (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -508,7 +508,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Reap Purification",
     effect:
-      "Additionally settles\n25% of the remaining total damage\nwhen Reaping, then removes\nall Damage Over Time acting on the target (Max Divinity\nEffect: 1)",
+      "Additionally settles 25% of the remaining total damage when Reaping, then removes all Damage Over Time acting on the target (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -516,22 +516,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Windwalk",
     effect:
-      "+80% additional Reaping\nDuration against enemies with Max Affliction. Lasts for\n4 s. Only takes effect once on\neach enemy (Max Divinity Effect: 1)",
+      "+80% additional Reaping Duration against enemies with Max Affliction. Lasts for 4 s. Only takes effect once on each enemy (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
     tree: "Psychic",
     type: "Legendary Medium",
     name: "",
-    effect: "+5% chance to gain\nBlur when Reaping (Max\nDivinity Effect: 1)",
-  },
-  {
-    god: "Deception",
-    tree: "Psychic",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "Gains a stack of Torment when dealing\ndamage to enemies with max Affliction (Max\nDivinity Effect: 1)",
+    effect: "+5% chance to gain Blur when Reaping (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -539,7 +531,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Gains 1 stack(s) of Focus\nBlessing when Reaping (Max Divinity\nEffect: 1)",
+      "Gains a stack of Torment when dealing damage to enemies with max Affliction (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -547,7 +539,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+18 Affliction inflicted\nper second\n-8% All Resistance when the enemy\nhas max Affliction",
+      "Gains 1 stack(s) of Focus Blessing when Reaping (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -555,7 +547,15 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% Movement Speed while\nBlur is active\nMovement Speed cannot be reduced to below the base value\nwhen Blur is active",
+      "+18 Affliction inflicted per second\n-8% All Resistance when the enemy has max Affliction",
+  },
+  {
+    god: "Deception",
+    tree: "Psychic",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+10% Movement Speed while Blur is active\nMovement Speed cannot be reduced to below the base value when Blur is active",
   },
   {
     god: "Deception",
@@ -604,7 +604,7 @@ export const TalentCodexEntries = [
     tree: "Psychic",
     type: "Medium",
     name: "",
-    effect: "+12% Terra Charge Recovery\nSpeed",
+    effect: "+12% Terra Charge Recovery Speed",
   },
   {
     god: "Deception",
@@ -632,7 +632,7 @@ export const TalentCodexEntries = [
     tree: "Psychic",
     type: "Medium",
     name: "",
-    effect: "+12% Reaping Cooldown\nRecovery Speed",
+    effect: "+12% Reaping Cooldown Recovery Speed",
   },
   {
     god: "Deception",
@@ -702,7 +702,7 @@ export const TalentCodexEntries = [
     tree: "Psychic",
     type: "Micro",
     name: "",
-    effect: "+6% Reaping Cooldown\nRecovery Speed",
+    effect: "+6% Reaping Cooldown Recovery Speed",
   },
   {
     god: "Deception",
@@ -716,7 +716,7 @@ export const TalentCodexEntries = [
     tree: "Psychic",
     type: "Micro",
     name: "",
-    effect: "+6 Affliction inflicted\nper second\n+6% Affliction Effect",
+    effect: "+6 Affliction inflicted per second\n+6% Affliction Effect",
   },
   {
     god: "Deception",
@@ -731,7 +731,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Beyond Cure",
     effect:
-      "Upon inflicting damage, +6%\nadditional Erosion Damage for every stack of Wilt or Deterioration the\nenemy has, up to an additional +30% (Max Divinity Effect: 1)",
+      "Upon inflicting damage, +6% additional Erosion Damage for every stack of Wilt or Deterioration the enemy has, up to an additional +30% (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -739,7 +739,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Dirt",
     effect:
-      "+15% additional Erosion\nDamage\n15% additional damage applied to\nLife (Max Divinity Effect: 1)",
+      "+15% additional Erosion Damage\n15% additional damage applied to Life (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -747,7 +747,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Stealth Stab",
     effect:
-      "-25% additional damage taken\nwhile Blur is active\n+25% additional damage for\n3 s after Blur ends (Max\nDivinity Effect: 1)",
+      "-25% additional damage taken while Blur is active\n+25% additional damage for 3 s after Blur ends (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -755,7 +755,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Twisted Belief",
     effect:
-      "+3 Erosion Skill Level\n-5% Max Erosion Resistance\n(Max Divinity Effect: 1)",
+      "+3 Erosion Skill Level\n-5% Max Erosion Resistance (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -763,7 +763,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Immune to Wilt\nMinions are immune to Erosion Damage (Max Divinity Effect:\n1)",
+      "Immune to Wilt\nMinions are immune to Erosion Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -771,7 +771,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Gains Blur per 5 stacks of Wilt inflicted (Max\nDivinity Effect: 1)",
+      "Gains Blur per 5 stacks of Wilt inflicted (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -786,7 +786,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "1.2% Erosion Damage per stack\nof Wilt inflicted,\nstacking up to 60 times",
+      "1.2% Erosion Damage per stack of Wilt inflicted, stacking up to 60 times",
   },
   {
     god: "Deception",
@@ -794,7 +794,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+8% additional Deterioration\nDamage\n+5% additional Deterioration\nDuration",
+      "+8% additional Deterioration Damage\n+5% additional Deterioration Duration",
   },
   {
     god: "Deception",
@@ -802,7 +802,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Converts 100% of Physical\nDamage to Erosion Damage\nConverts 100% of Minion Physical\nDamage to Erosion Damage (Max Divinity Effect: 1)",
+      "Converts 100% of Physical Damage to Erosion Damage\nConverts 100% of Minion Physical Damage to Erosion Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -837,42 +837,42 @@ export const TalentCodexEntries = [
     tree: "Shadowmaster",
     type: "Medium",
     name: "",
-    effect: "+8% Deterioration\nDamage",
+    effect: "+8% Deterioration Damage",
   },
   {
     god: "Deception",
     tree: "Shadowmaster",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+10% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+10% Critical Strike Damage",
   },
   {
     god: "Deception",
     tree: "Shadowmaster",
     type: "Medium",
     name: "",
-    effect: "+12% Erosion Damage\n2% additional damage applied to\nLife",
+    effect: "+12% Erosion Damage\n2% additional damage applied to Life",
   },
   {
     god: "Deception",
     tree: "Shadowmaster",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "Deception",
     tree: "Shadowmaster",
     type: "Medium",
     name: "",
-    effect: "4% chance to inflict\n1 additional stacks of\nWilt",
+    effect: "4% chance to inflict 1 additional stacks of Wilt",
   },
   {
     god: "Deception",
     tree: "Shadowmaster",
     type: "Medium",
     name: "",
-    effect: "+8% Deterioration\nChance",
+    effect: "+8% Deterioration Chance",
   },
   {
     god: "Deception",
@@ -907,14 +907,14 @@ export const TalentCodexEntries = [
     tree: "Shadowmaster",
     type: "Micro",
     name: "",
-    effect: "+4% Deterioration\nChance",
+    effect: "+4% Deterioration Chance",
   },
   {
     god: "Deception",
     tree: "Shadowmaster",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "Deception",
@@ -935,7 +935,7 @@ export const TalentCodexEntries = [
     tree: "Shadowmaster",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "Deception",
@@ -971,7 +971,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Daze",
     effect:
-      "Blur gains an\nadditional effect: +40% crowd control effect\nand +25% additional Ailment Damage (Max Divinity Effect:\n1)",
+      "Blur gains an additional effect: +40% crowd control effect and +25% additional Ailment Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -979,7 +979,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Dirty Tricks",
     effect:
-      "Guaranteed to inflict all types of Ailment on hit\nUpon inflicting damage, +6%\nadditional damage for every type of Ailment the enemy has\n(multiplies)\nWhen Minions deal damage, +6%\nadditional damage for every type of Ailment the enemy has\n(multiplies) (Max Divinity Effect: 1)",
+      "Guaranteed to inflict all types of Ailment on hit\nUpon inflicting damage, +6% additional damage for every type of Ailment the enemy has (multiplies)\nWhen Minions deal damage, +6% additional damage for every type of Ailment the enemy has (multiplies) (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -987,7 +987,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Verbal Abuse",
     effect:
-      "You can cast 1 additional\nCurses\n+10% curse effect (Max Divinity\nEffect: 1)",
+      "You can cast 1 additional Curses\n+10% curse effect (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -995,29 +995,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Vile",
     effect:
-      "Duration of Ailments caused by\nCritical Strikes is doubled\nFor every +3% Critical Strike\nDamage, +1% additional Ailment\nDamage (Max Divinity Effect: 1)",
+      "Duration of Ailments caused by Critical Strikes is doubled\nFor every +3% Critical Strike Damage, +1% additional Ailment Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
     tree: "Warlock",
     type: "Legendary Medium",
     name: "",
-    effect: "+20% chance to avoid\nElemental Ailments",
-  },
-  {
-    god: "Deception",
-    tree: "Warlock",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "Upon dealing damage to a Cursed target, there is a\n+25% chance to Paralyze it",
-  },
-  {
-    god: "Deception",
-    tree: "Warlock",
-    type: "Legendary Medium",
-    name: "",
-    effect: "+8% additional damage against\nCursed enemies",
+    effect: "+20% chance to avoid Elemental Ailments",
   },
   {
     god: "Deception",
@@ -1025,21 +1010,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% chance to gain\nBlur when inflicting\ncrowd control effects\n(Max Divinity Effect: 1)",
+      "Upon dealing damage to a Cursed target, there is a +25% chance to Paralyze it",
   },
   {
     god: "Deception",
     tree: "Warlock",
     type: "Legendary Medium",
     name: "",
-    effect: "Ailment Damage ignores Resistance (Max Divinity Effect:\n1)",
-  },
-  {
-    god: "Deception",
-    tree: "Warlock",
-    type: "Legendary Medium",
-    name: "",
-    effect: "+5% chance to inflict\nSlow on hit (Max\nDivinity Effect: 1)",
+    effect: "+8% additional damage against Cursed enemies",
   },
   {
     god: "Deception",
@@ -1047,7 +1025,21 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+20% chance to cause\nBlinding on hit\n+25% Critical Strike Damage\nMitigation against Blinded enemies (Max\nDivinity Effect: 1)",
+      "+10% chance to gain Blur when inflicting crowd control effects (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Deception",
+    tree: "Warlock",
+    type: "Legendary Medium",
+    name: "",
+    effect: "Ailment Damage ignores Resistance (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Deception",
+    tree: "Warlock",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+5% chance to inflict Slow on hit (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -1055,7 +1047,15 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Upon inflicting damage, +15%\ndamage for every type of Ailment the enemy\nhas\nWhen Minions deal damage, +15%\ndamage for every type of Ailment the enemy\nhas",
+      "+20% chance to cause Blinding on hit\n+25% Critical Strike Damage Mitigation against Blinded enemies (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Deception",
+    tree: "Warlock",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "Upon inflicting damage, +15% damage for every type of Ailment the enemy has\nWhen Minions deal damage, +15% damage for every type of Ailment the enemy has",
   },
   {
     god: "Deception",
@@ -1091,14 +1091,14 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+12% chance to cause\nAilments\n+24% chance for Minions to inflict\nAilment\n+4% Ailment Duration",
+      "+12% chance to cause Ailments\n+24% chance for Minions to inflict Ailment\n+4% Ailment Duration",
   },
   {
     god: "Deception",
     tree: "Warlock",
     type: "Medium",
     name: "",
-    effect: "+16% damage against Cursed\nenemies\n+16% Curse Skill Area",
+    effect: "+16% damage against Cursed enemies\n+16% Curse Skill Area",
   },
   {
     god: "Deception",
@@ -1113,7 +1113,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Critical Strike\nRating\n+20% Minion Critical Strike\nRating\n+14% Critical Strike Damage\nagainst enemies affected by Ailment\n+14% Minion Critical Strike Damage\nagainst enemies affected by Ailments",
+      "+20% Critical Strike Rating\n+20% Minion Critical Strike Rating\n+14% Critical Strike Damage against enemies affected by Ailment\n+14% Minion Critical Strike Damage against enemies affected by Ailments",
   },
   {
     god: "Deception",
@@ -1156,28 +1156,28 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+6% chance to cause\nAilments\n+12% chance for Minions to inflict\nAilment\n+2% Ailment Duration",
+      "+6% chance to cause Ailments\n+12% chance for Minions to inflict Ailment\n+2% Ailment Duration",
   },
   {
     god: "Deception",
     tree: "Warlock",
     type: "Micro",
     name: "",
-    effect: "+8% damage against Cursed\nenemies\n+8% Curse Skill Area",
+    effect: "+8% damage against Cursed enemies\n+8% Curse Skill Area",
   },
   {
     god: "Deception",
     tree: "Warlock",
     type: "Micro",
     name: "",
-    effect: "+3% chance to avoid\nElemental Ailments",
+    effect: "+3% chance to avoid Elemental Ailments",
   },
   {
     god: "Deception",
     tree: "Warlock",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating\n+15% Minion Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating\n+15% Minion Critical Strike Rating",
   },
   {
     god: "Deception",
@@ -1205,7 +1205,7 @@ export const TalentCodexEntries = [
     tree: "Warlock",
     type: "Micro",
     name: "",
-    effect: "+2% crowd control\neffects",
+    effect: "+2% crowd control effects",
   },
   {
     god: "Deception",
@@ -1220,7 +1220,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Broken Dream",
     effect:
-      "+100% chance to deal double\ndamage for the next several Main Attack Skills after the\nFocus Blessing is devoured. Grants the\nbuff to +1 Main Attack Skill for every stack of Focus\nBlessing devoured.\nThe new god is devouring Six\nGods' blessings (Max Divinity Effect: 1)",
+      "+100% chance to deal double damage for the next several Main Attack Skills after the Focus Blessing is devoured. Grants the buff to +1 Main Attack Skill for every stack of Focus Blessing devoured.\nThe new god is devouring Six Gods' blessings (Max Divinity Effect: 1)",
   },
   {
     god: "New God",
@@ -1228,7 +1228,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Dying Dragon",
     effect:
-      "+60% Skill Area and\n+30% additional damage for the\nnext several Main Attack Skills after the Tenacity Blessing\nis devoured. Grants the\nbuff to +1 Main Attack Skill for every stack of Tenacity\nBlessing devoured.\nThe new god is devouring Six\nGods' blessings (Max Divinity Effect: 1)",
+      "+60% Skill Area and +30% additional damage for the next several Main Attack Skills after the Tenacity Blessing is devoured. Grants the buff to +1 Main Attack Skill for every stack of Tenacity Blessing devoured.\nThe new god is devouring Six Gods' blessings (Max Divinity Effect: 1)",
   },
   {
     god: "New God",
@@ -1236,7 +1236,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "End of War",
     effect:
-      "After Fervor is devoured, -25% additional Critical Strike Rating for the\nnext 4s. +1% additional damage on\nCritical Strike for every 1 Fervor Rating devoured\nThe new god is devouring Six\nGods' blessings (Max Divinity Effect: 1)",
+      "After Fervor is devoured, -25% additional Critical Strike Rating for the next 4s. +1% additional damage on Critical Strike for every 1 Fervor Rating devoured\nThe new god is devouring Six Gods' blessings (Max Divinity Effect: 1)",
   },
   {
     god: "New God",
@@ -1244,7 +1244,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Falling Stars",
     effect:
-      "After a stack of Agility Blessing is devoured, the next\ncertain instances of Hit Damage taken do not lose\nDeflection. The number of instances +1 for every 1 stack of\nAgility Blessing devoured\nThe new god is devouring Six\nGods' blessings (Max Divinity Effect: 1)",
+      "After a stack of Agility Blessing is devoured, the next certain instances of Hit Damage taken do not lose Deflection. The number of instances +1 for every 1 stack of Agility Blessing devoured\nThe new god is devouring Six Gods' blessings (Max Divinity Effect: 1)",
   },
   {
     god: "New God",
@@ -1252,7 +1252,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Revealed Truth",
     effect:
-      "After Blur is devoured, cannot avoid\ndamage for the next 4s. 1.5%\nchance to avoid Ailments, and\n1.5% chance to avoid Crowd Control Effects\nfor every 1 Blur Rating devoured\nThe new god is devouring Six\nGods' blessings (Max Divinity Effect: 1)",
+      "After Blur is devoured, cannot avoid damage for the next 4s. 1.5% chance to avoid Ailments, and 1.5% chance to avoid Crowd Control Effects for every 1 Blur Rating devoured\nThe new god is devouring Six Gods' blessings (Max Divinity Effect: 1)",
   },
   {
     god: "New God",
@@ -1260,7 +1260,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Ruined City",
     effect:
-      "After Barrier is devoured, Barrier\nAbsorption Rate is fixed at 0 for the next 4s. Restores\n1.5 Life and Energy Shield over\nthe next 4 s for every 1 Barrier\nRating devoured, and the healing cannot exceed 400% of Max Life and Max Energy Shield\nThe new god is devouring Six\nGods' blessings (Max Divinity Effect: 1)",
+      "After Barrier is devoured, Barrier Absorption Rate is fixed at 0 for the next 4s. Restores 1.5 Life and Energy Shield over the next 4 s for every 1 Barrier Rating devoured, and the healing cannot exceed 400% of Max Life and Max Energy Shield\nThe new god is devouring Six Gods' blessings (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1268,7 +1268,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Impermanence",
     effect:
-      "-90% additional Min Physical\nDamage, and +80% additional Max\nPhysical Damage\n-40% additional min damage\n+40% additional max damage (Max\nDivinity Effect: 1)",
+      "-90% additional Min Physical Damage, and +80% additional Max Physical Damage\n-40% additional min damage\n+40% additional max damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1276,7 +1276,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Perception",
     effect:
-      "+100% chance to gain\n1 stacks of Agility Blessing on\nhit\nMax Agility Blessing\nStacks +1 (Max Divinity Effect:\n1)",
+      "+100% chance to gain 1 stacks of Agility Blessing on hit\nMax Agility Blessing Stacks +1 (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1284,7 +1284,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Rushed",
     effect:
-      "+30% additional damage if you\nhave recently moved more than 5 m\n(Max Divinity Effect: 1)",
+      "+30% additional damage if you have recently moved more than 5 m (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1292,7 +1292,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Steady Accumulation",
     effect:
-      "+15% Combo Finisher\nAmplification\n+1 Combo Points gained from Combo\nStarters (Max Divinity Effect: 1)",
+      "+15% Combo Finisher Amplification\n+1 Combo Points gained from Combo Starters (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1300,7 +1300,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Third time's a charm",
     effect:
-      "+45% Attack and Cast Speed\nafter using the Main Skill 3 consecutive times. Lasts for\n2 s (Max Divinity Effect: 1)",
+      "+45% Attack and Cast Speed after using the Main Skill 3 consecutive times. Lasts for 2 s (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1308,7 +1308,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Three Birds with One Stone",
     effect:
-      "Projectile Quantity +2\nParabolic Projectile Splits quantity\n+2\n+10% additional Projectile Damage\n(Max Divinity Effect: 1)",
+      "Projectile Quantity +2\nParabolic Projectile Splits quantity +2\n+10% additional Projectile Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1323,7 +1323,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Hunting",
     type: "Legendary Medium",
     name: "",
-    effect: "+10% additional damage for 4s\nafter using Mobility Skills",
+    effect: "+10% additional damage for 4s after using Mobility Skills",
   },
   {
     god: "Hunting",
@@ -1331,7 +1331,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+6% additional Attack Speed if\nyou have dealt a Critical Strike recently (Max Divinity\nEffect: 1)",
+      "+6% additional Attack Speed if you have dealt a Critical Strike recently (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1339,14 +1339,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+6% additional Cast Speed if\nyou have dealt a Critical Strike recently (Max Divinity\nEffect: 1)",
+      "+6% additional Cast Speed if you have dealt a Critical Strike recently (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
     tree: "Goddess of Hunting",
     type: "Legendary Medium",
     name: "",
-    effect: "Max Agility Blessing\nStacks +1 (Max Divinity Effect:\n1)",
+    effect: "Max Agility Blessing Stacks +1 (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1375,7 +1375,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+3% Movement Speed\n+15% Cooldown Recovery Speed for\nMobility Skills",
+      "+3% Movement Speed\n+15% Cooldown Recovery Speed for Mobility Skills",
   },
   {
     god: "Hunting",
@@ -1403,21 +1403,21 @@ export const TalentCodexEntries = [
     tree: "Goddess of Hunting",
     type: "Medium",
     name: "",
-    effect: "+40% Attack Critical Strike\nRating",
+    effect: "+40% Attack Critical Strike Rating",
   },
   {
     god: "Hunting",
     tree: "Goddess of Hunting",
     type: "Medium",
     name: "",
-    effect: "+40% Spell Critical Strike\nRating",
+    effect: "+40% Spell Critical Strike Rating",
   },
   {
     god: "Hunting",
     tree: "Goddess of Hunting",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -1473,7 +1473,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Hunting",
     type: "Micro",
     name: "",
-    effect: "+12% damage if you have\ndefeated an enemy recently",
+    effect: "+12% damage if you have defeated an enemy recently",
   },
   {
     god: "Hunting",
@@ -1494,7 +1494,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Hunting",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -1502,7 +1502,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Agility Blessing\nDuration\n+3% Attack Speed and Cast Speed\nwhen having Agility Blessing",
+      "+10% Agility Blessing Duration\n+3% Attack Speed and Cast Speed when having Agility Blessing",
   },
   {
     god: "Hunting",
@@ -1510,7 +1510,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Conductive",
     effect:
-      "Changes the base effect of Numbed to:\n+11% additional Lightning Damage\ntaken (Max Divinity Effect: 1)",
+      "Changes the base effect of Numbed to: +11% additional Lightning Damage taken (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1518,7 +1518,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Queer Angle",
     effect:
-      "You and Minions deal Lucky Damage against\nNumbed enemies (Max\nDivinity Effect: 1)",
+      "You and Minions deal Lucky Damage against Numbed enemies (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1526,7 +1526,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Thunderclap",
     effect:
-      "If you have Agility Blessing\nstacks when casting the Main Skill, consumes 1 stack(s) of Agility Blessing to\nmake this skill deal +30%\nadditional Lightning Damage (Max Divinity Effect: 1)",
+      "If you have Agility Blessing stacks when casting the Main Skill, consumes 1 stack(s) of Agility Blessing to make this skill deal +30% additional Lightning Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1534,7 +1534,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Transition",
     effect:
-      "50% chance for this skill to\ndeal +16% additional damage when\ncasting a skill\n25% chance for this skill to deal\n+32% additional damage when\ncasting a skill\n10% chance for this skill to deal\n+80% additional damage when\ncasting a skill (Max Divinity Effect: 1)",
+      "50% chance for this skill to deal +16% additional damage when casting a skill\n25% chance for this skill to deal +32% additional damage when casting a skill\n10% chance for this skill to deal +80% additional damage when casting a skill (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1542,7 +1542,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Immune to Numbed\nMinions are immune to Lightning Damage (Max Divinity\nEffect: 1)",
+      "Immune to Numbed\nMinions are immune to Lightning Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1550,7 +1550,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Converts 100% of Physical\nDamage to Lightning Damage\nConverts 100% of Minion Physical\nDamage to Lightning Damage (Max Divinity Effect: 1)",
+      "Converts 100% of Physical Damage to Lightning Damage\nConverts 100% of Minion Physical Damage to Lightning Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1565,29 +1565,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Adds 10% of Physical Damage as\nLightning Damage\nAdds 10% of Physical Damage as\nLightning Damage to Minions",
+      "Adds 10% of Physical Damage as Lightning Damage\nAdds 10% of Physical Damage as Lightning Damage to Minions",
   },
   {
     god: "Hunting",
     tree: "Assassin",
     type: "Legendary Medium",
     name: "",
-    effect: "+20% Numbed Effect (Max\nDivinity Effect: 1)",
-  },
-  {
-    god: "Hunting",
-    tree: "Assassin",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "-4% to the Max Life and Energy\nShield thresholds for inflicting Numbed\nInflicts 1 additional stack(s) of\nNumbed (Max Divinity\nEffect: 1)",
-  },
-  {
-    god: "Hunting",
-    tree: "Assassin",
-    type: "Legendary Medium",
-    name: "",
-    effect: "Inflicts Lightning Infiltration\non Critical Strike",
+    effect: "+20% Numbed Effect (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1595,7 +1580,22 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+12% additional max damage\n+12% additional Max Damage for\nMinions",
+      "-4% to the Max Life and Energy Shield thresholds for inflicting Numbed\nInflicts 1 additional stack(s) of Numbed (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Hunting",
+    tree: "Assassin",
+    type: "Legendary Medium",
+    name: "",
+    effect: "Inflicts Lightning Infiltration on Critical Strike",
+  },
+  {
+    god: "Hunting",
+    tree: "Assassin",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+12% additional max damage\n+12% additional Max Damage for Minions",
   },
   {
     god: "Hunting",
@@ -1638,7 +1638,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Critical Strike\nRating\n+20% Minion Critical Strike\nRating\n+5% Critical Strike Damage\n+5% Minion Critical Strike\nDamage",
+      "+20% Critical Strike Rating\n+20% Minion Critical Strike Rating\n+5% Critical Strike Damage\n+5% Minion Critical Strike Damage",
   },
   {
     god: "Hunting",
@@ -1694,7 +1694,7 @@ export const TalentCodexEntries = [
     tree: "Assassin",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "Hunting",
@@ -1737,14 +1737,14 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "1.5% Lightning Penetration\n1.5% Lightning Penetration for\nMinions",
+      "1.5% Lightning Penetration\n1.5% Lightning Penetration for Minions",
   },
   {
     god: "Hunting",
     tree: "Assassin",
     type: "Micro",
     name: "",
-    effect: "+2% additional max damage\n+2% additional Max Damage for\nMinions",
+    effect: "+2% additional max damage\n+2% additional Max Damage for Minions",
   },
   {
     god: "Hunting",
@@ -1752,7 +1752,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Joined Force",
     effect:
-      "Off-Hand Weapons do\nnot participate in Attacks while Dual Wielding\nAdds 60% of the damage of the\nOff-Hand Weapon to the\nfinal damage of the Main-Hand Weapon (Max\nDivinity Effect: 1)",
+      "Off-Hand Weapons do not participate in Attacks while Dual Wielding\nAdds 60% of the damage of the Off-Hand Weapon to the final damage of the Main-Hand Weapon (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1760,7 +1760,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Preemptive Strike",
     effect:
-      "+1 initial Multistrike Count\n-20% Attack Speed when performing\nMultistrikes (Max\nDivinity Effect: 1)",
+      "+1 initial Multistrike Count\n-20% Attack Speed when performing Multistrikes (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1768,7 +1768,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Quick Advancement",
     effect:
-      "Multistrikes deal\n55% increasing damage\nMinions' Multistrikes deal\n55% increasing damage (Max\nDivinity Effect: 1)",
+      "Multistrikes deal 55% increasing damage\nMinions' Multistrikes deal 55% increasing damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1776,7 +1776,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Waiting Attack",
     effect:
-      "Consumes all Agility Blessing every\n8s. For each stack consumed,\n+5% additional damage in the next\n8s (Max Divinity Effect: 1)",
+      "Consumes all Agility Blessing every 8s. For each stack consumed, +5% additional damage in the next 8s (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1784,7 +1784,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "25% chance to gain\nAttack Aggression on\ndefeat (Max Divinity Effect: 1)",
+      "25% chance to gain Attack Aggression on defeat (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1792,7 +1792,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "35% of the bonuses for\nMovement Speed is also applied to the Cooldown Recovery\nSpeed of Mobility skills\n70% of the bonuses for Movement\nSpeed is also applied to the Attack and Cast Speed of\nMobility Skills (Max Divinity Effect: 1)",
+      "35% of the bonuses for Movement Speed is also applied to the Cooldown Recovery Speed of Mobility skills\n70% of the bonuses for Movement Speed is also applied to the Attack and Cast Speed of Mobility Skills (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1800,7 +1800,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+6% additional Attack Speed\nwhile Dual Wielding (Max\nDivinity Effect: 1)",
+      "+6% additional Attack Speed while Dual Wielding (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1808,7 +1808,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+5% additional Attack Damage\nfor each unique type of weapon equipped while Dual Wielding",
+      "+5% additional Attack Damage for each unique type of weapon equipped while Dual Wielding",
   },
   {
     god: "Hunting",
@@ -1816,21 +1816,21 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Gains a stack Agility Blessing when\nusing Mobility Skills (Max Divinity Effect: 1)",
+      "Gains a stack Agility Blessing when using Mobility Skills (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
     tree: "Bladerunner",
     type: "Legendary Medium",
     name: "",
-    effect: "Multistrikes deal\n16% increasing damage",
+    effect: "Multistrikes deal 16% increasing damage",
   },
   {
     god: "Hunting",
     tree: "Bladerunner",
     type: "Legendary Medium",
     name: "",
-    effect: "+1% Attack Speed per\n40 Dexterity (Max Divinity Effect:\n1)",
+    effect: "+1% Attack Speed per 40 Dexterity (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1872,14 +1872,14 @@ export const TalentCodexEntries = [
     tree: "Bladerunner",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+5% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+5% Critical Strike Damage",
   },
   {
     god: "Hunting",
     tree: "Bladerunner",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -1893,21 +1893,21 @@ export const TalentCodexEntries = [
     tree: "Bladerunner",
     type: "Medium",
     name: "",
-    effect: "+6% Attack Speed while\nDual Wielding",
+    effect: "+6% Attack Speed while Dual Wielding",
   },
   {
     god: "Hunting",
     tree: "Bladerunner",
     type: "Medium",
     name: "",
-    effect: "+18% Attack Damage when\nDual Wielding",
+    effect: "+18% Attack Damage when Dual Wielding",
   },
   {
     god: "Hunting",
     tree: "Bladerunner",
     type: "Medium",
     name: "",
-    effect: "+3% additional Attack Speed\nwhen performing Multistrikes",
+    effect: "+3% additional Attack Speed when performing Multistrikes",
   },
   {
     god: "Hunting",
@@ -1949,14 +1949,14 @@ export const TalentCodexEntries = [
     tree: "Bladerunner",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "Hunting",
     tree: "Bladerunner",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -1970,7 +1970,7 @@ export const TalentCodexEntries = [
     tree: "Bladerunner",
     type: "Micro",
     name: "",
-    effect: "+9% Attack Damage when\nDual Wielding",
+    effect: "+9% Attack Damage when Dual Wielding",
   },
   {
     god: "Hunting",
@@ -1984,7 +1984,7 @@ export const TalentCodexEntries = [
     tree: "Bladerunner",
     type: "Micro",
     name: "",
-    effect: "+6% chance to Multistrike\n+6% Minion Multistrike\nchance",
+    effect: "+6% chance to Multistrike\n+6% Minion Multistrike chance",
   },
   {
     god: "Hunting",
@@ -1999,7 +1999,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Acquaintance",
     effect:
-      "+30% chance to trigger the\nMain Spell Skill 1 additional time when using it (Max\nDivinity Effect: 1)",
+      "+30% chance to trigger the Main Spell Skill 1 additional time when using it (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2007,7 +2007,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Cultivation",
     effect:
-      "+4% Cast Speed for each skill\nrecently used, stacking up to 15\ntimes (Max Divinity Effect: 1)",
+      "+4% Cast Speed for each skill recently used, stacking up to 15 times (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2015,7 +2015,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Poisoned Relief",
     effect:
-      "+25% injury buffer\n-15% additional damage taken at\nLow Life (Max Divinity\nEffect: 1)",
+      "+25% injury buffer\n-15% additional damage taken at Low Life (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2023,29 +2023,21 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Rebirth",
     effect:
-      "Converts 50% of Life Regain and Energy\nShield Regain to Restoration Over Time\n-50% additional Regain Interval\n(Max Divinity Effect: 1)",
+      "Converts 50% of Life Regain and Energy Shield Regain to Restoration Over Time\n-50% additional Regain Interval (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
     tree: "Druid",
     type: "Legendary Medium",
     name: "",
-    effect: "+20% Spell Burst Charge\nSpeed",
+    effect: "+20% Spell Burst Charge Speed",
   },
   {
     god: "Hunting",
     tree: "Druid",
     type: "Legendary Medium",
     name: "",
-    effect: "+1% Cast Speed per\n40 Dexterity (Max Divinity Effect:\n1)",
-  },
-  {
-    god: "Hunting",
-    tree: "Druid",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "For each Spell Skill used recently, +4% Critical Strike Damage, stacking up to\n12 time(s) (Max Divinity Effect:\n1)",
+    effect: "+1% Cast Speed per 40 Dexterity (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2053,7 +2045,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "25% chance to gain\nSpell Aggression on\ndefeat (Max Divinity Effect: 1)",
+      "For each Spell Skill used recently, +4% Critical Strike Damage, stacking up to 12 time(s) (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2061,14 +2053,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Regains additional Life based on Missing Energy\nShield\nRegains additional Energy Shield regain based on Missing\nLife (Max Divinity Effect: 1)",
-  },
-  {
-    god: "Hunting",
-    tree: "Druid",
-    type: "Legendary Medium",
-    name: "",
-    effect: "-16% additional Regain\nInterval",
+      "25% chance to gain Spell Aggression on defeat (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2076,7 +2061,22 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+3% Cast Speed per stack of\nAgility Blessing owned\n(Max Divinity Effect: 1)",
+      "Regains additional Life based on Missing Energy Shield\nRegains additional Energy Shield regain based on Missing Life (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Hunting",
+    tree: "Druid",
+    type: "Legendary Medium",
+    name: "",
+    effect: "-16% additional Regain Interval",
+  },
+  {
+    god: "Hunting",
+    tree: "Druid",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+3% Cast Speed per stack of Agility Blessing owned (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2118,7 +2118,7 @@ export const TalentCodexEntries = [
     tree: "Druid",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+5% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+5% Critical Strike Damage",
   },
   {
     god: "Hunting",
@@ -2132,7 +2132,7 @@ export const TalentCodexEntries = [
     tree: "Druid",
     type: "Medium",
     name: "",
-    effect: "+6% Max Mana\nRegenerates 0.6% Mana per\nsecond",
+    effect: "+6% Max Mana\nRegenerates 0.6% Mana per second",
   },
   {
     god: "Hunting",
@@ -2188,7 +2188,7 @@ export const TalentCodexEntries = [
     tree: "Druid",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "Hunting",
@@ -2209,7 +2209,7 @@ export const TalentCodexEntries = [
     tree: "Druid",
     type: "Micro",
     name: "",
-    effect: "+4% Spell Burst Charge\nSpeed",
+    effect: "+4% Spell Burst Charge Speed",
   },
   {
     god: "Hunting",
@@ -2230,7 +2230,7 @@ export const TalentCodexEntries = [
     tree: "Druid",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -2238,7 +2238,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Agility Blessing\nDuration\n+3% Cast Speed when Agility Blessing is\nactive",
+      "+10% Agility Blessing Duration\n+3% Cast Speed when Agility Blessing is active",
   },
   {
     god: "Hunting",
@@ -2246,7 +2246,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Close Range Fire",
     effect:
-      "Projectiles deal up to +35%\nadditional damage to enemies in Proximity, and this damage reduces\nwith the distance traveled by the Projectiles (Max Divinity\nEffect: 1)",
+      "Projectiles deal up to +35% additional damage to enemies in Proximity, and this damage reduces with the distance traveled by the Projectiles (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2254,7 +2254,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Euphoria",
     effect:
-      "+4% additional Evasion for\nevery stack of Agility Blessing (Max\nDivinity Effect: 1)",
+      "+4% additional Evasion for every stack of Agility Blessing (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2262,7 +2262,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Gale",
     effect:
-      "60% of the Projectile Speed\nbonus is also applied to the additional bonus for\nProjectile Damage (Max Divinity Effect: 1)",
+      "60% of the Projectile Speed bonus is also applied to the additional bonus for Projectile Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2270,7 +2270,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Master Escapist",
     effect:
-      "+1 Max Deflection stacks\nGains 1 stacks of Deflection on Evasion\n(Max Divinity Effect: 1)",
+      "+1 Max Deflection stacks\nGains 1 stacks of Deflection on Evasion (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2278,14 +2278,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% Projectile Speed\nProjectile Damage increases with the distance traveled,\ndealing up to +48% damage to\ndistant enemies",
+      "+10% Projectile Speed\nProjectile Damage increases with the distance traveled, dealing up to +48% damage to distant enemies",
   },
   {
     god: "Hunting",
     tree: "Marksman",
     type: "Legendary Medium",
     name: "",
-    effect: "+60% Projectile Damage against\nenemies in proximity",
+    effect: "+60% Projectile Damage against enemies in proximity",
   },
   {
     god: "Hunting",
@@ -2306,7 +2306,7 @@ export const TalentCodexEntries = [
     tree: "Marksman",
     type: "Legendary Medium",
     name: "",
-    effect: "Parabolic Projectile Splits quantity\n+1 (Max Divinity Effect: 1)",
+    effect: "Parabolic Projectile Splits quantity +1 (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2320,7 +2320,7 @@ export const TalentCodexEntries = [
     tree: "Marksman",
     type: "Legendary Medium",
     name: "",
-    effect: "+2 Horizontal Projectile\nPenetration(s)",
+    effect: "+2 Horizontal Projectile Penetration(s)",
   },
   {
     god: "Hunting",
@@ -2328,14 +2328,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+6% Evasion per stack of\nAgility Blessing owned\n(Max Divinity Effect: 1)",
+      "+6% Evasion per stack of Agility Blessing owned (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
     tree: "Marksman",
     type: "Legendary Medium",
     name: "",
-    effect: "+20% additional Evasion on\nSpell Damage (Max Divinity Effect: 1)",
+    effect: "+20% additional Evasion on Spell Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2384,21 +2384,21 @@ export const TalentCodexEntries = [
     tree: "Marksman",
     type: "Medium",
     name: "",
-    effect: "+30% Projectile Critical\nStrike Rating",
+    effect: "+30% Projectile Critical Strike Rating",
   },
   {
     god: "Hunting",
     tree: "Marksman",
     type: "Medium",
     name: "",
-    effect: "+15% Projectile Critical\nStrike Damage",
+    effect: "+15% Projectile Critical Strike Damage",
   },
   {
     god: "Hunting",
     tree: "Marksman",
     type: "Medium",
     name: "",
-    effect: "+3% chance to avoid\ndamage",
+    effect: "+3% chance to avoid damage",
   },
   {
     god: "Hunting",
@@ -2447,14 +2447,14 @@ export const TalentCodexEntries = [
     tree: "Marksman",
     type: "Micro",
     name: "",
-    effect: "+15% Projectile Critical\nStrike Rating",
+    effect: "+15% Projectile Critical Strike Rating",
   },
   {
     god: "Hunting",
     tree: "Marksman",
     type: "Micro",
     name: "",
-    effect: "1.5% chance to avoid\ndamage",
+    effect: "1.5% chance to avoid damage",
   },
   {
     god: "Hunting",
@@ -2483,7 +2483,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Agility Blessing\nDuration\n+7% Evasion while Agility Blessing is\nactive",
+      "+10% Agility Blessing Duration\n+7% Evasion while Agility Blessing is active",
   },
   {
     god: "Hunting",
@@ -2497,7 +2497,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Knowledge",
     type: "Core",
     name: "Beacon",
-    effect: "+2 Max Spell Burst (Max\nDivinity Effect: 1)",
+    effect: "+2 Max Spell Burst (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2505,7 +2505,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Burning Touch",
     effect:
-      "Has Spell Aggression\n+10% Spell Aggression Effect\nfor every Main Spell Skill cast recently. Stacks up to 10\ntimes (Max Divinity Effect: 1)",
+      "Has Spell Aggression\n+10% Spell Aggression Effect for every Main Spell Skill cast recently. Stacks up to 10 times (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2513,7 +2513,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Chilly",
     effect:
-      "+100% chance to gain 1 stack\nof Focus Blessing on\nhit\nMax Focus Blessing Stacks\n+1 (Max Divinity Effect: 1)",
+      "+100% chance to gain 1 stack of Focus Blessing on hit\nMax Focus Blessing Stacks +1 (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2521,7 +2521,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Insight",
     effect:
-      "+30% additional Spell\nDamage\n+25% additional Skill Cost (Max\nDivinity Effect: 1)",
+      "+30% additional Spell Damage\n+25% additional Skill Cost (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2529,7 +2529,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Peculiar Vibe",
     effect:
-      "+50% chance to inflict\nElemental Ailments\n+25% additional damage against\nenemies with Elemental Ailments (Max Divinity\nEffect: 1)",
+      "+50% chance to inflict Elemental Ailments\n+25% additional damage against enemies with Elemental Ailments (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2537,7 +2537,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Winter",
     effect:
-      "Deals +1% additional damage to\nan enemy for every 2 points of\nFrostbite Rating the\nenemy has (Max Divinity Effect: 1)",
+      "Deals +1% additional damage to an enemy for every 2 points of Frostbite Rating the enemy has (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2551,7 +2551,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Knowledge",
     type: "Legendary Medium",
     name: "",
-    effect: "Max Focus Blessing Stacks\n+1 (Max Divinity Effect: 1)",
+    effect: "Max Focus Blessing Stacks +1 (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2559,7 +2559,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Energy Shield Charge cannot be\ninterrupted by damage for 1 s\nafter it starts (Max Divinity Effect: 1)",
+      "Energy Shield Charge cannot be interrupted by damage for 1 s after it starts (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2588,7 +2588,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Spell Critical Strike\nRating\n+5% Spell Critical Strike\nDamage",
+      "+20% Spell Critical Strike Rating\n+5% Spell Critical Strike Damage",
   },
   {
     god: "Knowledge",
@@ -2609,7 +2609,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Knowledge",
     type: "Medium",
     name: "",
-    effect: "+8% Spell Burst Charge\nSpeed",
+    effect: "+8% Spell Burst Charge Speed",
   },
   {
     god: "Knowledge",
@@ -2623,7 +2623,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Knowledge",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -2658,7 +2658,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Knowledge",
     type: "Micro",
     name: "",
-    effect: "+15% Spell Critical Strike\nRating",
+    effect: "+15% Spell Critical Strike Rating",
   },
   {
     god: "Knowledge",
@@ -2679,7 +2679,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Knowledge",
     type: "Micro",
     name: "",
-    effect: "+4% Spell Burst Charge\nSpeed",
+    effect: "+4% Spell Burst Charge Speed",
   },
   {
     god: "Knowledge",
@@ -2693,7 +2693,7 @@ export const TalentCodexEntries = [
     tree: "Goddess of Knowledge",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -2715,7 +2715,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Focus Blessing\nDuration\n+10% damage when Focus Blessing is\nactive",
+      "+10% Focus Blessing Duration\n+10% damage when Focus Blessing is active",
   },
   {
     god: "Knowledge",
@@ -2730,7 +2730,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Full Load",
     effect:
-      "+40% additional damage for the\nnext skill when Mana reaches the max (Max Divinity Effect:\n1)",
+      "+40% additional damage for the next skill when Mana reaches the max (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2738,7 +2738,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Mana",
     effect:
-      "20% of damage is taken from\nMana before life\n+12% additional Max Mana (Max\nDivinity Effect: 1)",
+      "20% of damage is taken from Mana before life\n+12% additional Max Mana (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2746,7 +2746,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Mind Focus",
     effect:
-      "Changes the base effect of Focus Blessing to:\nAdds Physical Damage equal to 1% of Max Mana to Attacks and\nSpells (Max Divinity Effect: 1)",
+      "Changes the base effect of Focus Blessing to: Adds Physical Damage equal to 1% of Max Mana to Attacks and Spells (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2754,28 +2754,28 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Preparation",
     effect:
-      "Adds 1 Max Energy Shield for\nevery 50 Mana consumed recently\n(Max Divinity Effect: 1)",
+      "Adds 1 Max Energy Shield for every 50 Mana consumed recently (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Legendary Medium",
     name: "",
-    effect: "+20% Attack and Cast Speed\nwhen at Full Mana\n+15% Max Mana",
+    effect: "+20% Attack and Cast Speed when at Full Mana\n+15% Max Mana",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Legendary Medium",
     name: "",
-    effect: "+20% Spell Damage at Low\nMana\n+15% Max Mana",
+    effect: "+20% Spell Damage at Low Mana\n+15% Max Mana",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Legendary Medium",
     name: "",
-    effect: "8% of damage is taken from\nMana before life",
+    effect: "8% of damage is taken from Mana before life",
   },
   {
     god: "Knowledge",
@@ -2783,7 +2783,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Max Focus Blessing Stacks\n+1\nRegenerates 0.4% Mana per second\nwhen Focus Blessing is\nactive (Max Divinity Effect: 1)",
+      "Max Focus Blessing Stacks +1\nRegenerates 0.4% Mana per second when Focus Blessing is active (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2798,7 +2798,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Consumes 4% of current Mana\nwhen casting Main Skills\n+8% additional Spell Damage (Max\nDivinity Effect: 1)",
+      "Consumes 4% of current Mana when casting Main Skills\n+8% additional Spell Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2833,42 +2833,42 @@ export const TalentCodexEntries = [
     tree: "Arcanist",
     type: "Medium",
     name: "",
-    effect: "+30 Max Mana\nRestores 6 Mana on hit. Interval:\n0.1s",
+    effect: "+30 Max Mana\nRestores 6 Mana on hit. Interval: 0.1s",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+5% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+5% Critical Strike Damage",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Medium",
     name: "",
-    effect: "+3% Energy Shield\nRegain",
+    effect: "+3% Energy Shield Regain",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Medium",
     name: "",
-    effect: "+20% Mana Regeneration\nSpeed",
+    effect: "+20% Mana Regeneration Speed",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Medium",
     name: "",
-    effect: "Adds 2% of Max Mana as Energy\nShield",
+    effect: "Adds 2% of Max Mana as Energy Shield",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Medium",
     name: "",
-    effect: "+3% Sealed Mana\nCompensation",
+    effect: "+3% Sealed Mana Compensation",
   },
   {
     god: "Knowledge",
@@ -2910,21 +2910,21 @@ export const TalentCodexEntries = [
     tree: "Arcanist",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Micro",
     name: "",
-    effect: "1.5% Energy Shield\nRegain",
+    effect: "1.5% Energy Shield Regain",
   },
   {
     god: "Knowledge",
     tree: "Arcanist",
     type: "Micro",
     name: "",
-    effect: "Regenerates 0.6% Mana per\nsecond",
+    effect: "Regenerates 0.6% Mana per second",
   },
   {
     god: "Knowledge",
@@ -2960,7 +2960,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Focus Blessing\nDuration\nRegenerates 0.4% Mana per second\nwhen Focus Blessing is\nactive",
+      "+10% Focus Blessing Duration\nRegenerates 0.4% Mana per second when Focus Blessing is active",
   },
   {
     god: "Knowledge",
@@ -2982,7 +2982,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Focus",
     effect:
-      "Max Channeled Stacks +1\n+6% additional damage for every\n+1 additional Max Channeled\nStack(s) (Max Divinity Effect: 1)",
+      "Max Channeled Stacks +1\n+6% additional damage for every +1 additional Max Channeled Stack(s) (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2990,7 +2990,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Penetrating",
     effect:
-      "When inflicting Ignite, Numbed, Frostbite/Freeze,\ninflicts Fire Infiltration,\nLightning Infiltration,\nor Cold Infiltration\nrespectively.\nUpon inflicting damage, +8%\nadditional Elemental Damage for each type of Infiltration\nEffect the enemy has (Max Divinity Effect: 1)",
+      "When inflicting Ignite, Numbed, Frostbite/Freeze, inflicts Fire Infiltration, Lightning Infiltration, or Cold Infiltration respectively.\nUpon inflicting damage, +8% additional Elemental Damage for each type of Infiltration Effect the enemy has (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2998,7 +2998,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Quick Ritual",
     effect:
-      "Min Channeled Stacks +1\n+20% additional damage Channeled\nSkills (Max Divinity Effect: 1)",
+      "Min Channeled Stacks +1\n+20% additional damage Channeled Skills (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3006,7 +3006,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Translucent",
     effect:
-      "+25% additional Lightning\nDamage if you have dealt Fire Damage recently\n+25% additional Cold Damage if you\nhave dealt Lightning Damage recently\n+25% additional Fire Damage if you\nhave dealt Cold Damage recently (Max Divinity Effect:\n1)",
+      "+25% additional Lightning Damage if you have dealt Fire Damage recently\n+25% additional Cold Damage if you have dealt Lightning Damage recently\n+25% additional Fire Damage if you have dealt Cold Damage recently (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3014,7 +3014,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+24% chance to inflict\nElemental Ailments\nAdds 5 Base Elemental Ailment\nDamage",
+      "+24% chance to inflict Elemental Ailments\nAdds 5 Base Elemental Ailment Damage",
   },
   {
     god: "Knowledge",
@@ -3022,14 +3022,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Upon inflicting damage, penetrates 3% of Elemental Resistance for each type of\nElemental Ailment the enemy has",
+      "Upon inflicting damage, penetrates 3% of Elemental Resistance for each type of Elemental Ailment the enemy has",
   },
   {
     god: "Knowledge",
     tree: "Elementalist",
     type: "Legendary Medium",
     name: "",
-    effect: "+60% damage while standing\nstill",
+    effect: "+60% damage while standing still",
   },
   {
     god: "Knowledge",
@@ -3037,7 +3037,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "-5% additional Elemental Damage taken\nfor every type of Elemental Damage recently received\n(Max Divinity Effect: 1)",
+      "-5% additional Elemental Damage taken for every type of Elemental Damage recently received (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3051,7 +3051,7 @@ export const TalentCodexEntries = [
     tree: "Elementalist",
     type: "Legendary Medium",
     name: "",
-    effect: "+40% additional Beam Length\n(Max Divinity Effect: 1)",
+    effect: "+40% additional Beam Length (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3079,7 +3079,7 @@ export const TalentCodexEntries = [
     tree: "Elementalist",
     type: "Medium",
     name: "",
-    effect: "+18% damage for Channeled\nSkills",
+    effect: "+18% damage for Channeled Skills",
   },
   {
     god: "Knowledge",
@@ -3107,7 +3107,7 @@ export const TalentCodexEntries = [
     tree: "Elementalist",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+5% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+5% Critical Strike Damage",
   },
   {
     god: "Knowledge",
@@ -3121,14 +3121,14 @@ export const TalentCodexEntries = [
     tree: "Elementalist",
     type: "Medium",
     name: "",
-    effect: "+7% chance to avoid\nElemental Ailments",
+    effect: "+7% chance to avoid Elemental Ailments",
   },
   {
     god: "Knowledge",
     tree: "Elementalist",
     type: "Medium",
     name: "",
-    effect: "+6% damage for every\n+1 additional Max Channeled\nStack(s)",
+    effect: "+6% damage for every +1 additional Max Channeled Stack(s)",
   },
   {
     god: "Knowledge",
@@ -3136,7 +3136,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+12% Attack and Cast Speed\nwhen channeled stacks have not reached cap",
+      "+12% Attack and Cast Speed when channeled stacks have not reached cap",
   },
   {
     god: "Knowledge",
@@ -3150,7 +3150,7 @@ export const TalentCodexEntries = [
     tree: "Elementalist",
     type: "Micro",
     name: "",
-    effect: "+9% damage for Channeled\nSkills",
+    effect: "+9% damage for Channeled Skills",
   },
   {
     god: "Knowledge",
@@ -3178,7 +3178,7 @@ export const TalentCodexEntries = [
     tree: "Elementalist",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "Knowledge",
@@ -3192,7 +3192,7 @@ export const TalentCodexEntries = [
     tree: "Elementalist",
     type: "Micro",
     name: "",
-    effect: "+3% chance to avoid\nElemental Ailments",
+    effect: "+3% chance to avoid Elemental Ailments",
   },
   {
     god: "Knowledge",
@@ -3200,21 +3200,21 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+12% chance to inflict\nElemental Ailments\nDamage Penetrates 1.5%\nElemental Resistance",
+      "+12% chance to inflict Elemental Ailments\nDamage Penetrates 1.5% Elemental Resistance",
   },
   {
     god: "Knowledge",
     tree: "Elementalist",
     type: "Micro",
     name: "",
-    effect: "+9% damage for Channeled\nSkills",
+    effect: "+9% damage for Channeled Skills",
   },
   {
     god: "Knowledge",
     tree: "Elementalist",
     type: "Micro",
     name: "",
-    effect: "+3% Attack and Cast Speed for\nChanneled Skills",
+    effect: "+3% Attack and Cast Speed for Channeled Skills",
   },
   {
     god: "Knowledge",
@@ -3244,7 +3244,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Barrier of Radiance",
     effect:
-      "Energy Shield Charge started recently\ncannot be interrupted by damage\n+50% Energy Shield Charge Speed (Max\nDivinity Effect: 1)",
+      "Energy Shield Charge started recently cannot be interrupted by damage\n+50% Energy Shield Charge Speed (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3252,7 +3252,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Bunch",
     effect:
-      "Max Focus Blessing Stacks\n+1\n+3% additional Spell Damage per\nstack of Focus Blessing owned\n(Max Divinity Effect: 1)",
+      "Max Focus Blessing Stacks +1\n+3% additional Spell Damage per stack of Focus Blessing owned (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3260,7 +3260,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Play Safe",
     effect:
-      "100% of the bonuses and\nadditional bonuses to Cast Speed is also applied to\nSpell Burst Charge\nSpeed (Max Divinity Effect: 1)",
+      "100% of the bonuses and additional bonuses to Cast Speed is also applied to Spell Burst Charge Speed (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3268,29 +3268,21 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Shell",
     effect:
-      "+35% additional Max Energy\nShield\nYour Max Life is set to 100 (Max\nDivinity Effect: 1)",
+      "+35% additional Max Energy Shield\nYour Max Life is set to 100 (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
     tree: "Magister",
     type: "Legendary Medium",
     name: "",
-    effect: "Restores 3% of Energy Shield\non defeat (Max Divinity Effect: 1)",
+    effect: "Restores 3% of Energy Shield on defeat (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
     tree: "Magister",
     type: "Legendary Medium",
     name: "",
-    effect: "+12% Spell Block Chance\n+15% Energy Shield gained from\nShield",
-  },
-  {
-    god: "Knowledge",
-    tree: "Magister",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "Gains 1 stack(s) of\nFocus Blessing when\nactivating Spell Burst (Max Divinity Effect: 1)",
+    effect: "+12% Spell Block Chance\n+15% Energy Shield gained from Shield",
   },
   {
     god: "Knowledge",
@@ -3298,7 +3290,15 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "-8% additional Energy Shield Regain\nInterval\n+8% Energy Shield\nRegain",
+      "Gains 1 stack(s) of Focus Blessing when activating Spell Burst (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Knowledge",
+    tree: "Magister",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "-8% additional Energy Shield Regain Interval\n+8% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -3312,30 +3312,14 @@ export const TalentCodexEntries = [
     tree: "Magister",
     type: "Legendary Medium",
     name: "",
-    effect:
-      "+2 Max Energy Shield per\n5 Intelligence (Max Divinity\nEffect: 1)",
+    effect: "+2 Max Energy Shield per 5 Intelligence (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
     tree: "Magister",
     type: "Legendary Medium",
     name: "",
-    effect: "+1 Max Spell Burst (Max\nDivinity Effect: 1)",
-  },
-  {
-    god: "Knowledge",
-    tree: "Magister",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "+5% Spell Critical Strike\nDamage per stack of Focus Blessing owned\n(Max Divinity Effect: 1)",
-  },
-  {
-    god: "Knowledge",
-    tree: "Magister",
-    type: "Legendary Medium",
-    name: "",
-    effect: "Inflicts Frail on Spell hit\n(Max Divinity Effect: 1)",
+    effect: "+1 Max Spell Burst (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3343,7 +3327,22 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Immediately starts Energy Shield Charge upon entering\nthe Low Energy Shield status (Max Divinity Effect: 1)",
+      "+5% Spell Critical Strike Damage per stack of Focus Blessing owned (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Knowledge",
+    tree: "Magister",
+    type: "Legendary Medium",
+    name: "",
+    effect: "Inflicts Frail on Spell hit (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Knowledge",
+    tree: "Magister",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "Immediately starts Energy Shield Charge upon entering the Low Energy Shield status (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3378,7 +3377,7 @@ export const TalentCodexEntries = [
     tree: "Magister",
     type: "Medium",
     name: "",
-    effect: "+24% Spell Damage when holding\na shield",
+    effect: "+24% Spell Damage when holding a shield",
   },
   {
     god: "Knowledge",
@@ -3386,14 +3385,14 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Spell Critical Strike\nRating\n+5% Spell Critical Strike\nDamage",
+      "+20% Spell Critical Strike Rating\n+5% Spell Critical Strike Damage",
   },
   {
     god: "Knowledge",
     tree: "Magister",
     type: "Medium",
     name: "",
-    effect: "+8% Spell Burst Charge\nSpeed",
+    effect: "+8% Spell Burst Charge Speed",
   },
   {
     god: "Knowledge",
@@ -3428,14 +3427,14 @@ export const TalentCodexEntries = [
     tree: "Magister",
     type: "Micro",
     name: "",
-    effect: "+12% Spell Damage when holding\na shield",
+    effect: "+12% Spell Damage when holding a shield",
   },
   {
     god: "Knowledge",
     tree: "Magister",
     type: "Micro",
     name: "",
-    effect: "+15% Spell Critical Strike\nRating",
+    effect: "+15% Spell Critical Strike Rating",
   },
   {
     god: "Knowledge",
@@ -3457,21 +3456,21 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Focus Blessing\nDuration\n+10% Spell Damage when having\nFocus Blessing",
+      "+10% Focus Blessing Duration\n+10% Spell Damage when having Focus Blessing",
   },
   {
     god: "Knowledge",
     tree: "Magister",
     type: "Micro",
     name: "",
-    effect: "1.5% Energy Shield\nRegain",
+    effect: "1.5% Energy Shield Regain",
   },
   {
     god: "Knowledge",
     tree: "Magister",
     type: "Micro",
     name: "",
-    effect: "+4% Spell Burst Charge\nSpeed",
+    effect: "+4% Spell Burst Charge Speed",
   },
   {
     god: "Knowledge",
@@ -3493,7 +3492,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Focus Blessing\nDuration\n+4% Cast Speed when Focus Blessing is\nactive",
+      "+10% Focus Blessing Duration\n+4% Cast Speed when Focus Blessing is active",
   },
   {
     god: "Knowledge",
@@ -3508,7 +3507,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Extreme Coldness",
     effect:
-      "Frostbite and\nFrostbite Rating will\ncontinue to be inflicted on Frozen enemies\nAfter Freeze ends,\nFrostbite and all\nFrostbite Rating will\nno longer be removed. +20% of the\nretained Frostbite Rating\n+25% additional Freeze Duration when\nan Elite is nearby (Max Divinity Effect: 1)",
+      "Frostbite and Frostbite Rating will continue to be inflicted on Frozen enemies\nAfter Freeze ends, Frostbite and all Frostbite Rating will no longer be removed. +20% of the retained Frostbite Rating\n+25% additional Freeze Duration when an Elite is nearby (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3516,7 +3515,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Frostbitten",
     effect:
-      "+25% additional damage against\nFrozen enemies\nInflicts Frostbite and\n100 Frostbite Rating when\ndealing Cold Damage to an enemy for the first time (Max\nDivinity Effect: 1)",
+      "+25% additional damage against Frozen enemies\nInflicts Frostbite and 100 Frostbite Rating when dealing Cold Damage to an enemy for the first time (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3524,7 +3523,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Frozen Lotus",
     effect:
-      "+25% additional Cold\nDamage\n+25% additional Minion Cold\nDamage\nSkills no longer cost Mana (Max Divinity Effect: 1)",
+      "+25% additional Cold Damage\n+25% additional Minion Cold Damage\nSkills no longer cost Mana (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3532,7 +3531,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Mind Blade",
     effect:
-      "Adds 30% Physical Damage as\nCold Damage when not wielding a Wand or Tin Staff\n+25% additional Cold Damage when\nwielding a Wand or Tin Staff (Max Divinity Effect: 1)",
+      "Adds 30% Physical Damage as Cold Damage when not wielding a Wand or Tin Staff\n+25% additional Cold Damage when wielding a Wand or Tin Staff (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3540,7 +3539,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+18% Cold Resistance\nMinions are immune to Cold Damage\nMinions are immune to Frostbite and\nFreeze (Max Divinity\nEffect: 1)",
+      "+18% Cold Resistance\nMinions are immune to Cold Damage\nMinions are immune to Frostbite and Freeze (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3548,29 +3547,21 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Inflicts Cold Infiltration when\ndealing damage to Frozen enemies (Max\nDivinity Effect: 1)",
+      "Inflicts Cold Infiltration when dealing damage to Frozen enemies (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
     tree: "Prophet",
     type: "Legendary Medium",
     name: "",
-    effect: "+10% additional damage taken\nby enemies Frozen by you recently",
+    effect: "+10% additional damage taken by enemies Frozen by you recently",
   },
   {
     god: "Knowledge",
     tree: "Prophet",
     type: "Legendary Medium",
     name: "",
-    effect: "Inflicts 5 Frostbite Rating to\nFrostbitten enemies\nevery second",
-  },
-  {
-    god: "Knowledge",
-    tree: "Prophet",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "+100% chance to gain a stack\nof Focus Blessing upon\ninflicting damage to a Frostbitten enemy.\nInterval: 0.1s (Max Divinity Effect: 1)",
+    effect: "Inflicts 5 Frostbite Rating to Frostbitten enemies every second",
   },
   {
     god: "Knowledge",
@@ -3578,7 +3569,15 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Converts 100% of Physical\nDamage to Cold Damage\nConverts 100% of Minion Physical\nDamage to Cold Damage (Max Divinity Effect: 1)",
+      "+100% chance to gain a stack of Focus Blessing upon inflicting damage to a Frostbitten enemy. Interval: 0.1s (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Knowledge",
+    tree: "Prophet",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "Converts 100% of Physical Damage to Cold Damage\nConverts 100% of Minion Physical Damage to Cold Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3599,7 +3598,7 @@ export const TalentCodexEntries = [
     tree: "Prophet",
     type: "Medium",
     name: "",
-    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast\nSpeed",
+    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast Speed",
   },
   {
     god: "Knowledge",
@@ -3614,14 +3613,14 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Critical Strike\nRating\n+20% Minion Critical Strike\nRating\n+5% Critical Strike Damage\n+5% Minion Critical Strike\nDamage",
+      "+20% Critical Strike Rating\n+20% Minion Critical Strike Rating\n+5% Critical Strike Damage\n+5% Minion Critical Strike Damage",
   },
   {
     god: "Knowledge",
     tree: "Prophet",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -3635,7 +3634,7 @@ export const TalentCodexEntries = [
     tree: "Prophet",
     type: "Medium",
     name: "",
-    effect: "+10% Frostbite\ninflicted",
+    effect: "+10% Frostbite inflicted",
   },
   {
     god: "Knowledge",
@@ -3649,7 +3648,7 @@ export const TalentCodexEntries = [
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "+6% chance to inflict\nFrostbite\n+9% Cold Damage",
+    effect: "+6% chance to inflict Frostbite\n+9% Cold Damage",
   },
   {
     god: "Knowledge",
@@ -3670,14 +3669,14 @@ export const TalentCodexEntries = [
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "+12% chance to inflict\nFrostbite\n+18% Cold Damage",
+    effect: "+12% chance to inflict Frostbite\n+18% Cold Damage",
   },
   {
     god: "Knowledge",
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast\nSpeed",
+    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast Speed",
   },
   {
     god: "Knowledge",
@@ -3691,7 +3690,7 @@ export const TalentCodexEntries = [
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating\n+15% Minion Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating\n+15% Minion Critical Strike Rating",
   },
   {
     god: "Knowledge",
@@ -3705,14 +3704,14 @@ export const TalentCodexEntries = [
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "Knowledge",
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "1.5% Cold Penetration\n1.5% Cold Penetration for\nMinions",
+    effect: "1.5% Cold Penetration\n1.5% Cold Penetration for Minions",
   },
   {
     god: "Knowledge",
@@ -3726,7 +3725,7 @@ export const TalentCodexEntries = [
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "+5% Frostbite\ninflicted",
+    effect: "+5% Frostbite inflicted",
   },
   {
     god: "Knowledge",
@@ -3741,7 +3740,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Focus Blessing\nDuration\n+10% damage when Focus Blessing is\nactive",
+      "+10% Focus Blessing Duration\n+10% damage when Focus Blessing is active",
   },
   {
     god: "Knowledge",
@@ -3756,7 +3755,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Isomorphic Arms",
     effect:
-      "Minions gain the Main-Hand Weapon's bonuses.\n+30% additional Spell Damage for\nMinions when wielding a Wand or Tin Staff (Max Divinity\nEffect: 1)",
+      "Minions gain the Main-Hand Weapon's bonuses.\n+30% additional Spell Damage for Minions when wielding a Wand or Tin Staff (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -3764,7 +3763,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Mighty Guard",
     effect:
-      "+2 Minion Skill Level\n+ 4 Command per second\n+40 initial Growth for Spirit Magi\n(Max Divinity Effect: 1)",
+      "+2 Minion Skill Level\n+ 4 Command per second\n+40 initial Growth for Spirit Magi (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -3772,7 +3771,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Orders",
     effect:
-      "+25% additional Minion\nDamage\n+50% additional Summon Skill Cast\nSpeed (Max Divinity Effect: 1)",
+      "+25% additional Minion Damage\n+50% additional Summon Skill Cast Speed (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -3780,7 +3779,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Overly Modified",
     effect:
-      "+30% additional Sentry Damage,\n-50% non-Sentry Active Skill\ndamage (Max Divinity Effect: 1)",
+      "+30% additional Sentry Damage, -50% non-Sentry Active Skill damage (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -3788,7 +3787,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Sentry",
     effect:
-      "Max Sentry Quantity +1\n+100% additional Cast Speed for\nSentry Skills (Max Divinity Effect: 1)",
+      "Max Sentry Quantity +1\n+100% additional Cast Speed for Sentry Skills (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -3796,7 +3795,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Shrink Back",
     effect:
-      "Gains Barrier every 1s\n+50% Barrier Shield (Max\nDivinity Effect: 1)",
+      "Gains Barrier every 1s\n+50% Barrier Shield (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -3811,7 +3810,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% Life Regeneration\nSpeed\n-10% additional Energy Shield\nCharge Interval\n+8% Movement Speed",
+      "+10% Life Regeneration Speed\n-10% additional Energy Shield Charge Interval\n+8% Movement Speed",
   },
   {
     god: "Machines",
@@ -3819,7 +3818,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% additional Sentry Damage\nif Sentry Skill is not used in the last 1 s",
+      "+10% additional Sentry Damage if Sentry Skill is not used in the last 1 s",
   },
   {
     god: "Machines",
@@ -3833,7 +3832,7 @@ export const TalentCodexEntries = [
     tree: "God of Machines",
     type: "Medium",
     name: "",
-    effect: "+6% Minion Attack and Cast\nSpeed\nRegenerates 8 Mana per second",
+    effect: "+6% Minion Attack and Cast Speed\nRegenerates 8 Mana per second",
   },
   {
     god: "Machines",
@@ -3848,7 +3847,7 @@ export const TalentCodexEntries = [
     tree: "God of Machines",
     type: "Medium",
     name: "",
-    effect: "+15% Minion Critical Strike\nDamage\n+10% Minion Skill Area",
+    effect: "+15% Minion Critical Strike Damage\n+10% Minion Skill Area",
   },
   {
     god: "Machines",
@@ -3863,7 +3862,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Sentry Skill Critical\nStrike Rating\n+5% Sentry Skill Critical Strike\nDamage",
+      "+20% Sentry Skill Critical Strike Rating\n+5% Sentry Skill Critical Strike Damage",
   },
   {
     god: "Machines",
@@ -3871,7 +3870,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+27% Spirit Magus Ultimate Damage and\nAilment Damage dealt\nby Ultimate.",
+      "+27% Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate.",
   },
   {
     god: "Machines",
@@ -3885,7 +3884,7 @@ export const TalentCodexEntries = [
     tree: "God of Machines",
     type: "Medium",
     name: "",
-    effect: "+9% Spirit Magus Ultimate\nCooldown Recovery Speed",
+    effect: "+9% Spirit Magus Ultimate Cooldown Recovery Speed",
   },
   {
     god: "Machines",
@@ -3907,14 +3906,14 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+ 2 Command per second\nSpirit Magi +6% chance to use an\nEnhanced Skill",
+      "+ 2 Command per second\nSpirit Magi +6% chance to use an Enhanced Skill",
   },
   {
     god: "Machines",
     tree: "God of Machines",
     type: "Medium",
     name: "",
-    effect: "+8% Sentry Skill cast\nfrequency",
+    effect: "+8% Sentry Skill cast frequency",
   },
   {
     god: "Machines",
@@ -3928,7 +3927,7 @@ export const TalentCodexEntries = [
     tree: "God of Machines",
     type: "Micro",
     name: "",
-    effect: "+3% Minion Attack and Cast\nSpeed\nRegenerates 4 Mana per second",
+    effect: "+3% Minion Attack and Cast Speed\nRegenerates 4 Mana per second",
   },
   {
     god: "Machines",
@@ -3943,7 +3942,7 @@ export const TalentCodexEntries = [
     tree: "God of Machines",
     type: "Micro",
     name: "",
-    effect: "+15% Minion Critical Strike\nRating\n+7% Minion Skill Area",
+    effect: "+15% Minion Critical Strike Rating\n+7% Minion Skill Area",
   },
   {
     god: "Machines",
@@ -3957,7 +3956,7 @@ export const TalentCodexEntries = [
     tree: "God of Machines",
     type: "Micro",
     name: "",
-    effect: "+15% Sentry Skill Critical\nStrike Rating",
+    effect: "+15% Sentry Skill Critical Strike Rating",
   },
   {
     god: "Machines",
@@ -3993,7 +3992,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+ 1 Command per second\nSpirit Magi +2% chance to use an\nEnhanced Skill",
+      "+ 1 Command per second\nSpirit Magi +2% chance to use an Enhanced Skill",
   },
   {
     god: "Machines",
@@ -4001,14 +4000,14 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "Regenerates 0.4% Life per\nsecond\n+2% Energy Shield Charge Speed\n+2% Movement Speed",
+      "Regenerates 0.4% Life per second\n+2% Energy Shield Charge Speed\n+2% Movement Speed",
   },
   {
     god: "Machines",
     tree: "God of Machines",
     type: "Micro",
     name: "",
-    effect: "+4% Sentry Skill cast\nfrequency",
+    effect: "+4% Sentry Skill cast frequency",
   },
   {
     god: "Machines",
@@ -4016,7 +4015,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Battle Trumpet",
     effect:
-      "-10% additional Minion Attack\nand Cast Speed\nSpirit Magi +50% chance to use an\nEnhanced Skill (Max\nDivinity Effect: 1)",
+      "-10% additional Minion Attack and Cast Speed\nSpirit Magi +50% chance to use an Enhanced Skill (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4024,7 +4023,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Empower",
     effect:
-      "The number of Max Spirit Magi In Map is 1\n+100% additional Spirit Magus\nSkill Damage (Max Divinity Effect: 1)",
+      "The number of Max Spirit Magi In Map is 1\n+100% additional Spirit Magus Skill Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4032,7 +4031,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Source",
     effect:
-      "+50% Sealed Mana\nCompensation for Spirit Magus Skills\n+30% additional Origin of Spirit Magus\nEffect\nSpirit Magi +30% additional\nEmpower Skill Effect (Max Divinity Effect: 1)",
+      "+50% Sealed Mana Compensation for Spirit Magus Skills\n+30% additional Origin of Spirit Magus Effect\nSpirit Magi +30% additional Empower Skill Effect (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4040,7 +4039,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Talons of Abyss",
     effect:
-      "For every 20 Growth a Spirit Magus\nhas, it deals +1% additional\ndamage\nFor every 40 Growth a Spirit Magus\nhas, it +1% additional Ultimate\nAttack and Cast Speed (Max Divinity Effect: 1)",
+      "For every 20 Growth a Spirit Magus has, it deals +1% additional damage\nFor every 40 Growth a Spirit Magus has, it +1% additional Ultimate Attack and Cast Speed (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4048,7 +4047,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+1 Spirit Magus Skill\nLevel\nSpirit Magi -80% additional damage\ntaken",
+      "+1 Spirit Magus Skill Level\nSpirit Magi -80% additional damage taken",
   },
   {
     god: "Machines",
@@ -4056,7 +4055,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+1 to Max Spirit Magi In\nMap\n-40% additional Spirit Magus Skill\nDamage (Max Divinity Effect: 1)",
+      "+1 to Max Spirit Magi In Map\n-40% additional Spirit Magus Skill Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4071,7 +4070,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "8% of damage taken is\ntransferred to a\nrandom Minion\nSpirit Magi -80% additional damage\ntaken (Max Divinity Effect: 1)",
+      "8% of damage taken is transferred to a random Minion\nSpirit Magi -80% additional damage taken (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4079,7 +4078,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+15% Life Regeneration\nSpeed\n-15% additional Energy Shield\nCharge Interval",
+      "+15% Life Regeneration Speed\n-15% additional Energy Shield Charge Interval",
   },
   {
     god: "Machines",
@@ -4100,21 +4099,21 @@ export const TalentCodexEntries = [
     tree: "Alchemist",
     type: "Medium",
     name: "",
-    effect: "Regenerates 0.8% Life per\nsecond",
+    effect: "Regenerates 0.8% Life per second",
   },
   {
     god: "Machines",
     tree: "Alchemist",
     type: "Medium",
     name: "",
-    effect: "+6% Minion Attack and Cast\nSpeed\n+6% Attack and Cast Speed",
+    effect: "+6% Minion Attack and Cast Speed\n+6% Attack and Cast Speed",
   },
   {
     god: "Machines",
     tree: "Alchemist",
     type: "Medium",
     name: "",
-    effect: "+16% Minion Damage\n+24% chance for Minions to inflict\nAilment",
+    effect: "+16% Minion Damage\n+24% chance for Minions to inflict Ailment",
   },
   {
     god: "Machines",
@@ -4122,7 +4121,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Minion Critical Strike\nRating\n+5% Minion Critical Strike\nDamage",
+      "+20% Minion Critical Strike Rating\n+5% Minion Critical Strike Damage",
   },
   {
     god: "Machines",
@@ -4136,14 +4135,14 @@ export const TalentCodexEntries = [
     tree: "Alchemist",
     type: "Medium",
     name: "",
-    effect: "Spirit Magi +4% chance to use\nan Enhanced Skill",
+    effect: "Spirit Magi +4% chance to use an Enhanced Skill",
   },
   {
     god: "Machines",
     tree: "Alchemist",
     type: "Medium",
     name: "",
-    effect: "+9% Spirit Magus Ultimate\nCooldown Recovery Speed",
+    effect: "+9% Spirit Magus Ultimate Cooldown Recovery Speed",
   },
   {
     god: "Machines",
@@ -4151,7 +4150,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+24% Spirit Magus Ultimate Damage and\nAilment Damage dealt\nby Ultimate.",
+      "+24% Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate.",
   },
   {
     god: "Machines",
@@ -4179,28 +4178,28 @@ export const TalentCodexEntries = [
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "Regenerates 0.4% Life per\nsecond",
+    effect: "Regenerates 0.4% Life per second",
   },
   {
     god: "Machines",
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "+3% Minion Attack and Cast\nSpeed\n+3% Attack and Cast Speed",
+    effect: "+3% Minion Attack and Cast Speed\n+3% Attack and Cast Speed",
   },
   {
     god: "Machines",
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "+8% Minion Damage\n+12% chance for Minions to inflict\nAilment",
+    effect: "+8% Minion Damage\n+12% chance for Minions to inflict Ailment",
   },
   {
     god: "Machines",
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "+15% Minion Critical Strike\nRating",
+    effect: "+15% Minion Critical Strike Rating",
   },
   {
     god: "Machines",
@@ -4214,14 +4213,14 @@ export const TalentCodexEntries = [
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "Spirit Magi +2% chance to use\nan Enhanced Skill",
+    effect: "Spirit Magi +2% chance to use an Enhanced Skill",
   },
   {
     god: "Machines",
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "4.5% Spirit Magus Ultimate\nCooldown Recovery Speed",
+    effect: "4.5% Spirit Magus Ultimate Cooldown Recovery Speed",
   },
   {
     god: "Machines",
@@ -4229,7 +4228,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+12% Spirit Magus Ultimate Damage and\nAilment Damage dealt\nby Ultimate.",
+      "+12% Spirit Magus Ultimate Damage and Ailment Damage dealt by Ultimate.",
   },
   {
     god: "Machines",
@@ -4243,14 +4242,14 @@ export const TalentCodexEntries = [
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "+9% Spirit Magus Skill\nDamage",
+    effect: "+9% Spirit Magus Skill Damage",
   },
   {
     god: "Machines",
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "+4% Origin of Spirit Magus\neffect",
+    effect: "+4% Origin of Spirit Magus effect",
   },
   {
     god: "Machines",
@@ -4264,7 +4263,7 @@ export const TalentCodexEntries = [
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "12.5% Sealed Mana\nCompensation for Spirit Magus Skills",
+    effect: "12.5% Sealed Mana Compensation for Spirit Magus Skills",
   },
   {
     god: "Machines",
@@ -4272,7 +4271,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Co-resonance",
     effect:
-      "+25% additional Sentry\nDamage\nAttack Speed bonus and 100% of\nadditional bonus are also applied to Attack Sentries' Cast\nFrequency\nCast Speed bonus and 100% of\nadditional bonus are also applied to Spell Sentries' Cast\nFrequency (Max Divinity Effect: 1)",
+      "+25% additional Sentry Damage\nAttack Speed bonus and 100% of additional bonus are also applied to Attack Sentries' Cast Frequency\nCast Speed bonus and 100% of additional bonus are also applied to Spell Sentries' Cast Frequency (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4280,7 +4279,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Heat Up",
     effect:
-      "+30% additional Sentry Damage\nif Sentry Skill has been cast recently\n-30% additional Sentry Start Time\n(Max Divinity Effect: 1)",
+      "+30% additional Sentry Damage if Sentry Skill has been cast recently\n-30% additional Sentry Start Time (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4288,7 +4287,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Kinetic Conversion",
     effect:
-      "100% chance to gain a\nBarrier for every\n5 m you move\nRefreshes Barrier when gaining\nBarrier\n-40% additional Barrier Shield (Max\nDivinity Effect: 1)",
+      "100% chance to gain a Barrier for every 5 m you move\nRefreshes Barrier when gaining Barrier\n-40% additional Barrier Shield (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4296,7 +4295,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Shared Fate",
     effect:
-      "Triggers the Sentry Main Skill when there are no\nSentries within 10 m. Interval:\n1 s\nThe number of Sentries that can be deployed at a time is\nequal to the Max Sentry Quantity\n+25% additional Sentry Damage (Max\nDivinity Effect: 1)",
+      "Triggers the Sentry Main Skill when there are no Sentries within 10 m. Interval: 1 s\nThe number of Sentries that can be deployed at a time is equal to the Max Sentry Quantity\n+25% additional Sentry Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4304,7 +4303,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Gains 1 stack(s) of\nTenacity Blessing\nevery 1 s when having Barrier (Max Divinity\nEffect: 1)",
+      "Gains 1 stack(s) of Tenacity Blessing every 1 s when having Barrier (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4312,7 +4311,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+8% additional Sentry\nDamage\n-25% additional Sentry Start Time\n(Max Divinity Effect: 1)",
+      "+8% additional Sentry Damage\n-25% additional Sentry Start Time (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4326,21 +4325,21 @@ export const TalentCodexEntries = [
     tree: "Artisan",
     type: "Legendary Medium",
     name: "",
-    effect: "+1 Sentry quantity that can be\ndeployed at a time",
+    effect: "+1 Sentry quantity that can be deployed at a time",
   },
   {
     god: "Machines",
     tree: "Artisan",
     type: "Legendary Medium",
     name: "",
-    effect: "+30% Sentry Skill cast\nfrequency\n-5% additional Sentry Damage",
+    effect: "+30% Sentry Skill cast frequency\n-5% additional Sentry Damage",
   },
   {
     god: "Machines",
     tree: "Artisan",
     type: "Legendary Medium",
     name: "",
-    effect: "+8% Barrier Absorption\nRate (Max Divinity Effect: 1)",
+    effect: "+8% Barrier Absorption Rate (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4361,14 +4360,14 @@ export const TalentCodexEntries = [
     tree: "Artisan",
     type: "Medium",
     name: "",
-    effect: "+30% Sentry Skill Critical\nStrike Rating",
+    effect: "+30% Sentry Skill Critical Strike Rating",
   },
   {
     god: "Machines",
     tree: "Artisan",
     type: "Medium",
     name: "",
-    effect: "+6% Sentry Skill cast\nfrequency",
+    effect: "+6% Sentry Skill cast frequency",
   },
   {
     god: "Machines",
@@ -4382,7 +4381,7 @@ export const TalentCodexEntries = [
     tree: "Artisan",
     type: "Medium",
     name: "",
-    effect: "+15% Sentry Skill Critical\nStrike Damage",
+    effect: "+15% Sentry Skill Critical Strike Damage",
   },
   {
     god: "Machines",
@@ -4396,7 +4395,7 @@ export const TalentCodexEntries = [
     tree: "Artisan",
     type: "Medium",
     name: "",
-    effect: "+4% Movement Speed\n+20% Sentry Damage when\nmoving",
+    effect: "+4% Movement Speed\n+20% Sentry Damage when moving",
   },
   {
     god: "Machines",
@@ -4432,14 +4431,14 @@ export const TalentCodexEntries = [
     tree: "Artisan",
     type: "Micro",
     name: "",
-    effect: "+15% Sentry Skill Critical\nStrike Rating",
+    effect: "+15% Sentry Skill Critical Strike Rating",
   },
   {
     god: "Machines",
     tree: "Artisan",
     type: "Micro",
     name: "",
-    effect: "+3% Sentry Skill cast\nfrequency",
+    effect: "+3% Sentry Skill cast frequency",
   },
   {
     god: "Machines",
@@ -4453,7 +4452,7 @@ export const TalentCodexEntries = [
     tree: "Artisan",
     type: "Micro",
     name: "",
-    effect: "+8% Sentry Skill Critical\nStrike Damage",
+    effect: "+8% Sentry Skill Critical Strike Damage",
   },
   {
     god: "Machines",
@@ -4481,7 +4480,7 @@ export const TalentCodexEntries = [
     tree: "Artisan",
     type: "Micro",
     name: "",
-    effect: "+8% Sentry Damage\n-8% additional Sentry Start\nTime",
+    effect: "+8% Sentry Damage\n-8% additional Sentry Start Time",
   },
   {
     god: "Machines",
@@ -4509,7 +4508,7 @@ export const TalentCodexEntries = [
     tree: "Artisan",
     type: "Micro",
     name: "",
-    effect: "+3% Sentry Skill cast\nfrequency",
+    effect: "+3% Sentry Skill cast frequency",
   },
   {
     god: "Machines",
@@ -4517,7 +4516,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Boss",
     effect:
-      "+1 to Max Summonable Synthetic\nTroops\n+15% additional Minion Damage (Max\nDivinity Effect: 1)",
+      "+1 to Max Summonable Synthetic Troops\n+15% additional Minion Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4525,7 +4524,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Burning Aggression",
     effect:
-      "Gains 30 point(s) of\nCommand every\n2 s when there is an Elite within\n10 m (Max Divinity Effect: 1)",
+      "Gains 30 point(s) of Command every 2 s when there is an Elite within 10 m (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4533,7 +4532,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Rally",
     effect:
-      "Synthetic Troop Minions summoned at a time +1\n+25% additional Minion Damage (Max\nDivinity Effect: 1)",
+      "Synthetic Troop Minions summoned at a time +1\n+25% additional Minion Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4541,29 +4540,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "United Stand",
     effect:
-      "-5% additional damage taken\nfor every nearby Synthetic Troop Minion within 10m\n-10% Minion aggressiveness (Max\nDivinity Effect: 1)",
+      "-5% additional damage taken for every nearby Synthetic Troop Minion within 10m\n-10% Minion aggressiveness (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
     tree: "Machinist",
     type: "Legendary Medium",
     name: "",
-    effect: "Adds 10 Base Ailment Damage to\nMinions (Max Divinity Effect: 1)",
-  },
-  {
-    god: "Machines",
-    tree: "Machinist",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "+8% additional Minion Damage\nif a Synthetic Troop Skill has been cast recently",
-  },
-  {
-    god: "Machines",
-    tree: "Machinist",
-    type: "Legendary Medium",
-    name: "",
-    effect: "+1 Synthetic Troop Skill\nLevel",
+    effect: "Adds 10 Base Ailment Damage to Minions (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4571,7 +4555,22 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+1% Minion Attack and Cast\nSpeed for every 2 Command owned (Max\nDivinity Effect: 1)",
+      "+8% additional Minion Damage if a Synthetic Troop Skill has been cast recently",
+  },
+  {
+    god: "Machines",
+    tree: "Machinist",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+1 Synthetic Troop Skill Level",
+  },
+  {
+    god: "Machines",
+    tree: "Machinist",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+1% Minion Attack and Cast Speed for every 2 Command owned (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4592,14 +4591,14 @@ export const TalentCodexEntries = [
     tree: "Machinist",
     type: "Medium",
     name: "",
-    effect: "+4% Max Life\nRegenerates 0.6% Life per\nsecond",
+    effect: "+4% Max Life\nRegenerates 0.6% Life per second",
   },
   {
     god: "Machines",
     tree: "Machinist",
     type: "Medium",
     name: "",
-    effect: "+6% Minion Attack and Cast\nSpeed",
+    effect: "+6% Minion Attack and Cast Speed",
   },
   {
     god: "Machines",
@@ -4614,7 +4613,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Minion Critical Strike\nRating\n+5% Minion Critical Strike\nDamage",
+      "+20% Minion Critical Strike Rating\n+5% Minion Critical Strike Damage",
   },
   {
     god: "Machines",
@@ -4635,28 +4634,28 @@ export const TalentCodexEntries = [
     tree: "Machinist",
     type: "Medium",
     name: "",
-    effect: "+16% Minion Damage\n+24% chance for Minions to inflict\nAilment",
+    effect: "+16% Minion Damage\n+24% chance for Minions to inflict Ailment",
   },
   {
     god: "Machines",
     tree: "Machinist",
     type: "Medium",
     name: "",
-    effect: "+4% chance for Synthetic Troop\nMinions to deal Double Damage",
+    effect: "+4% chance for Synthetic Troop Minions to deal Double Damage",
   },
   {
     god: "Machines",
     tree: "Machinist",
     type: "Medium",
     name: "",
-    effect: "+ 2 Command per\nsecond",
+    effect: "+ 2 Command per second",
   },
   {
     god: "Machines",
     tree: "Machinist",
     type: "Medium",
     name: "",
-    effect: "+6% Minion Life Regeneration\nSpeed",
+    effect: "+6% Minion Life Regeneration Speed",
   },
   {
     god: "Machines",
@@ -4677,14 +4676,14 @@ export const TalentCodexEntries = [
     tree: "Machinist",
     type: "Micro",
     name: "",
-    effect: "+2% Max Life\nRegenerates 0.4% Life per\nsecond",
+    effect: "+2% Max Life\nRegenerates 0.4% Life per second",
   },
   {
     god: "Machines",
     tree: "Machinist",
     type: "Micro",
     name: "",
-    effect: "+3% Minion Attack and Cast\nSpeed",
+    effect: "+3% Minion Attack and Cast Speed",
   },
   {
     god: "Machines",
@@ -4698,7 +4697,7 @@ export const TalentCodexEntries = [
     tree: "Machinist",
     type: "Micro",
     name: "",
-    effect: "+15% Minion Critical Strike\nRating",
+    effect: "+15% Minion Critical Strike Rating",
   },
   {
     god: "Machines",
@@ -4719,7 +4718,7 @@ export const TalentCodexEntries = [
     tree: "Machinist",
     type: "Micro",
     name: "",
-    effect: "+8% Minion Damage\n+12% chance for Minions to inflict\nAilment",
+    effect: "+8% Minion Damage\n+12% chance for Minions to inflict Ailment",
   },
   {
     god: "Machines",
@@ -4733,14 +4732,14 @@ export const TalentCodexEntries = [
     tree: "Machinist",
     type: "Micro",
     name: "",
-    effect: "+ 1 Command per\nsecond",
+    effect: "+ 1 Command per second",
   },
   {
     god: "Machines",
     tree: "Machinist",
     type: "Micro",
     name: "",
-    effect: "+3% Minion Life Regeneration\nSpeed",
+    effect: "+3% Minion Life Regeneration Speed",
   },
   {
     god: "Machines",
@@ -4748,7 +4747,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+12% Minion Damage if a\nSynthetic Troop Skill has been cast recently",
+      "+12% Minion Damage if a Synthetic Troop Skill has been cast recently",
   },
   {
     god: "Machines",
@@ -4756,7 +4755,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Knowledgeable",
     effect:
-      "+100% additional Focus Skill\nDamage\n+50% Sealed Mana\nCompensation for Focus Skills (Max Divinity Effect: 1)",
+      "+100% additional Focus Skill Damage\n+50% Sealed Mana Compensation for Focus Skills (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4764,7 +4763,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Panacea",
     effect:
-      "Restoration Skills: +100%\nrestoration effect\nRestoration Effect from Restoration Skills cannot be\nremoved (Max Divinity Effect: 1)",
+      "Restoration Skills: +100% restoration effect\nRestoration Effect from Restoration Skills cannot be removed (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4772,7 +4771,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Reflection",
     effect:
-      "+6% additional damage for each\ntype of Aura you are affected by\nMinions +6% additional damage for\neach type of Aura they are affected by (Max Divinity\nEffect: 1)",
+      "+6% additional damage for each type of Aura you are affected by\nMinions +6% additional damage for each type of Aura they are affected by (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4780,7 +4779,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Resistance",
     effect:
-      "+1% chance to\navoidElemental Ailments for every\n1% effective Erosion\nResistance (Max Divinity Effect: 1)",
+      "+1% chance to avoidElemental Ailments for every 1% effective Erosion Resistance (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -4788,14 +4787,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+1% Restoration Skill Effect\nfor every 2% of Life lost (Max Divinity Effect: 1)",
+      "+1% Restoration Skill Effect for every 2% of Life lost (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
     tree: "Steel Vanguard",
     type: "Legendary Medium",
     name: "",
-    effect: "Converts 6% of Physical Damage\ntaken to random Elemental Damage",
+    effect: "Converts 6% of Physical Damage taken to random Elemental Damage",
   },
   {
     god: "Machines",
@@ -4803,7 +4802,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "8% additional damage applied\nto Life\nMinions deal 8% additional damage\nto Life",
+      "8% additional damage applied to Life\nMinions deal 8% additional damage to Life",
   },
   {
     god: "Machines",
@@ -4845,7 +4844,7 @@ export const TalentCodexEntries = [
     tree: "Steel Vanguard",
     type: "Medium",
     name: "",
-    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast\nSpeed",
+    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast Speed",
   },
   {
     god: "Machines",
@@ -4866,7 +4865,7 @@ export const TalentCodexEntries = [
     tree: "Steel Vanguard",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "Machines",
@@ -4915,7 +4914,7 @@ export const TalentCodexEntries = [
     tree: "Steel Vanguard",
     type: "Micro",
     name: "",
-    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast\nSpeed",
+    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast Speed",
   },
   {
     god: "Machines",
@@ -4936,14 +4935,14 @@ export const TalentCodexEntries = [
     tree: "Steel Vanguard",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "Machines",
     tree: "Steel Vanguard",
     type: "Micro",
     name: "",
-    effect: "Restoration Skills gain 0.5\nCharging Progress every second",
+    effect: "Restoration Skills gain 0.5 Charging Progress every second",
   },
   {
     god: "Machines",
@@ -4971,7 +4970,7 @@ export const TalentCodexEntries = [
     tree: "Steel Vanguard",
     type: "Micro",
     name: "",
-    effect: "-4% additional Elemental Damage\ntaken",
+    effect: "-4% additional Elemental Damage taken",
   },
   {
     god: "Machines",
@@ -5001,7 +5000,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Great Strength",
     effect:
-      "-10% Attack Speed\n+30% additional Attack Damage\n+30% additional Ailment Damage dealt\nby attacks (Max Divinity Effect: 1)",
+      "-10% Attack Speed\n+30% additional Attack Damage\n+30% additional Ailment Damage dealt by attacks (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5009,7 +5008,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Hidden Mastery",
     effect:
-      "Unable to evade\nGains Attack Aggression when\ncasting an Attack Skill\n+15% Attack Speed and +15% additional Attack Damage when having\nAttack Aggression (Max\nDivinity Effect: 1)",
+      "Unable to evade\nGains Attack Aggression when casting an Attack Skill\n+15% Attack Speed and +15% additional Attack Damage when having Attack Aggression (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5017,7 +5016,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Judgment",
     effect:
-      "+100% chance for Attacks to\ninflict Paralysis on hit\n+25% additional Critical Strike\nDamage against Paralyzed enemies (Max Divinity\nEffect: 1)",
+      "+100% chance for Attacks to inflict Paralysis on hit\n+25% additional Critical Strike Damage against Paralyzed enemies (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5025,7 +5024,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Momentum",
     effect:
-      "+30% additional Attack Damage\nfor the next Main Skill every 0.5\ns. Refreshes the interval on defeat. (Max Divinity Effect:\n1)",
+      "+30% additional Attack Damage for the next Main Skill every 0.5 s. Refreshes the interval on defeat. (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5033,14 +5032,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Tenacity",
     effect:
-      "+100% chance to gain\n1 stack(s) of Tenacity Blessing when\nhitting an enemy\nMax Tenacity Blessing\nStacks +1 (Max Divinity Effect:\n1)",
+      "+100% chance to gain 1 stack(s) of Tenacity Blessing when hitting an enemy\nMax Tenacity Blessing Stacks +1 (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "God of Might",
     type: "Legendary Medium",
     name: "",
-    effect: "Max Tenacity Blessing Stacks\n+1 (Max Divinity Effect: 1)",
+    effect: "Max Tenacity Blessing Stacks +1 (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5055,7 +5054,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+2% Life Regeneration Speed\nper stack of Tenacity Blessing\nowned\n25 Life Regeneration per second\nper stack of Tenacity Blessing\nowned (Max Divinity Effect: 1)",
+      "+2% Life Regeneration Speed per stack of Tenacity Blessing owned\n25 Life Regeneration per second per stack of Tenacity Blessing owned (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5063,7 +5062,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+8% additional Attack Damage\nif you have used a Warcry Skill in the last 8s",
+      "+8% additional Attack Damage if you have used a Warcry Skill in the last 8s",
   },
   {
     god: "Might",
@@ -5091,7 +5090,7 @@ export const TalentCodexEntries = [
     tree: "God of Might",
     type: "Medium",
     name: "",
-    effect: "+20% Attack Critical Strike\nRating\n+5% Critical Strike Damage",
+    effect: "+20% Attack Critical Strike Rating\n+5% Critical Strike Damage",
   },
   {
     god: "Might",
@@ -5133,7 +5132,7 @@ export const TalentCodexEntries = [
     tree: "God of Might",
     type: "Medium",
     name: "",
-    effect: "+10% Warcry Cooldown Recovery\nSpeed",
+    effect: "+10% Warcry Cooldown Recovery Speed",
   },
   {
     god: "Might",
@@ -5161,7 +5160,7 @@ export const TalentCodexEntries = [
     tree: "God of Might",
     type: "Micro",
     name: "",
-    effect: "+10% Attack Critical Strike\nRating\n+3% Critical Strike Damage",
+    effect: "+10% Attack Critical Strike Rating\n+3% Critical Strike Damage",
   },
   {
     god: "Might",
@@ -5204,7 +5203,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Tenacity Blessing\nDuration\n+10% Attack Damage when\nTenacity Blessing is\nactive",
+      "+10% Tenacity Blessing Duration\n+10% Attack Damage when Tenacity Blessing is active",
   },
   {
     god: "Might",
@@ -5218,7 +5217,7 @@ export const TalentCodexEntries = [
     tree: "God of Might",
     type: "Micro",
     name: "",
-    effect: "Regenerates 0.4% Life per\nsecond",
+    effect: "Regenerates 0.4% Life per second",
   },
   {
     god: "Might",
@@ -5226,7 +5225,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Focused Strike",
     effect:
-      "Area Skills deal up to +32%\nadditional damage to enemies at the center\nMinions' Area Skills deal up to 32% additional damage to enemies at the center\n(Max Divinity Effect: 1)",
+      "Area Skills deal up to +32% additional damage to enemies at the center\nMinions' Area Skills deal up to 32% additional damage to enemies at the center (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5234,7 +5233,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Sacrifice",
     effect:
-      "Changes the base effect of Tenacity Blessing to:\n+8% additional damage (Max Divinity Effect: 1)",
+      "Changes the base effect of Tenacity Blessing to: +8% additional damage (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5242,7 +5241,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Sweep",
     effect:
-      "+25% additional Attack Damage\nwhen holding a Two-Handed Weapon\n+25% Attack Skill Area when\nholding a Two-Handed Weapon (Max Divinity Effect: 1)",
+      "+25% additional Attack Damage when holding a Two-Handed Weapon\n+25% Attack Skill Area when holding a Two-Handed Weapon (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5250,7 +5249,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Well Matched",
     effect:
-      "Deals up to +25% additional\nAttack Damage to enemies in proximity, and this damage reduces as\nthe distance from the enemy grows\n-15% additional damage taken from\nenemies in proximity, and this\ndamage reduces as the distance from the enemy grows (Max\nDivinity Effect: 1)",
+      "Deals up to +25% additional Attack Damage to enemies in proximity, and this damage reduces as the distance from the enemy grows\n-15% additional damage taken from enemies in proximity, and this damage reduces as the distance from the enemy grows (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5258,14 +5257,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Gains 1 stack(s) of\nTenacity Blessing per\nsecond when at Full Life (Max\nDivinity Effect: 1)",
+      "Gains 1 stack(s) of Tenacity Blessing per second when at Full Life (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "Onslaughter",
     type: "Legendary Medium",
     name: "",
-    effect: "-6% additional damage taken\n(Max Divinity Effect: 1)",
+    effect: "-6% additional damage taken (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5273,21 +5272,21 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+40% Skill Area if Main Skill\nis not used in the last 2 s (Max\nDivinity Effect: 1)",
+      "+40% Skill Area if Main Skill is not used in the last 2 s (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "Onslaughter",
     type: "Legendary Medium",
     name: "",
-    effect: "+10% additional Base Damage\nfor Two-Handed Weapons",
+    effect: "+10% additional Base Damage for Two-Handed Weapons",
   },
   {
     god: "Might",
     tree: "Onslaughter",
     type: "Legendary Medium",
     name: "",
-    effect: "+80% inflicted Paralysis Effect when\nholding a Two-Handed Weapon",
+    effect: "+80% inflicted Paralysis Effect when holding a Two-Handed Weapon",
   },
   {
     god: "Might",
@@ -5336,7 +5335,7 @@ export const TalentCodexEntries = [
     tree: "Onslaughter",
     type: "Medium",
     name: "",
-    effect: "+20% Attack Critical Strike\nRating\n+5% Critical Strike Damage",
+    effect: "+20% Attack Critical Strike Rating\n+5% Critical Strike Damage",
   },
   {
     god: "Might",
@@ -5357,7 +5356,7 @@ export const TalentCodexEntries = [
     tree: "Onslaughter",
     type: "Medium",
     name: "",
-    effect: "+4% additional Base Damage for\nTwo-Handed Weapons",
+    effect: "+4% additional Base Damage for Two-Handed Weapons",
   },
   {
     god: "Might",
@@ -5365,7 +5364,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+40% Attack Critical Strike\nRating when holding a Two-Handed Weapon",
+      "+40% Attack Critical Strike Rating when holding a Two-Handed Weapon",
   },
   {
     god: "Might",
@@ -5407,7 +5406,7 @@ export const TalentCodexEntries = [
     tree: "Onslaughter",
     type: "Micro",
     name: "",
-    effect: "+15% Attack Critical Strike\nRating",
+    effect: "+15% Attack Critical Strike Rating",
   },
   {
     god: "Might",
@@ -5429,21 +5428,21 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Tenacity Blessing\nDuration\n+10% Attack Damage when\nTenacity Blessing is\nactive",
+      "+10% Tenacity Blessing Duration\n+10% Attack Damage when Tenacity Blessing is active",
   },
   {
     god: "Might",
     tree: "Onslaughter",
     type: "Micro",
     name: "",
-    effect: "+12% Attack Damage when\nholding a Two-Handed Weapon",
+    effect: "+12% Attack Damage when holding a Two-Handed Weapon",
   },
   {
     god: "Might",
     tree: "Onslaughter",
     type: "Micro",
     name: "",
-    effect: "-4% additional Physical Damage\ntaken",
+    effect: "-4% additional Physical Damage taken",
   },
   {
     god: "Might",
@@ -5465,7 +5464,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Ember Armor",
     effect:
-      "+25% Armor Effective Rate\nfor Non-Physical Damage (Max Divinity Effect: 1)",
+      "+25% Armor Effective Rate for Non-Physical Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5473,7 +5472,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Formless",
     effect:
-      "Doubles Max Warcry Skill Effects\n+66% Warcry Skill Area (Max\nDivinity Effect: 1)",
+      "Doubles Max Warcry Skill Effects\n+66% Warcry Skill Area (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5481,7 +5480,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Resolve",
     effect:
-      "+4% additional Armor per stack\nof Tenacity Blessing\nowned (Max Divinity Effect: 1)",
+      "+4% additional Armor per stack of Tenacity Blessing owned (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5489,36 +5488,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Static",
     effect:
-      "+12% additional damage every\n0.25s while standing still, up to +48% additional damage\nRemoves the effect when no longer standing still (Max\nDivinity Effect: 1)",
+      "+12% additional damage every 0.25s while standing still, up to +48% additional damage\nRemoves the effect when no longer standing still (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "The Brave",
     type: "Legendary Medium",
     name: "",
-    effect: "+40% Defense gained from\nChest Armor",
-  },
-  {
-    god: "Might",
-    tree: "The Brave",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "+6% Armor per stack of\nTenacity Blessing\nowned (Max Divinity Effect: 1)",
-  },
-  {
-    god: "Might",
-    tree: "The Brave",
-    type: "Legendary Medium",
-    name: "",
-    effect: "+8% additional Attack Damage\nwhen holding a One-Handed Weapon",
-  },
-  {
-    god: "Might",
-    tree: "The Brave",
-    type: "Legendary Medium",
-    name: "",
-    effect: "+5% Block Ratio when\nholding a Shield (Max Divinity Effect: 1)",
+    effect: "+40% Defense gained from Chest Armor",
   },
   {
     god: "Might",
@@ -5526,14 +5503,21 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "The minimum number of enemies affected by Warcry\n+4 (Max Divinity Effect: 1)",
+      "+6% Armor per stack of Tenacity Blessing owned (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "The Brave",
     type: "Legendary Medium",
     name: "",
-    effect: "+1% Armor for every\n24 Strength (Max Divinity Effect:\n1)",
+    effect: "+8% additional Attack Damage when holding a One-Handed Weapon",
+  },
+  {
+    god: "Might",
+    tree: "The Brave",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+5% Block Ratio when holding a Shield (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5541,7 +5525,22 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "0.5% Elemental Resistance per 3000 Armor. Stacks up to 6% .\n0.5% Erosion Resistance per\n3000 Armor. Stacks up to\n6% .",
+      "The minimum number of enemies affected by Warcry +4 (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Might",
+    tree: "The Brave",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+1% Armor for every 24 Strength (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Might",
+    tree: "The Brave",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "0.5% Elemental Resistance per 3000 Armor. Stacks up to 6% .\n0.5% Erosion Resistance per 3000 Armor. Stacks up to 6% .",
   },
   {
     god: "Might",
@@ -5555,7 +5554,7 @@ export const TalentCodexEntries = [
     tree: "The Brave",
     type: "Medium",
     name: "",
-    effect: "+5% Max Life\nRegenerates 0.5% Life per\nsecond",
+    effect: "+5% Max Life\nRegenerates 0.5% Life per second",
   },
   {
     god: "Might",
@@ -5583,7 +5582,7 @@ export const TalentCodexEntries = [
     tree: "The Brave",
     type: "Medium",
     name: "",
-    effect: "+20% Attack Critical Strike\nRating\n+5% Critical Strike Damage",
+    effect: "+20% Attack Critical Strike Rating\n+5% Critical Strike Damage",
   },
   {
     god: "Might",
@@ -5604,7 +5603,7 @@ export const TalentCodexEntries = [
     tree: "The Brave",
     type: "Medium",
     name: "",
-    effect: "+18% Attack Damage when\nholding a One-Handed Weapon",
+    effect: "+18% Attack Damage when holding a One-Handed Weapon",
   },
   {
     god: "Might",
@@ -5612,7 +5611,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+12% damage dealt when holding\na shield\n+4% Attack Block Chance when\nholding a shield",
+      "+12% damage dealt when holding a shield\n+4% Attack Block Chance when holding a shield",
   },
   {
     god: "Might",
@@ -5661,7 +5660,7 @@ export const TalentCodexEntries = [
     tree: "The Brave",
     type: "Micro",
     name: "",
-    effect: "+15% Attack Critical Strike\nRating",
+    effect: "+15% Attack Critical Strike Rating",
   },
   {
     god: "Might",
@@ -5690,21 +5689,21 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+25% chance to gain\n1 stacks of Tenacity Blessing when\ntaking damage. Interval: 1 s",
+      "+25% chance to gain 1 stacks of Tenacity Blessing when taking damage. Interval: 1 s",
   },
   {
     god: "Might",
     tree: "The Brave",
     type: "Micro",
     name: "",
-    effect: "+9% Attack Damage when holding\na One-Handed Weapon",
+    effect: "+9% Attack Damage when holding a One-Handed Weapon",
   },
   {
     god: "Might",
     tree: "The Brave",
     type: "Micro",
     name: "",
-    effect: "+5% Warcry Cooldown Recovery\nSpeed",
+    effect: "+5% Warcry Cooldown Recovery Speed",
   },
   {
     god: "Might",
@@ -5726,7 +5725,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Fueling",
     effect:
-      "The Fire Resistance of enemies within 10m is fixed at 0\n(Max Divinity Effect: 1)",
+      "The Fire Resistance of enemies within 10m is fixed at 0 (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5734,14 +5733,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Rock",
     effect:
-      "Converts 3% of Physical Damage\ntaken to Fire Damage for every stack of Tenacity Blessing you\nhave (Max Divinity Effect: 1)",
+      "Converts 3% of Physical Damage taken to Fire Damage for every stack of Tenacity Blessing you have (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "Warlord",
     type: "Core",
     name: "Starfire",
-    effect: "+1 Ignite limit\n+30% Ignite Duration (Max\nDivinity Effect: 1)",
+    effect: "+1 Ignite limit\n+30% Ignite Duration (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5749,22 +5748,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "True Flame",
     effect:
-      "When an enemy is Ignited, 60% of the additional bonus to Damage Over\nTime taken from Affliction is also\napplied to your Fire Hit Damage (Max Divinity Effect:\n1)",
+      "When an enemy is Ignited, 60% of the additional bonus to Damage Over Time taken from Affliction is also applied to your Fire Hit Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "Warlord",
     type: "Legendary Medium",
     name: "",
-    effect: "+4% Max Fire\nResistance",
-  },
-  {
-    god: "Might",
-    tree: "Warlord",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "Immune to Ignite\nMinions are immune to Fire Damage (Max Divinity Effect:\n1)",
+    effect: "+4% Max Fire Resistance",
   },
   {
     god: "Might",
@@ -5772,7 +5763,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Converts 100% Physical Damage\nto Fire Damage\nConverts 100% of Minion's Physical\nDamage to Fire Damage (Max Divinity Effect: 1)",
+      "Immune to Ignite\nMinions are immune to Fire Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5780,7 +5771,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Inflicts Fire Infiltration when\ndealing Fire Damage to Ignited enemies (Max Divinity\nEffect: 1)",
+      "Converts 100% Physical Damage to Fire Damage\nConverts 100% of Minion's Physical Damage to Fire Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5788,7 +5779,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+1% Fire Damage per\n12 Strength\n+1% Minion Fire Damage per\n12 Strength (Max Divinity Effect:\n1)",
+      "Inflicts Fire Infiltration when dealing Fire Damage to Ignited enemies (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5796,14 +5787,22 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% additional Fire Damage\ndealt by the next Main Skill every 1 s",
+      "+1% Fire Damage per 12 Strength\n+1% Minion Fire Damage per 12 Strength (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "Warlord",
     type: "Legendary Medium",
     name: "",
-    effect: "Inflicts 1 additional stack(s)\nof Ignite",
+    effect:
+      "+10% additional Fire Damage dealt by the next Main Skill every 1 s",
+  },
+  {
+    god: "Might",
+    tree: "Warlord",
+    type: "Legendary Medium",
+    name: "",
+    effect: "Inflicts 1 additional stack(s) of Ignite",
   },
   {
     god: "Might",
@@ -5831,7 +5830,7 @@ export const TalentCodexEntries = [
     tree: "Warlord",
     type: "Medium",
     name: "",
-    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast\nSpeed",
+    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast Speed",
   },
   {
     god: "Might",
@@ -5839,14 +5838,14 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+20% Critical Strike\nRating\n+20% Minion Critical Strike\nRating\n+5% Critical Strike Damage\n+5% Minion Critical Strike\nDamage",
+      "+20% Critical Strike Rating\n+20% Minion Critical Strike Rating\n+5% Critical Strike Damage\n+5% Minion Critical Strike Damage",
   },
   {
     god: "Might",
     tree: "Warlord",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "Might",
@@ -5854,7 +5853,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+16% Ignite damage\n+12% chance to Ignite targets\n+20% Ignite chance for\nMinions",
+      "+16% Ignite damage\n+12% chance to Ignite targets\n+20% Ignite chance for Minions",
   },
   {
     god: "Might",
@@ -5869,7 +5868,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+15% Affliction Effect\n+15% Minion Affliction Effect\n+8 Affliction inflicted\nper second\n+8 Affliction inflicted per second\nby Minions",
+      "+15% Affliction Effect\n+15% Minion Affliction Effect\n+8 Affliction inflicted per second\n+8 Affliction inflicted per second by Minions",
   },
   {
     god: "Might",
@@ -5897,7 +5896,7 @@ export const TalentCodexEntries = [
     tree: "Warlord",
     type: "Micro",
     name: "",
-    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast\nSpeed",
+    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast Speed",
   },
   {
     god: "Might",
@@ -5911,14 +5910,14 @@ export const TalentCodexEntries = [
     tree: "Warlord",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating\n+15% Minion Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating\n+15% Minion Critical Strike Rating",
   },
   {
     god: "Might",
     tree: "Warlord",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "Might",
@@ -5926,7 +5925,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+8% Ignite damage\n+6% chance to Ignite targets\n+10% Ignite chance for\nMinions",
+      "+8% Ignite damage\n+6% chance to Ignite targets\n+10% Ignite chance for Minions",
   },
   {
     god: "Might",
@@ -5955,7 +5954,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+2% Fire Penetration against\nIgnited enemies\n+2% Minion Fire Penetration\nagainst Ignited enemies",
+      "+2% Fire Penetration against Ignited enemies\n+2% Minion Fire Penetration against Ignited enemies",
   },
   {
     god: "Might",
@@ -5985,7 +5984,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Arcane",
     effect:
-      "Converts 100% of Mana Cost to\nLife Cost\n+25% additional Max Life (Max\nDivinity Effect: 1)",
+      "Converts 100% of Mana Cost to Life Cost\n+25% additional Max Life (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -5993,7 +5992,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Life Path",
     effect:
-      "Double Life Regain\nLife Regain is only\neffective when Life is lower than 50% (Max Divinity Effect: 1)",
+      "Double Life Regain\nLife Regain is only effective when Life is lower than 50% (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -6001,7 +6000,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "No Lose Ends",
     effect:
-      "+50% additional Attack Damage\nat Low Life\nYour Max Energy Shield is fixed at 0 (Max Divinity Effect: 1)",
+      "+50% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0 (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -6009,7 +6008,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Survival Will",
     effect:
-      "+30% additional Attack Damage\nwhen not at Low Life\nRestores 40% Max Life at\nLow Life. Interval:\n10 s (Max Divinity Effect: 1)",
+      "+30% additional Attack Damage when not at Low Life\nRestores 40% Max Life at Low Life. Interval: 10 s (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -6017,7 +6016,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "0.3% Attack Speed for every 1%\nof Life lost (Max Divinity Effect: 1)",
+      "0.3% Attack Speed for every 1% of Life lost (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -6025,29 +6024,21 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "-15% additional Life Regain\nInterval\nConsumes 2% of current Life when\nyou use Attack Skills",
+      "-15% additional Life Regain Interval\nConsumes 2% of current Life when you use Attack Skills",
   },
   {
     god: "Might",
     tree: "Warrior",
     type: "Legendary Medium",
     name: "",
-    effect: "Restores 3% of Life on defeat\n(Max Divinity Effect: 1)",
+    effect: "Restores 3% of Life on defeat (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
     tree: "Warrior",
     type: "Legendary Medium",
     name: "",
-    effect: "+8% additional damage if you\nhave lost Life recently",
-  },
-  {
-    god: "Might",
-    tree: "Warrior",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "+25% additional damage against\nLow Life enemies (Max\nDivinity Effect: 1)",
+    effect: "+8% additional damage if you have lost Life recently",
   },
   {
     god: "Might",
@@ -6055,7 +6046,15 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Gains a stack of Fortitude when using a\nMelee Skill (Max Divinity Effect: 1)",
+      "+25% additional damage against Low Life enemies (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Might",
+    tree: "Warrior",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "Gains a stack of Fortitude when using a Melee Skill (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -6090,7 +6089,7 @@ export const TalentCodexEntries = [
     tree: "Warrior",
     type: "Medium",
     name: "",
-    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast\nSpeed",
+    effect: "+6% Attack and Cast Speed\n+6% Minion Attack and Cast Speed",
   },
   {
     god: "Might",
@@ -6104,21 +6103,21 @@ export const TalentCodexEntries = [
     tree: "Warrior",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+5% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+5% Critical Strike Damage",
   },
   {
     god: "Might",
     tree: "Warrior",
     type: "Medium",
     name: "",
-    effect: "Regenerates 0.8% Life per\nsecond",
+    effect: "Regenerates 0.8% Life per second",
   },
   {
     god: "Might",
     tree: "Warrior",
     type: "Medium",
     name: "",
-    effect: "+50% damage against\nLow Life enemies",
+    effect: "+50% damage against Low Life enemies",
   },
   {
     god: "Might",
@@ -6153,7 +6152,7 @@ export const TalentCodexEntries = [
     tree: "Warrior",
     type: "Micro",
     name: "",
-    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast\nSpeed",
+    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast Speed",
   },
   {
     god: "Might",
@@ -6167,14 +6166,14 @@ export const TalentCodexEntries = [
     tree: "Warrior",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "Might",
     tree: "Warrior",
     type: "Micro",
     name: "",
-    effect: "Regenerates 0.4% Life per\nsecond",
+    effect: "Regenerates 0.4% Life per second",
   },
   {
     god: "Might",
@@ -6202,7 +6201,7 @@ export const TalentCodexEntries = [
     tree: "Warrior",
     type: "Micro",
     name: "",
-    effect: "+12% damage if you have taken\ndamage recently",
+    effect: "+12% damage if you have taken damage recently",
   },
   {
     god: "Might",
@@ -6224,7 +6223,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Ambition",
     effect:
-      "+100% chance to gain\n10 Fervor rating on\nhit\nGains Fervor when there are\nenemies Nearby (Max Divinity\nEffect: 1)",
+      "+100% chance to gain 10 Fervor rating on hit\nGains Fervor when there are enemies Nearby (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6232,7 +6231,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Blunt",
     effect:
-      "+30% additional Physical\nDamage\nEnemies +20% Injury Buffer (Max\nDivinity Effect: 1)",
+      "+30% additional Physical Damage\nEnemies +20% Injury Buffer (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6240,7 +6239,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Cohesion",
     effect:
-      "+50% additional Critical\nStrike Rating for the next Main Skill used every\n1 s (Max Divinity Effect: 1)",
+      "+50% additional Critical Strike Rating for the next Main Skill used every 1 s (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6248,7 +6247,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Determined",
     effect:
-      "Upon taking fatal damage, you have\na 50% chance to keep at least 1\nLife (Max Divinity Effect: 1)",
+      "Upon taking fatal damage, you have a 50% chance to keep at least 1 Life (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6256,7 +6255,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Gravity",
     effect:
-      "+25% additional Melee\nDamage\nMelee Skill has reversed knockback direction (Max\nDivinity Effect: 1)",
+      "+25% additional Melee Damage\nMelee Skill has reversed knockback direction (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6264,7 +6263,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Shooting Arrows",
     effect:
-      "+25% additional Projectile\nDamage\n+50% Knockback distance (Max\nDivinity Effect: 1)",
+      "+25% additional Projectile Damage\n+50% Knockback distance (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6272,7 +6271,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "10% chance to restore\n15% of Life, Energy Shield, and\nMana when Blocking (Max Divinity Effect: 1)",
+      "10% chance to restore 15% of Life, Energy Shield, and Mana when Blocking (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6293,7 +6292,7 @@ export const TalentCodexEntries = [
     tree: "God of War",
     type: "Legendary Medium",
     name: "",
-    effect: "+8% additional Physical Damage\nwhile having Fervor",
+    effect: "+8% additional Physical Damage while having Fervor",
   },
   {
     god: "War",
@@ -6307,7 +6306,7 @@ export const TalentCodexEntries = [
     tree: "God of War",
     type: "Medium",
     name: "",
-    effect: "+25% Critical Strike\nRating\n-4 Skill Cost",
+    effect: "+25% Critical Strike Rating\n-4 Skill Cost",
   },
   {
     god: "War",
@@ -6342,7 +6341,7 @@ export const TalentCodexEntries = [
     tree: "God of War",
     type: "Medium",
     name: "",
-    effect: "+16% Critical Strike\nDamage",
+    effect: "+16% Critical Strike Damage",
   },
   {
     god: "War",
@@ -6356,7 +6355,7 @@ export const TalentCodexEntries = [
     tree: "God of War",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "War",
@@ -6370,7 +6369,7 @@ export const TalentCodexEntries = [
     tree: "God of War",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "War",
@@ -6405,14 +6404,14 @@ export const TalentCodexEntries = [
     tree: "God of War",
     type: "Micro",
     name: "",
-    effect: "+8% Critical Strike\nDamage",
+    effect: "+8% Critical Strike Damage",
   },
   {
     god: "War",
     tree: "God of War",
     type: "Micro",
     name: "",
-    effect: "+6% chance to inflict\nTrauma\n+8% Trauma Damage",
+    effect: "+6% chance to inflict Trauma\n+8% Trauma Damage",
   },
   {
     god: "War",
@@ -6426,7 +6425,7 @@ export const TalentCodexEntries = [
     tree: "God of War",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "War",
@@ -6440,7 +6439,7 @@ export const TalentCodexEntries = [
     tree: "Ranger",
     type: "Core",
     name: "Fluke",
-    effect: "Lucky Critical Strike\n(Max Divinity Effect: 1)",
+    effect: "Lucky Critical Strike (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6448,7 +6447,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Impending",
     effect:
-      "Every 0.25 s, +6% additional\ndamage taken for enemies within 10\nm. Stacks up to 5 times (Max Divinity Effect: 1)",
+      "Every 0.25 s, +6% additional damage taken for enemies within 10 m. Stacks up to 5 times (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6456,7 +6455,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Keep It Up",
     effect:
-      "When triggering a Critical Strike, gains the following\nbuff for the next 4s: +7%\nadditional damage and -25%\nCritical Strike Rating on Critical Strike. Interval: 0.5s\n(Max Divinity Effect: 1)",
+      "When triggering a Critical Strike, gains the following buff for the next 4s: +7% additional damage and -25% Critical Strike Rating on Critical Strike. Interval: 0.5s (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6464,7 +6463,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Rapid Shots",
     effect:
-      "Projectile Damage increases with the distance traveled,\ndealing up to +35% additional\ndamage to Distant enemies (Max\nDivinity Effect: 1)",
+      "Projectile Damage increases with the distance traveled, dealing up to +35% additional damage to Distant enemies (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6472,22 +6471,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "100% chance to gain\nAgility Blessing on\nCritical Strike (Max Divinity Effect: 1)",
+      "100% chance to gain Agility Blessing on Critical Strike (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Ranger",
     type: "Legendary Medium",
     name: "",
-    effect: "0.5% Critical Strike Damage\nper Fervor Rating",
-  },
-  {
-    god: "War",
-    tree: "Ranger",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "+25% chance to Mark the enemy on\nCritical Strike\n+20% Mark effect (Max Divinity\nEffect: 1)",
+    effect: "0.5% Critical Strike Damage per Fervor Rating",
   },
   {
     god: "War",
@@ -6495,14 +6486,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Critical Strikes can eliminate enemies under\n8% Life (Max Divinity Effect:\n1)",
-  },
-  {
-    god: "War",
-    tree: "Ranger",
-    type: "Legendary Medium",
-    name: "",
-    effect: "+10% additional damage taken\nby enemies in Proximity",
+      "+25% chance to Mark the enemy on Critical Strike\n+20% Mark effect (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6510,14 +6494,29 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "120% of the increase/decrease\non Knockback distance is also applied to\ndamage bonus (Max Divinity Effect: 1)",
+      "Critical Strikes can eliminate enemies under 8% Life (Max Divinity Effect: 1)",
+  },
+  {
+    god: "War",
+    tree: "Ranger",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+10% additional damage taken by enemies in Proximity",
+  },
+  {
+    god: "War",
+    tree: "Ranger",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "120% of the increase/decrease on Knockback distance is also applied to damage bonus (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Ranger",
     type: "Medium",
     name: "",
-    effect: "+30% Critical Strike\nRating",
+    effect: "+30% Critical Strike Rating",
   },
   {
     god: "War",
@@ -6531,7 +6530,7 @@ export const TalentCodexEntries = [
     tree: "Ranger",
     type: "Medium",
     name: "",
-    effect: "+25% damage dealt to\nNearby enemies",
+    effect: "+25% damage dealt to Nearby enemies",
   },
   {
     god: "War",
@@ -6545,7 +6544,7 @@ export const TalentCodexEntries = [
     tree: "Ranger",
     type: "Medium",
     name: "",
-    effect: "+15% Critical Strike\nDamage",
+    effect: "+15% Critical Strike Damage",
   },
   {
     god: "War",
@@ -6587,14 +6586,14 @@ export const TalentCodexEntries = [
     tree: "Ranger",
     type: "Medium",
     name: "",
-    effect: "+15% Knockback\ndistance",
+    effect: "+15% Knockback distance",
   },
   {
     god: "War",
     tree: "Ranger",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "War",
@@ -6615,7 +6614,7 @@ export const TalentCodexEntries = [
     tree: "Ranger",
     type: "Micro",
     name: "",
-    effect: "7.5% Critical Strike\nDamage",
+    effect: "7.5% Critical Strike Damage",
   },
   {
     god: "War",
@@ -6657,7 +6656,7 @@ export const TalentCodexEntries = [
     tree: "Ranger",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "War",
@@ -6671,7 +6670,7 @@ export const TalentCodexEntries = [
     tree: "Ranger",
     type: "Micro",
     name: "",
-    effect: "+10% chance to cause\nKnockbacks",
+    effect: "+10% chance to cause Knockbacks",
   },
   {
     god: "War",
@@ -6686,14 +6685,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Centralize",
     effect:
-      "Gains additional Fervor Rating equal to\n25% of the current Fervor Rating on hit.\nCooldown: 0.3 s\nConsumes half of current Fervor Rating when\nhit. -0.8% additional damage per 1\npoint consumed (Max Divinity Effect: 1)",
+      "Gains additional Fervor Rating equal to 25% of the current Fervor Rating on hit. Cooldown: 0.3 s\nConsumes half of current Fervor Rating when hit. -0.8% additional damage per 1 point consumed (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Ronin",
     type: "Core",
     name: "Endless Fervor",
-    effect: "Have Fervor\n+12% Fervor effect (Max\nDivinity Effect: 1)",
+    effect: "Have Fervor\n+12% Fervor effect (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6701,7 +6700,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Falling Leaves",
     effect:
-      "-20% additional damage for\nWeapons\n+40% additional Attack Damage (Max\nDivinity Effect: 1)",
+      "-20% additional damage for Weapons\n+40% additional Attack Damage (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6709,7 +6708,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Tradeoff",
     effect:
-      "+20% additional Attack Speed\nwhen Dexterity is no less than Strength\n+25% additional Attack Damage when\nStrength is no less than Dexterity (Max Divinity Effect:\n1)",
+      "+20% additional Attack Speed when Dexterity is no less than Strength\n+25% additional Attack Damage when Strength is no less than Dexterity (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6724,28 +6723,28 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Every 1 s, +10% additional Melee Damage for the next Main\nSkill used",
+      "Every 1 s, +10% additional Melee Damage for the next Main Skill used",
   },
   {
     god: "War",
     tree: "Ronin",
     type: "Legendary Medium",
     name: "",
-    effect: "+12% Steep Strike\nchance.",
+    effect: "+12% Steep Strike chance.",
   },
   {
     god: "War",
     tree: "Ronin",
     type: "Legendary Medium",
     name: "",
-    effect: "+33% Demolisher Charge\nRestoration Speed",
+    effect: "+33% Demolisher Charge Restoration Speed",
   },
   {
     god: "War",
     tree: "Ronin",
     type: "Legendary Medium",
     name: "",
-    effect: "Shadow Quantity\n+1 (Max Divinity Effect: 1)",
+    effect: "Shadow Quantity +1 (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6794,7 +6793,7 @@ export const TalentCodexEntries = [
     tree: "Ronin",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+10% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+10% Critical Strike Damage",
   },
   {
     god: "War",
@@ -6815,7 +6814,7 @@ export const TalentCodexEntries = [
     tree: "Ronin",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield\nRegain",
+    effect: "+3% Life Regain\n+3% Energy Shield Regain",
   },
   {
     god: "War",
@@ -6864,7 +6863,7 @@ export const TalentCodexEntries = [
     tree: "Ronin",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "War",
@@ -6899,7 +6898,7 @@ export const TalentCodexEntries = [
     tree: "Ronin",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "War",
@@ -6921,14 +6920,14 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Automatic Upgrade",
     effect:
-      "Gains a stack of Fortitude when using a\nMelee Skill\n+4% additional damage per\n1 stack(s) of Fortitude (Max\nDivinity Effect: 1)",
+      "Gains a stack of Fortitude when using a Melee Skill\n+4% additional damage per 1 stack(s) of Fortitude (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Sentinel",
     type: "Core",
     name: "Defensiveness",
-    effect: "+25% Block Ratio (Max\nDivinity Effect: 1)",
+    effect: "+25% Block Ratio (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6936,7 +6935,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Full Defense",
     effect:
-      "+25% additional Defense gained from\nShield\n-1% additional Damage Over Time taken\nfor every 1% Block Ratio (Max\nDivinity Effect: 1)",
+      "+25% additional Defense gained from Shield\n-1% additional Damage Over Time taken for every 1% Block Ratio (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6944,7 +6943,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Last Stand",
     effect:
-      "Block Ratio is set to 0%\nFor every +3% Attack or Spell\nBlock Chance, +2% additional\ndamage, up to +90% (Max Divinity\nEffect: 1)",
+      "Block Ratio is set to 0%\nFor every +3% Attack or Spell Block Chance, +2% additional damage, up to +90% (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6952,7 +6951,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+6% Life Regain\nRestores 15% of Missing Life when\nsuffer a Severe Injury (Max\nDivinity Effect: 1)",
+      "+6% Life Regain\nRestores 15% of Missing Life when suffer a Severe Injury (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6960,29 +6959,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+6% Energy Shield\nRegain\nRestores 15% Missing Energy Shield\nwhen suffer Severe Injury (Max\nDivinity Effect: 1)",
+      "+6% Energy Shield Regain\nRestores 15% Missing Energy Shield when suffer Severe Injury (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Sentinel",
     type: "Legendary Medium",
     name: "",
-    effect: "+3 Defensive Skill Level (Max\nDivinity Effect: 1)",
-  },
-  {
-    god: "War",
-    tree: "Sentinel",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "Gains 1 stack(s) of\nTenacity Blessing every\n1 s if you have Blocked recently\n(Max Divinity Effect: 1)",
-  },
-  {
-    god: "War",
-    tree: "Sentinel",
-    type: "Legendary Medium",
-    name: "",
-    effect: "+40% Defense from\nShield",
+    effect: "+3 Defensive Skill Level (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -6990,14 +6974,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+5% Block Ratio\nRestores 1% Missing Life and\nEnergy Shield when blocking (Max Divinity Effect: 1)",
+      "Gains 1 stack(s) of Tenacity Blessing every 1 s if you have Blocked recently (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Sentinel",
     type: "Legendary Medium",
     name: "",
-    effect: "+35% Armor if you have Blocked\nrecently (Max Divinity Effect: 1)",
+    effect: "+40% Defense from Shield",
   },
   {
     god: "War",
@@ -7005,7 +6989,22 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+4% Attack Block Chance\n+4% Spell Block Chance\n+40% damage if you have Blocked\nrecently",
+      "+5% Block Ratio\nRestores 1% Missing Life and Energy Shield when blocking (Max Divinity Effect: 1)",
+  },
+  {
+    god: "War",
+    tree: "Sentinel",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+35% Armor if you have Blocked recently (Max Divinity Effect: 1)",
+  },
+  {
+    god: "War",
+    tree: "Sentinel",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+4% Attack Block Chance\n+4% Spell Block Chance\n+40% damage if you have Blocked recently",
   },
   {
     god: "War",
@@ -7047,7 +7046,7 @@ export const TalentCodexEntries = [
     tree: "Sentinel",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike\nRating\n+10% Critical Strike Damage",
+    effect: "+20% Critical Strike Rating\n+10% Critical Strike Damage",
   },
   {
     god: "War",
@@ -7055,7 +7054,7 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+12% damage dealt when holding\na shield\n+4% Attack and Cast Speed while\nholding a Shield",
+      "+12% damage dealt when holding a shield\n+4% Attack and Cast Speed while holding a Shield",
   },
   {
     god: "War",
@@ -7097,14 +7096,14 @@ export const TalentCodexEntries = [
     tree: "Sentinel",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "War",
     tree: "Sentinel",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield\nRegain",
+    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
   },
   {
     god: "War",
@@ -7118,7 +7117,7 @@ export const TalentCodexEntries = [
     tree: "Sentinel",
     type: "Micro",
     name: "",
-    effect: "+12% damage dealt when holding\na shield",
+    effect: "+12% damage dealt when holding a shield",
   },
   {
     god: "War",
@@ -7132,7 +7131,7 @@ export const TalentCodexEntries = [
     tree: "Sentinel",
     type: "Micro",
     name: "",
-    effect: "+4% Defense when holding a\nShield",
+    effect: "+4% Defense when holding a Shield",
   },
   {
     god: "War",
@@ -7161,7 +7160,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Brutality",
     effect:
-      "+33% additional Physical\nDamage\n+30% additional Minion Physical\nDamage\n-1% additional Elemental Damage\nfor every 3 level(s). (Max\nDivinity Effect: 1)",
+      "+33% additional Physical Damage\n+30% additional Minion Physical Damage\n-1% additional Elemental Damage for every 3 level(s). (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -7169,7 +7168,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Hair-trigger",
     effect:
-      "+2% additional damage of a\nskill for every 7 points of\nFervor Rating when the\nskill is triggered (Max Divinity Effect: 1)",
+      "+2% additional damage of a skill for every 7 points of Fervor Rating when the skill is triggered (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -7177,7 +7176,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Instant Smash",
     effect:
-      "+80% additional Trauma Damage dealt by\nCritical Strikes (Max Divinity Effect: 1)",
+      "+80% additional Trauma Damage dealt by Critical Strikes (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -7185,7 +7184,7 @@ export const TalentCodexEntries = [
     type: "Core",
     name: "Open Wounds",
     effect:
-      "+50% Trauma Duration when\ninflicting Trauma on Trauma enemies\n+125% Critical Strike Damage\nagainst Traumatized\nenemies\nMinions +125% Critical Strike\nDamage against Traumatized enemies\n(Max Divinity Effect: 1)",
+      "+50% Trauma Duration when inflicting Trauma on Trauma enemies\n+125% Critical Strike Damage against Traumatized enemies\nMinions +125% Critical Strike Damage against Traumatized enemies (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -7193,22 +7192,14 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Immune to Trauma\nMinions are immune to Physical Damage (Max Divinity Effect:\n1)",
+      "Immune to Trauma\nMinions are immune to Physical Damage (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Shadowdancer",
     type: "Legendary Medium",
     name: "",
-    effect: "+1% Movement Speed per\n10 Fervor Rating",
-  },
-  {
-    god: "War",
-    tree: "Shadowdancer",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "+1 Physical Skill Level\nPhysical Damage can't be converted to other types of\ndamage",
+    effect: "+1% Movement Speed per 10 Fervor Rating",
   },
   {
     god: "War",
@@ -7216,14 +7207,7 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+8% Armor DMG Mitigation\nPenetration\n+8% Armor DMG Mitigation\nPenetration for Minions",
-  },
-  {
-    god: "War",
-    tree: "Shadowdancer",
-    type: "Legendary Medium",
-    name: "",
-    effect: "+12% additional Trauma Damage dealt by\nCritical Strikes",
+      "+1 Physical Skill Level\nPhysical Damage can't be converted to other types of damage",
   },
   {
     god: "War",
@@ -7231,29 +7215,36 @@ export const TalentCodexEntries = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+50% chance to Weaken nearby enemies\nwhen triggering any skill (Max Divinity Effect: 1)",
+      "+8% Armor DMG Mitigation Penetration\n+8% Armor DMG Mitigation Penetration for Minions",
+  },
+  {
+    god: "War",
+    tree: "Shadowdancer",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+12% additional Trauma Damage dealt by Critical Strikes",
+  },
+  {
+    god: "War",
+    tree: "Shadowdancer",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+50% chance to Weaken nearby enemies when triggering any skill (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Shadowdancer",
     type: "Medium",
     name: "",
-    effect: "+18% Physical Damage\n+18% Physical Damage for\nMinions",
+    effect: "+18% Physical Damage\n+18% Physical Damage for Minions",
   },
   {
     god: "War",
     tree: "Shadowdancer",
     type: "Medium",
     name: "",
-    effect: "+5% Max Life\nRegenerates 0.6% Life per\nsecond",
-  },
-  {
-    god: "War",
-    tree: "Shadowdancer",
-    type: "Medium",
-    name: "",
-    effect:
-      "+6% Attack and Cast Speed\n+6% Minion Attack and Cast\nSpeed\n-4 Skill Cost",
+    effect: "+5% Max Life\nRegenerates 0.6% Life per second",
   },
   {
     god: "War",
@@ -7261,14 +7252,22 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+12% chance to inflict\nTrauma\n+16% Trauma Damage\n+20% chance for Minions to inflict\nTrauma",
+      "+6% Attack and Cast Speed\n+6% Minion Attack and Cast Speed\n-4 Skill Cost",
   },
   {
     god: "War",
     tree: "Shadowdancer",
     type: "Medium",
     name: "",
-    effect: "+16% Critical Strike\nDamage\n+16% Minion Critical Strike\nDamage",
+    effect:
+      "+12% chance to inflict Trauma\n+16% Trauma Damage\n+20% chance for Minions to inflict Trauma",
+  },
+  {
+    god: "War",
+    tree: "Shadowdancer",
+    type: "Medium",
+    name: "",
+    effect: "+16% Critical Strike Damage\n+16% Minion Critical Strike Damage",
   },
   {
     god: "War",
@@ -7282,14 +7281,14 @@ export const TalentCodexEntries = [
     tree: "Shadowdancer",
     type: "Medium",
     name: "",
-    effect: "+30% Critical Strike\nRating\n+30% Minion Critical Strike\nRating",
+    effect: "+30% Critical Strike Rating\n+30% Minion Critical Strike Rating",
   },
   {
     god: "War",
     tree: "Shadowdancer",
     type: "Medium",
     name: "",
-    effect: "+9% Armor\n+9% Evasion\n-4% additional Physical Damage\ntaken",
+    effect: "+9% Armor\n+9% Evasion\n-4% additional Physical Damage taken",
   },
   {
     god: "War",
@@ -7297,14 +7296,14 @@ export const TalentCodexEntries = [
     type: "Medium",
     name: "",
     effect:
-      "+22% Physical Damage\n-12% Elemental Damage\n+22% Physical Damage for\nMinions",
+      "+22% Physical Damage\n-12% Elemental Damage\n+22% Physical Damage for Minions",
   },
   {
     god: "War",
     tree: "Shadowdancer",
     type: "Micro",
     name: "",
-    effect: "+9% Physical Damage\n+9% Physical Damage for\nMinions",
+    effect: "+9% Physical Damage\n+9% Physical Damage for Minions",
   },
   {
     god: "War",
@@ -7318,7 +7317,7 @@ export const TalentCodexEntries = [
     tree: "Shadowdancer",
     type: "Micro",
     name: "",
-    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast\nSpeed",
+    effect: "+3% Attack and Cast Speed\n+3% Minion Attack and Cast Speed",
   },
   {
     god: "War",
@@ -7326,7 +7325,7 @@ export const TalentCodexEntries = [
     type: "Micro",
     name: "",
     effect:
-      "+6% chance to inflict\nTrauma\n+8% Trauma Damage\n+10% chance for Minions to inflict\nTrauma",
+      "+6% chance to inflict Trauma\n+8% Trauma Damage\n+10% chance for Minions to inflict Trauma",
   },
   {
     god: "War",
@@ -7340,7 +7339,7 @@ export const TalentCodexEntries = [
     tree: "Shadowdancer",
     type: "Micro",
     name: "",
-    effect: "+8% Critical Strike Damage\n+8% Minion Critical Strike\nDamage",
+    effect: "+8% Critical Strike Damage\n+8% Minion Critical Strike Damage",
   },
   {
     god: "War",
@@ -7354,7 +7353,7 @@ export const TalentCodexEntries = [
     tree: "Shadowdancer",
     type: "Micro",
     name: "",
-    effect: "+15% Critical Strike\nRating\n+15% Minion Critical Strike\nRating",
+    effect: "+15% Critical Strike Rating\n+15% Minion Critical Strike Rating",
   },
   {
     god: "War",
@@ -7375,14 +7374,14 @@ export const TalentCodexEntries = [
     tree: "Shadowdancer",
     type: "Micro",
     name: "",
-    effect: "+9% Physical Damage\n+9% Physical Damage for\nMinions",
+    effect: "+9% Physical Damage\n+9% Physical Damage for Minions",
   },
   {
     god: "War",
     tree: "Shadowdancer",
     type: "Micro",
     name: "",
-    effect: "+9% Physical Damage\n+9% Physical Damage for\nMinions",
+    effect: "+9% Physical Damage\n+9% Physical Damage for Minions",
   },
   {
     god: "War",
@@ -7396,7 +7395,7 @@ export const TalentCodexEntries = [
     tree: "Shadowdancer",
     type: "Micro",
     name: "",
-    effect: "+9% damage for Triggered\nSkills",
+    effect: "+9% damage for Triggered Skills",
   },
 ] as const satisfies readonly TalentCodex[];
 
