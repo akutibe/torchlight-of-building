@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import {
   Combobox,
   ComboboxButton,
@@ -57,6 +57,7 @@ export const SearchableSelect = <T extends string | number>({
   className = "",
 }: SearchableSelectProps<T>) => {
   const [query, setQuery] = useState("");
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const selectedOption = useMemo(
     () => options.find((opt) => opt.value === value),
@@ -100,16 +101,21 @@ export const SearchableSelect = <T extends string | number>({
               opt?.label ?? ""
             }
             onChange={(e) => setQuery(e.target.value)}
+            onClick={() => buttonRef.current?.click()}
             placeholder={placeholder}
           />
-          <ComboboxButton className="absolute inset-y-0 right-0 flex items-center pr-2">
+          <ComboboxButton
+            ref={buttonRef}
+            className="absolute inset-y-0 right-0 flex items-center pr-2"
+          >
             <ChevronDownIcon className="h-4 w-4 text-zinc-400" />
           </ComboboxButton>
         </div>
 
         <ComboboxOptions
+          anchor="bottom start"
           className="
-            absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded
+            w-[var(--input-width)] z-50 mt-1 max-h-60 overflow-auto rounded
             bg-zinc-800 border border-zinc-700 shadow-lg
             focus:outline-none
           "
