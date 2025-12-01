@@ -114,25 +114,15 @@ const normalizeFileKey = (equipmentType: string, affixType: string): string => {
   );
 };
 
-const toPascalCase = (str: string): string => {
-  return str
-    .split("_")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join("");
-};
-
 const generateEquipmentAffixFile = (
   fileKey: string,
   affixes: BaseGearAffix[],
 ): string => {
   const constName = fileKey.toUpperCase() + "_AFFIXES";
-  const typeName = toPascalCase(fileKey) + "Affix";
 
   return `import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const ${constName} = ${JSON.stringify(affixes, null, 2)} as const satisfies readonly BaseGearAffix[];
-
-export type ${typeName} = (typeof ${constName})[number];
+export const ${constName}: readonly BaseGearAffix[] = ${JSON.stringify(affixes, null, 2)};
 `;
 };
 

@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const CLAW_CORROSION_BASE_AFFIXES = [
+export const CLAW_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(10-15)% Skill Area",
+    craftableAffix: "+(10â€“15)% Skill Area",
   },
   {
     equipmentSlot: "One-Handed",
@@ -15,7 +15,7 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-25)% gear Physical Damage",
+    craftableAffix: "+(15â€“25)% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -23,7 +23,7 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(25-30)% Elemental Damage",
+    craftableAffix: "+(25â€“30)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -31,7 +31,7 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(3-6)% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(3â€“6)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -40,7 +40,7 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "+(4-8)% chance to gain 1 stack of Agility Blessing on defeat",
+      "+(4â€“8)% chance to gain 1 stack of Agility Blessing on defeat",
   },
   {
     equipmentSlot: "One-Handed",
@@ -48,7 +48,7 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(5-8)% gear Attack Speed",
+    craftableAffix: "+(5â€“8)% gear Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -56,7 +56,7 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(5-8)% Movement Speed",
+    craftableAffix: "+(5â€“8)% Movement Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -64,7 +64,7 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Adds (2-4) - (8-10) Physical Damage to the gear",
+    craftableAffix: "Adds (2â€“4) - (8â€“10) Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -72,9 +72,6 @@ export const CLAW_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Damage Penetrates (5-8)% Elemental Resistance",
+    craftableAffix: "Damage Penetrates (5â€“8)% Elemental Resistance",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type ClawCorrosionBaseAffix =
-  (typeof CLAW_CORROSION_BASE_AFFIXES)[number];
+];

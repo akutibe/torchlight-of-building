@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
+export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
@@ -32,7 +32,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(12-16)% additional damage when a Skill consumes Demolisher Charge",
+      "+(12â€“16)% additional damage when a Skill consumes Demolisher Charge",
   },
   {
     equipmentSlot: "One-Handed",
@@ -40,7 +40,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(5-7)% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(5â€“7)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -48,7 +48,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6-8)% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(6â€“8)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,7 +57,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "Eliminates enemies under (5-7)% Life upon inflicting damage",
+      "Eliminates enemies under (5â€“7)% Life upon inflicting damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -65,7 +65,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Elemental Damage",
+    craftableAffix: "+(20â€“24)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,7 +73,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Erosion Damage",
+    craftableAffix: "+(20â€“24)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -81,7 +81,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Melee Damage",
+    craftableAffix: "+(20â€“24)% Melee Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,7 +89,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Physical Damage",
+    craftableAffix: "+(20â€“24)% Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,7 +97,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(6-8)% Attack Speed",
+    craftableAffix: "+(6â€“8)% Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -105,7 +105,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1-2) - (28-32) Lightning Damage to Attacks",
+    craftableAffix: "Adds (1â€“2) - (28â€“32) Lightning Damage to Attacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -113,7 +113,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13) - (14-19) Cold Damage to Attacks",
+    craftableAffix: "Adds (10â€“13) - (14â€“19) Cold Damage to Attacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -121,7 +121,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10-13) - (14-19) Physical Damage to Attacks",
+    craftableAffix: "Adds (10â€“13) - (14â€“19) Physical Damage to Attacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,7 +129,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (11-13) - (15-18) Erosion Damage to Attacks",
+    craftableAffix: "Adds (11â€“13) - (15â€“18) Erosion Damage to Attacks",
   },
   {
     equipmentSlot: "One-Handed",
@@ -137,9 +137,6 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (9-14) - (15-20) Fire Damage to Attacks",
+    craftableAffix: "Adds (9â€“14) - (15â€“20) Fire Damage to Attacks",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type OneHandedHammerBaseAffixAffix =
-  (typeof ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES)[number];
+];

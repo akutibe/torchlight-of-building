@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
+export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
@@ -142,7 +142,4 @@ export const SHIELD_DEX_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "Restores 3% Life on Block. Interval: 0.3s",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type ShieldDexTowerSequenceAffix =
-  (typeof SHIELD_DEX_TOWER_SEQUENCE_AFFIXES)[number];
+];

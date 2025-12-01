@@ -1,6 +1,6 @@
 import type { Blend } from "./types";
 
-export const Blends = [
+export const Blends: readonly Blend[] = [
   {
     type: "Aromatic",
     affix:
@@ -359,6 +359,4 @@ export const Blends = [
     affix:
       "Upon inflicting damage, +15% damage for every type of Ailment the enemy has\nWhen Minions deal damage, +15% damage for every type of Ailment the enemy has",
   },
-] as const satisfies readonly Blend[];
-
-export type BlendEntry = (typeof Blends)[number];
+];

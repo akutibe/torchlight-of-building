@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const FIRE_CANNON_TOWER_SEQUENCE_AFFIXES = [
+export const FIRE_CANNON_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
@@ -160,7 +160,4 @@ export const FIRE_CANNON_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "+8% gear Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type FireCannonTowerSequenceAffix =
-  (typeof FIRE_CANNON_TOWER_SEQUENCE_AFFIXES)[number];
+];

@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const RING_SUFFIX_AFFIXES = [
+export const RING_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
@@ -8,7 +8,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(13-16)% Elemental Resistance\n+(13-16)% Erosion Resistance",
+      "+(13â€“16)% Elemental Resistance\n+(13â€“16)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -16,7 +16,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(25-30)% additional damage for Main-Hand Weapons",
+    craftableAffix: "+(25â€“30)% additional damage for Main-Hand Weapons",
   },
   {
     equipmentSlot: "Trinket",
@@ -24,7 +24,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(27-34)% chance to deal Double Damage",
+    craftableAffix: "+(27â€“34)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -32,7 +32,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(33-42)% additional Deterioration Duration",
+    craftableAffix: "+(33â€“42)% additional Deterioration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -40,7 +40,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(37-54)% Freeze Duration",
+    craftableAffix: "+(37â€“54)% Freeze Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -48,7 +48,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(51-65)% Fervor effect",
+    craftableAffix: "+(51â€“65)% Fervor effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -56,7 +56,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(84-108)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(84â€“108)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -64,7 +64,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(18-23)% additional damage for Main-Hand Weapons",
+    craftableAffix: "+(18â€“23)% additional damage for Main-Hand Weapons",
   },
   {
     equipmentSlot: "Trinket",
@@ -72,7 +72,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(19-26)% chance to deal Double Damage",
+    craftableAffix: "+(19â€“26)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -80,7 +80,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(23-32)% additional Deterioration Duration",
+    craftableAffix: "+(23â€“32)% additional Deterioration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -88,7 +88,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(28-36)% Freeze Duration",
+    craftableAffix: "+(28â€“36)% Freeze Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -96,7 +96,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(36-50)% Fervor effect",
+    craftableAffix: "+(36â€“50)% Fervor effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -104,7 +104,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(59-83)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(59â€“83)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -113,7 +113,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(9-12)% Elemental Resistance\n+(9-12)% Erosion Resistance",
+      "+(9â€“12)% Elemental Resistance\n+(9â€“12)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -121,7 +121,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(33-42)% Max Mana",
+    craftableAffix: "+(33â€“42)% Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -129,7 +129,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(37-47)% Focus Speed",
+    craftableAffix: "+(37â€“47)% Focus Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -137,7 +137,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(46-65)% Reaping Duration",
+    craftableAffix: "+(46â€“65)% Reaping Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -145,7 +145,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(51-65)% Terra Charge Recovery Speed",
+    craftableAffix: "+(51â€“65)% Terra Charge Recovery Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -153,7 +153,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(51-65)% Affliction Effect",
+    craftableAffix: "+(51â€“65)% Affliction Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -161,7 +161,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61-78)% Critical Strike Damage",
+    craftableAffix: "+(61â€“78)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -170,7 +170,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+1 Combo Points gained from Combo Starters\n+(3-5)% additional damage",
+      "+1 Combo Points gained from Combo Starters\n+(3â€“5)% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -188,7 +188,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Inflicts (6-8) Frostbite Rating to Frostbitten enemies every second",
+      "Inflicts (6â€“8) Frostbite Rating to Frostbitten enemies every second",
   },
   {
     equipmentSlot: "Trinket",
@@ -196,7 +196,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(23-32)% Max Mana",
+    craftableAffix: "+(23â€“32)% Max Mana",
   },
   {
     equipmentSlot: "Trinket",
@@ -204,7 +204,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(26-36)% Focus Speed",
+    craftableAffix: "+(26â€“36)% Focus Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -212,7 +212,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(35-50)% Reaping Duration",
+    craftableAffix: "+(35â€“50)% Reaping Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -220,7 +220,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(36-50)% Affliction Effect",
+    craftableAffix: "+(36â€“50)% Affliction Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -228,7 +228,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(37-50)% Terra Charge Recovery Speed",
+    craftableAffix: "+(37â€“50)% Terra Charge Recovery Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -236,7 +236,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(44-60)% Critical Strike Damage",
+    craftableAffix: "+(44â€“60)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -245,7 +245,7 @@ export const RING_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+1 Combo Points gained from Combo Starters\n+(1-2)% additional damage",
+      "+1 Combo Points gained from Combo Starters\n+(1â€“2)% additional damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -270,7 +270,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121-156)% Critical Strike Rating",
+    craftableAffix: "+(121â€“156)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Trinket",
@@ -278,7 +278,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25-35)% Cold Resistance",
+    craftableAffix: "+(25â€“35)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -286,7 +286,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25-35)% Erosion Resistance",
+    craftableAffix: "+(25â€“35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -294,7 +294,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25-35)% Fire Resistance",
+    craftableAffix: "+(25â€“35)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -302,7 +302,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25-35)% Lightning Resistance",
+    craftableAffix: "+(25â€“35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -310,7 +310,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(38-48)% Frostbite inflicted",
+    craftableAffix: "+(38â€“48)% Frostbite inflicted",
   },
   {
     equipmentSlot: "Trinket",
@@ -318,7 +318,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19-27)% Cold Resistance",
+    craftableAffix: "+(19â€“27)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -326,7 +326,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19-27)% Erosion Resistance",
+    craftableAffix: "+(19â€“27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -334,7 +334,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19-27)% Fire Resistance",
+    craftableAffix: "+(19â€“27)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -342,7 +342,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19-27)% Lightning Resistance",
+    craftableAffix: "+(19â€“27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -350,7 +350,7 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(27-37)% Frostbite inflicted",
+    craftableAffix: "+(27â€“37)% Frostbite inflicted",
   },
   {
     equipmentSlot: "Trinket",
@@ -358,8 +358,6 @@ export const RING_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(87-120)% Critical Strike Rating",
+    craftableAffix: "+(87â€“120)% Critical Strike Rating",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type RingSuffixAffix = (typeof RING_SUFFIX_AFFIXES)[number];
+];

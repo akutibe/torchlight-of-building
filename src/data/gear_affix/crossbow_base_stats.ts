@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const CROSSBOW_BASE_STATS_AFFIXES = [
+export const CROSSBOW_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Crossbow",
@@ -181,7 +181,4 @@ export const CROSSBOW_BASE_STATS_AFFIXES = [
     craftableAffix:
       "90 - 90 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type CrossbowBaseStatsAffix =
-  (typeof CROSSBOW_BASE_STATS_AFFIXES)[number];
+];

@@ -1,6 +1,6 @@
 import { BaseSkill } from "./types";
 
-export const ActivationMediumSkills = [
+export const ActivationMediumSkills: readonly BaseSkill[] = [
   {
     type: "Activation Medium",
     name: "Activation Medium: Boss",
@@ -136,6 +136,4 @@ export const ActivationMediumSkills = [
     name: "Activation Medium: Wind Rhythm",
     tags: [],
   },
-] as const satisfies readonly BaseSkill[];
-
-export type ActivationMediumSkill = (typeof ActivationMediumSkills)[number];
+];

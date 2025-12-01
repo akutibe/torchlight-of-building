@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
+export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (STR)",
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(3-5)% Max Elemental Resistance",
+    craftableAffix: "+(3â€“5)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -16,7 +16,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
+      "+(5â€“7)% Armor DMG Mitigation Penetration\n+(5â€“7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Gloves",
@@ -24,7 +24,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6-8)% Sealed Mana Compensation",
+    craftableAffix: "+(6â€“8)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Gloves",
@@ -33,7 +33,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
+      "+(6â€“8)% Elemental and Erosion Resistance Penetration\n+(6â€“8)% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
     equipmentSlot: "Gloves",
@@ -41,7 +41,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(7-8)% Aura Effect",
+    craftableAffix: "+(7â€“8)% Aura Effect",
   },
   {
     equipmentSlot: "Gloves",
@@ -57,7 +57,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Dexterity",
+    craftableAffix: "+(15â€“20) Dexterity",
   },
   {
     equipmentSlot: "Gloves",
@@ -65,7 +65,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Intelligence",
+    craftableAffix: "+(15â€“20) Intelligence",
   },
   {
     equipmentSlot: "Gloves",
@@ -73,7 +73,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Strength",
+    craftableAffix: "+(15â€“20) Strength",
   },
   {
     equipmentSlot: "Gloves",
@@ -81,7 +81,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Skill Area",
+    craftableAffix: "+(20â€“24)% Skill Area",
   },
   {
     equipmentSlot: "Gloves",
@@ -89,7 +89,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5-10)% Cold Resistance",
+    craftableAffix: "+(5â€“10)% Cold Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -97,7 +97,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5-10)% Erosion Resistance",
+    craftableAffix: "+(5â€“10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -105,7 +105,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5-10)% Fire Resistance",
+    craftableAffix: "+(5â€“10)% Fire Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -113,7 +113,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5-10)% Lightning Resistance",
+    craftableAffix: "+(5â€“10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Gloves",
@@ -121,7 +121,7 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54-74) Max Life",
+    craftableAffix: "+(54â€“74) Max Life",
   },
   {
     equipmentSlot: "Gloves",
@@ -129,9 +129,6 @@ export const GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(760-960) Armor",
+    craftableAffix: "+(760â€“960) Armor",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type GlovesStrSweetDreamAffixAffix =
-  (typeof GLOVES_STR_SWEET_DREAM_AFFIX_AFFIXES)[number];
+];

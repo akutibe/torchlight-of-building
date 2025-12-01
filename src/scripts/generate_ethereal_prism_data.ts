@@ -63,9 +63,7 @@ const extractEtherealPrismData = (html: string): EtherealPrism[] => {
 const generateDataFile = (items: EtherealPrism[]): string => {
   return `import type { EtherealPrism } from "./types";
 
-export const EtherealPrisms = ${JSON.stringify(items, null, 2)} as const satisfies readonly EtherealPrism[];
-
-export type EtherealPrismEntry = (typeof EtherealPrisms)[number];
+export const EtherealPrisms: readonly EtherealPrism[] = ${JSON.stringify(items, null, 2)};
 `;
 };
 

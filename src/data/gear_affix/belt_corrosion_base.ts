@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const BELT_CORROSION_BASE_AFFIXES = [
+export const BELT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
@@ -8,7 +8,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "(-50--40)% additional Damage Over Time taken when a Restoration Skill is active",
+      "(-50â€“-40)% additional Damage Over Time taken when a Restoration Skill is active",
   },
   {
     equipmentSlot: "Trinket",
@@ -16,7 +16,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Charged Flames Aura",
+    craftableAffix: "+(20â€“30)% Charged Flames Aura",
   },
   {
     equipmentSlot: "Trinket",
@@ -24,7 +24,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Cruelty Aura Effect",
+    craftableAffix: "+(20â€“30)% Cruelty Aura Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -32,7 +32,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Deep Pain Aura",
+    craftableAffix: "+(20â€“30)% Deep Pain Aura",
   },
   {
     equipmentSlot: "Trinket",
@@ -40,7 +40,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Electric Conversion Aura",
+    craftableAffix: "+(20â€“30)% Electric Conversion Aura",
   },
   {
     equipmentSlot: "Trinket",
@@ -48,7 +48,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Fearless Aura",
+    craftableAffix: "+(20â€“30)% Fearless Aura",
   },
   {
     equipmentSlot: "Trinket",
@@ -56,7 +56,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Frigid Domain Aura Effect",
+    craftableAffix: "+(20â€“30)% Frigid Domain Aura Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -64,7 +64,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Precise Projectiles Aura effect",
+    craftableAffix: "+(20â€“30)% Precise Projectiles Aura effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -72,7 +72,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Radical Order Aura Effect",
+    craftableAffix: "+(20â€“30)% Radical Order Aura Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -80,7 +80,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Spell Amplification Aura",
+    craftableAffix: "+(20â€“30)% Spell Amplification Aura",
   },
   {
     equipmentSlot: "Trinket",
@@ -88,7 +88,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(20-30)% Weapon Amplification Aura",
+    craftableAffix: "+(20â€“30)% Weapon Amplification Aura",
   },
   {
     equipmentSlot: "Trinket",
@@ -96,7 +96,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(3-5)% Max Elemental Resistance",
+    craftableAffix: "+(3â€“5)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -104,7 +104,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(3-5)% Max Life",
+    craftableAffix: "+(3â€“5)% Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -112,7 +112,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(4-6)% Max Energy Shield",
+    craftableAffix: "+(4â€“6)% Max Energy Shield",
   },
   {
     equipmentSlot: "Trinket",
@@ -120,7 +120,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(5-10)% Skill Area",
+    craftableAffix: "+(5â€“10)% Skill Area",
   },
   {
     equipmentSlot: "Trinket",
@@ -144,7 +144,7 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Restoration Skills: (-20--15)% Restoration Duration",
+    craftableAffix: "Restoration Skills: (-20â€“-15)% Restoration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -152,9 +152,6 @@ export const BELT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Restoration Skills: +(30-40)% restoration effect",
+    craftableAffix: "Restoration Skills: +(30â€“40)% restoration effect",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type BeltCorrosionBaseAffix =
-  (typeof BELT_CORROSION_BASE_AFFIXES)[number];
+];

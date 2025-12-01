@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const SPIRIT_RING_BASE_STATS_AFFIXES = [
+export const SPIRIT_RING_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Trinket",
     equipmentType: "Spirit Ring",
@@ -49,7 +49,4 @@ export const SPIRIT_RING_BASE_STATS_AFFIXES = [
     tier: "",
     craftableAffix: "+8% Minion Damage",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type SpiritRingBaseStatsAffix =
-  (typeof SPIRIT_RING_BASE_STATS_AFFIXES)[number];
+];

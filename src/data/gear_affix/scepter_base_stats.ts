@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const SCEPTER_BASE_STATS_AFFIXES = [
+export const SCEPTER_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
@@ -161,6 +161,4 @@ export const SCEPTER_BASE_STATS_AFFIXES = [
     tier: "",
     craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type ScepterBaseStatsAffix = (typeof SCEPTER_BASE_STATS_AFFIXES)[number];
+];

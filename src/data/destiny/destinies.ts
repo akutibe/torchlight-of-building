@@ -1,6 +1,6 @@
 import type { Destiny } from "./types";
 
-export const Destinies = [
+export const Destinies: readonly Destiny[] = [
   {
     type: "Dual Kismet",
     name: "Bird in a Pond",
@@ -1032,6 +1032,4 @@ export const Destinies = [
     name: "",
     affix: "Undetermined Fate",
   },
-] as const satisfies readonly Destiny[];
-
-export type DestinyEntry = (typeof Destinies)[number];
+];

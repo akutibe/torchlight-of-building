@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const RING_BASE_STATS_AFFIXES = [
+export const RING_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Trinket",
     equipmentType: "Ring",
@@ -201,6 +201,4 @@ export const RING_BASE_STATS_AFFIXES = [
     tier: "",
     craftableAffix: "+9% Lightning Resistance",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type RingBaseStatsAffix = (typeof RING_BASE_STATS_AFFIXES)[number];
+];

@@ -1,13 +1,14 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
+export const GLOVES_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Lucky Critical Strike\n(-150--120) Critical Strike Rating",
+    craftableAffix:
+      "Lucky Critical Strike\n(-150â€“-120) Critical Strike Rating",
   },
   {
     equipmentSlot: "Gloves",
@@ -15,7 +16,7 @@ export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(12-15)% Attack Speed",
+    craftableAffix: "+(12â€“15)% Attack Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -23,7 +24,7 @@ export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(12-15)% Cast Speed",
+    craftableAffix: "+(12â€“15)% Cast Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -31,7 +32,7 @@ export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% chance to Mark the target on hit",
+    craftableAffix: "+(15â€“20)% chance to Mark the target on hit",
   },
   {
     equipmentSlot: "Gloves",
@@ -39,7 +40,7 @@ export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% chance to cause Blinding on hit",
+    craftableAffix: "+(15â€“20)% chance to cause Blinding on hit",
   },
   {
     equipmentSlot: "Gloves",
@@ -47,7 +48,7 @@ export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% chance to inflict Paralysis on hit",
+    craftableAffix: "+(15â€“20)% chance to inflict Paralysis on hit",
   },
   {
     equipmentSlot: "Gloves",
@@ -55,7 +56,7 @@ export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(30-50)% gear Energy Shield",
+    craftableAffix: "+(30â€“50)% gear Energy Shield",
   },
   {
     equipmentSlot: "Gloves",
@@ -63,7 +64,7 @@ export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(50-70)% damage",
+    craftableAffix: "+(50â€“70)% damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -137,7 +138,4 @@ export const GLOVES_INT_CORROSION_BASE_AFFIXES = [
     tier: "0",
     craftableAffix: "Max Tenacity Blessing Stacks +1",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type GlovesIntCorrosionBaseAffix =
-  (typeof GLOVES_INT_CORROSION_BASE_AFFIXES)[number];
+];

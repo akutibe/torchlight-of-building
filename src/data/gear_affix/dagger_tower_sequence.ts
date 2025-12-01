@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
+export const DAGGER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Dagger",
@@ -158,7 +158,4 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "+8% Lightning Penetration",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type DaggerTowerSequenceAffix =
-  (typeof DAGGER_TOWER_SEQUENCE_AFFIXES)[number];
+];

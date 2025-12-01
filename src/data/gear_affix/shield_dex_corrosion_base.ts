@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
+export const SHIELD_DEX_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Shield",
     equipmentType: "Shield (DEX)",
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(1-2)% Max Cold Resistance",
+    craftableAffix: "+(1â€“2)% Max Cold Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -15,7 +15,7 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(1-2)% Max Fire Resistance",
+    craftableAffix: "+(1â€“2)% Max Fire Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -23,7 +23,7 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(1-2)% Max Lightning Resistance",
+    craftableAffix: "+(1â€“2)% Max Lightning Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -31,7 +31,7 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(12-15)% Spell Block Chance",
+    craftableAffix: "+(12â€“15)% Spell Block Chance",
   },
   {
     equipmentSlot: "Shield",
@@ -39,7 +39,7 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(3-5)% Max Energy Shield",
+    craftableAffix: "+(3â€“5)% Max Energy Shield",
   },
   {
     equipmentSlot: "Shield",
@@ -47,7 +47,7 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(3-5)% Max Life",
+    craftableAffix: "+(3â€“5)% Max Life",
   },
   {
     equipmentSlot: "Shield",
@@ -55,7 +55,7 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(5-8)% Block Ratio",
+    craftableAffix: "+(5â€“8)% Block Ratio",
   },
   {
     equipmentSlot: "Shield",
@@ -63,7 +63,7 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(8-12)% Attack Block Chance",
+    craftableAffix: "+(8â€“12)% Attack Block Chance",
   },
   {
     equipmentSlot: "Shield",
@@ -71,9 +71,6 @@ export const SHIELD_DEX_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Has a (5-10)% chance to avoid Blocked damage",
+    craftableAffix: "Has a (5â€“10)% chance to avoid Blocked damage",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type ShieldDexCorrosionBaseAffix =
-  (typeof SHIELD_DEX_CORROSION_BASE_AFFIXES)[number];
+];

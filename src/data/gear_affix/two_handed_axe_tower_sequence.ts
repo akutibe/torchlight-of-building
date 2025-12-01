@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const TWO_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
+export const TWO_HANDED_AXE_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
@@ -159,7 +159,4 @@ export const TWO_HANDED_AXE_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "+8% gear Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type TwoHandedAxeTowerSequenceAffix =
-  (typeof TWO_HANDED_AXE_TOWER_SEQUENCE_AFFIXES)[number];
+];

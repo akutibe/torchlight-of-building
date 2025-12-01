@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const BELT_BASE_STATS_AFFIXES = [
+export const BELT_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Trinket",
     equipmentType: "Belt",
@@ -97,6 +97,4 @@ export const BELT_BASE_STATS_AFFIXES = [
     tier: "",
     craftableAffix: "+95 Max Life",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type BeltBaseStatsAffix = (typeof BELT_BASE_STATS_AFFIXES)[number];
+];

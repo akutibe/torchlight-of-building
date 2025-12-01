@@ -1,6 +1,6 @@
 import type { Talent } from "./types";
 
-export const Talents = [
+export const Talents: readonly Talent[] = [
   {
     god: "Deception",
     tree: "Goddess of Deception",
@@ -7397,6 +7397,4 @@ export const Talents = [
     name: "",
     effect: "+9% damage for Triggered Skills",
   },
-] as const satisfies readonly Talent[];
-
-export type TalentEntry = (typeof Talents)[number];
+];

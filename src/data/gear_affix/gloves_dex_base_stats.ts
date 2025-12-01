@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const GLOVES_DEX_BASE_STATS_AFFIXES = [
+export const GLOVES_DEX_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (DEX)",
@@ -97,7 +97,4 @@ export const GLOVES_DEX_BASE_STATS_AFFIXES = [
     tier: "",
     craftableAffix: "+935 gear Evasion",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type GlovesDexBaseStatsAffix =
-  (typeof GLOVES_DEX_BASE_STATS_AFFIXES)[number];
+];

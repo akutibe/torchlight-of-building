@@ -1,6 +1,6 @@
 import { BaseSkill } from "./types";
 
-export const PassiveSkills = [
+export const PassiveSkills: readonly BaseSkill[] = [
   {
     type: "Passive",
     name: "Acuteness Focus",
@@ -303,6 +303,4 @@ export const PassiveSkills = [
     name: "Weapon Amplification",
     tags: ["Aura", "Area", "Physical"],
   },
-] as const satisfies readonly BaseSkill[];
-
-export type PassiveSkill = (typeof PassiveSkills)[number];
+];

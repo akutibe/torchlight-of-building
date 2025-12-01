@@ -1,6 +1,6 @@
 import type { HeroMemory } from "./types";
 
-export const HeroMemories = [
+export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Base Stats",
     item: "Memory of Origin",
@@ -1699,6 +1699,4 @@ export const HeroMemories = [
     item: "Memory of Progress",
     affix: "+52% Projectile Speed",
   },
-] as const satisfies readonly HeroMemory[];
-
-export type HeroMemoryEntry = (typeof HeroMemories)[number];
+];

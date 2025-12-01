@@ -63,9 +63,7 @@ const extractDestinyData = (html: string): Destiny[] => {
 const generateDataFile = (items: Destiny[]): string => {
   return `import type { Destiny } from "./types";
 
-export const Destinies = ${JSON.stringify(items, null, 2)} as const satisfies readonly Destiny[];
-
-export type DestinyEntry = (typeof Destinies)[number];
+export const Destinies: readonly Destiny[] = ${JSON.stringify(items, null, 2)};
 `;
 };
 

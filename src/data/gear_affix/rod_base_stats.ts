@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const ROD_BASE_STATS_AFFIXES = [
+export const ROD_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
@@ -161,6 +161,4 @@ export const ROD_BASE_STATS_AFFIXES = [
     tier: "",
     craftableAffix: "500 Critical Strike Rating\n1.2 Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type RodBaseStatsAffix = (typeof ROD_BASE_STATS_AFFIXES)[number];
+];

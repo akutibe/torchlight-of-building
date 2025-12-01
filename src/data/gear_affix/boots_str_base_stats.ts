@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const BOOTS_STR_BASE_STATS_AFFIXES = [
+export const BOOTS_STR_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
@@ -97,7 +97,4 @@ export const BOOTS_STR_BASE_STATS_AFFIXES = [
     tier: "",
     craftableAffix: "+935 Gear Armor",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type BootsStrBaseStatsAffix =
-  (typeof BOOTS_STR_BASE_STATS_AFFIXES)[number];
+];

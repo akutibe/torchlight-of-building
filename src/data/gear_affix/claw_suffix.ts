@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const CLAW_SUFFIX_AFFIXES = [
+export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Claw",
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "Shadow Quantity +2\n+(10-15)% additional Shadow Damage",
+    craftableAffix: "Shadow Quantity +2\n+(10â€“15)% additional Shadow Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -15,7 +15,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(41-52)% chance to deal Double Damage",
+    craftableAffix: "+(41â€“52)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -23,7 +23,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(48-60)% Focus Damage Enhancement",
+    craftableAffix: "+(48â€“60)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -31,7 +31,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(54-69)% additional damage against Frozen enemies",
+    craftableAffix: "+(54â€“69)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "One-Handed",
@@ -56,7 +56,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(29-40)% chance to deal Double Damage",
+    craftableAffix: "+(29â€“40)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -64,7 +64,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(35-45)% Focus Damage Enhancement",
+    craftableAffix: "+(35â€“45)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -72,7 +72,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(38-53)% additional damage against Frozen enemies",
+    craftableAffix: "+(38â€“53)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,7 +89,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(166-234)% Critical Strike Rating",
+    craftableAffix: "+(166â€“234)% Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -98,7 +98,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(33-47)% Attack and Cast Speed\n+(33-47)% Minion Attack and Cast Speed",
+      "+(33â€“47)% Attack and Cast Speed\n+(33â€“47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -106,7 +106,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(47-64)% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(47â€“64)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -114,7 +114,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(60-70)% Focus Speed",
+    craftableAffix: "+(60â€“70)% Focus Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -122,7 +122,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(73-94)% chance to Multistrike",
+    craftableAffix: "+(73â€“94)% chance to Multistrike",
   },
   {
     equipmentSlot: "One-Handed",
@@ -130,7 +130,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(76-98)% Affliction Effect",
+    craftableAffix: "+(76â€“98)% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -138,7 +138,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117)% Critical Strike Damage",
+    craftableAffix: "+(91â€“117)% Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -146,7 +146,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(128-180)% Critical Strike Rating",
+    craftableAffix: "+(128â€“180)% Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -155,7 +155,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
+      "+(26â€“36)% Attack and Cast Speed\n+(26â€“36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -163,7 +163,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(36-50)% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(36â€“50)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -171,7 +171,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(45-54)% Focus Speed",
+    craftableAffix: "+(45â€“54)% Focus Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -179,7 +179,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(52-72)% chance to Multistrike",
+    craftableAffix: "+(52â€“72)% chance to Multistrike",
   },
   {
     equipmentSlot: "One-Handed",
@@ -187,7 +187,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(54-75)% Affliction Effect",
+    craftableAffix: "+(54â€“75)% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -195,7 +195,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90)% Critical Strike Damage",
+    craftableAffix: "+(64â€“90)% Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -203,7 +203,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109-140)% Elemental Damage",
+    craftableAffix: "+(109â€“140)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -211,7 +211,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109-140)% Erosion Damage",
+    craftableAffix: "+(109â€“140)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -219,7 +219,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109-140)% Physical Damage",
+    craftableAffix: "+(109â€“140)% Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -227,7 +227,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(19-23)% Energy Shield Regain",
+    craftableAffix: "+(19â€“23)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -235,7 +235,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(19-23)% Life Regain",
+    craftableAffix: "+(19â€“23)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -244,7 +244,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "+(55-61)% Gear Attack Speed. (-12--11)% additional Attack Damage",
+      "+(55â€“61)% Gear Attack Speed. (-12â€“-11)% additional Attack Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -252,7 +252,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(14-18)% Energy Shield Regain",
+    craftableAffix: "+(14â€“18)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -260,7 +260,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(14-18)% Life Regain",
+    craftableAffix: "+(14â€“18)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -269,7 +269,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "+(43-52)% Gear Attack Speed. (-13--12)% additional Attack Damage",
+      "+(43â€“52)% Gear Attack Speed. (-13â€“-12)% additional Attack Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -277,7 +277,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77-108)% Elemental Damage",
+    craftableAffix: "+(77â€“108)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -285,7 +285,7 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77-108)% Erosion Damage",
+    craftableAffix: "+(77â€“108)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -293,8 +293,6 @@ export const CLAW_SUFFIX_AFFIXES = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77-108)% Physical Damage",
+    craftableAffix: "+(77â€“108)% Physical Damage",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type ClawSuffixAffix = (typeof CLAW_SUFFIX_AFFIXES)[number];
+];

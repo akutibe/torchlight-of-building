@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const NECKLACE_CORROSION_BASE_AFFIXES = [
+export const NECKLACE_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(10-15)% Sealed Mana Compensation for Charged Flames",
+    craftableAffix: "+(10â€“15)% Sealed Mana Compensation for Charged Flames",
   },
   {
     equipmentSlot: "Trinket",
@@ -15,24 +15,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(10-15)% Sealed Mana Compensation for Deep Pain",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Necklace",
-    affixType: "Corrosion Base",
-    craftingPool: "",
-    tier: "0",
-    craftableAffix:
-      "+(10-15)% Sealed Mana Compensation for Electric Conversion",
-  },
-  {
-    equipmentSlot: "Trinket",
-    equipmentType: "Necklace",
-    affixType: "Corrosion Base",
-    craftingPool: "",
-    tier: "0",
-    craftableAffix: "+(10-15)% Sealed Mana Compensation for Frigid Domain",
+    craftableAffix: "+(10â€“15)% Sealed Mana Compensation for Deep Pain",
   },
   {
     equipmentSlot: "Trinket",
@@ -41,7 +24,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "+(10-15)% Sealed Mana Compensation for Weapon Amplification",
+      "+(10â€“15)% Sealed Mana Compensation for Electric Conversion",
   },
   {
     equipmentSlot: "Trinket",
@@ -49,7 +32,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% Skill Effect Duration",
+    craftableAffix: "+(10â€“15)% Sealed Mana Compensation for Frigid Domain",
   },
   {
     equipmentSlot: "Trinket",
@@ -57,7 +40,8 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(30-40)% Skill Area",
+    craftableAffix:
+      "+(10â€“15)% Sealed Mana Compensation for Weapon Amplification",
   },
   {
     equipmentSlot: "Trinket",
@@ -65,7 +49,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(50-70)% damage",
+    craftableAffix: "+(15â€“20)% Skill Effect Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -73,7 +57,7 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(60-80) Attack and Spell Critical Strike Rating",
+    craftableAffix: "+(30â€“40)% Skill Area",
   },
   {
     equipmentSlot: "Trinket",
@@ -81,7 +65,23 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(8-10)% Elemental Resistance",
+    craftableAffix: "+(50â€“70)% damage",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Necklace",
+    affixType: "Corrosion Base",
+    craftingPool: "",
+    tier: "0",
+    craftableAffix: "+(60â€“80) Attack and Spell Critical Strike Rating",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Necklace",
+    affixType: "Corrosion Base",
+    craftingPool: "",
+    tier: "0",
+    craftableAffix: "+(8â€“10)% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -115,7 +115,4 @@ export const NECKLACE_CORROSION_BASE_AFFIXES = [
     tier: "0",
     craftableAffix: "You can cast 1 additional Curses",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type NecklaceCorrosionBaseAffix =
-  (typeof NECKLACE_CORROSION_BASE_AFFIXES)[number];
+];

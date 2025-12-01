@@ -2,7 +2,7 @@ import * as cheerio from "cheerio";
 import { readFile, writeFile, mkdir } from "fs/promises";
 import { join } from "path";
 import { execSync } from "child_process";
-import type { Talent } from "../data/talent/types";
+import type { Talent, God, Tree, Type } from "../data/talent/types";
 
 const cleanEffectText = (html: string): string => {
   // Replace <br> tags with placeholder to preserve intentional line breaks
@@ -49,9 +49,9 @@ const extractTalentData = (html: string): Talent[] => {
     }
 
     const item: Talent = {
-      god: $(tds[0]).text().trim(),
-      tree: $(tds[1]).text().trim(),
-      type: $(tds[2]).text().trim(),
+      god: $(tds[0]).text().trim() as God,
+      tree: $(tds[1]).text().trim() as Tree,
+      type: $(tds[2]).text().trim() as Type,
       name: $(tds[3]).text().trim(),
       effect: cleanEffectText($(tds[4]).html() || ""),
     };
@@ -65,9 +65,7 @@ const extractTalentData = (html: string): Talent[] => {
 const generateDataFile = (items: Talent[]): string => {
   return `import type { Talent } from "./types";
 
-export const Talents = ${JSON.stringify(items, null, 2)} as const satisfies readonly Talent[];
-
-export type TalentEntry = (typeof Talents)[number];
+export const Talents: readonly Talent[] = ${JSON.stringify(items, null, 2)};
 `;
 };
 

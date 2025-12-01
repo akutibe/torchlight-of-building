@@ -1,6 +1,6 @@
 import { BaseSkill } from "./types";
 
-export const NobleSupportSkills = [
+export const NobleSupportSkills: readonly BaseSkill[] = [
   {
     type: "Support (Noble)",
     name: "Acuteness Focus: Dull Pain (Noble)",
@@ -686,6 +686,4 @@ export const NobleSupportSkills = [
     name: "Wilting Beam: Set Course (Noble)",
     tags: ["Erosion"],
   },
-] as const satisfies readonly BaseSkill[];
-
-export type NobleSupportSkill = (typeof NobleSupportSkills)[number];
+];

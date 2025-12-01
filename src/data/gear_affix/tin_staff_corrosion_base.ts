@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
+export const TIN_STAFF_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(1-2) Support Skill Level",
+    craftableAffix: "+(1â€“2) Support Skill Level",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -15,7 +15,7 @@ export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(18-24)% Cast Speed",
+    craftableAffix: "+(18â€“24)% Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -23,7 +23,7 @@ export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(35-45)% Spell Damage",
+    craftableAffix: "+(35â€“45)% Spell Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -31,7 +31,7 @@ export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(40-48)% Critical Strike Damage",
+    craftableAffix: "+(40â€“48)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -39,7 +39,7 @@ export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(50-60)% Spell Critical Strike Rating",
+    craftableAffix: "+(50â€“60)% Spell Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -48,7 +48,7 @@ export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "+(6-12)% chance to gain 1 stack of Focus Blessing on defeat",
+      "+(6â€“12)% chance to gain 1 stack of Focus Blessing on defeat",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -56,7 +56,7 @@ export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(8-15)% Cooldown Recovery Speed",
+    craftableAffix: "+(8â€“15)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -64,7 +64,7 @@ export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Adds (7-12)% of Elemental Damage as Erosion Damage",
+    craftableAffix: "Adds (7â€“12)% of Elemental Damage as Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -72,9 +72,6 @@ export const TIN_STAFF_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Damage Penetrates (8-12)% Elemental Resistance",
+    craftableAffix: "Damage Penetrates (8â€“12)% Elemental Resistance",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type TinStaffCorrosionBaseAffix =
-  (typeof TIN_STAFF_CORROSION_BASE_AFFIXES)[number];
+];

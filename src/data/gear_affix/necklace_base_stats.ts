@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const NECKLACE_BASE_STATS_AFFIXES = [
+export const NECKLACE_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
@@ -153,7 +153,4 @@ export const NECKLACE_BASE_STATS_AFFIXES = [
     tier: "",
     craftableAffix: "+8 Strength",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type NecklaceBaseStatsAffix =
-  (typeof NECKLACE_BASE_STATS_AFFIXES)[number];
+];

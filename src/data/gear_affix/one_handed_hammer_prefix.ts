@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
+export const ONE_HANDED_HAMMER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(26-32)% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(26â€“32)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -15,7 +15,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(3-4) to Attack Skill Level",
+    craftableAffix: "+(3â€“4) to Attack Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -23,7 +23,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(31-39)% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(31â€“39)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -32,7 +32,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Adds (62-64) - (356-358) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (62â€“64) - (356â€“358) Elemental Damage to the gear\n-100% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -40,7 +40,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(18-25)% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(18â€“25)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -48,7 +48,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(22-30)% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(22â€“30)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -65,7 +65,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Adds (47-49) - (272-274) Elemental Damage to the gear\n-100% gear Physical Damage",
+      "Adds (47â€“49) - (272â€“274) Elemental Damage to the gear\n-100% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,7 +73,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(101-130)% gear Physical Damage",
+    craftableAffix: "+(101â€“130)% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -81,7 +81,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117) Dexterity",
+    craftableAffix: "+(91â€“117) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,7 +89,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117) Intelligence",
+    craftableAffix: "+(91â€“117) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,7 +97,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117) Strength",
+    craftableAffix: "+(91â€“117) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -105,7 +105,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(56-100)% gear Physical Damage",
+    craftableAffix: "+(56â€“100)% gear Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -113,7 +113,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90) Dexterity",
+    craftableAffix: "+(64â€“90) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -121,7 +121,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90) Intelligence",
+    craftableAffix: "+(64â€“90) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,7 +129,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90) Strength",
+    craftableAffix: "+(64â€“90) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -137,7 +137,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109-140)% Melee Damage",
+    craftableAffix: "+(109â€“140)% Melee Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -145,7 +145,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (161-163) - (208-220) Fire Damage to the gear",
+    craftableAffix: "Adds (161â€“163) - (208â€“220) Fire Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -153,7 +153,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (162-164) - (216-218) Cold Damage to the gear",
+    craftableAffix: "Adds (162â€“164) - (216â€“218) Cold Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -161,7 +161,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (174-176) - (204-206) Erosion Damage to the gear",
+    craftableAffix: "Adds (174â€“176) - (204â€“206) Erosion Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -169,7 +169,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (18-20) - (360-362) Lightning Damage to the gear",
+    craftableAffix: "Adds (18â€“20) - (360â€“362) Lightning Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -177,7 +177,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Adds (47-49) - (57-59) Physical Damage to the gear",
+    craftableAffix: "Adds (47â€“49) - (57â€“59) Physical Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -185,7 +185,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77-108)% Melee Damage",
+    craftableAffix: "+(77â€“108)% Melee Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -193,7 +193,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (123-125) - (160-169) Fire Damage to the gear",
+    craftableAffix: "Adds (123â€“125) - (160â€“169) Fire Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -201,7 +201,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (125-127) - (165-167) Cold Damage to the gear",
+    craftableAffix: "Adds (125â€“127) - (165â€“167) Cold Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -209,7 +209,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (133-135) - (157-159) Erosion Damage to the gear",
+    craftableAffix: "Adds (133â€“135) - (157â€“159) Erosion Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -217,7 +217,7 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (14-16) - (276-278) Lightning Damage to the gear",
+    craftableAffix: "Adds (14â€“16) - (276â€“278) Lightning Damage to the gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -225,9 +225,6 @@ export const ONE_HANDED_HAMMER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Adds (36-38) - (44-46) Physical Damage to the gear",
+    craftableAffix: "Adds (36â€“38) - (44â€“46) Physical Damage to the gear",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type OneHandedHammerPrefixAffix =
-  (typeof ONE_HANDED_HAMMER_PREFIX_AFFIXES)[number];
+];

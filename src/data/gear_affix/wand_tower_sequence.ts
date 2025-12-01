@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const WAND_TOWER_SEQUENCE_AFFIXES = [
+export const WAND_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
@@ -150,7 +150,4 @@ export const WAND_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "+8% Lightning Penetration",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type WandTowerSequenceAffix =
-  (typeof WAND_TOWER_SEQUENCE_AFFIXES)[number];
+];

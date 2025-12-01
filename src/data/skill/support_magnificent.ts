@@ -1,6 +1,6 @@
 import { BaseSkill } from "./types";
 
-export const MagnificentSupportSkills = [
+export const MagnificentSupportSkills: readonly BaseSkill[] = [
   {
     type: "Support (Magnificent)",
     name: "Acuteness Focus: Piercing Agony (Magnificent)",
@@ -651,6 +651,4 @@ export const MagnificentSupportSkills = [
     name: "Wilting Beam: Reflection (Magnificent)",
     tags: ["Erosion"],
   },
-] as const satisfies readonly BaseSkill[];
-
-export type MagnificentSupportSkill = (typeof MagnificentSupportSkills)[number];
+];

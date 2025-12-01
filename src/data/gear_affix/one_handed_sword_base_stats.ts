@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const ONE_HANDED_SWORD_BASE_STATS_AFFIXES = [
+export const ONE_HANDED_SWORD_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Sword",
@@ -181,7 +181,4 @@ export const ONE_HANDED_SWORD_BASE_STATS_AFFIXES = [
     craftableAffix:
       "89 - 89 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type OneHandedSwordBaseStatsAffix =
-  (typeof ONE_HANDED_SWORD_BASE_STATS_AFFIXES)[number];
+];

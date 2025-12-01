@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const NECKLACE_BASE_AFFIX_AFFIXES = [
+export const NECKLACE_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Trinket",
     equipmentType: "Necklace",
@@ -60,7 +60,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(11-15)% Movement Speed",
+    craftableAffix: "+(11â€“15)% Movement Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -68,7 +68,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(2-3)% damage per stack of any Blessing",
+    craftableAffix: "+(2â€“3)% damage per stack of any Blessing",
   },
   {
     equipmentSlot: "Trinket",
@@ -76,7 +76,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(26-30)% chance to avoid Elemental Ailments",
+    craftableAffix: "+(26â€“30)% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Trinket",
@@ -84,7 +84,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6-8)% Sealed Mana Compensation",
+    craftableAffix: "+(6â€“8)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Trinket",
@@ -108,7 +108,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Dexterity",
+    craftableAffix: "+(15â€“20) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -116,7 +116,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Intelligence",
+    craftableAffix: "+(15â€“20) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -124,7 +124,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Strength",
+    craftableAffix: "+(15â€“20) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -132,7 +132,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% damage\n+(20-24)% Minion Damage",
+    craftableAffix: "+(20â€“24)% damage\n+(20â€“24)% Minion Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -140,7 +140,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(3-4)% Elemental Resistance",
+    craftableAffix: "+(3â€“4)% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -148,7 +148,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5-10)% Cold Resistance",
+    craftableAffix: "+(5â€“10)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -156,7 +156,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5-10)% Erosion Resistance",
+    craftableAffix: "+(5â€“10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -164,7 +164,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5-10)% Fire Resistance",
+    craftableAffix: "+(5â€“10)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -172,7 +172,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5-10)% Lightning Resistance",
+    craftableAffix: "+(5â€“10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -180,7 +180,7 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54-74) Max Life",
+    craftableAffix: "+(54â€“74) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -188,9 +188,6 @@ export const NECKLACE_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(87-117) Max Energy Shield",
+    craftableAffix: "+(87â€“117) Max Energy Shield",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type NecklaceBaseAffixAffix =
-  (typeof NECKLACE_BASE_AFFIX_AFFIXES)[number];
+];

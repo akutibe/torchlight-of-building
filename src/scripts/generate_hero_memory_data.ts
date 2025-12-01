@@ -64,9 +64,7 @@ const extractHeroMemoryData = (html: string): HeroMemory[] => {
 const generateDataFile = (items: HeroMemory[]): string => {
   return `import type { HeroMemory } from "./types";
 
-export const HeroMemories = ${JSON.stringify(items, null, 2)} as const satisfies readonly HeroMemory[];
-
-export type HeroMemoryEntry = (typeof HeroMemories)[number];
+export const HeroMemories: readonly HeroMemory[] = ${JSON.stringify(items, null, 2)};
 `;
 };
 

@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const MUSKET_TOWER_SEQUENCE_AFFIXES = [
+export const MUSKET_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Musket",
@@ -160,7 +160,4 @@ export const MUSKET_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "+8% gear Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type MusketTowerSequenceAffix =
-  (typeof MUSKET_TOWER_SEQUENCE_AFFIXES)[number];
+];

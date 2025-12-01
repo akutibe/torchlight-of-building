@@ -12,35 +12,20 @@ interface RawSkill {
 
 // Maps JSON type → file key and type names
 const SKILL_TYPE_CONFIG = {
-  Active: {
-    fileKey: "active",
-    constName: "ActiveSkills",
-    typeName: "ActiveSkill",
-  },
-  Passive: {
-    fileKey: "passive",
-    constName: "PassiveSkills",
-    typeName: "PassiveSkill",
-  },
-  Support: {
-    fileKey: "support",
-    constName: "SupportSkills",
-    typeName: "SupportSkill",
-  },
+  Active: { fileKey: "active", constName: "ActiveSkills" },
+  Passive: { fileKey: "passive", constName: "PassiveSkills" },
+  Support: { fileKey: "support", constName: "SupportSkills" },
   "Support (Magnificent)": {
     fileKey: "support_magnificent",
     constName: "MagnificentSupportSkills",
-    typeName: "MagnificentSupportSkill",
   },
   "Support (Noble)": {
     fileKey: "support_noble",
     constName: "NobleSupportSkills",
-    typeName: "NobleSupportSkill",
   },
   "Activation Medium": {
     fileKey: "activation_medium",
     constName: "ActivationMediumSkills",
-    typeName: "ActivationMediumSkill",
   },
 } as const;
 
@@ -82,14 +67,11 @@ const extractSkillData = (html: string): RawSkill[] => {
 
 const generateSkillTypeFile = (
   constName: string,
-  typeName: string,
   skills: BaseSkill[],
 ): string => {
   return `import { BaseSkill } from "./types";
 
-export const ${constName} = ${JSON.stringify(skills, null, 2)} as const satisfies readonly BaseSkill[];
-
-export type ${typeName} = (typeof ${constName})[number];
+export const ${constName}: readonly BaseSkill[] = ${JSON.stringify(skills, null, 2)};
 `;
 };
 
@@ -136,11 +118,7 @@ const main = async (): Promise<void> => {
     const config = SKILL_TYPE_CONFIG[skillType];
     const fileName = config.fileKey + ".ts";
     const filePath = join(outDir, fileName);
-    const content = generateSkillTypeFile(
-      config.constName,
-      config.typeName,
-      skills,
-    );
+    const content = generateSkillTypeFile(config.constName, skills);
 
     await writeFile(filePath, content, "utf-8");
     console.log(`Generated ${fileName} (${skills.length} skills)`);

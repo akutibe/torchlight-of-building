@@ -1,6 +1,6 @@
 import type { EtherealPrism } from "./types";
 
-export const EtherealPrisms = [
+export const EtherealPrisms: readonly EtherealPrism[] = [
   {
     type: "Base Affix",
     rarity: "",
@@ -614,6 +614,4 @@ export const EtherealPrisms = [
     rarity: "Rare",
     effect: "All Micro Talent within the area also gain: +6% Spell Damage",
   },
-] as const satisfies readonly EtherealPrism[];
-
-export type EtherealPrismEntry = (typeof EtherealPrisms)[number];
+];

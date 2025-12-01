@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
+export const CUDGEL_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Cudgel",
@@ -159,7 +159,4 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "+8% gear Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type CudgelTowerSequenceAffix =
-  (typeof CUDGEL_TOWER_SEQUENCE_AFFIXES)[number];
+];

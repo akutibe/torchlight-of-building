@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const FIRE_CANNON_BASE_STATS_AFFIXES = [
+export const FIRE_CANNON_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
@@ -181,7 +181,4 @@ export const FIRE_CANNON_BASE_STATS_AFFIXES = [
     craftableAffix:
       "90 - 90 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type FireCannonBaseStatsAffix =
-  (typeof FIRE_CANNON_BASE_STATS_AFFIXES)[number];
+];

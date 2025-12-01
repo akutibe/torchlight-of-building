@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const TWO_HANDED_AXE_BASE_STATS_AFFIXES = [
+export const TWO_HANDED_AXE_BASE_STATS_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Two-Handed Axe",
@@ -181,7 +181,4 @@ export const TWO_HANDED_AXE_BASE_STATS_AFFIXES = [
     craftableAffix:
       "90 - 90 Physical Damage\n500 Critical Strike Rating\n1.5 Attack Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type TwoHandedAxeBaseStatsAffix =
-  (typeof TWO_HANDED_AXE_BASE_STATS_AFFIXES)[number];
+];

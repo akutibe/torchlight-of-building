@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const SCEPTER_PREFIX_AFFIXES = [
+export const SCEPTER_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "(31-39)% additional damage applied to Life",
+    craftableAffix: "(31â€“39)% additional damage applied to Life",
   },
   {
     equipmentSlot: "One-Handed",
@@ -15,7 +15,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(28-39)% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(28â€“39)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -23,7 +23,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(3-4) Spell Skill Level",
+    craftableAffix: "+(3â€“4) Spell Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -39,7 +39,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "(22-30)% additional damage applied to Life",
+    craftableAffix: "(22â€“30)% additional damage applied to Life",
   },
   {
     equipmentSlot: "One-Handed",
@@ -47,7 +47,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(22-30)% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(22â€“30)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -71,7 +71,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3) Cold Skill Level",
+    craftableAffix: "+(2â€“3) Cold Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -79,7 +79,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3) Erosion Skill Level",
+    craftableAffix: "+(2â€“3) Erosion Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -87,7 +87,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3) Fire Skill Level",
+    craftableAffix: "+(2â€“3) Fire Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -95,7 +95,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3) Lightning Skill Level",
+    craftableAffix: "+(2â€“3) Lightning Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -103,7 +103,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(2-3) Physical Skill Level",
+    craftableAffix: "+(2â€“3) Physical Skill Level",
   },
   {
     equipmentSlot: "One-Handed",
@@ -111,7 +111,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117) Dexterity",
+    craftableAffix: "+(91â€“117) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,7 +119,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117) Intelligence",
+    craftableAffix: "+(91â€“117) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,7 +127,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91-117) Strength",
+    craftableAffix: "+(91â€“117) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -135,7 +135,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90) Dexterity",
+    craftableAffix: "+(64â€“90) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -143,7 +143,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90) Intelligence",
+    craftableAffix: "+(64â€“90) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -151,7 +151,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64-90) Strength",
+    craftableAffix: "+(64â€“90) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -200,7 +200,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "Reaps (0.19-0.24) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.19â€“0.24) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -208,7 +208,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109-140)% Damage Over Time",
+    craftableAffix: "+(109â€“140)% Damage Over Time",
   },
   {
     equipmentSlot: "One-Handed",
@@ -216,7 +216,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(150-188) Affliction inflicted per second",
+    craftableAffix: "+(150â€“188) Affliction inflicted per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -224,7 +224,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(181-234) Max Mana",
+    craftableAffix: "+(181â€“234) Max Mana",
   },
   {
     equipmentSlot: "One-Handed",
@@ -232,7 +232,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(331-429) Max Life",
+    craftableAffix: "+(331â€“429) Max Life",
   },
   {
     equipmentSlot: "One-Handed",
@@ -240,7 +240,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(526-683) Max Energy Shield",
+    craftableAffix: "+(526â€“683) Max Energy Shield",
   },
   {
     equipmentSlot: "One-Handed",
@@ -249,7 +249,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "Reaps (0.13-0.18) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+      "Reaps (0.13â€“0.18) s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
   },
   {
     equipmentSlot: "One-Handed",
@@ -257,7 +257,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(120-144) Affliction inflicted per second",
+    craftableAffix: "+(120â€“144) Affliction inflicted per second",
   },
   {
     equipmentSlot: "One-Handed",
@@ -265,7 +265,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(127-180) Max Mana",
+    craftableAffix: "+(127â€“180) Max Mana",
   },
   {
     equipmentSlot: "One-Handed",
@@ -273,7 +273,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(232-330) Max Life",
+    craftableAffix: "+(232â€“330) Max Life",
   },
   {
     equipmentSlot: "One-Handed",
@@ -281,7 +281,7 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(369-525) Max Energy Shield",
+    craftableAffix: "+(369â€“525) Max Energy Shield",
   },
   {
     equipmentSlot: "One-Handed",
@@ -289,8 +289,6 @@ export const SCEPTER_PREFIX_AFFIXES = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77-108)% Damage Over Time",
+    craftableAffix: "+(77â€“108)% Damage Over Time",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type ScepterPrefixAffix = (typeof SCEPTER_PREFIX_AFFIXES)[number];
+];

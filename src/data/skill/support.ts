@@ -1,6 +1,6 @@
 import { BaseSkill } from "./types";
 
-export const SupportSkills = [
+export const SupportSkills: readonly BaseSkill[] = [
   {
     type: "Support",
     name: "Added Cold Damage",
@@ -606,6 +606,4 @@ export const SupportSkills = [
     name: "Wind Projectiles",
     tags: ["Projectile"],
   },
-] as const satisfies readonly BaseSkill[];
-
-export type SupportSkill = (typeof SupportSkills)[number];
+];

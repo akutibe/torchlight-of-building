@@ -1,6 +1,6 @@
 import type { Legendary } from "./types";
 
-export const Legendaries = [
+export const Legendaries: readonly Legendary[] = [
   {
     baseItem: "All Magic Grip",
     baseStat: "+120 gear Energy Shield",
@@ -6324,6 +6324,4 @@ export const Legendaries = [
     equipmentSlot: "Boots",
     equipmentType: "Boots (DEX)",
   },
-] as const satisfies readonly Legendary[];
-
-export type LegendaryEntry = (typeof Legendaries)[number];
+];

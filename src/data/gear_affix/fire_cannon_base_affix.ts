@@ -1,13 +1,14 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
+export const FIRE_CANNON_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Fire Cannon",
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "Lucky Critical Strike\n(-40--50)% Critical Strike Rating",
+    craftableAffix:
+      "Lucky Critical Strike\n(-40â€“-50)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -16,7 +17,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15-25)% of their Max Life to enemies within a 5 m radius",
+      "Enemies have a (20â€“25)% chance to explode when defeated by an Attack or Spell, dealing Secondary Physical Damage equal to (15â€“25)% of their Max Life to enemies within a 5 m radius",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -48,7 +49,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(10-14)% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(10â€“14)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -56,7 +57,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(12-16)% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(12â€“16)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -64,7 +65,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(48-64)% gear Physical Damage",
+    craftableAffix: "+(48â€“64)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -80,7 +81,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Adds (64-68) - (80-84) Physical Damage to the gear",
+    craftableAffix: "Adds (64â€“68) - (80â€“84) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -96,7 +97,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(12-16)% Attack Speed",
+    craftableAffix: "+(12â€“16)% Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -104,7 +105,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(40-48)% Elemental Damage",
+    craftableAffix: "+(40â€“48)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -112,7 +113,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(40-48)% Erosion Damage",
+    craftableAffix: "+(40â€“48)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -120,7 +121,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(40-48)% Physical Damage",
+    craftableAffix: "+(40â€“48)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -128,7 +129,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(40-48)% Ranged Damage",
+    craftableAffix: "+(40â€“48)% Ranged Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -136,7 +137,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1-3) - (60-65) Lightning Damage to Attacks",
+    craftableAffix: "Adds (1â€“3) - (60â€“65) Lightning Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -144,7 +145,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (24-29) - (34-39) Cold Damage to Attacks",
+    craftableAffix: "Adds (24â€“29) - (34â€“39) Cold Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -152,7 +153,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (24-29) - (34-39) Fire Damage to Attacks",
+    craftableAffix: "Adds (24â€“29) - (34â€“39) Fire Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -160,7 +161,7 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (25-30) - (33-38) Physical Damage to Attacks",
+    craftableAffix: "Adds (25â€“30) - (33â€“38) Physical Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -168,9 +169,6 @@ export const FIRE_CANNON_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (26-31) - (32-37) Erosion Damage to Attacks",
+    craftableAffix: "Adds (26â€“31) - (32â€“37) Erosion Damage to Attacks",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type FireCannonBaseAffixAffix =
-  (typeof FIRE_CANNON_BASE_AFFIX_AFFIXES)[number];
+];

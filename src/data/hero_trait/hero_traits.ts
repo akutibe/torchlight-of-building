@@ -1,6 +1,6 @@
 import type { HeroTrait } from "./types";
 
-export const HeroTraits = [
+export const HeroTraits: readonly HeroTrait[] = [
   {
     hero: "Escapist Bing: Blast Nova (#1)",
     name: "Blast Nova",
@@ -1134,6 +1134,4 @@ export const HeroTraits = [
     affix:
       "(-40/-43/-46/-49/-50)% additional\nSpacetime Turbulence\nDuration\n(+125/+160/+195/+230/+265)%\nTwisted\nSpacetime-recording Damage Over Time",
   },
-] as const satisfies readonly HeroTrait[];
-
-export type HeroTraitEntry = (typeof HeroTraits)[number];
+];

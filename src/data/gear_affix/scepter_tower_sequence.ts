@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
+export const SCEPTER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
@@ -25,7 +25,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "+25% Movement Speed when standing on a Terra Skill. The effect lasts 2 s.\n+100% Skill Area when standing on a Terra Skill. Lasts for 2 s",
+      "+25% Movement Speed when standing on a Terra Skill. The effect lasts 2s.\n+100% Skill Area when standing on a Terra Skill. Lasts for 2 s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -151,7 +151,4 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "Max Terra Charge Stacks -1\nMax Terra Quantity +1",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type ScepterTowerSequenceAffix =
-  (typeof SCEPTER_TOWER_SEQUENCE_AFFIXES)[number];
+];

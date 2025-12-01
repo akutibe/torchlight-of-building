@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
+export const BOOTS_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Boots",
     equipmentType: "Boots (STR)",
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% Cooldown Recovery Speed",
+    craftableAffix: "+(15â€“20)% Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -15,7 +15,7 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% Max Energy Shield",
+    craftableAffix: "+(15â€“20)% Max Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -23,7 +23,7 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% Max Life",
+    craftableAffix: "+(15â€“20)% Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -31,7 +31,7 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15-20)% Movement Speed",
+    craftableAffix: "+(15â€“20)% Movement Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -39,7 +39,7 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(30-40)% Cooldown Recovery Speed for Mobility Skills",
+    craftableAffix: "+(30â€“40)% Cooldown Recovery Speed for Mobility Skills",
   },
   {
     equipmentSlot: "Boots",
@@ -47,7 +47,7 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(30-50)% Gear Armor",
+    craftableAffix: "+(30â€“50)% Gear Armor",
   },
   {
     equipmentSlot: "Boots",
@@ -55,7 +55,7 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(50-70)% damage",
+    craftableAffix: "+(50â€“70)% damage",
   },
   {
     equipmentSlot: "Boots",
@@ -105,7 +105,4 @@ export const BOOTS_STR_CORROSION_BASE_AFFIXES = [
     tier: "0",
     craftableAffix: "Triggers Lv. 20 Stoneskin when moving. Interval: 2 s",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type BootsStrCorrosionBaseAffix =
-  (typeof BOOTS_STR_CORROSION_BASE_AFFIXES)[number];
+];

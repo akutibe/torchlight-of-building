@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const ROD_TOWER_SEQUENCE_AFFIXES = [
+export const ROD_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Rod",
@@ -67,7 +67,7 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     craftingPool: "Advanced",
     tier: "",
     craftableAffix:
-      "When Minions deal damage, inflicts Fire Infiltration . Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Lightning Infiltration . Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Cold Infiltration . Interval for each enemy: 1 s",
+      "When Minions deal damage, inflicts Fire Infiltration. Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Lightning Infiltration. Interval for each enemy: 1 s\nWhen Minions deal damage, inflicts Cold Infiltration. Interval for each enemy: 1 s",
   },
   {
     equipmentSlot: "One-Handed",
@@ -149,6 +149,4 @@ export const ROD_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "+8% Minion Fire Penetration",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type RodTowerSequenceAffix = (typeof ROD_TOWER_SEQUENCE_AFFIXES)[number];
+];

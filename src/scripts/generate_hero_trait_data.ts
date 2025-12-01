@@ -67,9 +67,7 @@ const extractHeroTraitData = (html: string): HeroTrait[] => {
 const generateHeroTraitsFile = (traits: HeroTrait[]): string => {
   return `import type { HeroTrait } from "./types";
 
-export const HeroTraits = ${JSON.stringify(traits, null, 2)} as const satisfies readonly HeroTrait[];
-
-export type HeroTraitEntry = (typeof HeroTraits)[number];
+export const HeroTraits: readonly HeroTrait[] = ${JSON.stringify(traits, null, 2)};
 `;
 };
 

@@ -1,13 +1,13 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const SCEPTER_BASE_AFFIX_AFFIXES = [
+export const SCEPTER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "One-Handed",
     equipmentType: "Scepter",
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(6-8)% Blur Effect",
+    craftableAffix: "+(6â€“8)% Blur Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -39,7 +39,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(15-20)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(15â€“20)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -47,7 +47,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6-8)% additional Damage Over Time",
+    craftableAffix: "+(6â€“8)% additional Damage Over Time",
   },
   {
     equipmentSlot: "One-Handed",
@@ -55,7 +55,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6-8)% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(6â€“8)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -63,7 +63,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(10-14)% Affliction Effect",
+    craftableAffix: "+(10â€“14)% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -71,7 +71,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Dexterity",
+    craftableAffix: "+(15â€“20) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -79,7 +79,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Intelligence",
+    craftableAffix: "+(15â€“20) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -87,7 +87,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15-20) Strength",
+    craftableAffix: "+(15â€“20) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -95,7 +95,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Elemental Damage",
+    craftableAffix: "+(20â€“24)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -103,7 +103,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Erosion Damage",
+    craftableAffix: "+(20â€“24)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -111,7 +111,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Physical Damage",
+    craftableAffix: "+(20â€“24)% Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -119,7 +119,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20-24)% Spell Damage",
+    craftableAffix: "+(20â€“24)% Spell Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -127,8 +127,6 @@ export const SCEPTER_BASE_AFFIX_AFFIXES = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(8-10)% Reaping Duration",
+    craftableAffix: "+(8â€“10)% Reaping Duration",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type ScepterBaseAffixAffix = (typeof SCEPTER_BASE_AFFIX_AFFIXES)[number];
+];

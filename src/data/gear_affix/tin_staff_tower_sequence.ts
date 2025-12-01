@@ -1,6 +1,6 @@
 import { BaseGearAffix } from "../../tli/gear_data_types";
 
-export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
+export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
   {
     equipmentSlot: "Two-Handed",
     equipmentType: "Tin Staff",
@@ -151,7 +151,4 @@ export const TIN_STAFF_TOWER_SEQUENCE_AFFIXES = [
     tier: "",
     craftableAffix: "+32% Cast Speed",
   },
-] as const satisfies readonly BaseGearAffix[];
-
-export type TinStaffTowerSequenceAffix =
-  (typeof TIN_STAFF_TOWER_SEQUENCE_AFFIXES)[number];
+];
