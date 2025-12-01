@@ -5,6 +5,7 @@ import {
   createEmptyLoadout,
   createEmptyHeroPage,
   createEmptyPactspiritPage,
+  createEmptyDivinityPage,
 } from "./storage";
 
 const createEmptySkillPage = (): RawSkillPage => ({
@@ -46,8 +47,10 @@ describe("build-code", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -75,8 +78,10 @@ describe("build-code", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -111,8 +116,10 @@ describe("build-code", () => {
       skillPage,
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -155,6 +162,7 @@ describe("build-code", () => {
       skillPage,
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [
         {
           id: "inv-1",
@@ -163,6 +171,7 @@ describe("build-code", () => {
         },
       ],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const code = encodeBuildCode(loadout);

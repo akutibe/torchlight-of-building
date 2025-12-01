@@ -5,6 +5,7 @@ import {
   RawPactspiritPage,
   RawPactspiritSlot,
   RawRingSlotState,
+  RawDivinityPage,
 } from "@/src/tli/core";
 import { DEBUG_MODE_STORAGE_KEY } from "./constants";
 
@@ -52,6 +53,10 @@ export const createEmptyPactspiritPage = (): RawPactspiritPage => ({
   slot3: createEmptyPactspiritSlot(),
 });
 
+export const createEmptyDivinityPage = (): RawDivinityPage => ({
+  placedSlates: [],
+});
+
 export const generateItemId = (): string => crypto.randomUUID();
 
 export const loadDebugModeFromStorage = (): boolean => {
@@ -89,6 +94,8 @@ export const createEmptyLoadout = (): RawLoadout => ({
   },
   heroPage: createEmptyHeroPage(),
   pactspiritPage: createEmptyPactspiritPage(),
+  divinityPage: createEmptyDivinityPage(),
   itemsList: [],
   heroMemoryList: [],
+  divinitySlateList: [],
 });

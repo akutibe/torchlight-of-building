@@ -5,6 +5,7 @@ import {
   RawSkillPage,
   RawHeroPage,
   RawPactspiritPage,
+  RawDivinityPage,
 } from "./core";
 
 const createEmptyHeroPage = (): RawHeroPage => ({
@@ -55,6 +56,10 @@ const createEmptyPactspiritPage = (): RawPactspiritPage => ({
   slot3: createEmptyPactspiritSlot(),
 });
 
+const createEmptyDivinityPage = (): RawDivinityPage => ({
+  placedSlates: [],
+});
+
 describe("parse_loadout", () => {
   it("should parse a simple loadout with single-line affixes", () => {
     const rawLoadout: RawLoadout = {
@@ -74,8 +79,10 @@ describe("parse_loadout", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -127,8 +134,10 @@ describe("parse_loadout", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -179,8 +188,10 @@ describe("parse_loadout", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -225,8 +236,10 @@ describe("parse_loadout", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -263,8 +276,10 @@ describe("parse_loadout", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -293,8 +308,10 @@ describe("parse_loadout", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -322,8 +339,10 @@ describe("parse_loadout", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -352,8 +371,10 @@ describe("talent tree parsing", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -385,8 +406,10 @@ describe("talent tree parsing", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -416,8 +439,10 @@ describe("talent tree parsing", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -459,8 +484,10 @@ describe("talent tree parsing", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);
@@ -489,8 +516,10 @@ describe("talent tree parsing", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     expect(() => parse_loadout(rawLoadout)).toThrow(
@@ -513,8 +542,10 @@ describe("talent tree parsing", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     expect(() => parse_loadout(rawLoadout)).toThrow(
@@ -539,8 +570,10 @@ describe("talent tree parsing", () => {
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
+      divinityPage: createEmptyDivinityPage(),
       itemsList: [],
       heroMemoryList: [],
+      divinitySlateList: [],
     };
 
     const result = parse_loadout(rawLoadout);

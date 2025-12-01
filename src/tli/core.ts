@@ -26,6 +26,44 @@ export interface DivinitySlate {
   affixes: Affix[];
 }
 
+export const SLATE_SHAPES = ["O", "L", "Z"] as const;
+export type SlateShape = (typeof SLATE_SHAPES)[number];
+
+export const DIVINITY_GODS = [
+  "Deception",
+  "Hunting",
+  "Knowledge",
+  "Machines",
+  "Might",
+  "War",
+] as const;
+export type DivinityGod = (typeof DIVINITY_GODS)[number];
+
+export const ROTATIONS = [0, 90, 180, 270] as const;
+export type Rotation = (typeof ROTATIONS)[number];
+
+export type DivinityAffixType = "Legendary Medium" | "Medium";
+
+export interface RawDivinitySlate {
+  id: string;
+  god: DivinityGod;
+  shape: SlateShape;
+  rotation: Rotation;
+  flippedH: boolean;
+  flippedV: boolean;
+  affixes: string[];
+  affixTypes: DivinityAffixType[];
+}
+
+export interface PlacedSlate {
+  slateId: string;
+  position: { row: number; col: number };
+}
+
+export interface RawDivinityPage {
+  placedSlates: PlacedSlate[];
+}
+
 export interface Gear {
   gearType:
     | "helmet"
@@ -230,6 +268,8 @@ export interface RawLoadout {
   skillPage: RawSkillPage;
   heroPage: RawHeroPage;
   pactspiritPage: RawPactspiritPage;
+  divinityPage: RawDivinityPage;
   itemsList: RawGear[];
   heroMemoryList: RawHeroMemory[];
+  divinitySlateList: RawDivinitySlate[];
 }

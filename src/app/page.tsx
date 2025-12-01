@@ -10,6 +10,8 @@ import {
   RawHeroMemory,
   HeroMemorySlot,
   RawPactspiritPage,
+  RawDivinitySlate,
+  PlacedSlate,
 } from "@/src/tli/core";
 import { ActiveSkills, PassiveSkills } from "@/src/data/skill";
 import {
@@ -61,6 +63,7 @@ import { ImportModal } from "./components/ImportModal";
 import { HeroTab } from "./components/hero/HeroTab";
 import { PactspiritTab } from "./components/pactspirit/PactspiritTab";
 import { LegendaryGearModule } from "./components/equipment/LegendaryGearModule";
+import { DivinityTab } from "./components/divinity/DivinityTab";
 
 export default function Home() {
   const [loadout, setLoadout] = useState<RawLoadout>(createEmptyLoadout);
@@ -695,6 +698,65 @@ export default function Home() {
     }));
   };
 
+  const handleSaveDivinitySlate = (slate: RawDivinitySlate) => {
+    setLoadout((prev) => ({
+      ...prev,
+      divinitySlateList: [...prev.divinitySlateList, slate],
+    }));
+  };
+
+  const handleUpdateDivinitySlate = (slate: RawDivinitySlate) => {
+    setLoadout((prev) => ({
+      ...prev,
+      divinitySlateList: prev.divinitySlateList.map((s) =>
+        s.id === slate.id ? slate : s,
+      ),
+    }));
+  };
+
+  const handleCopyDivinitySlate = (slate: RawDivinitySlate) => {
+    const newSlate = { ...slate, id: generateItemId() };
+    setLoadout((prev) => ({
+      ...prev,
+      divinitySlateList: [...prev.divinitySlateList, newSlate],
+    }));
+  };
+
+  const handleDeleteDivinitySlate = (slateId: string) => {
+    setLoadout((prev) => ({
+      ...prev,
+      divinitySlateList: prev.divinitySlateList.filter((s) => s.id !== slateId),
+      divinityPage: {
+        ...prev.divinityPage,
+        placedSlates: prev.divinityPage.placedSlates.filter(
+          (p) => p.slateId !== slateId,
+        ),
+      },
+    }));
+  };
+
+  const handlePlaceDivinitySlate = (placement: PlacedSlate) => {
+    setLoadout((prev) => ({
+      ...prev,
+      divinityPage: {
+        ...prev.divinityPage,
+        placedSlates: [...prev.divinityPage.placedSlates, placement],
+      },
+    }));
+  };
+
+  const handleRemovePlacedDivinitySlate = (slateId: string) => {
+    setLoadout((prev) => ({
+      ...prev,
+      divinityPage: {
+        ...prev.divinityPage,
+        placedSlates: prev.divinityPage.placedSlates.filter(
+          (p) => p.slateId !== slateId,
+        ),
+      },
+    }));
+  };
+
   const handleDebugToggle = () => {
     setDebugMode((prev) => {
       const newValue = !prev;
@@ -1083,6 +1145,19 @@ export default function Home() {
             onLevelChange={handlePactspiritLevelChange}
             onInstallDestiny={handleInstallDestiny}
             onRevertRing={handleRevertRing}
+          />
+        )}
+
+        {activePage === "divinity" && (
+          <DivinityTab
+            divinityPage={loadout.divinityPage}
+            divinitySlateList={loadout.divinitySlateList}
+            onSaveSlate={handleSaveDivinitySlate}
+            onUpdateSlate={handleUpdateDivinitySlate}
+            onCopySlate={handleCopyDivinitySlate}
+            onDeleteSlate={handleDeleteDivinitySlate}
+            onPlaceSlate={handlePlaceDivinitySlate}
+            onRemovePlacedSlate={handleRemovePlacedDivinitySlate}
           />
         )}
 

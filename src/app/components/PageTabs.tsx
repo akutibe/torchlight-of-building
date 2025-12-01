@@ -61,6 +61,16 @@ export const PageTabs: React.FC<PageTabsProps> = ({
       >
         Pactspirit
       </button>
+      <button
+        onClick={() => setActivePage("divinity")}
+        className={`px-6 py-3 font-medium transition-colors ${
+          activePage === "divinity"
+            ? "border-b-2 border-amber-500 text-amber-500"
+            : "text-zinc-400 hover:text-zinc-50"
+        }`}
+      >
+        Divinity
+      </button>
     </div>
   );
 };
