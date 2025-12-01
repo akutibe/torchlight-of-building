@@ -32,7 +32,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "1",
-      craftableAffix: "+(5â€“7)% Armor DMG Mitigation Penetration",
+      craftableAffix: "+(5-7)% Armor DMG Mitigation Penetration",
     },
     {
       equipmentSlot: "One-Handed",
@@ -40,7 +40,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "1",
-      craftableAffix: "+(6â€“8)% additional damage against Traumatized enemies",
+      craftableAffix: "+(6-8)% additional damage against Traumatized enemies",
     },
     {
       equipmentSlot: "One-Handed",
@@ -48,7 +48,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "1",
-      craftableAffix: "+(6â€“8)% Elemental and Erosion Resistance Penetration",
+      craftableAffix: "+(6-8)% Elemental and Erosion Resistance Penetration",
     },
     {
       equipmentSlot: "One-Handed",
@@ -56,7 +56,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "1",
-      craftableAffix: "+(6â€“9)% additional Steep Strike Damage",
+      craftableAffix: "+(6-9)% additional Steep Strike Damage",
     },
     {
       equipmentSlot: "One-Handed",
@@ -64,7 +64,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(20â€“24)% Elemental Damage",
+      craftableAffix: "+(20-24)% Elemental Damage",
     },
     {
       equipmentSlot: "One-Handed",
@@ -72,7 +72,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(20â€“24)% Erosion Damage",
+      craftableAffix: "+(20-24)% Erosion Damage",
     },
     {
       equipmentSlot: "One-Handed",
@@ -80,7 +80,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(20â€“24)% Melee Damage",
+      craftableAffix: "+(20-24)% Melee Damage",
     },
     {
       equipmentSlot: "One-Handed",
@@ -88,7 +88,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(20â€“24)% Physical Damage",
+      craftableAffix: "+(20-24)% Physical Damage",
     },
     {
       equipmentSlot: "One-Handed",
@@ -96,7 +96,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(6â€“8)% Attack Speed",
+      craftableAffix: "+(6-8)% Attack Speed",
     },
     {
       equipmentSlot: "One-Handed",
@@ -104,7 +104,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "Adds (1â€“2) - (28â€“32) Lightning Damage to Attacks",
+      craftableAffix: "Adds (1-2) - (28-32) Lightning Damage to Attacks",
     },
     {
       equipmentSlot: "One-Handed",
@@ -112,7 +112,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "Adds (10â€“13) - (14â€“19) Cold Damage to Attacks",
+      craftableAffix: "Adds (10-13) - (14-19) Cold Damage to Attacks",
     },
     {
       equipmentSlot: "One-Handed",
@@ -120,7 +120,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "Adds (10â€“13) - (14â€“19) Physical Damage to Attacks",
+      craftableAffix: "Adds (10-13) - (14-19) Physical Damage to Attacks",
     },
     {
       equipmentSlot: "One-Handed",
@@ -128,7 +128,7 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "Adds (11â€“13) - (15â€“18) Erosion Damage to Attacks",
+      craftableAffix: "Adds (11-13) - (15-18) Erosion Damage to Attacks",
     },
     {
       equipmentSlot: "One-Handed",
@@ -136,6 +136,6 @@ export const ONE_HANDED_AXE_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] 
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "Adds (9â€“14) - (15â€“20) Fire Damage to Attacks",
+      craftableAffix: "Adds (9-14) - (15-20) Fire Damage to Attacks",
     },
   ];

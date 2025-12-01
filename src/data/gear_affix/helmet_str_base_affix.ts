@@ -7,7 +7,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(13â€“14)% Armor Effective Rate for Non-Physical Damage",
+    craftableAffix: "+(13-14)% Armor Effective Rate for Non-Physical Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -15,7 +15,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(3â€“5)% Max Elemental Resistance",
+    craftableAffix: "+(3-5)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -23,8 +23,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix:
-      "Converts (12â€“15)% of Physical Damage taken to Fire Damage",
+    craftableAffix: "Converts (12-15)% of Physical Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -32,8 +31,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix:
-      "Converts (27â€“35)% of Erosion Damage taken to Fire Damage",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Fire Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -42,7 +40,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(5â€“7)% Armor DMG Mitigation Penetration\n+(5â€“7)% Armor DMG Mitigation Penetration for Minions",
+      "+(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "Helmet",
@@ -50,7 +48,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6â€“8)% Sealed Mana Compensation",
+    craftableAffix: "+(6-8)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Helmet",
@@ -59,7 +57,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(6â€“8)% Elemental and Erosion Resistance Penetration\n+(6â€“8)% Elemental and Erosion Resistance Penetration for Minions",
+      "+(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
   },
   {
     equipmentSlot: "Helmet",
@@ -67,7 +65,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(7â€“8)% Aura Effect",
+    craftableAffix: "+(7-8)% Aura Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -84,7 +82,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "Helmet",
@@ -92,7 +90,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "Helmet",
@@ -100,7 +98,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "Helmet",
@@ -108,7 +106,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Skill Area",
+    craftableAffix: "+(20-24)% Skill Area",
   },
   {
     equipmentSlot: "Helmet",
@@ -116,7 +114,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -124,7 +122,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -132,7 +130,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -140,7 +138,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -148,7 +146,7 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54â€“74) Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -156,6 +154,6 @@ export const HELMET_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(760â€“960) Armor",
+    craftableAffix: "+(760-960) Armor",
   },
 ];

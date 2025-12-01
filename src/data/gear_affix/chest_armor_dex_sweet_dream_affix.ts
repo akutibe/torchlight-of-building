@@ -8,7 +8,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "0",
-      craftableAffix: "+(3â€“5)% Max Elemental Resistance",
+      craftableAffix: "+(3-5)% Max Elemental Resistance",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -25,7 +25,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       craftingPool: "",
       tier: "0",
       craftableAffix:
-        "Converts (12â€“15)% of Physical Damage taken to Lightning Damage",
+        "Converts (12-15)% of Physical Damage taken to Lightning Damage",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -34,7 +34,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       craftingPool: "",
       tier: "0",
       craftableAffix:
-        "Converts (27â€“35)% of Erosion Damage taken to Lightning Damage",
+        "Converts (27-35)% of Erosion Damage taken to Lightning Damage",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -51,7 +51,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       craftingPool: "",
       tier: "1",
       craftableAffix:
-        "+(5â€“7)% Armor DMG Mitigation Penetration\n+(5â€“7)% Armor DMG Mitigation Penetration for Minions",
+        "+(5-7)% Armor DMG Mitigation Penetration\n+(5-7)% Armor DMG Mitigation Penetration for Minions",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -59,7 +59,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "1",
-      craftableAffix: "+(6â€“8)% Sealed Mana Compensation",
+      craftableAffix: "+(6-8)% Sealed Mana Compensation",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -68,7 +68,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       craftingPool: "",
       tier: "1",
       craftableAffix:
-        "+(6â€“8)% Elemental and Erosion Resistance Penetration\n+(6â€“8)% Elemental and Erosion Resistance Penetration for Minions",
+        "+(6-8)% Elemental and Erosion Resistance Penetration\n+(6-8)% Elemental and Erosion Resistance Penetration for Minions",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -76,7 +76,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "1",
-      craftableAffix: "+(7â€“8)% Aura Effect",
+      craftableAffix: "+(7-8)% Aura Effect",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -92,7 +92,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(15â€“20) Dexterity",
+      craftableAffix: "+(15-20) Dexterity",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -100,7 +100,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(15â€“20) Intelligence",
+      craftableAffix: "+(15-20) Intelligence",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -108,7 +108,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(15â€“20) Strength",
+      craftableAffix: "+(15-20) Strength",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -116,7 +116,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(20â€“24)% Skill Area",
+      craftableAffix: "+(20-24)% Skill Area",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -124,7 +124,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(5â€“10)% Cold Resistance",
+      craftableAffix: "+(5-10)% Cold Resistance",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -132,7 +132,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(5â€“10)% Erosion Resistance",
+      craftableAffix: "+(5-10)% Erosion Resistance",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -140,7 +140,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(5â€“10)% Fire Resistance",
+      craftableAffix: "+(5-10)% Fire Resistance",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -148,7 +148,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(5â€“10)% Lightning Resistance",
+      craftableAffix: "+(5-10)% Lightning Resistance",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -156,7 +156,7 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(54â€“74) Max Life",
+      craftableAffix: "+(54-74) Max Life",
     },
     {
       equipmentSlot: "Chest Armor",
@@ -164,6 +164,6 @@ export const CHEST_ARMOR_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "Regenerates (0.5â€“1.0)% Life per second",
+      craftableAffix: "Regenerates (0.5-1.0)% Life per second",
     },
   ];

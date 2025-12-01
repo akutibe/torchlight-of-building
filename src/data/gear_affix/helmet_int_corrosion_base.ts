@@ -7,7 +7,7 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "(-50â€“-30)% Cursed Effect",
+    craftableAffix: "(-50--30)% Cursed Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -15,7 +15,7 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(10â€“15)% Sealed Mana Compensation",
+    craftableAffix: "+(10-15)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Helmet",
@@ -23,7 +23,7 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15â€“20)% Max Energy Shield",
+    craftableAffix: "+(15-20)% Max Energy Shield",
   },
   {
     equipmentSlot: "Helmet",
@@ -31,7 +31,7 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15â€“20)% Max Life",
+    craftableAffix: "+(15-20)% Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -39,7 +39,7 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(30â€“50)% gear Energy Shield",
+    craftableAffix: "+(30-50)% gear Energy Shield",
   },
   {
     equipmentSlot: "Helmet",
@@ -47,7 +47,7 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(50â€“70)% damage",
+    craftableAffix: "+(50-70)% damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -72,7 +72,7 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. (15â€“20) Timid Curse upon inflicting damage. Cooldown: 0.3 s",
+      "Triggers Lv. (15-20) Timid Curse upon inflicting damage. Cooldown: 0.3 s",
   },
   {
     equipmentSlot: "Helmet",
@@ -81,6 +81,6 @@ export const HELMET_INT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. (15â€“20) Entangled Pain Curse upon inflicting damage. Cooldown: 0.3 s",
+      "Triggers Lv. (15-20) Entangled Pain Curse upon inflicting damage. Cooldown: 0.3 s",
   },
 ];

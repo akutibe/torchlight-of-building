@@ -7,8 +7,7 @@ export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix:
-      "Lucky Critical Strike\n(-150â€“-120) Critical Strike Rating",
+    craftableAffix: "Lucky Critical Strike\n(-150--120) Critical Strike Rating",
   },
   {
     equipmentSlot: "Gloves",
@@ -16,7 +15,7 @@ export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(12â€“15)% Attack Speed",
+    craftableAffix: "+(12-15)% Attack Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -24,7 +23,7 @@ export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(12â€“15)% Cast Speed",
+    craftableAffix: "+(12-15)% Cast Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -32,7 +31,7 @@ export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15â€“20)% chance to Mark the target on hit",
+    craftableAffix: "+(15-20)% chance to Mark the target on hit",
   },
   {
     equipmentSlot: "Gloves",
@@ -40,7 +39,7 @@ export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15â€“20)% chance to cause Blinding on hit",
+    craftableAffix: "+(15-20)% chance to cause Blinding on hit",
   },
   {
     equipmentSlot: "Gloves",
@@ -48,7 +47,7 @@ export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(15â€“20)% chance to inflict Paralysis on hit",
+    craftableAffix: "+(15-20)% chance to inflict Paralysis on hit",
   },
   {
     equipmentSlot: "Gloves",
@@ -56,7 +55,7 @@ export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(30â€“50)% Gear Armor",
+    craftableAffix: "+(30-50)% Gear Armor",
   },
   {
     equipmentSlot: "Gloves",
@@ -64,7 +63,7 @@ export const GLOVES_STR_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(50â€“70)% damage",
+    craftableAffix: "+(50-70)% damage",
   },
   {
     equipmentSlot: "Gloves",

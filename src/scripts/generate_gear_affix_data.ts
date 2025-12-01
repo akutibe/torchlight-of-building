@@ -63,6 +63,12 @@ const parseAffixText = (
   text = text.replace(/\s\s+/g, " ").trim();
   text = text.replace(/{REPLACEME} /g, "\n");
 
+  // Replace various dash characters with regular hyphens
+  // The HTML source contains mojibake: â€" (U+00E2 U+20AC U+201C) which should be an em-dash
+  text = text.replace(/\u00e2\u20ac\u201c/g, "-");
+  text = text.replace(/\u2014/g, "-"); // em-dash
+  text = text.replace(/\u2013/g, "-"); // en-dash
+
   return text;
 };
 

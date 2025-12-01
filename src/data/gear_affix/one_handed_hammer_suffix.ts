@@ -7,7 +7,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(126â€“163)% Demolisher Charge Restoration Speed",
+    craftableAffix: "+(126-163)% Demolisher Charge Restoration Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -15,7 +15,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(41â€“52)% chance to deal Double Damage",
+    craftableAffix: "+(41-52)% chance to deal Double Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -23,7 +23,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(48â€“60)% Focus Damage Enhancement",
+    craftableAffix: "+(48-60)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -31,16 +31,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(54â€“69)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Hammer",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    craftableAffix:
-      "+(55â€“65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+    craftableAffix: "+(54-69)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "One-Handed",
@@ -49,40 +40,16 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+30% Steep Strike chance.\n+(23â€“29)% additional Steep Strike Damage",
+      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
     equipmentType: "One-Handed Hammer",
     affixType: "Suffix",
     craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix: "+(29â€“40)% chance to deal Double Damage",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Hammer",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix: "+(35â€“45)% Focus Damage Enhancement",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Hammer",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix: "+(38â€“53)% additional damage against Frozen enemies",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Hammer",
-    affixType: "Suffix",
-    craftingPool: "Ultimate",
-    tier: "1",
+    tier: "0",
     craftableAffix:
-      "+(40â€“50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+      "+30% Steep Strike chance.\n+(23-29)% additional Steep Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -90,7 +57,23 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(89â€“125)% Demolisher Charge Restoration Speed",
+    craftableAffix: "+(29-40)% chance to deal Double Damage",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Hammer",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "+(35-45)% Focus Damage Enhancement",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Hammer",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "+(38-53)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "One-Handed",
@@ -99,7 +82,24 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+23% Steep Strike chance.\n+(16â€“22)% additional Steep Strike Damage",
+      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Hammer",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "+(89-125)% Demolisher Charge Restoration Speed",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Hammer",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix:
+      "+23% Steep Strike chance.\n+(16-22)% additional Steep Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -107,7 +107,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(166â€“234)% Critical Strike Rating",
+    craftableAffix: "+(166-234)% Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -116,7 +116,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(33â€“47)% Attack and Cast Speed\n+(33â€“47)% Minion Attack and Cast Speed",
+      "+(33-47)% Attack and Cast Speed\n+(33-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -124,7 +124,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(47â€“64)% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(47-64)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -132,7 +132,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(60â€“70)% Focus Speed",
+    craftableAffix: "+(60-70)% Focus Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -140,7 +140,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(76â€“98)% Affliction Effect",
+    craftableAffix: "+(76-98)% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -148,7 +148,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91â€“117)% Critical Strike Damage",
+    craftableAffix: "+(91-117)% Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -156,7 +156,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(128â€“180)% Critical Strike Rating",
+    craftableAffix: "+(128-180)% Critical Strike Rating",
   },
   {
     equipmentSlot: "One-Handed",
@@ -165,7 +165,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(26â€“36)% Attack and Cast Speed\n+(26â€“36)% Minion Attack and Cast Speed",
+      "+(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -173,7 +173,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(36â€“50)% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(36-50)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "One-Handed",
@@ -181,7 +181,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(45â€“54)% Focus Speed",
+    craftableAffix: "+(45-54)% Focus Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -189,7 +189,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(54â€“75)% Affliction Effect",
+    craftableAffix: "+(54-75)% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -197,7 +197,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64â€“90)% Critical Strike Damage",
+    craftableAffix: "+(64-90)% Critical Strike Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -205,7 +205,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109â€“140)% Elemental Damage",
+    craftableAffix: "+(109-140)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -213,7 +213,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109â€“140)% Erosion Damage",
+    craftableAffix: "+(109-140)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -221,7 +221,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109â€“140)% Physical Damage",
+    craftableAffix: "+(109-140)% Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -229,7 +229,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(19â€“23)% Energy Shield Regain",
+    craftableAffix: "+(19-23)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -237,7 +237,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(19â€“23)% Life Regain",
+    craftableAffix: "+(19-23)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -246,7 +246,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "0",
     craftableAffix:
-      "+(64â€“74)% additional Attack Damage after standing still for 0.1s. -20% additional Attack Speed",
+      "+(64-74)% additional Attack Damage after standing still for 0.1s. -20% additional Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -254,7 +254,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(14â€“18)% Energy Shield Regain",
+    craftableAffix: "+(14-18)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -262,7 +262,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(14â€“18)% Life Regain",
+    craftableAffix: "+(14-18)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -271,7 +271,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "1",
     craftableAffix:
-      "+(55â€“63)% additional Attack Damage after standing still for 0.1s. -20% additional Attack Speed",
+      "+(55-63)% additional Attack Damage after standing still for 0.1s. -20% additional Attack Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -279,7 +279,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77â€“108)% Elemental Damage",
+    craftableAffix: "+(77-108)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -287,7 +287,7 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77â€“108)% Erosion Damage",
+    craftableAffix: "+(77-108)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -295,6 +295,6 @@ export const ONE_HANDED_HAMMER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77â€“108)% Physical Damage",
+    craftableAffix: "+(77-108)% Physical Damage",
   },
 ];

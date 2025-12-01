@@ -7,7 +7,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(21â€“26)% Sealed Mana Compensation",
+    craftableAffix: "+(21-26)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Trinket",
@@ -15,7 +15,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(21â€“26)% Aura Effect",
+    craftableAffix: "+(21-26)% Aura Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -23,7 +23,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(33â€“42)% additional Deterioration Duration",
+    craftableAffix: "+(33-42)% additional Deterioration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -31,7 +31,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(37â€“54)% Freeze Duration",
+    craftableAffix: "+(37-54)% Freeze Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -39,7 +39,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(7â€“8)% damage per stack of any Blessing",
+    craftableAffix: "+(7-8)% damage per stack of any Blessing",
   },
   {
     equipmentSlot: "Trinket",
@@ -55,7 +55,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(15â€“20)% Sealed Mana Compensation",
+    craftableAffix: "+(15-20)% Sealed Mana Compensation",
   },
   {
     equipmentSlot: "Trinket",
@@ -63,7 +63,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(15â€“20)% Aura Effect",
+    craftableAffix: "+(15-20)% Aura Effect",
   },
   {
     equipmentSlot: "Trinket",
@@ -71,7 +71,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(23â€“32)% additional Deterioration Duration",
+    craftableAffix: "+(23-32)% additional Deterioration Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -79,7 +79,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(28â€“36)% Freeze Duration",
+    craftableAffix: "+(28-36)% Freeze Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -87,7 +87,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(5â€“6)% damage per stack of any Blessing",
+    craftableAffix: "+(5-6)% damage per stack of any Blessing",
   },
   {
     equipmentSlot: "Trinket",
@@ -103,7 +103,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(11â€“13)% Elemental Resistance",
+    craftableAffix: "+(11-13)% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -111,7 +111,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(11â€“13)% all stats",
+    craftableAffix: "+(11-13)% all stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -119,7 +119,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(19â€“23)% Blessing Duration",
+    craftableAffix: "+(19-23)% Blessing Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -128,7 +128,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(25â€“31)% Attack and Cast Speed\n+(25â€“31)% Minion Attack and Cast Speed",
+      "+(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -136,7 +136,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61â€“78)% Critical Strike Damage",
+    craftableAffix: "+(61-78)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -162,7 +162,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(14â€“18)% Blessing Duration",
+    craftableAffix: "+(14-18)% Blessing Duration",
   },
   {
     equipmentSlot: "Trinket",
@@ -171,7 +171,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(18â€“24)% Attack and Cast Speed\n+(18â€“24)% Minion Attack and Cast Speed",
+      "+(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -179,7 +179,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(42â€“60)% Critical Strike Damage",
+    craftableAffix: "+(42-60)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Trinket",
@@ -187,7 +187,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(8â€“10)% Elemental Resistance",
+    craftableAffix: "+(8-10)% Elemental Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -195,7 +195,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(8â€“10)% all stats",
+    craftableAffix: "+(8-10)% all stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -220,7 +220,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“35)% Cold Resistance",
+    craftableAffix: "+(25-35)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -228,7 +228,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“35)% Erosion Resistance",
+    craftableAffix: "+(25-35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -236,7 +236,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“35)% Fire Resistance",
+    craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -244,7 +244,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“35)% Lightning Resistance",
+    craftableAffix: "+(25-35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -252,7 +252,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(46â€“59)% Projectile Speed",
+    craftableAffix: "+(46-59)% Projectile Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -260,7 +260,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19â€“27)% Cold Resistance",
+    craftableAffix: "+(19-27)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -268,7 +268,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19â€“27)% Erosion Resistance",
+    craftableAffix: "+(19-27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -276,7 +276,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19â€“27)% Fire Resistance",
+    craftableAffix: "+(19-27)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -284,7 +284,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19â€“27)% Lightning Resistance",
+    craftableAffix: "+(19-27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -292,6 +292,6 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(33â€“45)% Projectile Speed",
+    craftableAffix: "+(33-45)% Projectile Speed",
   },
 ];

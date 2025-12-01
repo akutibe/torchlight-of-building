@@ -7,7 +7,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(26â€“33)% additional Defense gained from Shield",
+    craftableAffix: "+(26-33)% additional Defense gained from Shield",
   },
   {
     equipmentSlot: "Shield",
@@ -15,7 +15,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(48â€“60)% Focus Damage Enhancement",
+    craftableAffix: "+(48-60)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "Shield",
@@ -24,7 +24,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(55â€“65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "Shield",
@@ -32,7 +32,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(9â€“10)% Max Elemental Resistance",
+    craftableAffix: "+(9-10)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -56,7 +56,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(19â€“25)% additional Defense gained from Shield",
+    craftableAffix: "+(19-25)% additional Defense gained from Shield",
   },
   {
     equipmentSlot: "Shield",
@@ -64,7 +64,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(35â€“45)% Focus Damage Enhancement",
+    craftableAffix: "+(35-45)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "Shield",
@@ -73,7 +73,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(40â€“50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "Shield",
@@ -81,7 +81,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(7â€“8)% Max Elemental Resistance",
+    craftableAffix: "+(7-8)% Max Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -105,7 +105,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(165â€“234)% Critical Strike Rating",
+    craftableAffix: "+(165-234)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Shield",
@@ -114,7 +114,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(34â€“47)% Attack and Cast Speed\n+(34â€“47)% Minion Attack and Cast Speed",
+      "+(34-47)% Attack and Cast Speed\n+(34-47)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -122,7 +122,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(49â€“72)% Warcry Effect",
+    craftableAffix: "+(49-72)% Warcry Effect",
   },
   {
     equipmentSlot: "Shield",
@@ -130,7 +130,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(60â€“70)% Focus Speed",
+    craftableAffix: "+(60-70)% Focus Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -138,7 +138,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(83â€“117)% Critical Strike Damage",
+    craftableAffix: "+(83-117)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -146,7 +146,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(91â€“117)% Mana Regeneration Speed",
+    craftableAffix: "+(91-117)% Mana Regeneration Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -162,7 +162,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(127â€“180)% Critical Strike Rating",
+    craftableAffix: "+(127-180)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Shield",
@@ -171,7 +171,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(26â€“36)% Attack and Cast Speed\n+(26â€“36)% Minion Attack and Cast Speed",
+      "+(26-36)% Attack and Cast Speed\n+(26-36)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -179,7 +179,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(37â€“48)% Warcry Effect",
+    craftableAffix: "+(37-48)% Warcry Effect",
   },
   {
     equipmentSlot: "Shield",
@@ -187,7 +187,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(45â€“54)% Focus Speed",
+    craftableAffix: "+(45-54)% Focus Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -195,7 +195,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64â€“90)% Critical Strike Damage",
+    craftableAffix: "+(64-90)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -203,7 +203,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(64â€“90)% Mana Regeneration Speed",
+    craftableAffix: "+(64-90)% Mana Regeneration Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -219,7 +219,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(15â€“18)% Elemental Resistance",
+    craftableAffix: "+(15-18)% Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -227,7 +227,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“31)% Energy Shield Charge Speed",
+    craftableAffix: "+(25-31)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -235,7 +235,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(41â€“45)% Cold Resistance",
+    craftableAffix: "+(41-45)% Cold Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -243,7 +243,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(41â€“45)% Erosion Resistance",
+    craftableAffix: "+(41-45)% Erosion Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -251,7 +251,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(41â€“45)% Fire Resistance",
+    craftableAffix: "+(41-45)% Fire Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -259,7 +259,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(41â€“45)% Lightning Resistance",
+    craftableAffix: "+(41-45)% Lightning Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -267,7 +267,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Restores (5â€“6)% Energy Shield on Block. Interval: 0.3s",
+    craftableAffix: "Restores (5-6)% Energy Shield on Block. Interval: 0.3s",
   },
   {
     equipmentSlot: "Shield",
@@ -275,7 +275,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(10â€“14)% Elemental Resistance",
+    craftableAffix: "+(10-14)% Elemental Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -283,7 +283,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(18â€“24)% Energy Shield Charge Speed",
+    craftableAffix: "+(18-24)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "Shield",
@@ -291,7 +291,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(29â€“40)% Cold Resistance",
+    craftableAffix: "+(29-40)% Cold Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -299,7 +299,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(29â€“40)% Erosion Resistance",
+    craftableAffix: "+(29-40)% Erosion Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -307,7 +307,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(29â€“40)% Fire Resistance",
+    craftableAffix: "+(29-40)% Fire Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -315,7 +315,7 @@ export const SHIELD_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(29â€“40)% Lightning Resistance",
+    craftableAffix: "+(29-40)% Lightning Resistance",
   },
   {
     equipmentSlot: "Shield",

@@ -15,7 +15,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(5â€“7)% Armor DMG Mitigation Penetration for Minions",
+    craftableAffix: "+(5-7)% Armor DMG Mitigation Penetration for Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -23,7 +23,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6â€“8)% additional Minion Damage",
+    craftableAffix: "+(6-8)% additional Minion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -49,7 +49,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Minion Damage penetrates (6â€“8)% Elemental Resistance",
+    craftableAffix: "Minion Damage penetrates (6-8)% Elemental Resistance",
   },
   {
     equipmentSlot: "One-Handed",
@@ -57,7 +57,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "One-Handed",
@@ -65,7 +65,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,7 +73,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "One-Handed",
@@ -81,7 +81,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Minion Damage",
+    craftableAffix: "+(20-24)% Minion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,7 +89,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(6â€“8)% Minion Attack and Cast Speed",
+    craftableAffix: "+(6-8)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,7 +97,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1â€“2) - (28â€“32) Lightning Damage to Minions",
+    craftableAffix: "Adds (1-2) - (28-32) Lightning Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -105,7 +105,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10â€“13) - (14â€“19) Cold Damage to Minions",
+    craftableAffix: "Adds (10-13) - (14-19) Cold Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -113,7 +113,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10â€“13) - (14â€“19) Physical Damage to Minions",
+    craftableAffix: "Adds (10-13) - (14-19) Physical Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -121,7 +121,7 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (11â€“13) - (15â€“18) Erosion Damage to Minions",
+    craftableAffix: "Adds (11-13) - (15-18) Erosion Damage to Minions",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,6 +129,6 @@ export const ROD_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (9â€“14) - (15â€“20) Fire Damage to Minions",
+    craftableAffix: "Adds (9-14) - (15-20) Fire Damage to Minions",
   },
 ];

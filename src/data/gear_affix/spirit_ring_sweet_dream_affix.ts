@@ -67,7 +67,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(11â€“15)% Movement Speed",
+    craftableAffix: "+(11-15)% Movement Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -110,7 +110,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Dexterity",
+    craftableAffix: "+(15-20) Dexterity",
   },
   {
     equipmentSlot: "Trinket",
@@ -118,7 +118,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Intelligence",
+    craftableAffix: "+(15-20) Intelligence",
   },
   {
     equipmentSlot: "Trinket",
@@ -126,7 +126,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(15â€“20) Strength",
+    craftableAffix: "+(15-20) Strength",
   },
   {
     equipmentSlot: "Trinket",
@@ -134,7 +134,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -142,7 +142,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -150,7 +150,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -158,7 +158,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Trinket",
@@ -166,7 +166,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54â€“74) Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Trinket",
@@ -175,7 +175,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "2",
     craftableAffix:
-      "+(6â€“8)% Minion Movement Speed, Attack Speed, and Cast Speed",
+      "+(6-8)% Minion Movement Speed, Attack Speed, and Cast Speed",
   },
   {
     equipmentSlot: "Trinket",
@@ -183,6 +183,6 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(87â€“117) Max Energy Shield",
+    craftableAffix: "+(87-117) Max Energy Shield",
   },
 ];

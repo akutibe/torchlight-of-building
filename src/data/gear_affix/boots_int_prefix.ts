@@ -7,7 +7,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "(21â€“26)% of damage is taken from Mana before life",
+    craftableAffix: "(21-26)% of damage is taken from Mana before life",
   },
   {
     equipmentSlot: "Boots",
@@ -15,32 +15,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(16â€“20)% additional Max Energy Shield",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (INT)",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    craftableAffix:
-      "+(31â€“40)% Spell Burst Charge Speed\n+10% chance to immediately gain 1 stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (INT)",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    craftableAffix: "+(31â€“40)% chance to avoid Spell Damage",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (INT)",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    craftableAffix: "70% chance to gain Blur per (5â€“10) m you move",
+    craftableAffix: "+(16-20)% additional Max Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -49,7 +24,39 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Converts (16â€“20)% of Physical Damage taken to Cold Damage",
+      "+(31-40)% Spell Burst Charge Speed\n+10% chance to immediately gain 1 stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "+(31-40)% chance to avoid Spell Damage",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "70% chance to gain Blur per (5-10) m you move",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "Converts (16-20)% of Physical Damage taken to Cold Damage",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "Converts (36-45)% of Erosion Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -58,16 +65,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Converts (36â€“45)% of Erosion Damage taken to Cold Damage",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (INT)",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "0",
-    craftableAffix:
-      "Triggers Lv. (11â€“20) Aim while standing still. Interval: 1 s",
+      "Triggers Lv. (11-20) Aim while standing still. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -75,7 +73,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "(15â€“20)% of damage is taken from Mana before life",
+    craftableAffix: "(15-20)% of damage is taken from Mana before life",
   },
   {
     equipmentSlot: "Boots",
@@ -83,7 +81,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(12â€“15)% additional Max Energy Shield",
+    craftableAffix: "+(12-15)% additional Max Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -92,7 +90,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(21â€“30)% Spell Burst Charge Speed\n+10% chance to immediately gain 1 stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
+      "+(21-30)% Spell Burst Charge Speed\n+10% chance to immediately gain 1 stack(s) of Spell Burst Charge when using a skill. Interval: 0.03s",
   },
   {
     equipmentSlot: "Boots",
@@ -100,7 +98,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(26â€“30)% chance to avoid Spell Damage",
+    craftableAffix: "+(26-30)% chance to avoid Spell Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -108,7 +106,23 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "50% chance to gain Blur per (5â€“10) m you move",
+    craftableAffix: "50% chance to gain Blur per (5-10) m you move",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "Converts (12-15)% of Physical Damage taken to Cold Damage",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Prefix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "Converts (27-35)% of Erosion Damage taken to Cold Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -117,25 +131,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Converts (12â€“15)% of Physical Damage taken to Cold Damage",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (INT)",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix:
-      "Converts (27â€“35)% of Erosion Damage taken to Cold Damage",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (INT)",
-    affixType: "Prefix",
-    craftingPool: "Ultimate",
-    tier: "1",
-    craftableAffix:
-      "Triggers Lv. (6â€“10) Aim while standing still. Interval: 1 s",
+      "Triggers Lv. (6-10) Aim while standing still. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -143,7 +139,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(16â€“20)% Attack and Spell Block Chance",
+    craftableAffix: "+(16-20)% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Boots",
@@ -151,7 +147,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(46â€“59)% Projectile Speed",
+    craftableAffix: "+(46-59)% Projectile Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -207,7 +203,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(12â€“15)% Attack and Spell Block Chance",
+    craftableAffix: "+(12-15)% Attack and Spell Block Chance",
   },
   {
     equipmentSlot: "Boots",
@@ -215,7 +211,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(33â€“45)% Projectile Speed",
+    craftableAffix: "+(33-45)% Projectile Speed",
   },
   {
     equipmentSlot: "Boots",
@@ -271,7 +267,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121â€“156) Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Boots",
@@ -279,7 +275,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221â€“286) Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -287,7 +283,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(341â€“442) gear Energy Shield",
+    craftableAffix: "+(341-442) gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -295,7 +291,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(61â€“78)% Critical Strike Damage Mitigation",
+    craftableAffix: "+(61-78)% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Boots",
@@ -303,7 +299,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(61â€“86)% gear Energy Shield",
+    craftableAffix: "+(61-86)% gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -311,7 +307,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(73â€“94)% damage",
+    craftableAffix: "+(73-94)% damage",
   },
   {
     equipmentSlot: "Boots",
@@ -319,7 +315,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(73â€“94)% Minion Damage",
+    craftableAffix: "+(73-94)% Minion Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -327,7 +323,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(155â€“220) Max Life",
+    craftableAffix: "+(155-220) Max Life",
   },
   {
     equipmentSlot: "Boots",
@@ -335,7 +331,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(239â€“340) gear Energy Shield",
+    craftableAffix: "+(239-340) gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -343,7 +339,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(43â€“60)% Critical Strike Damage Mitigation",
+    craftableAffix: "+(43-60)% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Boots",
@@ -351,7 +347,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(47â€“66)% gear Energy Shield",
+    craftableAffix: "+(47-66)% gear Energy Shield",
   },
   {
     equipmentSlot: "Boots",
@@ -359,7 +355,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(51â€“72)% damage",
+    craftableAffix: "+(51-72)% damage",
   },
   {
     equipmentSlot: "Boots",
@@ -367,7 +363,7 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(51â€“72)% Minion Damage",
+    craftableAffix: "+(51-72)% Minion Damage",
   },
   {
     equipmentSlot: "Boots",
@@ -375,6 +371,6 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85â€“120) Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ];

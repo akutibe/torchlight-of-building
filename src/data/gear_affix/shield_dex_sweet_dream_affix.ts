@@ -7,7 +7,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(4â€“5)% Max Elemental and Erosion Resistance",
+    craftableAffix: "+(4-5)% Max Elemental and Erosion Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -16,7 +16,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Converts (12â€“15)% of Physical Damage taken to Lightning Damage",
+      "Converts (12-15)% of Physical Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -25,7 +25,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Converts (27â€“35)% of Erosion Damage taken to Lightning Damage",
+      "Converts (27-35)% of Erosion Damage taken to Lightning Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -33,7 +33,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35â€“40) Dexterity",
+    craftableAffix: "+(35-40) Dexterity",
   },
   {
     equipmentSlot: "Shield",
@@ -41,7 +41,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35â€“40) Intelligence",
+    craftableAffix: "+(35-40) Intelligence",
   },
   {
     equipmentSlot: "Shield",
@@ -49,7 +49,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(35â€“40) Strength",
+    craftableAffix: "+(35-40) Strength",
   },
   {
     equipmentSlot: "Shield",
@@ -57,7 +57,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6â€“8)% additional damage",
+    craftableAffix: "+(6-8)% additional damage",
   },
   {
     equipmentSlot: "Shield",
@@ -74,7 +74,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(10â€“14)% Evasion",
+    craftableAffix: "+(10-14)% Evasion",
   },
   {
     equipmentSlot: "Shield",
@@ -82,7 +82,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Elemental Damage",
+    craftableAffix: "+(20-24)% Elemental Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -90,7 +90,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Erosion Damage",
+    craftableAffix: "+(20-24)% Erosion Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -98,7 +98,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Physical Damage",
+    craftableAffix: "+(20-24)% Physical Damage",
   },
   {
     equipmentSlot: "Shield",
@@ -106,7 +106,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Cold Resistance",
+    craftableAffix: "+(5-10)% Cold Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -114,7 +114,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Erosion Resistance",
+    craftableAffix: "+(5-10)% Erosion Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -122,7 +122,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Fire Resistance",
+    craftableAffix: "+(5-10)% Fire Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -130,7 +130,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(5â€“10)% Lightning Resistance",
+    craftableAffix: "+(5-10)% Lightning Resistance",
   },
   {
     equipmentSlot: "Shield",
@@ -138,7 +138,7 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(54â€“74) Max Life",
+    craftableAffix: "+(54-74) Max Life",
   },
   {
     equipmentSlot: "Shield",
@@ -146,6 +146,6 @@ export const SHIELD_DEX_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(8â€“10)% Attack and Spell Block Chance",
+    craftableAffix: "+(8-10)% Attack and Spell Block Chance",
   },
 ];

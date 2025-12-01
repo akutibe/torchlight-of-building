@@ -7,7 +7,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(10â€“11) Support Skill Level",
+    craftableAffix: "+(10-11) Support Skill Level",
   },
   {
     equipmentSlot: "Helmet",
@@ -15,7 +15,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(25â€“31)% additional damage taken by Nearby enemies",
+    craftableAffix: "+(25-31)% additional damage taken by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",
@@ -23,7 +23,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(41â€“52)% Numbed Effect",
+    craftableAffix: "+(41-52)% Numbed Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -31,7 +31,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(50â€“68)% chance to avoid Elemental Ailments",
+    craftableAffix: "+(50-68)% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Helmet",
@@ -39,7 +39,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(84â€“108)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(84-108)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -47,7 +47,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(18â€“24)% additional damage taken by Nearby enemies",
+    craftableAffix: "+(18-24)% additional damage taken by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",
@@ -55,7 +55,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(29â€“40)% Numbed Effect",
+    craftableAffix: "+(29-40)% Numbed Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -63,7 +63,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(30â€“45)% chance to avoid Elemental Ailments",
+    craftableAffix: "+(30-45)% chance to avoid Elemental Ailments",
   },
   {
     equipmentSlot: "Helmet",
@@ -71,7 +71,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(59â€“83)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(59-83)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -79,7 +79,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(6â€“9) Support Skill Level",
+    craftableAffix: "+(6-9) Support Skill Level",
   },
   {
     equipmentSlot: "Helmet",
@@ -87,7 +87,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "(11â€“15)% chance to gain a Barrier on defeat",
+    craftableAffix: "(11-15)% chance to gain a Barrier on defeat",
   },
   {
     equipmentSlot: "Helmet",
@@ -95,7 +95,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(19â€“23)% Armor\n+(11â€“143) Max Life",
+    craftableAffix: "+(19-23)% Armor\n+(11-143) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -104,7 +104,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(25â€“31)% Attack and Cast Speed\n+(25â€“31)% Minion Attack and Cast Speed",
+      "+(25-31)% Attack and Cast Speed\n+(25-31)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -112,7 +112,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(37â€“47)% Focus Speed",
+    craftableAffix: "+(37-47)% Focus Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -120,7 +120,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(49â€“62)% Skill Area\n+(49â€“62)% Minion Skill Area",
+    craftableAffix: "+(49-62)% Skill Area\n+(49-62)% Minion Skill Area",
   },
   {
     equipmentSlot: "Helmet",
@@ -128,7 +128,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(51â€“65)% Reaping Duration",
+    craftableAffix: "+(51-65)% Reaping Duration",
   },
   {
     equipmentSlot: "Helmet",
@@ -136,7 +136,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(61â€“78)% Critical Strike Damage",
+    craftableAffix: "+(61-78)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -144,7 +144,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(14â€“18)% Armor\n+(78â€“110) Max Life",
+    craftableAffix: "+(14-18)% Armor\n+(78-110) Max Life",
   },
   {
     equipmentSlot: "Helmet",
@@ -153,7 +153,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(18â€“24)% Attack and Cast Speed\n+(18â€“24)% Minion Attack and Cast Speed",
+      "+(18-24)% Attack and Cast Speed\n+(18-24)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -161,7 +161,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(26â€“36)% Focus Speed",
+    craftableAffix: "+(26-36)% Focus Speed",
   },
   {
     equipmentSlot: "Helmet",
@@ -169,7 +169,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(35â€“48)% Skill Area\n+(35â€“48)% Minion Skill Area",
+    craftableAffix: "+(35-48)% Skill Area\n+(35-48)% Minion Skill Area",
   },
   {
     equipmentSlot: "Helmet",
@@ -177,7 +177,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(36â€“50)% Reaping Duration",
+    craftableAffix: "+(36-50)% Reaping Duration",
   },
   {
     equipmentSlot: "Helmet",
@@ -185,7 +185,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(44â€“60)% Critical Strike Damage",
+    craftableAffix: "+(44-60)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Helmet",
@@ -193,7 +193,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121â€“156)% Critical Strike Rating",
+    craftableAffix: "+(121-156)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Helmet",
@@ -201,7 +201,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“35)% Cold Resistance",
+    craftableAffix: "+(25-35)% Cold Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -209,7 +209,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“35)% Erosion Resistance",
+    craftableAffix: "+(25-35)% Erosion Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -217,7 +217,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“35)% Fire Resistance",
+    craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -225,7 +225,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“35)% Lightning Resistance",
+    craftableAffix: "+(25-35)% Lightning Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -233,7 +233,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(51â€“65)% Affliction Effect",
+    craftableAffix: "+(51-65)% Affliction Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -241,7 +241,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Regenerates (121â€“156) Life per second",
+    craftableAffix: "Regenerates (121-156) Life per second",
   },
   {
     equipmentSlot: "Helmet",
@@ -249,7 +249,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19â€“27)% Cold Resistance",
+    craftableAffix: "+(19-27)% Cold Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -257,7 +257,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19â€“27)% Erosion Resistance",
+    craftableAffix: "+(19-27)% Erosion Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -265,7 +265,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19â€“27)% Fire Resistance",
+    craftableAffix: "+(19-27)% Fire Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -273,7 +273,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(19â€“27)% Lightning Resistance",
+    craftableAffix: "+(19-27)% Lightning Resistance",
   },
   {
     equipmentSlot: "Helmet",
@@ -281,7 +281,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(36â€“50)% Affliction Effect",
+    craftableAffix: "+(36-50)% Affliction Effect",
   },
   {
     equipmentSlot: "Helmet",
@@ -289,7 +289,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(87â€“120)% Critical Strike Rating",
+    craftableAffix: "+(87-120)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Helmet",
@@ -297,6 +297,6 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Regenerates (85â€“120) Life per second",
+    craftableAffix: "Regenerates (85-120) Life per second",
   },
 ];

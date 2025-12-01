@@ -7,7 +7,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(126â€“163)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(126-163)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -15,7 +15,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(48â€“60)% Focus Damage Enhancement",
+    craftableAffix: "+(48-60)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -23,7 +23,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(54â€“69)% additional damage against Frozen enemies",
+    craftableAffix: "+(54-69)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "One-Handed",
@@ -32,7 +32,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(55â€“65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+      "+(55-65)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -48,7 +48,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(35â€“45)% Focus Damage Enhancement",
+    craftableAffix: "+(35-45)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -56,7 +56,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(38â€“53)% additional damage against Frozen enemies",
+    craftableAffix: "+(38-53)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "One-Handed",
@@ -65,7 +65,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(40â€“50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
+      "+(40-50)% Combo Damage Enhancement if the Combo Finisher cast recently consumes at least 8 Combo Point(s)",
   },
   {
     equipmentSlot: "One-Handed",
@@ -73,7 +73,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(89â€“125)% Reaping Cooldown Recovery Speed",
+    craftableAffix: "+(89-125)% Reaping Cooldown Recovery Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -89,7 +89,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(25â€“31)% Wilt Duration",
+    craftableAffix: "+(25-31)% Wilt Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -97,7 +97,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(25â€“31)% Ignite Duration",
+    craftableAffix: "+(25-31)% Ignite Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -105,7 +105,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(25â€“31)% Trauma Duration",
+    craftableAffix: "+(25-31)% Trauma Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -113,7 +113,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(37â€“47)% Cast Speed\n+(37â€“47)% Minion Cast Speed",
+    craftableAffix: "+(37-47)% Cast Speed\n+(37-47)% Minion Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -121,7 +121,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(60â€“70)% Focus Speed",
+    craftableAffix: "+(60-70)% Focus Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -129,7 +129,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(76â€“98)% Reaping Duration",
+    craftableAffix: "+(76-98)% Reaping Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -161,7 +161,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(18â€“24)% Wilt Duration",
+    craftableAffix: "+(18-24)% Wilt Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -169,7 +169,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(18â€“24)% Ignite Duration",
+    craftableAffix: "+(18-24)% Ignite Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -177,7 +177,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(18â€“24)% Trauma Duration",
+    craftableAffix: "+(18-24)% Trauma Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -185,7 +185,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(26â€“36)% Cast Speed\n+(26â€“36)% Minion Cast Speed",
+    craftableAffix: "+(26-36)% Cast Speed\n+(26-36)% Minion Cast Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -193,7 +193,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(45â€“54)% Focus Speed",
+    craftableAffix: "+(45-54)% Focus Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -201,7 +201,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(54â€“75)% Reaping Duration",
+    craftableAffix: "+(54-75)% Reaping Duration",
   },
   {
     equipmentSlot: "One-Handed",
@@ -233,7 +233,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109â€“140)% Elemental Damage",
+    craftableAffix: "+(109-140)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -241,7 +241,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109â€“140)% Erosion Damage",
+    craftableAffix: "+(109-140)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -249,7 +249,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(109â€“140)% Physical Damage",
+    craftableAffix: "+(109-140)% Physical Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -257,7 +257,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25â€“31)% Energy Shield Charge Speed",
+    craftableAffix: "+(25-31)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -265,7 +265,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(76â€“98)% Affliction Effect",
+    craftableAffix: "+(76-98)% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -273,7 +273,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(18â€“24)% Energy Shield Charge Speed",
+    craftableAffix: "+(18-24)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -281,7 +281,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(54â€“75)% Affliction Effect",
+    craftableAffix: "+(54-75)% Affliction Effect",
   },
   {
     equipmentSlot: "One-Handed",
@@ -289,7 +289,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(77â€“108)% Erosion Damage",
+    craftableAffix: "+(77-108)% Erosion Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -297,7 +297,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(78â€“108)% Elemental Damage",
+    craftableAffix: "+(78-108)% Elemental Damage",
   },
   {
     equipmentSlot: "One-Handed",
@@ -305,6 +305,6 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(78â€“108)% Physical Damage",
+    craftableAffix: "+(78-108)% Physical Damage",
   },
 ];

@@ -8,7 +8,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(26â€“30)% additional Minion Damage when you have (1â€“8) Minion(s)",
+      "+(26-30)% additional Minion Damage when you have (1-8) Minion(s)",
   },
   {
     equipmentSlot: "Gloves",
@@ -17,7 +17,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(9â€“10)% additional Cold Damage and +(16â€“18)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
+      "+(9-10)% additional Cold Damage and +(16-18)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -26,7 +26,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(9â€“10)% additional Fire Damage and +(16â€“18)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
+      "+(9-10)% additional Fire Damage and +(16-18)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -35,7 +35,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(9â€“10)% additional Lightning Damage and +(16â€“18)% Lightning Penetration when having at least 8 stack(s) of Agility Blessing",
+      "+(9-10)% additional Lightning Damage and +(16-18)% Lightning Penetration when having at least 8 stack(s) of Agility Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -52,7 +52,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(21â€“25)% additional Minion Damage when you have (1â€“8) Minion(s)",
+      "+(21-25)% additional Minion Damage when you have (1-8) Minion(s)",
   },
   {
     equipmentSlot: "Gloves",
@@ -61,7 +61,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(6â€“8)% additional Cold Damage and +(12â€“15)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
+      "+(6-8)% additional Cold Damage and +(12-15)% Cold Penetration when having at least 8 stack(s) of Focus Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -70,7 +70,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(6â€“8)% additional Fire Damage and +(12â€“15)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
+      "+(6-8)% additional Fire Damage and +(12-15)% Fire Penetration when having at least 8 stack(s) of Tenacity Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -79,7 +79,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(6â€“8)% additional Lightning Damage and +(12â€“15)% Lightning Penetration when having at least 8 stack(s) of Agility Blessing",
+      "+(6-8)% additional Lightning Damage and +(12-15)% Lightning Penetration when having at least 8 stack(s) of Agility Blessing",
   },
   {
     equipmentSlot: "Gloves",
@@ -95,7 +95,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (13â€“16)% of Cold Damage as Erosion Damage",
+    craftableAffix: "Adds (13-16)% of Cold Damage as Erosion Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -103,7 +103,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "Adds (13â€“16)% of Physical Damage to Cold Damage",
+    craftableAffix: "Adds (13-16)% of Physical Damage to Cold Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -111,8 +111,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix:
-      "Adds (54â€“56) - (71â€“76) Fire Damage to Attacks and Spells",
+    craftableAffix: "Adds (54-56) - (71-76) Fire Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -120,17 +119,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix:
-      "Adds (55â€“57) - (73â€“75) Cold Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (INT)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "0",
-    craftableAffix:
-      "Adds (55â€“57) - (73â€“75) Erosion Damage to Attacks and Spells",
+    craftableAffix: "Adds (55-57) - (73-75) Cold Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -139,7 +128,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Adds (58â€“60) - (71â€“73) Physical Damage to Attacks and Spells",
+      "Adds (55-57) - (73-75) Erosion Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -148,7 +137,16 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "Adds (6â€“8) - (123â€“125) Lightning Damage to Attacks and Spells",
+      "Adds (58-60) - (71-73) Physical Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "0",
+    craftableAffix:
+      "Adds (6-8) - (123-125) Lightning Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -157,7 +155,23 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Adds (4â€“6) - (94â€“96) Lightning Damage to Attacks and Spells",
+      "Adds (4-6) - (94-96) Lightning Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix: "Adds (42-44) - (54-59) Fire Damage to Attacks and Spells",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Prefix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix: "Adds (42-44) - (56-58) Cold Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -166,7 +180,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Adds (42â€“44) - (54â€“59) Fire Damage to Attacks and Spells",
+      "Adds (42-44) - (56-58) Erosion Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -175,7 +189,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "Adds (42â€“44) - (56â€“58) Cold Damage to Attacks and Spells",
+      "Adds (44-46) - (54-56) Physical Damage to Attacks and Spells",
   },
   {
     equipmentSlot: "Gloves",
@@ -183,8 +197,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix:
-      "Adds (42â€“44) - (56â€“58) Erosion Damage to Attacks and Spells",
+    craftableAffix: "Adds (9-12)% of Cold Damage as Erosion Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -192,24 +205,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix:
-      "Adds (44â€“46) - (54â€“56) Physical Damage to Attacks and Spells",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (INT)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (9â€“12)% of Cold Damage as Erosion Damage",
-  },
-  {
-    equipmentSlot: "Gloves",
-    equipmentType: "Gloves (INT)",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "1",
-    craftableAffix: "Adds (9â€“12)% of Physical Damage to Cold Damage",
+    craftableAffix: "Adds (9-12)% of Physical Damage to Cold Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -217,7 +213,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(121â€“156) Max Mana",
+    craftableAffix: "+(121-156) Max Mana",
   },
   {
     equipmentSlot: "Gloves",
@@ -225,7 +221,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(221â€“286) Max Life",
+    craftableAffix: "+(221-286) Max Life",
   },
   {
     equipmentSlot: "Gloves",
@@ -233,7 +229,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(26â€“37)% Frostbite inflicted",
+    craftableAffix: "+(26-37)% Frostbite inflicted",
   },
   {
     equipmentSlot: "Gloves",
@@ -241,7 +237,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(341â€“442) gear Energy Shield",
+    craftableAffix: "+(341-442) gear Energy Shield",
   },
   {
     equipmentSlot: "Gloves",
@@ -249,7 +245,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(61â€“78)% Critical Strike Damage Mitigation",
+    craftableAffix: "+(61-78)% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Gloves",
@@ -257,7 +253,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(61â€“78)% Mana Regeneration Speed",
+    craftableAffix: "+(61-78)% Mana Regeneration Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -265,7 +261,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(61â€“86)% gear Energy Shield",
+    craftableAffix: "+(61-86)% gear Energy Shield",
   },
   {
     equipmentSlot: "Gloves",
@@ -273,7 +269,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(73â€“94)% damage",
+    craftableAffix: "+(73-94)% damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -281,7 +277,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(73â€“94)% Minion Damage",
+    craftableAffix: "+(73-94)% Minion Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -289,7 +285,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(155â€“220) Max Life",
+    craftableAffix: "+(155-220) Max Life",
   },
   {
     equipmentSlot: "Gloves",
@@ -297,7 +293,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(20â€“25)% Frostbite inflicted",
+    craftableAffix: "+(20-25)% Frostbite inflicted",
   },
   {
     equipmentSlot: "Gloves",
@@ -305,7 +301,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(239â€“340) gear Energy Shield",
+    craftableAffix: "+(239-340) gear Energy Shield",
   },
   {
     equipmentSlot: "Gloves",
@@ -313,7 +309,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(43â€“60)% Critical Strike Damage Mitigation",
+    craftableAffix: "+(43-60)% Critical Strike Damage Mitigation",
   },
   {
     equipmentSlot: "Gloves",
@@ -321,7 +317,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(43â€“60)% Mana Regeneration Speed",
+    craftableAffix: "+(43-60)% Mana Regeneration Speed",
   },
   {
     equipmentSlot: "Gloves",
@@ -329,7 +325,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(47â€“66)% gear Energy Shield",
+    craftableAffix: "+(47-66)% gear Energy Shield",
   },
   {
     equipmentSlot: "Gloves",
@@ -337,7 +333,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(51â€“72)% damage",
+    craftableAffix: "+(51-72)% damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -345,7 +341,7 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(51â€“72)% Minion Damage",
+    craftableAffix: "+(51-72)% Minion Damage",
   },
   {
     equipmentSlot: "Gloves",
@@ -353,6 +349,6 @@ export const GLOVES_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(85â€“120) Max Mana",
+    craftableAffix: "+(85-120) Max Mana",
   },
 ];

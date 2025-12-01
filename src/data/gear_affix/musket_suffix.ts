@@ -7,7 +7,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "(61â€“78)% additional damage applied to Life",
+    craftableAffix: "(61-78)% additional damage applied to Life",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -15,7 +15,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(106â€“137)% additional damage against Frozen enemies",
+    craftableAffix: "+(106-137)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -23,7 +23,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(96â€“120)% Focus Damage Enhancement",
+    craftableAffix: "+(96-120)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -47,7 +47,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "(43â€“60)% additional damage applied to Life",
+    craftableAffix: "(43-60)% additional damage applied to Life",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -55,7 +55,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(70â€“90)% Focus Damage Enhancement",
+    craftableAffix: "+(70-90)% Focus Damage Enhancement",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -63,7 +63,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(75â€“105)% additional damage against Frozen enemies",
+    craftableAffix: "+(75-105)% additional damage against Frozen enemies",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -87,7 +87,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(120â€“140)% Focus Speed",
+    craftableAffix: "+(120-140)% Focus Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -95,7 +95,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(151â€“195)% Affliction Effect",
+    craftableAffix: "+(151-195)% Affliction Effect",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -103,7 +103,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(181â€“234)% Critical Strike Damage",
+    craftableAffix: "+(181-234)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -111,7 +111,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(328â€“468)% Critical Strike Rating",
+    craftableAffix: "+(328-468)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -119,7 +119,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(51â€“65)% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(51-65)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -128,7 +128,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix:
-      "+(66â€“94)% Attack and Cast Speed\n+(66â€“94)% Minion Attack and Cast Speed",
+      "+(66-94)% Attack and Cast Speed\n+(66-94)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -136,7 +136,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(106â€“150)% Affliction Effect",
+    craftableAffix: "+(106-150)% Affliction Effect",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -144,7 +144,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(127â€“180)% Critical Strike Damage",
+    craftableAffix: "+(127-180)% Critical Strike Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -152,7 +152,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(252â€“360)% Critical Strike Rating",
+    craftableAffix: "+(252-360)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -160,7 +160,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(36â€“50)% Attack Critical Strike Rating for this gear",
+    craftableAffix: "+(36-50)% Attack Critical Strike Rating for this gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -169,7 +169,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Advanced",
     tier: "1",
     craftableAffix:
-      "+(51â€“72)% Attack and Cast Speed\n+(51â€“72)% Minion Attack and Cast Speed",
+      "+(51-72)% Attack and Cast Speed\n+(51-72)% Minion Attack and Cast Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -177,7 +177,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(90â€“110)% Focus Speed",
+    craftableAffix: "+(90-110)% Focus Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -185,7 +185,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(217â€“281)% Elemental Damage",
+    craftableAffix: "+(217-281)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -193,7 +193,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(217â€“281)% Erosion Damage",
+    craftableAffix: "+(217-281)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -201,7 +201,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(217â€“281)% Physical Damage",
+    craftableAffix: "+(217-281)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -209,7 +209,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(31â€“39)% Energy Shield Regain",
+    craftableAffix: "+(31-39)% Energy Shield Regain",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -217,7 +217,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(31â€“39)% Life Regain",
+    craftableAffix: "+(31-39)% Life Regain",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -225,7 +225,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(33â€“42)% gear Attack Speed",
+    craftableAffix: "+(33-42)% gear Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -233,7 +233,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(152â€“216)% Elemental Damage",
+    craftableAffix: "+(152-216)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -241,7 +241,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(152â€“216)% Erosion Damage",
+    craftableAffix: "+(152-216)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -249,7 +249,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(152â€“216)% Physical Damage",
+    craftableAffix: "+(152-216)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -257,7 +257,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(22â€“30)% Energy Shield Regain",
+    craftableAffix: "+(22-30)% Energy Shield Regain",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -265,7 +265,7 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(22â€“30)% Life Regain",
+    craftableAffix: "+(22-30)% Life Regain",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -273,6 +273,6 @@ export const MUSKET_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(23â€“32)% gear Attack Speed",
+    craftableAffix: "+(23-32)% gear Attack Speed",
   },
 ];

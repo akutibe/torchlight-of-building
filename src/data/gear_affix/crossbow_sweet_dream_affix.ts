@@ -7,8 +7,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix:
-      "Lucky Critical Strike\n(-50â€“-80)% Critical Strike Rating",
+    craftableAffix: "Lucky Critical Strike\n(-50--80)% Critical Strike Rating",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -40,7 +39,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(24â€“32)% gear Physical Damage",
+    craftableAffix: "+(24-32)% gear Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -48,7 +47,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(5â€“7)% Armor DMG Mitigation Penetration",
+    craftableAffix: "+(5-7)% Armor DMG Mitigation Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -56,7 +55,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+(6â€“8)% Elemental and Erosion Resistance Penetration",
+    craftableAffix: "+(6-8)% Elemental and Erosion Resistance Penetration",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -72,7 +71,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "Adds (32â€“34) - (40â€“42) Physical Damage to the gear",
+    craftableAffix: "Adds (32-34) - (40-42) Physical Damage to the gear",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -88,7 +87,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Elemental Damage",
+    craftableAffix: "+(20-24)% Elemental Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -96,7 +95,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Erosion Damage",
+    craftableAffix: "+(20-24)% Erosion Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -104,7 +103,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Physical Damage",
+    craftableAffix: "+(20-24)% Physical Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -112,7 +111,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(20â€“24)% Ranged Damage",
+    craftableAffix: "+(20-24)% Ranged Damage",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -120,7 +119,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(6â€“8)% Attack Speed",
+    craftableAffix: "+(6-8)% Attack Speed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -128,7 +127,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (1â€“2) - (28â€“32) Lightning Damage to Attacks",
+    craftableAffix: "Adds (1-2) - (28-32) Lightning Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -136,7 +135,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10â€“13) - (14â€“19) Cold Damage to Attacks",
+    craftableAffix: "Adds (10-13) - (14-19) Cold Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -144,7 +143,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (10â€“13) - (14â€“19) Physical Damage to Attacks",
+    craftableAffix: "Adds (10-13) - (14-19) Physical Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -152,7 +151,7 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (11â€“13) - (15â€“18) Erosion Damage to Attacks",
+    craftableAffix: "Adds (11-13) - (15-18) Erosion Damage to Attacks",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -160,6 +159,6 @@ export const CROSSBOW_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Adds (9â€“14) - (15â€“20) Fire Damage to Attacks",
+    craftableAffix: "Adds (9-14) - (15-20) Fire Damage to Attacks",
   },
 ];
