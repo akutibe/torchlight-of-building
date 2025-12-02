@@ -61,8 +61,8 @@ import { EquipmentSlotDropdown } from "../components/equipment/EquipmentSlotDrop
 import { InventoryItem } from "../components/equipment/InventoryItem";
 import { TalentGrid } from "../components/talents/TalentGrid";
 import { SkillSlot } from "../components/skills/SkillSlot";
-import { ExportModal } from "../components/ExportModal";
-import { ImportModal } from "../components/ImportModal";
+import { ExportModal } from "../components/modals/ExportModal";
+import { ImportModal } from "../components/modals/ImportModal";
 import { HeroTab } from "../components/hero/HeroTab";
 import { PactspiritTab } from "../components/pactspirit/PactspiritTab";
 import { LegendaryGearModule } from "../components/equipment/LegendaryGearModule";

@@ -1,14 +1,12 @@
 "use client";
 
 import { PactspiritPage } from "@/src/app/lib/save-data";
-import { RingSlotKey, PactspiritSlotIndex } from "../../lib/types";
+import {
+  RingSlotKey,
+  PactspiritSlotIndex,
+  InstalledDestinyResult,
+} from "../../lib/types";
 import { PactspiritColumn } from "./PactspiritColumn";
-
-interface InstalledDestinyResult {
-  destinyName: string;
-  destinyType: string;
-  resolvedAffix: string;
-}
 
 interface PactspiritTabProps {
   pactspiritPage: PactspiritPage;

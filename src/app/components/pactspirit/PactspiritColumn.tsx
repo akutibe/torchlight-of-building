@@ -7,6 +7,7 @@ import {
   RingSlotKey,
   RING_DISPLAY_ORDER,
   PactspiritSlotIndex,
+  InstalledDestinyResult,
 } from "../../lib/types";
 import {
   getPactspiritByName,
@@ -14,14 +15,8 @@ import {
   getPactspiritRing,
 } from "../../lib/pactspirit-utils";
 import { RingSlot } from "./RingSlot";
-import { DestinySelectionModal } from "./DestinySelectionModal";
+import { DestinySelectionModal } from "../modals/DestinySelectionModal";
 import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
-
-interface InstalledDestinyResult {
-  destinyName: string;
-  destinyType: string;
-  resolvedAffix: string;
-}
 
 interface PactspiritColumnProps {
   slotIndex: PactspiritSlotIndex;

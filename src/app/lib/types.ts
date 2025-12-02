@@ -41,3 +41,9 @@ export const RING_DISPLAY_ORDER: RingSlotKey[] = [
 
 export type PactspiritSlotIndex = 1 | 2 | 3;
 export type PactspiritSlotKey = keyof PactspiritSlot["rings"];
+
+export interface InstalledDestinyResult {
+  destinyName: string;
+  destinyType: string;
+  resolvedAffix: string;
+}
