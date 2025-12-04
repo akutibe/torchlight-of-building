@@ -25,13 +25,25 @@ export const formatBlendAffix = (blend: Blend): string => {
 
 // Format blend for dropdown display
 // Bracketed affixes like "[Caged Fury] desc..." show as just "Caged Fury"
-// Non-bracketed affixes show truncated text
+// Non-bracketed affixes show text with newlines replaced by slashes
 export const formatBlendOption = (blend: Blend): string => {
   const { name, description } = parseBlendAffix(blend.affix);
   // If there's a description, it was a bracketed affix - just show the name
   if (description) {
     return name;
   }
-  // Non-bracketed affix - show truncated text
-  return name.length > 60 ? name.substring(0, 57) + "..." : name;
+  // Non-bracketed affix - replace newlines with slashes and truncate
+  const display = name.replace(/\n/g, " / ");
+  return display.length > 60 ? display.substring(0, 57) + "..." : display;
+};
+
+// Format blend for preview display - shows full affix text with newlines preserved
+export const formatBlendPreview = (blend: Blend): string => {
+  const { name, description } = parseBlendAffix(blend.affix);
+  // If there's a description, show name on first line, then description
+  if (description) {
+    return `${name}\n${description}`;
+  }
+  // Non-bracketed affix - show full text as-is
+  return name;
 };

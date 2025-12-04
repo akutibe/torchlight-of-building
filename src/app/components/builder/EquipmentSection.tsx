@@ -14,6 +14,7 @@ import {
   getBlendAffixes,
   formatBlendAffix,
   formatBlendOption,
+  formatBlendPreview,
 } from "../../lib/blend-utils";
 import {
   getValidEquipmentTypes,
@@ -277,7 +278,7 @@ export const EquipmentSection = () => {
                         (b) => b.affix === affix.craftableAffix,
                       );
                       return blend
-                        ? formatBlendAffix(blend)
+                        ? formatBlendPreview(blend)
                         : affix.craftableAffix;
                     }}
                   />

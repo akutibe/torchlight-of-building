@@ -77,7 +77,7 @@ export const AffixSlotComponent: React.FC<AffixSlotProps> = ({
           {/* Crafted Preview */}
           <div className="bg-zinc-900 p-3 rounded border border-zinc-700">
             <div
-              className={`text-sm font-medium mb-1 ${hideQualitySlider ? "text-purple-400" : "text-amber-400"}`}
+              className={`text-sm font-medium mb-1 whitespace-pre-line ${hideQualitySlider ? "text-purple-400" : "text-amber-400"}`}
             >
               {craftedText}
             </div>
