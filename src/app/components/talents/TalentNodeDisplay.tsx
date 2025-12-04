@@ -369,9 +369,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
               ))}
             </div>
           )}
-          <div className="mt-2 pt-2 border-t border-zinc-700 text-xs text-cyan-400">
-            No prerequisites (reflected from source area)
-          </div>
         </Tooltip>
       </div>
     );

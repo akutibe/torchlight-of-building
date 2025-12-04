@@ -61,17 +61,6 @@ const InverseImageCrafterInner: React.FC<InverseImageCrafterInnerProps> = ({
         {editingInverseImage ? "Edit Inverse Image" : "Craft Inverse Image"}
       </h3>
 
-      <div className="mb-4 rounded bg-cyan-500/10 border border-cyan-500/30 p-3">
-        <p className="text-sm text-cyan-300 mb-2">
-          Reflects all Talents within the range to the mirrored area. All
-          Talents within the reflected area have no prerequisites.
-        </p>
-        <p className="text-xs text-zinc-400">
-          The inverse image reflects a 3x3 source area to its centrally opposite
-          3x3 target area. Source (x, y) reflects to target (6-x, 4-y).
-        </p>
-      </div>
-
       <div className="space-y-4">
         <div>
           <label className="mb-2 block text-sm text-zinc-400">
@@ -165,16 +154,6 @@ const InverseImageCrafterInner: React.FC<InverseImageCrafterInnerProps> = ({
           ))}
         </div>
       )}
-
-      <div className="mt-4 rounded bg-zinc-900 p-3">
-        <div className="text-sm text-zinc-400 mb-2">Placement Rules:</div>
-        <ul className="text-xs text-zinc-500 space-y-1 ml-4 list-disc">
-          <li>Can only be placed on Profession Trees (Slots 2-4)</li>
-          <li>Cannot be placed in the center column (column 3)</li>
-          <li>Can only be placed when the tree has 0 allocated points</li>
-          <li>Cannot be placed if a Prism is already installed</li>
-        </ul>
-      </div>
 
       <div className="flex gap-2 mt-4">
         <button
