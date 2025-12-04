@@ -2,9 +2,9 @@
 
 import type { PactspiritPage } from "@/src/app/lib/save-data";
 import type {
-  RingSlotKey,
-  PactspiritSlotIndex,
   InstalledDestinyResult,
+  PactspiritSlotIndex,
+  RingSlotKey,
 } from "../../lib/types";
 import { PactspiritColumn } from "./PactspiritColumn";
 

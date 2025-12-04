@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useMemo, useRef } from "react";
 import {
   Combobox,
   ComboboxButton,
@@ -8,6 +7,7 @@ import {
   ComboboxOption,
   ComboboxOptions,
 } from "@headlessui/react";
+import { useMemo, useRef, useState } from "react";
 
 export interface SearchableSelectOption<T = string> {
   value: T;

@@ -1,5 +1,5 @@
-import { mkdir, writeFile, readFile } from "fs/promises";
 import { existsSync } from "fs";
+import { mkdir, readFile, writeFile } from "fs/promises";
 import path from "path";
 
 const BASE_URL = "https://tlidb.com/en";

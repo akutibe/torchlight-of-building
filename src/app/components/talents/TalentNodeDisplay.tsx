@@ -1,17 +1,17 @@
-import type { TalentNodeData } from "@/src/tli/talent_tree";
-import type {
-  CraftedPrism,
-  CraftedInverseImage,
-} from "@/src/app/lib/save-data";
-import type { NodeBonusAffix } from "@/src/app/lib/prism-utils";
-import type { InverseImageBonusAffix } from "@/src/app/lib/inverse-image-utils";
-import { formatEffectModifier } from "@/src/app/lib/inverse-image-utils";
-import { useTooltip } from "@/src/app/hooks/useTooltip";
 import {
   Tooltip,
-  TooltipTitle,
   TooltipContent,
+  TooltipTitle,
 } from "@/src/app/components/ui/Tooltip";
+import { useTooltip } from "@/src/app/hooks/useTooltip";
+import type { InverseImageBonusAffix } from "@/src/app/lib/inverse-image-utils";
+import { formatEffectModifier } from "@/src/app/lib/inverse-image-utils";
+import type { NodeBonusAffix } from "@/src/app/lib/prism-utils";
+import type {
+  CraftedInverseImage,
+  CraftedPrism,
+} from "@/src/app/lib/save-data";
+import type { TalentNodeData } from "@/src/tli/talent_tree";
 
 type BonusAffix = NodeBonusAffix | InverseImageBonusAffix;
 

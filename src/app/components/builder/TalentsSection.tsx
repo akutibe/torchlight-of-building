@@ -1,31 +1,31 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
-import { useBuilderStore } from "../../stores/builderStore";
-import { useTalentsUIStore } from "../../stores/talentsUIStore";
-import { TalentGrid } from "../talents/TalentGrid";
-import { CoreTalentSelector } from "../talents/CoreTalentSelector";
-import { PrismCoreTalentEffect } from "../talents/PrismCoreTalentEffect";
-import { PrismSection } from "../talents/PrismSection";
-import { InverseImageSection } from "../talents/InverseImageSection";
-import type { TreeSlot } from "../../lib/types";
+import { useCallback, useEffect } from "react";
 import {
+  canPlaceInverseImage,
+  canRemoveInverseImage,
+  canRemovePrism,
   GOD_GODDESS_TREES,
-  PROFESSION_TREES,
-  type TreeName,
   isGodGoddessTree,
   loadTalentTree,
-  canRemovePrism,
-  canRemoveInverseImage,
-  canPlaceInverseImage,
+  PROFESSION_TREES,
+  type TreeName,
 } from "@/src/tli/talent_tree";
+import { getPrismReplacedCoreTalent } from "../../lib/prism-utils";
 import type {
   AllocatedTalentNode,
-  CraftedPrism,
   CraftedInverseImage,
+  CraftedPrism,
 } from "../../lib/save-data";
 import { generateItemId } from "../../lib/storage";
-import { getPrismReplacedCoreTalent } from "../../lib/prism-utils";
+import type { TreeSlot } from "../../lib/types";
+import { useBuilderStore } from "../../stores/builderStore";
+import { useTalentsUIStore } from "../../stores/talentsUIStore";
+import { CoreTalentSelector } from "../talents/CoreTalentSelector";
+import { InverseImageSection } from "../talents/InverseImageSection";
+import { PrismCoreTalentEffect } from "../talents/PrismCoreTalentEffect";
+import { PrismSection } from "../talents/PrismSection";
+import { TalentGrid } from "../talents/TalentGrid";
 
 export const TalentsSection = () => {
   // Builder store - loadout data

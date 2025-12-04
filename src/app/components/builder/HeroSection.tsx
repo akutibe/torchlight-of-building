@@ -1,11 +1,11 @@
 "use client";
 
 import { useCallback } from "react";
+import { getBaseTraitForHero } from "../../lib/hero-utils";
+import type { HeroMemory, HeroMemorySlot } from "../../lib/save-data";
+import { createEmptyHeroPage, generateItemId } from "../../lib/storage";
 import { useBuilderStore } from "../../stores/builderStore";
 import { HeroTab } from "../hero/HeroTab";
-import type { HeroMemory, HeroMemorySlot } from "../../lib/save-data";
-import { getBaseTraitForHero } from "../../lib/hero-utils";
-import { createEmptyHeroPage, generateItemId } from "../../lib/storage";
 
 export const HeroSection = () => {
   const loadout = useBuilderStore((state) => state.loadout);

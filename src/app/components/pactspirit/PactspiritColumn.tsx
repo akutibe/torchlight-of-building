@@ -1,22 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
+import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
 import type { PactspiritSlot } from "@/src/app/lib/save-data";
-import {
-  type RingSlotKey,
-  RING_DISPLAY_ORDER,
-  type PactspiritSlotIndex,
-  type InstalledDestinyResult,
-} from "../../lib/types";
+import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
 import {
   getPactspiritByName,
   getPactspiritLevelAffix,
   getPactspiritRing,
 } from "../../lib/pactspirit-utils";
-import { RingSlot } from "./RingSlot";
+import {
+  type InstalledDestinyResult,
+  type PactspiritSlotIndex,
+  RING_DISPLAY_ORDER,
+  type RingSlotKey,
+} from "../../lib/types";
 import { DestinySelectionModal } from "../modals/DestinySelectionModal";
-import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
+import { RingSlot } from "./RingSlot";
 
 interface PactspiritColumnProps {
   slotIndex: PactspiritSlotIndex;

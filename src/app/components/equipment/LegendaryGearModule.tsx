@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 import type { Gear } from "@/src/app/lib/save-data";
 import { Legendaries } from "@/src/data/legendary/legendaries";
 import { craft } from "@/src/tli/crafting/craft";
-import { generateItemId } from "../../lib/storage";
-import { getGearTypeFromEquipmentType } from "../../lib/equipment-utils";
 import { DEFAULT_QUALITY } from "../../lib/constants";
+import { getGearTypeFromEquipmentType } from "../../lib/equipment-utils";
+import { generateItemId } from "../../lib/storage";
 import { SearchableSelect } from "../ui/SearchableSelect";
 import {
   LegendaryAffixRow,

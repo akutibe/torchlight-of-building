@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
-import { useBuilderStore } from "../stores/builderStore";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
 import { BuilderLayout } from "../components/builder/BuilderLayout";
+import { DivinitySection } from "../components/builder/DivinitySection";
 import { EquipmentSection } from "../components/builder/EquipmentSection";
-import { TalentsSection } from "../components/builder/TalentsSection";
-import { SkillsSection } from "../components/builder/SkillsSection";
 import { HeroSection } from "../components/builder/HeroSection";
 import { PactspiritSection } from "../components/builder/PactspiritSection";
-import { DivinitySection } from "../components/builder/DivinitySection";
+import { SkillsSection } from "../components/builder/SkillsSection";
+import { TalentsSection } from "../components/builder/TalentsSection";
 import type { ActivePage } from "../lib/types";
+import { useBuilderStore } from "../stores/builderStore";
 
 const BuilderPageContent = () => {
   const searchParams = useSearchParams();

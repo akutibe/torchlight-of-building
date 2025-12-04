@@ -1,9 +1,9 @@
 "use client";
 
+import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
+import { useTooltip } from "@/src/app/hooks/useTooltip";
 import type { HeroMemory } from "@/src/app/lib/save-data";
 import { formatCraftedMemoryAffixes } from "../../lib/hero-utils";
-import { useTooltip } from "@/src/app/hooks/useTooltip";
-import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
 
 interface HeroMemoryItemProps {
   memory: HeroMemory;

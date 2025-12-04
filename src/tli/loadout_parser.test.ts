@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { parse_loadout } from "./loadout_parser";
 import type {
-  SaveData,
-  SkillPage,
+  DivinityPage,
   HeroPage,
   PactspiritPage,
-  DivinityPage,
+  SaveData,
+  SkillPage,
 } from "@/src/app/lib/save-data";
+import { parse_loadout } from "./loadout_parser";
 
 const createEmptyHeroPage = (): HeroPage => ({
   selectedHero: undefined,

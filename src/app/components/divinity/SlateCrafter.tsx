@@ -1,28 +1,28 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
-import {
-  type DivinitySlate,
-  DIVINITY_GODS,
-  SLATE_SHAPES,
-  type DivinityGod,
-  type SlateShape,
-  type Rotation,
-  ROTATIONS,
-} from "@/src/app/lib/save-data";
-import { generateItemId } from "@/src/app/lib/storage";
-import {
-  getDivinityAffixes,
-  type DivinityAffix,
-  GOD_COLORS,
-  GOD_BORDER_COLORS,
-} from "@/src/app/lib/divinity-utils";
-import { MAX_SLATE_AFFIXES } from "@/src/app/lib/constants";
-import { SlatePreview } from "./SlatePreview";
+import { useEffect, useMemo, useState } from "react";
 import {
   SearchableSelect,
   type SearchableSelectOption,
 } from "@/src/app/components/ui/SearchableSelect";
+import { MAX_SLATE_AFFIXES } from "@/src/app/lib/constants";
+import {
+  type DivinityAffix,
+  GOD_BORDER_COLORS,
+  GOD_COLORS,
+  getDivinityAffixes,
+} from "@/src/app/lib/divinity-utils";
+import {
+  DIVINITY_GODS,
+  type DivinityGod,
+  type DivinitySlate,
+  ROTATIONS,
+  type Rotation,
+  SLATE_SHAPES,
+  type SlateShape,
+} from "@/src/app/lib/save-data";
+import { generateItemId } from "@/src/app/lib/storage";
+import { SlatePreview } from "./SlatePreview";
 
 interface SlateCrafterProps {
   editingSlate: DivinitySlate | undefined;

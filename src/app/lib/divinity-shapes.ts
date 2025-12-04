@@ -1,8 +1,8 @@
 import type {
-  SlateShape,
-  Rotation,
   DivinitySlate,
   PlacedSlate,
+  Rotation,
+  SlateShape,
 } from "./save-data";
 
 export const SHAPE_CELLS: Record<SlateShape, [number, number][]> = {

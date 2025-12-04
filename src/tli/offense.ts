@@ -1,8 +1,8 @@
 import * as R from "remeda";
 import { match } from "ts-pattern";
-import type * as Mod from "./mod";
 import type { DmgModType } from "./constants";
-import type { Affix, Loadout, Configuration, DmgRange } from "./core";
+import type { Affix, Configuration, DmgRange, Loadout } from "./core";
+import type * as Mod from "./mod";
 
 type Stat = "dex" | "int" | "str";
 

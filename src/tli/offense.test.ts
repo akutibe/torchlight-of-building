@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
+import type { Configuration, Loadout } from "./core";
 import { calculateOffense, collectMods } from "./offense";
-import type { Loadout, Configuration } from "./core";
 
 const initLoadout = (pl: Partial<Loadout> = {}): Loadout => {
   return {

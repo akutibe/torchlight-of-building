@@ -1,7 +1,7 @@
 import type {
-  DmgModType,
-  CritRatingModType,
   CritDmgModType,
+  CritRatingModType,
+  DmgModType,
 } from "./constants";
 import type { DmgRange } from "./core";
 

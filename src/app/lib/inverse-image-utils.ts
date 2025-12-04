@@ -1,5 +1,5 @@
-import type { CraftedInverseImage, PlacedInverseImage } from "./save-data";
 import type { TalentNodeData } from "@/src/data/talent_tree";
+import type { CraftedInverseImage, PlacedInverseImage } from "./save-data";
 
 // Reflection formula: source (x, y) -> target (6-x, 4-y)
 export const reflectPosition = (

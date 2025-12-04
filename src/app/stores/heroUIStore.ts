@@ -1,8 +1,8 @@
 "use client";
 
 import { create } from "zustand";
-import type { HeroMemoryType } from "../lib/save-data";
 import { DEFAULT_QUALITY } from "../lib/constants";
+import type { HeroMemoryType } from "../lib/save-data";
 
 interface MemoryAffixSlotState {
   effectIndex: number | undefined;

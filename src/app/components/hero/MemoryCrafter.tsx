@@ -1,22 +1,22 @@
 "use client";
 
 import { useMemo } from "react";
+import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
 import type {
   HeroMemory,
-  HeroMemoryType,
   HeroMemoryAffix,
+  HeroMemoryType,
 } from "@/src/app/lib/save-data";
 import { HERO_MEMORY_TYPES } from "@/src/app/lib/save-data";
+import { useHeroUIStore } from "@/src/app/stores/heroUIStore";
+import { DEFAULT_QUALITY } from "../../lib/constants";
 import {
+  craftHeroMemoryAffix,
   getBaseStatsForMemoryType,
   getFixedAffixesForMemoryType,
   getRandomAffixesForMemoryType,
-  craftHeroMemoryAffix,
 } from "../../lib/hero-utils";
 import { generateItemId } from "../../lib/storage";
-import { DEFAULT_QUALITY } from "../../lib/constants";
-import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
-import { useHeroUIStore } from "@/src/app/stores/heroUIStore";
 
 interface MemoryCrafterProps {
   onMemorySave: (memory: HeroMemory) => void;

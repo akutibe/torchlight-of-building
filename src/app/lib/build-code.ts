@@ -1,4 +1,4 @@
-import { deflateSync, inflateSync, strToU8, strFromU8 } from "fflate";
+import { deflateSync, inflateSync, strFromU8, strToU8 } from "fflate";
 import type { SaveData } from "./save-data";
 
 const BUILD_CODE_VERSION = 1;

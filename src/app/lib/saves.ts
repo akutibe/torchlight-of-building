@@ -1,10 +1,10 @@
-import type { SaveData } from "./save-data";
-import { encodeBuildCode, decodeBuildCode } from "./build-code";
-import { createEmptyLoadout } from "./storage";
+import { decodeBuildCode, encodeBuildCode } from "./build-code";
 import {
-  SAVES_INDEX_STORAGE_KEY,
   SAVE_DATA_STORAGE_KEY_PREFIX,
+  SAVES_INDEX_STORAGE_KEY,
 } from "./constants";
+import type { SaveData } from "./save-data";
+import { createEmptyLoadout } from "./storage";
 
 export interface SaveMetadata {
   id: string;

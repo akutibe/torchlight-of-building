@@ -1,23 +1,23 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
-import {
-  type CraftedPrism,
-  type PrismRarity,
-  PRISM_RARITIES,
-} from "@/src/app/lib/save-data";
-import { generateItemId } from "@/src/app/lib/storage";
-import {
-  getBaseAffixes,
-  getRareGaugeAffixes,
-  getLegendaryGaugeAffixes,
-  getMaxRareGaugeAffixes,
-  getMaxLegendaryGaugeAffixes,
-} from "@/src/app/lib/prism-utils";
+import { useEffect, useMemo, useState } from "react";
 import {
   SearchableSelect,
   type SearchableSelectOption,
 } from "@/src/app/components/ui/SearchableSelect";
+import {
+  getBaseAffixes,
+  getLegendaryGaugeAffixes,
+  getMaxLegendaryGaugeAffixes,
+  getMaxRareGaugeAffixes,
+  getRareGaugeAffixes,
+} from "@/src/app/lib/prism-utils";
+import {
+  type CraftedPrism,
+  PRISM_RARITIES,
+  type PrismRarity,
+} from "@/src/app/lib/save-data";
+import { generateItemId } from "@/src/app/lib/storage";
 
 interface PrismCrafterProps {
   editingPrism: CraftedPrism | undefined;

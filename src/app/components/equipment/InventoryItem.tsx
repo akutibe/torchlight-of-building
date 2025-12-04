@@ -1,8 +1,8 @@
 "use client";
 
-import type { Gear } from "@/src/app/lib/save-data";
-import { useTooltip } from "@/src/app/hooks/useTooltip";
 import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
+import { useTooltip } from "@/src/app/hooks/useTooltip";
+import type { Gear } from "@/src/app/lib/save-data";
 
 interface InventoryItemProps {
   item: Gear;

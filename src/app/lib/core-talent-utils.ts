@@ -1,4 +1,4 @@
-import { CoreTalents, type CoreTalent } from "@/src/data/core_talent";
+import { type CoreTalent, CoreTalents } from "@/src/data/core_talent";
 import { isGodGoddessTree } from "@/src/tli/talent_tree";
 
 export type TreeSlot = "tree1" | "tree2" | "tree3" | "tree4";

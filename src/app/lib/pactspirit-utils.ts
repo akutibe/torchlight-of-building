@@ -1,10 +1,10 @@
-import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
 import { Destinies } from "@/src/data/destiny/destinies";
+import type { Destiny } from "@/src/data/destiny/types";
+import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
 import type {
   Pactspirit,
   PactspiritRingDetails,
 } from "@/src/data/pactspirit/types";
-import type { Destiny } from "@/src/data/destiny/types";
 import type { RingSlotKey } from "./types";
 
 export const getPactspiritByName = (name: string): Pactspirit | undefined =>

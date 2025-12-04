@@ -1,10 +1,10 @@
 "use client";
 
 import { useCallback } from "react";
-import { useBuilderStore } from "../../stores/builderStore";
-import { DivinityTab } from "../divinity/DivinityTab";
 import type { DivinitySlate, PlacedSlate } from "../../lib/save-data";
 import { generateItemId } from "../../lib/storage";
+import { useBuilderStore } from "../../stores/builderStore";
+import { DivinityTab } from "../divinity/DivinityTab";
 
 export const DivinitySection = () => {
   const loadout = useBuilderStore((state) => state.loadout);

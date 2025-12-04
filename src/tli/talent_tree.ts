@@ -1,20 +1,20 @@
-import type {
-  AllocatedTalentNode,
-  PlacedPrism,
-  PlacedInverseImage,
-} from "@/src/app/lib/save-data";
 import {
   isInTargetArea,
   isInverseImagePosition,
 } from "@/src/app/lib/inverse-image-utils";
+import type {
+  AllocatedTalentNode,
+  PlacedInverseImage,
+  PlacedPrism,
+} from "@/src/app/lib/save-data";
 import {
-  TalentTrees,
+  GOD_GODDESS_TREES,
+  isGodGoddessTree,
+  PROFESSION_TREES,
   type TalentNodeData,
   type TalentTreeData,
+  TalentTrees,
   type TreeName,
-  GOD_GODDESS_TREES,
-  PROFESSION_TREES,
-  isGodGoddessTree,
 } from "@/src/data/talent_tree";
 
 // Re-export tree name constants and types

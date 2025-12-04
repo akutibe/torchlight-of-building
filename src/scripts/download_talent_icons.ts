@@ -1,6 +1,6 @@
-import { readdir, readFile, writeFile, mkdir } from "fs/promises";
-import { join } from "path";
 import * as cheerio from "cheerio";
+import { mkdir, readdir, readFile, writeFile } from "fs/promises";
+import { join } from "path";
 
 const downloadTalentIcons = async (): Promise<void> => {
   try {

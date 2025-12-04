@@ -1,8 +1,8 @@
-import type { BaseGearAffix } from "@/src/tli/gear_data_types";
-import { craft } from "@/src/tli/crafting/craft";
-import type { AffixSlotState } from "../../lib/types";
-import { formatAffixOption } from "../../lib/affix-utils";
 import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
+import { craft } from "@/src/tli/crafting/craft";
+import type { BaseGearAffix } from "@/src/tli/gear_data_types";
+import { formatAffixOption } from "../../lib/affix-utils";
+import type { AffixSlotState } from "../../lib/types";
 
 interface AffixSlotProps {
   slotIndex: number;

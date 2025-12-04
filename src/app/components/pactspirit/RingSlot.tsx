@@ -1,15 +1,15 @@
 "use client";
 
-import type { RingSlotState } from "@/src/app/lib/save-data";
-import type { PactspiritRingDetails } from "@/src/data/pactspirit/types";
-import type { RingSlotKey } from "../../lib/types";
-import { isInnerRing } from "../../lib/pactspirit-utils";
-import { useTooltip } from "@/src/app/hooks/useTooltip";
 import {
   Tooltip,
-  TooltipTitle,
   TooltipContent,
+  TooltipTitle,
 } from "@/src/app/components/ui/Tooltip";
+import { useTooltip } from "@/src/app/hooks/useTooltip";
+import type { RingSlotState } from "@/src/app/lib/save-data";
+import type { PactspiritRingDetails } from "@/src/data/pactspirit/types";
+import { isInnerRing } from "../../lib/pactspirit-utils";
+import type { RingSlotKey } from "../../lib/types";
 
 interface RingSlotProps {
   ringSlot: RingSlotKey;

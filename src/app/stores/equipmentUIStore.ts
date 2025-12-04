@@ -2,8 +2,8 @@
 
 import { create } from "zustand";
 import type { EquipmentType } from "@/src/tli/gear_data_types";
-import type { AffixSlotState, GearSlot } from "../lib/types";
 import { DEFAULT_QUALITY } from "../lib/constants";
+import type { AffixSlotState, GearSlot } from "../lib/types";
 
 const createEmptyAffixSlots = (): AffixSlotState[] =>
   Array(6)

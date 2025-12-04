@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { findGridCenter } from "@/src/app/lib/divinity-grid";
 import type {
   DivinityPage,
   DivinitySlate,
   PlacedSlate,
 } from "@/src/app/lib/save-data";
-import { findGridCenter } from "@/src/app/lib/divinity-grid";
 import { DivinityGrid } from "./DivinityGrid";
 import { SlateCrafter } from "./SlateCrafter";
 import { SlateInventory } from "./SlateInventory";

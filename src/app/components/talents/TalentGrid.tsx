@@ -1,32 +1,32 @@
 import {
-  type TalentTreeData,
-  hasPrismAtPosition,
-  canRemovePrism,
-  canAllocateNodeWithInverseImage,
-  canDeallocateNodeWithInverseImage,
-  isPrerequisiteSatisfiedWithInverseImage,
-  hasInverseImageAtPosition,
-  canRemoveInverseImage,
-  canAllocateReflectedNode,
-  canDeallocateReflectedNode,
-} from "@/src/tli/talent_tree";
-import type {
-  AllocatedTalentNode,
-  PlacedPrism,
-  CraftedPrism,
-  PlacedInverseImage,
-  CraftedInverseImage,
-} from "@/src/app/lib/save-data";
-import { getNodeBonusAffixes } from "@/src/app/lib/prism-utils";
-import {
-  isInSourceArea,
-  isInTargetArea,
+  getReflectedNodeBonusAffixes,
+  getReflectedNodeData,
   getSourceAreaPositions,
   getTargetAreaPositions,
-  getReflectedNodeData,
-  getReflectedNodeBonusAffixes,
+  isInSourceArea,
+  isInTargetArea,
   reflectPosition,
 } from "@/src/app/lib/inverse-image-utils";
+import { getNodeBonusAffixes } from "@/src/app/lib/prism-utils";
+import type {
+  AllocatedTalentNode,
+  CraftedInverseImage,
+  CraftedPrism,
+  PlacedInverseImage,
+  PlacedPrism,
+} from "@/src/app/lib/save-data";
+import {
+  canAllocateNodeWithInverseImage,
+  canAllocateReflectedNode,
+  canDeallocateNodeWithInverseImage,
+  canDeallocateReflectedNode,
+  canRemoveInverseImage,
+  canRemovePrism,
+  hasInverseImageAtPosition,
+  hasPrismAtPosition,
+  isPrerequisiteSatisfiedWithInverseImage,
+  type TalentTreeData,
+} from "@/src/tli/talent_tree";
 import { TalentNodeDisplay } from "./TalentNodeDisplay";
 
 interface TalentGridProps {

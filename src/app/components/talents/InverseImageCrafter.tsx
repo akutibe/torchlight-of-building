@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { validateInverseImageValues } from "@/src/app/lib/inverse-image-utils";
 import type { CraftedInverseImage } from "@/src/app/lib/save-data";
 import { generateItemId } from "@/src/app/lib/storage";
-import { validateInverseImageValues } from "@/src/app/lib/inverse-image-utils";
 
 interface InverseImageCrafterInnerProps {
   editingInverseImage: CraftedInverseImage | undefined;

@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
-import { readFile, writeFile, mkdir } from "fs/promises";
-import { join } from "path";
 import { execSync } from "child_process";
+import { mkdir, readFile, writeFile } from "fs/promises";
+import { join } from "path";
 
 interface CraftingAffix {
   equipmentSlot: string;

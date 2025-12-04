@@ -1,15 +1,15 @@
 "use client";
 
-import type {
-  SlateShape,
-  DivinityGod,
-  Rotation,
-} from "@/src/app/lib/save-data";
 import {
-  getTransformedCells,
   applyRotation,
+  getTransformedCells,
 } from "@/src/app/lib/divinity-shapes";
 import { GOD_COLORS } from "@/src/app/lib/divinity-utils";
+import type {
+  DivinityGod,
+  Rotation,
+  SlateShape,
+} from "@/src/app/lib/save-data";
 
 interface SlatePreviewProps {
   shape: SlateShape;

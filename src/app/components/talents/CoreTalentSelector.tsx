@@ -1,20 +1,20 @@
 import React from "react";
-import type { CoreTalent } from "@/src/data/core_talent";
-import { useTooltip } from "@/src/app/hooks/useTooltip";
 import {
   Tooltip,
-  TooltipTitle,
   TooltipContent,
+  TooltipTitle,
 } from "@/src/app/components/ui/Tooltip";
+import { useTooltip } from "@/src/app/hooks/useTooltip";
 import {
-  type TreeSlot,
   getAvailableGodGoddessCoreTalents,
   getAvailableProfessionCoreTalents,
-  isCoreTalentSlotUnlocked,
-  getMaxCoreTalentSlots,
-  isGodGoddessTree,
   getCoreTalentsForTree,
+  getMaxCoreTalentSlots,
+  isCoreTalentSlotUnlocked,
+  isGodGoddessTree,
+  type TreeSlot,
 } from "@/src/app/lib/core-talent-utils";
+import type { CoreTalent } from "@/src/data/core_talent";
 
 interface CoreTalentSelectorProps {
   treeName: string;

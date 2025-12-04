@@ -1,14 +1,14 @@
 "use client";
 
 import type {
-  HeroPage,
   HeroMemory,
   HeroMemorySlot,
+  HeroPage,
 } from "@/src/app/lib/save-data";
 import { HeroSelector } from "./HeroSelector";
-import { TraitSelector } from "./TraitSelector";
 import { MemoryCrafter } from "./MemoryCrafter";
 import { MemoryInventory } from "./MemoryInventory";
+import { TraitSelector } from "./TraitSelector";
 
 interface HeroTabProps {
   heroPage: HeroPage;

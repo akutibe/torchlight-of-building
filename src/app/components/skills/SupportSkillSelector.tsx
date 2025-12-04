@@ -1,8 +1,8 @@
-import { SupportSkills } from "@/src/data/skill";
 import {
   SearchableSelect,
   type SearchableSelectOption,
 } from "@/src/app/components/ui/SearchableSelect";
+import { SupportSkills } from "@/src/data/skill";
 
 interface SupportSkillSelectorProps {
   selectedSkill?: string;

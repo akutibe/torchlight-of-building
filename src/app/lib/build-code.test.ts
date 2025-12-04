@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { encodeBuildCode, decodeBuildCode } from "./build-code";
+import { decodeBuildCode, encodeBuildCode } from "./build-code";
 import type { SaveData, SkillPage } from "./save-data";
 import {
-  createEmptyLoadout,
-  createEmptyHeroPage,
-  createEmptyPactspiritPage,
   createEmptyDivinityPage,
+  createEmptyHeroPage,
+  createEmptyLoadout,
+  createEmptyPactspiritPage,
 } from "./storage";
 
 const createEmptySkillPage = (): SkillPage => ({

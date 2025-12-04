@@ -3,32 +3,32 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type {
-  SaveData,
+  AllocatedTalentNode,
+  CraftedInverseImage,
+  CraftedPrism,
+  DivinitySlate,
   Gear,
   HeroMemory,
-  DivinitySlate,
-  CraftedPrism,
-  CraftedInverseImage,
-  AllocatedTalentNode,
-  ReflectedAllocatedNode,
-  PlacedSlate,
   HeroMemorySlot,
   PactspiritSlot,
+  PlacedSlate,
+  ReflectedAllocatedNode,
   RingSlotState,
+  SaveData,
 } from "../lib/save-data";
-import { createEmptyLoadout, generateItemId } from "../lib/storage";
 import {
   loadSaveData,
-  saveSaveData,
   loadSavesIndex,
-  saveSavesIndex,
   type SavesIndex,
+  saveSaveData,
+  saveSavesIndex,
 } from "../lib/saves";
+import { createEmptyLoadout, generateItemId } from "../lib/storage";
 import type {
   GearSlot,
-  TreeSlot,
-  RingSlotKey,
   PactspiritSlotIndex,
+  RingSlotKey,
+  TreeSlot,
 } from "../lib/types";
 
 interface BuilderState {

@@ -1,8 +1,8 @@
 import * as cheerio from "cheerio";
-import { readFile, writeFile, mkdir } from "fs/promises";
-import { join } from "path";
 import { execSync } from "child_process";
-import type { Talent, God, Tree, Type } from "../data/talent/types";
+import { mkdir, readFile, writeFile } from "fs/promises";
+import { join } from "path";
+import type { God, Talent, Tree, Type } from "../data/talent/types";
 
 const cleanEffectText = (html: string): string => {
   // Replace <br> tags with placeholder to preserve intentional line breaks

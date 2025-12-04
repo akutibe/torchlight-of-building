@@ -1,20 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import type { Destiny } from "@/src/data/destiny/types";
-import type { RingSlotKey, InstalledDestinyResult } from "../../lib/types";
-import {
-  getDestiniesForRingSlot,
-  formatDestinyOption,
-  hasRanges,
-  craftDestinyAffix,
-} from "../../lib/pactspirit-utils";
+import { useEffect, useState } from "react";
 import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
+import type { Destiny } from "@/src/data/destiny/types";
+import {
+  craftDestinyAffix,
+  formatDestinyOption,
+  getDestiniesForRingSlot,
+  hasRanges,
+} from "../../lib/pactspirit-utils";
+import type { InstalledDestinyResult, RingSlotKey } from "../../lib/types";
 import {
   Modal,
-  ModalDescription,
   ModalActions,
   ModalButton,
+  ModalDescription,
 } from "../ui/Modal";
 
 interface DestinySelectionModalProps {

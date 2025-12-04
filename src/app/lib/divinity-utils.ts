@@ -1,5 +1,5 @@
 import { Talents } from "@/src/data/talent/talents";
-import type { DivinityGod, DivinityAffixType } from "./save-data";
+import type { DivinityAffixType, DivinityGod } from "./save-data";
 
 export interface DivinityAffix {
   effect: string;

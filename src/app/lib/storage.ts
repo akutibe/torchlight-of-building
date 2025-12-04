@@ -1,13 +1,13 @@
+import { DEBUG_MODE_STORAGE_KEY } from "./constants";
 import type {
-  SaveData,
-  SkillWithSupports,
+  DivinityPage,
   HeroPage,
   PactspiritPage,
   PactspiritSlot,
   RingSlotState,
-  DivinityPage,
+  SaveData,
+  SkillWithSupports,
 } from "./save-data";
-import { DEBUG_MODE_STORAGE_KEY } from "./constants";
 
 const createEmptySkillSlot = (): SkillWithSupports => ({
   enabled: true,

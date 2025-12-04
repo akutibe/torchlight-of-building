@@ -1,12 +1,12 @@
 "use client";
 
 import { create } from "zustand";
+import { MAX_SLATE_AFFIXES } from "../lib/constants";
 import type {
+  DivinityAffixType,
   DivinityGod,
   SlateShape,
-  DivinityAffixType,
 } from "../lib/save-data";
-import { MAX_SLATE_AFFIXES } from "../lib/constants";
 
 interface SelectedSlateAffix {
   effect: string;

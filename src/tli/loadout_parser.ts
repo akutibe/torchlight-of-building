@@ -1,20 +1,20 @@
-import type {
-  Affix,
-  ParsedGear,
-  ParsedGearPage,
-  Loadout,
-  ParsedTalentPage,
-} from "./core";
+import { readFileSync } from "fs";
+import { join } from "path";
 import type {
   Gear,
   SaveData,
   TalentPage,
   TalentTree,
 } from "@/src/app/lib/save-data";
+import type {
+  Affix,
+  Loadout,
+  ParsedGear,
+  ParsedGearPage,
+  ParsedTalentPage,
+} from "./core";
 import type { Mod } from "./mod";
 import { parseMod } from "./mod_parser";
-import { readFileSync } from "fs";
-import { join } from "path";
 
 // Map of tree names to their JSON filenames
 // See data/ directory

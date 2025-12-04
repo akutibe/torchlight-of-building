@@ -1,15 +1,15 @@
 "use client";
 
 import { useCallback } from "react";
+import type { PactspiritPage } from "../../lib/save-data";
+import { createEmptyPactspiritSlot } from "../../lib/storage";
+import type {
+  InstalledDestinyResult,
+  PactspiritSlotIndex,
+  RingSlotKey,
+} from "../../lib/types";
 import { useBuilderStore } from "../../stores/builderStore";
 import { PactspiritTab } from "../pactspirit/PactspiritTab";
-import type { PactspiritPage } from "../../lib/save-data";
-import type {
-  RingSlotKey,
-  PactspiritSlotIndex,
-  InstalledDestinyResult,
-} from "../../lib/types";
-import { createEmptyPactspiritSlot } from "../../lib/storage";
 
 export const PactspiritSection = () => {
   const loadout = useBuilderStore((state) => state.loadout);

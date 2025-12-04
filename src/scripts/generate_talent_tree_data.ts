@@ -1,10 +1,10 @@
 import * as cheerio from "cheerio";
-import { writeFile, mkdir } from "fs/promises";
-import { join } from "path";
 import { execSync } from "child_process";
+import { mkdir, writeFile } from "fs/promises";
+import { join } from "path";
 import type {
-  TalentTreeData,
   TalentNodeData,
+  TalentTreeData,
   TreeName,
 } from "../data/talent_tree/types";
 import { ALL_TREES, isTreeName } from "../data/talent_tree/types";

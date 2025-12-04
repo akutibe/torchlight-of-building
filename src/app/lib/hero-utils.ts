@@ -1,7 +1,7 @@
-import { HeroTraits } from "@/src/data/hero_trait/hero_traits";
 import { HeroMemories } from "@/src/data/hero_memory/hero_memories";
+import { HeroTraits } from "@/src/data/hero_trait/hero_traits";
 import type { HeroTrait } from "@/src/data/hero_trait/types";
-import type { HeroMemoryType, HeroMemory, HeroMemorySlot } from "./save-data";
+import type { HeroMemory, HeroMemorySlot, HeroMemoryType } from "./save-data";
 
 export const normalizeHeroName = (hero: string): string => {
   return hero.replace(/\n\s*/g, " ").trim();

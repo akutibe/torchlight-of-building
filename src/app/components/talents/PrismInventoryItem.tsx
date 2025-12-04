@@ -1,9 +1,9 @@
 "use client";
 
-import type { CraftedPrism } from "@/src/app/lib/save-data";
-import { getLegendaryGaugeAffixes } from "@/src/app/lib/prism-utils";
-import { useTooltip } from "@/src/app/hooks/useTooltip";
 import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
+import { useTooltip } from "@/src/app/hooks/useTooltip";
+import { getLegendaryGaugeAffixes } from "@/src/app/lib/prism-utils";
+import type { CraftedPrism } from "@/src/app/lib/save-data";
 
 interface PrismInventoryItemProps {
   prism: CraftedPrism;

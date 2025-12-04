@@ -1,10 +1,10 @@
 import type React from "react";
-import type { PlacedPrism } from "@/src/app/lib/save-data";
-import type { TreeSlot } from "@/src/app/lib/types";
 import {
   getPrismCoreTalentEffect,
   getPrismReplacedCoreTalent,
 } from "@/src/app/lib/prism-utils";
+import type { PlacedPrism } from "@/src/app/lib/save-data";
+import type { TreeSlot } from "@/src/app/lib/types";
 
 interface PrismCoreTalentEffectProps {
   placedPrism: PlacedPrism | undefined;

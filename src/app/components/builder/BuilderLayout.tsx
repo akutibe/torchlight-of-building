@@ -1,19 +1,19 @@
 "use client";
 
-import { useState, useEffect, useCallback, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
-import { useBuilderStore } from "../../stores/builderStore";
-import { PageTabs } from "../PageTabs";
-import { DebugPanel } from "../DebugPanel";
-import { ExportModal } from "../modals/ExportModal";
-import { ImportModal } from "../modals/ImportModal";
-import { Toast } from "../Toast";
-import type { ActivePage } from "../../lib/types";
+import { type ReactNode, useCallback, useEffect, useState } from "react";
+import { decodeBuildCode, encodeBuildCode } from "../../lib/build-code";
 import {
   loadDebugModeFromStorage,
   saveDebugModeToStorage,
 } from "../../lib/storage";
-import { encodeBuildCode, decodeBuildCode } from "../../lib/build-code";
+import type { ActivePage } from "../../lib/types";
+import { useBuilderStore } from "../../stores/builderStore";
+import { DebugPanel } from "../DebugPanel";
+import { ExportModal } from "../modals/ExportModal";
+import { ImportModal } from "../modals/ImportModal";
+import { PageTabs } from "../PageTabs";
+import { Toast } from "../Toast";
 
 interface BuilderLayoutProps {
   children: ReactNode;

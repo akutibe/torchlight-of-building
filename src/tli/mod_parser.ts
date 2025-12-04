@@ -1,12 +1,12 @@
-import type { Mod, ModOfType } from "./mod";
 import {
-  type DmgModType,
-  DMG_MOD_TYPES,
-  type CritRatingModType,
+  CRIT_DMG_MOD_TYPES,
   CRIT_RATING_MOD_TYPES,
   type CritDmgModType,
-  CRIT_DMG_MOD_TYPES,
+  type CritRatingModType,
+  DMG_MOD_TYPES,
+  type DmgModType,
 } from "./constants";
+import type { Mod, ModOfType } from "./mod";
 
 type ParseResult = "unrecognized" | "unimplemented" | Mod;
 

@@ -2,8 +2,8 @@
 
 import { create } from "zustand";
 import type { TalentTreeData } from "@/src/tli/talent_tree";
-import type { TreeSlot } from "../lib/types";
 import type { PrismRarity } from "../lib/save-data";
+import type { TreeSlot } from "../lib/types";
 
 interface TalentsUIState {
   // Tree data loaded from files
