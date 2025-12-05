@@ -11,10 +11,7 @@ import {
   getBlendAffixes,
 } from "../../lib/blend-utils";
 import { GEAR_SLOTS, SLOT_TO_VALID_EQUIPMENT_TYPES } from "../../lib/constants";
-import {
-  getCompatibleItems,
-  getGearTypeFromEquipmentType,
-} from "../../lib/equipment-utils";
+import { getCompatibleItems } from "../../lib/equipment-utils";
 import type { Gear } from "../../lib/save-data";
 import { generateItemId } from "../../lib/storage";
 import type { GearSlot } from "../../lib/types";
@@ -236,9 +233,8 @@ export const EquipmentSection = () => {
 
     const newItem: Gear = {
       id: generateItemId(),
-      gearType: getGearTypeFromEquipmentType(selectedEquipmentType),
-      affixes,
       equipmentType: selectedEquipmentType,
+      affixes,
     };
 
     addItemToInventory(newItem);

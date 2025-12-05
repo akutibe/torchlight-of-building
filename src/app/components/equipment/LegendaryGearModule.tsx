@@ -5,7 +5,6 @@ import type { Gear } from "@/src/app/lib/save-data";
 import { Legendaries } from "@/src/data/legendary/legendaries";
 import { craft } from "@/src/tli/crafting/craft";
 import { DEFAULT_QUALITY } from "../../lib/constants";
-import { getGearTypeFromEquipmentType } from "../../lib/equipment-utils";
 import { generateItemId } from "../../lib/storage";
 import { SearchableSelect } from "../ui/SearchableSelect";
 import {
@@ -87,9 +86,8 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
 
     const newItem: Gear = {
       id: generateItemId(),
-      gearType: getGearTypeFromEquipmentType(selectedLegendary.equipmentType),
-      affixes,
       equipmentType: selectedLegendary.equipmentType,
+      affixes,
       rarity: "legendary",
       baseStats: selectedLegendary.baseStat,
       legendaryName: selectedLegendary.name,

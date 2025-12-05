@@ -33,13 +33,12 @@ describe("build-code", () => {
       equipmentPage: {
         helmet: {
           id: "test-helmet-1",
-          gearType: "helmet",
-          affixes: ["+10% fire damage", "+5% attack speed"],
           equipmentType: "Helmet (STR)",
+          affixes: ["+10% fire damage", "+5% attack speed"],
         },
         mainHand: {
           id: "test-sword-1",
-          gearType: "sword",
+          equipmentType: "One-Handed Sword",
           affixes: ["+100 physical damage"],
         },
       },
@@ -146,13 +145,12 @@ describe("build-code", () => {
       equipmentPage: {
         helmet: {
           id: "test-1",
-          gearType: "helmet",
-          affixes: ["+10% fire damage", "+5% attack speed"],
           equipmentType: "Helmet (STR)",
+          affixes: ["+10% fire damage", "+5% attack speed"],
         },
         chest: {
           id: "test-2",
-          gearType: "chest",
+          equipmentType: "Chest Armor (STR)",
           affixes: ["+100 health"],
         },
       },
@@ -172,7 +170,7 @@ describe("build-code", () => {
       itemsList: [
         {
           id: "inv-1",
-          gearType: "ring",
+          equipmentType: "Ring",
           affixes: ["+10% crit"],
         },
       ],

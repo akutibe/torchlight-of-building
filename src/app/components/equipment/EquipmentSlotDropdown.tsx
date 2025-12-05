@@ -25,7 +25,7 @@ export const EquipmentSlotDropdown: React.FC<EquipmentSlotDropdownProps> = ({
         onChange={(value) => onSelectItem(slot, value ?? null)}
         options={compatibleItems.map((item) => ({
           value: item.id,
-          label: item.equipmentType ?? item.gearType,
+          label: item.equipmentType,
           sublabel: `${item.affixes.length} affixes`,
         }))}
         placeholder="-- None --"

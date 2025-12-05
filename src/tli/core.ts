@@ -1,3 +1,4 @@
+import type { EquipmentType } from "./gear_data_types";
 import type { Mod } from "./mod";
 
 export interface Affix {
@@ -25,16 +26,7 @@ export interface ParsedDivinitySlate {
 }
 
 export interface ParsedGear {
-  gearType:
-    | "helmet"
-    | "chest"
-    | "neck"
-    | "gloves"
-    | "belt"
-    | "boots"
-    | "ring"
-    | "sword"
-    | "shield";
+  equipmentType: EquipmentType;
   affixes: Affix[];
 }
 

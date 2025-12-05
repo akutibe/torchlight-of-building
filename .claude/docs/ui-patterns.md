@@ -10,7 +10,7 @@ UI in [src/app/](../src/app/): `page.tsx` (main), `layout.tsx` (root)
 ## Data Flow
 
 ```typescript
-RawLoadout → localStorage (JSON) → UI State → RawGearPage (10 slots) → RawGear (gearType + string affixes)
+RawLoadout → localStorage (JSON) → UI State → RawGearPage (10 slots) → RawGear (equipmentType + string affixes)
 ```
 
 ## Architecture
@@ -23,7 +23,7 @@ Single component ([src/app/page.tsx](../src/app/page.tsx)) with 3 sections:
 
 ## Key Patterns
 
-**Slot → Gear Type:** `leftRing/rightRing → "ring"`, `mainHand/offHand → "sword"`, others match
+**Slot → Equipment Type:** Uses `EquipmentType` from gear_data_types.ts (e.g., "Ring", "One-Handed Sword")
 
 **Hydration:** `mounted` state + `useEffect` to load from localStorage after mount
 

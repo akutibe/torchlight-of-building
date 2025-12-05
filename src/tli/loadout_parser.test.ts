@@ -66,7 +66,7 @@ describe("parse_loadout", () => {
       equipmentPage: {
         helmet: {
           id: "test-helmet-1",
-          gearType: "helmet",
+          equipmentType: "Helmet (STR)",
           affixes: ["+10% fire damage", "+5% attack speed"],
         },
       },
@@ -121,7 +121,7 @@ describe("parse_loadout", () => {
       equipmentPage: {
         chest: {
           id: "test-chest-1",
-          gearType: "chest",
+          equipmentType: "Chest Armor (STR)",
           affixes: [
             "+10% fire damage\n+5% attack speed\n+15% critical strike rating",
           ],
@@ -177,7 +177,7 @@ describe("parse_loadout", () => {
       equipmentPage: {
         gloves: {
           id: "test-gloves-1",
-          gearType: "gloves",
+          equipmentType: "Gloves (STR)",
           affixes: [
             "+10% fire damage\nsome unrecognized mod\n+5% attack speed",
           ],
@@ -229,7 +229,7 @@ describe("parse_loadout", () => {
       equipmentPage: {
         boots: {
           id: "test-boots-1",
-          gearType: "boots",
+          equipmentType: "Boots (STR)",
           affixes: [],
         },
       },
@@ -261,17 +261,17 @@ describe("parse_loadout", () => {
       equipmentPage: {
         helmet: {
           id: "test-helmet-2",
-          gearType: "helmet",
+          equipmentType: "Helmet (STR)",
           affixes: ["+10% fire damage"],
         },
         chest: {
           id: "test-chest-2",
-          gearType: "chest",
+          equipmentType: "Chest Armor (STR)",
           affixes: ["+5% attack speed"],
         },
         gloves: {
           id: "test-gloves-2",
-          gearType: "gloves",
+          equipmentType: "Gloves (STR)",
           affixes: ["+15% critical strike rating"],
         },
       },
@@ -338,7 +338,7 @@ describe("parse_loadout", () => {
       equipmentPage: {
         belt: {
           id: "test-belt-1",
-          gearType: "belt",
+          equipmentType: "Belt",
           affixes: ["+10% fire damage\n\n+5% attack speed\n"],
         },
       },

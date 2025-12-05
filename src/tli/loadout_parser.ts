@@ -86,7 +86,7 @@ const parseAffixString = (affixString: string): Affix => {
 
 const parseGear = (gear: Gear): ParsedGear => {
   return {
-    gearType: gear.gearType,
+    equipmentType: gear.equipmentType,
     affixes: gear.affixes.map(parseAffixString),
   };
 };

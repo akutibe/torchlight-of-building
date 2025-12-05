@@ -16,7 +16,7 @@ RawLoadout {
 }
 
 RawGear {
-  gearType: "helmet" | "chest" | "neck" | "gloves" | "belt" | "boots" | "ring" | "sword" | "shield"
+  equipmentType: EquipmentType   // e.g., "Helmet (STR)", "One-Handed Sword"
   affixes: string[]              // Human-readable strings
 }
 
@@ -44,7 +44,7 @@ Loadout {
 }
 
 Gear {
-  gearType: (same as RawGear)
+  equipmentType: EquipmentType   // e.g., "Helmet (STR)", "One-Handed Sword"
   affixes: Affix[]               // Typed modifier objects
 }
 

@@ -25,46 +25,5 @@ export const getCompatibleItems = (
   slot: GearSlot,
 ): Gear[] => {
   const validTypes = SLOT_TO_VALID_EQUIPMENT_TYPES[slot];
-  return itemsList.filter(
-    (item) => item.equipmentType && validTypes.includes(item.equipmentType),
-  );
-};
-
-export const getGearTypeFromEquipmentType = (
-  equipmentType: EquipmentType,
-): Gear["gearType"] => {
-  if (equipmentType.includes("Helmet")) return "helmet";
-  if (equipmentType.includes("Chest")) return "chest";
-  if (equipmentType.includes("Gloves")) return "gloves";
-  if (equipmentType.includes("Boots")) return "boots";
-  if (equipmentType === "Belt") return "belt";
-  if (equipmentType === "Necklace") return "neck";
-  if (equipmentType === "Ring" || equipmentType === "Spirit Ring")
-    return "ring";
-  if (equipmentType.includes("Shield")) return "shield";
-  return "sword"; // All weapons
-};
-
-export const getGearTypeFromEquipmentSlot = (
-  equipmentSlot: EquipmentSlot,
-): Gear["gearType"] => {
-  switch (equipmentSlot) {
-    case "Helmet":
-      return "helmet";
-    case "Chest Armor":
-      return "chest";
-    case "Gloves":
-      return "gloves";
-    case "Boots":
-      return "boots";
-    case "Trinket":
-      return "neck"; // Belt, Necklace, Ring are all "Trinket" slot
-    case "Shield":
-      return "shield";
-    case "One-Handed":
-    case "Two-Handed":
-      return "sword";
-    default:
-      return "sword";
-  }
+  return itemsList.filter((item) => validTypes.includes(item.equipmentType));
 };

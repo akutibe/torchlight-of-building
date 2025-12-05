@@ -99,18 +99,8 @@ export interface TalentPage {
 
 export interface Gear {
   id: string;
-  gearType:
-    | "helmet"
-    | "chest"
-    | "neck"
-    | "gloves"
-    | "belt"
-    | "boots"
-    | "ring"
-    | "sword"
-    | "shield";
+  equipmentType: EquipmentType;
   affixes: string[];
-  equipmentType?: EquipmentType;
   rarity?: "rare" | "legendary";
   baseStats?: string;
   legendaryName?: string;
