@@ -9,13 +9,13 @@ import { useLoadout } from "../../stores/builderStoreSelectors";
 import { HeroTab } from "../hero/HeroTab";
 
 export const HeroSection = () => {
-  const saveData = useBuilderStore((state) => state.loadout);
-  const updateLoadout = useBuilderStore((state) => state.updateLoadout);
+  const saveData = useBuilderStore((state) => state.saveData);
+  const updateSaveData = useBuilderStore((state) => state.updateSaveData);
   const loadout = useLoadout();
 
   const handleHeroChange = useCallback(
     (hero: string | undefined) => {
-      updateLoadout((prev) => {
+      updateSaveData((prev) => {
         if (!hero) {
           return {
             ...prev,
@@ -44,13 +44,13 @@ export const HeroSection = () => {
         };
       });
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   const handleTraitSelect = useCallback(
     (level: 45 | 60 | 75, traitName: string | undefined) => {
       const traitKey = `level${level}` as "level45" | "level60" | "level75";
-      updateLoadout((prev) => ({
+      updateSaveData((prev) => ({
         ...prev,
         heroPage: {
           ...prev.heroPage,
@@ -61,12 +61,12 @@ export const HeroSection = () => {
         },
       }));
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   const handleMemoryEquip = useCallback(
     (slot: HeroMemorySlot, memoryId: string | undefined) => {
-      updateLoadout((prev) => {
+      updateSaveData((prev) => {
         const memory = memoryId
           ? prev.heroMemoryList.find((m) => m.id === memoryId)
           : undefined;
@@ -83,33 +83,33 @@ export const HeroSection = () => {
         };
       });
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   const handleMemorySave = useCallback(
     (memory: HeroMemory) => {
-      updateLoadout((prev) => ({
+      updateSaveData((prev) => ({
         ...prev,
         heroMemoryList: [...prev.heroMemoryList, memory],
       }));
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   const handleMemoryCopy = useCallback(
     (memory: HeroMemory) => {
       const newMemory: HeroMemory = { ...memory, id: generateItemId() };
-      updateLoadout((prev) => ({
+      updateSaveData((prev) => ({
         ...prev,
         heroMemoryList: [...prev.heroMemoryList, newMemory],
       }));
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   const handleMemoryDelete = useCallback(
     (memoryId: string) => {
-      updateLoadout((prev) => {
+      updateSaveData((prev) => {
         const newMemoryList = prev.heroMemoryList.filter(
           (m) => m.id !== memoryId,
         );
@@ -134,7 +134,7 @@ export const HeroSection = () => {
         };
       });
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   return (

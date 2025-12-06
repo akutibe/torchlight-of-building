@@ -5,7 +5,7 @@ import { useBuilderStore } from "./builderStore";
 import type { TreeSlot } from "../lib/types";
 
 export const useLoadout = (): Loadout => {
-  const saveData = useBuilderStore((state) => state.loadout);
+  const saveData = useBuilderStore((state) => state.saveData);
 
   const saveDataJsonRef = useRef<string>("");
   const loadoutRef = useRef<Loadout | undefined>(undefined);

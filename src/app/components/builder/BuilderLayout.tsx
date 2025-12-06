@@ -32,9 +32,9 @@ export const BuilderLayout = ({
   const currentSaveName = useBuilderStore((state) => state.currentSaveName);
   const currentSaveId = useBuilderStore((state) => state.currentSaveId);
   const hasUnsavedChanges = useBuilderStore((state) => state.hasUnsavedChanges);
-  const saveData = useBuilderStore((state) => state.loadout);
+  const saveData = useBuilderStore((state) => state.saveData);
   const save = useBuilderStore((state) => state.save);
-  const setLoadout = useBuilderStore((state) => state.setLoadout);
+  const setSaveData = useBuilderStore((state) => state.setSaveData);
 
   const loadout = useLoadout();
 
@@ -97,12 +97,12 @@ export const BuilderLayout = ({
     (code: string): boolean => {
       const decoded = decodeBuildCode(code);
       if (decoded) {
-        setLoadout(decoded);
+        setSaveData(decoded);
         return true;
       }
       return false;
     },
-    [setLoadout],
+    [setSaveData],
   );
 
   return (

@@ -14,12 +14,12 @@ import { PactspiritTab } from "../pactspirit/PactspiritTab";
 
 export const PactspiritSection = () => {
   const loadout = useLoadout();
-  const updateLoadout = useBuilderStore((state) => state.updateLoadout);
+  const updateSaveData = useBuilderStore((state) => state.updateSaveData);
 
   const handlePactspiritSelect = useCallback(
     (slotIndex: PactspiritSlotIndex, pactspiritName: string | undefined) => {
       const slotKey = `slot${slotIndex}` as keyof PactspiritPage;
-      updateLoadout((prev) => ({
+      updateSaveData((prev) => ({
         ...prev,
         pactspiritPage: {
           ...prev.pactspiritPage,
@@ -30,13 +30,13 @@ export const PactspiritSection = () => {
         },
       }));
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   const handleLevelChange = useCallback(
     (slotIndex: PactspiritSlotIndex, level: number) => {
       const slotKey = `slot${slotIndex}` as keyof PactspiritPage;
-      updateLoadout((prev) => ({
+      updateSaveData((prev) => ({
         ...prev,
         pactspiritPage: {
           ...prev.pactspiritPage,
@@ -47,7 +47,7 @@ export const PactspiritSection = () => {
         },
       }));
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   const handleInstallDestiny = useCallback(
@@ -57,7 +57,7 @@ export const PactspiritSection = () => {
       destiny: InstalledDestinyResult,
     ) => {
       const slotKey = `slot${slotIndex}` as keyof PactspiritPage;
-      updateLoadout((prev) => ({
+      updateSaveData((prev) => ({
         ...prev,
         pactspiritPage: {
           ...prev.pactspiritPage,
@@ -73,13 +73,13 @@ export const PactspiritSection = () => {
         },
       }));
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   const handleRevertRing = useCallback(
     (slotIndex: PactspiritSlotIndex, ringSlot: RingSlotKey) => {
       const slotKey = `slot${slotIndex}` as keyof PactspiritPage;
-      updateLoadout((prev) => ({
+      updateSaveData((prev) => ({
         ...prev,
         pactspiritPage: {
           ...prev.pactspiritPage,
@@ -93,7 +93,7 @@ export const PactspiritSection = () => {
         },
       }));
     },
-    [updateLoadout],
+    [updateSaveData],
   );
 
   return (

@@ -34,7 +34,7 @@ import type {
 
 interface BuilderState {
   // Core data
-  loadout: SaveData;
+  saveData: SaveData;
   hasUnsavedChanges: boolean;
 
   // Save metadata
@@ -43,8 +43,8 @@ interface BuilderState {
   savesIndex: SavesIndex;
 
   // Actions - Core
-  setLoadout: (loadout: SaveData) => void;
-  updateLoadout: (updater: (prev: SaveData) => SaveData) => void;
+  setSaveData: (saveData: SaveData) => void;
+  updateSaveData: (updater: (prev: SaveData) => SaveData) => void;
   loadFromSave: (saveId: string) => boolean;
   save: () => boolean;
   resetUnsavedChanges: () => void;
@@ -141,18 +141,18 @@ export const useBuilderStore = create<BuilderState>()(
   persist(
     (set, get) => ({
       // Initial state
-      loadout: createEmptyLoadout(),
+      saveData: createEmptyLoadout(),
       hasUnsavedChanges: false,
       currentSaveId: undefined,
       currentSaveName: undefined,
       savesIndex: { currentSaveId: undefined, saves: [] },
 
       // Core actions
-      setLoadout: (loadout) => set({ loadout, hasUnsavedChanges: false }),
+      setSaveData: (saveData) => set({ saveData, hasUnsavedChanges: false }),
 
-      updateLoadout: (updater) =>
+      updateSaveData: (updater) =>
         set((state) => ({
-          loadout: updater(state.loadout),
+          saveData: updater(state.saveData),
           hasUnsavedChanges: true,
         })),
 
@@ -168,7 +168,7 @@ export const useBuilderStore = create<BuilderState>()(
         saveSavesIndex(updatedIndex);
 
         set({
-          loadout: data,
+          saveData: data,
           currentSaveId: saveId,
           currentSaveName: saveMeta.name,
           savesIndex: updatedIndex,
@@ -178,10 +178,10 @@ export const useBuilderStore = create<BuilderState>()(
       },
 
       save: () => {
-        const { currentSaveId, loadout, savesIndex } = get();
+        const { currentSaveId, saveData, savesIndex } = get();
         if (!currentSaveId) return false;
 
-        const success = saveSaveData(currentSaveId, loadout);
+        const success = saveSaveData(currentSaveId, saveData);
         if (success) {
           const now = Date.now();
           const updatedSaves = savesIndex.saves.map((s) =>
@@ -199,21 +199,21 @@ export const useBuilderStore = create<BuilderState>()(
       // Equipment actions
       addItemToInventory: (item) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            itemsList: [...state.loadout.itemsList, item],
+          saveData: {
+            ...state.saveData,
+            itemsList: [...state.saveData.itemsList, item],
           },
           hasUnsavedChanges: true,
         })),
 
       copyItem: (itemId) => {
-        const item = get().loadout.itemsList.find((i) => i.id === itemId);
+        const item = get().saveData.itemsList.find((i) => i.id === itemId);
         if (!item) return;
         const newItem: Gear = { ...item, id: generateItemId() };
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            itemsList: [...state.loadout.itemsList, newItem],
+          saveData: {
+            ...state.saveData,
+            itemsList: [...state.saveData.itemsList, newItem],
           },
           hasUnsavedChanges: true,
         }));
@@ -221,10 +221,10 @@ export const useBuilderStore = create<BuilderState>()(
 
       deleteItem: (itemId) =>
         set((state) => {
-          const newItemsList = state.loadout.itemsList.filter(
+          const newItemsList = state.saveData.itemsList.filter(
             (item) => item.id !== itemId,
           );
-          const newEquipmentPage = { ...state.loadout.equipmentPage };
+          const newEquipmentPage = { ...state.saveData.equipmentPage };
           const slots: GearSlot[] = [
             "helmet",
             "chest",
@@ -243,8 +243,8 @@ export const useBuilderStore = create<BuilderState>()(
             }
           });
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               itemsList: newItemsList,
               equipmentPage: newEquipmentPage,
             },
@@ -255,26 +255,26 @@ export const useBuilderStore = create<BuilderState>()(
       selectItemForSlot: (slot, itemId) =>
         set((state) => {
           if (!itemId) {
-            const newEquipmentPage = { ...state.loadout.equipmentPage };
+            const newEquipmentPage = { ...state.saveData.equipmentPage };
             delete newEquipmentPage[slot];
             return {
-              loadout: { ...state.loadout, equipmentPage: newEquipmentPage },
+              saveData: { ...state.saveData, equipmentPage: newEquipmentPage },
               hasUnsavedChanges: true,
             };
           }
-          const item = state.loadout.itemsList.find((i) => i.id === itemId);
+          const item = state.saveData.itemsList.find((i) => i.id === itemId);
           if (!item) return state;
           return {
-            loadout: {
-              ...state.loadout,
-              equipmentPage: { ...state.loadout.equipmentPage, [slot]: item },
+            saveData: {
+              ...state.saveData,
+              equipmentPage: { ...state.saveData.equipmentPage, [slot]: item },
             },
             hasUnsavedChanges: true,
           };
         }),
 
       isItemEquipped: (itemId) => {
-        const { loadout } = get();
+        const { saveData } = get();
         const slots: GearSlot[] = [
           "helmet",
           "chest",
@@ -287,16 +287,18 @@ export const useBuilderStore = create<BuilderState>()(
           "mainHand",
           "offHand",
         ];
-        return slots.some((slot) => loadout.equipmentPage[slot]?.id === itemId);
+        return slots.some(
+          (slot) => saveData.equipmentPage[slot]?.id === itemId,
+        );
       },
 
       // Talent actions
       setTreeName: (slot, treeName) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
+          saveData: {
+            ...state.saveData,
             talentPage: {
-              ...state.loadout.talentPage,
+              ...state.saveData.talentPage,
               [slot]: {
                 name: treeName,
                 allocatedNodes: [],
@@ -309,23 +311,23 @@ export const useBuilderStore = create<BuilderState>()(
 
       clearTree: (slot) =>
         set((state) => {
-          const newTalentPage = { ...state.loadout.talentPage };
+          const newTalentPage = { ...state.saveData.talentPage };
           delete newTalentPage[slot];
           return {
-            loadout: { ...state.loadout, talentPage: newTalentPage },
+            saveData: { ...state.saveData, talentPage: newTalentPage },
             hasUnsavedChanges: true,
           };
         }),
 
       setAllocatedNodes: (slot, nodes) =>
         set((state) => {
-          const tree = state.loadout.talentPage[slot];
+          const tree = state.saveData.talentPage[slot];
           if (!tree) return state;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               talentPage: {
-                ...state.loadout.talentPage,
+                ...state.saveData.talentPage,
                 [slot]: { ...tree, allocatedNodes: nodes },
               },
             },
@@ -335,13 +337,13 @@ export const useBuilderStore = create<BuilderState>()(
 
       setCoreTalents: (slot, talents) =>
         set((state) => {
-          const tree = state.loadout.talentPage[slot];
+          const tree = state.saveData.talentPage[slot];
           if (!tree) return state;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               talentPage: {
-                ...state.loadout.talentPage,
+                ...state.saveData.talentPage,
                 [slot]: { ...tree, selectedCoreTalents: talents },
               },
             },
@@ -351,26 +353,26 @@ export const useBuilderStore = create<BuilderState>()(
 
       addPrismToInventory: (prism) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            prismList: [...state.loadout.prismList, prism],
+          saveData: {
+            ...state.saveData,
+            prismList: [...state.saveData.prismList, prism],
           },
           hasUnsavedChanges: true,
         })),
 
       deletePrism: (prismId) =>
         set((state) => {
-          const newPrismList = state.loadout.prismList.filter(
+          const newPrismList = state.saveData.prismList.filter(
             (p) => p.id !== prismId,
           );
-          const placedPrism = state.loadout.talentPage.placedPrism;
-          const newTalentPage = { ...state.loadout.talentPage };
+          const placedPrism = state.saveData.talentPage.placedPrism;
+          const newTalentPage = { ...state.saveData.talentPage };
           if (placedPrism?.prism.id === prismId) {
             delete newTalentPage.placedPrism;
           }
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               prismList: newPrismList,
               talentPage: newTalentPage,
             },
@@ -380,10 +382,10 @@ export const useBuilderStore = create<BuilderState>()(
 
       placePrism: (prism, treeSlot, position) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
+          saveData: {
+            ...state.saveData,
             talentPage: {
-              ...state.loadout.talentPage,
+              ...state.saveData.talentPage,
               placedPrism: { prism, treeSlot, position },
             },
           },
@@ -392,37 +394,40 @@ export const useBuilderStore = create<BuilderState>()(
 
       removePlacedPrism: () =>
         set((state) => {
-          const newTalentPage = { ...state.loadout.talentPage };
+          const newTalentPage = { ...state.saveData.talentPage };
           delete newTalentPage.placedPrism;
           return {
-            loadout: { ...state.loadout, talentPage: newTalentPage },
+            saveData: { ...state.saveData, talentPage: newTalentPage },
             hasUnsavedChanges: true,
           };
         }),
 
       addInverseImageToInventory: (inverseImage) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            inverseImageList: [...state.loadout.inverseImageList, inverseImage],
+          saveData: {
+            ...state.saveData,
+            inverseImageList: [
+              ...state.saveData.inverseImageList,
+              inverseImage,
+            ],
           },
           hasUnsavedChanges: true,
         })),
 
       deleteInverseImage: (inverseImageId) =>
         set((state) => {
-          const newInverseImageList = state.loadout.inverseImageList.filter(
+          const newInverseImageList = state.saveData.inverseImageList.filter(
             (ii) => ii.id !== inverseImageId,
           );
           const placedInverseImage =
-            state.loadout.talentPage.placedInverseImage;
-          const newTalentPage = { ...state.loadout.talentPage };
+            state.saveData.talentPage.placedInverseImage;
+          const newTalentPage = { ...state.saveData.talentPage };
           if (placedInverseImage?.inverseImage.id === inverseImageId) {
             delete newTalentPage.placedInverseImage;
           }
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               inverseImageList: newInverseImageList,
               talentPage: newTalentPage,
             },
@@ -432,13 +437,13 @@ export const useBuilderStore = create<BuilderState>()(
 
       placeInverseImage: (inverseImage, treeSlot, position) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            inverseImageList: state.loadout.inverseImageList.filter(
+          saveData: {
+            ...state.saveData,
+            inverseImageList: state.saveData.inverseImageList.filter(
               (ii) => ii.id !== inverseImage.id,
             ),
             talentPage: {
-              ...state.loadout.talentPage,
+              ...state.saveData.talentPage,
               placedInverseImage: {
                 inverseImage,
                 treeSlot,
@@ -453,17 +458,17 @@ export const useBuilderStore = create<BuilderState>()(
       removePlacedInverseImage: () =>
         set((state) => {
           const placedInverseImage =
-            state.loadout.talentPage.placedInverseImage;
+            state.saveData.talentPage.placedInverseImage;
           if (!placedInverseImage) return state;
 
-          const newTalentPage = { ...state.loadout.talentPage };
+          const newTalentPage = { ...state.saveData.talentPage };
           delete newTalentPage.placedInverseImage;
 
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               inverseImageList: [
-                ...state.loadout.inverseImageList,
+                ...state.saveData.inverseImageList,
                 placedInverseImage.inverseImage,
               ],
               talentPage: newTalentPage,
@@ -475,7 +480,7 @@ export const useBuilderStore = create<BuilderState>()(
       allocateReflectedNode: (x, y, sourceX, sourceY) =>
         set((state) => {
           const placedInverseImage =
-            state.loadout.talentPage.placedInverseImage;
+            state.saveData.talentPage.placedInverseImage;
           if (!placedInverseImage) return state;
 
           const existingIdx =
@@ -497,10 +502,10 @@ export const useBuilderStore = create<BuilderState>()(
           }
 
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               talentPage: {
-                ...state.loadout.talentPage,
+                ...state.saveData.talentPage,
                 placedInverseImage: {
                   ...placedInverseImage,
                   reflectedAllocatedNodes: updatedNodes,
@@ -514,7 +519,7 @@ export const useBuilderStore = create<BuilderState>()(
       deallocateReflectedNode: (x, y) =>
         set((state) => {
           const placedInverseImage =
-            state.loadout.talentPage.placedInverseImage;
+            state.saveData.talentPage.placedInverseImage;
           if (!placedInverseImage) return state;
 
           const existing = placedInverseImage.reflectedAllocatedNodes.find(
@@ -535,10 +540,10 @@ export const useBuilderStore = create<BuilderState>()(
           }
 
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               talentPage: {
-                ...state.loadout.talentPage,
+                ...state.saveData.talentPage,
                 placedInverseImage: {
                   ...placedInverseImage,
                   reflectedAllocatedNodes: updatedNodes,
@@ -552,14 +557,14 @@ export const useBuilderStore = create<BuilderState>()(
       setReflectedAllocatedNodes: (nodes) =>
         set((state) => {
           const placedInverseImage =
-            state.loadout.talentPage.placedInverseImage;
+            state.saveData.talentPage.placedInverseImage;
           if (!placedInverseImage) return state;
 
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               talentPage: {
-                ...state.loadout.talentPage,
+                ...state.saveData.talentPage,
                 placedInverseImage: {
                   ...placedInverseImage,
                   reflectedAllocatedNodes: nodes,
@@ -573,20 +578,20 @@ export const useBuilderStore = create<BuilderState>()(
       // Hero actions
       setHero: (hero) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            heroPage: { ...state.loadout.heroPage, selectedHero: hero },
+          saveData: {
+            ...state.saveData,
+            heroPage: { ...state.saveData.heroPage, selectedHero: hero },
           },
           hasUnsavedChanges: true,
         })),
 
       setTrait: (level, trait) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
+          saveData: {
+            ...state.saveData,
             heroPage: {
-              ...state.loadout.heroPage,
-              traits: { ...state.loadout.heroPage.traits, [level]: trait },
+              ...state.saveData.heroPage,
+              traits: { ...state.saveData.heroPage.traits, [level]: trait },
             },
           },
           hasUnsavedChanges: true,
@@ -594,19 +599,19 @@ export const useBuilderStore = create<BuilderState>()(
 
       addHeroMemory: (memory) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            heroMemoryList: [...state.loadout.heroMemoryList, memory],
+          saveData: {
+            ...state.saveData,
+            heroMemoryList: [...state.saveData.heroMemoryList, memory],
           },
           hasUnsavedChanges: true,
         })),
 
       deleteHeroMemory: (memoryId) =>
         set((state) => {
-          const newMemoryList = state.loadout.heroMemoryList.filter(
+          const newMemoryList = state.saveData.heroMemoryList.filter(
             (m) => m.id !== memoryId,
           );
-          const newMemorySlots = { ...state.loadout.heroPage.memorySlots };
+          const newMemorySlots = { ...state.saveData.heroPage.memorySlots };
           (["slot45", "slot60", "slot75"] as HeroMemorySlot[]).forEach(
             (slot) => {
               if (newMemorySlots[slot]?.id === memoryId) {
@@ -615,11 +620,11 @@ export const useBuilderStore = create<BuilderState>()(
             },
           );
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               heroMemoryList: newMemoryList,
               heroPage: {
-                ...state.loadout.heroPage,
+                ...state.saveData.heroPage,
                 memorySlots: newMemorySlots,
               },
             },
@@ -629,12 +634,12 @@ export const useBuilderStore = create<BuilderState>()(
 
       equipHeroMemory: (slot, memory) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
+          saveData: {
+            ...state.saveData,
             heroPage: {
-              ...state.loadout.heroPage,
+              ...state.saveData.heroPage,
               memorySlots: {
-                ...state.loadout.heroPage.memorySlots,
+                ...state.saveData.heroPage.memorySlots,
                 [slot]: memory,
               },
             },
@@ -646,14 +651,14 @@ export const useBuilderStore = create<BuilderState>()(
       setPactspirit: (slotIndex, name) =>
         set((state) => {
           const slotKey =
-            `slot${slotIndex}` as keyof typeof state.loadout.pactspiritPage;
+            `slot${slotIndex}` as keyof typeof state.saveData.pactspiritPage;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               pactspiritPage: {
-                ...state.loadout.pactspiritPage,
+                ...state.saveData.pactspiritPage,
                 [slotKey]: {
-                  ...state.loadout.pactspiritPage[slotKey],
+                  ...state.saveData.pactspiritPage[slotKey],
                   pactspiritName: name,
                 },
               },
@@ -665,14 +670,14 @@ export const useBuilderStore = create<BuilderState>()(
       setPactspiritLevel: (slotIndex, level) =>
         set((state) => {
           const slotKey =
-            `slot${slotIndex}` as keyof typeof state.loadout.pactspiritPage;
+            `slot${slotIndex}` as keyof typeof state.saveData.pactspiritPage;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               pactspiritPage: {
-                ...state.loadout.pactspiritPage,
+                ...state.saveData.pactspiritPage,
                 [slotKey]: {
-                  ...state.loadout.pactspiritPage[slotKey],
+                  ...state.saveData.pactspiritPage[slotKey],
                   level,
                 },
               },
@@ -684,13 +689,13 @@ export const useBuilderStore = create<BuilderState>()(
       setRingDestiny: (slotIndex, ringSlot, destiny) =>
         set((state) => {
           const slotKey =
-            `slot${slotIndex}` as keyof typeof state.loadout.pactspiritPage;
-          const slot = state.loadout.pactspiritPage[slotKey];
+            `slot${slotIndex}` as keyof typeof state.saveData.pactspiritPage;
+          const slot = state.saveData.pactspiritPage[slotKey];
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               pactspiritPage: {
-                ...state.loadout.pactspiritPage,
+                ...state.saveData.pactspiritPage,
                 [slotKey]: {
                   ...slot,
                   rings: {
@@ -707,12 +712,12 @@ export const useBuilderStore = create<BuilderState>()(
       updatePactspiritSlot: (slotIndex, slot) =>
         set((state) => {
           const slotKey =
-            `slot${slotIndex}` as keyof typeof state.loadout.pactspiritPage;
+            `slot${slotIndex}` as keyof typeof state.saveData.pactspiritPage;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               pactspiritPage: {
-                ...state.loadout.pactspiritPage,
+                ...state.saveData.pactspiritPage,
                 [slotKey]: slot,
               },
             },
@@ -723,28 +728,28 @@ export const useBuilderStore = create<BuilderState>()(
       // Divinity actions
       addSlateToInventory: (slate) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            divinitySlateList: [...state.loadout.divinitySlateList, slate],
+          saveData: {
+            ...state.saveData,
+            divinitySlateList: [...state.saveData.divinitySlateList, slate],
           },
           hasUnsavedChanges: true,
         })),
 
       deleteSlate: (slateId) =>
         set((state) => {
-          const newSlateList = state.loadout.divinitySlateList.filter(
+          const newSlateList = state.saveData.divinitySlateList.filter(
             (s) => s.id !== slateId,
           );
           const newPlacedSlates =
-            state.loadout.divinityPage.placedSlates.filter(
+            state.saveData.divinityPage.placedSlates.filter(
               (p) => p.slateId !== slateId,
             );
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               divinitySlateList: newSlateList,
               divinityPage: {
-                ...state.loadout.divinityPage,
+                ...state.saveData.divinityPage,
                 placedSlates: newPlacedSlates,
               },
             },
@@ -755,25 +760,25 @@ export const useBuilderStore = create<BuilderState>()(
       placeSlate: (slateId, position) =>
         set((state) => {
           const existingIndex =
-            state.loadout.divinityPage.placedSlates.findIndex(
+            state.saveData.divinityPage.placedSlates.findIndex(
               (p) => p.slateId === slateId,
             );
           let newPlacedSlates: PlacedSlate[];
           if (existingIndex >= 0) {
-            newPlacedSlates = state.loadout.divinityPage.placedSlates.map(
+            newPlacedSlates = state.saveData.divinityPage.placedSlates.map(
               (p, i) => (i === existingIndex ? { slateId, position } : p),
             );
           } else {
             newPlacedSlates = [
-              ...state.loadout.divinityPage.placedSlates,
+              ...state.saveData.divinityPage.placedSlates,
               { slateId, position },
             ];
           }
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               divinityPage: {
-                ...state.loadout.divinityPage,
+                ...state.saveData.divinityPage,
                 placedSlates: newPlacedSlates,
               },
             },
@@ -783,11 +788,11 @@ export const useBuilderStore = create<BuilderState>()(
 
       removeSlate: (slateId) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
+          saveData: {
+            ...state.saveData,
             divinityPage: {
-              ...state.loadout.divinityPage,
-              placedSlates: state.loadout.divinityPage.placedSlates.filter(
+              ...state.saveData.divinityPage,
+              placedSlates: state.saveData.divinityPage.placedSlates.filter(
                 (p) => p.slateId !== slateId,
               ),
             },
@@ -797,9 +802,9 @@ export const useBuilderStore = create<BuilderState>()(
 
       updateSlate: (slateId, updates) =>
         set((state) => ({
-          loadout: {
-            ...state.loadout,
-            divinitySlateList: state.loadout.divinitySlateList.map((s) =>
+          saveData: {
+            ...state.saveData,
+            divinitySlateList: state.saveData.divinitySlateList.map((s) =>
               s.id === slateId ? { ...s, ...updates } : s,
             ),
           },
@@ -810,14 +815,14 @@ export const useBuilderStore = create<BuilderState>()(
       setActiveSkill: (slot, skillName) =>
         set((state) => {
           const skillKey =
-            `activeSkill${slot}` as keyof typeof state.loadout.skillPage;
+            `activeSkill${slot}` as keyof typeof state.saveData.skillPage;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               skillPage: {
-                ...state.loadout.skillPage,
+                ...state.saveData.skillPage,
                 [skillKey]: {
-                  ...state.loadout.skillPage[skillKey],
+                  ...state.saveData.skillPage[skillKey],
                   skillName,
                 },
               },
@@ -829,14 +834,14 @@ export const useBuilderStore = create<BuilderState>()(
       setPassiveSkill: (slot, skillName) =>
         set((state) => {
           const skillKey =
-            `passiveSkill${slot}` as keyof typeof state.loadout.skillPage;
+            `passiveSkill${slot}` as keyof typeof state.saveData.skillPage;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               skillPage: {
-                ...state.loadout.skillPage,
+                ...state.saveData.skillPage,
                 [skillKey]: {
-                  ...state.loadout.skillPage[skillKey],
+                  ...state.saveData.skillPage[skillKey],
                   skillName,
                 },
               },
@@ -848,16 +853,16 @@ export const useBuilderStore = create<BuilderState>()(
       setSupportSkill: (skillType, skillSlot, supportSlot, supportName) =>
         set((state) => {
           const skillKey =
-            `${skillType}Skill${skillSlot}` as keyof typeof state.loadout.skillPage;
+            `${skillType}Skill${skillSlot}` as keyof typeof state.saveData.skillPage;
           const supportKey =
             `supportSkill${supportSlot}` as keyof SupportSkills;
-          const skill = state.loadout.skillPage[skillKey];
+          const skill = state.saveData.skillPage[skillKey];
           if (!skill) return state;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               skillPage: {
-                ...state.loadout.skillPage,
+                ...state.saveData.skillPage,
                 [skillKey]: {
                   ...skill,
                   supportSkills: {
@@ -874,14 +879,14 @@ export const useBuilderStore = create<BuilderState>()(
       toggleSkillEnabled: (skillType, slot) =>
         set((state) => {
           const skillKey =
-            `${skillType}Skill${slot}` as keyof typeof state.loadout.skillPage;
-          const skill = state.loadout.skillPage[skillKey];
+            `${skillType}Skill${slot}` as keyof typeof state.saveData.skillPage;
+          const skill = state.saveData.skillPage[skillKey];
           if (!skill) return state;
           return {
-            loadout: {
-              ...state.loadout,
+            saveData: {
+              ...state.saveData,
               skillPage: {
-                ...state.loadout.skillPage,
+                ...state.saveData.skillPage,
                 [skillKey]: { ...skill, enabled: !skill.enabled },
               },
             },
@@ -892,7 +897,7 @@ export const useBuilderStore = create<BuilderState>()(
     {
       name: "torchlight-builder-storage",
       partialize: (state) => ({
-        loadout: state.loadout,
+        saveData: state.saveData,
         currentSaveId: state.currentSaveId,
       }),
     },
