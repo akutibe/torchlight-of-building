@@ -115,7 +115,7 @@ export interface PlacedInverseImage {
   reflectedAllocatedNodes: ReflectedAllocatedNode[];
 }
 
-export interface AllocatedTalents {
+export interface TalentGrid {
   tree1?: TalentTree;
   tree2?: TalentTree;
   tree3?: TalentTree;
@@ -130,7 +130,7 @@ export interface TalentInventory {
 }
 
 export interface TalentPage {
-  allocatedTalents: AllocatedTalents;
+  allocatedTalents: TalentGrid;
   inventory: TalentInventory;
 }
 

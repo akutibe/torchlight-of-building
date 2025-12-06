@@ -19,7 +19,7 @@ import type {
   TalentTree,
   PlacedPrism,
   CraftedPrism,
-  AllocatedTalents,
+  TalentGrid,
   TalentInventory,
   AllocatedTalentNode,
   ReflectedAllocatedNode,
@@ -229,7 +229,7 @@ const convertTalentPage = (
   const treeSlots: TreeSlot[] = ["tree1", "tree2", "tree3", "tree4"];
   const placedPrism = saveDataTalentPage.placedPrism;
 
-  const allocatedTalents: AllocatedTalents = {};
+  const allocatedTalents: TalentGrid = {};
 
   for (const slot of treeSlots) {
     const tree = saveDataTalentPage[slot];
