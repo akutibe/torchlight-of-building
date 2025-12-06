@@ -8,7 +8,10 @@ import type {
   PlacedPrism as SaveDataPlacedPrism,
   CraftedPrism as SaveDataCraftedPrism,
   PlacedInverseImage as SaveDataPlacedInverseImage,
+  HeroPage as SaveDataHeroPage,
+  HeroMemory as SaveDataHeroMemory,
 } from "@/src/app/lib/save-data";
+import { craftHeroMemoryAffix } from "@/src/app/lib/hero-utils";
 import {
   getEffectModifierForType,
   getTargetAreaPositions,
@@ -29,6 +32,10 @@ import type {
   CraftedPrism,
   TalentTrees,
   TalentInventory,
+  HeroPage,
+  HeroMemory,
+  HeroTraits,
+  HeroMemorySlots,
 } from "../core";
 import type { Mod } from "../mod";
 import { parseMod } from "../mod_parser";
@@ -331,6 +338,95 @@ const convertTalentPage = (
   };
 };
 
+const getHeroSrc = (type: "trait" | "memory", slot: string): string => {
+  return `Hero#${type}#${slot}`;
+};
+
+const convertHeroMemory = (
+  memory: SaveDataHeroMemory,
+  slot: string,
+): HeroMemory => {
+  const src = getHeroSrc("memory", slot);
+  const affixes: Affix[] = [];
+
+  // Base stat
+  affixes.push(convertAffix(memory.baseStat, src));
+
+  // Fixed affixes
+  for (const affix of memory.fixedAffixes) {
+    const resolvedText = craftHeroMemoryAffix(affix.effect, affix.quality);
+    affixes.push(convertAffix(resolvedText, src));
+  }
+
+  // Random affixes
+  for (const affix of memory.randomAffixes) {
+    const resolvedText = craftHeroMemoryAffix(affix.effect, affix.quality);
+    affixes.push(convertAffix(resolvedText, src));
+  }
+
+  return {
+    id: memory.id,
+    memoryType: memory.memoryType,
+    affixes,
+  };
+};
+
+const convertHeroPage = (saveDataHeroPage: SaveDataHeroPage): HeroPage => {
+  const traits: HeroTraits = {};
+
+  if (saveDataHeroPage.traits.level1) {
+    traits.level1 = convertAffix(
+      saveDataHeroPage.traits.level1,
+      getHeroSrc("trait", "level1"),
+    );
+  }
+  if (saveDataHeroPage.traits.level45) {
+    traits.level45 = convertAffix(
+      saveDataHeroPage.traits.level45,
+      getHeroSrc("trait", "level45"),
+    );
+  }
+  if (saveDataHeroPage.traits.level60) {
+    traits.level60 = convertAffix(
+      saveDataHeroPage.traits.level60,
+      getHeroSrc("trait", "level60"),
+    );
+  }
+  if (saveDataHeroPage.traits.level75) {
+    traits.level75 = convertAffix(
+      saveDataHeroPage.traits.level75,
+      getHeroSrc("trait", "level75"),
+    );
+  }
+
+  const memorySlots: HeroMemorySlots = {};
+
+  if (saveDataHeroPage.memorySlots.slot45) {
+    memorySlots.slot45 = convertHeroMemory(
+      saveDataHeroPage.memorySlots.slot45,
+      "slot45",
+    );
+  }
+  if (saveDataHeroPage.memorySlots.slot60) {
+    memorySlots.slot60 = convertHeroMemory(
+      saveDataHeroPage.memorySlots.slot60,
+      "slot60",
+    );
+  }
+  if (saveDataHeroPage.memorySlots.slot75) {
+    memorySlots.slot75 = convertHeroMemory(
+      saveDataHeroPage.memorySlots.slot75,
+      "slot75",
+    );
+  }
+
+  return {
+    selectedHero: saveDataHeroPage.selectedHero,
+    traits,
+    memorySlots,
+  };
+};
+
 export const loadSave = (unloadedSaveData: SaveData): Loadout => {
   const saveData = R.clone(unloadedSaveData);
   return {
@@ -342,6 +438,7 @@ export const loadSave = (unloadedSaveData: SaveData): Loadout => {
     ),
     divinityPage: { slates: [] },
     skillPage: saveData.skillPage,
+    heroPage: convertHeroPage(saveData.heroPage),
     customConfiguration: [],
   };
 };

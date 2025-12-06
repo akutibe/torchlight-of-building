@@ -1,10 +1,16 @@
-import type { SkillPage } from "@/src/tli/core";
+import type { SkillPage, HeroMemoryType } from "@/src/tli/core";
 import type { EquipmentType } from "@/src/tli/gear_data_types";
 
 export type {
   SkillPage,
   SkillWithSupports,
   SupportSkills,
+} from "@/src/tli/core";
+
+export {
+  HERO_MEMORY_TYPES,
+  type HeroMemoryType,
+  type HeroMemorySlot,
 } from "@/src/tli/core";
 export const SLATE_SHAPES = ["O", "L", "Z"] as const;
 export type SlateShape = (typeof SLATE_SHAPES)[number];
@@ -135,13 +141,6 @@ export interface GearPage {
   offHand?: Gear;
 }
 
-export const HERO_MEMORY_TYPES = [
-  "Memory of Origin",
-  "Memory of Discipline",
-  "Memory of Progress",
-] as const;
-export type HeroMemoryType = (typeof HERO_MEMORY_TYPES)[number];
-
 export interface HeroMemoryAffix {
   effect: string;
   quality: number;
@@ -154,8 +153,6 @@ export interface HeroMemory {
   fixedAffixes: HeroMemoryAffix[];
   randomAffixes: HeroMemoryAffix[];
 }
-
-export type HeroMemorySlot = "slot45" | "slot60" | "slot75";
 
 export interface HeroPage {
   selectedHero: string | undefined;

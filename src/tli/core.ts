@@ -229,10 +229,58 @@ export interface SkillPage {
   passiveSkill4?: SkillWithSupports;
 }
 
+export const HERO_MEMORY_TYPES = [
+  "Memory of Origin",
+  "Memory of Discipline",
+  "Memory of Progress",
+] as const;
+export type HeroMemoryType = (typeof HERO_MEMORY_TYPES)[number];
+
+export type HeroMemorySlot = "slot45" | "slot60" | "slot75";
+
+export interface HeroMemory {
+  id: string;
+  memoryType: HeroMemoryType;
+  affixes: Affix[];
+}
+
+export interface HeroTraits {
+  level1?: Affix;
+  level45?: Affix;
+  level60?: Affix;
+  level75?: Affix;
+}
+
+export interface HeroMemorySlots {
+  slot45?: HeroMemory;
+  slot60?: HeroMemory;
+  slot75?: HeroMemory;
+}
+
+export interface HeroPage {
+  selectedHero?: string;
+  traits: HeroTraits;
+  memorySlots: HeroMemorySlots;
+}
+
+export const getHeroAffixes = (heroPage: HeroPage): Affix[] => {
+  const affixes: Affix[] = [];
+
+  const { memorySlots } = heroPage;
+  // TODO: handle traits at some point
+
+  if (memorySlots.slot45) affixes.push(...memorySlots.slot45.affixes);
+  if (memorySlots.slot60) affixes.push(...memorySlots.slot60.affixes);
+  if (memorySlots.slot75) affixes.push(...memorySlots.slot75.affixes);
+
+  return affixes;
+};
+
 export interface Loadout {
   gearPage: GearPage;
   talentPage: TalentPage;
   divinityPage: DivinityPage;
   skillPage: SkillPage;
+  heroPage: HeroPage;
   customConfiguration: Affix[];
 }

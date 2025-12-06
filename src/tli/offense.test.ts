@@ -17,6 +17,11 @@ const initLoadout = (pl: Partial<Loadout> = {}): Loadout => {
     },
     divinityPage: pl.divinityPage || { slates: [] },
     skillPage: pl.skillPage || {},
+    heroPage: pl.heroPage || {
+      selectedHero: undefined,
+      traits: {},
+      memorySlots: {},
+    },
     customConfiguration: pl.customConfiguration || [],
   };
 };
