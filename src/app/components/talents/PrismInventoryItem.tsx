@@ -3,7 +3,7 @@
 import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
 import { getLegendaryGaugeAffixes } from "@/src/app/lib/prism-utils";
-import type { CraftedPrism } from "@/src/app/lib/save-data";
+import type { CraftedPrism } from "@/src/tli/core";
 
 interface PrismInventoryItemProps {
   prism: CraftedPrism;

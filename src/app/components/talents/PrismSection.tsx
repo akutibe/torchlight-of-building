@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { CraftedPrism } from "@/src/app/lib/save-data";
+import type { CraftedPrism } from "@/src/tli/core";
 import { PrismCrafter } from "./PrismCrafter";
 import { PrismInventory } from "./PrismInventory";
 

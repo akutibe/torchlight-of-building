@@ -16,7 +16,7 @@ import {
   type CraftedPrism,
   PRISM_RARITIES,
   type PrismRarity,
-} from "@/src/app/lib/save-data";
+} from "@/src/tli/core";
 import { generateItemId } from "@/src/app/lib/storage";
 
 interface PrismCrafterProps {

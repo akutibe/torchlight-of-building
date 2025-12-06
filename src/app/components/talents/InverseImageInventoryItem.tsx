@@ -3,7 +3,7 @@
 import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
 import { formatEffectModifier } from "@/src/app/lib/inverse-image-utils";
-import type { CraftedInverseImage } from "@/src/app/lib/save-data";
+import type { CraftedInverseImage } from "@/src/tli/core";
 
 interface InverseImageInventoryItemProps {
   inverseImage: CraftedInverseImage;

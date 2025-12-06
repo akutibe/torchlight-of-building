@@ -10,7 +10,7 @@ import {
   PROFESSION_TREES,
 } from "@/src/tli/talent_tree";
 import { getPrismReplacedCoreTalent } from "../../lib/prism-utils";
-import type { CraftedInverseImage, CraftedPrism } from "../../lib/save-data";
+import type { CraftedInverseImage, CraftedPrism } from "@/src/tli/core";
 import { generateItemId } from "../../lib/storage";
 import type { TreeSlot } from "../../lib/types";
 import { useBuilderStore } from "../../stores/builderStore";
@@ -66,11 +66,14 @@ export const TalentsSection = () => {
   // Get the current talent tree from core.ts (derived from SaveData)
   const currentTalentTree = useTalentTree(activeTreeSlot);
 
-  // Get the derived loadout for core.ts types (placedPrism, placedInverseImage)
+  // Get the derived loadout for core.ts types
   const derivedLoadout = useLoadout();
   const derivedPlacedPrism = derivedLoadout.talentPage.talentTrees.placedPrism;
   const derivedPlacedInverseImage =
     derivedLoadout.talentPage.talentTrees.placedInverseImage;
+  const derivedPrismList = derivedLoadout.talentPage.inventory.prismList;
+  const derivedInverseImageList =
+    derivedLoadout.talentPage.inventory.inverseImageList;
 
   const handleTreeChange = useCallback(
     (slot: TreeSlot, newTreeName: string) => {
@@ -274,7 +277,7 @@ export const TalentsSection = () => {
       // Only allow prisms on profession trees (slots 2-4), not god/goddess tree (slot 1)
       if (treeSlot === "tree1") return;
 
-      const prism = loadout.prismList.find((p) => p.id === selectedPrismId);
+      const prism = derivedPrismList.find((p) => p.id === selectedPrismId);
       if (!prism) return;
 
       // Only allow one prism at a time
@@ -324,7 +327,7 @@ export const TalentsSection = () => {
     },
     [
       selectedPrismId,
-      loadout.prismList,
+      derivedPrismList,
       loadout.talentPage,
       updateLoadout,
       setSelectedPrismId,
@@ -400,7 +403,7 @@ export const TalentsSection = () => {
       // Only allow inverse images on profession trees (slots 2-4)
       if (treeSlot === "tree1") return;
 
-      const inverseImage = loadout.inverseImageList.find(
+      const inverseImage = derivedInverseImageList.find(
         (ii) => ii.id === selectedInverseImageId,
       );
       if (!inverseImage) return;
@@ -427,7 +430,7 @@ export const TalentsSection = () => {
     [
       selectedInverseImageId,
       currentTalentTree,
-      loadout.inverseImageList,
+      derivedInverseImageList,
       derivedPlacedPrism,
       derivedPlacedInverseImage,
       placeInverseImage,
@@ -605,7 +608,7 @@ export const TalentsSection = () => {
               selectedPrism={
                 // Prisms can only be placed on profession trees (slots 2-4)
                 activeTreeSlot !== "tree1"
-                  ? loadout.prismList.find((p) => p.id === selectedPrismId)
+                  ? derivedPrismList.find((p) => p.id === selectedPrismId)
                   : undefined
               }
               onPlacePrism={(x, y) => handlePlacePrism(activeTreeSlot, x, y)}
@@ -614,7 +617,7 @@ export const TalentsSection = () => {
               selectedInverseImage={
                 // Inverse images can only be placed on profession trees (slots 2-4)
                 activeTreeSlot !== "tree1"
-                  ? loadout.inverseImageList.find(
+                  ? derivedInverseImageList.find(
                       (ii) => ii.id === selectedInverseImageId,
                     )
                   : undefined
@@ -633,7 +636,7 @@ export const TalentsSection = () => {
       </div>
 
       <PrismSection
-        prisms={loadout.prismList}
+        prisms={derivedPrismList}
         onSave={handleSavePrism}
         onUpdate={handleUpdatePrism}
         onCopy={handleCopyPrism}
@@ -645,7 +648,7 @@ export const TalentsSection = () => {
       />
 
       <InverseImageSection
-        inverseImages={loadout.inverseImageList}
+        inverseImages={derivedInverseImageList}
         onSave={handleSaveInverseImage}
         onUpdate={handleUpdateInverseImage}
         onCopy={handleCopyInverseImage}

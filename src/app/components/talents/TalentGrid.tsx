@@ -6,8 +6,6 @@ import {
 import type {
   CraftedInverseImage,
   CraftedPrism,
-} from "@/src/app/lib/save-data";
-import type {
   PlacedInverseImage,
   PlacedPrism,
   TalentNode,

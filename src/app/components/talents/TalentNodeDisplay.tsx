@@ -5,8 +5,11 @@ import {
 } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
 import { formatEffectModifier } from "@/src/app/lib/inverse-image-utils";
-import type { CraftedInverseImage } from "@/src/app/lib/save-data";
-import type { CraftedPrism, TalentNode } from "@/src/tli/core";
+import type {
+  CraftedInverseImage,
+  CraftedPrism,
+  TalentNode,
+} from "@/src/tli/core";
 
 interface BonusAffix {
   bonusText: string;
