@@ -8,6 +8,21 @@ const affix = (mods: Mod[]): Affix => ({
   affixLines: mods.map((mod) => ({ text: "", mod })),
 });
 
+const emptyPactspiritSlot = () => ({
+  level: 0,
+  rings: {
+    innerRing1: {},
+    innerRing2: {},
+    innerRing3: {},
+    innerRing4: {},
+    innerRing5: {},
+    innerRing6: {},
+    midRing1: {},
+    midRing2: {},
+    midRing3: {},
+  },
+});
+
 const initLoadout = (pl: Partial<Loadout> = {}): Loadout => {
   return {
     gearPage: pl.gearPage || { equippedGear: {}, inventory: [] },
@@ -21,6 +36,11 @@ const initLoadout = (pl: Partial<Loadout> = {}): Loadout => {
       selectedHero: undefined,
       traits: {},
       memorySlots: {},
+    },
+    pactspiritPage: pl.pactspiritPage || {
+      slot1: emptyPactspiritSlot(),
+      slot2: emptyPactspiritSlot(),
+      slot3: emptyPactspiritSlot(),
     },
     customConfiguration: pl.customConfiguration || [],
   };

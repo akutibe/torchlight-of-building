@@ -276,11 +276,44 @@ export const getHeroAffixes = (heroPage: HeroPage): Affix[] => {
   return affixes;
 };
 
+export interface InstalledDestiny {
+  destinyName: string;
+  destinyType: string;
+  affix: Affix;
+}
+
+export interface RingSlotState {
+  installedDestiny?: InstalledDestiny;
+}
+
+export interface PactspiritSlot {
+  pactspiritName?: string;
+  level: number;
+  rings: {
+    innerRing1: RingSlotState;
+    innerRing2: RingSlotState;
+    innerRing3: RingSlotState;
+    innerRing4: RingSlotState;
+    innerRing5: RingSlotState;
+    innerRing6: RingSlotState;
+    midRing1: RingSlotState;
+    midRing2: RingSlotState;
+    midRing3: RingSlotState;
+  };
+}
+
+export interface PactspiritPage {
+  slot1: PactspiritSlot;
+  slot2: PactspiritSlot;
+  slot3: PactspiritSlot;
+}
+
 export interface Loadout {
   gearPage: GearPage;
   talentPage: TalentPage;
   divinityPage: DivinityPage;
   skillPage: SkillPage;
   heroPage: HeroPage;
+  pactspiritPage: PactspiritPage;
   customConfiguration: Affix[];
 }

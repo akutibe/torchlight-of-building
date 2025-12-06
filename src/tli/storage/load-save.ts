@@ -10,6 +10,8 @@ import type {
   PlacedInverseImage as SaveDataPlacedInverseImage,
   HeroPage as SaveDataHeroPage,
   HeroMemory as SaveDataHeroMemory,
+  PactspiritPage as SaveDataPactspiritPage,
+  PactspiritSlot as SaveDataPactspiritSlot,
 } from "@/src/app/lib/save-data";
 import { craftHeroMemoryAffix } from "@/src/app/lib/hero-utils";
 import {
@@ -36,6 +38,10 @@ import type {
   HeroMemory,
   HeroTraits,
   HeroMemorySlots,
+  PactspiritPage,
+  PactspiritSlot,
+  RingSlotState,
+  InstalledDestiny,
 } from "../core";
 import type { Mod } from "../mod";
 import { parseMod } from "../mod_parser";
@@ -427,6 +433,55 @@ const convertHeroPage = (saveDataHeroPage: SaveDataHeroPage): HeroPage => {
   };
 };
 
+const RING_SLOT_KEYS = [
+  "innerRing1",
+  "innerRing2",
+  "innerRing3",
+  "innerRing4",
+  "innerRing5",
+  "innerRing6",
+  "midRing1",
+  "midRing2",
+  "midRing3",
+] as const;
+
+const convertPactspiritSlot = (
+  saveDataSlot: SaveDataPactspiritSlot,
+  slotIndex: number,
+): PactspiritSlot => {
+  const rings = {} as PactspiritSlot["rings"];
+
+  for (const ringKey of RING_SLOT_KEYS) {
+    const saveDataRing = saveDataSlot.rings[ringKey];
+    let installedDestiny: InstalledDestiny | undefined;
+
+    if (saveDataRing.installedDestiny) {
+      const src = `Pactspirit#slot${slotIndex}#${ringKey}`;
+      installedDestiny = {
+        destinyName: saveDataRing.installedDestiny.destinyName,
+        destinyType: saveDataRing.installedDestiny.destinyType,
+        affix: convertAffix(saveDataRing.installedDestiny.resolvedAffix, src),
+      };
+    }
+
+    rings[ringKey] = { installedDestiny };
+  }
+
+  return {
+    pactspiritName: saveDataSlot.pactspiritName,
+    level: saveDataSlot.level,
+    rings,
+  };
+};
+
+const convertPactspiritPage = (
+  saveDataPactspiritPage: SaveDataPactspiritPage,
+): PactspiritPage => ({
+  slot1: convertPactspiritSlot(saveDataPactspiritPage.slot1, 1),
+  slot2: convertPactspiritSlot(saveDataPactspiritPage.slot2, 2),
+  slot3: convertPactspiritSlot(saveDataPactspiritPage.slot3, 3),
+});
+
 export const loadSave = (unloadedSaveData: SaveData): Loadout => {
   const saveData = R.clone(unloadedSaveData);
   return {
@@ -439,6 +494,7 @@ export const loadSave = (unloadedSaveData: SaveData): Loadout => {
     divinityPage: { slates: [] },
     skillPage: saveData.skillPage,
     heroPage: convertHeroPage(saveData.heroPage),
+    pactspiritPage: convertPactspiritPage(saveData.pactspiritPage),
     customConfiguration: [],
   };
 };
