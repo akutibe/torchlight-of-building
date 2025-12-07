@@ -1,7 +1,7 @@
-import * as cheerio from "cheerio";
 import { execSync } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import * as cheerio from "cheerio";
 import type { HeroTrait } from "../data/hero_trait/types";
 
 const cleanEffectText = (html: string): string => {

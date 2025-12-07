@@ -15,16 +15,16 @@ export type {
 } from "@/src/tli/core";
 
 export {
+  DIVINITY_GODS,
+  type DivinityAffixType,
+  type DivinityGod,
   HERO_MEMORY_TYPES,
   type HeroMemorySlot,
   type HeroMemoryType,
-  DIVINITY_GODS,
-  type DivinityGod,
   ROTATIONS,
   type Rotation,
   SLATE_SHAPES,
   type SlateShape,
-  type DivinityAffixType,
 } from "@/src/tli/core";
 
 export interface DivinitySlate {

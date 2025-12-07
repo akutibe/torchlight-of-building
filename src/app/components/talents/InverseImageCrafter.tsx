@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { validateInverseImageValues } from "@/src/app/lib/inverse-image-utils";
-import type { CraftedInverseImage } from "@/src/tli/core";
 import { generateItemId } from "@/src/app/lib/storage";
+import type { CraftedInverseImage } from "@/src/tli/core";
 
 interface InverseImageCrafterInnerProps {
   editingInverseImage: CraftedInverseImage | undefined;

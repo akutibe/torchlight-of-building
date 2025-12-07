@@ -6,8 +6,8 @@ import {
   TooltipTitle,
 } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
-import type { RingSlotState } from "@/src/tli/core";
 import type { PactspiritRingDetails } from "@/src/data/pactspirit/types";
+import type { RingSlotState } from "@/src/tli/core";
 import { isInnerRing } from "../../lib/pactspirit-utils";
 import type { RingSlotKey } from "../../lib/types";
 

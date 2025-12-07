@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "check": "biome check --write --diagnostic-level=error",
     "lint": "biome lint --write --diagnostic-level=error",
     "test": "vitest",
     "typecheck": "tsc --noEmit",

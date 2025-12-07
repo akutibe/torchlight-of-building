@@ -1,7 +1,7 @@
 import type { PlacedPrism as SaveDataPlacedPrism } from "@/src/app/lib/save-data";
 import {
-  TalentTrees,
   type TalentNodeData,
+  TalentTrees,
   type TreeName,
 } from "@/src/data/talent_tree";
 import type { Affix, AffixLine } from "./core";

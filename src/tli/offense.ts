@@ -2,11 +2,11 @@ import * as R from "remeda";
 import { match } from "ts-pattern";
 import type { DmgModType } from "./constants";
 import {
-  getAllAffixes,
-  getTalentAffixes,
   type Affix,
   type Configuration,
   type DmgRange,
+  getAllAffixes,
+  getTalentAffixes,
   type Loadout,
 } from "./core";
 import type * as Mod from "./mod";

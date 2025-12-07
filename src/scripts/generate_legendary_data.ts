@@ -1,7 +1,7 @@
-import * as cheerio from "cheerio";
 import { execSync } from "node:child_process";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import * as cheerio from "cheerio";
 import type { Legendary } from "../data/legendary/types";
 import type { EquipmentSlot, EquipmentType } from "../tli/gear_data_types";
 

@@ -3,8 +3,8 @@ import {
   getPrismCoreTalentEffect,
   getPrismReplacedCoreTalent,
 } from "@/src/app/lib/prism-utils";
-import type { PlacedPrism } from "@/src/tli/core";
 import type { TreeSlot } from "@/src/app/lib/types";
+import type { PlacedPrism } from "@/src/tli/core";
 
 interface PrismCoreTalentEffectProps {
   placedPrism: PlacedPrism | undefined;

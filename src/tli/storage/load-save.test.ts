@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: don't care in test */
 import { expect, test } from "vitest";
 import type { SaveData } from "@/src/app/lib/save-data";
-import { getAllAffixes, getAffixMods, getAffixText } from "../core";
+import { getAffixMods, getAffixText, getAllAffixes } from "../core";
 import { loadSave } from "./load-save";
 
 const createMinimalSaveData = (

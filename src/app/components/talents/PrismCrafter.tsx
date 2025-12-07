@@ -12,12 +12,12 @@ import {
   getMaxRareGaugeAffixes,
   getRareGaugeAffixes,
 } from "@/src/app/lib/prism-utils";
+import { generateItemId } from "@/src/app/lib/storage";
 import {
   type CraftedPrism,
   PRISM_RARITIES,
   type PrismRarity,
 } from "@/src/tli/core";
-import { generateItemId } from "@/src/app/lib/storage";
 
 interface PrismCrafterProps {
   editingPrism: CraftedPrism | undefined;

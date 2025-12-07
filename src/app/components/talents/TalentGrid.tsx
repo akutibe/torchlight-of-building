@@ -4,9 +4,9 @@ import {
   isInSourceArea as isInSourceAreaUtil,
 } from "@/src/app/lib/inverse-image-utils";
 import {
-  getAffixText,
   type CraftedInverseImage,
   type CraftedPrism,
+  getAffixText,
   type PlacedInverseImage,
   type PlacedPrism,
   type TalentNode,

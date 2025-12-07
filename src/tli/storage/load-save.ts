@@ -1,59 +1,59 @@
 import * as R from "remeda";
-import type {
-  SaveData,
-  Gear as SaveDataGear,
-  GearPage as SaveDataGearPage,
-  TalentPage as SaveDataTalentPage,
-  TalentTree as SaveDataTalentTree,
-  PlacedPrism as SaveDataPlacedPrism,
-  CraftedPrism as SaveDataCraftedPrism,
-  PlacedInverseImage as SaveDataPlacedInverseImage,
-  HeroPage as SaveDataHeroPage,
-  HeroMemory as SaveDataHeroMemory,
-  PactspiritPage as SaveDataPactspiritPage,
-  PactspiritSlot as SaveDataPactspiritSlot,
-  DivinityPage as SaveDataDivinityPage,
-  DivinitySlate as SaveDataDivinitySlate,
-} from "@/src/app/lib/save-data";
 import { craftHeroMemoryAffix } from "@/src/app/lib/hero-utils";
 import {
   getEffectModifierForType,
   getTargetAreaPositions,
   reflectPosition,
 } from "@/src/app/lib/inverse-image-utils";
+import type {
+  SaveData,
+  CraftedPrism as SaveDataCraftedPrism,
+  DivinityPage as SaveDataDivinityPage,
+  DivinitySlate as SaveDataDivinitySlate,
+  Gear as SaveDataGear,
+  GearPage as SaveDataGearPage,
+  HeroMemory as SaveDataHeroMemory,
+  HeroPage as SaveDataHeroPage,
+  PactspiritPage as SaveDataPactspiritPage,
+  PactspiritSlot as SaveDataPactspiritSlot,
+  PlacedInverseImage as SaveDataPlacedInverseImage,
+  PlacedPrism as SaveDataPlacedPrism,
+  TalentPage as SaveDataTalentPage,
+  TalentTree as SaveDataTalentTree,
+} from "@/src/app/lib/save-data";
 import type { TalentNodeData, TreeName } from "@/src/data/talent_tree";
 import type {
   Affix,
   AffixLine,
+  CraftedPrism,
   DivinityPage,
   DivinitySlate,
   EquippedGear,
   Gear,
   GearPage,
-  Loadout,
-  TalentPage,
-  TalentTree,
-  TalentNode,
-  PlacedPrism,
-  CraftedPrism,
-  TalentTrees,
-  TalentInventory,
-  HeroPage,
   HeroMemory,
-  HeroTraits,
   HeroMemorySlots,
+  HeroPage,
+  HeroTraits,
+  InstalledDestiny,
+  Loadout,
   PactspiritPage,
   PactspiritSlot,
+  PlacedPrism,
   RingSlotState,
-  InstalledDestiny,
+  TalentInventory,
+  TalentNode,
+  TalentPage,
+  TalentTree,
+  TalentTrees,
 } from "../core";
 import type { Mod } from "../mod";
 import { parseMod } from "../mod_parser";
 import {
   getPrismAffixesForNode,
   scaleTalentAffix,
-  treeDataByName,
   type TreeSlot,
+  treeDataByName,
 } from "../talent-affix-utils";
 
 type GearSlot = keyof SaveDataGearPage;

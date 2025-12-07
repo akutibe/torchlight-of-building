@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
-import type { PactspiritSlot } from "@/src/tli/core";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
+import type { PactspiritSlot } from "@/src/tli/core";
 import {
   getPactspiritByName,
   getPactspiritLevelAffix,

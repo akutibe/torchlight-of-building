@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
+import type { CraftedInverseImage, CraftedPrism } from "@/src/tli/core";
 import {
   canPlaceInverseImage,
   canRemoveInverseImage,
@@ -10,7 +11,6 @@ import {
   PROFESSION_TREES,
 } from "@/src/tli/talent_tree";
 import { getPrismReplacedCoreTalent } from "../../lib/prism-utils";
-import type { CraftedInverseImage, CraftedPrism } from "@/src/tli/core";
 import { generateItemId } from "../../lib/storage";
 import type { TreeSlot } from "../../lib/types";
 import { useBuilderStore } from "../../stores/builderStore";

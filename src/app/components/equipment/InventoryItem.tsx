@@ -2,7 +2,7 @@
 
 import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
-import { getAllAffixes, getAffixText, type Gear } from "@/src/tli/core";
+import { type Gear, getAffixText, getAllAffixes } from "@/src/tli/core";
 
 interface InventoryItemProps {
   item: Gear;

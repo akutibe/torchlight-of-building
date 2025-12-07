@@ -1,5 +1,5 @@
 import { SearchableSelect } from "@/src/app/components/ui/SearchableSelect";
-import { getAllAffixes, type Gear } from "@/src/tli/core";
+import { type Gear, getAllAffixes } from "@/src/tli/core";
 import type { GearSlot } from "../../lib/types";
 
 interface EquipmentSlotDropdownProps {

@@ -8,8 +8,8 @@ import {
 } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
 import type { HeroMemory, HeroMemorySlot } from "@/src/app/lib/save-data";
-import type { HeroPage, HeroTraits } from "@/src/tli/core";
 import type { HeroTrait } from "@/src/data/hero_trait/types";
+import type { HeroPage, HeroTraits } from "@/src/tli/core";
 import {
   getCompatibleMemoriesForSlot,
   getTraitsForHeroAtLevel,

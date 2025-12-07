@@ -6,9 +6,9 @@ import {
 import { useTooltip } from "@/src/app/hooks/useTooltip";
 import { formatEffectModifier } from "@/src/app/lib/inverse-image-utils";
 import {
-  getAffixText,
   type CraftedInverseImage,
   type CraftedPrism,
+  getAffixText,
   type TalentNode,
 } from "@/src/tli/core";
 
