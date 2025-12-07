@@ -91,6 +91,7 @@ export interface BuilderActions {
     slot: HeroMemorySlot,
     memory: HeroMemory | undefined,
   ) => void;
+  copyHeroMemory: (memoryId: string) => void;
 
   // Pactspirit actions
   setPactspirit: (

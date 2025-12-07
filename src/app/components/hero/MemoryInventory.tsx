@@ -1,13 +1,12 @@
 "use client";
 
-import type { HeroMemory } from "@/src/app/lib/save-data";
-import type { HeroPage } from "@/src/tli/core";
+import type { HeroMemory, HeroPage } from "@/src/tli/core";
 import { HeroMemoryItem } from "./HeroMemoryItem";
 
 interface MemoryInventoryProps {
   heroPage: HeroPage;
   heroMemoryList: HeroMemory[];
-  onMemoryCopy: (memory: HeroMemory) => void;
+  onMemoryCopy: (memoryId: string) => void;
   onMemoryDelete: (id: string) => void;
 }
 

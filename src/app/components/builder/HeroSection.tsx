@@ -3,22 +3,17 @@
 import { useCallback } from "react";
 import { getBaseTraitForHero } from "../../lib/hero-utils";
 import type { HeroMemory, HeroMemorySlot } from "../../lib/save-data";
-import { createEmptyHeroPage, generateItemId } from "../../lib/storage";
-import {
-  useBuilderActions,
-  useLoadout,
-  useSaveDataRaw,
-} from "../../stores/builderStore";
+import { createEmptyHeroPage } from "../../lib/storage";
+import { useBuilderActions, useLoadout } from "../../stores/builderStore";
 import { HeroTab } from "../hero/HeroTab";
 
 export const HeroSection = () => {
   const loadout = useLoadout();
-  const saveData = useSaveDataRaw("hero-memory-list");
-  const { updateSaveData } = useBuilderActions();
+  const actions = useBuilderActions();
 
   const handleHeroChange = useCallback(
     (hero: string | undefined) => {
-      updateSaveData((prev) => {
+      actions.updateSaveData((prev) => {
         if (!hero) {
           return {
             ...prev,
@@ -47,29 +42,20 @@ export const HeroSection = () => {
         };
       });
     },
-    [updateSaveData],
+    [actions],
   );
 
   const handleTraitSelect = useCallback(
     (level: 45 | 60 | 75, traitName: string | undefined) => {
       const traitKey = `level${level}` as "level45" | "level60" | "level75";
-      updateSaveData((prev) => ({
-        ...prev,
-        heroPage: {
-          ...prev.heroPage,
-          traits: {
-            ...prev.heroPage.traits,
-            [traitKey]: traitName,
-          },
-        },
-      }));
+      actions.setTrait(traitKey, traitName);
     },
-    [updateSaveData],
+    [actions],
   );
 
   const handleMemoryEquip = useCallback(
     (slot: HeroMemorySlot, memoryId: string | undefined) => {
-      updateSaveData((prev) => {
+      actions.updateSaveData((prev) => {
         const memory = memoryId
           ? prev.heroMemoryList.find((m) => m.id === memoryId)
           : undefined;
@@ -86,64 +72,34 @@ export const HeroSection = () => {
         };
       });
     },
-    [updateSaveData],
+    [actions],
   );
 
   const handleMemorySave = useCallback(
     (memory: HeroMemory) => {
-      updateSaveData((prev) => ({
-        ...prev,
-        heroMemoryList: [...prev.heroMemoryList, memory],
-      }));
+      actions.addHeroMemory(memory);
     },
-    [updateSaveData],
+    [actions],
   );
 
   const handleMemoryCopy = useCallback(
-    (memory: HeroMemory) => {
-      const newMemory: HeroMemory = { ...memory, id: generateItemId() };
-      updateSaveData((prev) => ({
-        ...prev,
-        heroMemoryList: [...prev.heroMemoryList, newMemory],
-      }));
+    (memoryId: string) => {
+      actions.copyHeroMemory(memoryId);
     },
-    [updateSaveData],
+    [actions],
   );
 
   const handleMemoryDelete = useCallback(
     (memoryId: string) => {
-      updateSaveData((prev) => {
-        const newMemoryList = prev.heroMemoryList.filter(
-          (m) => m.id !== memoryId,
-        );
-        const newMemorySlots = { ...prev.heroPage.memorySlots };
-        if (newMemorySlots.slot45?.id === memoryId) {
-          newMemorySlots.slot45 = undefined;
-        }
-        if (newMemorySlots.slot60?.id === memoryId) {
-          newMemorySlots.slot60 = undefined;
-        }
-        if (newMemorySlots.slot75?.id === memoryId) {
-          newMemorySlots.slot75 = undefined;
-        }
-
-        return {
-          ...prev,
-          heroMemoryList: newMemoryList,
-          heroPage: {
-            ...prev.heroPage,
-            memorySlots: newMemorySlots,
-          },
-        };
-      });
+      actions.deleteHeroMemory(memoryId);
     },
-    [updateSaveData],
+    [actions],
   );
 
   return (
     <HeroTab
       heroPage={loadout.heroPage}
-      heroMemoryList={saveData.heroMemoryList}
+      heroMemoryList={loadout.heroPage.memoryInventory}
       onHeroChange={handleHeroChange}
       onTraitSelect={handleTraitSelect}
       onMemoryEquip={handleMemoryEquip}

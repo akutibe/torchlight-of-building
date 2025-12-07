@@ -1,6 +1,7 @@
 import { HeroMemories } from "@/src/data/hero_memory/hero_memories";
 import { HeroTraits } from "@/src/data/hero_trait/hero_traits";
 import type { HeroTrait } from "@/src/data/hero_trait/types";
+import type { HeroMemory as LoadoutHeroMemory } from "@/src/tli/core";
 import type { HeroMemory, HeroMemorySlot, HeroMemoryType } from "./save-data";
 
 export const normalizeHeroName = (hero: string): string => {
@@ -113,4 +114,12 @@ export const getCompatibleMemoriesForSlot = (
   slot: HeroMemorySlot,
 ): HeroMemory[] => {
   return memories.filter((memory) => canEquipMemoryInSlot(memory, slot));
+};
+
+export const getCompatibleLoadoutMemoriesForSlot = (
+  memories: LoadoutHeroMemory[],
+  slot: HeroMemorySlot,
+): LoadoutHeroMemory[] => {
+  const requiredType = MEMORY_SLOT_TYPE_MAP[slot];
+  return memories.filter((memory) => memory.memoryType === requiredType);
 };

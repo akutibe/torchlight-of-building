@@ -2,13 +2,12 @@
 
 import { Tooltip, TooltipTitle } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
-import type { HeroMemory } from "@/src/app/lib/save-data";
-import { formatCraftedMemoryAffixes } from "../../lib/hero-utils";
+import { type HeroMemory, getAffixText } from "@/src/tli/core";
 
 interface HeroMemoryItemProps {
   memory: HeroMemory;
   isEquipped: boolean;
-  onCopy: (memory: HeroMemory) => void;
+  onCopy: (memoryId: string) => void;
   onDelete: (id: string) => void;
 }
 
@@ -20,8 +19,6 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
 }) => {
   const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
 
-  const craftedAffixes = formatCraftedMemoryAffixes(memory);
-
   return (
     <div
       className="group relative flex items-center justify-between p-3 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors"
@@ -32,7 +29,7 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
           {memory.memoryType}
         </span>
         <span className="text-xs text-zinc-500">
-          ({craftedAffixes.length} affixes)
+          ({memory.affixes.length} affixes)
         </span>
         {isEquipped && (
           <span className="text-xs text-green-500 font-medium">Equipped</span>
@@ -41,7 +38,7 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
       <div className="flex gap-2">
         <button
           type="button"
-          onClick={() => onCopy(memory)}
+          onClick={() => onCopy(memory.id)}
           className="px-2 py-1 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded text-xs"
           title="Copy memory"
         >
@@ -63,15 +60,15 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
         {...tooltipHandlers}
       >
         <TooltipTitle>{memory.memoryType}</TooltipTitle>
-        {craftedAffixes.length > 0 ? (
+        {memory.affixes.length > 0 ? (
           <ul className="space-y-1">
-            {craftedAffixes.map((affix, idx) => (
+            {memory.affixes.map((affix, idx) => (
               <li
                 // biome-ignore lint/suspicious/noArrayIndexKey: affixes can have duplicate text, index is stable
                 key={idx}
                 className="text-xs text-zinc-400 whitespace-pre-wrap"
               >
-                {affix}
+                {getAffixText(affix)}
               </li>
             ))}
           </ul>

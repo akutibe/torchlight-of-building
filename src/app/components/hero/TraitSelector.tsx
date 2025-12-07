@@ -7,11 +7,16 @@ import {
   TooltipTitle,
 } from "@/src/app/components/ui/Tooltip";
 import { useTooltip } from "@/src/app/hooks/useTooltip";
-import type { HeroMemory, HeroMemorySlot } from "@/src/app/lib/save-data";
+import type { HeroMemorySlot } from "@/src/app/lib/save-data";
 import type { HeroTrait } from "@/src/data/hero_trait/types";
-import type { HeroPage, HeroTraits } from "@/src/tli/core";
 import {
-  getCompatibleMemoriesForSlot,
+  type HeroMemory,
+  type HeroPage,
+  type HeroTraits,
+  getAffixText,
+} from "@/src/tli/core";
+import {
+  getCompatibleLoadoutMemoriesForSlot,
   getTraitsForHeroAtLevel,
   MEMORY_SLOT_TYPE_MAP,
 } from "../../lib/hero-utils";
@@ -132,7 +137,7 @@ const TraitRow = ({
   const memoryType = slot ? MEMORY_SLOT_TYPE_MAP[slot] : undefined;
   const equippedMemory = slot ? heroPage.memorySlots[slot] : undefined;
   const compatibleMemories = slot
-    ? getCompatibleMemoriesForSlot(heroMemoryList, slot)
+    ? getCompatibleLoadoutMemoriesForSlot(heroMemoryList, slot)
     : [];
 
   return (
@@ -144,10 +149,16 @@ const TraitRow = ({
             <SearchableSelect
               value={equippedMemory?.id}
               onChange={(value) => onMemoryEquip(slot, value)}
-              options={compatibleMemories.map((memory) => ({
-                value: memory.id,
-                label: `${memory.baseStat.substring(0, 30)}...`,
-              }))}
+              options={compatibleMemories.map((memory) => {
+                const firstAffix = memory.affixes[0];
+                const affixText = firstAffix
+                  ? getAffixText(firstAffix)
+                  : "Empty memory";
+                return {
+                  value: memory.id,
+                  label: `${affixText.substring(0, 30)}...`,
+                };
+              })}
               placeholder="No memory"
               size="sm"
             />

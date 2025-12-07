@@ -1,7 +1,10 @@
 "use client";
 
-import type { HeroMemory, HeroMemorySlot } from "@/src/app/lib/save-data";
-import type { HeroPage } from "@/src/tli/core";
+import type {
+  HeroMemory as SaveDataHeroMemory,
+  HeroMemorySlot,
+} from "@/src/app/lib/save-data";
+import type { HeroMemory, HeroPage } from "@/src/tli/core";
 import { HeroSelector } from "./HeroSelector";
 import { MemoryCrafter } from "./MemoryCrafter";
 import { MemoryInventory } from "./MemoryInventory";
@@ -13,8 +16,8 @@ interface HeroTabProps {
   onHeroChange: (hero: string | undefined) => void;
   onTraitSelect: (level: 45 | 60 | 75, traitName: string | undefined) => void;
   onMemoryEquip: (slot: HeroMemorySlot, memoryId: string | undefined) => void;
-  onMemorySave: (memory: HeroMemory) => void;
-  onMemoryCopy: (memory: HeroMemory) => void;
+  onMemorySave: (memory: SaveDataHeroMemory) => void;
+  onMemoryCopy: (memoryId: string) => void;
   onMemoryDelete: (id: string) => void;
 }
 

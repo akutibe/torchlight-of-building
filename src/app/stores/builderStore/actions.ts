@@ -538,6 +538,21 @@ export const createActions = (): BuilderActions => ({
     }));
   },
 
+  copyHeroMemory: (memoryId) => {
+    const memory = internalStore
+      .getState()
+      .saveData.heroMemoryList.find((m) => m.id === memoryId);
+    if (!memory) return;
+    const newMemory = { ...memory, id: generateItemId() };
+    internalStore.setState((state) => ({
+      saveData: {
+        ...state.saveData,
+        heroMemoryList: [...state.saveData.heroMemoryList, newMemory],
+      },
+      hasUnsavedChanges: true,
+    }));
+  },
+
   // Pactspirit actions
   setPactspirit: (slotIndex, name) => {
     internalStore.setState((state) => {
