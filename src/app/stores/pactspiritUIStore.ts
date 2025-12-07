@@ -1,6 +1,7 @@
 "use client";
 
 import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
 import type { PactspiritSlotIndex, RingSlotKey } from "../lib/types";
 
 interface PactspiritUIState {
@@ -17,24 +18,26 @@ interface PactspiritUIState {
   closeDestinyModal: () => void;
 }
 
-export const usePactspiritUIStore = create<PactspiritUIState>((set) => ({
-  // Initial state
-  isDestinyModalOpen: false,
-  destinyModalSlotIndex: undefined,
-  destinyModalRingSlot: undefined,
+export const usePactspiritUIStore = create<PactspiritUIState>()(
+  immer((set) => ({
+    // Initial state
+    isDestinyModalOpen: false,
+    destinyModalSlotIndex: undefined,
+    destinyModalRingSlot: undefined,
 
-  // Actions
-  openDestinyModal: (slotIndex, ringSlot) =>
-    set({
-      isDestinyModalOpen: true,
-      destinyModalSlotIndex: slotIndex,
-      destinyModalRingSlot: ringSlot,
-    }),
+    // Actions
+    openDestinyModal: (slotIndex, ringSlot) =>
+      set((state) => {
+        state.isDestinyModalOpen = true;
+        state.destinyModalSlotIndex = slotIndex;
+        state.destinyModalRingSlot = ringSlot;
+      }),
 
-  closeDestinyModal: () =>
-    set({
-      isDestinyModalOpen: false,
-      destinyModalSlotIndex: undefined,
-      destinyModalRingSlot: undefined,
-    }),
-}));
+    closeDestinyModal: () =>
+      set((state) => {
+        state.isDestinyModalOpen = false;
+        state.destinyModalSlotIndex = undefined;
+        state.destinyModalRingSlot = undefined;
+      }),
+  })),
+);

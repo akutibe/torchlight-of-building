@@ -1,6 +1,7 @@
 "use client";
 
 import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
 import type { EquipmentType } from "@/src/tli/gear_data_types";
 import { DEFAULT_QUALITY } from "../lib/constants";
 import type { AffixSlotState, GearSlot } from "../lib/types";
@@ -55,90 +56,93 @@ interface EquipmentUIState {
   setSelectedGearSlot: (slot: GearSlot) => void;
 }
 
-export const useEquipmentUIStore = create<EquipmentUIState>((set) => ({
-  // Initial state
-  selectedEquipmentType: undefined,
-  affixSlots: createEmptyAffixSlots(),
-  baseAffixSlots: createEmptyBaseAffixSlots(),
-  blendAffixIndex: undefined,
-  baseStatsAffixIndex: undefined,
-  selectedLegendaryIndex: undefined,
-  legendaryAffixSlots: [],
-  selectedGearSlot: "helmet",
+export const useEquipmentUIStore = create<EquipmentUIState>()(
+  immer((set) => ({
+    // Initial state
+    selectedEquipmentType: undefined,
+    affixSlots: createEmptyAffixSlots(),
+    baseAffixSlots: createEmptyBaseAffixSlots(),
+    blendAffixIndex: undefined,
+    baseStatsAffixIndex: undefined,
+    selectedLegendaryIndex: undefined,
+    legendaryAffixSlots: [],
+    selectedGearSlot: "helmet",
 
-  // Actions
-  setSelectedEquipmentType: (type) =>
-    set({
-      selectedEquipmentType: type,
-      affixSlots: createEmptyAffixSlots(),
-      baseAffixSlots: createEmptyBaseAffixSlots(),
-      blendAffixIndex: undefined,
-      baseStatsAffixIndex: undefined,
-    }),
+    // Actions
+    setSelectedEquipmentType: (type) =>
+      set((state) => {
+        state.selectedEquipmentType = type;
+        state.affixSlots = createEmptyAffixSlots();
+        state.baseAffixSlots = createEmptyBaseAffixSlots();
+        state.blendAffixIndex = undefined;
+        state.baseStatsAffixIndex = undefined;
+      }),
 
-  setAffixSlot: (index, update) =>
-    set((state) => ({
-      affixSlots: state.affixSlots.map((slot, i) =>
-        i === index ? { ...slot, ...update } : slot,
-      ),
-    })),
+    setAffixSlot: (index, update) =>
+      set((state) => {
+        Object.assign(state.affixSlots[index], update);
+      }),
 
-  clearAffixSlot: (index) =>
-    set((state) => ({
-      affixSlots: state.affixSlots.map((slot, i) =>
-        i === index
-          ? { affixIndex: undefined, percentage: DEFAULT_QUALITY }
-          : slot,
-      ),
-    })),
+    clearAffixSlot: (index) =>
+      set((state) => {
+        state.affixSlots[index] = {
+          affixIndex: undefined,
+          percentage: DEFAULT_QUALITY,
+        };
+      }),
 
-  setBaseAffixSlot: (index, update) =>
-    set((state) => ({
-      baseAffixSlots: state.baseAffixSlots.map((slot, i) =>
-        i === index ? { ...slot, ...update } : slot,
-      ),
-    })),
+    setBaseAffixSlot: (index, update) =>
+      set((state) => {
+        Object.assign(state.baseAffixSlots[index], update);
+      }),
 
-  clearBaseAffixSlot: (index) =>
-    set((state) => ({
-      baseAffixSlots: state.baseAffixSlots.map((slot, i) =>
-        i === index
-          ? { affixIndex: undefined, percentage: DEFAULT_QUALITY }
-          : slot,
-      ),
-    })),
+    clearBaseAffixSlot: (index) =>
+      set((state) => {
+        state.baseAffixSlots[index] = {
+          affixIndex: undefined,
+          percentage: DEFAULT_QUALITY,
+        };
+      }),
 
-  setBlendAffixIndex: (index) => set({ blendAffixIndex: index }),
+    setBlendAffixIndex: (index) =>
+      set((state) => {
+        state.blendAffixIndex = index;
+      }),
 
-  setBaseStatsAffixIndex: (index) => set({ baseStatsAffixIndex: index }),
+    setBaseStatsAffixIndex: (index) =>
+      set((state) => {
+        state.baseStatsAffixIndex = index;
+      }),
 
-  resetCrafting: () =>
-    set({
-      selectedEquipmentType: undefined,
-      affixSlots: createEmptyAffixSlots(),
-      baseAffixSlots: createEmptyBaseAffixSlots(),
-      blendAffixIndex: undefined,
-      baseStatsAffixIndex: undefined,
-    }),
+    resetCrafting: () =>
+      set((state) => {
+        state.selectedEquipmentType = undefined;
+        state.affixSlots = createEmptyAffixSlots();
+        state.baseAffixSlots = createEmptyBaseAffixSlots();
+        state.blendAffixIndex = undefined;
+        state.baseStatsAffixIndex = undefined;
+      }),
 
-  setSelectedLegendaryIndex: (index) =>
-    set({
-      selectedLegendaryIndex: index,
-      legendaryAffixSlots: [],
-    }),
+    setSelectedLegendaryIndex: (index) =>
+      set((state) => {
+        state.selectedLegendaryIndex = index;
+        state.legendaryAffixSlots = [];
+      }),
 
-  setLegendaryAffixSlot: (index, update) =>
-    set((state) => ({
-      legendaryAffixSlots: state.legendaryAffixSlots.map((slot, i) =>
-        i === index ? { ...slot, ...update } : slot,
-      ),
-    })),
+    setLegendaryAffixSlot: (index, update) =>
+      set((state) => {
+        Object.assign(state.legendaryAffixSlots[index], update);
+      }),
 
-  resetLegendaryCrafting: () =>
-    set({
-      selectedLegendaryIndex: undefined,
-      legendaryAffixSlots: [],
-    }),
+    resetLegendaryCrafting: () =>
+      set((state) => {
+        state.selectedLegendaryIndex = undefined;
+        state.legendaryAffixSlots = [];
+      }),
 
-  setSelectedGearSlot: (slot) => set({ selectedGearSlot: slot }),
-}));
+    setSelectedGearSlot: (slot) =>
+      set((state) => {
+        state.selectedGearSlot = slot;
+      }),
+  })),
+);

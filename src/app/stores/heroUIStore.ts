@@ -1,6 +1,7 @@
 "use client";
 
 import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
 import { DEFAULT_QUALITY } from "../lib/constants";
 import type { HeroMemoryType } from "../lib/save-data";
 
@@ -35,43 +36,44 @@ const createEmptyAffixSlots = (count: number): MemoryAffixSlotState[] =>
     .fill(null)
     .map(() => ({ effectIndex: undefined, quality: DEFAULT_QUALITY }));
 
-export const useHeroUIStore = create<HeroUIState>((set) => ({
-  // Initial state
-  craftingMemoryType: undefined,
-  craftingBaseStat: undefined,
-  fixedAffixSlots: createEmptyAffixSlots(2),
-  randomAffixSlots: createEmptyAffixSlots(4),
+export const useHeroUIStore = create<HeroUIState>()(
+  immer((set) => ({
+    // Initial state
+    craftingMemoryType: undefined,
+    craftingBaseStat: undefined,
+    fixedAffixSlots: createEmptyAffixSlots(2),
+    randomAffixSlots: createEmptyAffixSlots(4),
 
-  // Actions
-  setCraftingMemoryType: (type) =>
-    set({
-      craftingMemoryType: type,
-      craftingBaseStat: undefined,
-      fixedAffixSlots: createEmptyAffixSlots(2),
-      randomAffixSlots: createEmptyAffixSlots(4),
-    }),
+    // Actions
+    setCraftingMemoryType: (type) =>
+      set((state) => {
+        state.craftingMemoryType = type;
+        state.craftingBaseStat = undefined;
+        state.fixedAffixSlots = createEmptyAffixSlots(2);
+        state.randomAffixSlots = createEmptyAffixSlots(4);
+      }),
 
-  setCraftingBaseStat: (stat) => set({ craftingBaseStat: stat }),
+    setCraftingBaseStat: (stat) =>
+      set((state) => {
+        state.craftingBaseStat = stat;
+      }),
 
-  setFixedAffixSlot: (index, update) =>
-    set((state) => ({
-      fixedAffixSlots: state.fixedAffixSlots.map((slot, i) =>
-        i === index ? { ...slot, ...update } : slot,
-      ),
-    })),
+    setFixedAffixSlot: (index, update) =>
+      set((state) => {
+        Object.assign(state.fixedAffixSlots[index], update);
+      }),
 
-  setRandomAffixSlot: (index, update) =>
-    set((state) => ({
-      randomAffixSlots: state.randomAffixSlots.map((slot, i) =>
-        i === index ? { ...slot, ...update } : slot,
-      ),
-    })),
+    setRandomAffixSlot: (index, update) =>
+      set((state) => {
+        Object.assign(state.randomAffixSlots[index], update);
+      }),
 
-  resetMemoryCrafting: () =>
-    set({
-      craftingMemoryType: undefined,
-      craftingBaseStat: undefined,
-      fixedAffixSlots: createEmptyAffixSlots(2),
-      randomAffixSlots: createEmptyAffixSlots(4),
-    }),
-}));
+    resetMemoryCrafting: () =>
+      set((state) => {
+        state.craftingMemoryType = undefined;
+        state.craftingBaseStat = undefined;
+        state.fixedAffixSlots = createEmptyAffixSlots(2);
+        state.randomAffixSlots = createEmptyAffixSlots(4);
+      }),
+  })),
+);

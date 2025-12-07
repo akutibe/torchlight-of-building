@@ -1,6 +1,7 @@
 "use client";
 
 import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
 import { MAX_SLATE_AFFIXES } from "../lib/constants";
 import type {
   DivinityAffixType,
@@ -36,46 +37,55 @@ interface DivinityUIState {
   ) => void;
 }
 
-export const useDivinityUIStore = create<DivinityUIState>((set) => ({
-  // Initial state
-  craftingGod: undefined,
-  craftingShape: "O",
-  craftingAffixes: [],
-  draggingSlateId: undefined,
-  previewPosition: undefined,
+export const useDivinityUIStore = create<DivinityUIState>()(
+  immer((set) => ({
+    // Initial state
+    craftingGod: undefined,
+    craftingShape: "O",
+    craftingAffixes: [],
+    draggingSlateId: undefined,
+    previewPosition: undefined,
 
-  // Actions
-  setCraftingGod: (god) =>
-    set({
-      craftingGod: god,
-      craftingAffixes: [],
-    }),
+    // Actions
+    setCraftingGod: (god) =>
+      set((state) => {
+        state.craftingGod = god;
+        state.craftingAffixes = [];
+      }),
 
-  setCraftingShape: (shape) => set({ craftingShape: shape }),
+    setCraftingShape: (shape) =>
+      set((state) => {
+        state.craftingShape = shape;
+      }),
 
-  addCraftingAffix: (affix) =>
-    set((state) => {
-      if (state.craftingAffixes.length >= MAX_SLATE_AFFIXES) return state;
-      if (state.craftingAffixes.some((a) => a.effect === affix.effect))
-        return state;
-      return {
-        craftingAffixes: [...state.craftingAffixes, affix],
-      };
-    }),
+    addCraftingAffix: (affix) =>
+      set((state) => {
+        if (state.craftingAffixes.length >= MAX_SLATE_AFFIXES) return;
+        if (state.craftingAffixes.some((a) => a.effect === affix.effect))
+          return;
+        state.craftingAffixes.push(affix);
+      }),
 
-  removeCraftingAffix: (index) =>
-    set((state) => ({
-      craftingAffixes: state.craftingAffixes.filter((_, i) => i !== index),
-    })),
+    removeCraftingAffix: (index) =>
+      set((state) => {
+        state.craftingAffixes.splice(index, 1);
+      }),
 
-  resetSlateCrafting: () =>
-    set({
-      craftingGod: undefined,
-      craftingShape: "O",
-      craftingAffixes: [],
-    }),
+    resetSlateCrafting: () =>
+      set((state) => {
+        state.craftingGod = undefined;
+        state.craftingShape = "O";
+        state.craftingAffixes = [];
+      }),
 
-  setDraggingSlateId: (id) => set({ draggingSlateId: id }),
+    setDraggingSlateId: (id) =>
+      set((state) => {
+        state.draggingSlateId = id;
+      }),
 
-  setPreviewPosition: (position) => set({ previewPosition: position }),
-}));
+    setPreviewPosition: (position) =>
+      set((state) => {
+        state.previewPosition = position;
+      }),
+  })),
+);

@@ -1,6 +1,10 @@
 "use client";
 
+import { enableMapSet } from "immer";
 import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
+
+enableMapSet();
 
 type SkillSlotType = "active" | "passive";
 type SkillSlotNumber = 1 | 2 | 3 | 4;
@@ -23,39 +27,40 @@ interface SkillsUIState {
 const getSlotKey = (type: SkillSlotType, slot: SkillSlotNumber): string =>
   `${type}-${slot}`;
 
-export const useSkillsUIStore = create<SkillsUIState>((set, get) => ({
-  // Initial state
-  expandedSlots: new Set<string>(),
+export const useSkillsUIStore = create<SkillsUIState>()(
+  immer((set, get) => ({
+    // Initial state
+    expandedSlots: new Set<string>(),
 
-  // Actions
-  toggleSlotExpanded: (type, slot) =>
-    set((state) => {
+    // Actions
+    toggleSlotExpanded: (type, slot) =>
+      set((state) => {
+        const key = getSlotKey(type, slot);
+        if (state.expandedSlots.has(key)) {
+          state.expandedSlots.delete(key);
+        } else {
+          state.expandedSlots.add(key);
+        }
+      }),
+
+    setSlotExpanded: (type, slot, expanded) =>
+      set((state) => {
+        const key = getSlotKey(type, slot);
+        if (expanded) {
+          state.expandedSlots.add(key);
+        } else {
+          state.expandedSlots.delete(key);
+        }
+      }),
+
+    isSlotExpanded: (type, slot) => {
       const key = getSlotKey(type, slot);
-      const newSet = new Set(state.expandedSlots);
-      if (newSet.has(key)) {
-        newSet.delete(key);
-      } else {
-        newSet.add(key);
-      }
-      return { expandedSlots: newSet };
-    }),
+      return get().expandedSlots.has(key);
+    },
 
-  setSlotExpanded: (type, slot, expanded) =>
-    set((state) => {
-      const key = getSlotKey(type, slot);
-      const newSet = new Set(state.expandedSlots);
-      if (expanded) {
-        newSet.add(key);
-      } else {
-        newSet.delete(key);
-      }
-      return { expandedSlots: newSet };
-    }),
-
-  isSlotExpanded: (type, slot) => {
-    const key = getSlotKey(type, slot);
-    return get().expandedSlots.has(key);
-  },
-
-  collapseAllSlots: () => set({ expandedSlots: new Set() }),
-}));
+    collapseAllSlots: () =>
+      set((state) => {
+        state.expandedSlots.clear();
+      }),
+  })),
+);

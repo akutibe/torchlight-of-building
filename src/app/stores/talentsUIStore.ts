@@ -1,6 +1,7 @@
 "use client";
 
 import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
 import type { PrismRarity } from "../lib/save-data";
 import type { TreeSlot } from "../lib/types";
 
@@ -32,53 +33,63 @@ interface TalentsUIState {
   setSelectedInverseImageId: (id: string | undefined) => void;
 }
 
-export const useTalentsUIStore = create<TalentsUIState>((set) => ({
-  // Initial state
-  activeTreeSlot: "tree1",
-  selectedPrismId: undefined,
-  craftingPrismRarity: "rare",
-  craftingBaseAffix: undefined,
-  craftingGaugeAffixes: [],
-  selectedInverseImageId: undefined,
+export const useTalentsUIStore = create<TalentsUIState>()(
+  immer((set) => ({
+    // Initial state
+    activeTreeSlot: "tree1",
+    selectedPrismId: undefined,
+    craftingPrismRarity: "rare",
+    craftingBaseAffix: undefined,
+    craftingGaugeAffixes: [],
+    selectedInverseImageId: undefined,
 
-  // Actions
-  setActiveTreeSlot: (slot) => set({ activeTreeSlot: slot }),
+    // Actions
+    setActiveTreeSlot: (slot) =>
+      set((state) => {
+        state.activeTreeSlot = slot;
+      }),
 
-  setSelectedPrismId: (id) => set({ selectedPrismId: id }),
+    setSelectedPrismId: (id) =>
+      set((state) => {
+        state.selectedPrismId = id;
+      }),
 
-  setCraftingPrismRarity: (rarity) =>
-    set((state) => ({
-      craftingPrismRarity: rarity,
-      craftingBaseAffix: undefined,
-      craftingGaugeAffixes:
-        rarity === "rare"
-          ? state.craftingGaugeAffixes.filter((a) => !a.isLegendary)
-          : state.craftingGaugeAffixes,
-    })),
+    setCraftingPrismRarity: (rarity) =>
+      set((state) => {
+        state.craftingPrismRarity = rarity;
+        state.craftingBaseAffix = undefined;
+        if (rarity === "rare") {
+          state.craftingGaugeAffixes = state.craftingGaugeAffixes.filter(
+            (a) => !a.isLegendary,
+          );
+        }
+      }),
 
-  setCraftingBaseAffix: (affix) => set({ craftingBaseAffix: affix }),
+    setCraftingBaseAffix: (affix) =>
+      set((state) => {
+        state.craftingBaseAffix = affix;
+      }),
 
-  addCraftingGaugeAffix: (affix, isLegendary) =>
-    set((state) => ({
-      craftingGaugeAffixes: [
-        ...state.craftingGaugeAffixes,
-        { affix, isLegendary },
-      ],
-    })),
+    addCraftingGaugeAffix: (affix, isLegendary) =>
+      set((state) => {
+        state.craftingGaugeAffixes.push({ affix, isLegendary });
+      }),
 
-  removeCraftingGaugeAffix: (index) =>
-    set((state) => ({
-      craftingGaugeAffixes: state.craftingGaugeAffixes.filter(
-        (_, i) => i !== index,
-      ),
-    })),
+    removeCraftingGaugeAffix: (index) =>
+      set((state) => {
+        state.craftingGaugeAffixes.splice(index, 1);
+      }),
 
-  resetPrismCrafting: () =>
-    set({
-      craftingPrismRarity: "rare",
-      craftingBaseAffix: undefined,
-      craftingGaugeAffixes: [],
-    }),
+    resetPrismCrafting: () =>
+      set((state) => {
+        state.craftingPrismRarity = "rare";
+        state.craftingBaseAffix = undefined;
+        state.craftingGaugeAffixes = [];
+      }),
 
-  setSelectedInverseImageId: (id) => set({ selectedInverseImageId: id }),
-}));
+    setSelectedInverseImageId: (id) =>
+      set((state) => {
+        state.selectedInverseImageId = id;
+      }),
+  })),
+);
