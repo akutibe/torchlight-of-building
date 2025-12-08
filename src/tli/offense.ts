@@ -26,10 +26,30 @@ const addDR = (dr1: DmgRange, dr2: DmgRange): DmgRange => {
   };
 };
 
+const addDRs = (drs1: DmgRanges, drs2: DmgRanges): DmgRanges => {
+  return {
+    phys: addDR(drs1.phys, drs2.phys),
+    cold: addDR(drs1.cold, drs2.cold),
+    lightning: addDR(drs1.lightning, drs2.lightning),
+    fire: addDR(drs1.fire, drs2.fire),
+    erosion: addDR(drs1.erosion, drs2.erosion),
+  };
+};
+
 const multDR = (dr: DmgRange, multiplier: number): DmgRange => {
   return {
     min: dr.min * multiplier,
     max: dr.max * multiplier,
+  };
+};
+
+const multDRs = (drs: DmgRanges, multiplier: number): DmgRanges => {
+  return {
+    phys: multDR(drs.phys, multiplier),
+    cold: multDR(drs.cold, multiplier),
+    lightning: multDR(drs.lightning, multiplier),
+    fire: multDR(drs.fire, multiplier),
+    erosion: multDR(drs.erosion, multiplier),
   };
 };
 
@@ -110,11 +130,17 @@ interface OffenseSummary {
 }
 
 interface GearDmg {
-  mainHand: WeaponDmg;
-  offHand?: WeaponDmg;
+  mainHand: DmgRanges;
+  offHand?: DmgRanges;
 }
 
-interface WeaponDmg {
+const emptyGearDmg = (): GearDmg => {
+  return {
+    mainHand: emptyDmgRanges(),
+  };
+};
+
+interface DmgRanges {
   phys: DmgRange;
   cold: DmgRange;
   lightning: DmgRange;
@@ -122,15 +148,13 @@ interface WeaponDmg {
   erosion: DmgRange;
 }
 
-const emptyGearDmg = (): GearDmg => {
+const emptyDmgRanges = (): DmgRanges => {
   return {
-    mainHand: {
-      phys: { min: 0, max: 0 },
-      cold: { min: 0, max: 0 },
-      lightning: { min: 0, max: 0 },
-      fire: { min: 0, max: 0 },
-      erosion: { min: 0, max: 0 },
-    },
+    phys: { min: 0, max: 0 },
+    cold: { min: 0, max: 0 },
+    lightning: { min: 0, max: 0 },
+    fire: { min: 0, max: 0 },
+    erosion: { min: 0, max: 0 },
   };
 };
 
@@ -223,6 +247,50 @@ const calculateGearDmg = (loadout: Loadout, allMods: Mod.Mod[]): GearDmg => {
       fire: fire,
       erosion: erosion,
     },
+  };
+};
+
+const calculateFlatDmg = (
+  allMods: Mod.Mod[],
+  skillType: "attack" | "spell",
+): DmgRanges => {
+  if (skillType === "spell") throw new Error("Spells not implemented yet");
+
+  let phys = emptyDamageRange();
+  let cold = emptyDamageRange();
+  let lightning = emptyDamageRange();
+  let fire = emptyDamageRange();
+  let erosion = emptyDamageRange();
+
+  const affixes = R.concat(
+    filterAffix(allMods, "FlatDmgToAtks"),
+    filterAffix(allMods, "FlatDmgToAtksAndSpells"),
+  );
+  for (const a of affixes) {
+    match(a.dmgType)
+      .with("physical", () => {
+        phys = addDR(phys, a.value);
+      })
+      .with("cold", () => {
+        cold = addDR(cold, a.value);
+      })
+      .with("lightning", () => {
+        lightning = addDR(lightning, a.value);
+      })
+      .with("fire", () => {
+        fire = addDR(fire, a.value);
+      })
+      .with("erosion", () => {
+        erosion = addDR(erosion, a.value);
+      })
+      .exhaustive();
+  }
+  return {
+    phys,
+    cold,
+    lightning,
+    fire,
+    erosion,
   };
 };
 
@@ -442,6 +510,7 @@ const calculateDmgRange = (
 };
 
 interface SkillHitOverview {
+  // Damage ranges of a single skill hit, not including crit
   base: {
     phys: DmgRange;
     cold: DmgRange;
@@ -449,35 +518,41 @@ interface SkillHitOverview {
     fire: DmgRange;
     erosion: DmgRange;
     total: DmgRange;
-    totalAvg: number;
   };
+  // Average damage of a single skill hit, not including crit
   avg: number;
 }
 
 const calculateSkillHit = (
   gearDmg: GearDmg,
+  flatDmg: DmgRanges,
   allDmgPcts: Extract<Mod.Mod, { type: "DmgPct" }>[],
   skillConf: SkillConfiguration,
 ): SkillHitOverview => {
+  const skillWeaponDR = match(skillConf.skill)
+    .with("Berserking Blade", () => {
+      return multDRs(gearDmg.mainHand, 2.1);
+    })
+    .with("[Test] Simple Attack", () => {
+      return gearDmg.mainHand;
+    })
+    .otherwise(() => {
+      // either it's unimplemented, not an attack
+      return emptyDmgRanges();
+    });
+  const skillFlatDR = multDRs(flatDmg, skillConf.addedDmgEffPct);
+  const skillBaseDmg = addDRs(skillWeaponDR, skillFlatDR);
+
   const totalDmgModsPerType = getTotalDmgModsPerType(allDmgPcts, skillConf);
-  const phys = calculateDmgRange(
-    gearDmg.mainHand.phys,
-    totalDmgModsPerType.phys,
-  );
-  const cold = calculateDmgRange(
-    gearDmg.mainHand.cold,
-    totalDmgModsPerType.cold,
-  );
+  const phys = calculateDmgRange(skillBaseDmg.phys, totalDmgModsPerType.phys);
+  const cold = calculateDmgRange(skillBaseDmg.cold, totalDmgModsPerType.cold);
   const lightning = calculateDmgRange(
-    gearDmg.mainHand.lightning,
+    skillBaseDmg.lightning,
     totalDmgModsPerType.lightning,
   );
-  const fire = calculateDmgRange(
-    gearDmg.mainHand.fire,
-    totalDmgModsPerType.fire,
-  );
+  const fire = calculateDmgRange(skillBaseDmg.fire, totalDmgModsPerType.fire);
   const erosion = calculateDmgRange(
-    gearDmg.mainHand.erosion,
+    skillBaseDmg.erosion,
     totalDmgModsPerType.erosion,
   );
   const total = {
@@ -485,18 +560,6 @@ const calculateSkillHit = (
     max: phys.max + cold.max + lightning.max + fire.max + erosion.max,
   };
   const totalAvg = (total.min + total.max) / 2;
-
-  const finalAvg = match(skillConf.skill)
-    .with("Berserking Blade", () => {
-      return totalAvg * 2.1;
-    })
-    .with("[Test] Simple Attack", () => {
-      return totalAvg;
-    })
-    .otherwise(() => {
-      // either it's unimplemented, not an attack
-      return 0;
-    });
 
   return {
     base: {
@@ -506,9 +569,8 @@ const calculateSkillHit = (
       fire: fire,
       erosion: erosion,
       total: total,
-      totalAvg: totalAvg,
     },
-    avg: finalAvg,
+    avg: totalAvg,
   };
 };
 
@@ -524,12 +586,14 @@ export const calculateOffense = (
     return undefined;
   }
   const gearDmg = calculateGearDmg(loadout, mods);
+  const flatDmg = calculateFlatDmg(mods, "attack");
+
   const aspd = calculateAspd(loadout, mods);
   const dmgPcts = filterAffix(mods, "DmgPct");
   const critChance = calculateCritRating(mods, configuration);
   const critDmgMult = calculateCritDmg(mods, configuration);
 
-  const skillHit = calculateSkillHit(gearDmg, dmgPcts, skillConf);
+  const skillHit = calculateSkillHit(gearDmg, flatDmg, dmgPcts, skillConf);
   const avgHitWithCrit =
     skillHit.avg * critChance * critDmgMult + skillHit.avg * (1 - critChance);
   const avgDps = avgHitWithCrit * aspd;

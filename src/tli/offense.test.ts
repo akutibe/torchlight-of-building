@@ -1039,3 +1039,368 @@ test("calculate offense with CritDmgPerFervor and other crit damage modifiers", 
   expect(res?.critDmgMult).toBeCloseTo(2.7);
   expect(res?.avgHitWithCrit).toBeCloseTo(125.5);
 });
+
+// Flat damage tests
+test("calculate offense with flat physical damage to attacks", () => {
+  const loadout = initLoadout({
+    gearPage: {
+      equippedGear: {
+        mainHand: {
+          equipmentType: "One-Handed Sword",
+          baseStats: {
+            baseStatLines: [
+              {
+                text: "100 - 100 physical damage",
+                mod: { type: "FlatPhysDmg", value: 100 },
+              },
+            ],
+          },
+        },
+      },
+      inventory: [],
+    },
+    customConfiguration: [
+      affix([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 50, max: 50 },
+          dmgType: "physical",
+        },
+      ]),
+    ],
+  });
+
+  const mods = collectMods(loadout);
+  const res = calculateOffense(
+    loadout,
+    mods,
+    "[Test] Simple Attack",
+    defaultConfiguration,
+  );
+
+  // Weapon damage: 100
+  // Flat damage: 50 (scaled by addedDmgEffPct = 1.0)
+  // Total: 100 + 50 = 150
+  // With crit: 150 * 1.025 = 153.75
+  expect(res?.avgHit).toBeCloseTo(150);
+  expect(res?.avgHitWithCrit).toBeCloseTo(153.75);
+});
+
+test("calculate offense with flat elemental damage to attacks", () => {
+  const loadout = initLoadout({
+    gearPage: {
+      equippedGear: {
+        mainHand: {
+          equipmentType: "One-Handed Sword",
+          baseStats: {
+            baseStatLines: [
+              {
+                text: "100 - 100 physical damage",
+                mod: { type: "FlatPhysDmg", value: 100 },
+              },
+            ],
+          },
+        },
+      },
+      inventory: [],
+    },
+    customConfiguration: [
+      affix([
+        { type: "FlatDmgToAtks", value: { min: 20, max: 20 }, dmgType: "cold" },
+      ]),
+      affix([
+        { type: "FlatDmgToAtks", value: { min: 30, max: 30 }, dmgType: "fire" },
+      ]),
+      affix([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 10, max: 10 },
+          dmgType: "lightning",
+        },
+      ]),
+    ],
+  });
+
+  const mods = collectMods(loadout);
+  const res = calculateOffense(
+    loadout,
+    mods,
+    "[Test] Simple Attack",
+    defaultConfiguration,
+  );
+
+  // Weapon: 100 phys
+  // Flat: 20 cold + 30 fire + 10 lightning = 60 elemental
+  // Total: 100 + 60 = 160
+  // With crit: 160 * 1.025 = 164
+  expect(res?.avgHit).toBeCloseTo(160);
+  expect(res?.avgHitWithCrit).toBeCloseTo(164);
+});
+
+test("calculate offense with multiple flat damage sources stacking", () => {
+  const loadout = initLoadout({
+    gearPage: {
+      equippedGear: {
+        mainHand: {
+          equipmentType: "One-Handed Sword",
+          baseStats: {
+            baseStatLines: [
+              {
+                text: "100 - 100 physical damage",
+                mod: { type: "FlatPhysDmg", value: 100 },
+              },
+            ],
+          },
+        },
+      },
+      inventory: [],
+    },
+    customConfiguration: [
+      affix([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 25, max: 25 },
+          dmgType: "physical",
+        },
+      ]),
+      affix([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 25, max: 25 },
+          dmgType: "physical",
+        },
+      ]),
+    ],
+  });
+
+  const mods = collectMods(loadout);
+  const res = calculateOffense(
+    loadout,
+    mods,
+    "[Test] Simple Attack",
+    defaultConfiguration,
+  );
+
+  // Weapon: 100 phys
+  // Flat: 25 + 25 = 50 phys (stacks additively)
+  // Total: 100 + 50 = 150
+  // With crit: 150 * 1.025 = 153.75
+  expect(res?.avgHit).toBeCloseTo(150);
+  expect(res?.avgHitWithCrit).toBeCloseTo(153.75);
+});
+
+test("calculate offense with flat damage scaled by addedDmgEffPct (Berserking Blade)", () => {
+  const loadout = initLoadout({
+    gearPage: {
+      equippedGear: {
+        mainHand: {
+          equipmentType: "One-Handed Sword",
+          baseStats: {
+            baseStatLines: [
+              {
+                text: "100 - 100 physical damage",
+                mod: { type: "FlatPhysDmg", value: 100 },
+              },
+            ],
+          },
+        },
+      },
+      inventory: [],
+    },
+    customConfiguration: [
+      affix([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 100, max: 100 },
+          dmgType: "physical",
+        },
+      ]),
+    ],
+  });
+
+  const mods = collectMods(loadout);
+  const res = calculateOffense(
+    loadout,
+    mods,
+    "Berserking Blade",
+    defaultConfiguration,
+  );
+
+  // Berserking Blade has addedDmgEffPct = 2.1 and weapon mult = 2.1
+  // Weapon damage: 100 * 2.1 = 210
+  // Flat damage: 100 * 2.1 = 210
+  // Total: 210 + 210 = 420
+  // With crit: 420 * 1.025 = 430.5
+  expect(res?.avgHit).toBeCloseTo(420);
+  expect(res?.avgHitWithCrit).toBeCloseTo(430.5);
+});
+
+test("calculate offense with flat damage and % damage modifiers", () => {
+  const loadout = initLoadout({
+    gearPage: {
+      equippedGear: {
+        mainHand: {
+          equipmentType: "One-Handed Sword",
+          baseStats: {
+            baseStatLines: [
+              {
+                text: "100 - 100 physical damage",
+                mod: { type: "FlatPhysDmg", value: 100 },
+              },
+            ],
+          },
+        },
+      },
+      inventory: [],
+    },
+    customConfiguration: [
+      affix([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 50, max: 50 },
+          dmgType: "physical",
+        },
+      ]),
+      affix([{ type: "DmgPct", value: 1.0, modType: "physical", addn: false }]), // +100% physical damage
+    ],
+  });
+
+  const mods = collectMods(loadout);
+  const res = calculateOffense(
+    loadout,
+    mods,
+    "[Test] Simple Attack",
+    defaultConfiguration,
+  );
+
+  // Weapon: 100 phys
+  // Flat: 50 phys
+  // Base total: 150
+  // After +100% physical: 150 * 2 = 300
+  // With crit: 300 * 1.025 = 307.5
+  expect(res?.avgHit).toBeCloseTo(300);
+  expect(res?.avgHitWithCrit).toBeCloseTo(307.5);
+});
+
+test("calculate offense with FlatDmgToAtksAndSpells on attack skill", () => {
+  const loadout = initLoadout({
+    gearPage: {
+      equippedGear: {
+        mainHand: {
+          equipmentType: "One-Handed Sword",
+          baseStats: {
+            baseStatLines: [
+              {
+                text: "100 - 100 physical damage",
+                mod: { type: "FlatPhysDmg", value: 100 },
+              },
+            ],
+          },
+        },
+      },
+      inventory: [],
+    },
+    customConfiguration: [
+      affix([
+        {
+          type: "FlatDmgToAtksAndSpells",
+          value: { min: 40, max: 40 },
+          dmgType: "cold",
+        },
+      ]),
+    ],
+  });
+
+  const mods = collectMods(loadout);
+  const res = calculateOffense(
+    loadout,
+    mods,
+    "[Test] Simple Attack",
+    defaultConfiguration,
+  );
+
+  // Weapon: 100 phys
+  // Flat (FlatDmgToAtksAndSpells): 40 cold
+  // Total: 100 + 40 = 140
+  // With crit: 140 * 1.025 = 143.5
+  expect(res?.avgHit).toBeCloseTo(140);
+  expect(res?.avgHitWithCrit).toBeCloseTo(143.5);
+});
+
+test("calculate offense with flat damage only (no weapon damage)", () => {
+  const loadout = initLoadout({
+    gearPage: {
+      equippedGear: {},
+      inventory: [],
+    },
+    customConfiguration: [
+      affix([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 100, max: 100 },
+          dmgType: "fire",
+        },
+      ]),
+    ],
+  });
+
+  const mods = collectMods(loadout);
+  const res = calculateOffense(
+    loadout,
+    mods,
+    "[Test] Simple Attack",
+    defaultConfiguration,
+  );
+
+  // No weapon equipped, only flat damage
+  // Flat: 100 fire * 1.0 (addedDmgEffPct) = 100
+  // With crit: 100 * 1.025 = 102.5
+  expect(res?.avgHit).toBeCloseTo(100);
+  expect(res?.avgHitWithCrit).toBeCloseTo(102.5);
+});
+
+test("calculate offense with flat erosion damage", () => {
+  const loadout = initLoadout({
+    gearPage: {
+      equippedGear: {
+        mainHand: {
+          equipmentType: "One-Handed Sword",
+          baseStats: {
+            baseStatLines: [
+              {
+                text: "100 - 100 physical damage",
+                mod: { type: "FlatPhysDmg", value: 100 },
+              },
+            ],
+          },
+        },
+      },
+      inventory: [],
+    },
+    customConfiguration: [
+      affix([
+        {
+          type: "FlatDmgToAtks",
+          value: { min: 50, max: 50 },
+          dmgType: "erosion",
+        },
+      ]),
+      affix([{ type: "DmgPct", value: 0.5, modType: "erosion", addn: false }]), // +50% erosion damage
+    ],
+  });
+
+  const mods = collectMods(loadout);
+  const res = calculateOffense(
+    loadout,
+    mods,
+    "[Test] Simple Attack",
+    defaultConfiguration,
+  );
+
+  // Weapon: 100 phys (no bonus)
+  // Flat: 50 erosion * 1.5 (50% erosion bonus) = 75
+  // Total: 100 + 75 = 175
+  // With crit: 175 * 1.025 = 179.375
+  expect(res?.avgHit).toBeCloseTo(175);
+  expect(res?.avgHitWithCrit).toBeCloseTo(179.375);
+});

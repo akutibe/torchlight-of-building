@@ -5,12 +5,32 @@ import type {
 } from "./constants";
 import type { DmgRange } from "./core";
 
+export type DmgType = "physical" | "cold" | "lightning" | "fire" | "erosion";
+
 export type Mod =
   | {
       type: "DmgPct";
       value: number;
       modType: DmgModType;
       addn: boolean;
+      src?: string;
+    }
+  | {
+      type: "FlatDmgToAtks";
+      value: DmgRange;
+      dmgType: DmgType;
+      src?: string;
+    }
+  | {
+      type: "FlatDmgToAtksAndSpells";
+      value: DmgRange;
+      dmgType: DmgType;
+      src?: string;
+    }
+  | {
+      type: "FlatDmgToSpells";
+      value: DmgRange;
+      dmgType: DmgType;
       src?: string;
     }
   | {
@@ -176,6 +196,13 @@ export type Mod =
     }
   | {
       type: "MultistrikeChancePct";
+      value: number;
+      src?: string;
+    }
+  | {
+      type: "ConvertDmgPct";
+      from: DmgType;
+      to: DmgType;
       value: number;
       src?: string;
     }

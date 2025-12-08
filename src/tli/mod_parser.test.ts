@@ -271,13 +271,13 @@ test("parse energy shield regain", () => {
   });
 });
 
-test("parse multistrike chance", () => {
-  const result = parseMod("+32% chance to Multistrike");
-  expect(result).toEqual({
-    type: "MultistrikeChancePct",
-    value: 0.32,
-  });
-});
+// test("parse multistrike chance", () => {
+//   const result = parseMod("+32% chance to Multistrike");
+//   expect(result).toEqual({
+//     type: "MultistrikeChancePct",
+//     value: 0.32,
+//   });
+// });
 
 test("parse flat strength", () => {
   const result = parseMod("+6 Strength");

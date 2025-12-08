@@ -5,11 +5,16 @@ Entry point: `calculateOffense(loadout: Loadout, skill: Skill, configuration: Co
 ## Flow
 
 1. Collect mods from loadout (`collectMods`)
-2. Calculate base damage for each element (physical, cold, lightning, fire, erosion)
-3. Apply % modifiers based on skill tags
-4. Calculate crit stats
-5. Calculate attack speed
-6. Compute DPS: `avgDps = avgHitWithCrit * aspd`
+2. Calculate gear damage (`calculateGearDmg`) - weapon base + weapon affixes
+3. Calculate flat damage (`calculateFlatDmg`) - from `FlatDmgToAtks` and `FlatDmgToAtksAndSpells` mods
+4. Calculate skill hit (`calculateSkillHit`):
+   - Weapon damage scaled by skill-specific multiplier
+   - Flat damage scaled by `addedDmgEffPct`
+   - Sum weapon + flat damage
+   - Apply % modifiers based on skill tags
+5. Calculate crit stats
+6. Calculate attack speed
+7. Compute DPS: `avgDps = avgHitWithCrit * aspd`
 
 ## Key Mechanics
 
@@ -29,6 +34,21 @@ Entry point: `calculateOffense(loadout: Loadout, skill: Skill, configuration: Co
 - `DmgModType`: global, melee, area, attack, spell, physical, cold, lightning, fire, erosion, elemental
 
 **Stat Scaling:** `0.005` (0.5%) per point of STR/DEX/INT
+
+**Flat Damage:**
+
+Flat damage comes from mods like `FlatDmgToAtks` and `FlatDmgToAtksAndSpells`. Each mod has a damage type (`physical`, `cold`, `lightning`, `fire`, `erosion`) and a value range (min/max).
+
+Order of operations:
+```
+skillBaseDmg = (weaponDmg × skillWeaponMult) + (flatDmg × addedDmgEffPct)
+finalDmg = skillBaseDmg × (1 + incDmgPct) × moreDmgMult
+```
+
+- `addedDmgEffPct`: Skill-specific multiplier for flat damage (defined in `skill_confs.ts`)
+- Example: Berserking Blade has `addedDmgEffPct: 2.1`, so flat damage is multiplied by 2.1×
+- Flat damage stacks additively before % modifiers are applied
+- % damage modifiers (like `+50% physical damage`) apply to the combined base
 
 ## Special Systems
 
