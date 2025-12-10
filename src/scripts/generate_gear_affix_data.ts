@@ -1,7 +1,8 @@
 import { execSync } from "node:child_process";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
+import { readCodexHtml } from "./lib/codex";
 
 interface CraftingAffix {
   equipmentSlot: string;
@@ -60,7 +61,6 @@ const parseAffixText = (
   const processed = cheerio.load(html);
   let text = processed.text();
 
-  text = text.replace(/\n/g, "").trim();
   text = text.replace(/\s\s+/g, " ").trim();
   text = text.replace(/{REPLACEME} /g, "\n");
 
@@ -153,8 +153,7 @@ ${arraySpread}
 
 const main = async (): Promise<void> => {
   console.log("Reading HTML file...");
-  const htmlPath = join(process.cwd(), ".garbage", "codex.html");
-  const html = await readFile(htmlPath, "utf-8");
+  const html = await readCodexHtml();
 
   console.log("Extracting gear affix data...");
   const rawData = extractCraftingData(html);

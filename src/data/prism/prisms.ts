@@ -149,7 +149,7 @@ export const Prisms: readonly Prism[] = [
     type: "Base Affix",
     rarity: "",
     affix:
-      'Replaces the Core Talent on the God of Might/Goddess of Knowledge/Goddess of Deception Advanced Talent Panel with Main-Hand Weapon\'s Damage to Spells\nAdds 100% of Main-Hand Weapon\'s Critical Strike Rating to the Base Critical Strike Rating of Spell Skills\nYou cannot deal Ailment Damage" data-tooltipid="423135az6tt">Towering Presence',
+      "Replaces the Core Talent on the God of Might/Goddess of Knowledge/Goddess of Deception Advanced Talent Panel with Main-Hand Weapon's Damage to Spells\nAdds 100% of Main-Hand Weapon's Critical Strike Rating to the Base Critical Strike Rating of Spell Skills\nYou cannot deal Ailment Damage\">Towering Presence",
   },
   {
     type: "Base Affix",

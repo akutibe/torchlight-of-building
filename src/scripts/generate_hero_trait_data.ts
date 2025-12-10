@@ -1,29 +1,9 @@
 import { execSync } from "node:child_process";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { HeroTrait } from "../data/hero_trait/types";
-
-const cleanEffectText = (html: string): string => {
-  let text = html.replace(/<br\s*\/?>/gi, "\n");
-  text = text.replace(/<[^>]+>/g, "");
-  text = text
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&nbsp;/g, " ");
-  text = text
-    .split("\n")
-    .map((line) => line.replace(/\s+/g, " ").trim())
-    .join("\n");
-  text = text
-    .split("\n")
-    .filter((line) => line.length > 0)
-    .join("\n");
-  return text.trim();
-};
+import { cleanEffectText, readCodexHtml } from "./lib/codex";
 
 const extractHeroTraitData = (html: string): HeroTrait[] => {
   const $ = cheerio.load(html);
@@ -73,8 +53,7 @@ export const HeroTraits: readonly HeroTrait[] = ${JSON.stringify(traits, null, 2
 
 const main = async (): Promise<void> => {
   console.log("Reading HTML file...");
-  const htmlPath = join(process.cwd(), ".garbage", "codex.html");
-  const html = await readFile(htmlPath, "utf-8");
+  const html = await readCodexHtml();
 
   console.log("Extracting hero trait data...");
   const traits = extractHeroTraitData(html);

@@ -4,6 +4,7 @@ import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { Legendary } from "../data/legendary/types";
 import type { EquipmentSlot, EquipmentType } from "../tli/gear_data_types";
+import { readCodexHtml } from "./lib/codex";
 
 const cleanText = (text: string): string => {
   // Replace en-dash (U+2013) with regular hyphen
@@ -175,9 +176,8 @@ const main = async (): Promise<void> => {
   const outDir = join(process.cwd(), "src", "data", "legendary");
 
   // Step 1: Read codex.html and extract equipment slot/type mapping
-  const codexPath = join(process.cwd(), ".garbage", "codex.html");
   console.log("Reading codex.html for equipment info...");
-  const codexHtml = await readFile(codexPath, "utf-8");
+  const codexHtml = await readCodexHtml();
   const codexLegendaryMap = extractCodexLegendaryData(codexHtml);
 
   // Step 2: Read tlidb legendary files

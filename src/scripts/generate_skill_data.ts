@@ -1,8 +1,9 @@
 import { execSync } from "node:child_process";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { BaseSkill } from "../data/skill/types";
+import { readCodexHtml } from "./lib/codex";
 
 interface RawSkill {
   type: string;
@@ -63,16 +64,12 @@ const extractSkillData = (html: string): RawSkill[] => {
         const withNewlines = block.replace(/<br\s*\/?>/gi, "\n");
         // Strip remaining HTML tags and get text
         const text = cheerio.load(withNewlines).text();
-        // Normalize the text:
-        // - Replace mid-sentence newlines with spaces (line-wrap artifacts)
-        // - Keep newlines after sentence-ending punctuation
-        // - Collapse multiple spaces and trim around newlines
+        // Trim each line and remove empty lines
         return text
-          .replace(/([^.!?\n])\n+/g, "$1 ") // Mid-sentence newline → space
-          .replace(/ *\n */g, "\n") // Trim spaces around newlines
-          .replace(/\n{2,}/g, "\n") // Collapse multiple newlines to single
-          .replace(/[ \t]+/g, " ") // Collapse horizontal whitespace
-          .trim();
+          .split("\n")
+          .map((line) => line.replace(/\s+/g, " ").trim())
+          .filter((line) => line.length > 0)
+          .join("\n");
       })
       .filter((block) => block.length > 0);
 
@@ -101,8 +98,7 @@ export const ${constName}: readonly BaseSkill[] = ${JSON.stringify(skills, null,
 
 const main = async (): Promise<void> => {
   console.log("Reading HTML file...");
-  const htmlPath = join(process.cwd(), ".garbage", "codex.html");
-  const html = await readFile(htmlPath, "utf-8");
+  const html = await readCodexHtml();
 
   console.log("Extracting skill data...");
   const rawData = extractSkillData(html);

@@ -1,43 +1,15 @@
 import { execSync } from "node:child_process";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
 import type { Prism } from "../data/prism/types";
-
-const cleanEffectText = (html: string): string => {
-  // Replace <br> tags with placeholder to preserve intentional line breaks
-  const BR_PLACEHOLDER = "\x00";
-  let text = html.replace(/<br\s*\/?>/gi, BR_PLACEHOLDER);
-  // Remove all other HTML tags
-  text = text.replace(/<[^>]+>/g, "");
-  // Fix mojibake dash: UTF-8 en-dash bytes misinterpreted as Windows-1252
-  text = text.replace(/\u00e2\u20ac\u201c/g, "-");
-  // Decode common HTML entities
-  text = text
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&nbsp;/g, " ");
-  // Normalize all whitespace (including source newlines) to single spaces
-  text = text.replace(/\s+/g, " ");
-  // Restore intentional line breaks from <br> tags
-  text = text.replace(new RegExp(BR_PLACEHOLDER, "g"), "\n");
-  // Clean up: trim each line and remove empty lines
-  text = text
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => line.length > 0)
-    .join("\n");
-  return text.trim();
-};
+import { cleanEffectText, readCodexHtml } from "./lib/codex";
 
 const extractPrismData = (html: string): Prism[] => {
   const $ = cheerio.load(html);
   const items: Prism[] = [];
 
-  const rows = $('#prism tbody tr[class*="thing"]');
+  const rows = $('#etherealPrism tbody tr[class*="thing"]');
   console.log(`Found ${rows.length} prism rows`);
 
   rows.each((_, row) => {
@@ -69,8 +41,7 @@ export const Prisms: readonly Prism[] = ${JSON.stringify(items, null, 2)};
 
 const main = async (): Promise<void> => {
   console.log("Reading HTML file...");
-  const htmlPath = join(process.cwd(), ".garbage", "codex.html");
-  const html = await readFile(htmlPath, "utf-8");
+  const html = await readCodexHtml();
 
   console.log("Extracting prism data...");
   const items = extractPrismData(html);
