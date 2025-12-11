@@ -4,8 +4,13 @@ import {
   type SearchableSelectOption,
   type SearchableSelectOptionGroup,
 } from "@/src/app/components/ui/SearchableSelect";
-import { canSupport } from "@/src/app/lib/skill-utils";
-import { SupportSkills } from "@/src/data/skill";
+import { listAvailableSupports } from "@/src/app/lib/skill-utils";
+import {
+  ActivationMediumSkills,
+  MagnificentSupportSkills,
+  NobleSupportSkills,
+  SupportSkills,
+} from "@/src/data/skill";
 import type { ActiveSkill, BaseSkill } from "@/src/data/skill/types";
 
 interface SupportSkillSelectorProps {
@@ -13,6 +18,7 @@ interface SupportSkillSelectorProps {
   selectedSkill?: string;
   excludedSkills: string[];
   onChange: (skillName: string | undefined) => void;
+  slotIndex: number; // 1-indexed
 }
 
 export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
@@ -20,14 +26,24 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
   selectedSkill,
   excludedSkills,
   onChange,
+  slotIndex,
 }) => {
-  const availableSkills = SupportSkills.filter(
-    (skill) =>
-      skill.name === selectedSkill || !excludedSkills.includes(skill.name),
-  );
-
   const { options, groups } = useMemo(() => {
-    const opts: SearchableSelectOption<string>[] = availableSkills.map(
+    // Combine all skill types for the flat options list
+    const allSkills = [
+      ...SupportSkills,
+      ...ActivationMediumSkills,
+      ...MagnificentSupportSkills,
+      ...NobleSupportSkills,
+    ];
+
+    // Filter out excluded skills (but keep currently selected)
+    const filteredSkills = allSkills.filter(
+      (skill) =>
+        skill.name === selectedSkill || !excludedSkills.includes(skill.name),
+    );
+
+    const opts: SearchableSelectOption<string>[] = filteredSkills.map(
       (skill) => ({
         value: skill.name,
         label: skill.name,
@@ -38,28 +54,58 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
       return { options: opts, groups: undefined };
     }
 
-    const compatible: SearchableSelectOption<string>[] = [];
-    const other: SearchableSelectOption<string>[] = [];
+    // Get available supports organized by category
+    const available = listAvailableSupports(mainSkill, slotIndex);
 
-    for (const skill of availableSkills) {
-      const option = { value: skill.name, label: skill.name };
-      if (canSupport(mainSkill, skill)) {
-        compatible.push(option);
-      } else {
-        other.push(option);
+    // Build groups, filtering by excludedSkills
+    const grps: SearchableSelectOptionGroup<string>[] = [];
+
+    // Helper to filter and create options
+    const filterAndMap = (names: string[]): SearchableSelectOption<string>[] =>
+      names
+        .filter(
+          (name) => name === selectedSkill || !excludedSkills.includes(name),
+        )
+        .map((name) => ({ value: name, label: name }));
+
+    // Add groups only if they have options
+    if (available.activationMedium.length > 0) {
+      const filtered = filterAndMap(available.activationMedium);
+      if (filtered.length > 0) {
+        grps.push({ label: "Activation Medium", options: filtered });
       }
     }
 
-    const grps: SearchableSelectOptionGroup<string>[] = [];
-    if (compatible.length > 0) {
-      grps.push({ label: "Compatible", options: compatible });
+    if (available.magnificent.length > 0) {
+      const filtered = filterAndMap(available.magnificent);
+      if (filtered.length > 0) {
+        grps.push({ label: "Magnificent", options: filtered });
+      }
     }
-    if (other.length > 0) {
-      grps.push({ label: "Other", options: other });
+
+    if (available.noble.length > 0) {
+      const filtered = filterAndMap(available.noble);
+      if (filtered.length > 0) {
+        grps.push({ label: "Noble", options: filtered });
+      }
+    }
+
+    if (available.compatible.length > 0) {
+      const filtered = filterAndMap(available.compatible);
+      if (filtered.length > 0) {
+        grps.push({ label: "Compatible", options: filtered });
+      }
+    }
+
+    if (available.other.length > 0) {
+      const filtered = filterAndMap(available.other);
+      if (filtered.length > 0) {
+        grps.push({ label: "Other", options: filtered });
+      }
     }
 
     return { options: opts, groups: grps };
-  }, [availableSkills, mainSkill]);
+  }, [mainSkill, slotIndex, selectedSkill, excludedSkills]);
 
   return (
     <SearchableSelect

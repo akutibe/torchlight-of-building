@@ -1,3 +1,9 @@
+import {
+  ActivationMediumSkills,
+  MagnificentSupportSkills,
+  NobleSupportSkills,
+  SupportSkills,
+} from "@/src/data/skill";
 import type {
   ActiveSkill,
   BaseSkill,
@@ -75,10 +81,10 @@ export const canSupport = (
 
 // all the strings are the names of the skills
 export interface AvailableSupports {
+  activationMedium: string[];
+  magnificent: string[];
+  noble: string[];
   compatible: string[];
-  activationMedium?: string;
-  magnificent?: string;
-  noble?: string;
   other: string[];
 }
 
@@ -87,5 +93,53 @@ export const listAvailableSupports = (
   // supportSkillSlot is 1-indexed
   supportSkillSlot: number,
 ): AvailableSupports => {
-  throw Error("to be implemented");
+  const result: AvailableSupports = {
+    activationMedium: [],
+    magnificent: [],
+    noble: [],
+    compatible: [],
+    other: [],
+  };
+
+  // Activation Medium: only available in slot 1
+  if (supportSkillSlot === 1) {
+    for (const am of ActivationMediumSkills) {
+      if (canSupport(skill, am)) {
+        result.activationMedium.push(am.name);
+      } else {
+        result.other.push(am.name);
+      }
+    }
+  }
+
+  // Magnificent: only available in slot 3, matches by supportTarget === skill.name
+  if (supportSkillSlot === 3) {
+    for (const mag of MagnificentSupportSkills) {
+      if (mag.supportTarget === skill.name) {
+        result.magnificent.push(mag.name);
+      }
+      // Not matching magnificent skills are NOT added to other
+    }
+  }
+
+  // Noble: only available in slot 5, matches by supportTarget === skill.name
+  if (supportSkillSlot === 5) {
+    for (const noble of NobleSupportSkills) {
+      if (noble.supportTarget === skill.name) {
+        result.noble.push(noble.name);
+      }
+      // Not matching noble skills are NOT added to other
+    }
+  }
+
+  // Regular support skills: always available
+  for (const support of SupportSkills) {
+    if (canSupport(skill, support)) {
+      result.compatible.push(support.name);
+    } else {
+      result.other.push(support.name);
+    }
+  }
+
+  return result;
 };

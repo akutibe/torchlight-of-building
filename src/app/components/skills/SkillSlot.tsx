@@ -113,6 +113,7 @@ export const SkillSlot: React.FC<SkillSlotProps> = ({
                     (s) => s !== skill.supportSkills[key],
                   )}
                   onChange={(supportName) => onUpdateSupport(key, supportName)}
+                  slotIndex={index + 1}
                 />
               </div>
             ))}
