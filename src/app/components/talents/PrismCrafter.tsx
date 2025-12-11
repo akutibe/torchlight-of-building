@@ -45,7 +45,6 @@ export const PrismCrafter: React.FC<PrismCrafterProps> = ({
     SelectedGaugeAffix[]
   >([]);
 
-  /* eslint-disable react-hooks/set-state-in-effect -- sync state with prop changes */
   useEffect(() => {
     if (editingPrism) {
       setRarity(editingPrism.rarity);
@@ -65,7 +64,6 @@ export const PrismCrafter: React.FC<PrismCrafterProps> = ({
       setBaseAffix(undefined);
     }
   }, [editingPrism]);
-  /* eslint-enable react-hooks/set-state-in-effect */
 
   const baseAffixOptions = useMemo((): SearchableSelectOption<string>[] => {
     return getBaseAffixes(rarity).map((affix) => ({

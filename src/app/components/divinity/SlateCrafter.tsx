@@ -54,7 +54,6 @@ export const SlateCrafter: React.FC<SlateCrafterProps> = ({
   const [flippedV, setFlippedV] = useState(editingSlate?.flippedV ?? false);
   const [selectedAffixes, setSelectedAffixes] = useState<DivinityAffix[]>([]);
 
-  /* eslint-disable react-hooks/set-state-in-effect -- sync state with prop changes */
   useEffect(() => {
     if (editingSlate) {
       setGod(editingSlate.god);
@@ -76,7 +75,6 @@ export const SlateCrafter: React.FC<SlateCrafterProps> = ({
       setFlippedV(false);
     }
   }, [editingSlate]);
-  /* eslint-enable react-hooks/set-state-in-effect */
 
   const availableAffixes = getDivinityAffixes(god);
 

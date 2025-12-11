@@ -70,7 +70,7 @@ const extractLegendary = (
   filename: string,
 ): TlidbLegendary | undefined => {
   // Find the SS10Season card (not the previousItem one)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- cheerio internal type
+  // biome-ignore lint/suspicious/noExplicitAny: cheerio internal type
   let mainCard: cheerio.Cheerio<any> | undefined;
 
   $(".card.ui_item").each((_, card) => {
@@ -108,7 +108,7 @@ const extractLegendary = (
   });
 
   // Find the Corroded card
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- cheerio internal type
+  // biome-ignore lint/suspicious/noExplicitAny: cheerio internal type
   let corrodedCard: cheerio.Cheerio<any> | undefined;
   $(".card.ui_item").each((_, card) => {
     const $card = $(card);

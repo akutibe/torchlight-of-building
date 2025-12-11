@@ -22,7 +22,6 @@ const BuilderPageContent = () => {
   const [activePage, setActivePage] = useState<ActivePage>("equipment");
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only hydration pattern
     setMounted(true);
 
     if (!saveId) {

@@ -39,14 +39,12 @@ export const ImportModal = ({
     }
   };
 
-  /* eslint-disable react-hooks/set-state-in-effect -- reset state on modal open */
   useEffect(() => {
     if (isOpen) {
       setInputValue("");
       setError(undefined);
     }
   }, [isOpen]);
-  /* eslint-enable react-hooks/set-state-in-effect */
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Import Loadout">
