@@ -1293,4 +1293,20 @@ describe("calculateOffense with damage conversion", () => {
       { avgHit: 150, avgHitWithCrit: 153.75 },
     );
   });
+
+  test("Frost Spike skill converts phys to cold via extraMods", () => {
+    // Frost Spike has 100% phys→cold conversion in extraMods and 2.01× weapon mult
+    // 100 phys weapon * 2.01 = 201 phys → 201 cold via skill's conversion
+    // Cold damage with 50% cold bonus: 201 * (1 + 0.5) = 301.5
+    // With crit: 301.5 * 1.025 = 309.0375
+    runTest(
+      {
+        skill: "Frost Spike",
+        mods: [
+          affix([{ type: "DmgPct", value: 0.5, modType: "cold", addn: false }]),
+        ],
+      },
+      { avgHit: 301.5, avgHitWithCrit: 309.0375 },
+    );
+  });
 });

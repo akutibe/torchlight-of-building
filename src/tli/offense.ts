@@ -605,6 +605,9 @@ const calculateSkillHit = (
     .with("Berserking Blade", () => {
       return multDRs(gearDmg.mainHand, 2.1);
     })
+    .with("Frost Spike", () => {
+      return multDRs(gearDmg.mainHand, 2.01);
+    })
     .with("[Test] Simple Attack", () => {
       return gearDmg.mainHand;
     })
@@ -663,7 +666,7 @@ const calculateSkillHit = (
 // return undefined if skill unimplemented or it's not an offensive skill
 export const calculateOffense = (
   loadout: Loadout,
-  mods: Mod.Mod[],
+  equipmentMods: Mod.Mod[],
   skillName: ImplementedOffenseSkillName,
   configuration: Configuration,
 ): OffenseSummary | undefined => {
@@ -671,6 +674,7 @@ export const calculateOffense = (
   if (skillConf === undefined) {
     return undefined;
   }
+  const mods = [...equipmentMods, ...skillConf.extraMods];
   const gearDmg = calculateGearDmg(loadout, mods);
   const flatDmg = calculateFlatDmg(mods, "attack");
 
