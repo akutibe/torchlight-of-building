@@ -70,7 +70,6 @@ export type InferredSkillKind =
   | "dot"
   | "hit_enemies"
   | "inflict_ailment"
-  | "spell_burst"
   | "summon_minions"
   | "summon_spirit_magus"
   | "summon_synthetic_troops";
@@ -80,7 +79,8 @@ export type SupportTarget =
   | { tags: SkillTag[] }
   | { skillType: "active" | "passive" }
   | InferredSkillKind
-  | "any";
+  | "any"
+  | "spell_burst";
 
 export interface SupportSkill extends BaseSkill {
   // support can target skill if any of the targets match
