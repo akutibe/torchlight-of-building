@@ -2,8 +2,8 @@ import {
   ActiveSkills,
   type SkillName as DataSkillName,
   type SkillTag,
-} from "../data/skill";
-import type { Mod } from "./mod";
+} from "../../data/skill";
+import type { Mod } from "../mod";
 import type { Stat } from "./offense";
 
 export type SkillName = DataSkillName | "[Test] Simple Attack";

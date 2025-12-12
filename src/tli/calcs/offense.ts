@@ -1,7 +1,7 @@
 import * as R from "remeda";
 import { match } from "ts-pattern";
-import type { SkillTag } from "../data/skill";
-import type { DmgModType } from "./constants";
+import type { SkillTag } from "../../data/skill";
+import type { DmgModType } from "../constants";
 import {
   type Affix,
   type Configuration,
@@ -9,8 +9,8 @@ import {
   getAllAffixes,
   getTalentAffixes,
   type Loadout,
-} from "./core";
-import type * as Mod from "./mod";
+} from "../core";
+import type * as Mod from "../mod";
 import {
   type ImplementedOffenseSkill as ImplementedOffenseSkillName,
   listTags,

@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
-import type { Affix, Configuration, Loadout } from "./core";
-import type { Mod } from "./mod";
+import type { Affix, Configuration, Loadout } from "../core";
+import type { Mod } from "../mod";
 import {
   calculateOffense,
   collectMods,
