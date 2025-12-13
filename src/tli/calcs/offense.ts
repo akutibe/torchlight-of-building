@@ -676,7 +676,7 @@ const multModValue = <T extends Extract<Mod.Mod, { value: number | DmgRange }>>(
   const newValue = match(mod.value)
     .with(P.number, (x) => x * multiplier)
     .otherwise((x) => multDR(x, multiplier));
-  return { ...mod, value: newValue };
+  return { ...mod, value: newValue, per: undefined };
 };
 
 // retrieves all mods, and filters or normalizes them in the following ways:
