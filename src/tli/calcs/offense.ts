@@ -697,6 +697,7 @@ const getNormalizedMods = (
   input: OffenseInput,
   skillConf: SkillConfiguration,
 ): Mod.Mod[] => {
+  // includes mods from loadout and from base effects, such as from stats
   const allOriginalMods: Mod.Mod[] = [
     ...collectMods(input.loadout),
     ...skillConf.extraMods,
