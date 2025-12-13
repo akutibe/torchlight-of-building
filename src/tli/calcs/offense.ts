@@ -726,23 +726,22 @@ const getNormalizedMods = (
 
   const normalizedMods = [];
   for (const mod of allOriginalMods) {
-    if (!("per" in mod) || mod.per === undefined) {
+    if ("per" in mod && mod.per !== undefined) {
+      const normalizedMod = match<Mod.Stackable, Mod.Mod>(mod.per)
+        .with("willpower", () => multModValue(mod, willpowerStacks))
+        .with("main_stat", () => {
+          const mainStatTypes = skillConf.stats;
+          let totalMainStats = 0;
+          for (const mainStatType of mainStatTypes) {
+            totalMainStats += stats[mainStatType];
+          }
+          return multModValue(mod, totalMainStats);
+        })
+        .exhaustive();
+      normalizedMods.push(normalizedMod);
+    } else {
       normalizedMods.push(mod);
-      continue;
     }
-
-    const normalizedMod = match<Mod.Stackable, Mod.Mod>(mod.per)
-      .with("willpower", () => multModValue(mod, willpowerStacks))
-      .with("main_stat", () => {
-        const mainStatTypes = skillConf.stats;
-        let totalMainStats = 0;
-        for (const mainStatType of mainStatTypes) {
-          totalMainStats += stats[mainStatType];
-        }
-        return multModValue(mod, totalMainStats);
-      })
-      .exhaustive();
-    normalizedMods.push(normalizedMod);
   }
 
   return normalizedMods;

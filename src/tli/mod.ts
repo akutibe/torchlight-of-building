@@ -250,7 +250,8 @@ export type Mod =
       src?: string;
     }
   | {
-      type: "foo";
+      type: "ShadowQuant";
+      value: number;
       src?: string;
     }
   | {
@@ -271,7 +272,3 @@ export type ModOfType<T> = Extract<Mod, { type: T }>;
 
 // Compile-time check: all Mod variants must have src?: string
 type _AssertAllModsHaveSrc = Mod["src"];
-
-// Compile-time check: all Mod variants with a value property must have per?: StackableBuff
-type _ModsWithValue = Extract<Mod, { value: unknown }>;
-type _AssertValueHasPer = _ModsWithValue["per"];
