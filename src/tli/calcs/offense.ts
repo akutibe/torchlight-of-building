@@ -708,7 +708,7 @@ const getNormalizedMods = (
       value: 0.005,
       modType: "global",
       addn: true,
-      per: "stat",
+      per: "main_stat",
       src: "Additional Damage from skill Main Stat (.5% per stat)",
     },
   ];
@@ -725,7 +725,7 @@ const getNormalizedMods = (
 
     const normalizedMod = match<Mod.Stackable, Mod.Mod>(mod.per)
       .with("willpower", () => multModValue(mod, willpowerStacks))
-      .with("stat", () => {
+      .with("main_stat", () => {
         const mainStatTypes = skillConf.stats;
         let totalMainStats = 0;
         for (const mainStatType of mainStatTypes) {

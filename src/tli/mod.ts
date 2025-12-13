@@ -7,7 +7,7 @@ import type { DmgRange } from "./core";
 
 export type DmgType = "physical" | "cold" | "lightning" | "fire" | "erosion";
 
-export type Stackable = "willpower" | "stat";
+export type Stackable = "willpower" | "main_stat";
 
 export type Mod =
   | {
