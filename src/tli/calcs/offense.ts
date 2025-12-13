@@ -1,5 +1,5 @@
 import * as R from "remeda";
-import { match } from "ts-pattern";
+import { match, P } from "ts-pattern";
 import type { SkillTag } from "../../data/skill";
 import type { DmgModType } from "../constants";
 import {
@@ -665,21 +665,58 @@ const calculateSkillHit = (
 
 export interface OffenseInput {
   loadout: Loadout;
-  mods: Mod.Mod[];
   skillName: ImplementedOffenseSkillName;
   configuration: Configuration;
 }
+
+const multModValue = <T extends Extract<Mod.Mod, { value: number | DmgRange }>>(
+  mod: T,
+  multiplier: number,
+): T => {
+  const newValue = match(mod.value)
+    .with(P.number, (x) => x * multiplier)
+    .otherwise((x) => multDR(x, multiplier));
+  return { ...mod, value: newValue };
+};
+
+// retrieves all mods, and filters or normalizes them in the following ways:
+// * value multiplied by the per? property based on the referenced StackableBuff
+// * filtered based on various criteria
+const getNormalizedMods = (
+  input: OffenseInput,
+  skillConf: SkillConfiguration,
+): Mod.Mod[] => {
+  const allOriginalMods = [
+    ...collectMods(input.loadout),
+    ...skillConf.extraMods,
+  ];
+  const willpowerStacks =
+    findAffix(allOriginalMods, "MaxWillpowerStacks")?.value || 0;
+  const normalizedMods = [];
+  for (const mod of allOriginalMods) {
+    if (!("per" in mod) || mod.per === undefined) {
+      normalizedMods.push(mod);
+      continue;
+    }
+
+    const normalizedMod = match(mod.per)
+      .with("willpower", () => multModValue(mod, willpowerStacks))
+      .exhaustive();
+    normalizedMods.push(normalizedMod);
+  }
+  return normalizedMods;
+};
 
 // return undefined if skill unimplemented or it's not an offensive skill
 export const calculateOffense = (
   input: OffenseInput,
 ): OffenseSummary | undefined => {
-  const { loadout, mods: equipmentMods, skillName, configuration } = input;
+  const { loadout, skillName, configuration } = input;
   const skillConf = offensiveSkillConfs.find((c) => c.skillName === skillName);
   if (skillConf === undefined) {
     return undefined;
   }
-  const mods = [...equipmentMods, ...skillConf.extraMods];
+  const mods = getNormalizedMods(input, skillConf);
   const gearDmg = calculateGearDmg(loadout, mods);
   const flatDmg = calculateFlatDmg(mods, "attack");
 

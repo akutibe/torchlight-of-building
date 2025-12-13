@@ -3,7 +3,6 @@ import type { Affix, Configuration, Loadout } from "../core";
 import type { Mod } from "../mod";
 import {
   calculateOffense,
-  collectMods,
   convertDmg,
   type DmgPools,
   type DmgRanges,
@@ -120,10 +119,8 @@ const createInput = (input: TestInput): OffenseInput => {
     }),
   });
 
-  const mods = collectMods(loadout);
   return {
     loadout,
-    mods,
     skillName: input.skill ?? "[Test] Simple Attack",
     configuration: input.configuration ?? defaultConfiguration,
   };
@@ -1163,6 +1160,144 @@ describe("convertDmg", () => {
 
     expect(sumPoolRanges(result, "erosion")).toEqual({ min: 100, max: 100 });
     expect(sumPoolRanges(result, "fire")).toEqual({ min: 0, max: 0 });
+  });
+});
+
+// Mod normalization tests (per-stack mods like "X per willpower stack")
+describe("mod normalization with per-stack mods", () => {
+  test("DmgPct per willpower normalizes to stacks * value", () => {
+    // +10% damage per willpower stack with 5 stacks = +50% damage
+    // 100 * (1 + 0.5) = 150
+    const input = createInput({
+      mods: [
+        affix([{ type: "MaxWillpowerStacks", value: 5 }]),
+        affix([
+          {
+            type: "DmgPct",
+            value: 0.1,
+            modType: "global",
+            addn: false,
+            per: "willpower",
+          },
+        ]),
+      ],
+    });
+    const actual = calculateOffense(input);
+    validate(actual, { avgHit: 150 });
+  });
+
+  test("DmgPct per willpower with zero stacks has no effect", () => {
+    // +10% damage per willpower stack with 0 stacks = +0% damage
+    // 100 * (1 + 0) = 100
+    const input = createInput({
+      mods: [
+        affix([
+          {
+            type: "DmgPct",
+            value: 0.1,
+            modType: "global",
+            addn: false,
+            per: "willpower",
+          },
+        ]),
+      ],
+    });
+    const actual = calculateOffense(input);
+    validate(actual, { avgHit: 100 });
+  });
+
+  test("DmgPct per willpower stacks with regular DmgPct", () => {
+    // +10% damage per willpower (5 stacks = 50%) + 30% regular = 80% total
+    // 100 * (1 + 0.5 + 0.3) = 180
+    const input = createInput({
+      mods: [
+        affix([{ type: "MaxWillpowerStacks", value: 5 }]),
+        affix([
+          {
+            type: "DmgPct",
+            value: 0.1,
+            modType: "global",
+            addn: false,
+            per: "willpower",
+          },
+        ]),
+        affix([{ type: "DmgPct", value: 0.3, modType: "global", addn: false }]),
+      ],
+    });
+    const actual = calculateOffense(input);
+    validate(actual, { avgHit: 180 });
+  });
+
+  test("FlatDmgToAtks per willpower normalizes DmgRange", () => {
+    // +10-10 flat phys per willpower stack with 3 stacks = +30-30 flat phys
+    // Weapon: 100, Flat: 30, Total: 130
+    const input = createInput({
+      mods: [
+        affix([{ type: "MaxWillpowerStacks", value: 3 }]),
+        affix([
+          {
+            type: "FlatDmgToAtks",
+            value: { min: 10, max: 10 },
+            dmgType: "physical",
+            per: "willpower",
+          },
+        ]),
+      ],
+    });
+    const actual = calculateOffense(input);
+    validate(actual, { avgHit: 130 });
+  });
+
+  test("CritRatingPct per willpower normalizes correctly", () => {
+    // +20% crit rating per willpower stack with 2 stacks = +40% crit rating
+    // Crit chance: 0.05 * (1 + 0.4) = 0.07 (7%)
+    const input = createInput({
+      mods: [
+        affix([{ type: "MaxWillpowerStacks", value: 2 }]),
+        affix([
+          {
+            type: "CritRatingPct",
+            value: 0.2,
+            modType: "global",
+            per: "willpower",
+          },
+        ]),
+      ],
+    });
+    const actual = calculateOffense(input);
+    validate(actual, { critChance: 0.07 });
+  });
+
+  test("multiple per-willpower mods all normalize correctly", () => {
+    // With 4 willpower stacks:
+    // +5% damage per stack = +20% damage
+    // +10% crit rating per stack = +40% crit rating
+    // Crit chance: 0.05 * (1 + 0.4) = 0.07
+    // Avg hit: 100 * (1 + 0.2) = 120
+    const input = createInput({
+      mods: [
+        affix([{ type: "MaxWillpowerStacks", value: 4 }]),
+        affix([
+          {
+            type: "DmgPct",
+            value: 0.05,
+            modType: "global",
+            addn: false,
+            per: "willpower",
+          },
+        ]),
+        affix([
+          {
+            type: "CritRatingPct",
+            value: 0.1,
+            modType: "global",
+            per: "willpower",
+          },
+        ]),
+      ],
+    });
+    const actual = calculateOffense(input);
+    validate(actual, { avgHit: 120, critChance: 0.07 });
   });
 });
 
