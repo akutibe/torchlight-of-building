@@ -282,7 +282,8 @@ test("parse energy shield regain", () => {
 test("parse flat strength", () => {
   const result = parseMod("+6 Strength");
   expect(result).toEqual({
-    type: "Str",
+    type: "Stat",
+    statType: "str",
     value: 6,
   });
 });
@@ -290,7 +291,17 @@ test("parse flat strength", () => {
 test("parse flat dexterity", () => {
   const result = parseMod("+6 Dexterity");
   expect(result).toEqual({
-    type: "Dex",
+    type: "Stat",
+    statType: "dex",
+    value: 6,
+  });
+});
+
+test("parse flat intelligence", () => {
+  const result = parseMod("+6 Intelligence");
+  expect(result).toEqual({
+    type: "Stat",
+    statType: "int",
     value: 6,
   });
 });
@@ -298,7 +309,8 @@ test("parse flat dexterity", () => {
 test("parse percentage strength", () => {
   const result = parseMod("+4% Strength");
   expect(result).toEqual({
-    type: "StrPct",
+    type: "StatPct",
+    statType: "str",
     value: 0.04,
   });
 });
@@ -306,7 +318,17 @@ test("parse percentage strength", () => {
 test("parse percentage dexterity", () => {
   const result = parseMod("+4% Dexterity");
   expect(result).toEqual({
-    type: "DexPct",
+    type: "StatPct",
+    statType: "dex",
+    value: 0.04,
+  });
+});
+
+test("parse percentage intelligence", () => {
+  const result = parseMod("+4% Intelligence");
+  expect(result).toEqual({
+    type: "StatPct",
+    statType: "int",
     value: 0.04,
   });
 });

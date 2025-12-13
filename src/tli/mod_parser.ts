@@ -354,9 +354,9 @@ const _parseMultistrikeChancePct = (
   return { type: "MultistrikeChancePct", value };
 };
 
-const parseStr = (input: string): ModOfType<"Str"> | undefined => {
-  // Regex to parse: +6 Strength
-  const pattern = /^([+-])?(\d+(?:\.\d+)?) strength$/i;
+const parseStat = (input: string): ModOfType<"Stat"> | undefined => {
+  // Regex to parse: +6 Strength/Dexterity/Intelligence
+  const pattern = /^([+-])?(\d+(?:\.\d+)?) (strength|dexterity|intelligence)$/i;
   const match = input.match(pattern);
 
   if (!match) {
@@ -364,25 +364,17 @@ const parseStr = (input: string): ModOfType<"Str"> | undefined => {
   }
 
   const value = parseFloat(match[2]);
-  return { type: "Str", value };
+  const statWord = match[3].toLowerCase();
+  const statType =
+    statWord === "strength" ? "str" : statWord === "dexterity" ? "dex" : "int";
+
+  return { type: "Stat", statType, value };
 };
 
-const parseDex = (input: string): ModOfType<"Dex"> | undefined => {
-  // Regex to parse: +6 Dexterity
-  const pattern = /^([+-])?(\d+(?:\.\d+)?) dexterity$/i;
-  const match = input.match(pattern);
-
-  if (!match) {
-    return undefined;
-  }
-
-  const value = parseFloat(match[2]);
-  return { type: "Dex", value };
-};
-
-const parseStrPct = (input: string): ModOfType<"StrPct"> | undefined => {
-  // Regex to parse: +4% Strength
-  const pattern = /^([+-])?(\d+(?:\.\d+)?)% strength$/i;
+const parseStatPct = (input: string): ModOfType<"StatPct"> | undefined => {
+  // Regex to parse: +4% Strength/Dexterity/Intelligence
+  const pattern =
+    /^([+-])?(\d+(?:\.\d+)?)% (strength|dexterity|intelligence)$/i;
   const match = input.match(pattern);
 
   if (!match) {
@@ -390,20 +382,11 @@ const parseStrPct = (input: string): ModOfType<"StrPct"> | undefined => {
   }
 
   const value = parseFloat(match[2]) / 100;
-  return { type: "StrPct", value };
-};
+  const statWord = match[3].toLowerCase();
+  const statType =
+    statWord === "strength" ? "str" : statWord === "dexterity" ? "dex" : "int";
 
-const parseDexPct = (input: string): ModOfType<"DexPct"> | undefined => {
-  // Regex to parse: +4% Dexterity
-  const pattern = /^([+-])?(\d+(?:\.\d+)?)% dexterity$/i;
-  const match = input.match(pattern);
-
-  if (!match) {
-    return undefined;
-  }
-
-  const value = parseFloat(match[2]) / 100;
-  return { type: "DexPct", value };
+  return { type: "StatPct", statType, value };
 };
 
 const parseFervorEff = (input: string): ModOfType<"FervorEff"> | undefined => {
@@ -456,10 +439,8 @@ export const parseMod = (input: string): Mod | undefined => {
     parseEnergyShieldRegainPct,
     parseLifeRegainPct,
     // Attributes
-    parseStr,
-    parseDex,
-    parseStrPct,
-    parseDexPct,
+    parseStat,
+    parseStatPct,
     // misc
     parseFervorEff,
     parseSteepStrikeChance,
