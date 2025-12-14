@@ -121,6 +121,7 @@ export const SearchableSelect = <T extends string | number>({
       value={selectedOption ?? null}
       onChange={handleChange}
       disabled={disabled}
+      immediate
     >
       <div className={`relative ${className}`}>
         <div
@@ -165,15 +166,17 @@ export const SearchableSelect = <T extends string | number>({
             focus:outline-none
           "
         >
-          <ComboboxOption
-            value={null}
-            className={({ active }) => `
-              ${SIZE_CLASSES[size]} cursor-pointer text-zinc-500
-              ${active ? "bg-zinc-700" : ""}
-            `}
-          >
-            {placeholder}
-          </ComboboxOption>
+          {!query && (
+            <ComboboxOption
+              value={null}
+              className={({ active }) => `
+                ${SIZE_CLASSES[size]} cursor-pointer text-zinc-500
+                ${active ? "bg-zinc-700" : ""}
+              `}
+            >
+              {placeholder}
+            </ComboboxOption>
+          )}
 
           {filteredOptions.length === 0 && query !== "" ? (
             <div className={`${SIZE_CLASSES[size]} text-zinc-500`}>
