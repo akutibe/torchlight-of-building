@@ -500,7 +500,7 @@ const dmgModTypePerSkillTag: Partial<Record<SkillTag, DmgModType>> = {
   Attack: "attack",
   Spell: "spell",
   Melee: "attack",
-  Area: "attack",
+  Area: "area",
 };
 
 const dmgModTypesForSkill = (skill: BaseActiveSkill) => {
