@@ -32,6 +32,36 @@ export const iceBondParser: SupportLevelParser = (input) => {
   return [buffDmgPctLevels];
 };
 
+export const bullsRageParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  // levelBuffMods: DmgPct melee additional damage from Descript column (values[0])
+  const buffDmgPctLevels: Record<number, number> = {};
+
+  for (const [levelStr, values] of Object.entries(progressionTable.values)) {
+    const level = Number(levelStr);
+    const descript = values[0];
+
+    if (descript !== undefined && descript !== "") {
+      // Match "17.5% additional Melee Skill Damage" or "+27% additional Melee Skill Damage"
+      const match = descript.match(
+        /[+]?([\d.]+)%\s+additional\s+Melee\s+Skill\s+Damage/i,
+      );
+      if (match !== null) {
+        buffDmgPctLevels[level] = parseNumericValue(match[1], {
+          asPercentage: true,
+        });
+      }
+    }
+  }
+
+  validateAllLevels(buffDmgPctLevels, skillName);
+
+  // Return array matching template order:
+  // levelBuffMods: [DmgPct melee]
+  return [buffDmgPctLevels];
+};
+
 export const frostSpikeParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 

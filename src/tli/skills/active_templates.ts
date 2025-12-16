@@ -35,4 +35,13 @@ export const activeSkillTemplates: Partial<
       },
     ],
   },
+  "Bull's Rage": {
+    levelBuffMods: [
+      {
+        type: "DmgPct",
+        addn: true,
+        modType: "melee",
+      },
+    ],
+  },
 };
