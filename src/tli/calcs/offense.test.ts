@@ -10,6 +10,8 @@ import {
 } from "./offense";
 import type { OffenseSkillName } from "./skill_confs";
 
+type DmgPctMod = Extract<Mod, { type: "DmgPct" }>;
+
 // Helper to create Affix objects from mods for tests
 const affix = (mods: Mod[]): Affix => ({
   affixLines: mods.map((mod) => ({ text: "", mods: [mod] })),
@@ -1871,7 +1873,7 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     expect(iceBondBuffMod).toBeDefined();
     expect(iceBondBuffMod?.value).toBeCloseTo(0.33);
   });
@@ -1891,7 +1893,7 @@ describe("resolveBuffSkillMods", () => {
     expect(actual).toBeDefined();
     const bullsRageBuffMod = actual?.resolvedMods.find(
       (m) => m.type === "DmgPct" && m.modType === "melee" && m.addn === true,
-    );
+    ) as DmgPctMod | undefined;
     expect(bullsRageBuffMod).toBeDefined();
     expect(bullsRageBuffMod?.value).toBeCloseTo(0.27);
   });
@@ -1947,14 +1949,14 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     const buffModL20 = actualL20?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
 
     expect(buffModL1?.value).toBeCloseTo(0.235);
     expect(buffModL20?.value).toBeCloseTo(0.33);
@@ -1981,7 +1983,7 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     expect(iceBondBuffMod?.value).toBeCloseTo(0.33 * 1.4);
   });
 
@@ -2006,7 +2008,7 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     expect(iceBondBuffMod?.value).toBeCloseTo(0.33 * 1.3);
   });
 
@@ -2057,13 +2059,13 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     expect(iceBondBuffMod?.value).toBeCloseTo(0.33 * 1.7);
 
     // Check Bull's Rage buff
     const bullsRageBuffMod = actual?.resolvedMods.find(
       (m) => m.type === "DmgPct" && m.modType === "melee" && m.addn === true,
-    );
+    ) as DmgPctMod | undefined;
     expect(bullsRageBuffMod?.value).toBeCloseTo(0.27 * 1.7);
 
     // Verify final avgHit includes both Ice Bond's cold buff and Bull's Rage's melee buff
@@ -2094,7 +2096,7 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     // Should be base 33%, not affected by main skill's Mass Effect
     expect(iceBondBuffMod?.value).toBeCloseTo(0.33);
   });
@@ -2126,13 +2128,13 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     expect(iceBondBuffMod?.value).toBeCloseTo(0.33 * 1.4);
 
     // Bull's Rage should NOT be affected by Ice Bond's Mass Effect
     const bullsRageBuffMod = actual?.resolvedMods.find(
       (m) => m.type === "DmgPct" && m.modType === "melee" && m.addn === true,
-    );
+    ) as DmgPctMod | undefined;
     expect(bullsRageBuffMod?.value).toBeCloseTo(0.27); // Base value, no boost
   });
 
@@ -2162,7 +2164,7 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     expect(iceBondBuffMod?.value).toBeCloseTo(0.33 * 1.7);
   });
 
@@ -2198,14 +2200,14 @@ describe("resolveBuffSkillMods", () => {
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
     const buffModL20 = actualL20?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
         m.modType === "cold" &&
         "cond" in m &&
         m.cond === "enemy_frostbitten",
-    );
+    ) as DmgPctMod | undefined;
 
     expect(buffModL1?.value).toBeCloseTo(0.33 * 1.21);
     expect(buffModL20?.value).toBeCloseTo(0.33 * 1.4);
