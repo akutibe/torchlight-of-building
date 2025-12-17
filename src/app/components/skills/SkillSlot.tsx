@@ -5,8 +5,11 @@ import {
   SearchableSelect,
   type SearchableSelectOption,
 } from "@/src/app/components/ui/SearchableSelect";
+import { Tooltip } from "@/src/app/components/ui/Tooltip";
 import type { SkillSlot as SkillSlotType } from "@/src/app/lib/save-data";
 import type { BaseActiveSkill, BaseSkill } from "@/src/data/skill/types";
+import { OptionWithSkillTooltip } from "./OptionWithSkillTooltip";
+import { SkillTooltipContent } from "./SkillTooltipContent";
 import { SupportSkillSelector } from "./SupportSkillSelector";
 
 type SupportSlotKey = 1 | 2 | 3 | 4 | 5;
@@ -65,6 +68,36 @@ export const SkillSlot: React.FC<SkillSlotProps> = ({
     (s) => s.name === skill?.skillName || !excludedSkillNames.includes(s.name),
   );
 
+  const skillsByName = useMemo(() => {
+    const map = new Map<string, BaseActiveSkill | BaseSkill>();
+    for (const s of availableSkills) {
+      map.set(s.name, s);
+    }
+    return map;
+  }, [availableSkills]);
+
+  const renderOption = (
+    option: SearchableSelectOption<string>,
+    { selected }: { active: boolean; selected: boolean },
+  ) => {
+    const skillData = skillsByName.get(option.value);
+    if (!skillData) return <span>{option.label}</span>;
+    return <OptionWithSkillTooltip skill={skillData} selected={selected} />;
+  };
+
+  const renderSelectedTooltip = (
+    option: SearchableSelectOption<string>,
+    triggerRect: DOMRect,
+  ) => {
+    const skillData = skillsByName.get(option.value);
+    if (!skillData) return null;
+    return (
+      <Tooltip isVisible={true} triggerRect={triggerRect}>
+        <SkillTooltipContent skill={skillData} />
+      </Tooltip>
+    );
+  };
+
   return (
     <div className="bg-zinc-900 rounded-lg border border-zinc-700">
       <div className="p-4 flex items-center justify-between">
@@ -89,6 +122,8 @@ export const SkillSlot: React.FC<SkillSlotProps> = ({
             placeholder="<Empty slot>"
             size="sm"
             className="flex-1"
+            renderOption={renderOption}
+            renderSelectedTooltip={renderSelectedTooltip}
           />
           {hasSkill && (
             <SearchableSelect

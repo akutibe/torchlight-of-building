@@ -4,6 +4,7 @@ import {
   type SearchableSelectOption,
   type SearchableSelectOptionGroup,
 } from "@/src/app/components/ui/SearchableSelect";
+import { Tooltip } from "@/src/app/components/ui/Tooltip";
 import { listAvailableSupports } from "@/src/app/lib/skill-utils";
 import {
   ActivationMediumSkills,
@@ -12,6 +13,8 @@ import {
   SupportSkills,
 } from "@/src/data/skill";
 import type { BaseActiveSkill, BaseSkill } from "@/src/data/skill/types";
+import { OptionWithSkillTooltip } from "./OptionWithSkillTooltip";
+import { SkillTooltipContent } from "./SkillTooltipContent";
 
 interface SupportSkillSelectorProps {
   mainSkill: BaseActiveSkill | BaseSkill | undefined;
@@ -122,6 +125,42 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
     [selectedSkill],
   );
 
+  const skillsByName = useMemo(() => {
+    const allSkills = [
+      ...SupportSkills,
+      ...ActivationMediumSkills,
+      ...MagnificentSupportSkills,
+      ...NobleSupportSkills,
+    ];
+    const map = new Map<string, BaseSkill>();
+    for (const s of allSkills) {
+      map.set(s.name, s);
+    }
+    return map;
+  }, []);
+
+  const renderOption = (
+    option: SearchableSelectOption<string>,
+    { selected }: { active: boolean; selected: boolean },
+  ) => {
+    const skillData = skillsByName.get(option.value);
+    if (!skillData) return <span>{option.label}</span>;
+    return <OptionWithSkillTooltip skill={skillData} selected={selected} />;
+  };
+
+  const renderSelectedTooltip = (
+    option: SearchableSelectOption<string>,
+    triggerRect: DOMRect,
+  ) => {
+    const skillData = skillsByName.get(option.value);
+    if (!skillData) return null;
+    return (
+      <Tooltip isVisible={true} triggerRect={triggerRect}>
+        <SkillTooltipContent skill={skillData} />
+      </Tooltip>
+    );
+  };
+
   return (
     <div className="flex items-center gap-2 flex-1">
       <SearchableSelect
@@ -132,6 +171,8 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
         placeholder="<Empty slot>"
         size="sm"
         className="flex-1"
+        renderOption={renderOption}
+        renderSelectedTooltip={renderSelectedTooltip}
       />
       {isRegularSupport && onLevelChange && (
         <SearchableSelect
