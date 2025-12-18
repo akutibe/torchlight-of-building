@@ -76,6 +76,17 @@ const calculateAddn = (bonuses: number[]) => {
   );
 };
 
+// Calculates (1 + inc) * addn multiplier from mods with value and addn properties
+const calculateEffMultiplier = <T extends { value: number; addn?: boolean }>(
+  mods: T[],
+): number => {
+  const incMods = mods.filter((m) => m.addn === undefined || m.addn === false);
+  const addnMods = mods.filter((m) => m.addn === true);
+  const inc = calculateInc(incMods.map((m) => m.value));
+  const addn = calculateAddn(addnMods.map((m) => m.value));
+  return (1 + inc) * addn;
+};
+
 const collectModsFromAffixes = (affixes: Affix[]): Mod[] => {
   return affixes.flatMap((a) => a.affixLines.flatMap((l) => l.mods ?? []));
 };
@@ -727,6 +738,36 @@ interface NormalizationContext {
   crueltyBuffStacks: number;
 }
 
+interface NormalizationContextOptions {
+  mods: Mod[];
+  config: Configuration;
+  stats: Stats;
+  skill: BaseActiveSkill | BasePassiveSkill;
+}
+
+const calculateNormalizationContext = (
+  options: NormalizationContextOptions,
+): NormalizationContext => {
+  const { mods, config, stats, skill } = options;
+
+  const willpower = findAffix(mods, "MaxWillpowerStacks")?.value || 0;
+  const mainStats = skill.mainStats || [];
+  let mainStat = 0;
+  for (const mainStatType of mainStats) {
+    mainStat += stats[mainStatType];
+  }
+
+  return {
+    willpower,
+    frostbiteRating: 0,
+    projectile: 0,
+    skillUse: 3,
+    skillChargesOnUse: 2,
+    mainStat,
+    crueltyBuffStacks: config.crueltyBuffStacks,
+  };
+};
+
 const normalizeMod = <T extends Mod>(
   mod: T,
   context: NormalizationContext,
@@ -758,10 +799,14 @@ const normalizeMod = <T extends Mod>(
   return multModValue(mod, stacks / div) as T;
 };
 
+interface Stats {
+  str: number;
+  dex: number;
+  int: number;
+}
+
 // todo: very basic stat calculation, will definitely need to handle things like pct, per, and conditionals
-const calculateStats = (
-  mods: Mod[],
-): { str: number; dex: number; int: number } => {
+const calculateStats = (mods: Mod[]): Stats => {
   const statMods = filterAffix(mods, "Stat");
   return {
     str: R.sumBy(
@@ -809,44 +854,6 @@ const findSkill = (
   return PassiveSkills.find((s) => s.name === name) as BasePassiveSkill;
 };
 
-// Normalizes a SkillEffPct mod by multiplying its value by the appropriate stack count
-// based on the `per` property.
-const normalizeSkillEffMod = (
-  mod: Extract<Mod, { type: "SkillEffPct" }>,
-  config: Configuration,
-): Extract<Mod, { type: "SkillEffPct" }> | undefined => {
-  // TODO: skillUse and skillChargesOnUse should come from actual skill slot configuration or user input
-  // skill_use represents number of times the buff skill has been cast (Well-Fought Battle max = 3)
-  // skill_charges_on_use represents charges consumed when using the skill (Mass Effect)
-  const context: NormalizationContext = {
-    willpower: 0,
-    frostbiteRating: 0,
-    projectile: 0,
-    skillUse: 3,
-    skillChargesOnUse: 2,
-    mainStat: 0,
-    crueltyBuffStacks: config.crueltyBuffStacks,
-  };
-  return normalizeMod(mod, context, config);
-};
-
-// Normalizes an AuraEffPct mod by multiplying its value by the appropriate stack count
-const normalizeAuraEffMod = (
-  mod: Extract<Mod, { type: "AuraEffPct" }>,
-  config: Configuration,
-): Extract<Mod, { type: "AuraEffPct" }> | undefined => {
-  const context: NormalizationContext = {
-    willpower: 0,
-    frostbiteRating: 0,
-    projectile: 0,
-    skillUse: 0,
-    skillChargesOnUse: 0,
-    mainStat: 0,
-    crueltyBuffStacks: config.crueltyBuffStacks,
-  };
-  return normalizeMod(mod, context, config);
-};
-
 // Checks if a mod has target: "own_skill_only" property
 const hasOwnSkillOnlyTarget = (mod: Mod): boolean => {
   return "target" in mod && mod.target === "own_skill_only";
@@ -856,7 +863,9 @@ const hasOwnSkillOnlyTarget = (mod: Mod): boolean => {
 // for example, "Bull's Rage" provides a buff that increases all melee damage
 const resolveBuffSkillMods = (
   loadout: Loadout,
+  loadoutMods: Mod[],
   config: Configuration,
+  stats: Stats,
 ): Mod[] => {
   const activeSkillSlots = listActiveSkillSlots(loadout);
   const passiveSkillSlots = listPassiveSkillSlots(loadout);
@@ -878,22 +887,21 @@ const resolveBuffSkillMods = (
     // Get support skill mods (includes SkillEffPct, AuraEffPct, etc.)
     const supportMods = resolveSelectedSkillSupportMods(skillSlot);
 
-    // === Calculate SkillEffPct multiplier (from support skills) ===
+    // === Calculate SkillEffPct multiplier (from support skills + loadout mods) ===
     // todo: add area, cdr, duration, and other buff-skill modifiers
-    const skillEffMods = supportMods
-      .filter(
-        (m): m is Extract<Mod, { type: "SkillEffPct" }> =>
-          m.type === "SkillEffPct",
-      )
-      .map((m) => normalizeSkillEffMod(m, config))
+    const effNormContext = calculateNormalizationContext({
+      mods: [...loadoutMods, ...supportMods],
+      config,
+      stats,
+      skill,
+    });
+    const skillEffMods = [
+      ...filterAffix(loadoutMods, "SkillEffPct"),
+      ...filterAffix(supportMods, "SkillEffPct"),
+    ]
+      .map((m) => normalizeMod(m, effNormContext, config))
       .filter((m) => m !== undefined);
-    const incSkillEffMods = skillEffMods.filter(
-      (m) => m.addn === undefined || m.addn === false,
-    );
-    const incSkillEff = calculateInc(incSkillEffMods.map((m) => m.value));
-    const addnSkillEffMods = skillEffMods.filter((m) => m.addn === true);
-    const addnSkillEff = calculateAddn(addnSkillEffMods.map((m) => m.value));
-    const skillEffMult = (1 + incSkillEff) * addnSkillEff;
+    const skillEffMult = calculateEffMultiplier(skillEffMods);
 
     // === Resolve raw buff mods from skill's levelBuffMods ===
     const rawBuffMods: Mod[] =
@@ -905,34 +913,21 @@ const resolveBuffSkillMods = (
         } as Mod;
       }) || [];
 
-    // === Calculate AuraEffPct multiplier (from support skills + own levelBuffMods) ===
+    // === Calculate AuraEffPct multiplier (from loadout mods + support skills + own levelBuffMods) ===
     // Only applies if this is an Aura skill
     let auraEffMult = 1;
     if (isAuraSkill) {
-      // Collect AuraEffPct from support skills
-      const supportAuraEffMods = supportMods.filter(
-        (m): m is Extract<Mod, { type: "AuraEffPct" }> =>
-          m.type === "AuraEffPct",
+      const ownAuraEffMods = filterAffix(rawBuffMods, "AuraEffPct").filter(
+        hasOwnSkillOnlyTarget,
       );
-
-      // Collect AuraEffPct from own levelBuffMods (own_skill_only ones)
-      const ownAuraEffMods = rawBuffMods.filter(
-        (m): m is Extract<Mod, { type: "AuraEffPct" }> =>
-          m.type === "AuraEffPct" && hasOwnSkillOnlyTarget(m),
-      );
-
-      // Combine and normalize all AuraEffPct mods
-      const allAuraEffMods = [...supportAuraEffMods, ...ownAuraEffMods]
-        .map((m) => normalizeAuraEffMod(m, config))
+      const allAuraEffMods = [
+        ...filterAffix(loadoutMods, "AuraEffPct"),
+        ...filterAffix(supportMods, "AuraEffPct"),
+        ...ownAuraEffMods,
+      ]
+        .map((m) => normalizeMod(m, effNormContext, config))
         .filter((m) => m !== undefined);
-
-      const incAuraEffMods = allAuraEffMods.filter(
-        (m) => m.addn === undefined || m.addn === false,
-      );
-      const addnAuraEffMods = allAuraEffMods.filter((m) => m.addn === true);
-      auraEffMult =
-        (1 + calculateInc(incAuraEffMods.map((m) => m.value))) *
-        calculateAddn(addnAuraEffMods.map((m) => m.value));
+      auraEffMult = calculateEffMultiplier(allAuraEffMods);
     }
 
     // === Apply multipliers and filter own_skill_only mods ===
@@ -1027,9 +1022,14 @@ const resolveSharedMods = (
   config: Configuration,
 ): SharedModContext => {
   const loadoutMods = collectMods(loadout);
-  const buffSkillMods = resolveBuffSkillMods(loadout, config);
+  const stats = calculateStats(loadoutMods);
+  const buffSkillMods = resolveBuffSkillMods(
+    loadout,
+    loadoutMods,
+    config,
+    stats,
+  );
   const allMods = [...loadoutMods, ...buffSkillMods];
-  const stats = calculateStats(allMods);
   const willpowerStacks = findAffix(allMods, "MaxWillpowerStacks")?.value || 0;
   return { loadoutMods, buffSkillMods, stats, willpowerStacks };
 };
@@ -1088,31 +1088,12 @@ const normalizeModsForSkill = (
 
   const allMods = [...sharedMods, ...perSkillMods, statBasedDmgMod];
 
-  // Calculate willpower stacks from ALL mods (including per-skill mods like Willpower support)
-  const willpowerStacks =
-    findAffix(allMods, "MaxWillpowerStacks")?.value ||
-    sharedContext.willpowerStacks ||
-    0;
-
-  // Calculate main stat for the skill
-  if (skill.mainStats === undefined) {
-    throw new Error(`Skill "${skill.name}" has no mainStats defined`);
-  }
-  let mainStat = 0;
-  for (const mainStatType of skill.mainStats) {
-    mainStat += sharedContext.stats[mainStatType];
-  }
-
-  // TODO: figure these out
-  const normContext: NormalizationContext = {
-    willpower: willpowerStacks,
-    frostbiteRating: 0,
-    projectile: 0,
-    skillUse: 0,
-    skillChargesOnUse: 0,
-    mainStat,
-    crueltyBuffStacks: config.crueltyBuffStacks,
-  };
+  const normContext = calculateNormalizationContext({
+    mods: allMods,
+    config,
+    stats: sharedContext.stats,
+    skill,
+  });
 
   return allMods
     .map((mod) => normalizeMod(mod, normContext, config))

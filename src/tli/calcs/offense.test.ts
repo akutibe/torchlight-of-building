@@ -2455,6 +2455,56 @@ describe("resolveBuffSkillMods", () => {
     expect(auraEffMod).toBeUndefined();
   });
 
+  test("AuraEffPct from loadout mods affects Precise: Cruelty", () => {
+    // Precise: Cruelty at level 20 provides:
+    // - Base: 22% additional attack damage
+    // - Own AuraEffPct (addn: true): 2.5% * 40 stacks = 100% multiplicative
+    // - Loadout AuraEffPct (addn: false): 50% additive
+    // - Aura multiplier: (1 + 0.5) * (1 + 1.0) = 1.5 * 2 = 3
+    // - Final: 22% * 3 = 66%
+    const loadout = initLoadout({
+      gearPage: { equippedGear: { mainHand: baseWeapon }, inventory: [] },
+      customConfiguration: [
+        affix([{ type: "AuraEffPct", value: 0.5, addn: false }]),
+      ],
+      skillPage: {
+        activeSkills: {
+          1: {
+            skillName: "[Test] Simple Attack",
+            enabled: true,
+            level: 20,
+            supportSkills: {},
+          },
+        },
+        passiveSkills: {
+          1: {
+            skillName: "Precise: Cruelty",
+            enabled: true,
+            level: 20,
+            supportSkills: {},
+          },
+        },
+      },
+    });
+
+    const results = calculateOffense({
+      loadout,
+      configuration: defaultConfiguration,
+    });
+    const actual = results["[Test] Simple Attack"];
+
+    expect(actual).toBeDefined();
+    const preciseCrueltyBuffMod = actual?.resolvedMods.find(
+      (m) => m.type === "DmgPct" && m.modType === "attack" && m.addn === true,
+    ) as DmgPctMod | undefined;
+    expect(preciseCrueltyBuffMod).toBeDefined();
+    // Base 22% with aura multiplier 3 = 66%
+    expect(preciseCrueltyBuffMod?.value).toBeCloseTo(0.22 * 3);
+
+    // Verify avgHit: 100 base weapon * (1 + 0.66 addn dmg) = 166
+    expect(actual?.avgHit).toBeCloseTo(100 * (1 + 0.22 * 3));
+  });
+
   test("AuraEffPct only affects Aura-tagged skills", () => {
     // Bull's Rage is NOT an Aura skill, so it should not be affected by AuraEffPct
     // Even if we somehow had AuraEffPct in the loadout, Bull's Rage buff should remain at base value
