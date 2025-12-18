@@ -19,11 +19,14 @@ pnpm check        # Biome linting and formatting
 
 - **UI Components** ([src/app/components/](src/app/components/)) - React components organized by feature (equipment, talents, skills, hero, pactspirit)
 - **UI Lib** ([src/app/lib/](src/app/lib/)) - Shared types, constants, storage utilities, build-code encoding
-- **Calculation Engine** ([src/tli/offense.ts](src/tli/offense.ts)) - DPS/stat calculations
-- **Mod Parser** ([src/tli/mod_parser.ts](src/tli/mod_parser.ts)) - String → typed Mod conversion
-- **Data Models** ([src/tli/core.ts](src/tli/core.ts), [src/tli/mod.ts](src/tli/mod.ts)) - Type definitions
-- **Scripts** ([src/scripts/](src/scripts/)) - Scripts for various tasks such as web scraping
-- **Scraped Data** ([src/data/](src/data/)) - Data scraped from wikis/online dbs
+- **Game Engine** ([src/tli/](src/tli/)) - Pure TypeScript, no React
+  - [calcs/offense.ts](src/tli/calcs/offense.ts) - DPS/stat calculations
+  - [mod_parser.ts](src/tli/mod_parser.ts) - String → typed Mod conversion
+  - [core.ts](src/tli/core.ts), [mod.ts](src/tli/mod.ts) - Type definitions
+  - [storage/load-save.ts](src/tli/storage/load-save.ts) - SaveData parsing
+  - [skills/](src/tli/skills/) - Skill templates
+- **Scripts** ([src/scripts/](src/scripts/)) - Build-time scripts for scraping and code generation
+- **Generated Data** ([src/data/](src/data/)) - TypeScript data generated from scripts
 
 ## Key Conventions
 
@@ -41,13 +44,15 @@ RawLoadout (UI, strings) → parseMod() → Loadout (typed Mods) → calculateOf
 
 ## Common Tasks
 
-**Add mod type:** Define in [mod.ts](src/tli/mod.ts) → parser in [mod_parser.ts](src/tli/mod_parser.ts) → handler in [offense.ts](src/tli/offense.ts) → test
+**Add mod type:** Define in [mod.ts](src/tli/mod.ts) → parser in [mod_parser.ts](src/tli/mod_parser.ts) → handler in [calcs/offense.ts](src/tli/calcs/offense.ts) → test
 
-**Add skill:** Add to `offensiveSkillConfs` in [offense.ts](src/tli/offense.ts), type auto-updates
+**Add skill:** Add to [calcs/skill_confs.ts](src/tli/calcs/skill_confs.ts)
 
 **Update talent trees:** `pnpm exec tsx src/scripts/generate_talent_tree_data.ts`
 
 **Regenerate gear affixes:** `pnpm exec tsx src/scripts/generate_gear_affix_data.ts`
+
+**Regenerate skills:** `pnpm exec tsx src/scripts/generate_skill_data.ts`
 
 ## Code Generation Pattern
 
@@ -59,13 +64,15 @@ For large datasets (5k+ entries), use build-time code generation:
 4. Exports discriminated union from const array types
 5. See [generate_gear_affix_data.ts](src/scripts/generate_gear_affix_data.ts) for reference
 
-## Detailed Docs
+## Before Development Work
 
-See [docs/claude/](docs/claude/) for implementation details only when needed.
+**Always read [docs/claude/development.md](docs/claude/development.md) before planning or making code changes.** It contains current project structure, patterns, and conventions.
 
-- prefer using undefined instead of null for typescript code
-- only make code comments that explain particularly complex pieces of code or why code is written a certain way
-- run `pnpm test`, `pnpm typecheck`, and `pnpm check` after making changes
-- read [docs/claude/development.md](docs/claude/development.md) when planning or making code changes
-- read [docs/claude/ui-development.md](docs/claude/ui-development.md) when planning or making code changes related to the UI
-- when using git, assume that there is no remote, and only work locally
+For UI work, also read [docs/claude/ui-development.md](docs/claude/ui-development.md).
+
+## Code Guidelines
+
+- Prefer `undefined` over `null` for TypeScript code
+- Only add comments that explain complex logic or non-obvious decisions
+- Run `pnpm test`, `pnpm typecheck`, and `pnpm check` after making changes
+- When using git, assume there is no remote—work locally only
