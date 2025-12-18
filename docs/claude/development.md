@@ -30,11 +30,37 @@ src/tli/                 # Game engine (pure TypeScript, no React)
 ├── core.ts              # Base types (Gear, HeroMemory, etc.)
 ├── mod.ts               # Mod type definitions
 ├── mod_parser.ts        # String → Mod parsing
-├── offense.ts           # DPS calculations
-└── talent_data/         # Generated talent tree data
+├── calcs/               # Calculation engine
+│   ├── offense.ts       # DPS calculations
+│   └── skill_confs.ts   # Skill configurations
+├── skills/              # Skill templates and mods
+│   ├── active_templates.ts
+│   ├── passive_templates.ts
+│   ├── support_templates.ts
+│   └── support_mods.ts
+├── storage/             # Save/load functionality
+│   └── load-save.ts     # SaveData parsing
+└── crafting/            # Gear crafting logic
+    └── craft.ts
 
 src/scripts/             # Build-time scripts (scraping, code generation)
-src/data/                # Scraped JSON data
+├── lib/                 # Shared utilities (codex.ts, tlidb.ts)
+├── skills/              # Skill data parsers
+└── generate_*.ts        # Data generation scripts
+
+src/data/                # Generated TypeScript data (from scripts)
+├── gear_affix/          # Gear affixes by slot/type
+├── skill/               # Active, passive, support skill data
+├── talent_tree/         # Talent tree node data
+├── talent/              # Talent affix data
+├── core_talent/         # Core talent data
+├── pactspirit/          # Pactspirit data
+├── hero_memory/         # Hero memory data
+├── hero_trait/          # Hero trait data
+├── legendary/           # Legendary gear data
+├── prism/               # Prism data
+├── blend/               # Blend data
+└── destiny/             # Destiny data
 ```
 
 ## Code Style
@@ -52,9 +78,9 @@ src/data/                # Scraped JSON data
 
 ```
 Raw UI strings (SaveData)
-    ↓ loadSave() / parseMod()
+    ↓ loadSave() / parseMod()  (src/tli/storage/, src/tli/mod_parser.ts)
 Typed Loadout (engine types)
-    ↓ calculateOffense()
+    ↓ calculateOffense()       (src/tli/calcs/offense.ts)
 Results (DPS, stats)
 ```
 
@@ -150,11 +176,13 @@ Scripts in `src/scripts/`. Key patterns:
 
 | Task | Key Files |
 |------|-----------|
-| Add gear affix | `src/tli/mod.ts` → `mod_parser.ts` → `offense.ts` → test |
-| Add skill | `src/tli/offense.ts` (`offensiveSkillConfs`) |
+| Add gear affix | `src/tli/mod.ts` → `mod_parser.ts` → `calcs/offense.ts` → test |
+| Add skill | `src/tli/calcs/skill_confs.ts` (skill configurations) |
+| Add skill template | `src/tli/skills/` (active, passive, or support templates) |
 | Add utility helper | Create `src/app/lib/{feature}-utils.ts` |
 | Update talent trees | `pnpm exec tsx src/scripts/generate_talent_tree_data.ts` |
 | Regenerate affixes | `pnpm exec tsx src/scripts/generate_gear_affix_data.ts` |
+| Regenerate skills | `pnpm exec tsx src/scripts/generate_skill_data.ts` |
 
 ## Gotchas
 
@@ -166,4 +194,4 @@ Scripts in `src/scripts/`. Key patterns:
 
 4. **No backwards compatibility** - Changing SaveData schema invalidates old builds. Users lose old saves.
 
-5. **Two data formats** - Raw strings in app layer, parsed Mods in engine layer. `loadSave()` bridges them.
+5. **Two data formats** - Raw strings in app layer, parsed Mods in engine layer. `loadSave()` in `src/tli/storage/load-save.ts` bridges them.
