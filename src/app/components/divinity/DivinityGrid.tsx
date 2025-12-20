@@ -255,11 +255,17 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
       // Update pixel position for free-form movement
       setDragPosition({ x: cursorX, y: cursorY });
 
-      // Calculate drop target based on where block's top-left would land
-      const blockX = cursorX - dragOffset.x;
-      const blockY = cursorY - dragOffset.y;
-      const col = Math.floor(blockX / CELL_SIZE) + DISPLAY_COL_START;
-      const row = Math.floor(blockY / CELL_SIZE) + DISPLAY_ROW_START;
+      // Calculate which grid cell the cursor is hovering over
+      const hoverCol = Math.floor(cursorX / CELL_SIZE) + DISPLAY_COL_START;
+      const hoverRow = Math.floor(cursorY / CELL_SIZE) + DISPLAY_ROW_START;
+
+      // Calculate which cell within the slate was originally clicked
+      const cellOffsetCol = Math.floor(dragOffset.x / CELL_SIZE);
+      const cellOffsetRow = Math.floor(dragOffset.y / CELL_SIZE);
+
+      // Drop target is the hovered cell minus the cell offset
+      const col = hoverCol - cellOffsetCol;
+      const row = hoverRow - cellOffsetRow;
       setDropTarget({ row, col });
     },
     [draggedSlateId, dragOffset],
@@ -269,14 +275,22 @@ export const DivinityGrid: React.FC<DivinityGridProps> = ({
     (e: MouseEvent) => {
       if (!draggedSlateId || !gridRef.current || !dragOffset) return;
 
-      // Calculate final drop position using offset
+      // Calculate final drop position using cell-based snapping
       const rect = gridRef.current.getBoundingClientRect();
       const cursorX = e.clientX - rect.left - 8;
       const cursorY = e.clientY - rect.top - 8;
-      const blockX = cursorX - dragOffset.x;
-      const blockY = cursorY - dragOffset.y;
-      const col = Math.floor(blockX / CELL_SIZE) + DISPLAY_COL_START;
-      const row = Math.floor(blockY / CELL_SIZE) + DISPLAY_ROW_START;
+
+      // Calculate which grid cell the cursor is over
+      const hoverCol = Math.floor(cursorX / CELL_SIZE) + DISPLAY_COL_START;
+      const hoverRow = Math.floor(cursorY / CELL_SIZE) + DISPLAY_ROW_START;
+
+      // Calculate which cell within the slate was originally clicked
+      const cellOffsetCol = Math.floor(dragOffset.x / CELL_SIZE);
+      const cellOffsetRow = Math.floor(dragOffset.y / CELL_SIZE);
+
+      // Final position is the hovered cell minus the cell offset
+      const col = hoverCol - cellOffsetCol;
+      const row = hoverRow - cellOffsetRow;
 
       onMoveSlate(draggedSlateId, { row, col });
 
