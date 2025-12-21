@@ -79,7 +79,7 @@ const defaultConfiguration = createDefaultConfiguration();
 // Configuration with enemyFrobitten enabled for tests that need Ice Bond's conditional buff
 const frostbittenEnabledConfig: Configuration = {
   ...createDefaultConfiguration(),
-  enemyFrobitten: { enabled: true, points: 0 },
+  enemyFrostbitten: { enabled: true, points: 0 },
 };
 
 type TestInput = {
@@ -2011,7 +2011,7 @@ describe("resolveBuffSkillMods", () => {
       loadout,
       configuration: {
         fervor: { enabled: false, points: 0 },
-        enemyFrobitten: { enabled: false, points: 0 },
+        enemyFrostbitten: { enabled: false, points: 0 },
         crueltyBuffStacks: 40,
       },
     });

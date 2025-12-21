@@ -43,7 +43,7 @@ export interface Configuration {
     enabled: boolean;
     points: number;
   };
-  enemyFrobitten: {
+  enemyFrostbitten: {
     enabled: boolean;
     points: number;
   };
@@ -52,7 +52,7 @@ export interface Configuration {
 
 export const createDefaultConfiguration = (): Configuration => ({
   fervor: { enabled: false, points: 0 },
-  enemyFrobitten: { enabled: false, points: 0 },
+  enemyFrostbitten: { enabled: false, points: 0 },
   crueltyBuffStacks: 40,
 });
 

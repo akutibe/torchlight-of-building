@@ -808,7 +808,7 @@ const normalizeMod = <T extends Mod>(
 ): T | undefined => {
   if ("cond" in mod && mod.cond !== undefined) {
     const conditionMatched = match(mod.cond)
-      .with("enemy_frostbitten", () => config.enemyFrobitten.enabled)
+      .with("enemy_frostbitten", () => config.enemyFrostbitten.enabled)
       .exhaustive();
     if (!conditionMatched) {
       return undefined;
