@@ -368,11 +368,7 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           </TooltipTitle>
           <TooltipContent>
             {node.affix.affixLines.map((line, idx) => (
-              <div
-                // biome-ignore lint/suspicious/noArrayIndexKey: lines can have duplicate text, index is stable
-                key={idx}
-                className="flex items-center"
-              >
+              <div key={idx} className="flex items-center">
                 <span>{line.text}</span>
                 {!line.mods && <ModNotImplementedIcon />}
               </div>
@@ -382,7 +378,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
             <div className="mt-2 pt-2 border-t border-blue-500/30">
               {bonusAffixes.map((bonus, index) => (
                 <div
-                  // biome-ignore lint/suspicious/noArrayIndexKey: affixes can have duplicate text, index is stable
                   key={index}
                   className="text-xs text-blue-400 whitespace-pre-line"
                 >
@@ -499,11 +494,7 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
         <TooltipTitle>{talentTypeName}</TooltipTitle>
         <TooltipContent>
           {node.affix.affixLines.map((line, idx) => (
-            <div
-              // biome-ignore lint/suspicious/noArrayIndexKey: lines can have duplicate text, index is stable
-              key={idx}
-              className="flex items-center"
-            >
+            <div key={idx} className="flex items-center">
               <span>{line.text}</span>
               {!line.mods && <ModNotImplementedIcon />}
             </div>
@@ -513,7 +504,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           <div className="mt-2 pt-2 border-t border-blue-500/30">
             {bonusAffixes.map((bonus, index) => (
               <div
-                // biome-ignore lint/suspicious/noArrayIndexKey: affixes can have duplicate text, index is stable
                 key={index}
                 className="text-xs text-blue-400 whitespace-pre-line"
               >

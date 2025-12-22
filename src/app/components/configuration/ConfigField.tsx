@@ -10,7 +10,7 @@ interface ConfigFieldProps {
 
 export const ConfigField: React.FC<ConfigFieldProps> = ({
   label,
-  description,
+  _description,
   enabled,
   onEnabledChange,
   children,

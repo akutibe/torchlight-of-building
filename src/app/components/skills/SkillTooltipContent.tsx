@@ -20,8 +20,6 @@ export const SkillTooltipContent: React.FC<SkillTooltipContentProps> = ({
         </div>
       )}
       {skill.description.map((desc, i) => (
-        // Description arrays are static, so index key is safe here
-        // biome-ignore lint/suspicious/noArrayIndexKey: static array
         <Fragment key={i}>
           {i > 0 && <hr className="border-zinc-700 my-2" />}
           <TooltipContent>{desc}</TooltipContent>

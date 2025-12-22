@@ -19,7 +19,6 @@ export const GearTooltipContent: React.FC<{ item: Gear }> = ({ item }) => {
           <ul className="space-y-1">
             {item.baseStats.baseStatLines.map((line, lineIdx) => (
               <li
-                // biome-ignore lint/suspicious/noArrayIndexKey: affixes can have duplicate text, index is stable
                 key={`${lineIdx}`}
                 className="text-xs text-amber-300 mb2 flex items-center"
               >
@@ -34,7 +33,6 @@ export const GearTooltipContent: React.FC<{ item: Gear }> = ({ item }) => {
           {affixes.map((affix, affixIdx) =>
             affix.affixLines.map((line, lineIdx) => (
               <li
-                // biome-ignore lint/suspicious/noArrayIndexKey: affixes can have duplicate text, index is stable
                 key={`${affixIdx}-${lineIdx}`}
                 className="text-xs text-zinc-400 flex items-center"
               >

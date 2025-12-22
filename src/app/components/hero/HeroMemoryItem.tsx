@@ -64,7 +64,6 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
           <ul className="space-y-1">
             {memory.affixes.map((affix, idx) => (
               <li
-                // biome-ignore lint/suspicious/noArrayIndexKey: affixes can have duplicate text, index is stable
                 key={idx}
                 className="text-xs text-zinc-400 whitespace-pre-wrap"
               >

@@ -26,11 +26,7 @@ export const SlateTooltipContent: React.FC<{ slate: DivinitySlate }> = ({
       {hasMetaAffixes && (
         <ul className="space-y-1">
           {slate.metaAffixes.map((metaAffix, idx) => (
-            <li
-              // biome-ignore lint/suspicious/noArrayIndexKey: index is stable
-              key={`meta-${idx}`}
-              className="text-xs text-zinc-500 italic"
-            >
+            <li key={`meta-${idx}`} className="text-xs text-zinc-500 italic">
               {metaAffix}
             </li>
           ))}
@@ -46,7 +42,6 @@ export const SlateTooltipContent: React.FC<{ slate: DivinitySlate }> = ({
           {slate.affixes.map((affix, affixIdx) =>
             affix.affixLines.map((line, lineIdx) => (
               <li
-                // biome-ignore lint/suspicious/noArrayIndexKey: affixes can have duplicate text, index is stable
                 key={`${affixIdx}-${lineIdx}`}
                 className="text-xs text-zinc-400 flex items-center"
               >

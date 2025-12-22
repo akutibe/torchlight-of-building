@@ -365,7 +365,6 @@ export const LegendarySlateCrafter: React.FC<LegendarySlateCrafterProps> = ({
                 {affixSlots.map((affix, slotIndex) => {
                   const constraint = template.affixSlots[slotIndex];
                   return (
-                    // biome-ignore lint/suspicious/noArrayIndexKey: slots are fixed positions
                     <div key={slotIndex} className="flex flex-col gap-1">
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-zinc-500 w-24 truncate">

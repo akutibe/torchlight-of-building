@@ -199,7 +199,6 @@ export const MemoryCrafter = ({ onMemorySave }: MemoryCrafterProps) => {
             <div className="space-y-3">
               {fixedAffixSlots.map((slot, idx) => (
                 <AffixSlot
-                  // biome-ignore lint/suspicious/noArrayIndexKey: fixed slots array is always length 2, indices are stable
                   key={`fixed-${idx}`}
                   slotIndex={idx}
                   type="fixed"
@@ -228,7 +227,6 @@ export const MemoryCrafter = ({ onMemorySave }: MemoryCrafterProps) => {
             <div className="space-y-3">
               {randomAffixSlots.slice(0, 2).map((slot, idx) => (
                 <AffixSlot
-                  // biome-ignore lint/suspicious/noArrayIndexKey: random slots array is always length 2, indices are stable
                   key={`random-${idx}`}
                   slotIndex={idx}
                   type="random"
