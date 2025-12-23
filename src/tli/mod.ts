@@ -5,12 +5,15 @@ import type {
 } from "./constants";
 import type { DmgRange } from "./core";
 
-export type DmgChunkType =
-  | "physical"
-  | "cold"
-  | "lightning"
-  | "fire"
-  | "erosion";
+export const DmgChunkTypes = [
+  "physical",
+  "cold",
+  "lightning",
+  "fire",
+  "erosion",
+] as const;
+
+export type DmgChunkType = (typeof DmgChunkTypes)[number];
 
 export type Stackable =
   | "willpower"

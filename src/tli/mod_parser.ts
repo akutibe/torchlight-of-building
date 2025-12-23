@@ -6,7 +6,16 @@ import {
   DMG_MOD_TYPES,
   type DmgModType,
 } from "./constants";
-import type { Mod, ModOfType } from "./mod";
+import {
+  type DmgChunkType,
+  DmgChunkTypes,
+  type Mod,
+  type ModOfType,
+} from "./mod";
+
+const isValidDmgChunkType = (value: string): value is DmgChunkType => {
+  return DmgChunkTypes.includes(value as DmgChunkType);
+};
 
 const isValidDmgModType = (value: string): value is DmgModType => {
   return DMG_MOD_TYPES.includes(value as DmgModType);
@@ -432,6 +441,27 @@ const parseShadowQuant = (
   return { type: "ShadowQuant", value };
 };
 
+const parseAddsDmgAs = (input: string): ModOfType<"AddsDmgAs"> | undefined => {
+  // Regex to parse: Adds 18% of Physical Damage to/as Cold Damage
+  const pattern =
+    /^adds (\d+(?:\.\d+)?)% of (\w+) damage (?:to|as) (\w+) damage$/i;
+  const match = input.match(pattern);
+
+  if (!match) {
+    return undefined;
+  }
+
+  const value = parseFloat(match[1]) / 100;
+  const fromType = match[2].toLowerCase();
+  const toType = match[3].toLowerCase();
+
+  if (!isValidDmgChunkType(fromType) || !isValidDmgChunkType(toType)) {
+    return undefined;
+  }
+
+  return { type: "AddsDmgAs", from: fromType, to: toType, value };
+};
+
 /**
  * Parses an affix line string and returns extracted mods.
  *
@@ -468,6 +498,7 @@ export const parseMod = (input: string): Mod[] | undefined => {
     parseFervorEff,
     parseSteepStrikeChance,
     parseShadowQuant,
+    parseAddsDmgAs,
     // parseMultistrikeChancePct,
     // Add more parsers here as they're implemented
   ];

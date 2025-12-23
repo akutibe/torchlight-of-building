@@ -430,3 +430,44 @@ test("parse shadow quantity", () => {
     },
   ]);
 });
+
+test("parse adds damage as", () => {
+  const result = parseMod("Adds 18% of Physical Damage to Cold Damage");
+  expect(result).toEqual([
+    {
+      type: "AddsDmgAs",
+      from: "physical",
+      to: "cold",
+      value: 0.18,
+    },
+  ]);
+});
+
+test("parse adds damage as with decimal", () => {
+  const result = parseMod("Adds 12.5% of Fire Damage to Lightning Damage");
+  expect(result).toEqual([
+    {
+      type: "AddsDmgAs",
+      from: "fire",
+      to: "lightning",
+      value: 0.125,
+    },
+  ]);
+});
+
+test("parse adds damage as with 'as' keyword", () => {
+  const result = parseMod("Adds 18% of Physical Damage as Lightning Damage");
+  expect(result).toEqual([
+    {
+      type: "AddsDmgAs",
+      from: "physical",
+      to: "lightning",
+      value: 0.18,
+    },
+  ]);
+});
+
+test("return undefined for invalid adds damage as types", () => {
+  const result = parseMod("Adds 10% of Magic Damage to Cold Damage");
+  expect(result).toBeUndefined();
+});
