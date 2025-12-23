@@ -10,7 +10,6 @@ import { internalStore } from "./internal";
 
 // Public readable state (NO saveData)
 export interface BuilderReadableState {
-  hasUnsavedChanges: boolean;
   currentSaveId: string | undefined;
   currentSaveName: string | undefined;
   savesIndex: SavesIndex;
@@ -45,7 +44,6 @@ export const useBuilderState = <T>(
 ): T => {
   return internalStore((state) =>
     selector({
-      hasUnsavedChanges: state.hasUnsavedChanges,
       currentSaveId: state.currentSaveId,
       currentSaveName: state.currentSaveName,
       savesIndex: state.savesIndex,
@@ -54,9 +52,6 @@ export const useBuilderState = <T>(
 };
 
 // Convenience hooks for common state
-export const useHasUnsavedChanges = (): boolean =>
-  internalStore((state) => state.hasUnsavedChanges);
-
 export const useCurrentSaveId = (): string | undefined =>
   internalStore((state) => state.currentSaveId);
 

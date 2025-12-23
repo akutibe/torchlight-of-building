@@ -6,17 +6,13 @@ import {
   saveDebugModeToStorage,
 } from "../../lib/storage";
 import {
-  useBuilderActions,
-  useCurrentSaveId,
   useCurrentSaveName,
-  useHasUnsavedChanges,
   useLoadout,
   useSaveDataRaw,
 } from "../../stores/builderStore";
 import { DebugPanel } from "../DebugPanel";
 import { ExportModal } from "../modals/ExportModal";
 import { PageTabs } from "../PageTabs";
-import { Toast } from "../Toast";
 import { StatsPanel } from "./StatsPanel";
 
 interface BuilderLayoutProps {
@@ -27,10 +23,7 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
   const navigate = useNavigate();
 
   const currentSaveName = useCurrentSaveName();
-  const currentSaveId = useCurrentSaveId();
-  const hasUnsavedChanges = useHasUnsavedChanges();
   const saveDataForExport = useSaveDataRaw("export");
-  const { save } = useBuilderActions();
 
   const loadout = useLoadout();
 
@@ -38,40 +31,14 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
   const [debugPanelExpanded, setDebugPanelExpanded] = useState(true);
   const [exportModalOpen, setExportModalOpen] = useState(false);
   const [buildCode, setBuildCode] = useState("");
-  const [toastVisible, setToastVisible] = useState(false);
-  const [saveSuccessToastVisible, setSaveSuccessToastVisible] = useState(false);
 
   useEffect(() => {
     setDebugMode(loadDebugModeFromStorage());
   }, []);
 
-  useEffect(() => {
-    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-      if (hasUnsavedChanges) {
-        e.preventDefault();
-        e.returnValue = "";
-        return "";
-      }
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
-  }, [hasUnsavedChanges]);
-
-  const handleSave = useCallback(() => {
-    const success = save();
-    if (success) {
-      setSaveSuccessToastVisible(true);
-    }
-  }, [save]);
-
   const handleBackToSaves = useCallback(() => {
-    if (hasUnsavedChanges) {
-      setToastVisible(true);
-    } else {
-      navigate({ to: "/" });
-    }
-  }, [hasUnsavedChanges, navigate]);
+    navigate({ to: "/" });
+  }, [navigate]);
 
   const handleDebugToggle = useCallback(() => {
     setDebugMode((prev) => {
@@ -117,25 +84,14 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
             <h1 className="text-3xl font-bold text-zinc-50">
               TLI Character Build Planner
             </h1>
-            {currentSaveName && (
+            {currentSaveName !== undefined && (
               <span className="rounded-full border border-zinc-700 bg-zinc-800 px-3 py-1 text-sm text-zinc-300">
                 {currentSaveName}
-                {hasUnsavedChanges && (
-                  <span className="ml-1 text-amber-500">*</span>
-                )}
               </span>
             )}
           </div>
 
           <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={handleSave}
-              disabled={!currentSaveId || !hasUnsavedChanges}
-              className="rounded-lg bg-blue-500 px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-blue-600 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:text-zinc-500"
-            >
-              Save
-            </button>
             <button
               type="button"
               onClick={handleDebugToggle}
@@ -177,22 +133,6 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
           isOpen={exportModalOpen}
           onClose={() => setExportModalOpen(false)}
           buildCode={buildCode}
-        />
-
-        <Toast
-          message="You have unsaved changes. Save your work before leaving."
-          isVisible={toastVisible}
-          onDismiss={() => setToastVisible(false)}
-          duration={0}
-          variant="warning"
-        />
-
-        <Toast
-          message="Build saved successfully!"
-          isVisible={saveSuccessToastVisible}
-          onDismiss={() => setSaveSuccessToastVisible(false)}
-          duration={3000}
-          variant="success"
         />
 
         {debugMode && (

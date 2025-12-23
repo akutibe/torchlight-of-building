@@ -46,7 +46,6 @@ import {
 
 export interface InternalBuilderState {
   saveData: SaveData;
-  hasUnsavedChanges: boolean;
   currentSaveId: string | undefined;
   currentSaveName: string | undefined;
   savesIndex: SavesIndex;
@@ -54,7 +53,6 @@ export interface InternalBuilderState {
 
 const initialState: InternalBuilderState = {
   saveData: createEmptySaveData(),
-  hasUnsavedChanges: false,
   currentSaveId: undefined,
   currentSaveName: undefined,
   savesIndex: { currentSaveId: undefined, saves: [] },
@@ -82,7 +80,6 @@ export const internalStore = create(
         setSaveData: (saveData: SaveData) => {
           set((state) => {
             state.saveData = saveData;
-            state.hasUnsavedChanges = false;
           });
         },
 
@@ -102,7 +99,6 @@ export const internalStore = create(
             state.currentSaveId = saveId;
             state.currentSaveName = saveMeta.name;
             state.savesIndex = updatedIndex;
-            state.hasUnsavedChanges = false;
           });
           return true;
         },
@@ -121,24 +117,16 @@ export const internalStore = create(
               if (saveIndex >= 0) {
                 state.savesIndex.saves[saveIndex].updatedAt = now;
               }
-              state.hasUnsavedChanges = false;
             });
             saveSavesIndex(get().savesIndex);
           }
           return success;
         },
 
-        resetUnsavedChanges: () => {
-          set((state) => {
-            state.hasUnsavedChanges = false;
-          });
-        },
-
         // Equipment actions
         addItemToInventory: (item: Gear) => {
           set((state) => {
             state.saveData.equipmentPage.inventory.push(item);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -150,7 +138,6 @@ export const internalStore = create(
           const newItem: Gear = { ...item, id: generateItemId() };
           set((state) => {
             state.saveData.equipmentPage.inventory.push(newItem);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -179,7 +166,6 @@ export const internalStore = create(
                 delete state.saveData.equipmentPage.equippedGear[slot];
               }
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -187,7 +173,6 @@ export const internalStore = create(
           set((state) => {
             if (!itemId) {
               delete state.saveData.equipmentPage.equippedGear[slot];
-              state.hasUnsavedChanges = true;
               return;
             }
             const item = state.saveData.equipmentPage.inventory.find(
@@ -195,7 +180,6 @@ export const internalStore = create(
             );
             if (!item) return;
             state.saveData.equipmentPage.equippedGear[slot] = item;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -226,14 +210,12 @@ export const internalStore = create(
               allocatedNodes: [],
               selectedCoreTalents: [],
             };
-            state.hasUnsavedChanges = true;
           });
         },
 
         clearTree: (slot: TreeSlot) => {
           set((state) => {
             delete state.saveData.talentPage.talentTrees[slot];
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -242,7 +224,6 @@ export const internalStore = create(
             const tree = state.saveData.talentPage.talentTrees[slot];
             if (!tree) return;
             tree.allocatedNodes = nodes;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -251,14 +232,12 @@ export const internalStore = create(
             const tree = state.saveData.talentPage.talentTrees[slot];
             if (!tree) return;
             tree.selectedCoreTalents = talents;
-            state.hasUnsavedChanges = true;
           });
         },
 
         addPrismToInventory: (prism: CraftedPrism) => {
           set((state) => {
             state.saveData.talentPage.inventory.prismList.push(prism);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -274,7 +253,6 @@ export const internalStore = create(
             ) {
               delete state.saveData.talentPage.talentTrees.placedPrism;
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -289,14 +267,12 @@ export const internalStore = create(
               treeSlot,
               position,
             };
-            state.hasUnsavedChanges = true;
           });
         },
 
         removePlacedPrism: () => {
           set((state) => {
             delete state.saveData.talentPage.talentTrees.placedPrism;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -305,7 +281,6 @@ export const internalStore = create(
             state.saveData.talentPage.inventory.inverseImageList.push(
               inverseImage,
             );
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -321,7 +296,6 @@ export const internalStore = create(
             ) {
               delete state.saveData.talentPage.talentTrees.placedInverseImage;
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -341,7 +315,6 @@ export const internalStore = create(
               position,
               reflectedAllocatedNodes: [],
             };
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -354,7 +327,6 @@ export const internalStore = create(
               placedInverseImage.inverseImage,
             );
             delete state.saveData.talentPage.talentTrees.placedInverseImage;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -385,7 +357,6 @@ export const internalStore = create(
                 points: 1,
               });
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -408,7 +379,6 @@ export const internalStore = create(
                   (n) => !(n.x === x && n.y === y),
                 );
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -418,7 +388,6 @@ export const internalStore = create(
               state.saveData.talentPage.talentTrees.placedInverseImage;
             if (!placedInverseImage) return;
             placedInverseImage.reflectedAllocatedNodes = nodes;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -426,7 +395,6 @@ export const internalStore = create(
         setHero: (hero: string | undefined) => {
           set((state) => {
             state.saveData.heroPage.selectedHero = hero;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -436,14 +404,12 @@ export const internalStore = create(
         ) => {
           set((state) => {
             state.saveData.heroPage.traits[level] = trait;
-            state.hasUnsavedChanges = true;
           });
         },
 
         addHeroMemory: (memory: HeroMemory) => {
           set((state) => {
             state.saveData.heroPage.memoryInventory.push(memory);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -462,7 +428,6 @@ export const internalStore = create(
                 }
               },
             );
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -472,7 +437,6 @@ export const internalStore = create(
         ) => {
           set((state) => {
             state.saveData.heroPage.memorySlots[slot] = memory;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -484,7 +448,6 @@ export const internalStore = create(
           const newMemory = { ...memory, id: generateItemId() };
           set((state) => {
             state.saveData.heroPage.memoryInventory.push(newMemory);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -497,7 +460,6 @@ export const internalStore = create(
             const slotKey =
               `slot${slotIndex}` as keyof typeof state.saveData.pactspiritPage;
             state.saveData.pactspiritPage[slotKey].pactspiritName = name;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -506,7 +468,6 @@ export const internalStore = create(
             const slotKey =
               `slot${slotIndex}` as keyof typeof state.saveData.pactspiritPage;
             state.saveData.pactspiritPage[slotKey].level = level;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -521,7 +482,6 @@ export const internalStore = create(
             state.saveData.pactspiritPage[slotKey].rings[ringSlot] = {
               installedDestiny: destiny,
             };
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -533,7 +493,6 @@ export const internalStore = create(
             const slotKey =
               `slot${slotIndex}` as keyof typeof state.saveData.pactspiritPage;
             state.saveData.pactspiritPage[slotKey] = slot;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -542,7 +501,6 @@ export const internalStore = create(
           const saveDataSlate = toSaveDataSlate(slate);
           set((state) => {
             state.saveData.divinityPage.inventory.push(saveDataSlate);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -556,7 +514,6 @@ export const internalStore = create(
               state.saveData.divinityPage.placedSlates.filter(
                 (p) => p.slateId !== slateId,
               );
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -576,7 +533,6 @@ export const internalStore = create(
                 position,
               });
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -586,7 +542,6 @@ export const internalStore = create(
               state.saveData.divinityPage.placedSlates.filter(
                 (p) => p.slateId !== slateId,
               );
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -598,7 +553,6 @@ export const internalStore = create(
             if (slate) {
               Object.assign(slate, updates);
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -617,7 +571,6 @@ export const internalStore = create(
                 supportSkills: {},
               };
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -635,7 +588,6 @@ export const internalStore = create(
                 supportSkills: {},
               };
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -654,7 +606,6 @@ export const internalStore = create(
             if (skill === undefined) return;
             skill.supportSkills[supportSlot] =
               supportName !== undefined ? { name: supportName } : undefined;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -670,7 +621,6 @@ export const internalStore = create(
             const skill = skillSlots[slot];
             if (skill === undefined) return;
             skill.enabled = !skill.enabled;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -687,7 +637,6 @@ export const internalStore = create(
             const skill = skillSlots[slot];
             if (skill === undefined) return;
             skill.level = level;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -707,7 +656,6 @@ export const internalStore = create(
             const support = skill.supportSkills[supportSlot];
             if (support === undefined) return;
             support.level = level;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -720,7 +668,6 @@ export const internalStore = create(
           const newSlate = { ...slate, id: generateItemId() };
           set((state) => {
             state.saveData.divinityPage.inventory.push(newSlate);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -750,7 +697,6 @@ export const internalStore = create(
                 memoryInventory: state.saveData.heroPage.memoryInventory,
               };
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -765,7 +711,6 @@ export const internalStore = create(
                 )
               : undefined;
             state.saveData.heroPage.memorySlots[slot] = memory;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -777,7 +722,6 @@ export const internalStore = create(
                 createEmptyConfigurationPage()),
               ...updates,
             };
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -793,7 +737,6 @@ export const internalStore = create(
               ...createEmptyPactspiritSlot(),
               pactspiritName,
             };
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -805,7 +748,6 @@ export const internalStore = create(
             const slotKey =
               `slot${slotIndex}` as keyof typeof state.saveData.pactspiritPage;
             state.saveData.pactspiritPage[slotKey].rings[ringSlot] = {};
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -820,7 +762,6 @@ export const internalStore = create(
             state.saveData.pactspiritPage[slotKey].rings[ringSlot] = {
               installedDestiny: destiny,
             };
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -844,7 +785,6 @@ export const internalStore = create(
             } else {
               tree.allocatedNodes.push({ x, y, points: 1 });
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -864,7 +804,6 @@ export const internalStore = create(
                 (n) => !(n.x === x && n.y === y),
               );
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -884,7 +823,6 @@ export const internalStore = create(
               newSelected.splice(slotIndex, 1);
             }
             tree.selectedCoreTalents = newSelected.filter(Boolean);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -894,7 +832,6 @@ export const internalStore = create(
               state.saveData.talentPage.inventory.prismList.map((p) =>
                 p.id === prism.id ? prism : p,
               );
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -906,7 +843,6 @@ export const internalStore = create(
           const newPrism = { ...prism, id: generateItemId() };
           set((state) => {
             state.saveData.talentPage.inventory.prismList.push(newPrism);
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -916,7 +852,6 @@ export const internalStore = create(
             if (!placed) return;
             state.saveData.talentPage.inventory.prismList.push(placed.prism);
             delete state.saveData.talentPage.talentTrees.placedPrism;
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -926,7 +861,6 @@ export const internalStore = create(
               state.saveData.talentPage.inventory.inverseImageList.map((ii) =>
                 ii.id === inverseImage.id ? inverseImage : ii,
               );
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -941,7 +875,6 @@ export const internalStore = create(
             state.saveData.talentPage.inventory.inverseImageList.push(
               newInverseImage,
             );
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -963,7 +896,6 @@ export const internalStore = create(
                       ?.selectedCoreTalents ?? []),
               };
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -979,7 +911,6 @@ export const internalStore = create(
             if (placedInverseImage?.treeSlot === treeSlot) {
               placedInverseImage.reflectedAllocatedNodes = [];
             }
-            state.hasUnsavedChanges = true;
           });
         },
 
@@ -993,7 +924,6 @@ export const internalStore = create(
             } else {
               state.saveData.calculationsPage.selectedSkillName = skillName;
             }
-            state.hasUnsavedChanges = true;
           });
         },
       })),
@@ -1007,3 +937,23 @@ export const internalStore = create(
     ),
   ),
 );
+
+// Auto-save subscription: save when saveData changes (debounced)
+let saveTimeout: ReturnType<typeof setTimeout> | undefined;
+const debouncedSave = (): void => {
+  if (saveTimeout !== undefined) clearTimeout(saveTimeout);
+  saveTimeout = setTimeout(() => {
+    const { currentSaveId, save } = internalStore.getState();
+    if (currentSaveId !== undefined) {
+      save();
+    }
+  }, 500);
+};
+
+let prevSaveData = internalStore.getState().saveData;
+internalStore.subscribe((state) => {
+  if (state.saveData !== prevSaveData) {
+    prevSaveData = state.saveData;
+    debouncedSave();
+  }
+});

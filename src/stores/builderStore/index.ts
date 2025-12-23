@@ -9,7 +9,6 @@ export {
   useConfigurationPage,
   useCurrentSaveId,
   useCurrentSaveName,
-  useHasUnsavedChanges,
   useLoadout,
   useSavesIndex,
   useTalentTree,
