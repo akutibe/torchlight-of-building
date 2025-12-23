@@ -102,9 +102,12 @@ function TalentsSlotPage(): React.ReactNode {
 
       if (newTreeName === "") {
         updateSaveData((prev) => {
-          const newTalentPage = { ...prev.talentPage };
-          delete newTalentPage[treeSlot];
-          return { ...prev, talentPage: newTalentPage };
+          const newTalentTrees = { ...prev.talentPage.talentTrees };
+          delete newTalentTrees[treeSlot];
+          return {
+            ...prev,
+            talentPage: { ...prev.talentPage, talentTrees: newTalentTrees },
+          };
         });
         return;
       }
@@ -116,7 +119,10 @@ function TalentsSlotPage(): React.ReactNode {
         ...prev,
         talentPage: {
           ...prev.talentPage,
-          [treeSlot]: { name: newTreeName, allocatedNodes: [] },
+          talentTrees: {
+            ...prev.talentPage.talentTrees,
+            [treeSlot]: { name: newTreeName, allocatedNodes: [] },
+          },
         },
       }));
     },
@@ -129,21 +135,31 @@ function TalentsSlotPage(): React.ReactNode {
       if (!tree || !tree.nodes.some((n) => n.points > 0)) return;
       if (confirm("Reset all points in this tree? This cannot be undone.")) {
         updateSaveData((prev) => {
-          const updatedTalentPage = {
-            ...prev.talentPage,
-            // biome-ignore lint/style/noNonNullAssertion: slot existence checked above
-            [treeSlot]: { ...prev.talentPage[treeSlot]!, allocatedNodes: [] },
+          const currentTree = prev.talentPage.talentTrees[treeSlot];
+          if (!currentTree) return prev;
+          const updatedTalentTrees = {
+            ...prev.talentPage.talentTrees,
+            [treeSlot]: {
+              ...currentTree,
+              allocatedNodes: [],
+            },
           };
 
           // Also clear reflected nodes if inverse image is placed on this tree
-          if (prev.talentPage.placedInverseImage?.treeSlot === treeSlot) {
-            updatedTalentPage.placedInverseImage = {
-              ...prev.talentPage.placedInverseImage,
+          if (
+            prev.talentPage.talentTrees.placedInverseImage?.treeSlot ===
+            treeSlot
+          ) {
+            updatedTalentTrees.placedInverseImage = {
+              ...prev.talentPage.talentTrees.placedInverseImage,
               reflectedAllocatedNodes: [],
             };
           }
 
-          return { ...prev, talentPage: updatedTalentPage };
+          return {
+            ...prev,
+            talentPage: { ...prev.talentPage, talentTrees: updatedTalentTrees },
+          };
         });
       }
     },
@@ -153,7 +169,7 @@ function TalentsSlotPage(): React.ReactNode {
   const handleAllocate = useCallback(
     (treeSlot: TreeSlot, x: number, y: number) => {
       updateSaveData((prev) => {
-        const tree = prev.talentPage[treeSlot];
+        const tree = prev.talentPage.talentTrees[treeSlot];
         if (!tree) return prev;
         const existing = tree.allocatedNodes.find(
           (n) => n.x === x && n.y === y,
@@ -172,11 +188,14 @@ function TalentsSlotPage(): React.ReactNode {
             ...prev,
             talentPage: {
               ...prev.talentPage,
-              [treeSlot]: {
-                ...tree,
-                allocatedNodes: tree.allocatedNodes.map((n) =>
-                  n.x === x && n.y === y ? { ...n, points: n.points + 1 } : n,
-                ),
+              talentTrees: {
+                ...prev.talentPage.talentTrees,
+                [treeSlot]: {
+                  ...tree,
+                  allocatedNodes: tree.allocatedNodes.map((n) =>
+                    n.x === x && n.y === y ? { ...n, points: n.points + 1 } : n,
+                  ),
+                },
               },
             },
           };
@@ -185,9 +204,12 @@ function TalentsSlotPage(): React.ReactNode {
           ...prev,
           talentPage: {
             ...prev.talentPage,
-            [treeSlot]: {
-              ...tree,
-              allocatedNodes: [...tree.allocatedNodes, { x, y, points: 1 }],
+            talentTrees: {
+              ...prev.talentPage.talentTrees,
+              [treeSlot]: {
+                ...tree,
+                allocatedNodes: [...tree.allocatedNodes, { x, y, points: 1 }],
+              },
             },
           },
         };
@@ -199,7 +221,7 @@ function TalentsSlotPage(): React.ReactNode {
   const handleDeallocate = useCallback(
     (treeSlot: TreeSlot, x: number, y: number) => {
       updateSaveData((prev) => {
-        const tree = prev.talentPage[treeSlot];
+        const tree = prev.talentPage.talentTrees[treeSlot];
         if (!tree) return prev;
         const existing = tree.allocatedNodes.find(
           (n) => n.x === x && n.y === y,
@@ -211,11 +233,14 @@ function TalentsSlotPage(): React.ReactNode {
             ...prev,
             talentPage: {
               ...prev.talentPage,
-              [treeSlot]: {
-                ...tree,
-                allocatedNodes: tree.allocatedNodes.map((n) =>
-                  n.x === x && n.y === y ? { ...n, points: n.points - 1 } : n,
-                ),
+              talentTrees: {
+                ...prev.talentPage.talentTrees,
+                [treeSlot]: {
+                  ...tree,
+                  allocatedNodes: tree.allocatedNodes.map((n) =>
+                    n.x === x && n.y === y ? { ...n, points: n.points - 1 } : n,
+                  ),
+                },
               },
             },
           };
@@ -224,11 +249,14 @@ function TalentsSlotPage(): React.ReactNode {
           ...prev,
           talentPage: {
             ...prev.talentPage,
-            [treeSlot]: {
-              ...tree,
-              allocatedNodes: tree.allocatedNodes.filter(
-                (n) => !(n.x === x && n.y === y),
-              ),
+            talentTrees: {
+              ...prev.talentPage.talentTrees,
+              [treeSlot]: {
+                ...tree,
+                allocatedNodes: tree.allocatedNodes.filter(
+                  (n) => !(n.x === x && n.y === y),
+                ),
+              },
             },
           },
         };
@@ -240,7 +268,7 @@ function TalentsSlotPage(): React.ReactNode {
   const handleSelectCoreTalent = useCallback(
     (treeSlot: TreeSlot, slotIndex: number, talentName: string | undefined) => {
       updateSaveData((prev) => {
-        const tree = prev.talentPage[treeSlot];
+        const tree = prev.talentPage.talentTrees[treeSlot];
         if (!tree) return prev;
 
         const newSelected = [...(tree.selectedCoreTalents ?? [])];
@@ -254,9 +282,12 @@ function TalentsSlotPage(): React.ReactNode {
           ...prev,
           talentPage: {
             ...prev.talentPage,
-            [treeSlot]: {
-              ...tree,
-              selectedCoreTalents: newSelected.filter(Boolean),
+            talentTrees: {
+              ...prev.talentPage.talentTrees,
+              [treeSlot]: {
+                ...tree,
+                selectedCoreTalents: newSelected.filter(Boolean),
+              },
             },
           },
         };
@@ -276,7 +307,15 @@ function TalentsSlotPage(): React.ReactNode {
     (prism: CraftedPrism) => {
       updateSaveData((prev) => ({
         ...prev,
-        prismList: prev.prismList.map((p) => (p.id === prism.id ? prism : p)),
+        talentPage: {
+          ...prev.talentPage,
+          inventory: {
+            ...prev.talentPage.inventory,
+            prismList: prev.talentPage.inventory.prismList.map((p) =>
+              p.id === prism.id ? prism : p,
+            ),
+          },
+        },
       }));
     },
     [updateSaveData],
@@ -323,29 +362,37 @@ function TalentsSlotPage(): React.ReactNode {
       const replacesCoreTalent = getPrismReplacedCoreTalent(prism);
 
       updateSaveData((prev) => {
-        const updatedTree = prev.talentPage[treeSlot];
+        const updatedTree = prev.talentPage.talentTrees[treeSlot];
 
         return {
           ...prev,
-          // Remove prism from inventory
-          prismList: prev.prismList.filter((p) => p.id !== selectedPrismId),
-          // Place prism in talent page
           talentPage: {
             ...prev.talentPage,
-            placedPrism: {
-              prism,
-              treeSlot,
-              position: { x, y },
+            // Remove prism from inventory
+            inventory: {
+              ...prev.talentPage.inventory,
+              prismList: prev.talentPage.inventory.prismList.filter(
+                (p) => p.id !== selectedPrismId,
+              ),
             },
-            // Clear core talents if prism replaces them
-            ...(replacesCoreTalent && updatedTree
-              ? {
-                  [treeSlot]: {
-                    ...updatedTree,
-                    selectedCoreTalents: [],
-                  },
-                }
-              : {}),
+            // Place prism in talent trees
+            talentTrees: {
+              ...prev.talentPage.talentTrees,
+              placedPrism: {
+                prism,
+                treeSlot,
+                position: { x, y },
+              },
+              // Clear core talents if prism replaces them
+              ...(replacesCoreTalent && updatedTree
+                ? {
+                    [treeSlot]: {
+                      ...updatedTree,
+                      selectedCoreTalents: [],
+                    },
+                  }
+                : {}),
+            },
           },
         };
       });
@@ -372,12 +419,21 @@ function TalentsSlotPage(): React.ReactNode {
 
     updateSaveData((prev) => ({
       ...prev,
-      // Return prism to inventory
-      prismList: [...prev.prismList, placedPrism.prism],
-      // Clear placement
       talentPage: {
         ...prev.talentPage,
-        placedPrism: undefined,
+        // Return prism to inventory
+        inventory: {
+          ...prev.talentPage.inventory,
+          prismList: [
+            ...prev.talentPage.inventory.prismList,
+            placedPrism.prism,
+          ],
+        },
+        // Clear placement
+        talentTrees: {
+          ...prev.talentPage.talentTrees,
+          placedPrism: undefined,
+        },
       },
     }));
   }, [placedPrism, currentTalentTree, updateSaveData]);
@@ -393,9 +449,15 @@ function TalentsSlotPage(): React.ReactNode {
     (inverseImage: CraftedInverseImage) => {
       updateSaveData((prev) => ({
         ...prev,
-        inverseImageList: prev.inverseImageList.map((ii) =>
-          ii.id === inverseImage.id ? inverseImage : ii,
-        ),
+        talentPage: {
+          ...prev.talentPage,
+          inventory: {
+            ...prev.talentPage.inventory,
+            inverseImageList: prev.talentPage.inventory.inverseImageList.map(
+              (ii) => (ii.id === inverseImage.id ? inverseImage : ii),
+            ),
+          },
+        },
       }));
     },
     [updateSaveData],

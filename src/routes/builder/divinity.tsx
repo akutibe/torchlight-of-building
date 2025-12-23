@@ -30,7 +30,10 @@ function DivinityPage(): React.ReactNode {
       const saveDataSlate = toSaveDataSlate(slate);
       updateSaveData((prev) => ({
         ...prev,
-        divinitySlateList: [...prev.divinitySlateList, saveDataSlate],
+        divinityPage: {
+          ...prev.divinityPage,
+          inventory: [...prev.divinityPage.inventory, saveDataSlate],
+        },
       }));
     },
     [updateSaveData],
@@ -42,7 +45,10 @@ function DivinityPage(): React.ReactNode {
       const newSlate = { ...saveDataSlate, id: generateItemId() };
       updateSaveData((prev) => ({
         ...prev,
-        divinitySlateList: [...prev.divinitySlateList, newSlate],
+        divinityPage: {
+          ...prev.divinityPage,
+          inventory: [...prev.divinityPage.inventory, newSlate],
+        },
       }));
     },
     [updateSaveData],
@@ -52,11 +58,11 @@ function DivinityPage(): React.ReactNode {
     (slateId: string) => {
       updateSaveData((prev) => ({
         ...prev,
-        divinitySlateList: prev.divinitySlateList.filter(
-          (s) => s.id !== slateId,
-        ),
         divinityPage: {
           ...prev.divinityPage,
+          inventory: prev.divinityPage.inventory.filter(
+            (s) => s.id !== slateId,
+          ),
           placedSlates: prev.divinityPage.placedSlates.filter(
             (p) => p.slateId !== slateId,
           ),
@@ -98,9 +104,12 @@ function DivinityPage(): React.ReactNode {
     (slateId: string, rotation: Rotation) => {
       updateSaveData((prev) => ({
         ...prev,
-        divinitySlateList: prev.divinitySlateList.map((s) =>
-          s.id === slateId ? { ...s, rotation } : s,
-        ),
+        divinityPage: {
+          ...prev.divinityPage,
+          inventory: prev.divinityPage.inventory.map((s) =>
+            s.id === slateId ? { ...s, rotation } : s,
+          ),
+        },
       }));
     },
     [updateSaveData],
@@ -110,9 +119,12 @@ function DivinityPage(): React.ReactNode {
     (slateId: string, flippedH: boolean, flippedV: boolean) => {
       updateSaveData((prev) => ({
         ...prev,
-        divinitySlateList: prev.divinitySlateList.map((s) =>
-          s.id === slateId ? { ...s, flippedH, flippedV } : s,
-        ),
+        divinityPage: {
+          ...prev.divinityPage,
+          inventory: prev.divinityPage.inventory.map((s) =>
+            s.id === slateId ? { ...s, flippedH, flippedV } : s,
+          ),
+        },
       }));
     },
     [updateSaveData],
@@ -122,9 +134,12 @@ function DivinityPage(): React.ReactNode {
     (slateId: string, shape: SlateShape) => {
       updateSaveData((prev) => ({
         ...prev,
-        divinitySlateList: prev.divinitySlateList.map((s) =>
-          s.id === slateId ? { ...s, shape } : s,
-        ),
+        divinityPage: {
+          ...prev.divinityPage,
+          inventory: prev.divinityPage.inventory.map((s) =>
+            s.id === slateId ? { ...s, shape } : s,
+          ),
+        },
       }));
     },
     [updateSaveData],

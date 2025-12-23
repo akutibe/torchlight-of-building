@@ -23,30 +23,31 @@ describe("build-code", () => {
   it("should encode and decode a loadout with equipment", () => {
     const loadout: SaveData = {
       equipmentPage: {
-        helmet: {
-          id: "test-helmet-1",
-          equipmentType: "Helmet (STR)",
-          prefixes: ["+10% fire damage"],
-          suffixes: ["+5% attack speed"],
+        equippedGear: {
+          helmet: {
+            id: "test-helmet-1",
+            equipmentType: "Helmet (STR)",
+            prefixes: ["+10% fire damage"],
+            suffixes: ["+5% attack speed"],
+          },
+          mainHand: {
+            id: "test-sword-1",
+            equipmentType: "One-Handed Sword",
+            prefixes: ["+100 physical damage"],
+          },
         },
-        mainHand: {
-          id: "test-sword-1",
-          equipmentType: "One-Handed Sword",
-          prefixes: ["+100 physical damage"],
-        },
+        inventory: [],
       },
-      talentPage: {},
+      talentPage: {
+        talentTrees: {},
+        inventory: { prismList: [], inverseImageList: [] },
+      },
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
       divinityPage: createEmptyDivinityPage(),
       configurationPage: createEmptyConfigurationPage(),
       calculationsPage: createEmptyCalculationsPage(),
-      itemsList: [],
-      heroMemoryList: [],
-      divinitySlateList: [],
-      prismList: [],
-      inverseImageList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -57,19 +58,25 @@ describe("build-code", () => {
 
   it("should encode and decode a loadout with talents", () => {
     const loadout: SaveData = {
-      equipmentPage: {},
+      equipmentPage: {
+        equippedGear: {},
+        inventory: [],
+      },
       talentPage: {
-        tree1: {
-          name: "Goddess_of_Might",
-          allocatedNodes: [
-            { x: 0, y: 0, points: 3 },
-            { x: 1, y: 0, points: 2 },
-          ],
+        talentTrees: {
+          tree1: {
+            name: "Goddess_of_Might",
+            allocatedNodes: [
+              { x: 0, y: 0, points: 3 },
+              { x: 1, y: 0, points: 2 },
+            ],
+          },
+          tree2: {
+            name: "God_of_War",
+            allocatedNodes: [{ x: 2, y: 1, points: 5 }],
+          },
         },
-        tree2: {
-          name: "God_of_War",
-          allocatedNodes: [{ x: 2, y: 1, points: 5 }],
-        },
+        inventory: { prismList: [], inverseImageList: [] },
       },
       skillPage: createEmptySkillPage(),
       heroPage: createEmptyHeroPage(),
@@ -77,11 +84,6 @@ describe("build-code", () => {
       divinityPage: createEmptyDivinityPage(),
       configurationPage: createEmptyConfigurationPage(),
       calculationsPage: createEmptyCalculationsPage(),
-      itemsList: [],
-      heroMemoryList: [],
-      divinitySlateList: [],
-      prismList: [],
-      inverseImageList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -109,19 +111,20 @@ describe("build-code", () => {
     };
 
     const loadout: SaveData = {
-      equipmentPage: {},
-      talentPage: {},
+      equipmentPage: {
+        equippedGear: {},
+        inventory: [],
+      },
+      talentPage: {
+        talentTrees: {},
+        inventory: { prismList: [], inverseImageList: [] },
+      },
       skillPage,
       heroPage: createEmptyHeroPage(),
       pactspiritPage: createEmptyPactspiritPage(),
       divinityPage: createEmptyDivinityPage(),
       configurationPage: createEmptyConfigurationPage(),
       calculationsPage: createEmptyCalculationsPage(),
-      itemsList: [],
-      heroMemoryList: [],
-      divinitySlateList: [],
-      prismList: [],
-      inverseImageList: [],
     };
 
     const code = encodeBuildCode(loadout);
@@ -140,26 +143,38 @@ describe("build-code", () => {
 
     const loadout: SaveData = {
       equipmentPage: {
-        helmet: {
-          id: "test-1",
-          equipmentType: "Helmet (STR)",
-          prefixes: ["+10% fire damage"],
-          suffixes: ["+5% attack speed"],
+        equippedGear: {
+          helmet: {
+            id: "test-1",
+            equipmentType: "Helmet (STR)",
+            prefixes: ["+10% fire damage"],
+            suffixes: ["+5% attack speed"],
+          },
+          chest: {
+            id: "test-2",
+            equipmentType: "Chest Armor (STR)",
+            prefixes: ["+100 health"],
+          },
         },
-        chest: {
-          id: "test-2",
-          equipmentType: "Chest Armor (STR)",
-          prefixes: ["+100 health"],
-        },
+        inventory: [
+          {
+            id: "inv-1",
+            equipmentType: "Ring",
+            suffixes: ["+10% crit"],
+          },
+        ],
       },
       talentPage: {
-        tree1: {
-          name: "Goddess_of_Might",
-          allocatedNodes: [
-            { x: 0, y: 0, points: 3 },
-            { x: 1, y: 0, points: 2 },
-          ],
+        talentTrees: {
+          tree1: {
+            name: "Goddess_of_Might",
+            allocatedNodes: [
+              { x: 0, y: 0, points: 3 },
+              { x: 1, y: 0, points: 2 },
+            ],
+          },
         },
+        inventory: { prismList: [], inverseImageList: [] },
       },
       skillPage,
       heroPage: createEmptyHeroPage(),
@@ -167,17 +182,6 @@ describe("build-code", () => {
       divinityPage: createEmptyDivinityPage(),
       configurationPage: createEmptyConfigurationPage(),
       calculationsPage: createEmptyCalculationsPage(),
-      itemsList: [
-        {
-          id: "inv-1",
-          equipmentType: "Ring",
-          suffixes: ["+10% crit"],
-        },
-      ],
-      heroMemoryList: [],
-      divinitySlateList: [],
-      prismList: [],
-      inverseImageList: [],
     };
 
     const code = encodeBuildCode(loadout);

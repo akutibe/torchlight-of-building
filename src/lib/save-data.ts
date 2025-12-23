@@ -88,10 +88,6 @@ export interface PlacedSlate {
   position: { row: number; col: number };
 }
 
-export interface DivinityPage {
-  placedSlates: PlacedSlate[];
-}
-
 export interface AllocatedTalentNode {
   x: number;
   y: number;
@@ -102,15 +98,6 @@ export interface TalentTree {
   name: string;
   allocatedNodes: AllocatedTalentNode[];
   selectedCoreTalents?: string[];
-}
-
-export interface TalentPage {
-  tree1?: TalentTree;
-  tree2?: TalentTree;
-  tree3?: TalentTree;
-  tree4?: TalentTree;
-  placedPrism?: PlacedPrism;
-  placedInverseImage?: PlacedInverseImage;
 }
 
 export interface Gear {
@@ -134,19 +121,6 @@ export interface Gear {
   legendary_affixes?: string[];
 }
 
-export interface GearPage {
-  helmet?: Gear;
-  chest?: Gear;
-  neck?: Gear;
-  gloves?: Gear;
-  belt?: Gear;
-  boots?: Gear;
-  leftRing?: Gear;
-  rightRing?: Gear;
-  mainHand?: Gear;
-  offHand?: Gear;
-}
-
 export interface HeroMemoryAffix {
   effect: string;
   quality: number;
@@ -158,21 +132,6 @@ export interface HeroMemory {
   baseStat: string;
   fixedAffixes: HeroMemoryAffix[];
   randomAffixes: HeroMemoryAffix[];
-}
-
-export interface HeroPage {
-  selectedHero: string | undefined;
-  traits: {
-    level1: string | undefined;
-    level45: string | undefined;
-    level60: string | undefined;
-    level75: string | undefined;
-  };
-  memorySlots: {
-    slot45: HeroMemory | undefined;
-    slot60: HeroMemory | undefined;
-    slot75: HeroMemory | undefined;
-  };
 }
 
 export interface RingSlotState {
@@ -217,6 +176,64 @@ export interface ConfigurationPage {
   crueltyBuffStacks: number;
 }
 
+export interface EquippedGear {
+  helmet?: Gear;
+  chest?: Gear;
+  neck?: Gear;
+  gloves?: Gear;
+  belt?: Gear;
+  boots?: Gear;
+  leftRing?: Gear;
+  rightRing?: Gear;
+  mainHand?: Gear;
+  offHand?: Gear;
+}
+
+export interface GearPage {
+  equippedGear: EquippedGear;
+  inventory: Gear[];
+}
+
+export interface TalentTrees {
+  tree1?: TalentTree;
+  tree2?: TalentTree;
+  tree3?: TalentTree;
+  tree4?: TalentTree;
+  placedPrism?: PlacedPrism;
+  placedInverseImage?: PlacedInverseImage;
+}
+
+export interface TalentInventory {
+  prismList: CraftedPrism[];
+  inverseImageList: CraftedInverseImage[];
+}
+
+export interface TalentPage {
+  talentTrees: TalentTrees;
+  inventory: TalentInventory;
+}
+
+export interface DivinityPage {
+  placedSlates: PlacedSlate[];
+  inventory: DivinitySlate[];
+}
+
+export interface HeroPage {
+  selectedHero: string | undefined;
+  traits: {
+    level1: string | undefined;
+    level45: string | undefined;
+    level60: string | undefined;
+    level75: string | undefined;
+  };
+  memorySlots: {
+    slot45: HeroMemory | undefined;
+    slot60: HeroMemory | undefined;
+    slot75: HeroMemory | undefined;
+  };
+  memoryInventory: HeroMemory[];
+}
+
 export interface SaveData {
   equipmentPage: GearPage;
   talentPage: TalentPage;
@@ -226,9 +243,4 @@ export interface SaveData {
   divinityPage: DivinityPage;
   configurationPage: ConfigurationPage;
   calculationsPage: CalculationsPage;
-  itemsList: Gear[];
-  heroMemoryList: HeroMemory[];
-  divinitySlateList: DivinitySlate[];
-  prismList: CraftedPrism[];
-  inverseImageList: CraftedInverseImage[];
 }

@@ -79,7 +79,7 @@ export const createActions = (): BuilderActions => ({
   // Equipment actions
   addItemToInventory: (item) => {
     internalStore.setState((state) => {
-      state.saveData.itemsList.push(item);
+      state.saveData.equipmentPage.inventory.push(item);
       state.hasUnsavedChanges = true;
     });
   },
@@ -87,20 +87,21 @@ export const createActions = (): BuilderActions => ({
   copyItem: (itemId) => {
     const item = internalStore
       .getState()
-      .saveData.itemsList.find((i) => i.id === itemId);
+      .saveData.equipmentPage.inventory.find((i) => i.id === itemId);
     if (!item) return;
     const newItem: Gear = { ...item, id: generateItemId() };
     internalStore.setState((state) => {
-      state.saveData.itemsList.push(newItem);
+      state.saveData.equipmentPage.inventory.push(newItem);
       state.hasUnsavedChanges = true;
     });
   },
 
   deleteItem: (itemId) => {
     internalStore.setState((state) => {
-      state.saveData.itemsList = state.saveData.itemsList.filter(
-        (item) => item.id !== itemId,
-      );
+      state.saveData.equipmentPage.inventory =
+        state.saveData.equipmentPage.inventory.filter(
+          (item) => item.id !== itemId,
+        );
       const slots: GearSlot[] = [
         "helmet",
         "chest",
@@ -114,8 +115,8 @@ export const createActions = (): BuilderActions => ({
         "offHand",
       ];
       for (const slot of slots) {
-        if (state.saveData.equipmentPage[slot]?.id === itemId) {
-          delete state.saveData.equipmentPage[slot];
+        if (state.saveData.equipmentPage.equippedGear[slot]?.id === itemId) {
+          delete state.saveData.equipmentPage.equippedGear[slot];
         }
       }
       state.hasUnsavedChanges = true;
@@ -125,13 +126,15 @@ export const createActions = (): BuilderActions => ({
   selectItemForSlot: (slot, itemId) => {
     internalStore.setState((state) => {
       if (!itemId) {
-        delete state.saveData.equipmentPage[slot];
+        delete state.saveData.equipmentPage.equippedGear[slot];
         state.hasUnsavedChanges = true;
         return;
       }
-      const item = state.saveData.itemsList.find((i) => i.id === itemId);
+      const item = state.saveData.equipmentPage.inventory.find(
+        (i) => i.id === itemId,
+      );
       if (!item) return;
-      state.saveData.equipmentPage[slot] = item;
+      state.saveData.equipmentPage.equippedGear[slot] = item;
       state.hasUnsavedChanges = true;
     });
   },
@@ -150,13 +153,15 @@ export const createActions = (): BuilderActions => ({
       "mainHand",
       "offHand",
     ];
-    return slots.some((slot) => saveData.equipmentPage[slot]?.id === itemId);
+    return slots.some(
+      (slot) => saveData.equipmentPage.equippedGear[slot]?.id === itemId,
+    );
   },
 
   // Talent actions
   setTreeName: (slot, treeName) => {
     internalStore.setState((state) => {
-      state.saveData.talentPage[slot] = {
+      state.saveData.talentPage.talentTrees[slot] = {
         name: treeName,
         allocatedNodes: [],
         selectedCoreTalents: [],
@@ -167,14 +172,14 @@ export const createActions = (): BuilderActions => ({
 
   clearTree: (slot) => {
     internalStore.setState((state) => {
-      delete state.saveData.talentPage[slot];
+      delete state.saveData.talentPage.talentTrees[slot];
       state.hasUnsavedChanges = true;
     });
   },
 
   setAllocatedNodes: (slot, nodes) => {
     internalStore.setState((state) => {
-      const tree = state.saveData.talentPage[slot];
+      const tree = state.saveData.talentPage.talentTrees[slot];
       if (!tree) return;
       tree.allocatedNodes = nodes;
       state.hasUnsavedChanges = true;
@@ -183,7 +188,7 @@ export const createActions = (): BuilderActions => ({
 
   setCoreTalents: (slot, talents) => {
     internalStore.setState((state) => {
-      const tree = state.saveData.talentPage[slot];
+      const tree = state.saveData.talentPage.talentTrees[slot];
       if (!tree) return;
       tree.selectedCoreTalents = talents;
       state.hasUnsavedChanges = true;
@@ -192,18 +197,21 @@ export const createActions = (): BuilderActions => ({
 
   addPrismToInventory: (prism) => {
     internalStore.setState((state) => {
-      state.saveData.prismList.push(prism);
+      state.saveData.talentPage.inventory.prismList.push(prism);
       state.hasUnsavedChanges = true;
     });
   },
 
   deletePrism: (prismId) => {
     internalStore.setState((state) => {
-      state.saveData.prismList = state.saveData.prismList.filter(
-        (p) => p.id !== prismId,
-      );
-      if (state.saveData.talentPage.placedPrism?.prism.id === prismId) {
-        delete state.saveData.talentPage.placedPrism;
+      state.saveData.talentPage.inventory.prismList =
+        state.saveData.talentPage.inventory.prismList.filter(
+          (p) => p.id !== prismId,
+        );
+      if (
+        state.saveData.talentPage.talentTrees.placedPrism?.prism.id === prismId
+      ) {
+        delete state.saveData.talentPage.talentTrees.placedPrism;
       }
       state.hasUnsavedChanges = true;
     });
@@ -211,35 +219,40 @@ export const createActions = (): BuilderActions => ({
 
   placePrism: (prism, treeSlot, position) => {
     internalStore.setState((state) => {
-      state.saveData.talentPage.placedPrism = { prism, treeSlot, position };
+      state.saveData.talentPage.talentTrees.placedPrism = {
+        prism,
+        treeSlot,
+        position,
+      };
       state.hasUnsavedChanges = true;
     });
   },
 
   removePlacedPrism: () => {
     internalStore.setState((state) => {
-      delete state.saveData.talentPage.placedPrism;
+      delete state.saveData.talentPage.talentTrees.placedPrism;
       state.hasUnsavedChanges = true;
     });
   },
 
   addInverseImageToInventory: (inverseImage) => {
     internalStore.setState((state) => {
-      state.saveData.inverseImageList.push(inverseImage);
+      state.saveData.talentPage.inventory.inverseImageList.push(inverseImage);
       state.hasUnsavedChanges = true;
     });
   },
 
   deleteInverseImage: (inverseImageId) => {
     internalStore.setState((state) => {
-      state.saveData.inverseImageList = state.saveData.inverseImageList.filter(
-        (ii) => ii.id !== inverseImageId,
-      );
+      state.saveData.talentPage.inventory.inverseImageList =
+        state.saveData.talentPage.inventory.inverseImageList.filter(
+          (ii) => ii.id !== inverseImageId,
+        );
       if (
-        state.saveData.talentPage.placedInverseImage?.inverseImage.id ===
-        inverseImageId
+        state.saveData.talentPage.talentTrees.placedInverseImage?.inverseImage
+          .id === inverseImageId
       ) {
-        delete state.saveData.talentPage.placedInverseImage;
+        delete state.saveData.talentPage.talentTrees.placedInverseImage;
       }
       state.hasUnsavedChanges = true;
     });
@@ -247,10 +260,11 @@ export const createActions = (): BuilderActions => ({
 
   placeInverseImage: (inverseImage, treeSlot, position) => {
     internalStore.setState((state) => {
-      state.saveData.inverseImageList = state.saveData.inverseImageList.filter(
-        (ii) => ii.id !== inverseImage.id,
-      );
-      state.saveData.talentPage.placedInverseImage = {
+      state.saveData.talentPage.inventory.inverseImageList =
+        state.saveData.talentPage.inventory.inverseImageList.filter(
+          (ii) => ii.id !== inverseImage.id,
+        );
+      state.saveData.talentPage.talentTrees.placedInverseImage = {
         inverseImage,
         treeSlot,
         position,
@@ -262,17 +276,21 @@ export const createActions = (): BuilderActions => ({
 
   removePlacedInverseImage: () => {
     internalStore.setState((state) => {
-      const placedInverseImage = state.saveData.talentPage.placedInverseImage;
+      const placedInverseImage =
+        state.saveData.talentPage.talentTrees.placedInverseImage;
       if (!placedInverseImage) return;
-      state.saveData.inverseImageList.push(placedInverseImage.inverseImage);
-      delete state.saveData.talentPage.placedInverseImage;
+      state.saveData.talentPage.inventory.inverseImageList.push(
+        placedInverseImage.inverseImage,
+      );
+      delete state.saveData.talentPage.talentTrees.placedInverseImage;
       state.hasUnsavedChanges = true;
     });
   },
 
   allocateReflectedNode: (x, y, sourceX, sourceY) => {
     internalStore.setState((state) => {
-      const placedInverseImage = state.saveData.talentPage.placedInverseImage;
+      const placedInverseImage =
+        state.saveData.talentPage.talentTrees.placedInverseImage;
       if (!placedInverseImage) return;
 
       const existingNode = placedInverseImage.reflectedAllocatedNodes.find(
@@ -296,7 +314,8 @@ export const createActions = (): BuilderActions => ({
 
   deallocateReflectedNode: (x, y) => {
     internalStore.setState((state) => {
-      const placedInverseImage = state.saveData.talentPage.placedInverseImage;
+      const placedInverseImage =
+        state.saveData.talentPage.talentTrees.placedInverseImage;
       if (!placedInverseImage) return;
 
       const existing = placedInverseImage.reflectedAllocatedNodes.find(
@@ -318,7 +337,8 @@ export const createActions = (): BuilderActions => ({
 
   setReflectedAllocatedNodes: (nodes) => {
     internalStore.setState((state) => {
-      const placedInverseImage = state.saveData.talentPage.placedInverseImage;
+      const placedInverseImage =
+        state.saveData.talentPage.talentTrees.placedInverseImage;
       if (!placedInverseImage) return;
       placedInverseImage.reflectedAllocatedNodes = nodes;
       state.hasUnsavedChanges = true;
@@ -342,16 +362,17 @@ export const createActions = (): BuilderActions => ({
 
   addHeroMemory: (memory) => {
     internalStore.setState((state) => {
-      state.saveData.heroMemoryList.push(memory);
+      state.saveData.heroPage.memoryInventory.push(memory);
       state.hasUnsavedChanges = true;
     });
   },
 
   deleteHeroMemory: (memoryId) => {
     internalStore.setState((state) => {
-      state.saveData.heroMemoryList = state.saveData.heroMemoryList.filter(
-        (m) => m.id !== memoryId,
-      );
+      state.saveData.heroPage.memoryInventory =
+        state.saveData.heroPage.memoryInventory.filter(
+          (m) => m.id !== memoryId,
+        );
       (["slot45", "slot60", "slot75"] as HeroMemorySlot[]).forEach((slot) => {
         if (state.saveData.heroPage.memorySlots[slot]?.id === memoryId) {
           state.saveData.heroPage.memorySlots[slot] = undefined;
@@ -371,11 +392,11 @@ export const createActions = (): BuilderActions => ({
   copyHeroMemory: (memoryId) => {
     const memory = internalStore
       .getState()
-      .saveData.heroMemoryList.find((m) => m.id === memoryId);
+      .saveData.heroPage.memoryInventory.find((m) => m.id === memoryId);
     if (!memory) return;
     const newMemory = { ...memory, id: generateItemId() };
     internalStore.setState((state) => {
-      state.saveData.heroMemoryList.push(newMemory);
+      state.saveData.heroPage.memoryInventory.push(newMemory);
       state.hasUnsavedChanges = true;
     });
   },
@@ -422,15 +443,15 @@ export const createActions = (): BuilderActions => ({
   // Divinity actions
   addSlateToInventory: (slate) => {
     internalStore.setState((state) => {
-      state.saveData.divinitySlateList.push(slate);
+      state.saveData.divinityPage.inventory.push(slate);
       state.hasUnsavedChanges = true;
     });
   },
 
   deleteSlate: (slateId) => {
     internalStore.setState((state) => {
-      state.saveData.divinitySlateList =
-        state.saveData.divinitySlateList.filter((s) => s.id !== slateId);
+      state.saveData.divinityPage.inventory =
+        state.saveData.divinityPage.inventory.filter((s) => s.id !== slateId);
       state.saveData.divinityPage.placedSlates =
         state.saveData.divinityPage.placedSlates.filter(
           (p) => p.slateId !== slateId,
@@ -465,7 +486,7 @@ export const createActions = (): BuilderActions => ({
 
   updateSlate: (slateId, updates) => {
     internalStore.setState((state) => {
-      const slate = state.saveData.divinitySlateList.find(
+      const slate = state.saveData.divinityPage.inventory.find(
         (s) => s.id === slateId,
       );
       if (slate) {

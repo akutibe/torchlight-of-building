@@ -1,6 +1,6 @@
-import type { GearPage, PactspiritSlot } from "./save-data";
+import type { EquippedGear, PactspiritSlot } from "./save-data";
 
-export type GearSlot = keyof GearPage;
+export type GearSlot = keyof EquippedGear;
 
 export type TreeSlot = "tree1" | "tree2" | "tree3" | "tree4";
 

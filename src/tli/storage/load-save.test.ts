@@ -9,15 +9,28 @@ const createEmptySkillPage = () => ({
   passiveSkills: {},
 });
 
+const createEmptyRings = () => ({
+  innerRing1: {},
+  innerRing2: {},
+  innerRing3: {},
+  innerRing4: {},
+  innerRing5: {},
+  innerRing6: {},
+  midRing1: {},
+  midRing2: {},
+  midRing3: {},
+});
+
 const createMinimalSaveData = (
   overrides: Partial<SaveData> = {},
 ): SaveData => ({
-  equipmentPage: {},
+  equipmentPage: {
+    equippedGear: {},
+    inventory: [],
+  },
   talentPage: {
-    tree1: undefined,
-    tree2: undefined,
-    tree3: undefined,
-    tree4: undefined,
+    talentTrees: {},
+    inventory: { prismList: [], inverseImageList: [] },
   },
   skillPage: createEmptySkillPage(),
   heroPage: {
@@ -33,13 +46,14 @@ const createMinimalSaveData = (
       slot60: undefined,
       slot75: undefined,
     },
+    memoryInventory: [],
   },
   pactspiritPage: {
     slot1: { level: 1, rings: createEmptyRings() },
     slot2: { level: 1, rings: createEmptyRings() },
     slot3: { level: 1, rings: createEmptyRings() },
   },
-  divinityPage: { placedSlates: [] },
+  divinityPage: { placedSlates: [], inventory: [] },
   configurationPage: {
     fervorEnabled: false,
     fervorPoints: undefined,
@@ -48,34 +62,20 @@ const createMinimalSaveData = (
     crueltyBuffStacks: 40,
   },
   calculationsPage: { selectedSkillName: undefined },
-  itemsList: [],
-  heroMemoryList: [],
-  divinitySlateList: [],
-  prismList: [],
-  inverseImageList: [],
   ...overrides,
-});
-
-const createEmptyRings = () => ({
-  innerRing1: {},
-  innerRing2: {},
-  innerRing3: {},
-  innerRing4: {},
-  innerRing5: {},
-  innerRing6: {},
-  midRing1: {},
-  midRing2: {},
-  midRing3: {},
 });
 
 test("loadSave converts gear with parseable affix", () => {
   const saveData = createMinimalSaveData({
     equipmentPage: {
-      mainHand: {
-        id: "test-weapon",
-        equipmentType: "One-Handed Sword",
-        prefixes: ["+10% fire damage"],
+      equippedGear: {
+        mainHand: {
+          id: "test-weapon",
+          equipmentType: "One-Handed Sword",
+          prefixes: ["+10% fire damage"],
+        },
       },
+      inventory: [],
     },
   });
 
@@ -99,11 +99,14 @@ test("loadSave converts gear with parseable affix", () => {
 test("loadSave handles affix that fails to parse", () => {
   const saveData = createMinimalSaveData({
     equipmentPage: {
-      helmet: {
-        id: "test-helmet",
-        equipmentType: "Helmet (STR)",
-        suffixes: ["some unparseable affix text"],
+      equippedGear: {
+        helmet: {
+          id: "test-helmet",
+          equipmentType: "Helmet (STR)",
+          suffixes: ["some unparseable affix text"],
+        },
       },
+      inventory: [],
     },
   });
 
@@ -123,21 +126,24 @@ test("loadSave handles affix that fails to parse", () => {
 test("loadSave sets correct src for different gear slots", () => {
   const saveData = createMinimalSaveData({
     equipmentPage: {
-      helmet: {
-        id: "h",
-        equipmentType: "Helmet (STR)",
-        suffixes: ["+5% armor"],
+      equippedGear: {
+        helmet: {
+          id: "h",
+          equipmentType: "Helmet (STR)",
+          suffixes: ["+5% armor"],
+        },
+        leftRing: {
+          id: "lr",
+          equipmentType: "Ring",
+          prefixes: ["+5% max life"],
+        },
+        offHand: {
+          id: "oh",
+          equipmentType: "Shield (STR)",
+          suffixes: ["+4% attack block chance"],
+        },
       },
-      leftRing: {
-        id: "lr",
-        equipmentType: "Ring",
-        prefixes: ["+5% max life"],
-      },
-      offHand: {
-        id: "oh",
-        equipmentType: "Shield (STR)",
-        suffixes: ["+4% attack block chance"],
-      },
+      inventory: [],
     },
   });
 
@@ -151,7 +157,10 @@ test("loadSave sets correct src for different gear slots", () => {
 
 test("loadSave handles empty gear page", () => {
   const saveData = createMinimalSaveData({
-    equipmentPage: {},
+    equipmentPage: {
+      equippedGear: {},
+      inventory: [],
+    },
   });
 
   const loadout = loadSave(saveData);
@@ -162,19 +171,22 @@ test("loadSave handles empty gear page", () => {
 
 test("loadSave converts gear in inventory", () => {
   const saveData = createMinimalSaveData({
-    itemsList: [
-      {
-        id: "inv-sword",
-        equipmentType: "One-Handed Sword",
-        prefixes: ["+20% cold damage"],
-      },
-      {
-        id: "inv-helmet",
-        equipmentType: "Helmet (STR)",
-        prefixes: ["unparseable text"],
-        suffixes: ["+15% lightning damage"],
-      },
-    ],
+    equipmentPage: {
+      equippedGear: {},
+      inventory: [
+        {
+          id: "inv-sword",
+          equipmentType: "One-Handed Sword",
+          prefixes: ["+20% cold damage"],
+        },
+        {
+          id: "inv-helmet",
+          equipmentType: "Helmet (STR)",
+          prefixes: ["unparseable text"],
+          suffixes: ["+15% lightning damage"],
+        },
+      ],
+    },
   });
 
   const loadout = loadSave(saveData);
@@ -203,22 +215,24 @@ test("loadSave converts gear in inventory", () => {
 test("loadSave preserves UI fields (id, rarity, legendaryName)", () => {
   const saveData = createMinimalSaveData({
     equipmentPage: {
-      helmet: {
-        id: "legendary-helm-123",
-        equipmentType: "Helmet (STR)",
-        rarity: "legendary",
-        legendaryName: "Crown of the Eternal",
-        legendary_affixes: ["+50% fire damage"],
+      equippedGear: {
+        helmet: {
+          id: "legendary-helm-123",
+          equipmentType: "Helmet (STR)",
+          rarity: "legendary",
+          legendaryName: "Crown of the Eternal",
+          legendary_affixes: ["+50% fire damage"],
+        },
       },
+      inventory: [
+        {
+          id: "inv-item-456",
+          equipmentType: "Ring",
+          rarity: "rare",
+          prefixes: ["+5% max life"],
+        },
+      ],
     },
-    itemsList: [
-      {
-        id: "inv-item-456",
-        equipmentType: "Ring",
-        rarity: "rare",
-        prefixes: ["+5% max life"],
-      },
-    ],
   });
 
   const loadout = loadSave(saveData);

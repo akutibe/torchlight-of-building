@@ -15,6 +15,7 @@ import type {
   CraftedPrism as SaveDataCraftedPrism,
   DivinityPage as SaveDataDivinityPage,
   DivinitySlate as SaveDataDivinitySlate,
+  EquippedGear as SaveDataEquippedGear,
   Gear as SaveDataGear,
   GearPage as SaveDataGearPage,
   HeroMemory as SaveDataHeroMemory,
@@ -62,7 +63,7 @@ import {
   treeDataByName,
 } from "../talent-affix-utils";
 
-type GearSlot = keyof SaveDataGearPage;
+type GearSlot = keyof SaveDataEquippedGear;
 
 const getSrc = (gearSlot: GearSlot): string => {
   return `Gear#${gearSlot}`;
@@ -135,10 +136,7 @@ const convertGear = (gear: SaveDataGear, src: string | undefined): Gear => {
   };
 };
 
-const convertGearPage = (
-  saveDataGearPage: SaveDataGearPage,
-  gearInventory: SaveDataGear[],
-): GearPage => {
+const convertGearPage = (saveDataGearPage: SaveDataGearPage): GearPage => {
   const slots: GearSlot[] = [
     "helmet",
     "chest",
@@ -155,7 +153,7 @@ const convertGearPage = (
   const equippedGear: EquippedGear = {};
 
   for (const slot of slots) {
-    const gear = saveDataGearPage[slot];
+    const gear = saveDataGearPage.equippedGear[slot];
     if (gear) {
       const src = getSrc(slot);
       equippedGear[slot] = convertGear(gear, src);
@@ -164,7 +162,7 @@ const convertGearPage = (
 
   return {
     equippedGear,
-    inventory: gearInventory.map((gear) => {
+    inventory: saveDataGearPage.inventory.map((gear) => {
       return convertGear(gear, undefined);
     }),
   };
@@ -334,17 +332,15 @@ const convertPlacedPrism = (
 
 const convertTalentPage = (
   saveDataTalentPage: SaveDataTalentPage,
-  prismList: SaveDataCraftedPrism[],
-  inverseImageList: SaveData["inverseImageList"],
 ): TalentPage => {
   const treeSlots: TreeSlot[] = ["tree1", "tree2", "tree3", "tree4"];
-  const placedPrism = saveDataTalentPage.placedPrism;
-  const placedInverseImage = saveDataTalentPage.placedInverseImage;
+  const placedPrism = saveDataTalentPage.talentTrees.placedPrism;
+  const placedInverseImage = saveDataTalentPage.talentTrees.placedInverseImage;
 
   const allocatedTalents: TalentTrees = {};
 
   for (const slot of treeSlots) {
-    const tree = saveDataTalentPage[slot];
+    const tree = saveDataTalentPage.talentTrees[slot];
     if (tree) {
       const src = getTalentSrc(slot);
       allocatedTalents[slot] = convertTalentTree(
@@ -371,8 +367,8 @@ const convertTalentPage = (
   }
 
   const inventory: TalentInventory = {
-    prismList,
-    inverseImageList,
+    prismList: saveDataTalentPage.inventory.prismList,
+    inverseImageList: saveDataTalentPage.inventory.inverseImageList,
   };
 
   return {
@@ -718,10 +714,9 @@ const convertDivinitySlate = (slate: SaveDataDivinitySlate): DivinitySlate => {
 
 const convertDivinityPage = (
   saveDataDivinityPage: SaveDataDivinityPage,
-  divinitySlateList: SaveDataDivinitySlate[],
 ): DivinityPage => {
   // First convert all slates to inventory
-  const inventory = divinitySlateList.map(convertDivinitySlate);
+  const inventory = saveDataDivinityPage.inventory.map(convertDivinitySlate);
   const placements = saveDataDivinityPage.placedSlates;
 
   // For each placed slate with metaAffixes, populate copied affixes from adjacent slates
@@ -754,18 +749,14 @@ const convertDivinityPage = (
 export const loadSave = (unloadedSaveData: SaveData): Loadout => {
   const saveData = R.clone(unloadedSaveData);
   return {
-    gearPage: convertGearPage(saveData.equipmentPage, saveData.itemsList),
-    talentPage: convertTalentPage(
-      saveData.talentPage,
-      saveData.prismList,
-      saveData.inverseImageList,
-    ),
-    divinityPage: convertDivinityPage(
-      saveData.divinityPage,
-      saveData.divinitySlateList,
-    ),
+    gearPage: convertGearPage(saveData.equipmentPage),
+    talentPage: convertTalentPage(saveData.talentPage),
+    divinityPage: convertDivinityPage(saveData.divinityPage),
     skillPage: saveData.skillPage,
-    heroPage: convertHeroPage(saveData.heroPage, saveData.heroMemoryList),
+    heroPage: convertHeroPage(
+      saveData.heroPage,
+      saveData.heroPage.memoryInventory,
+    ),
     pactspiritPage: convertPactspiritPage(saveData.pactspiritPage),
     customConfiguration: [],
   };

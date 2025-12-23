@@ -41,6 +41,7 @@ function HeroPage(): React.ReactNode {
               slot60: undefined,
               slot75: undefined,
             },
+            memoryInventory: prev.heroPage.memoryInventory,
           },
         };
       });
@@ -60,7 +61,7 @@ function HeroPage(): React.ReactNode {
     (slot: HeroMemorySlot, memoryId: string | undefined) => {
       actions.updateSaveData((prev) => {
         const memory = memoryId
-          ? prev.heroMemoryList.find((m) => m.id === memoryId)
+          ? prev.heroPage.memoryInventory.find((m) => m.id === memoryId)
           : undefined;
 
         return {

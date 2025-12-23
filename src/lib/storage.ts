@@ -24,6 +24,7 @@ export const createEmptyHeroPage = (): HeroPage => ({
     slot60: undefined,
     slot75: undefined,
   },
+  memoryInventory: [],
 });
 
 const createEmptyRingSlotState = (): RingSlotState => ({});
@@ -52,6 +53,7 @@ export const createEmptyPactspiritPage = (): PactspiritPage => ({
 
 export const createEmptyDivinityPage = (): DivinityPage => ({
   placedSlates: [],
+  inventory: [],
 });
 
 export const createEmptyCalculationsPage = (): CalculationsPage => ({
@@ -94,17 +96,21 @@ export const saveDebugModeToStorage = (enabled: boolean): void => {
 };
 
 export const createEmptySaveData = (): SaveData => ({
-  equipmentPage: {},
-  talentPage: {},
+  equipmentPage: {
+    equippedGear: {},
+    inventory: [],
+  },
+  talentPage: {
+    talentTrees: {},
+    inventory: {
+      prismList: [],
+      inverseImageList: [],
+    },
+  },
   skillPage: createEmptySkillPage(),
   heroPage: createEmptyHeroPage(),
   pactspiritPage: createEmptyPactspiritPage(),
   divinityPage: createEmptyDivinityPage(),
   configurationPage: createEmptyConfigurationPage(),
   calculationsPage: createEmptyCalculationsPage(),
-  itemsList: [],
-  heroMemoryList: [],
-  divinitySlateList: [],
-  prismList: [],
-  inverseImageList: [],
 });
