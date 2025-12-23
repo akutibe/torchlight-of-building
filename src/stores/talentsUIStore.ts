@@ -3,12 +3,8 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import type { PrismRarity } from "../lib/save-data";
-import type { TreeSlot } from "../lib/types";
 
 interface TalentsUIState {
-  // Active tree slot being viewed
-  activeTreeSlot: TreeSlot;
-
   // Prism crafting state
   selectedPrismId: string | undefined;
   craftingPrismRarity: PrismRarity;
@@ -17,9 +13,6 @@ interface TalentsUIState {
 
   // Inverse image selection state
   selectedInverseImageId: string | undefined;
-
-  // Actions
-  setActiveTreeSlot: (slot: TreeSlot) => void;
 
   // Prism crafting actions
   setSelectedPrismId: (id: string | undefined) => void;
@@ -36,18 +29,11 @@ interface TalentsUIState {
 export const useTalentsUIStore = create<TalentsUIState>()(
   immer((set) => ({
     // Initial state
-    activeTreeSlot: "tree1",
     selectedPrismId: undefined,
     craftingPrismRarity: "rare",
     craftingBaseAffix: undefined,
     craftingGaugeAffixes: [],
     selectedInverseImageId: undefined,
-
-    // Actions
-    setActiveTreeSlot: (slot) =>
-      set((state) => {
-        state.activeTreeSlot = slot;
-      }),
 
     setSelectedPrismId: (id) =>
       set((state) => {

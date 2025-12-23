@@ -1,3 +1,4 @@
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useCallback } from "react";
 import type { CraftedInverseImage, CraftedPrism } from "@/src/tli/core";
 import {
@@ -10,7 +11,7 @@ import {
 } from "@/src/tli/talent_tree";
 import { getPrismReplacedCoreTalent } from "../../lib/prism-utils";
 import { generateItemId } from "../../lib/storage";
-import type { TreeSlot } from "../../lib/types";
+import { type TreeSlot, treeSlotToParam } from "../../lib/types";
 import {
   useBuilderActions,
   useLoadout,
@@ -23,7 +24,15 @@ import { PrismCoreTalentEffect } from "../talents/PrismCoreTalentEffect";
 import { PrismSection } from "../talents/PrismSection";
 import { TalentGrid } from "../talents/TalentGrid";
 
-export const TalentsSection = () => {
+interface TalentsSectionProps {
+  activeTreeSlot: TreeSlot;
+}
+
+export const TalentsSection = ({ activeTreeSlot }: TalentsSectionProps) => {
+  // Router state for search params
+  const routerState = useRouterState();
+  const currentSearch = routerState.location.search as { id?: string };
+
   // Builder store - actions and loadout
   const loadout = useLoadout();
   const {
@@ -39,11 +48,7 @@ export const TalentsSection = () => {
   } = useBuilderActions();
 
   // Talents UI store
-  const activeTreeSlot = useTalentsUIStore((state) => state.activeTreeSlot);
   const selectedPrismId = useTalentsUIStore((state) => state.selectedPrismId);
-  const setActiveTreeSlot = useTalentsUIStore(
-    (state) => state.setActiveTreeSlot,
-  );
   const setSelectedPrismId = useTalentsUIStore(
     (state) => state.setSelectedPrismId,
   );
@@ -458,10 +463,11 @@ export const TalentsSection = () => {
                 : 0;
 
               return (
-                <button
-                  type="button"
+                <Link
                   key={slot}
-                  onClick={() => setActiveTreeSlot(slot)}
+                  to="/builder/talents/$slot"
+                  params={{ slot: treeSlotToParam(slot) }}
+                  search={{ id: currentSearch.id }}
                   className={`rounded-lg border px-4 py-3 font-medium transition-colors ${
                     activeTreeSlot === slot
                       ? "border-amber-500 bg-amber-500 text-zinc-950"
@@ -477,7 +483,7 @@ export const TalentsSection = () => {
                     {tree ? tree.name.replace(/_/g, " ") : "None"}
                   </div>
                   <div className="mt-1 text-xs">{totalPoints} points</div>
-                </button>
+                </Link>
               );
             })}
           </div>

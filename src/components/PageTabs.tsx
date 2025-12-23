@@ -1,104 +1,40 @@
-import type { ActivePage } from "../lib/types";
+import { Link, useRouterState } from "@tanstack/react-router";
 
-interface PageTabsProps {
-  activePage: ActivePage;
-  setActivePage: (page: ActivePage) => void;
-}
+const TABS = [
+  { path: "/builder/equipment", label: "Equipment" },
+  { path: "/builder/talents", label: "Talents" },
+  { path: "/builder/skills", label: "Skills" },
+  { path: "/builder/hero", label: "Hero" },
+  { path: "/builder/pactspirit", label: "Pactspirit" },
+  { path: "/builder/divinity", label: "Divinity" },
+  { path: "/builder/configuration", label: "Configuration" },
+  { path: "/builder/calculations", label: "Calculations" },
+] as const;
 
-export const PageTabs: React.FC<PageTabsProps> = ({
-  activePage,
-  setActivePage,
-}) => {
+export const PageTabs: React.FC = () => {
+  const routerState = useRouterState();
+  const currentPath = routerState.location.pathname;
+  const currentSearch = routerState.location.search as { id?: string };
+
   return (
     <div className="mb-8 flex gap-4 border-b border-zinc-800">
-      <button
-        type="button"
-        onClick={() => setActivePage("equipment")}
-        className={`px-6 py-3 font-medium transition-colors ${
-          activePage === "equipment"
-            ? "border-b-2 border-amber-500 text-amber-500"
-            : "text-zinc-400 hover:text-zinc-50"
-        }`}
-      >
-        Equipment
-      </button>
-      <button
-        type="button"
-        onClick={() => setActivePage("talents")}
-        className={`px-6 py-3 font-medium transition-colors ${
-          activePage === "talents"
-            ? "border-b-2 border-amber-500 text-amber-500"
-            : "text-zinc-400 hover:text-zinc-50"
-        }`}
-      >
-        Talents
-      </button>
-      <button
-        type="button"
-        onClick={() => setActivePage("skills")}
-        className={`px-6 py-3 font-medium transition-colors ${
-          activePage === "skills"
-            ? "border-b-2 border-amber-500 text-amber-500"
-            : "text-zinc-400 hover:text-zinc-50"
-        }`}
-      >
-        Skills
-      </button>
-      <button
-        type="button"
-        onClick={() => setActivePage("hero")}
-        className={`px-6 py-3 font-medium transition-colors ${
-          activePage === "hero"
-            ? "border-b-2 border-amber-500 text-amber-500"
-            : "text-zinc-400 hover:text-zinc-50"
-        }`}
-      >
-        Hero
-      </button>
-      <button
-        type="button"
-        onClick={() => setActivePage("pactspirit")}
-        className={`px-6 py-3 font-medium transition-colors ${
-          activePage === "pactspirit"
-            ? "border-b-2 border-amber-500 text-amber-500"
-            : "text-zinc-400 hover:text-zinc-50"
-        }`}
-      >
-        Pactspirit
-      </button>
-      <button
-        type="button"
-        onClick={() => setActivePage("divinity")}
-        className={`px-6 py-3 font-medium transition-colors ${
-          activePage === "divinity"
-            ? "border-b-2 border-amber-500 text-amber-500"
-            : "text-zinc-400 hover:text-zinc-50"
-        }`}
-      >
-        Divinity
-      </button>
-      <button
-        type="button"
-        onClick={() => setActivePage("configuration")}
-        className={`px-6 py-3 font-medium transition-colors ${
-          activePage === "configuration"
-            ? "border-b-2 border-amber-500 text-amber-500"
-            : "text-zinc-400 hover:text-zinc-50"
-        }`}
-      >
-        Configuration
-      </button>
-      <button
-        type="button"
-        onClick={() => setActivePage("calculations")}
-        className={`px-6 py-3 font-medium transition-colors ${
-          activePage === "calculations"
-            ? "border-b-2 border-amber-500 text-amber-500"
-            : "text-zinc-400 hover:text-zinc-50"
-        }`}
-      >
-        Calculations
-      </button>
+      {TABS.map((tab) => {
+        const isActive = currentPath.startsWith(tab.path);
+        return (
+          <Link
+            key={tab.path}
+            to={tab.path}
+            search={{ id: currentSearch.id }}
+            className={`px-6 py-3 font-medium transition-colors ${
+              isActive
+                ? "border-b-2 border-amber-500 text-amber-500"
+                : "text-zinc-400 hover:text-zinc-50"
+            }`}
+          >
+            {tab.label}
+          </Link>
+        );
+      })}
     </div>
   );
 };

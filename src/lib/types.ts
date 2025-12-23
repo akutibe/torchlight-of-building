@@ -4,6 +4,34 @@ export type GearSlot = keyof GearPage;
 
 export type TreeSlot = "tree1" | "tree2" | "tree3" | "tree4";
 
+export type TalentSlotParam = "slot_1" | "slot_2" | "slot_3" | "slot_4";
+export const TALENT_SLOT_PARAMS = [
+  "slot_1",
+  "slot_2",
+  "slot_3",
+  "slot_4",
+] as const;
+
+const PARAM_TO_TREE_SLOT: Record<TalentSlotParam, TreeSlot> = {
+  slot_1: "tree1",
+  slot_2: "tree2",
+  slot_3: "tree3",
+  slot_4: "tree4",
+};
+
+const TREE_SLOT_TO_PARAM: Record<TreeSlot, TalentSlotParam> = {
+  tree1: "slot_1",
+  tree2: "slot_2",
+  tree3: "slot_3",
+  tree4: "slot_4",
+};
+
+export const paramToTreeSlot = (param: TalentSlotParam): TreeSlot =>
+  PARAM_TO_TREE_SLOT[param];
+
+export const treeSlotToParam = (slot: TreeSlot): TalentSlotParam =>
+  TREE_SLOT_TO_PARAM[slot];
+
 export type ActivePage =
   | "equipment"
   | "talents"

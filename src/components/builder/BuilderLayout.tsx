@@ -5,7 +5,6 @@ import {
   loadDebugModeFromStorage,
   saveDebugModeToStorage,
 } from "../../lib/storage";
-import type { ActivePage } from "../../lib/types";
 import {
   useBuilderActions,
   useCurrentSaveId,
@@ -23,15 +22,9 @@ import { StatsPanel } from "./StatsPanel";
 
 interface BuilderLayoutProps {
   children: ReactNode;
-  activePage: ActivePage;
-  setActivePage: (page: ActivePage) => void;
 }
 
-export const BuilderLayout = ({
-  children,
-  activePage,
-  setActivePage,
-}: BuilderLayoutProps) => {
+export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
   const navigate = useNavigate();
 
   const currentSaveName = useCurrentSaveName();
@@ -178,7 +171,7 @@ export const BuilderLayout = ({
           </aside>
 
           <main className="min-w-0 flex-1">
-            <PageTabs activePage={activePage} setActivePage={setActivePage} />
+            <PageTabs />
 
             {children}
 
