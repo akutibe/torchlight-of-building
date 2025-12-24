@@ -3123,311 +3123,301 @@ describe("penetration", () => {
     return config;
   };
 
-  describe("resistance penetration", () => {
-    test("cold penetration counters cold resistance", () => {
-      // 30% resistance, 10% penetration -> effective 20% resistance
-      // 100 damage * (1 - 0.3 + 0.1) = 80
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        mods: [affix([{ type: "ResPenPct", value: 0.1, penType: "cold" }])],
-        configuration: createPenetrationConfig({ enemyRes: 0.3 }),
-      });
-      const results = calculateOffense(input);
-      // 100 * (1 - 0.3 + 0.1) = 80
-      validate(results, skillName, { avgHit: 80 });
-    });
-
-    test("elemental penetration applies to all elemental types", () => {
-      // 30% res, 10% elemental pen -> 20% effective res
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        mods: [
-          affix([{ type: "ResPenPct", value: 0.1, penType: "elemental" }]),
+  test("cold penetration counters cold resistance", () => {
+    // 30% resistance, 10% penetration -> effective 20% resistance
+    // 100 damage * (1 - 0.3 + 0.1) = 80
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
         ],
-        configuration: createPenetrationConfig({ enemyRes: 0.3 }),
-      });
-      const results = calculateOffense(input);
-      validate(results, skillName, { avgHit: 80 });
+      },
+      mods: [affix([{ type: "ResPenPct", value: 0.1, penType: "cold" }])],
+      configuration: createPenetrationConfig({ enemyRes: 0.3 }),
     });
-
-    test("all penetration applies to erosion", () => {
-      // erosion damage with "all" penetration
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "erosion",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        mods: [affix([{ type: "ResPenPct", value: 0.1, penType: "all" }])],
-        configuration: createPenetrationConfig({ enemyRes: 0.3 }),
-      });
-      const results = calculateOffense(input);
-      validate(results, skillName, { avgHit: 80 });
-    });
-
-    test("penetration stacks additively", () => {
-      // 30% res, 5% cold pen + 5% elemental pen = 10% total pen
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        mods: [
-          affix([{ type: "ResPenPct", value: 0.05, penType: "cold" }]),
-          affix([{ type: "ResPenPct", value: 0.05, penType: "elemental" }]),
-        ],
-        configuration: createPenetrationConfig({ enemyRes: 0.3 }),
-      });
-      const results = calculateOffense(input);
-      // 100 * (1 - 0.3 + 0.1) = 80
-      validate(results, skillName, { avgHit: 80 });
-    });
-
-    test("wrong penetration type does not apply", () => {
-      // cold damage with fire penetration - should not help
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        mods: [affix([{ type: "ResPenPct", value: 0.1, penType: "fire" }])],
-        configuration: createPenetrationConfig({ enemyRes: 0.3 }),
-      });
-      const results = calculateOffense(input);
-      // 100 * (1 - 0.3) = 70 (pen doesn't apply)
-      validate(results, skillName, { avgHit: 70 });
-    });
-
-    test("penetration exceeding resistance deals bonus damage", () => {
-      // 10% resistance, 30% penetration -> -20% effective resistance = 120% damage
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        mods: [affix([{ type: "ResPenPct", value: 0.3, penType: "cold" }])],
-        configuration: createPenetrationConfig({ enemyRes: 0.1 }),
-      });
-      const results = calculateOffense(input);
-      // 100 * (1 - 0.1 + 0.3) = 100 * 1.2 = 120
-      validate(results, skillName, { avgHit: 120 });
-    });
+    const results = calculateOffense(input);
+    // 100 * (1 - 0.3 + 0.1) = 80
+    validate(results, skillName, { avgHit: 80 });
   });
 
-  describe("armor damage mitigation", () => {
-    test("armor reduces physical damage", () => {
-      // Formula: armor / (0.9 * armor + 30000)
-      // With 27273 armor: 27273 / (0.9 * 27273 + 30000) = 27273 / 54545.7 ≈ 0.5 (50%)
-      const { input, skillName } = createInput({
-        configuration: createPenetrationConfig({ enemyArmor: 27273 }),
-      });
-      const results = calculateOffense(input);
-      // 100 phys * (1 - 0.5) = 50
-      validate(results, skillName, { avgHit: 50 });
+  test("elemental penetration applies to all elemental types", () => {
+    // 30% res, 10% elemental pen -> 20% effective res
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
+        ],
+      },
+      mods: [affix([{ type: "ResPenPct", value: 0.1, penType: "elemental" }])],
+      configuration: createPenetrationConfig({ enemyRes: 0.3 }),
     });
-
-    test("armor reduces non-physical damage at 60% rate", () => {
-      // Non-physical mitigation = physical mitigation * 0.6
-      // With 27273 armor: 50% phys reduction -> 30% non-phys reduction
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        configuration: createPenetrationConfig({
-          enemyArmor: 27273,
-          enemyRes: 0,
-        }),
-      });
-      const results = calculateOffense(input);
-      // 100 cold * (1 - 0.3) = 70
-      validate(results, skillName, { avgHit: 70 });
-    });
+    const results = calculateOffense(input);
+    validate(results, skillName, { avgHit: 80 });
   });
 
-  describe("armor penetration", () => {
-    test("armor penetration reduces physical damage mitigation", () => {
-      // 50% armor mitigation, 10% armor pen -> 40% effective mitigation
-      const { input, skillName } = createInput({
-        mods: [affix([{ type: "ArmorPenPct", value: 0.1 }])],
-        configuration: createPenetrationConfig({ enemyArmor: 27273 }),
-      });
-      const results = calculateOffense(input);
-      // 100 phys * (1 - 0.5 + 0.1) = 60
-      validate(results, skillName, { avgHit: 60 });
-    });
-
-    test("armor penetration reduces non-physical damage mitigation equally", () => {
-      // 30% non-phys armor mitigation, 10% armor pen -> 20% effective
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        mods: [affix([{ type: "ArmorPenPct", value: 0.1 }])],
-        configuration: createPenetrationConfig({
-          enemyArmor: 27273,
-          enemyRes: 0,
-        }),
-      });
-      const results = calculateOffense(input);
-      // 100 cold * (1 - 0.3 + 0.1) = 80
-      validate(results, skillName, { avgHit: 80 });
-    });
-
-    test("armor penetration stacks additively", () => {
-      // 50% armor mitigation, 5% + 5% armor pen -> 40% effective
-      const { input, skillName } = createInput({
-        mods: [
-          affix([{ type: "ArmorPenPct", value: 0.05 }]),
-          affix([{ type: "ArmorPenPct", value: 0.05 }]),
+  test("all penetration applies to erosion", () => {
+    // erosion damage with "all" penetration
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "erosion",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
         ],
-        configuration: createPenetrationConfig({ enemyArmor: 27273 }),
-      });
-      const results = calculateOffense(input);
-      // 100 phys * (1 - 0.5 + 0.1) = 60
-      validate(results, skillName, { avgHit: 60 });
+      },
+      mods: [affix([{ type: "ResPenPct", value: 0.1, penType: "all" }])],
+      configuration: createPenetrationConfig({ enemyRes: 0.3 }),
     });
+    const results = calculateOffense(input);
+    validate(results, skillName, { avgHit: 80 });
   });
 
-  describe("combined resistance and armor effects", () => {
-    test("elemental damage affected by both resistance and armor", () => {
-      // Cold damage: 30% resistance, 30% armor mitigation (non-phys at 60% of 50%)
-      // Damage = 100 * (1 - res) * (1 - armor_nonphys)
-      // Damage = 100 * (1 - 0.3) * (1 - 0.3) = 100 * 0.7 * 0.7 = 49
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        configuration: createPenetrationConfig({
-          enemyArmor: 27273,
-          enemyRes: 0.3,
-        }),
-      });
-      const results = calculateOffense(input);
-      // 100 * (1 - 0.3) * (1 - 0.3) = 49
-      validate(results, skillName, { avgHit: 49 });
-    });
-
-    test("penetration reduces both resistance and armor effects", () => {
-      // 30% res with 10% pen -> 20% res, 30% armor with 10% pen -> 20% armor
-      // Damage = 100 * (1 - 0.2) * (1 - 0.2) = 100 * 0.8 * 0.8 = 64
-      const { input, skillName } = createInput({
-        weapon: {
-          base_affixes: [
-            affix([
-              {
-                type: "FlatGearDmg",
-                modType: "cold",
-                value: { min: 100, max: 100 },
-              },
-              { type: "GearPhysDmgPct", value: -1 },
-            ]),
-          ],
-        },
-        mods: [
-          affix([{ type: "ResPenPct", value: 0.1, penType: "cold" }]),
-          affix([{ type: "ArmorPenPct", value: 0.1 }]),
+  test("penetration stacks additively", () => {
+    // 30% res, 5% cold pen + 5% elemental pen = 10% total pen
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
         ],
-        configuration: createPenetrationConfig({
-          enemyArmor: 27273,
-          enemyRes: 0.3,
-        }),
-      });
-      const results = calculateOffense(input);
-      // 100 * (1 - 0.3 + 0.1) * (1 - 0.3 + 0.1) = 100 * 0.8 * 0.8 = 64
-      validate(results, skillName, { avgHit: 64 });
+      },
+      mods: [
+        affix([{ type: "ResPenPct", value: 0.05, penType: "cold" }]),
+        affix([{ type: "ResPenPct", value: 0.05, penType: "elemental" }]),
+      ],
+      configuration: createPenetrationConfig({ enemyRes: 0.3 }),
     });
+    const results = calculateOffense(input);
+    // 100 * (1 - 0.3 + 0.1) = 80
+    validate(results, skillName, { avgHit: 80 });
+  });
 
-    test("physical damage only affected by armor, not resistance", () => {
-      // Physical damage should ignore elemental resistance
-      const { input, skillName } = createInput({
-        configuration: createPenetrationConfig({
-          enemyArmor: 27273,
-          enemyRes: 0.3,
-        }),
-      });
-      const results = calculateOffense(input);
-      // 100 phys * (1 - 0.5) = 50 (resistance doesn't apply)
-      validate(results, skillName, { avgHit: 50 });
+  test("wrong penetration type does not apply", () => {
+    // cold damage with fire penetration - should not help
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
+        ],
+      },
+      mods: [affix([{ type: "ResPenPct", value: 0.1, penType: "fire" }])],
+      configuration: createPenetrationConfig({ enemyRes: 0.3 }),
     });
+    const results = calculateOffense(input);
+    // 100 * (1 - 0.3) = 70 (pen doesn't apply)
+    validate(results, skillName, { avgHit: 70 });
+  });
+
+  test("penetration exceeding resistance deals bonus damage", () => {
+    // 10% resistance, 30% penetration -> -20% effective resistance = 120% damage
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
+        ],
+      },
+      mods: [affix([{ type: "ResPenPct", value: 0.3, penType: "cold" }])],
+      configuration: createPenetrationConfig({ enemyRes: 0.1 }),
+    });
+    const results = calculateOffense(input);
+    // 100 * (1 - 0.1 + 0.3) = 100 * 1.2 = 120
+    validate(results, skillName, { avgHit: 120 });
+  });
+
+  test("armor reduces physical damage", () => {
+    // Formula: armor / (0.9 * armor + 30000)
+    // With 27273 armor: 27273 / (0.9 * 27273 + 30000) = 27273 / 54545.7 ≈ 0.5 (50%)
+    const { input, skillName } = createInput({
+      configuration: createPenetrationConfig({ enemyArmor: 27273 }),
+    });
+    const results = calculateOffense(input);
+    // 100 phys * (1 - 0.5) = 50
+    validate(results, skillName, { avgHit: 50 });
+  });
+
+  test("armor reduces non-physical damage at 60% rate", () => {
+    // Non-physical mitigation = physical mitigation * 0.6
+    // With 27273 armor: 50% phys reduction -> 30% non-phys reduction
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
+        ],
+      },
+      configuration: createPenetrationConfig({
+        enemyArmor: 27273,
+        enemyRes: 0,
+      }),
+    });
+    const results = calculateOffense(input);
+    // 100 cold * (1 - 0.3) = 70
+    validate(results, skillName, { avgHit: 70 });
+  });
+
+  test("armor penetration reduces physical damage mitigation", () => {
+    // 50% armor mitigation, 10% armor pen -> 40% effective mitigation
+    const { input, skillName } = createInput({
+      mods: [affix([{ type: "ArmorPenPct", value: 0.1 }])],
+      configuration: createPenetrationConfig({ enemyArmor: 27273 }),
+    });
+    const results = calculateOffense(input);
+    // 100 phys * (1 - 0.5 + 0.1) = 60
+    validate(results, skillName, { avgHit: 60 });
+  });
+
+  test("armor penetration reduces non-physical damage mitigation equally", () => {
+    // 30% non-phys armor mitigation, 10% armor pen -> 20% effective
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
+        ],
+      },
+      mods: [affix([{ type: "ArmorPenPct", value: 0.1 }])],
+      configuration: createPenetrationConfig({
+        enemyArmor: 27273,
+        enemyRes: 0,
+      }),
+    });
+    const results = calculateOffense(input);
+    // 100 cold * (1 - 0.3 + 0.1) = 80
+    validate(results, skillName, { avgHit: 80 });
+  });
+
+  test("armor penetration stacks additively", () => {
+    // 50% armor mitigation, 5% + 5% armor pen -> 40% effective
+    const { input, skillName } = createInput({
+      mods: [
+        affix([{ type: "ArmorPenPct", value: 0.05 }]),
+        affix([{ type: "ArmorPenPct", value: 0.05 }]),
+      ],
+      configuration: createPenetrationConfig({ enemyArmor: 27273 }),
+    });
+    const results = calculateOffense(input);
+    // 100 phys * (1 - 0.5 + 0.1) = 60
+    validate(results, skillName, { avgHit: 60 });
+  });
+
+  test("elemental damage affected by both resistance and armor", () => {
+    // Cold damage: 30% resistance, 30% armor mitigation (non-phys at 60% of 50%)
+    // Damage = 100 * (1 - res) * (1 - armor_nonphys)
+    // Damage = 100 * (1 - 0.3) * (1 - 0.3) = 100 * 0.7 * 0.7 = 49
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
+        ],
+      },
+      configuration: createPenetrationConfig({
+        enemyArmor: 27273,
+        enemyRes: 0.3,
+      }),
+    });
+    const results = calculateOffense(input);
+    // 100 * (1 - 0.3) * (1 - 0.3) = 49
+    validate(results, skillName, { avgHit: 49 });
+  });
+
+  test("penetration reduces both resistance and armor effects", () => {
+    // 30% res with 10% pen -> 20% res, 30% armor with 10% pen -> 20% armor
+    // Damage = 100 * (1 - 0.2) * (1 - 0.2) = 100 * 0.8 * 0.8 = 64
+    const { input, skillName } = createInput({
+      weapon: {
+        base_affixes: [
+          affix([
+            {
+              type: "FlatGearDmg",
+              modType: "cold",
+              value: { min: 100, max: 100 },
+            },
+            { type: "GearPhysDmgPct", value: -1 },
+          ]),
+        ],
+      },
+      mods: [
+        affix([{ type: "ResPenPct", value: 0.1, penType: "cold" }]),
+        affix([{ type: "ArmorPenPct", value: 0.1 }]),
+      ],
+      configuration: createPenetrationConfig({
+        enemyArmor: 27273,
+        enemyRes: 0.3,
+      }),
+    });
+    const results = calculateOffense(input);
+    // 100 * (1 - 0.3 + 0.1) * (1 - 0.3 + 0.1) = 100 * 0.8 * 0.8 = 64
+    validate(results, skillName, { avgHit: 64 });
+  });
+
+  test("physical damage only affected by armor, not resistance", () => {
+    // Physical damage should ignore elemental resistance
+    const { input, skillName } = createInput({
+      configuration: createPenetrationConfig({
+        enemyArmor: 27273,
+        enemyRes: 0.3,
+      }),
+    });
+    const results = calculateOffense(input);
+    // 100 phys * (1 - 0.5) = 50 (resistance doesn't apply)
+    validate(results, skillName, { avgHit: 50 });
   });
 });
