@@ -557,3 +557,13 @@ test("parse armor dmg mitigation penetration with decimal", () => {
     },
   ]);
 });
+
+test("parse gear attack speed", () => {
+  const result = parseMod("+8% gear Attack Speed");
+  expect(result).toEqual([
+    {
+      type: "GearAspdPct",
+      value: 0.08,
+    },
+  ]);
+});

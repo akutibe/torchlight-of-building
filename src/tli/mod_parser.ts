@@ -549,6 +549,21 @@ const parseArmorPenPct = (
   return { type: "ArmorPenPct", value };
 };
 
+const parseGearAspdPct = (
+  input: string,
+): ModOfType<"GearAspdPct"> | undefined => {
+  // Regex to parse: +8% gear Attack Speed
+  const pattern = /^([+-])?(\d+(?:\.\d+)?)% gear attack speed$/i;
+  const match = input.match(pattern);
+
+  if (!match) {
+    return undefined;
+  }
+
+  const value = parseFloat(match[2]) / 100;
+  return { type: "GearAspdPct", value };
+};
+
 /**
  * Parses an affix line string and returns extracted mods.
  *
@@ -578,6 +593,7 @@ export const parseMod = (input: string): Mod[] | undefined => {
     parseAddsDmgAs,
     parseResPenPct,
     parseArmorPenPct,
+    parseGearAspdPct,
 
     // Defense parsers
     parseAttackBlockChancePct,
