@@ -48,7 +48,7 @@ export interface PerStackable {
   amt?: number; // default 1
 }
 
-export type Condition = "enemy_frostbitten";
+export type Condition = "enemy_frostbitten" | "realm_of_mercury";
 
 export type Mod =
   | {
@@ -345,6 +345,12 @@ export type Mod =
       value: number;
       per?: PerStackable;
       src?: string;
+    }
+  | {
+      type: "ManaBeforeLife";
+      value: number;
+      src?: string;
+      cond?: Condition;
     }
   | {
       type: "CoreTalent";
