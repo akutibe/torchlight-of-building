@@ -298,6 +298,12 @@ describe("basic damage modifiers", () => {
 });
 
 describe("fervor mechanics", () => {
+  const createFervorConfig = (fervor: { enabled: boolean; points: number }) => {
+    const config = createDefaultConfiguration();
+    config.fervor = fervor;
+    return config;
+  };
+
   test("calculate offense with fervor enabled default points", () => {
     // Base damage: 100
     // Fervor: 100 points * 2% = 200% increased crit rating
@@ -305,10 +311,7 @@ describe("fervor mechanics", () => {
     // Crit damage: 1.5 (default)
     // AvgHitWithCrit: 100 * 0.15 * 1.5 + 100 * 0.85 = 22.5 + 85 = 107.5
     const { input, skillName } = createInput({
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -325,10 +328,7 @@ describe("fervor mechanics", () => {
     // Crit damage: 1.5 (default)
     // AvgHitWithCrit: 100 * 0.10 * 1.5 + 100 * 0.90 = 15 + 90 = 105
     const { input, skillName } = createInput({
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 50 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 50 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -344,10 +344,7 @@ describe("fervor mechanics", () => {
     // Crit damage: 1.5 (default)
     // AvgHitWithCrit: 100 * 0.05 * 1.5 + 100 * 0.95 = 7.5 + 95 = 102.5
     const { input, skillName } = createInput({
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: false, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: false, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -371,10 +368,7 @@ describe("fervor mechanics", () => {
           affix([{ type: "CritRatingPct", value: 0.5, modType: "global" }]),
         ], // +50% crit rating
       },
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 25 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 25 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -394,10 +388,7 @@ describe("fervor mechanics", () => {
       weapon: {
         base_affixes: [affix([{ type: "FervorEff", value: 0.5 }])], // +50% fervor effectiveness
       },
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -419,10 +410,7 @@ describe("fervor mechanics", () => {
         base_affixes: [affix([{ type: "FervorEff", value: 0.1 }])], // +10% fervor effectiveness
       },
       talentMods: [affix([{ type: "FervorEff", value: 0.1 }])], // +10% fervor effectiveness
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -442,10 +430,7 @@ describe("fervor mechanics", () => {
       weapon: {
         base_affixes: [affix([{ type: "FervorEff", value: 1.0 }])], // +100% fervor effectiveness (doubles it)
       },
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 50 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 50 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -464,10 +449,7 @@ describe("fervor mechanics", () => {
       weapon: {
         base_affixes: [affix([{ type: "FervorEff", value: 0.5 }])], // +50% fervor effectiveness
       },
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: false, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: false, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -498,10 +480,7 @@ describe("fervor mechanics", () => {
           ]),
         ], // +0.5% crit dmg per fervor point
       },
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -544,10 +523,7 @@ describe("fervor mechanics", () => {
           },
         ]),
       ], // +0.3% per point
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -579,10 +555,7 @@ describe("fervor mechanics", () => {
           ]),
         ], // +1% crit dmg per fervor point
       },
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 50 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 50 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -612,10 +585,7 @@ describe("fervor mechanics", () => {
           ]),
         ], // +0.5% per point
       },
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: false, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: false, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -652,10 +622,7 @@ describe("fervor mechanics", () => {
           ]), // +30% increased
         ],
       },
-      configuration: {
-        ...createDefaultConfiguration(),
-        fervor: { enabled: true, points: 100 },
-      },
+      configuration: createFervorConfig({ enabled: true, points: 100 }),
     });
     const results = calculateOffense(input);
     validate(results, skillName, {
@@ -3017,14 +2984,17 @@ describe("shadow damage", () => {
   // Frost Spike at level 20: WeaponAtkDmgPct = 2.01
   // Base weapon 100 * 2.01 = 201 base damage
 
+  const createShadowConfig = (numShadowHits: number) => {
+    const config = createDefaultConfiguration();
+    config.numShadowHits = numShadowHits;
+    return config;
+  };
+
   test("shadow strike skill with 1 shadow hit doubles damage", () => {
     // 1 shadow hit = 100% additional damage (doubles the hit)
     const { input, skillName } = createInput({
       skill: "Frost Spike",
-      configuration: {
-        ...defaultConfiguration,
-        numShadowHits: 1,
-      },
+      configuration: createShadowConfig(1),
     });
     const results = calculateOffense(input);
     const actual = results[skillName as ImplementedActiveSkillName];
@@ -3039,10 +3009,7 @@ describe("shadow damage", () => {
     // 3 shadow hits: 1 + 0.3 + 0.09 = 1.39 total shadow damage ratio
     const { input, skillName } = createInput({
       skill: "Frost Spike",
-      configuration: {
-        ...defaultConfiguration,
-        numShadowHits: 3,
-      },
+      configuration: createShadowConfig(3),
     });
     const results = calculateOffense(input);
     const actual = results[skillName as ImplementedActiveSkillName];
@@ -3062,10 +3029,7 @@ describe("shadow damage", () => {
       mods: [
         affix([{ type: "ShadowDmgPct", value: 1.0, addn: false }]), // +100% shadow damage
       ],
-      configuration: {
-        ...defaultConfiguration,
-        numShadowHits: 3,
-      },
+      configuration: createShadowConfig(3),
     });
     const results = calculateOffense(input);
     const actual = results[skillName as ImplementedActiveSkillName];
@@ -3080,10 +3044,7 @@ describe("shadow damage", () => {
   test("zero shadow hits means no shadow damage bonus", () => {
     const { input, skillName } = createInput({
       skill: "Frost Spike",
-      configuration: {
-        ...defaultConfiguration,
-        numShadowHits: 0,
-      },
+      configuration: createShadowConfig(0),
     });
     const results = calculateOffense(input);
     const actual = results[skillName as ImplementedActiveSkillName];
@@ -3100,10 +3061,7 @@ describe("shadow damage", () => {
       mods: [
         affix([{ type: "ShadowDmgPct", value: 1.0, addn: false }]), // This should have no effect
       ],
-      configuration: {
-        ...defaultConfiguration,
-        numShadowHits: 3, // This should have no effect
-      },
+      configuration: createShadowConfig(3), // This should have no effect
     });
     const results = calculateOffense(input);
     const actual = results[skillName as ImplementedActiveSkillName];
@@ -3121,10 +3079,7 @@ describe("shadow damage", () => {
         affix([{ type: "DmgPct", value: 0.5, modType: "global", addn: false }]), // +50% damage
         affix([{ type: "ShadowDmgPct", value: 1.0, addn: false }]), // +100% shadow damage
       ],
-      configuration: {
-        ...defaultConfiguration,
-        numShadowHits: 3,
-      },
+      configuration: createShadowConfig(3),
     });
     const results = calculateOffense(input);
     const actual = results[skillName as ImplementedActiveSkillName];
