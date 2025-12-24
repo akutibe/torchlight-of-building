@@ -1,11 +1,9 @@
 import { useState } from "react";
+import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
 import type { PactspiritSlot } from "@/src/tli/core";
-import {
-  getPactspiritByName,
-  getPactspiritLevelAffix,
-} from "../../lib/pactspirit-utils";
+import { getPactspiritByName } from "../../lib/pactspirit-utils";
 import {
   type InstalledDestinyResult,
   type PactspiritSlotIndex,
@@ -43,11 +41,6 @@ export const PactspiritColumn: React.FC<PactspiritColumnProps> = ({
   const selectedPactspirit = slot
     ? getPactspiritByName(slot.pactspiritName)
     : undefined;
-
-  const levelAffix =
-    selectedPactspirit && slot
-      ? getPactspiritLevelAffix(selectedPactspirit, slot.level)
-      : "";
 
   const handleInstallClick = (ringSlot: RingSlotKey) => {
     setActiveRingSlot(ringSlot);
@@ -105,14 +98,22 @@ export const PactspiritColumn: React.FC<PactspiritColumnProps> = ({
       )}
 
       {/* Level Affix Display */}
-      {slot && selectedPactspirit && levelAffix && (
+      {slot && selectedPactspirit && slot.mainAffix.affixLines.length > 0 && (
         <div className="mb-4 bg-zinc-950 p-3 rounded-lg border border-zinc-800">
           <div className="text-sm font-medium text-amber-400 mb-1">
             Level {slot.level} Effect
           </div>
-          <div className="text-xs text-zinc-400 whitespace-pre-line">
-            {levelAffix}
-          </div>
+          <ul className="space-y-1">
+            {slot.mainAffix.affixLines.map((line, lineIdx) => (
+              <li
+                key={lineIdx}
+                className="text-xs text-zinc-400 flex items-center"
+              >
+                <span>{line.text}</span>
+                {line.mods === undefined && <ModNotImplementedIcon />}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

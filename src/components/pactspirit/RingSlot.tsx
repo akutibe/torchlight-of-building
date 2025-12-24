@@ -1,10 +1,11 @@
+import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
 import {
   Tooltip,
   TooltipContent,
   TooltipTitle,
 } from "@/src/components/ui/Tooltip";
 import { useTooltip } from "@/src/hooks/useTooltip";
-import { getAffixText, type RingSlotState } from "@/src/tli/core";
+import type { Affix, RingSlotState } from "@/src/tli/core";
 import { isInnerRing } from "../../lib/pactspirit-utils";
 import type { RingSlotKey } from "../../lib/types";
 
@@ -27,7 +28,7 @@ export const RingSlot: React.FC<RingSlotProps> = ({
   const isInner = isInnerRing(ringSlot);
 
   let displayName: string;
-  let displayAffix: string;
+  let displayAffix: Affix;
   let destinyType: string | undefined;
 
   if (hasDestiny && ringState.installedDestiny) {
@@ -38,10 +39,10 @@ export const RingSlot: React.FC<RingSlotProps> = ({
     } = ringState.installedDestiny;
     destinyType = dType;
     displayName = destinyName;
-    displayAffix = getAffixText(affix);
+    displayAffix = affix;
   } else {
     displayName = ringState.originalRingName;
-    displayAffix = getAffixText(ringState.originalAffix);
+    displayAffix = ringState.originalAffix;
   }
 
   return (
@@ -97,7 +98,19 @@ export const RingSlot: React.FC<RingSlotProps> = ({
             ? `${destinyType}: ${displayName}`
             : displayName}
         </TooltipTitle>
-        <TooltipContent>{displayAffix}</TooltipContent>
+        <TooltipContent>
+          <ul className="space-y-1">
+            {displayAffix.affixLines.map((line, lineIdx) => (
+              <li
+                key={lineIdx}
+                className="text-xs text-zinc-400 flex items-center"
+              >
+                <span>{line.text}</span>
+                {line.mods === undefined && <ModNotImplementedIcon />}
+              </li>
+            ))}
+          </ul>
+        </TooltipContent>
       </Tooltip>
     </div>
   );

@@ -1,6 +1,7 @@
+import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
 import { Tooltip, TooltipTitle } from "@/src/components/ui/Tooltip";
 import { useTooltip } from "@/src/hooks/useTooltip";
-import { getAffixText, type HeroMemory } from "@/src/tli/core";
+import type { HeroMemory } from "@/src/tli/core";
 
 interface HeroMemoryItemProps {
   memory: HeroMemory;
@@ -60,14 +61,17 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
         <TooltipTitle>{memory.memoryType}</TooltipTitle>
         {memory.affixes.length > 0 ? (
           <ul className="space-y-1">
-            {memory.affixes.map((affix, idx) => (
-              <li
-                key={idx}
-                className="text-xs text-zinc-400 whitespace-pre-wrap"
-              >
-                {getAffixText(affix)}
-              </li>
-            ))}
+            {memory.affixes.flatMap((affix, affixIdx) =>
+              affix.affixLines.map((line, lineIdx) => (
+                <li
+                  key={`${affixIdx}-${lineIdx}`}
+                  className="text-xs text-zinc-400 flex items-center"
+                >
+                  <span>{line.text}</span>
+                  {line.mods === undefined && <ModNotImplementedIcon />}
+                </li>
+              )),
+            )}
           </ul>
         ) : (
           <p className="text-xs text-zinc-500 italic">No affixes</p>

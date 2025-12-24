@@ -1,3 +1,4 @@
+import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
 import {
   Tooltip,
@@ -18,6 +19,57 @@ import {
   getTraitsForHeroAtLevel,
   MEMORY_SLOT_TYPE_MAP,
 } from "../../lib/hero-utils";
+
+const MemoryTooltipContent: React.FC<{ memory: HeroMemory }> = ({ memory }) => (
+  <>
+    <TooltipTitle>{memory.memoryType}</TooltipTitle>
+    <TooltipContent>
+      {memory.affixes.length > 0 ? (
+        <ul className="space-y-1">
+          {memory.affixes.flatMap((affix, affixIdx) =>
+            affix.affixLines.map((line, lineIdx) => (
+              <li
+                key={`${affixIdx}-${lineIdx}`}
+                className="text-xs text-zinc-400 flex items-center"
+              >
+                <span>{line.text}</span>
+                {line.mods === undefined && <ModNotImplementedIcon />}
+              </li>
+            )),
+          )}
+        </ul>
+      ) : (
+        <p className="text-xs text-zinc-500 italic">No affixes</p>
+      )}
+    </TooltipContent>
+  </>
+);
+
+interface MemoryOptionWithTooltipProps {
+  memory: HeroMemory;
+  label: string;
+}
+
+const MemoryOptionWithTooltip: React.FC<MemoryOptionWithTooltipProps> = ({
+  memory,
+  label,
+}) => {
+  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+
+  return (
+    <div ref={triggerRef} className="w-full">
+      <span>{label}</span>
+      <Tooltip
+        isVisible={isVisible}
+        triggerRect={triggerRect}
+        width="lg"
+        {...tooltipHandlers}
+      >
+        <MemoryTooltipContent memory={memory} />
+      </Tooltip>
+    </div>
+  );
+};
 
 interface TraitSelectorProps {
   heroPage: HeroPage;
@@ -138,6 +190,8 @@ const TraitRow = ({
     ? getCompatibleLoadoutMemoriesForSlot(heroMemoryList, slot)
     : [];
 
+  const memoryById = new Map(compatibleMemories.map((m) => [m.id, m]));
+
   return (
     <div className="bg-zinc-800 rounded-lg p-4">
       <div className="flex items-start gap-4">
@@ -159,6 +213,30 @@ const TraitRow = ({
               })}
               placeholder="No memory"
               size="sm"
+              renderOption={(option) => {
+                const memory = memoryById.get(option.value);
+                if (memory === undefined) return <span>{option.label}</span>;
+                return (
+                  <MemoryOptionWithTooltip
+                    memory={memory}
+                    label={option.label}
+                  />
+                );
+              }}
+              renderSelectedTooltip={(option, triggerRect, tooltipHandlers) => {
+                const memory = memoryById.get(option.value);
+                if (memory === undefined) return null;
+                return (
+                  <Tooltip
+                    isVisible={true}
+                    triggerRect={triggerRect}
+                    width="lg"
+                    {...tooltipHandlers}
+                  >
+                    <MemoryTooltipContent memory={memory} />
+                  </Tooltip>
+                );
+              }}
             />
           </div>
         )}
