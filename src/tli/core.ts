@@ -43,14 +43,14 @@ export interface DmgRange {
 export interface Configuration {
   fervorEnabled: boolean;
   // default to max
-  fervorPoints?: number;
+  fervorPoints: number | undefined;
   enemyFrostbittenEnabled: boolean;
   // default to 100
-  enemyFrostbittenPoints?: number;
+  enemyFrostbittenPoints: number | undefined;
   // default to max
-  crueltyBuffStacks?: number;
+  crueltyBuffStacks: number | undefined;
   // default to max
-  numShadowHits?: number;
+  numShadowHits: number | undefined;
 
   // --------------------
   // hero-specific config
@@ -63,9 +63,9 @@ export interface Configuration {
   // ------------
 
   // default to .5
-  enemyRes?: number;
+  enemyRes: number | undefined;
   // default to 27273 (effective phys dmg mitigation of 50%)
-  enemyArmor?: number;
+  enemyArmor: number | undefined;
 }
 
 export interface Gear {

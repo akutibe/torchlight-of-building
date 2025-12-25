@@ -4,7 +4,6 @@ import { useMemo, useRef } from "react";
 import type { Configuration, Loadout, TalentTree } from "@/src/tli/core";
 import { loadSave } from "@/src/tli/storage/load-save";
 import type { SavesIndex } from "../../lib/saves";
-import { createEmptyConfigurationPage } from "../../lib/storage";
 import type { TreeSlot } from "../../lib/types";
 import { internalStore } from "./internal";
 
@@ -68,19 +67,16 @@ export const useConfigurationPage = () =>
 
 export const useConfiguration = (): Configuration => {
   const configPage = internalStore((state) => state.saveData.configurationPage);
-  const defaults = createEmptyConfigurationPage();
 
   return {
-    fervorEnabled: configPage?.fervorEnabled ?? defaults.fervorEnabled,
-    fervorPoints: configPage?.fervorPoints,
-    enemyFrostbittenEnabled:
-      configPage?.enemyFrostbittenEnabled ?? defaults.enemyFrostbittenEnabled,
-    enemyFrostbittenPoints: configPage?.enemyFrostbittenPoints,
-    crueltyBuffStacks:
-      configPage?.crueltyBuffStacks ?? defaults.crueltyBuffStacks,
-    enemyRes: configPage?.enemyRes,
-    enemyArmor: configPage?.enemyArmor,
-    realmOfMercuryEnabled:
-      configPage?.realmOfMercuryEnabled ?? defaults.realmOfMercuryEnabled,
+    fervorEnabled: configPage.fervorEnabled,
+    fervorPoints: configPage.fervorPoints,
+    enemyFrostbittenEnabled: configPage.enemyFrostbittenEnabled,
+    enemyFrostbittenPoints: configPage.enemyFrostbittenPoints,
+    crueltyBuffStacks: configPage.crueltyBuffStacks,
+    numShadowHits: configPage.numShadowHits,
+    realmOfMercuryEnabled: configPage.realmOfMercuryEnabled,
+    enemyRes: configPage.enemyRes,
+    enemyArmor: configPage.enemyArmor,
   };
 };

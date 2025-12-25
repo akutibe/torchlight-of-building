@@ -62,9 +62,14 @@ export const createEmptyCalculationsPage = (): CalculationsPage => ({
 
 export const createEmptyConfigurationPage = (): ConfigurationPage => ({
   fervorEnabled: false,
+  fervorPoints: undefined,
   enemyFrostbittenEnabled: false,
+  enemyFrostbittenPoints: undefined,
   crueltyBuffStacks: 40,
+  numShadowHits: undefined,
   realmOfMercuryEnabled: false,
+  enemyRes: undefined,
+  enemyArmor: undefined,
 });
 
 export const createEmptySkillPage = (): SkillPage => ({

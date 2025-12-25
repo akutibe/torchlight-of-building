@@ -15,10 +15,14 @@ type DmgPctMod = Extract<Mod, { type: "DmgPct" }>;
 
 const createDefaultConfiguration = (): Configuration => ({
   fervorEnabled: false,
+  fervorPoints: undefined,
   enemyFrostbittenEnabled: false,
-  enemyArmor: 0,
-  enemyRes: 0,
+  enemyFrostbittenPoints: undefined,
+  crueltyBuffStacks: undefined,
+  numShadowHits: undefined,
   realmOfMercuryEnabled: false,
+  enemyRes: 0,
+  enemyArmor: 0,
 });
 
 // Helper to create Affix objects from mods for tests
@@ -2133,7 +2137,10 @@ describe("resolveBuffSkillMods", () => {
         enemyFrostbittenEnabled: false,
         enemyFrostbittenPoints: 0,
         crueltyBuffStacks: 40,
+        numShadowHits: undefined,
         realmOfMercuryEnabled: false,
+        enemyRes: undefined,
+        enemyArmor: undefined,
       },
     });
     const actual = results["[Test] Simple Attack"];
