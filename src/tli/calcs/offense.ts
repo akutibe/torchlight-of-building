@@ -1306,7 +1306,7 @@ const resolveModsForSkill = (
     ]),
     config,
   );
-  let mods = filterOutPerMods(prenormMods);
+  const mods = filterOutPerMods(prenormMods);
 
   const stats = calculateStats(prenormMods);
   const totalMainStats = calculateTotalMainStats(skill, stats);
