@@ -41,6 +41,7 @@ export interface DmgRange {
 }
 
 export interface Configuration {
+  level: number;
   fervorEnabled: boolean;
   // default to max
   fervorPoints: number | undefined;

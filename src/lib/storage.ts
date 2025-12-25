@@ -61,6 +61,7 @@ export const createEmptyCalculationsPage = (): CalculationsPage => ({
 });
 
 export const createEmptyConfigurationPage = (): ConfigurationPage => ({
+  level: 95,
   fervorEnabled: false,
   fervorPoints: undefined,
   enemyFrostbittenEnabled: false,
@@ -118,3 +119,27 @@ export const createEmptySaveData = (): SaveData => ({
   configurationPage: createEmptyConfigurationPage(),
   calculationsPage: createEmptyCalculationsPage(),
 });
+
+export const mergeSaveDataWithDefaults = (data: SaveData): SaveData => {
+  const defaults = createEmptySaveData();
+  return {
+    ...defaults,
+    ...data,
+    configurationPage: {
+      ...defaults.configurationPage,
+      ...data.configurationPage,
+    },
+    heroPage: {
+      ...defaults.heroPage,
+      ...data.heroPage,
+    },
+    pactspiritPage: {
+      ...defaults.pactspiritPage,
+      ...data.pactspiritPage,
+    },
+    calculationsPage: {
+      ...defaults.calculationsPage,
+      ...data.calculationsPage,
+    },
+  };
+};

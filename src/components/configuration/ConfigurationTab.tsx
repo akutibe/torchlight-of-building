@@ -83,6 +83,22 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
 
       <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
         <div className="grid w-fit grid-cols-[auto_auto] items-center gap-x-3 gap-y-2">
+          <label className="text-right text-zinc-50">Level</label>
+          <input
+            type="number"
+            value={config.level}
+            onChange={(e) => {
+              const parsed = Number(e.target.value);
+              if (!Number.isNaN(parsed)) {
+                const clamped = Math.max(1, Math.min(100, parsed));
+                onUpdate({ level: clamped });
+              }
+            }}
+            min={1}
+            max={100}
+            className="w-14 rounded border border-zinc-700 bg-zinc-800 px-2 py-0.5 text-center text-sm text-zinc-50 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500/30"
+          />
+
           <label className="text-right text-zinc-50">Fervor</label>
           <input
             type="checkbox"

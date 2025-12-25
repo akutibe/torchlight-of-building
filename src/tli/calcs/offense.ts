@@ -1370,12 +1370,22 @@ const resolveModsForSkill = (
   return mods;
 };
 
+interface ResourcePool {
+  maxMana: number;
+}
+
+const calculateResourcePool = (
+  mods: Mod[],
+  loadout: Loadout,
+  config: Configuration,
+) => {};
+
 // Calculates offense for all enabled implemented skills
 export const calculateOffense = (input: OffenseInput): OffenseResults => {
   const { loadout, configuration } = input;
   const loadoutMods = collectMods(loadout);
 
-  const prenormMods = [
+  const unresolvedLoadoutAndBuffMods = [
     ...loadoutMods,
     ...resolveBuffSkillMods(loadout, loadoutMods, configuration),
   ];
@@ -1393,7 +1403,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
     }
 
     const mods = resolveModsForSkill(
-      [...prenormMods, ...perSkillContext.mods],
+      [...unresolvedLoadoutAndBuffMods, ...perSkillContext.mods],
       perSkillContext.skill,
       loadout,
       configuration,

@@ -69,6 +69,7 @@ export const useConfiguration = (): Configuration => {
   const configPage = internalStore((state) => state.saveData.configurationPage);
 
   return {
+    level: configPage.level,
     fervorEnabled: configPage.fervorEnabled,
     fervorPoints: configPage.fervorPoints,
     enemyFrostbittenEnabled: configPage.enemyFrostbittenEnabled,

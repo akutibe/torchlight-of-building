@@ -1,5 +1,6 @@
 import { deflateSync, inflateSync, strFromU8, strToU8 } from "fflate";
 import type { SaveData } from "./save-data";
+import { mergeSaveDataWithDefaults } from "./storage";
 
 const BUILD_CODE_VERSION = 1;
 
@@ -53,7 +54,7 @@ export const decodeBuildCode = (code: string): SaveData | null => {
     if (!parsed.d.equipmentPage || !parsed.d.talentPage || !parsed.d.skillPage)
       return null;
 
-    return parsed.d;
+    return mergeSaveDataWithDefaults(parsed.d);
   } catch (error) {
     console.error("Failed to decode build code:", error);
     return null;

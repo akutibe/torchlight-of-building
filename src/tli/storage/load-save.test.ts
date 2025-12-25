@@ -55,6 +55,7 @@ const createMinimalSaveData = (
   },
   divinityPage: { placedSlates: [], inventory: [] },
   configurationPage: {
+    level: 95,
     fervorEnabled: false,
     fervorPoints: undefined,
     enemyFrostbittenEnabled: false,

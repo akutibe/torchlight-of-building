@@ -14,6 +14,7 @@ import type { OffenseSkillName } from "./skill_confs";
 type DmgPctMod = Extract<Mod, { type: "DmgPct" }>;
 
 const createDefaultConfiguration = (): Configuration => ({
+  level: 95,
   fervorEnabled: false,
   fervorPoints: undefined,
   enemyFrostbittenEnabled: false,
@@ -2132,6 +2133,7 @@ describe("resolveBuffSkillMods", () => {
     const results = calculateOffense({
       loadout,
       configuration: {
+        level: 95,
         fervorEnabled: false,
         fervorPoints: 0,
         enemyFrostbittenEnabled: false,
