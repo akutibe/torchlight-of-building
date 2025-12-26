@@ -31,5 +31,13 @@
     "parser": {
       "tailwindDirectives": true
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["src/tli/mod_parser/templates.ts"],
+      "formatter": {
+        "lineWidth": 120
+      }
+    }
+  ]
 }

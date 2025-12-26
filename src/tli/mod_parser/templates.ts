@@ -3,24 +3,18 @@ import type { Mod, PerStackable, ResPenType } from "../mod";
 import { StatWordMapping } from "./enums";
 import { spec, t } from "./template";
 
-const coreTalentNameSet = new Set(
-  CoreTalentNames.map((name) => name.toLowerCase()),
-);
+const coreTalentNameSet = new Set(CoreTalentNames.map((name) => name.toLowerCase()));
 
 export const allParsers = [
   // Core talent names - matches exact talent name
   {
     parse(input: string): Mod[] | undefined {
       if (!coreTalentNameSet.has(input)) return undefined;
-      const name = CoreTalentNames.find(
-        (n) => n.toLowerCase() === input,
-      ) as CoreTalentName;
+      const name = CoreTalentNames.find((n) => n.toLowerCase() === input) as CoreTalentName;
       return [{ type: "CoreTalent", name }];
     },
   },
-  t(
-    "{aspd:dec%} gear attack speed. {dmg:dec%} additional attack damage",
-  ).outputMany([
+  t("{aspd:dec%} gear attack speed. {dmg:dec%} additional attack damage").outputMany([
     spec("GearAspdPct", (c) => ({ value: c.aspd })),
     spec("DmgPct", (c) => ({
       value: c.dmg,
@@ -58,9 +52,7 @@ export const allParsers = [
     }),
   ]),
 
-  t(
-    "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks and spells",
-  ).outputMany([
+  t("adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks and spells").outputMany([
     spec("FlatDmgToAtks", (c) => ({
       value: { min: c.min, max: c.max },
       dmgType: c.dmgType,
@@ -99,9 +91,7 @@ export const allParsers = [
     }),
   ]),
 
-  t(
-    "{value:dec%} critical strike rating and critical strike damage",
-  ).outputMany([
+  t("{value:dec%} critical strike rating and critical strike damage").outputMany([
     spec("CritRatingPct", (c) => ({
       value: c.value,
       modType: "global" as const,
@@ -113,62 +103,49 @@ export const allParsers = [
     })),
   ]),
 
-  t(
-    "{value:dec%} {modType:DmgModType} damage for every {amt:int} mana consumed recently, up to {limit:dec%}",
-  ).output("DmgPct", (c) => {
-    const per: PerStackable = {
-      stackable: "mana_consumed_recently",
-      amt: c.amt,
-      valueLimit: c.limit,
-    };
-    return {
-      value: c.value,
-      modType: c.modType,
-      addn: false,
-      per,
-    };
-  }),
-
-  t("{value:dec%} [additional] [{modType:DmgModType}] damage").output(
+  t("{value:dec%} {modType:DmgModType} damage for every {amt:int} mana consumed recently, up to {limit:dec%}").output(
     "DmgPct",
-    (c) => ({
-      value: c.value,
-      modType: c.modType ?? "global",
-      addn: c.additional !== undefined,
-    }),
+    (c) => {
+      const per: PerStackable = {
+        stackable: "mana_consumed_recently",
+        amt: c.amt,
+        valueLimit: c.limit,
+      };
+      return {
+        value: c.value,
+        modType: c.modType,
+        addn: false,
+        per,
+      };
+    },
   ),
 
-  t("{value:dec%} [{modType:CritRatingModType}] critical strike rating").output(
-    "CritRatingPct",
-    (c) => ({
-      value: c.value,
-      modType: c.modType ?? "global",
-    }),
-  ),
+  t("{value:dec%} [additional] [{modType:DmgModType}] damage").output("DmgPct", (c) => ({
+    value: c.value,
+    modType: c.modType ?? "global",
+    addn: c.additional !== undefined,
+  })),
 
-  t(
-    "{value:dec%} [additional] [{modType:CritDmgModType}] critical strike damage",
-  ).output("CritDmgPct", (c) => ({
+  t("{value:dec%} [{modType:CritRatingModType}] critical strike rating").output("CritRatingPct", (c) => ({
+    value: c.value,
+    modType: c.modType ?? "global",
+  })),
+
+  t("{value:dec%} [additional] [{modType:CritDmgModType}] critical strike damage").output("CritDmgPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,
     modType: c.modType ?? "global",
   })),
 
-  t("{value:dec%} [additional] minion attack and cast speed").output(
-    "MinionAspdAndCspdPct",
-    (c) => ({
-      value: c.value,
-      addn: c.additional !== undefined,
-    }),
-  ),
+  t("{value:dec%} [additional] minion attack and cast speed").output("MinionAspdAndCspdPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+  })),
 
-  t("{value:dec%} [additional] attack and cast speed").output(
-    "AspdAndCspdPct",
-    (c) => ({
-      value: c.value,
-      addn: c.additional !== undefined,
-    }),
-  ),
+  t("{value:dec%} [additional] attack and cast speed").output("AspdAndCspdPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+  })),
 
   t("{value:dec%} [additional] attack speed").output("AspdPct", (c) => ({
     value: c.value,
@@ -205,21 +182,16 @@ export const allParsers = [
     addn: c.additional !== undefined,
   })),
 
-  t(
-    "adds {value:dec%} of {from:DmgChunkType} damage (to|as) {to:DmgChunkType} damage",
-  ).output("AddsDmgAs", (c) => ({
+  t("adds {value:dec%} of {from:DmgChunkType} damage (to|as) {to:DmgChunkType} damage").output("AddsDmgAs", (c) => ({
     from: c.from,
     to: c.to,
     value: c.value,
   })),
 
-  t("{value:dec%} elemental and erosion resistance penetration").output(
-    "ResPenPct",
-    (c) => ({
-      value: c.value,
-      penType: "all" as const,
-    }),
-  ),
+  t("{value:dec%} elemental and erosion resistance penetration").output("ResPenPct", (c) => ({
+    value: c.value,
+    penType: "all" as const,
+  })),
 
   t("{value:dec%} (elemental|erosion) resistance penetration")
     .capture("penType", (m) => m[2].toLowerCase() as "elemental" | "erosion")
@@ -229,39 +201,26 @@ export const allParsers = [
     })),
 
   t("{value:dec%} (cold|lightning|fire) penetration")
-    .capture(
-      "penType",
-      (m) => m[2].toLowerCase() as "cold" | "lightning" | "fire",
-    )
+    .capture("penType", (m) => m[2].toLowerCase() as "cold" | "lightning" | "fire")
     .output("ResPenPct", (c) => ({
       value: c.value,
       penType: c.penType as ResPenType,
     })),
 
-  t("{value:dec%} armor dmg mitigation penetration").output(
-    "ArmorPenPct",
-    (c) => ({
-      value: c.value,
-    }),
-  ),
+  t("{value:dec%} armor dmg mitigation penetration").output("ArmorPenPct", (c) => ({
+    value: c.value,
+  })),
 
-  t("{value:dec%} chance to deal double damage").output(
-    "DoubleDmgChancePct",
-    (c) => ({
-      value: c.value,
-    }),
-  ),
+  t("{value:dec%} chance to deal double damage").output("DoubleDmgChancePct", (c) => ({
+    value: c.value,
+  })),
 
-  t(
-    "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks",
-  ).output("FlatDmgToAtks", (c) => ({
+  t("adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks").output("FlatDmgToAtks", (c) => ({
     value: { min: c.min, max: c.max },
     dmgType: c.dmgType,
   })),
 
-  t(
-    "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to spells",
-  ).output("FlatDmgToSpells", (c) => ({
+  t("adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to spells").output("FlatDmgToSpells", (c) => ({
     value: { min: c.min, max: c.max },
     dmgType: c.dmgType,
   })),
@@ -299,12 +258,9 @@ export const allParsers = [
     value: c.value,
   })),
 
-  t("{value:dec%} energy shield regain").output(
-    "EnergyShieldRegainPct",
-    (c) => ({
-      value: c.value,
-    }),
-  ),
+  t("{value:dec%} energy shield regain").output("EnergyShieldRegainPct", (c) => ({
+    value: c.value,
+  })),
 
   t("{value:dec%} life regain").output("LifeRegainPct", (c) => ({
     value: c.value,
