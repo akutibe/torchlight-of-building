@@ -911,6 +911,8 @@ const normalizeStackables = (
     .filter((mod) => mod !== undefined);
 };
 
+const hasValue = (mod: Mod): mod is ModWithValue => "value" in mod;
+
 const normalizeStackable = <T extends Mod>(
   mod: T,
   stackable: Stackable,
@@ -924,6 +926,10 @@ const normalizeStackable = <T extends Mod>(
     return undefined;
   }
 
+  if (!hasValue(mod)) {
+    return undefined;
+  }
+
   const div = mod.per.amt || 1;
   const mult = Math.min(stacks / div, mod.per.limit ?? Infinity);
   const newModValue = multValue(mod.value, mult);
@@ -931,12 +937,12 @@ const normalizeStackable = <T extends Mod>(
     return {
       ...mod,
       value: Math.min(newModValue, mod.per.valueLimit),
-    };
+    } as T;
   } else {
     return {
       ...mod,
       value: newModValue,
-    };
+    } as T;
   }
 };
 

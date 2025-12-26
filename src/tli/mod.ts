@@ -36,6 +36,7 @@ export type Stackable =
   | "cruelty_buff"
   | "fervor"
   | "max_mana"
+  | "mana_consumed_recently"
   | "mercury_pt";
 
 export type StatType = "str" | "dex" | "int";
@@ -54,349 +55,94 @@ export interface PerStackable {
 
 export type Condition = "enemy_frostbitten" | "realm_of_mercury";
 
-export type Mod =
-  | {
-      type: "DmgPct";
-      value: number;
-      modType: DmgModType;
-      addn: boolean;
-      per?: PerStackable;
-      cond?: Condition;
-      src?: string;
-    }
-  | {
-      type: "FlatDmgToAtks";
-      value: DmgRange;
-      dmgType: DmgChunkType;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "FlatDmgToAtksAndSpells";
-      value: DmgRange;
-      dmgType: DmgChunkType;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "FlatDmgToSpells";
-      value: DmgRange;
-      dmgType: DmgChunkType;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "CritRatingPct";
-      value: number;
-      modType: CritRatingModType;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "CritDmgPct";
-      value: number;
-      addn: boolean;
-      modType: CritDmgModType;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "AspdPct";
-      value: number;
-      addn: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "CspdPct";
-      value: number;
-      addn: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "AspdAndCspdPct";
-      value: number;
-      addn: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "MinionAspdAndCspdPct";
-      value: number;
-      addn: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "DblDmg";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "DoubleDmgChancePct";
-      value: number;
-      src?: string;
-    }
-  | {
-      type: "Stat";
-      value: number;
-      statType: StatType;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "StatPct";
-      value: number;
-      statType: StatType;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "FervorEff";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "SteepStrikeChance";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "SteepStrikeDmg";
-      value: number;
-      addn: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "SweepSlashDmg";
-      value: number;
-      addn: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "Fervor";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "AddnMainHandDmgPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "GearAspdPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "FlatGearDmg";
-      value: DmgRange;
-      modType:
-        | "physical"
-        | "cold"
-        | "lightning"
-        | "fire"
-        | "erosion"
-        | "elemental";
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "GearPhysDmgPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "AttackBlockChancePct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "SpellBlockChancePct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "MaxLifePct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "MaxEnergyShieldPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "ArmorPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "EvasionPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "LifeRegainPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "EnergyShieldRegainPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "MultistrikeChancePct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "ConvertDmgPct";
-      from: DmgChunkType;
-      to: DmgChunkType;
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "AddsDmgAs";
-      from: DmgChunkType;
-      to: DmgChunkType;
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "MaxWillpowerStacks";
-      value: number;
-      src?: string;
-    }
-  | {
-      type: "ShadowQuant";
-      value: number;
-      src?: string;
-    }
-  | {
-      type: "ShadowDmgPct";
-      value: number;
-      addn: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "Projectile";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "MaxProjectile";
-      value: number;
-      src?: string;
-      override?: boolean;
-    }
-  | {
-      type: "SkillEffPct";
-      value: number;
-      addn?: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "AuraEffPct";
-      value: number;
-      addn?: boolean;
-      src?: string;
-      unscalable?: boolean;
-    }
-  | {
-      type: "SealedManaCompPct";
-      value: number;
-      addn?: boolean;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "ResPenPct";
-      value: number;
-      penType: ResPenType;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "ArmorPenPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "ManaBeforeLife";
-      value: number;
-      src?: string;
-      cond?: Condition;
-    }
-  | {
-      type: "SpellDmgBonusAppliesToAtkDmg";
-      src?: string;
-    }
-  | {
-      type: "MaxMana";
-      value: number;
-      src?: string;
-    }
-  | {
-      type: "MaxManaPct";
-      value: number;
-      addn: boolean;
-      src?: string;
-    }
-  | {
-      type: "MercuryBaptism";
-      value: number;
-      cond?: Condition;
-      src?: string;
-    }
-  | {
-      type: "MaxMercuryPtsPct";
-      value: number;
-      per?: PerStackable;
-      src?: string;
-    }
-  | {
-      type: "CoreTalent";
-      name:
-        | "Last Stand"
-        | "Dirty Tricks"
-        | "Centralize"
-        | "Tenacity"
-        | "Hidden Mastery"
-        | "Formless"
-        | "Tradeoff"
-        | "Unmatched Valor";
-      src?: string;
-    };
+// Common fields automatically added to all mod types
+interface ModBase {
+  per?: PerStackable;
+  cond?: Condition;
+  src?: string;
+}
 
-export type ModOfType<T> = Extract<Mod, { type: T }>;
+// Unique fields for each mod type (excluding type, per, cond, src)
+interface ModDefinitions {
+  DmgPct: { value: number; modType: DmgModType; addn: boolean };
+  FlatDmgToAtks: { value: DmgRange; dmgType: DmgChunkType };
+  FlatDmgToAtksAndSpells: { value: DmgRange; dmgType: DmgChunkType };
+  FlatDmgToSpells: { value: DmgRange; dmgType: DmgChunkType };
+  CritRatingPct: { value: number; modType: CritRatingModType };
+  CritDmgPct: { value: number; addn: boolean; modType: CritDmgModType };
+  AspdPct: { value: number; addn: boolean };
+  CspdPct: { value: number; addn: boolean };
+  AspdAndCspdPct: { value: number; addn: boolean };
+  MinionAspdAndCspdPct: { value: number; addn: boolean };
+  DblDmg: { value: number };
+  DoubleDmgChancePct: { value: number };
+  Stat: { value: number; statType: StatType };
+  StatPct: { value: number; statType: StatType };
+  FervorEff: { value: number };
+  SteepStrikeChance: { value: number };
+  SteepStrikeDmg: { value: number; addn: boolean };
+  SweepSlashDmg: { value: number; addn: boolean };
+  Fervor: { value: number };
+  AddnMainHandDmgPct: { value: number };
+  GearAspdPct: { value: number };
+  FlatGearDmg: {
+    value: DmgRange;
+    modType:
+      | "physical"
+      | "cold"
+      | "lightning"
+      | "fire"
+      | "erosion"
+      | "elemental";
+  };
+  GearPhysDmgPct: { value: number };
+  AttackBlockChancePct: { value: number };
+  SpellBlockChancePct: { value: number };
+  MaxLifePct: { value: number };
+  MaxEnergyShieldPct: { value: number };
+  ArmorPct: { value: number };
+  EvasionPct: { value: number };
+  LifeRegainPct: { value: number };
+  EnergyShieldRegainPct: { value: number };
+  MultistrikeChancePct: { value: number };
+  ConvertDmgPct: { from: DmgChunkType; to: DmgChunkType; value: number };
+  AddsDmgAs: { from: DmgChunkType; to: DmgChunkType; value: number };
+  MaxWillpowerStacks: { value: number };
+  ShadowQuant: { value: number };
+  ShadowDmgPct: { value: number; addn: boolean };
+  Projectile: { value: number };
+  MaxProjectile: { value: number; override?: boolean };
+  SkillEffPct: { value: number; addn?: boolean };
+  AuraEffPct: { value: number; addn?: boolean; unscalable?: boolean };
+  SealedManaCompPct: { value: number; addn?: boolean };
+  ResPenPct: { value: number; penType: ResPenType };
+  ArmorPenPct: { value: number };
+  ManaBeforeLife: { value: number };
+  // biome-ignore lint/complexity/noBannedTypes: no unique fields
+  SpellDmgBonusAppliesToAtkDmg: {};
+  MaxMana: { value: number };
+  MaxManaPct: { value: number; addn: boolean };
+  MercuryBaptism: { value: number };
+  MaxMercuryPtsPct: { value: number };
+  CoreTalent: {
+    name:
+      | "Last Stand"
+      | "Dirty Tricks"
+      | "Centralize"
+      | "Tenacity"
+      | "Hidden Mastery"
+      | "Formless"
+      | "Tradeoff"
+      | "Unmatched Valor";
+  };
+}
 
-// Compile-time check: all Mod variants must have src?: string
-type _AssertAllModsHaveSrc = Mod["src"];
+// Generate the Mod union type from ModDefinitions
+export type Mod = {
+  [K in keyof ModDefinitions]: { type: K } & ModDefinitions[K] & ModBase;
+}[keyof ModDefinitions];
+
+export type ModOfType<T extends keyof ModDefinitions> = Extract<
+  Mod,
+  { type: T }
+>;
