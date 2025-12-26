@@ -66,7 +66,6 @@ interface ModBase {
 interface ModDefinitions {
   DmgPct: { value: number; modType: DmgModType; addn: boolean };
   FlatDmgToAtks: { value: DmgRange; dmgType: DmgChunkType };
-  FlatDmgToAtksAndSpells: { value: DmgRange; dmgType: DmgChunkType };
   FlatDmgToSpells: { value: DmgRange; dmgType: DmgChunkType };
   CritRatingPct: { value: number; modType: CritRatingModType };
   CritDmgPct: { value: number; addn: boolean; modType: CritDmgModType };
