@@ -19,7 +19,13 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
   onUpdate,
 }) => {
   const handleOptionalNumberChange =
-    (field: "fervorPoints" | "enemyFrostbittenPoints" | "numShadowHits") =>
+    (
+      field:
+        | "fervorPoints"
+        | "enemyFrostbittenPoints"
+        | "numShadowHits"
+        | "manaConsumedRecently",
+    ) =>
     (e: React.ChangeEvent<HTMLInputElement>): void => {
       const value = e.target.value;
       if (value === "") {
@@ -69,6 +75,20 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
     const parsed = Number(value);
     if (!Number.isNaN(parsed)) {
       onUpdate({ enemyArmor: Math.max(0, parsed) });
+    }
+  };
+
+  const handleManaConsumedRecentlyChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ): void => {
+    const value = e.target.value;
+    if (value === "") {
+      onUpdate({ manaConsumedRecently: undefined });
+      return;
+    }
+    const parsed = Number(value);
+    if (!Number.isNaN(parsed)) {
+      onUpdate({ manaConsumedRecently: Math.max(0, parsed) });
     }
   };
 
@@ -184,6 +204,19 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             min={0}
             max={100}
             className="w-14 rounded border border-zinc-700 bg-zinc-800 px-2 py-0.5 text-center text-sm text-zinc-50 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500/30"
+          />
+
+          <label className="text-right text-zinc-50">
+            Mana Consumed Recently
+            <InfoTooltip text="Total mana consumed in the last 4 seconds. Defaults to 0." />
+          </label>
+          <input
+            type="number"
+            value={config.manaConsumedRecently ?? ""}
+            onChange={handleManaConsumedRecentlyChange}
+            min={0}
+            placeholder="0"
+            className="w-28 rounded border border-zinc-700 bg-zinc-800 px-2 py-0.5 text-center text-sm text-zinc-50 placeholder:text-zinc-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500/30"
           />
 
           <label className="text-right text-zinc-50">

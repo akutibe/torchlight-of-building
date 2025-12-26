@@ -76,6 +76,7 @@ export const useConfiguration = (): Configuration => {
     enemyFrostbittenPoints: configPage.enemyFrostbittenPoints,
     crueltyBuffStacks: configPage.crueltyBuffStacks,
     numShadowHits: configPage.numShadowHits,
+    manaConsumedRecently: configPage.manaConsumedRecently,
     realmOfMercuryEnabled: configPage.realmOfMercuryEnabled,
     enemyRes: configPage.enemyRes,
     enemyArmor: configPage.enemyArmor,

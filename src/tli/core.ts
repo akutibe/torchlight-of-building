@@ -52,6 +52,8 @@ export interface Configuration {
   crueltyBuffStacks: number | undefined;
   // default to max
   numShadowHits: number | undefined;
+  // default to 0
+  manaConsumedRecently: number | undefined;
 
   // --------------------
   // hero-specific config

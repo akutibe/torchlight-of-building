@@ -1399,6 +1399,15 @@ const resolveModsForOffenseSkill = (
   mods.push(...normalizeStackables(prenormMods, "max_mana", maxMana));
   mods.push(...normalizeStackables(prenormMods, "mercury_pt", mercuryPts));
 
+  const manaConsumedRecently = config.manaConsumedRecently ?? 0;
+  mods.push(
+    ...normalizeStackables(
+      prenormMods,
+      "mana_consumed_recently",
+      manaConsumedRecently,
+    ),
+  );
+
   return mods;
 };
 

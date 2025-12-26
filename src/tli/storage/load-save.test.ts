@@ -62,6 +62,7 @@ const createMinimalSaveData = (
     enemyFrostbittenPoints: undefined,
     crueltyBuffStacks: 40,
     numShadowHits: undefined,
+    manaConsumedRecently: undefined,
     realmOfMercuryEnabled: false,
     enemyRes: undefined,
     enemyArmor: undefined,
