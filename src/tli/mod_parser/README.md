@@ -107,20 +107,16 @@ t("{value:dec%} [additional] [{modType:DmgModType}] damage").output(
 
 ### `.outputMany(specs)`
 
-Create a multi-mod parser (one input -> multiple mods):
+Create a multi-mod parser (one input → multiple mods). Use `spec()` for type-safe specs:
 
 ```typescript
+import { spec, t } from "./template";
+
 t(
   "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks and spells",
 ).outputMany([
-  {
-    type: "FlatDmgToAtks",
-    mod: (c) => ({ value: { min: c.min, max: c.max }, dmgType: c.dmgType }),
-  },
-  {
-    type: "FlatDmgToSpells",
-    mod: (c) => ({ value: { min: c.min, max: c.max }, dmgType: c.dmgType }),
-  },
+  spec("FlatDmgToAtks", (c) => ({ value: { min: c.min, max: c.max }, dmgType: c.dmgType })),
+  spec("FlatDmgToSpells", (c) => ({ value: { min: c.min, max: c.max }, dmgType: c.dmgType })),
 ]);
 ```
 
@@ -137,23 +133,61 @@ t.multi([
 ]).output("ResPenPct", (c) => ({ value: c.value, penType: "all" }));
 ```
 
+## Custom Parsers
+
+For patterns that don't fit the template DSL, add a custom parser object:
+
+```typescript
+export const allParsers = [
+  // Custom parser - matches exact talent names
+  {
+    parse(input: string): Mod[] | undefined {
+      if (!coreTalentNameSet.has(input)) return undefined;
+      const name = CoreTalentNames.find((n) => n.toLowerCase() === input);
+      return [{ type: "CoreTalent", name }];
+    },
+  },
+  // Template parsers...
+  t("{value:dec%} damage").output("DmgPct", (c) => ({ ... })),
+];
+```
+
+## Return Value Semantics
+
+The `parseMod()` function returns:
+- `undefined` — No parser matched the input (parse failure)
+- `[]` — Successfully parsed, but no mods to extract (intentional no-op)
+- `[...mods]` — Successfully parsed with one or more extracted mods
+
 ## Adding a New Parser
 
 1. Add template to `templates.ts`:
 
    ```typescript
-   export const MyMod = t("{value:dec%} my mod pattern").output(
-     "MyModType",
-     (c) => ({ value: c.value }),
-   );
+   export const allParsers = [
+     // ... existing parsers
+     t("{value:dec%} my mod pattern").output(
+       "MyModType",
+       (c) => ({ value: c.value }),
+     ),
+   ];
    ```
 
-2. Add to parser list in `index.ts` (order matters - more specific patterns first)
+2. Parser order matters — more specific patterns first
 
-3. If using new enum, register in `enums.ts`:
+3. If using a new enum, register in `enums.ts`:
 
    ```typescript
    registerEnum("MyEnumType", MY_ENUM_VALUES);
    ```
 
-4. If new mod type, add to `ModDefinitions` in `mod.ts`
+4. For type inference, add the enum to `CaptureTypeRegistry` in `type-registry.ts`:
+
+   ```typescript
+   export interface CaptureTypeRegistry {
+     // ... existing types
+     MyEnumType: MyEnumType;
+   }
+   ```
+
+5. If new mod type, add to `ModDefinitions` in `mod.ts`
