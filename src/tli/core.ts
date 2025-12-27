@@ -59,6 +59,9 @@ export interface Configuration {
   // default to max
   focusBlessings: number | undefined;
   hasFocusBlessing: boolean;
+  // default to max
+  agilityBlessings: number | undefined;
+  hasAgilityBlessing: boolean;
 
   // --------------------
   // hero-specific config

@@ -843,3 +843,23 @@ test("parse max focus blessing stacks with higher value", () => {
     },
   ]);
 });
+
+test("parse max agility blessing stacks", () => {
+  const result = parseMod("Max Agility Blessing Stacks +1");
+  expect(result).toEqual([
+    {
+      type: "MaxAgilityBlessing",
+      value: 1,
+    },
+  ]);
+});
+
+test("parse max agility blessing stacks with higher value", () => {
+  const result = parseMod("Max Agility Blessing Stacks +3");
+  expect(result).toEqual([
+    {
+      type: "MaxAgilityBlessing",
+      value: 3,
+    },
+  ]);
+});

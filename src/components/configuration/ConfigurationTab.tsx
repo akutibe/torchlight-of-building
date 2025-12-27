@@ -25,7 +25,8 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
         | "enemyFrostbittenPoints"
         | "numShadowHits"
         | "manaConsumedRecently"
-        | "focusBlessings",
+        | "focusBlessings"
+        | "agilityBlessings",
     ) =>
     (e: React.ChangeEvent<HTMLInputElement>): void => {
       const value = e.target.value;
@@ -240,6 +241,34 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
                 type="number"
                 value={config.focusBlessings ?? ""}
                 onChange={handleOptionalNumberChange("focusBlessings")}
+                min={0}
+                max={100}
+                placeholder="max"
+                className="w-14 rounded border border-zinc-700 bg-zinc-800 px-2 py-0.5 text-center text-sm text-zinc-50 placeholder:text-zinc-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500/30"
+              />
+            </>
+          )}
+
+          <label className="text-right text-zinc-50">
+            Has Agility Blessing
+          </label>
+          <input
+            type="checkbox"
+            checked={config.hasAgilityBlessing}
+            onChange={(e) => onUpdate({ hasAgilityBlessing: e.target.checked })}
+            className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
+          />
+
+          {config.hasAgilityBlessing && (
+            <>
+              <label className="text-right text-zinc-50">
+                Agility Blessing Stacks
+                <InfoTooltip text="Defaults to max (base 4 + bonuses)" />
+              </label>
+              <input
+                type="number"
+                value={config.agilityBlessings ?? ""}
+                onChange={handleOptionalNumberChange("agilityBlessings")}
                 min={0}
                 max={100}
                 placeholder="max"

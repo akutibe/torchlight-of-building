@@ -40,7 +40,8 @@ export type Stackable =
   | "mana_consumed_recently"
   | "mercury_pt"
   | "unsealed_mana_pct"
-  | "focus_blessing";
+  | "focus_blessing"
+  | "agility_blessing";
 
 export type StatType = "str" | "dex" | "int";
 
@@ -59,7 +60,8 @@ export interface PerStackable {
 export type Condition =
   | "enemy_frostbitten"
   | "realm_of_mercury"
-  | "has_focus_blessing";
+  | "has_focus_blessing"
+  | "has_agility_blessing";
 
 // Common fields automatically added to all mod types
 interface ModBase {
@@ -128,6 +130,7 @@ interface ModDefinitions {
   MercuryBaptismDmgPct: { value: number };
   MaxMercuryPtsPct: { value: number };
   MaxFocusBlessing: { value: number };
+  MaxAgilityBlessing: { value: number };
   CoreTalent: { name: CoreTalentName };
 }
 

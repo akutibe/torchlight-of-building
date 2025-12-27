@@ -902,6 +902,7 @@ const filterModsByCond = (
           config.realmOfMercuryEnabled,
       )
       .with("has_focus_blessing", () => config.hasFocusBlessing)
+      .with("has_agility_blessing", () => config.hasAgilityBlessing)
       .exhaustive();
   });
 };
@@ -998,6 +999,31 @@ const calculateImplicitMods = (): Mod[] => {
       per: { stackable: "focus_blessing" },
       cond: "has_focus_blessing",
       src: "Additional Damage from focus blessings (5% per blessing)",
+    },
+    {
+      type: "AspdPct",
+      value: 4,
+      addn: false,
+      per: { stackable: "agility_blessing" },
+      cond: "has_agility_blessing",
+      src: "Attack speed from agility blessings (4% per blessing)",
+    },
+    {
+      type: "CspdPct",
+      value: 4,
+      addn: false,
+      per: { stackable: "agility_blessing" },
+      cond: "has_agility_blessing",
+      src: "Cast speed from agility blessings (4% per blessing)",
+    },
+    {
+      type: "DmgPct",
+      value: 2,
+      modType: "global",
+      addn: true,
+      per: { stackable: "agility_blessing" },
+      cond: "has_agility_blessing",
+      src: "Additional Damage from agility blessings (2% per blessing)",
     },
     {
       type: "AspdPct",
@@ -1391,6 +1417,20 @@ const calculateNumFocusBlessings = (
   return baseMaxFocusBlessings + additionalMaxFocusBlessings;
 };
 
+const calculateNumAgilityBlessings = (
+  mods: Mod[],
+  config: Configuration,
+): number => {
+  if (config.agilityBlessings !== undefined) {
+    return config.agilityBlessings;
+  }
+  const baseMaxAgilityBlessings = 4;
+  const additionalMaxAgilityBlessings = sumByValue(
+    filterMod(mods, "MaxAgilityBlessing"),
+  );
+  return baseMaxAgilityBlessings + additionalMaxAgilityBlessings;
+};
+
 // resolves mods, replacing core talents, removing unmatched conditions,
 //   and normalizing per mods
 const resolveModsForOffenseSkill = (
@@ -1410,6 +1450,11 @@ const resolveModsForOffenseSkill = (
   const focusBlessings = calculateNumFocusBlessings(mods, config);
   mods.push(
     ...normalizeStackables(prenormMods, "focus_blessing", focusBlessings),
+  );
+
+  const agilityBlessings = calculateNumAgilityBlessings(mods, config);
+  mods.push(
+    ...normalizeStackables(prenormMods, "agility_blessing", agilityBlessings),
   );
 
   const willpowerStacks = calculateWillpower(prenormMods);

@@ -81,6 +81,8 @@ export const useConfiguration = (): Configuration => {
     realmOfMercuryEnabled: configPage.realmOfMercuryEnabled,
     focusBlessings: configPage.focusBlessings,
     hasFocusBlessing: configPage.hasFocusBlessing,
+    agilityBlessings: configPage.agilityBlessings,
+    hasAgilityBlessing: configPage.hasAgilityBlessing,
     enemyRes: configPage.enemyRes,
     enemyArmor: configPage.enemyArmor,
   };

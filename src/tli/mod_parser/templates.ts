@@ -142,4 +142,5 @@ export const allParsers = [
     .enum("StatWord", StatWordMapping)
     .output("StatPct", (c) => ({ value: c.value, statType: c.statType })),
   t("max focus blessing stacks \\+{value:int}").output("MaxFocusBlessing", (c) => ({ value: c.value })),
+  t("max agility blessing stacks \\+{value:int}").output("MaxAgilityBlessing", (c) => ({ value: c.value })),
 ];

@@ -67,6 +67,8 @@ const createMinimalSaveData = (
     realmOfMercuryEnabled: false,
     focusBlessings: undefined,
     hasFocusBlessing: false,
+    agilityBlessings: undefined,
+    hasAgilityBlessing: false,
     enemyRes: undefined,
     enemyArmor: undefined,
   },

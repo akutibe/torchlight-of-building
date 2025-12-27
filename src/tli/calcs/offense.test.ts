@@ -26,6 +26,8 @@ const createDefaultConfiguration = (): Configuration => ({
   realmOfMercuryEnabled: false,
   focusBlessings: 0,
   hasFocusBlessing: false,
+  agilityBlessings: 0,
+  hasAgilityBlessing: false,
   enemyRes: 0,
   enemyArmor: 0,
 });
@@ -2133,6 +2135,8 @@ describe("resolveBuffSkillMods", () => {
         realmOfMercuryEnabled: false,
         focusBlessings: 0,
         hasFocusBlessing: false,
+        agilityBlessings: 0,
+        hasAgilityBlessing: false,
         enemyRes: undefined,
         enemyArmor: undefined,
       },
