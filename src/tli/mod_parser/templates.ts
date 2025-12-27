@@ -3,6 +3,15 @@ import type { Mod, PerStackable } from "../mod";
 import { StatWordMapping } from "./enums";
 import { spec, t } from "./template";
 
+// Literal constants to avoid `as const` throughout
+const GLOBAL = "global" as const;
+const ATTACK = "attack" as const;
+const HAS_FULL_MANA = "has_full_mana" as const;
+const ENEMY_HAS_AILMENT = "enemy_has_ailment" as const;
+const FROSTBITE_RATING = "frostbite_rating" as const;
+const MANA_CONSUMED_RECENTLY = "mana_consumed_recently" as const;
+const ALL = "all" as const;
+
 const coreTalentNameSet = new Set(CoreTalentNames.map((name) => name.toLowerCase()));
 
 export const allParsers = [
@@ -16,17 +25,17 @@ export const allParsers = [
   },
   t("{aspd:dec%} gear attack speed. {dmg:dec%} additional attack damage").outputMany([
     spec("GearAspdPct", (c) => ({ value: c.aspd })),
-    spec("DmgPct", (c) => ({ value: c.dmg, addn: true, modType: "attack" as const })),
+    spec("DmgPct", (c) => ({ value: c.dmg, addn: true, modType: ATTACK })),
   ]),
   t(
     "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks and spells for every {amt:int} mana consumed recently. stacks up to {limit:int} time\\(s\\)",
   ).outputMany([
     spec("FlatDmgToAtks", (c) => {
-      const per: PerStackable = { stackable: "mana_consumed_recently", amt: c.amt, limit: c.limit };
+      const per: PerStackable = { stackable: MANA_CONSUMED_RECENTLY, amt: c.amt, limit: c.limit };
       return { value: { min: c.min, max: c.max }, dmgType: c.dmgType, per };
     }),
     spec("FlatDmgToSpells", (c) => {
-      const per: PerStackable = { stackable: "mana_consumed_recently", amt: c.amt, limit: c.limit };
+      const per: PerStackable = { stackable: MANA_CONSUMED_RECENTLY, amt: c.amt, limit: c.limit };
       return { value: { min: c.min, max: c.max }, dmgType: c.dmgType, per };
     }),
   ]),
@@ -38,44 +47,44 @@ export const allParsers = [
     "{value:dec%} critical strike rating and critical strike damage for every {amt:int} mana consumed recently",
   ).outputMany([
     spec("CritRatingPct", (c) => {
-      const per: PerStackable = { stackable: "mana_consumed_recently", amt: c.amt };
-      return { value: c.value, modType: "global" as const, per };
+      const per: PerStackable = { stackable: MANA_CONSUMED_RECENTLY, amt: c.amt };
+      return { value: c.value, modType: GLOBAL, per };
     }),
     spec("CritDmgPct", (c) => {
-      const per: PerStackable = { stackable: "mana_consumed_recently", amt: c.amt };
-      return { value: c.value, modType: "global" as const, addn: false, per };
+      const per: PerStackable = { stackable: MANA_CONSUMED_RECENTLY, amt: c.amt };
+      return { value: c.value, modType: GLOBAL, addn: false, per };
     }),
   ]),
   t("{value:dec%} critical strike rating and critical strike damage").outputMany([
-    spec("CritRatingPct", (c) => ({ value: c.value, modType: "global" as const })),
-    spec("CritDmgPct", (c) => ({ value: c.value, modType: "global" as const, addn: false })),
+    spec("CritRatingPct", (c) => ({ value: c.value, modType: GLOBAL })),
+    spec("CritDmgPct", (c) => ({ value: c.value, modType: GLOBAL, addn: false })),
   ]),
   t("{value:dec%} {modType:DmgModType} damage for every {amt:int} mana consumed recently, up to {limit:dec%}").output(
     "DmgPct",
     (c) => {
-      const per: PerStackable = { stackable: "mana_consumed_recently", amt: c.amt, valueLimit: c.limit };
+      const per: PerStackable = { stackable: MANA_CONSUMED_RECENTLY, amt: c.amt, valueLimit: c.limit };
       return { value: c.value, modType: c.modType, addn: false, per };
     },
   ),
   t("{value:dec%} additional damage for the next skill when mana reaches the max").output("DmgPct", (c) => ({
     value: c.value,
-    modType: "global" as const,
+    modType: GLOBAL,
     addn: true,
-    cond: "has_full_mana" as const,
+    cond: HAS_FULL_MANA,
   })),
   t("{value:dec%} additional damage against enemies with elemental ailments").output("DmgPct", (c) => ({
     value: c.value,
-    modType: "global" as const,
+    modType: GLOBAL,
     addn: true,
-    cond: "enemy_has_ailment" as const,
+    cond: ENEMY_HAS_AILMENT,
   })),
   t(
     "deals {value:dec%} additional damage to an enemy for every {amt:int} points of frostbite rating the enemy has",
   ).output("DmgPct", (c) => ({
     value: c.value,
-    modType: "global" as const,
+    modType: GLOBAL,
     addn: true,
-    per: { stackable: "frostbite_rating" as const, amt: c.amt },
+    per: { stackable: FROSTBITE_RATING, amt: c.amt },
   })),
   t("{value:dec%} [additional] [{modType:DmgModType}] damage").output("DmgPct", (c) => ({
     value: c.value,
@@ -96,8 +105,8 @@ export const allParsers = [
     addn: c.additional !== undefined,
   })),
   t("{value:dec%} [additional] attack and cast speed when at full mana").outputMany([
-    spec("AspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: "has_full_mana" as const })),
-    spec("CspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: "has_full_mana" as const })),
+    spec("AspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: HAS_FULL_MANA })),
+    spec("CspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: HAS_FULL_MANA })),
   ]),
   t("{value:dec%} [additional] attack and cast speed").outputMany([
     spec("AspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined })),
@@ -128,7 +137,7 @@ export const allParsers = [
   })),
   t("{value:dec%} elemental and erosion resistance penetration").output("ResPenPct", (c) => ({
     value: c.value,
-    penType: "all" as const,
+    penType: ALL,
   })),
   t
     .multi([
