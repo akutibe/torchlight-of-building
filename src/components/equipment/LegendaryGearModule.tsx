@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Legendaries } from "@/src/data/legendary/legendaries";
+import type { LegendaryAffix } from "@/src/data/legendary/types";
 import type { Gear } from "@/src/lib/save-data";
 import { craft } from "@/src/tli/crafting/craft";
 import {
@@ -15,6 +16,17 @@ import {
   LegendaryAffixRow,
   type LegendaryAffixState,
 } from "./LegendaryAffixRow";
+
+/**
+ * Converts a LegendaryAffix to its display string.
+ * For LegendaryAffixChoice, returns the descriptor wrapped in angle brackets.
+ */
+const getAffixDisplayString = (affix: LegendaryAffix): string => {
+  if (typeof affix === "string") {
+    return affix;
+  }
+  return `<${affix.choiceDescriptor}>`;
+};
 
 interface LegendaryGearModuleProps {
   onSaveToInventory: (item: Gear) => void;
@@ -100,7 +112,7 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
       const affix = state.isCorrupted
         ? selectedLegendary.corruptionAffixes[i]
         : selectedLegendary.normalAffixes[i];
-      return craftAffix(affix, state.percentage);
+      return craftAffix(getAffixDisplayString(affix), state.percentage);
     });
 
     const blend_affix =
@@ -191,17 +203,23 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-3 text-zinc-50">Affixes</h3>
             <div className="space-y-3">
-              {selectedLegendary.normalAffixes.map((normalAffix, index) => (
-                <LegendaryAffixRow
-                  key={normalAffix}
-                  index={index}
-                  normalAffix={normalAffix}
-                  corruptionAffix={selectedLegendary.corruptionAffixes[index]}
-                  state={affixStates[index]}
-                  onToggleCorruption={handleToggleCorruption}
-                  onPercentageChange={handlePercentageChange}
-                />
-              ))}
+              {selectedLegendary.normalAffixes.map((normalAffix, index) => {
+                const normalAffixString = getAffixDisplayString(normalAffix);
+                const corruptionAffixString = getAffixDisplayString(
+                  selectedLegendary.corruptionAffixes[index],
+                );
+                return (
+                  <LegendaryAffixRow
+                    key={normalAffixString}
+                    index={index}
+                    normalAffix={normalAffixString}
+                    corruptionAffix={corruptionAffixString}
+                    state={affixStates[index]}
+                    onToggleCorruption={handleToggleCorruption}
+                    onPercentageChange={handlePercentageChange}
+                  />
+                );
+              })}
             </div>
           </div>
 

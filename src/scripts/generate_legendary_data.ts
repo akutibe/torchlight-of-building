@@ -2,7 +2,11 @@ import { execSync } from "node:child_process";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import * as cheerio from "cheerio";
-import type { Legendary } from "../data/legendary/types";
+import type {
+  Legendary,
+  LegendaryAffix,
+  LegendaryAffixChoice,
+} from "../data/legendary/types";
 import type { EquipmentSlot, EquipmentType } from "../tli/gear_data_types";
 import { readCodexHtml } from "./lib/codex";
 
@@ -16,6 +20,68 @@ const cleanText = (text: string): string => {
   return cleaned.trim();
 };
 
+interface AffixChoiceCard {
+  descriptor: string;
+  isCorroded: boolean;
+  choices: string[];
+}
+
+/**
+ * Extracts affix choice cards from the HTML.
+ * These are cards with headers like "<Random stat affix>" or "<Random stat affix>Corroded"
+ */
+const extractAffixChoiceCards = (
+  $: cheerio.CheerioAPI,
+): Map<string, AffixChoiceCard> => {
+  const choiceCards = new Map<string, AffixChoiceCard>();
+
+  // Find h5.card-header elements with the golden color style
+  $('h5.card-header[style*="color: #ffc130"]').each((_, header) => {
+    const $header = $(header);
+    const headerText = $header.text().trim();
+
+    // Check if the header text starts and ends with angle brackets (possibly with "Corroded" suffix)
+    const corrodedSuffix = "Corroded";
+    const isCorroded = headerText.endsWith(corrodedSuffix);
+
+    // Extract the descriptor without angle brackets and optional Corroded suffix
+    let descriptor = headerText;
+    if (isCorroded) {
+      descriptor = descriptor.slice(0, -corrodedSuffix.length);
+    }
+
+    // Check if it has angle brackets
+    if (!descriptor.startsWith("<") || !descriptor.endsWith(">")) {
+      return;
+    }
+
+    // Remove angle brackets to get the descriptor
+    descriptor = descriptor.slice(1, -1);
+
+    // Get the choices from the card body
+    const $card = $header.closest(".card");
+    const choices: string[] = [];
+
+    $card.find(".card-body li").each((_, li) => {
+      const choice = cleanText($(li).text());
+      if (choice) {
+        choices.push(choice);
+      }
+    });
+
+    // Create a unique key that includes corroded status
+    const key = isCorroded ? `${descriptor}:corroded` : `${descriptor}:normal`;
+
+    choiceCards.set(key, {
+      descriptor,
+      isCorroded,
+      choices,
+    });
+  });
+
+  return choiceCards;
+};
+
 interface CodexLegendaryInfo {
   equipmentSlot: EquipmentSlot;
   equipmentType: EquipmentType;
@@ -26,8 +92,8 @@ interface TlidbLegendary {
   name: string;
   baseItem: string;
   baseStat: string;
-  normalAffixes: string[];
-  corruptionAffixes: string[];
+  normalAffixes: LegendaryAffix[];
+  corruptionAffixes: LegendaryAffix[];
 }
 
 /**
@@ -65,9 +131,44 @@ const extractCodexLegendaryData = (
   return legendaryMap;
 };
 
+/**
+ * Converts an affix text to a LegendaryAffix (string or LegendaryAffixChoice).
+ * If the text is enclosed in angle brackets, it looks up the corresponding choice card.
+ */
+const parseAffix = (
+  affixText: string,
+  choiceCards: Map<string, AffixChoiceCard>,
+  isCorroded: boolean,
+): LegendaryAffix => {
+  // Check if affix is enclosed in angle brackets like <Random stat affix>
+  if (affixText.startsWith("<") && affixText.endsWith(">")) {
+    const descriptor = affixText.slice(1, -1);
+    const key = isCorroded ? `${descriptor}:corroded` : `${descriptor}:normal`;
+    const choiceCard = choiceCards.get(key);
+
+    if (choiceCard !== undefined) {
+      const result: LegendaryAffixChoice = {
+        choiceDescriptor: descriptor,
+        choices: choiceCard.choices,
+      };
+      return result;
+    }
+
+    // If no choice card found, still return a LegendaryAffixChoice with empty choices
+    const result: LegendaryAffixChoice = {
+      choiceDescriptor: descriptor,
+      choices: [],
+    };
+    return result;
+  }
+
+  return affixText;
+};
+
 const extractLegendary = (
   $: cheerio.CheerioAPI,
   filename: string,
+  choiceCards: Map<string, AffixChoiceCard>,
 ): TlidbLegendary | undefined => {
   // Find the SS10Season card (not the previousItem one)
   // biome-ignore lint/suspicious/noExplicitAny: cheerio internal type
@@ -99,11 +200,11 @@ const extractLegendary = (
   );
 
   // Extract normal affixes (div.t1)
-  const normalAffixes: string[] = [];
+  const normalAffixes: LegendaryAffix[] = [];
   mainCard.find("div.t1").each((_, el) => {
-    const affix = cleanText($(el).text());
-    if (affix) {
-      normalAffixes.push(affix);
+    const affixText = cleanText($(el).text());
+    if (affixText) {
+      normalAffixes.push(parseAffix(affixText, choiceCards, false));
     }
   });
 
@@ -120,12 +221,12 @@ const extractLegendary = (
   });
 
   // Extract corruption affixes (div.t0)
-  const corruptionAffixes: string[] = [];
-  if (corrodedCard) {
+  const corruptionAffixes: LegendaryAffix[] = [];
+  if (corrodedCard !== undefined) {
     corrodedCard.find("div.t0").each((_, el) => {
-      const affix = cleanText($(el).text());
-      if (affix) {
-        corruptionAffixes.push(affix);
+      const affixText = cleanText($(el).text());
+      if (affixText) {
+        corruptionAffixes.push(parseAffix(affixText, choiceCards, true));
       }
     });
   }
@@ -194,8 +295,11 @@ const main = async (): Promise<void> => {
     const html = await readFile(filepath, "utf-8");
     const $ = cheerio.load(html);
 
-    const tlidbData = extractLegendary($, filename);
-    if (!tlidbData) {
+    // Extract choice cards first
+    const choiceCards = extractAffixChoiceCards($);
+
+    const tlidbData = extractLegendary($, filename, choiceCards);
+    if (tlidbData === undefined) {
       continue;
     }
 

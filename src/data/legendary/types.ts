@@ -1,11 +1,18 @@
 import type { EquipmentSlot, EquipmentType } from "@/src/tli/gear_data_types";
 
+export interface LegendaryAffixChoice {
+  choiceDescriptor: string;
+  choices: string[];
+}
+
+export type LegendaryAffix = string | LegendaryAffixChoice;
+
 export interface Legendary {
   name: string;
   baseItem: string;
   baseStat: string;
-  normalAffixes: string[];
-  corruptionAffixes: string[];
+  normalAffixes: LegendaryAffix[];
+  corruptionAffixes: LegendaryAffix[];
   equipmentSlot: EquipmentSlot;
   equipmentType: EquipmentType;
 }
