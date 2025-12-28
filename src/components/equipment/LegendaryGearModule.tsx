@@ -17,15 +17,23 @@ import {
   type LegendaryAffixState,
 } from "./LegendaryAffixRow";
 
-/**
- * Converts a LegendaryAffix to its display string.
- * For LegendaryAffixChoice, returns the descriptor wrapped in angle brackets.
- */
-const getAffixDisplayString = (affix: LegendaryAffix): string => {
+const isChoiceType = (
+  affix: LegendaryAffix,
+): affix is { choiceDescriptor: string; choices: string[] } => {
+  return typeof affix !== "string";
+};
+
+const getAffixString = (
+  affix: LegendaryAffix,
+  state: LegendaryAffixState,
+): string | undefined => {
   if (typeof affix === "string") {
     return affix;
   }
-  return `<${affix.choiceDescriptor}>`;
+  if (state.selectedChoiceIndex !== undefined) {
+    return affix.choices[state.selectedChoiceIndex];
+  }
+  return undefined;
 };
 
 interface LegendaryGearModuleProps {
@@ -94,7 +102,13 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
   const handleToggleCorruption = (index: number) => {
     setAffixStates((prev) =>
       prev.map((state, i) =>
-        i === index ? { ...state, isCorrupted: !state.isCorrupted } : state,
+        i === index
+          ? {
+              ...state,
+              isCorrupted: !state.isCorrupted,
+              selectedChoiceIndex: undefined,
+            }
+          : state,
       ),
     );
   };
@@ -105,6 +119,26 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
     );
   };
 
+  const handleChoiceSelect = (
+    index: number,
+    choiceIndex: number | undefined,
+  ) => {
+    setAffixStates((prev) =>
+      prev.map((state, i) =>
+        i === index ? { ...state, selectedChoiceIndex: choiceIndex } : state,
+      ),
+    );
+  };
+
+  const hasUnselectedChoices =
+    selectedLegendary !== undefined &&
+    affixStates.some((state, i) => {
+      const affix = state.isCorrupted
+        ? selectedLegendary.corruptionAffixes[i]
+        : selectedLegendary.normalAffixes[i];
+      return isChoiceType(affix) && state.selectedChoiceIndex === undefined;
+    });
+
   const handleSaveToInventory = () => {
     if (selectedLegendary === undefined) return;
 
@@ -112,7 +146,11 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
       const affix = state.isCorrupted
         ? selectedLegendary.corruptionAffixes[i]
         : selectedLegendary.normalAffixes[i];
-      return craftAffix(getAffixDisplayString(affix), state.percentage);
+      const affixString = getAffixString(affix, state);
+      if (affixString === undefined) {
+        throw new Error(`Unselected choice at index ${i}`);
+      }
+      return craftAffix(affixString, state.percentage);
     });
 
     const blend_affix =
@@ -203,23 +241,18 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-3 text-zinc-50">Affixes</h3>
             <div className="space-y-3">
-              {selectedLegendary.normalAffixes.map((normalAffix, index) => {
-                const normalAffixString = getAffixDisplayString(normalAffix);
-                const corruptionAffixString = getAffixDisplayString(
-                  selectedLegendary.corruptionAffixes[index],
-                );
-                return (
-                  <LegendaryAffixRow
-                    key={normalAffixString}
-                    index={index}
-                    normalAffix={normalAffixString}
-                    corruptionAffix={corruptionAffixString}
-                    state={affixStates[index]}
-                    onToggleCorruption={handleToggleCorruption}
-                    onPercentageChange={handlePercentageChange}
-                  />
-                );
-              })}
+              {selectedLegendary.normalAffixes.map((normalAffix, index) => (
+                <LegendaryAffixRow
+                  key={index}
+                  index={index}
+                  normalAffix={normalAffix}
+                  corruptionAffix={selectedLegendary.corruptionAffixes[index]}
+                  state={affixStates[index]}
+                  onToggleCorruption={handleToggleCorruption}
+                  onPercentageChange={handlePercentageChange}
+                  onChoiceSelect={handleChoiceSelect}
+                />
+              ))}
             </div>
           </div>
 
@@ -227,9 +260,16 @@ export const LegendaryGearModule: React.FC<LegendaryGearModuleProps> = ({
           <button
             type="button"
             onClick={handleSaveToInventory}
-            className="w-full px-4 py-3 bg-amber-500 text-zinc-950 rounded-lg font-semibold hover:bg-amber-600 transition-colors"
+            disabled={hasUnselectedChoices}
+            className={`w-full px-4 py-3 rounded-lg font-semibold transition-colors ${
+              hasUnselectedChoices
+                ? "bg-zinc-600 text-zinc-400 cursor-not-allowed"
+                : "bg-amber-500 text-zinc-950 hover:bg-amber-600"
+            }`}
           >
-            Save to Inventory
+            {hasUnselectedChoices
+              ? "Select all affix options to save"
+              : "Save to Inventory"}
           </button>
         </>
       ) : (

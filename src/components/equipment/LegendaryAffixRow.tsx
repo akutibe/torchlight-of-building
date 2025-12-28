@@ -1,17 +1,23 @@
+import type {
+  LegendaryAffix,
+  LegendaryAffixChoice,
+} from "@/src/data/legendary/types";
 import { craft } from "@/src/tli/crafting/craft";
 
 export interface LegendaryAffixState {
   isCorrupted: boolean;
   percentage: number;
+  selectedChoiceIndex?: number;
 }
 
 interface LegendaryAffixRowProps {
   index: number;
-  normalAffix: string;
-  corruptionAffix: string;
+  normalAffix: LegendaryAffix;
+  corruptionAffix: LegendaryAffix;
   state: LegendaryAffixState;
   onToggleCorruption: (index: number) => void;
   onPercentageChange: (index: number, percentage: number) => void;
+  onChoiceSelect: (index: number, choiceIndex: number | undefined) => void;
 }
 
 const RANGE_PATTERN = /\((-?\d+)-(-?\d+)\)/;
@@ -24,6 +30,10 @@ const craftAffix = (affix: string, percentage: number): string => {
   return craft({ craftableAffix: affix }, percentage);
 };
 
+const isChoiceType = (affix: LegendaryAffix): affix is LegendaryAffixChoice => {
+  return typeof affix !== "string";
+};
+
 export const LegendaryAffixRow: React.FC<LegendaryAffixRowProps> = ({
   index,
   normalAffix,
@@ -31,16 +41,29 @@ export const LegendaryAffixRow: React.FC<LegendaryAffixRowProps> = ({
   state,
   onToggleCorruption,
   onPercentageChange,
+  onChoiceSelect,
 }) => {
   const currentAffix = state.isCorrupted ? corruptionAffix : normalAffix;
-  const showSlider = hasRange(currentAffix);
-  const craftedText = craftAffix(currentAffix, state.percentage);
+
+  const isChoice = isChoiceType(currentAffix);
+  const selectedChoice =
+    isChoice && state.selectedChoiceIndex !== undefined
+      ? currentAffix.choices[state.selectedChoiceIndex]
+      : undefined;
+  const displayAffix = isChoice ? selectedChoice : currentAffix;
+  const showSlider =
+    displayAffix !== undefined ? hasRange(displayAffix) : false;
+  const craftedText =
+    displayAffix !== undefined
+      ? craftAffix(displayAffix, state.percentage)
+      : undefined;
 
   return (
     <div className="bg-zinc-800 p-3 rounded-lg">
       {/* Toggle Button */}
       <div className="flex items-center gap-2 mb-2">
         <button
+          type="button"
           onClick={() => onToggleCorruption(index)}
           className={`
             px-3 py-1 rounded text-xs font-medium transition-colors
@@ -54,6 +77,33 @@ export const LegendaryAffixRow: React.FC<LegendaryAffixRowProps> = ({
           {state.isCorrupted ? "Corruption" : "Normal"}
         </button>
       </div>
+
+      {/* Choice Selector (for choice-type affixes) */}
+      {isChoice && (
+        <div className="mb-2">
+          <div className="text-xs text-zinc-400 mb-1 italic">
+            {currentAffix.choiceDescriptor}
+          </div>
+          <select
+            value={state.selectedChoiceIndex ?? ""}
+            onChange={(e) => {
+              const value = e.target.value;
+              onChoiceSelect(
+                index,
+                value === "" ? undefined : parseInt(value, 10),
+              );
+            }}
+            className="w-full bg-zinc-700 text-zinc-50 text-sm rounded px-2 py-1.5 border border-zinc-600 focus:border-amber-500 focus:outline-none"
+          >
+            <option value="">Select an option...</option>
+            {currentAffix.choices.map((choice, choiceIdx) => (
+              <option key={choiceIdx} value={choiceIdx}>
+                {choice}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       {/* Quality Slider (only show if affix has a range) */}
       {showSlider && (
@@ -78,9 +128,17 @@ export const LegendaryAffixRow: React.FC<LegendaryAffixRowProps> = ({
       )}
 
       {/* Crafted Preview */}
-      <div className="bg-zinc-900 p-2 rounded border border-zinc-700">
-        <div className="text-sm text-amber-400">{craftedText}</div>
-      </div>
+      {craftedText !== undefined ? (
+        <div className="bg-zinc-900 p-2 rounded border border-zinc-700">
+          <div className="text-sm text-amber-400">{craftedText}</div>
+        </div>
+      ) : (
+        <div className="bg-zinc-900 p-2 rounded border border-zinc-700">
+          <div className="text-sm text-zinc-500 italic">
+            Select an option above
+          </div>
+        </div>
+      )}
     </div>
   );
 };
