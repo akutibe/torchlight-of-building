@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import type { ConfigurationPage } from "../../lib/save-data";
 import { parseMod } from "../../tli/mod_parser";
 
@@ -90,6 +91,7 @@ const CustomAffixesSection: React.FC<{
   lines: string[];
   onChange: (lines: string[]) => void;
 }> = ({ lines, onChange }) => {
+  const overlayRef = useRef<HTMLDivElement>(null);
   const textValue = lines.join("\n");
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -99,6 +101,13 @@ const CustomAffixesSection: React.FC<{
       return;
     }
     onChange(value.split("\n"));
+  };
+
+  const handleScroll = (e: React.UIEvent<HTMLTextAreaElement>) => {
+    if (overlayRef.current) {
+      overlayRef.current.scrollTop = e.currentTarget.scrollTop;
+      overlayRef.current.scrollLeft = e.currentTarget.scrollLeft;
+    }
   };
 
   const coloredLines = textValue.split("\n").map((line, i) => {
@@ -123,14 +132,16 @@ const CustomAffixesSection: React.FC<{
       </div>
       <div className="relative h-32">
         <div
+          ref={overlayRef}
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 overflow-auto whitespace-pre-wrap break-words rounded-lg border border-transparent bg-zinc-800 p-3 font-mono text-sm"
+          className="pointer-events-none absolute inset-0 overflow-hidden whitespace-pre-wrap break-words rounded-lg border border-transparent bg-zinc-800 p-3 font-mono text-sm"
         >
           {coloredLines}
         </div>
         <textarea
           value={textValue}
           onChange={handleChange}
+          onScroll={handleScroll}
           className="absolute inset-0 h-full w-full resize-none rounded-lg border border-zinc-700 bg-transparent p-3 font-mono text-sm text-transparent caret-zinc-50 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
         />
       </div>
