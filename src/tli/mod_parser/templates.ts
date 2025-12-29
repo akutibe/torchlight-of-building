@@ -244,4 +244,5 @@ export const allParsers = [
     per: { stackable: "sealed_life_pct" as const, amt: c.amt },
     cond: HAS_FULL_MANA,
   })),
+  t("\\+{value:int} to hero trait level").output("HeroTraitLevel", (c) => ({ value: c.value })),
 ];

@@ -31,6 +31,10 @@ export const SkillLevelTypes = ["main", "support"] as const;
 
 export type SkillLevelType = (typeof SkillLevelTypes)[number];
 
+export const HeroTraitLevelTypes = ["origin", "discipline", "progress"]
+
+export type HeroTraitLevelType = (typeof HeroTraitLevelTypes)[number]
+
 export type Stackable =
   | "willpower"
   | "main_stat"
@@ -167,6 +171,7 @@ interface ModDefinitions {
   MaxFocusBlessing: { value: number };
   MaxAgilityBlessing: { value: number };
   SkillLevel: { value: number; skillLevelType: SkillLevelType };
+  HeroTraitLevel: {value: number, heroTraitLevelType?: HeroTraitLevelType}
   CoreTalent: { name: CoreTalentName };
 }
 

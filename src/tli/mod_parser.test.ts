@@ -1098,3 +1098,13 @@ test("parse main skill level per sealed life at full mana", () => {
     },
   ]);
 });
+
+test("parse hero trait level", () => {
+  const result = parseMod("+2 to Hero Trait Level");
+  expect(result).toEqual([
+    {
+      type: "HeroTraitLevel",
+      value: 2,
+    },
+  ]);
+});
