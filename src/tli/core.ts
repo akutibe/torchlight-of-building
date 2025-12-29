@@ -97,6 +97,9 @@ export interface Configuration {
   enemyRes: number | undefined;
   // default to 27273 (effective phys dmg mitigation of 50%)
   enemyArmor: number | undefined;
+
+  // custom affix lines for injecting arbitrary mods
+  customAffixLines?: string[];
 }
 
 export interface Gear {
@@ -396,5 +399,5 @@ export interface Loadout {
   skillPage: SkillPage;
   heroPage: HeroPage;
   pactspiritPage: PactspiritPage;
-  customConfiguration: Affix[];
+  customAffixLines: AffixLine[];
 }

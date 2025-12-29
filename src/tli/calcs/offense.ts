@@ -37,6 +37,7 @@ import { getPassiveSkillMods } from "../skills/passive_mods";
 import { getSupportSkillMods } from "../skills/support_mods";
 import {
   getAllAffixes,
+  getCustomAffixes,
   getDivinityAffixes,
   getGearAffixes,
   getHeroAffixes,
@@ -150,7 +151,7 @@ export const collectMods = (loadout: Loadout): Mod[] => {
     ...collectModsFromAffixes(
       getGearAffixes(loadout.gearPage.equippedGear.offHand),
     ),
-    ...collectModsFromAffixes(loadout.customConfiguration),
+    ...collectModsFromAffixes(getCustomAffixes(loadout.customAffixLines)),
   ];
 };
 

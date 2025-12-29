@@ -114,6 +114,17 @@ const convertAffixArray = (
   return affixes.map((text) => convertAffix(text, src));
 };
 
+const convertCustomAffixLines = (lines: string[] | undefined): AffixLine[] => {
+  if (lines === undefined || lines.length === 0) return [];
+  return lines.map((lineText) => {
+    const mods = parseMod(lineText);
+    return {
+      text: lineText,
+      mods: mods?.map((mod) => ({ ...mod, src: "CustomAffix" })),
+    };
+  });
+};
+
 const convertGear = (gear: SaveDataGear, src: string | undefined): Gear => {
   return {
     equipmentType: gear.equipmentType,
@@ -757,6 +768,8 @@ export const loadSave = (unloadedSaveData: SaveData): Loadout => {
       saveData.heroPage.memoryInventory,
     ),
     pactspiritPage: convertPactspiritPage(saveData.pactspiritPage),
-    customConfiguration: [],
+    customAffixLines: convertCustomAffixLines(
+      saveData.configurationPage?.customAffixLines,
+    ),
   };
 };

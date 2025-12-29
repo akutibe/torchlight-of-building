@@ -1,5 +1,6 @@
 import type {
   Affix,
+  AffixLine,
   DivinityPage,
   Gear,
   HeroPage,
@@ -151,4 +152,9 @@ export const getDivinityAffixes = (divinityPage: DivinityPage): Affix[] => {
     }
   }
   return affixes;
+};
+
+export const getCustomAffixes = (customAffixLines: AffixLine[]): Affix[] => {
+  if (customAffixLines.length === 0) return [];
+  return [{ affixLines: customAffixLines, src: "CustomAffix" }];
 };

@@ -379,6 +379,28 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
           />
         </div>
       </div>
+
+      <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-6">
+        <div className="mb-3 flex items-center">
+          <label className="text-zinc-50">Custom Affixes</label>
+          <InfoTooltip text="Add custom affix lines (one per line) to include in damage calculations" />
+        </div>
+        <textarea
+          value={(config.customAffixLines ?? []).join("\n")}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (value === "") {
+              onUpdate({ customAffixLines: undefined });
+              return;
+            }
+            const lines = value
+              .split("\n")
+              .filter((line) => line.trim() !== "");
+            onUpdate({ customAffixLines: lines });
+          }}
+          className="h-32 w-full resize-none rounded-lg border border-zinc-700 bg-zinc-800 p-3 font-mono text-sm text-zinc-50 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+        />
+      </div>
     </div>
   );
 };
