@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/monitor/:match*",
-      "destination": "https://tpob.vercel.app/_vercel/insights/:match*"
+      "destination": "https://tpob.vercel.app/_vercel/:match*"
     }
   ]
 }
