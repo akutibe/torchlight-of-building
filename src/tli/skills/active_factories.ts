@@ -59,9 +59,9 @@ export const activeSkillModFactories: Partial<
         dmgType: "erosion",
         duration: 2,
       },
-      { type: "InitialMaxChannel", value: v(vals.initialMaxChannel, l) },
     ],
     mods: [
+      { type: "InitialMaxChannel", value: v(vals.initialMaxChannel, l) },
       {
         type: "DmgPct",
         value: v(vals.additionalDmgPerMaxChannel, l),

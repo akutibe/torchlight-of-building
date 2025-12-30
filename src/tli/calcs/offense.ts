@@ -235,7 +235,7 @@ const filterMod = <T extends Mod["type"]>(
 
 // A chunk of damage that tracks its conversion history
 export interface DmgChunk {
-  range: DmgRange;
+  value: DmgRange | number;
   // Types this damage has been converted from (not including current pool type)
   history: DmgChunkType[];
 }
@@ -270,7 +270,7 @@ export const convertDmg = (dmgRanges: DmgRanges, allMods: Mod[]): DmgPools => {
   // Initialize with non-zero original damage (empty history - not converted from anything)
   const addIfNonZero = (pool: DmgChunk[], range: DmgRange) => {
     if (range.min > 0 || range.max > 0) {
-      pool.push({ range, history: [] });
+      pool.push({ value: range, history: [] });
     }
   };
   addIfNonZero(pools.physical, dmgRanges.phys);
@@ -289,7 +289,7 @@ export const convertDmg = (dmgRanges: DmgRanges, allMods: Mod[]): DmgPools => {
     for (const chunk of pools[sourceType]) {
       for (const mod of addsDmgAsMods) {
         pools[mod.to].push({
-          range: multDR(chunk.range, mod.value / 100),
+          value: multValue(chunk.value, mod.value / 100),
           history: [...chunk.history, sourceType],
         });
       }
@@ -312,7 +312,7 @@ export const convertDmg = (dmgRanges: DmgRanges, allMods: Mod[]): DmgPools => {
       // Unconverted damage stays in source pool with same history
       if (unconvertedPct > 0) {
         pools[sourceType].push({
-          range: multDR(chunk.range, unconvertedPct),
+          value: multValue(chunk.value, unconvertedPct),
           history: chunk.history,
         });
       }
@@ -321,7 +321,7 @@ export const convertDmg = (dmgRanges: DmgRanges, allMods: Mod[]): DmgPools => {
       for (const mod of convMods) {
         const convertPct = (mod.value / 100) * proration;
         pools[mod.to].push({
-          range: multDR(chunk.range, convertPct),
+          value: multValue(chunk.value, convertPct),
           history: [...chunk.history, sourceType],
         });
       }
@@ -591,7 +591,7 @@ const calculateChunkDmg = (
   const addn = calculateDmgAddn(applicableMods);
   const mult = (1 + inc) * addn;
 
-  return multDR(chunk.range, mult);
+  return multValue(chunk.value, mult) as DmgRange;
 };
 
 // Sum all chunks in a pool, applying bonuses to each based on its history
@@ -628,7 +628,7 @@ interface SkillHitOverview {
   avg: number;
 }
 
-const getLeveOffenseValue = (
+const getLevelOffenseValue = (
   skill: BaseActiveSkill,
   skillOffenseType: SkillOffenseType,
   level: number,
@@ -760,7 +760,7 @@ const calculateSkillHit = (
     .with("Frost Spike", () => {
       return multDRs(
         gearDmg.mainHand,
-        (getLeveOffenseValue(skill, "WeaponAtkDmgPct", level) as number) / 100,
+        (getLevelOffenseValue(skill, "WeaponAtkDmgPct", level) as number) / 100,
       );
     })
     .with("[Test] Simple Attack", () => {
@@ -773,7 +773,7 @@ const calculateSkillHit = (
   if (skillWeaponDR === undefined) return;
   const skillFlatDR = multDRs(
     flatDmg,
-    (getLeveOffenseValue(skill, "AddedDmgEffPct", level) as number) / 100,
+    (getLevelOffenseValue(skill, "AddedDmgEffPct", level) as number) / 100,
   );
   const skillBaseDmg = addDRs(skillWeaponDR, skillFlatDR);
 
@@ -1827,6 +1827,29 @@ export const calculateDefenses = (
     fireRes: calcRes(["fire", "elemental"]),
     erosionRes: calcRes(["erosion"]),
   };
+};
+
+const _calcAvgPersistentDps = (
+  mods: Mod[],
+  loadout: Loadout,
+  perSkillContext: PerSkillModContext,
+  skillLevel: number,
+  config: Configuration,
+) => {
+  const skill = perSkillContext.skill;
+  const skillOffenseInfo = match(skill.name)
+    .with("Mind Control", () => {
+      const persistentDmg = getLevelOffenseValue(
+        skill,
+        "PersistentDmg",
+        skillLevel,
+      ) as number;
+      return { persistentDmg };
+    })
+    .otherwise(() => {
+      return;
+    });
+  if (skillOffenseInfo === undefined) return;
 };
 
 const calcAvgSkillHitDps = (

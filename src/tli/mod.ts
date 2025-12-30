@@ -210,6 +210,7 @@ interface ModDefinitions {
   GearBaseAttackSpeed: { value: number };
   // skill-specific
   MindControlMaxLink: { value: number };
+  InitialMaxChannel: { value: number };
 }
 
 // Generate the Mod union type from ModDefinitions

@@ -1,6 +1,12 @@
 import { describe, expect, test } from "vitest";
 import type { ImplementedActiveSkillName } from "../../data/skill";
-import type { Affix, AffixLine, Configuration, Loadout } from "../core";
+import type {
+  Affix,
+  AffixLine,
+  Configuration,
+  DmgRange,
+  Loadout,
+} from "../core";
 import type { Mod } from "../mod";
 import {
   calculateOffense,
@@ -846,14 +852,20 @@ const emptyDmgRanges = (): DmgRanges => ({
 
 const sumPoolRanges = (pools: DmgPools, type: keyof DmgPools) => {
   return pools[type].reduce(
-    (acc, p) => ({ min: acc.min + p.range.min, max: acc.max + p.range.max }),
+    (acc, p) => {
+      const v = p.value as DmgRange;
+      return { min: acc.min + v.min, max: acc.max + v.max };
+    },
     { min: 0, max: 0 },
   );
 };
 
 const findConvertedEntry = (pools: DmgPools, type: keyof DmgPools) => {
   // Find entry with non-zero damage (the converted one, not original zero)
-  return pools[type].find((p) => p.range.min > 0 || p.range.max > 0);
+  return pools[type].find((p) => {
+    const v = p.value as DmgRange;
+    return v.min > 0 || v.max > 0;
+  });
 };
 
 describe("convertDmg", () => {
@@ -1271,8 +1283,8 @@ describe("convertDmg", () => {
     expect(result.cold.length).toBe(2);
     const originalCold = result.cold.find((c) => c.history.length === 0);
     const gainedCold = result.cold.find((c) => c.history.includes("physical"));
-    expect(originalCold?.range).toEqual({ min: 50, max: 50 });
-    expect(gainedCold?.range).toEqual({ min: 20, max: 20 });
+    expect(originalCold?.value).toEqual({ min: 50, max: 50 });
+    expect(gainedCold?.value).toEqual({ min: 20, max: 20 });
   });
 
   test("gain as extra from fire (last in conversion order)", () => {

@@ -158,8 +158,7 @@ export type SkillOffense =
       value: number;
       dmgType: DmgChunkType;
       duration: number;
-    }
-  | { type: "InitialMaxChannel"; value: number };
+    };
 
 export type SkillOffenseType = SkillOffense["type"];
 
