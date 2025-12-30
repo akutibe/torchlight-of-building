@@ -322,9 +322,16 @@ export const internalStore = create(
           const placedInverseImage =
             state.saveData.talentPage.talentTrees.placedInverseImage;
           if (!placedInverseImage) return;
-          state.saveData.talentPage.inventory.inverseImageList.push(
-            placedInverseImage.inverseImage,
-          );
+          // Only add back to inventory if not already there (avoid duplicates)
+          const alreadyInInventory =
+            state.saveData.talentPage.inventory.inverseImageList.some(
+              (ii) => ii.id === placedInverseImage.inverseImage.id,
+            );
+          if (!alreadyInInventory) {
+            state.saveData.talentPage.inventory.inverseImageList.push(
+              placedInverseImage.inverseImage,
+            );
+          }
           delete state.saveData.talentPage.talentTrees.placedInverseImage;
         });
       },
@@ -846,7 +853,14 @@ export const internalStore = create(
         set((state) => {
           const placed = state.saveData.talentPage.talentTrees.placedPrism;
           if (!placed) return;
-          state.saveData.talentPage.inventory.prismList.push(placed.prism);
+          // Only add back to inventory if not already there (avoid duplicates)
+          const alreadyInInventory =
+            state.saveData.talentPage.inventory.prismList.some(
+              (p) => p.id === placed.prism.id,
+            );
+          if (!alreadyInInventory) {
+            state.saveData.talentPage.inventory.prismList.push(placed.prism);
+          }
           delete state.saveData.talentPage.talentTrees.placedPrism;
         });
       },

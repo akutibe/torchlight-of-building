@@ -41,12 +41,12 @@ export const InverseImageInventory: React.FC<InverseImageInventoryProps> = ({
     if (hasInverseImagePlaced) {
       return "An inverse image is already placed. Remove it first to place a different one.";
     }
-    if (hasPrismPlaced) {
-      return "A prism is already placed. Remove it first to place an inverse image.";
-    }
     if (selectedInverseImageId) {
       if (isOnGodGoddessTree) {
         return "Switch to a Profession Tree (Slots 2-4) to place the inverse image.";
+      }
+      if (hasPrismPlaced) {
+        return "Switch to a tree without a prism to place the inverse image.";
       }
       if (treeHasPoints) {
         return "Reset the tree's points to 0 before placing an inverse image.";
@@ -56,7 +56,9 @@ export const InverseImageInventory: React.FC<InverseImageInventoryProps> = ({
     return "Click an inverse image to select it for placement.";
   };
 
-  const canSelect = !hasInverseImagePlaced && !hasPrismPlaced && selectionMode;
+  // Only block selection if an inverse image is already placed (only one allowed anywhere)
+  // Prism-in-same-tree check happens at placement time, not selection time
+  const canSelect = !hasInverseImagePlaced && selectionMode;
 
   return (
     <div className="rounded-lg border border-zinc-700 bg-zinc-800 p-4">

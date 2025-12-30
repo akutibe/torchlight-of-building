@@ -168,6 +168,10 @@ function TalentsSlotPage(): React.ReactNode {
       // Only allow one prism at a time
       if (placedPrism) return;
 
+      // Cannot place prism in same tree as inverse image
+      if (placedInverseImage && placedInverseImage.treeSlot === treeSlot)
+        return;
+
       // Verify node has 0 points allocated
       const tree = loadout.talentPage.talentTrees[treeSlot];
       if (!tree) return;
@@ -194,6 +198,7 @@ function TalentsSlotPage(): React.ReactNode {
       selectedPrismId,
       prismList,
       placedPrism,
+      placedInverseImage,
       loadout.talentPage.talentTrees,
       placePrism,
       setTreeOrClear,

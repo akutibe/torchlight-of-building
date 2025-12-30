@@ -168,38 +168,29 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
 
       {unlocked ? (
         <div className="space-y-1">
-          {available.map((ct) => (
-            <button
-              key={ct.name}
-              onClick={() =>
-                onSelect(selected === ct.name ? undefined : ct.name)
-              }
-              onMouseEnter={() => setHoveredTalent(ct)}
-              className={`w-full px-3 py-2 border rounded-lg text-sm text-left transition-colors ${
-                selected === ct.name
-                  ? "border-amber-500 bg-amber-500/20 text-amber-400"
-                  : "border-zinc-700 bg-zinc-800 text-zinc-50 hover:border-amber-500/50"
-              }`}
-            >
-              {ct.name}
-            </button>
-          ))}
-          {selected &&
-            !available.find((ct) => ct.name === selected) &&
-            (() => {
-              const orphanedTalent = allTalentsForTree.find(
-                (ct) => ct.name === selected,
-              );
-              return (
-                <button
-                  onClick={() => onSelect(undefined)}
-                  onMouseEnter={() => setHoveredTalent(orphanedTalent)}
-                  className="w-full px-3 py-2 border border-amber-500 bg-amber-500/20 text-amber-400 rounded-lg text-sm text-left"
-                >
-                  {selected}
-                </button>
-              );
-            })()}
+          {/* Show all talents in original order: available ones + the currently selected one */}
+          {allTalentsForTree
+            .filter(
+              (ct) =>
+                available.some((a) => a.name === ct.name) ||
+                ct.name === selected,
+            )
+            .map((ct) => (
+              <button
+                key={ct.name}
+                onClick={() =>
+                  onSelect(selected === ct.name ? undefined : ct.name)
+                }
+                onMouseEnter={() => setHoveredTalent(ct)}
+                className={`w-full px-3 py-2 border rounded-lg text-sm text-left transition-colors ${
+                  selected === ct.name
+                    ? "border-amber-500 bg-amber-500/20 text-amber-400"
+                    : "border-zinc-700 bg-zinc-800 text-zinc-50 hover:border-amber-500/50"
+                }`}
+              >
+                {ct.name}
+              </button>
+            ))}
         </div>
       ) : (
         <div className="text-sm text-zinc-500 italic">Locked</div>

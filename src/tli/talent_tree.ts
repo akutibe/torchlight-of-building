@@ -544,12 +544,12 @@ export const canPlaceInverseImage = (
     };
   }
 
-  // Cannot have both prism and inverse image
-  if (placedPrism) {
+  // Cannot have both prism and inverse image in the same tree
+  if (placedPrism && placedPrism.treeSlot === treeSlot) {
     return {
       canPlace: false,
       reason:
-        "A prism is already placed. Remove it first to place an inverse image.",
+        "A prism is already placed in this tree. Remove it first to place an inverse image.",
     };
   }
 
