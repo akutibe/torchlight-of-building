@@ -7,6 +7,7 @@ import type {
 import type {
   DmgChunkType,
   ResPenType,
+  ResType,
   SkillLevelType,
   StatType,
 } from "../mod";
@@ -28,6 +29,7 @@ export interface CaptureTypeRegistry {
   CritDmgModType: CritDmgModType;
   DmgChunkType: DmgChunkType;
   ResPenType: ResPenType;
+  ResType: ResType;
   CoreTalentName: CoreTalentName;
   SkillLevelType: SkillLevelType;
 

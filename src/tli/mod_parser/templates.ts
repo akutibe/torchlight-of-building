@@ -235,6 +235,23 @@ export const allParsers = [
     value: c.value,
     addn: c.additional !== undefined,
   })),
+  t("{value:dec%} max elemental and erosion resistance").outputMany([
+    spec("MaxResistancePct", (c) => ({ value: c.value, resType: "elemental" as const })),
+    spec("MaxResistancePct", (c) => ({ value: c.value, resType: "erosion" as const })),
+  ]),
+  t("{value:dec%} elemental and erosion resistance").outputMany([
+    spec("ResistancePct", (c) => ({ value: c.value, resType: "elemental" as const })),
+    spec("ResistancePct", (c) => ({ value: c.value, resType: "erosion" as const })),
+  ]),
+  t("{value:dec%} max {resType:ResType} resistance").output("MaxResistancePct", (c) => ({
+    value: c.value,
+    resType: c.resType,
+  })),
+  t("{value:dec%} {resType:ResType} resistance").output("ResistancePct", (c) => ({
+    value: c.value,
+    resType: c.resType,
+  })),
+
   t("{value:dec%} energy shield regain").output("EnergyShieldRegainPct", (c) => ({ value: c.value })),
   t("{value:dec%} life regain").output("LifeRegainPct", (c) => ({ value: c.value })),
   t("{value:dec} {statType:StatWord}")

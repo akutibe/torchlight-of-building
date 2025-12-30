@@ -1108,3 +1108,79 @@ test("parse hero trait level", () => {
     },
   ]);
 });
+
+test("parse cold resistance", () => {
+  const result = parseMod("+24% Cold Resistance");
+  expect(result).toEqual([
+    {
+      type: "ResistancePct",
+      value: 24,
+      resType: "cold",
+    },
+  ]);
+});
+
+test("parse elemental resistance", () => {
+  const result = parseMod("+10% Elemental Resistance");
+  expect(result).toEqual([
+    {
+      type: "ResistancePct",
+      value: 10,
+      resType: "elemental",
+    },
+  ]);
+});
+
+test("parse elemental and erosion resistance", () => {
+  const result = parseMod("+10% Elemental and Erosion Resistance");
+  expect(result).toEqual([
+    {
+      type: "ResistancePct",
+      value: 10,
+      resType: "elemental",
+    },
+    {
+      type: "ResistancePct",
+      value: 10,
+      resType: "erosion",
+    },
+  ]);
+});
+
+test("parse max elemental resistance", () => {
+  const result = parseMod("+10% Max Elemental Resistance");
+  expect(result).toEqual([
+    {
+      type: "MaxResistancePct",
+      value: 10,
+      resType: "elemental",
+    },
+  ]);
+});
+
+test("parse max elemental and erosion resistance", () => {
+  const result = parseMod("+15% Max Elemental and Erosion Resistance");
+  expect(result).toEqual([
+    {
+      type: "MaxResistancePct",
+      value: 15,
+      resType: "elemental",
+    },
+    {
+      type: "MaxResistancePct",
+      value: 15,
+      resType: "erosion",
+    },
+  ]);
+});
+
+test("parse max fire resistance", () => {
+  const result = parseMod("+3% Max Fire Resistance");
+  expect(result).toEqual([
+    {
+      type: "MaxResistancePct",
+      value: 3,
+      resType: "fire",
+    },
+  ]);
+});

@@ -27,6 +27,16 @@ export const ResPenTypes = [
 
 export type ResPenType = (typeof ResPenTypes)[number];
 
+export const ResTypes = [
+  "cold",
+  "lightning",
+  "fire",
+  "erosion",
+  "elemental",
+] as const;
+
+export type ResType = (typeof ResTypes)[number];
+
 export const SkillLevelTypes = ["main", "support"] as const;
 
 export type SkillLevelType = (typeof SkillLevelTypes)[number];
@@ -152,6 +162,8 @@ interface ModDefinitions {
   GearEvasion: { value: number };
   GearEvasionPct: { value: number };
   EvasionPct: { value: number; addn: boolean };
+  ResistancePct: { value: number; resType: ResType };
+  MaxResistancePct: { value: number; resType: ResType };
   LifeRegainPct: { value: number };
   EnergyShieldRegainPct: { value: number };
   MultistrikeChancePct: { value: number };
