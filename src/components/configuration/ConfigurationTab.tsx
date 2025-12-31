@@ -558,6 +558,16 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             }
             className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
           />
+
+          <label className="text-right text-zinc-50">
+            Torment Stacks
+            <InfoTooltip text="Psychic tree legendary talent" />
+          </label>
+          <NumberInput
+            value={config.tormentStacks}
+            onChange={(v) => onUpdate({ tormentStacks: v ?? 0 })}
+            min={0}
+          />
         </div>
       </div>
 

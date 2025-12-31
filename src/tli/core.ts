@@ -99,6 +99,8 @@ export interface Configuration {
   afflictionPts: number | undefined;
   // default to false
   enemyHasDesecration: boolean;
+  // default to 0
+  tormentStacks: number;
 
   // --------------------
   // hero-specific config

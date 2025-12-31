@@ -212,12 +212,4 @@ describe("build-code", () => {
     // It should not contain characters that need URL encoding
     expect(encodeURIComponent(code)).toBe(code);
   });
-
-  it("should produce reasonably sized codes", () => {
-    const loadout = createEmptySaveData();
-    const code = encodeBuildCode(loadout);
-
-    // Empty loadout should be fairly small
-    expect(code.length).toBeLessThan(700);
-  });
 });

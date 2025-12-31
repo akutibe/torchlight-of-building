@@ -97,6 +97,7 @@ export const createEmptyConfigurationPage = (): ConfigurationPage => ({
   enemyHasAffliction: false,
   afflictionPts: undefined,
   enemyHasDesecration: false,
+  tormentStacks: 0,
 });
 
 export const createEmptySkillPage = (): SkillPage => ({
