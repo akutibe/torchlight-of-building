@@ -30,4 +30,14 @@ export const passiveSkillModFactories: Partial<
       },
     ],
   }),
+  "Spell Amplification": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.spellDmgPct, l),
+        addn: true,
+        dmgModType: "spell",
+      },
+    ],
+  }),
 };

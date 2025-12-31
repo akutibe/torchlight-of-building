@@ -34,3 +34,25 @@ export const preciseCrueltyParser: SupportLevelParser = (input) => {
     auraEffPctPerCrueltyStack,
   };
 };
+
+export const spellAmplificationParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const spellDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    // Match "+15% additional Spell Damage" or "15% additional Spell Damage"
+    const dmgMatch = template("{value:dec%} additional spell damage").match(
+      text,
+      skillName,
+    );
+    spellDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(spellDmgPct, skillName);
+
+  return { spellDmgPct };
+};

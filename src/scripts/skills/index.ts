@@ -5,7 +5,10 @@ import {
   iceBondParser,
   mindControlParser,
 } from "./active_parsers";
-import { preciseCrueltyParser } from "./passive_parsers";
+import {
+  preciseCrueltyParser,
+  spellAmplificationParser,
+} from "./passive_parsers";
 import {
   controlSpellParser,
   criticalStrikeDamageIncreaseParser,
@@ -112,6 +115,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Precise: Cruelty",
     categories: ["passive"],
     parser: preciseCrueltyParser,
+  },
+  {
+    skillName: "Spell Amplification",
+    categories: ["passive"],
+    parser: spellAmplificationParser,
   },
 ];
 
