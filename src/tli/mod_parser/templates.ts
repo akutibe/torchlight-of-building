@@ -297,4 +297,9 @@ export const allParsers = [
   })),
   t("{value:int} critical strike rating").output("GearBaseCritRating", (c) => ({ value: c.value })),
   t("{value:dec} attack speed").output("GearBaseAttackSpeed", (c) => ({ value: c.value })),
+  t(
+    "reaps {duration:dec} s of damage over time when dealing damage over time. the effect has a {cooldown:dec} s cooldown against the same target",
+  ).output("Reap", (c) => ({ duration: c.duration, cooldown: c.cooldown })),
+  t("{value:dec%} reaping duration").output("ReapDurationPct", (c) => ({ value: c.value })),
+  t("{value:dec%} reaping cooldown recovery speed").output("ReapCdrPct", (c) => ({ value: c.value })),
 ];

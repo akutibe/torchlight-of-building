@@ -1303,3 +1303,36 @@ test("parse max fire resistance", () => {
     },
   ]);
 });
+
+test("parse reap", () => {
+  const result = parseMod(
+    "Reaps 0.17 s of Damage Over Time when dealing Damage Over Time. The effect has a 1 s cooldown against the same target",
+  );
+  expect(result).toEqual([
+    {
+      type: "Reap",
+      duration: 0.17,
+      cooldown: 1,
+    },
+  ]);
+});
+
+test("parse reaping duration", () => {
+  const result = parseMod("+56% Reaping Duration");
+  expect(result).toEqual([
+    {
+      type: "ReapDurationPct",
+      value: 56,
+    },
+  ]);
+});
+
+test("parse reaping cooldown recovery speed", () => {
+  const result = parseMod("+24% Reaping Cooldown Recovery Speed");
+  expect(result).toEqual([
+    {
+      type: "ReapCdrPct",
+      value: 24,
+    },
+  ]);
+});
