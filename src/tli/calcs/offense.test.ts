@@ -90,6 +90,18 @@ const simpleAttackSkillPage = () => ({
   passiveSkills: {},
 });
 
+const simplePersistentSpellSkillPage = () => ({
+  activeSkills: {
+    1: {
+      skillName: "[Test] Simple Persistent Spell" as const,
+      enabled: true,
+      level: 20,
+      supportSkills: {},
+    },
+  },
+  passiveSkills: {},
+});
+
 const emptyAffix = (): Affix => ({ affixLines: [] });
 
 const emptyRingSlotState = () => ({
@@ -843,7 +855,7 @@ describe("flat damage to attacks", () => {
 // Converted damage benefits from modifiers of all types it passed through
 
 const emptyDmgRanges = (): DmgRanges => ({
-  phys: { min: 0, max: 0 },
+  physical: { min: 0, max: 0 },
   cold: { min: 0, max: 0 },
   lightning: { min: 0, max: 0 },
   fire: { min: 0, max: 0 },
@@ -876,7 +888,7 @@ describe("convertDmg", () => {
   test("no conversion mods - damage passes through unchanged", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const result = convertDmg(dmgRanges, []);
@@ -891,7 +903,7 @@ describe("convertDmg", () => {
   test("100% physical to cold conversion", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -910,7 +922,7 @@ describe("convertDmg", () => {
   test("50% physical to cold conversion - splits damage", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -932,7 +944,7 @@ describe("convertDmg", () => {
   test("physical splits to multiple types", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -955,7 +967,7 @@ describe("convertDmg", () => {
     // Should prorate to: 50% cold, 50% fire
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 120, max: 120 },
+      physical: { min: 120, max: 120 },
     };
 
     const mods: Mod[] = [
@@ -977,7 +989,7 @@ describe("convertDmg", () => {
   test("chain conversion: physical → lightning → cold", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -999,7 +1011,7 @@ describe("convertDmg", () => {
   test("chain conversion with partial: physical → lightning (50%) → cold (50%)", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -1019,7 +1031,7 @@ describe("convertDmg", () => {
   test("full chain: physical → lightning → cold → fire → erosion", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -1047,7 +1059,7 @@ describe("convertDmg", () => {
   test("original elemental damage is not affected by physical conversion", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
       cold: { min: 50, max: 50 },
     };
 
@@ -1069,7 +1081,7 @@ describe("convertDmg", () => {
   test("multiple damage sources combine in pool", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
       lightning: { min: 50, max: 50 },
     };
 
@@ -1088,7 +1100,7 @@ describe("convertDmg", () => {
   test("skip-step conversion: physical directly to fire", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -1111,7 +1123,7 @@ describe("convertDmg", () => {
   test("damage range min/max are handled correctly", () => {
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 80, max: 120 },
+      physical: { min: 80, max: 120 },
     };
 
     const mods: Mod[] = [
@@ -1128,7 +1140,7 @@ describe("convertDmg", () => {
     // 50% + 40% + 30% = 120%, should prorate to ~41.67%, ~33.33%, 25%
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 120, max: 120 },
+      physical: { min: 120, max: 120 },
     };
 
     const mods: Mod[] = [
@@ -1164,7 +1176,7 @@ describe("convertDmg", () => {
     // Result: 100 phys + 20 cold (source remains intact)
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -1186,7 +1198,7 @@ describe("convertDmg", () => {
     // Result: 0 phys, 100 fire, 20 cold
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -1206,7 +1218,7 @@ describe("convertDmg", () => {
     // Result: 50 phys, 50 fire, 20 cold (total 120)
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -1226,7 +1238,7 @@ describe("convertDmg", () => {
     // Result: 100 phys + 20 cold + 30 fire (total 150)
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -1247,7 +1259,7 @@ describe("convertDmg", () => {
     // Fire should track both physical and lightning in history
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
     };
 
     const mods: Mod[] = [
@@ -1271,7 +1283,7 @@ describe("convertDmg", () => {
     // Result: 100 phys, 70 cold (50 original + 20 gained)
     const dmgRanges: DmgRanges = {
       ...emptyDmgRanges(),
-      phys: { min: 100, max: 100 },
+      physical: { min: 100, max: 100 },
       cold: { min: 50, max: 50 },
     };
 
@@ -1890,7 +1902,7 @@ describe("calculateOffense with damage conversion", () => {
 
   test("50% phys to cold conversion - unconverted phys gets phys%, converted cold gets both", () => {
     // 100 phys → 50 phys + 50 cold
-    // Unconverted phys: 50 * (1 + 0.5) = 75
+    // Unconverted physical: 50 * (1 + 0.5) = 75
     // Converted cold: 50 * (1 + 0.5 + 0.3) = 90
     // Total: 75 + 90 = 165
     const input = createModsInput(
@@ -2156,7 +2168,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const iceBondBuffMod = actual?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
@@ -2164,7 +2175,6 @@ describe("resolveBuffSkillMods", () => {
         "cond" in m &&
         m.cond === "enemy_frostbitten",
     ) as DmgPctMod | undefined;
-    expect(iceBondBuffMod).toBeDefined();
     expect(iceBondBuffMod?.value).toBeCloseTo(33);
   });
 
@@ -2180,11 +2190,9 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const bullsRageBuffMod = actual?.resolvedMods.find(
       (m) => m.type === "DmgPct" && m.modType === "melee" && m.addn === true,
     ) as DmgPctMod | undefined;
-    expect(bullsRageBuffMod).toBeDefined();
     expect(bullsRageBuffMod?.value).toBeCloseTo(27);
   });
 
@@ -2200,7 +2208,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const iceBondBuffMod = actual?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
@@ -2254,7 +2261,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const iceBondBuffMod = actual?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
@@ -2320,7 +2326,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const iceBondBuffMod = actual?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
@@ -2345,7 +2350,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const iceBondBuffMod = actual?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
@@ -2394,8 +2398,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["Frost Spike"];
 
-    expect(actual).toBeDefined();
-
     // Check Ice Bond buff
     const iceBondBuffMod = actual?.resolvedMods.find(
       (m) =>
@@ -2433,7 +2435,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const iceBondBuffMod = actual?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
@@ -2462,8 +2463,6 @@ describe("resolveBuffSkillMods", () => {
       configuration: frostbittenEnabledConfig,
     });
     const actual = results.skills["[Test] Simple Attack"];
-
-    expect(actual).toBeDefined();
 
     // Ice Bond should be boosted by Mass Effect
     const iceBondBuffMod = actual?.resolvedMods.find(
@@ -2501,7 +2500,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const iceBondBuffMod = actual?.resolvedMods.find(
       (m) =>
         m.type === "DmgPct" &&
@@ -2590,11 +2588,9 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const preciseCrueltyBuffMod = actual?.resolvedMods.find(
       (m) => m.type === "DmgPct" && m.modType === "attack" && m.addn === true,
     ) as DmgPctMod | undefined;
-    expect(preciseCrueltyBuffMod).toBeDefined();
     // Base 22% scaled by 100% aura effect = 44%
     expect(preciseCrueltyBuffMod?.value).toBeCloseTo(22 * 2);
   });
@@ -2637,11 +2633,9 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const preciseCrueltyBuffMod = actual?.resolvedMods.find(
       (m) => m.type === "DmgPct" && m.modType === "attack" && m.addn === true,
     ) as DmgPctMod | undefined;
-    expect(preciseCrueltyBuffMod).toBeDefined();
     // Base 22% scaled by 50% aura effect = 33%
     expect(preciseCrueltyBuffMod?.value).toBeCloseTo(22 * 1.5);
   });
@@ -2677,7 +2671,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // AuraEffPct from levelMods should not be in resolvedMods
     const auraEffMod = actual?.resolvedMods.find(
       (m) => m.type === "AuraEffPct",
@@ -2723,11 +2716,9 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     const preciseCrueltyBuffMod = actual?.resolvedMods.find(
       (m) => m.type === "DmgPct" && m.modType === "attack" && m.addn === true,
     ) as DmgPctMod | undefined;
-    expect(preciseCrueltyBuffMod).toBeDefined();
     // Base 22% with aura multiplier 3 = 66%
     expect(preciseCrueltyBuffMod?.value).toBeCloseTo(22 * 3);
 
@@ -2748,7 +2739,6 @@ describe("resolveBuffSkillMods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // Bull's Rage at level 20 provides 27% additional melee damage (no aura scaling)
     const bullsRageBuffMod = actual?.resolvedMods.find(
       (m) => m.type === "DmgPct" && m.modType === "melee" && m.addn === true,
@@ -2807,7 +2797,6 @@ describe("Pactspirit Ring Mods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // 100 base damage * (1 + 0.5) = 150
     expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(150);
   });
@@ -2864,7 +2853,6 @@ describe("Pactspirit Ring Mods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // 100 base damage * (1 + 0.3 + 0.3) = 160
     expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(160);
   });
@@ -2931,7 +2919,6 @@ describe("Pactspirit Ring Mods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // 100 base damage * (1 + 0.75 from destiny, NOT 0.25 from original) = 175
     expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(175);
   });
@@ -3004,7 +2991,6 @@ describe("Pactspirit Ring Mods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // 100 base damage * (1 + 0.2 + 0.3) = 150
     expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(150);
   });
@@ -3054,7 +3040,6 @@ describe("Divinity Slate Mods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // 100 base damage * (1 + 0.5) = 150
     expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(150);
   });
@@ -3102,7 +3087,6 @@ describe("Divinity Slate Mods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // 100 base damage * 1 = 100 (no bonus from unplaced slate)
     expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(100);
   });
@@ -3166,7 +3150,6 @@ describe("Divinity Slate Mods", () => {
     });
     const actual = results.skills["[Test] Simple Attack"];
 
-    expect(actual).toBeDefined();
     // 100 base damage * (1 + 0.3 + 0.2) = 150
     expect(actual?.attackHitSummary?.avgHit).toBeCloseTo(150);
   });
@@ -4125,5 +4108,122 @@ describe("resistance calculations", () => {
       potential: -20,
       actual: -20,
     });
+  });
+});
+
+describe("persistent damage", () => {
+  const skillName = "[Test] Simple Persistent Spell" as const;
+
+  const createPersistentInput = (
+    mods: AffixLine[],
+    config?: Configuration,
+  ) => ({
+    loadout: initLoadout({
+      gearPage: { equippedGear: {}, inventory: [] },
+      customAffixLines: mods,
+      skillPage: simplePersistentSpellSkillPage(),
+    }),
+    configuration: config ?? defaultConfiguration,
+  });
+
+  test("basic persistent damage", () => {
+    // [Test] Simple Persistent Spell at level 20: 100 physical damage, 1s duration
+    const input = createPersistentInput([]);
+    const results = calculateOffense(input);
+    const skill = results.skills[skillName];
+    expect(skill?.persistentDpsSummary?.total).toBeCloseTo(100);
+    expect(skill?.persistentDpsSummary?.duration).toBe(1);
+    expect(skill?.persistentDpsSummary?.base.physical).toBeCloseTo(100);
+  });
+
+  test("increased damage modifier applies", () => {
+    // 100% increased damage: 100 * 2 = 200
+    const input = createPersistentInput(
+      affixLines([
+        { type: "DmgPct", value: 100, modType: "global", addn: false },
+      ]),
+    );
+    const results = calculateOffense(input);
+    expect(results.skills[skillName]?.persistentDpsSummary?.total).toBeCloseTo(
+      200,
+    );
+  });
+
+  test("multiplicative damage modifier applies", () => {
+    // 50% more damage: 100 * 1.5 = 150
+    const input = createPersistentInput(
+      affixLines([
+        { type: "DmgPct", value: 50, modType: "global", addn: true },
+      ]),
+    );
+    const results = calculateOffense(input);
+    expect(results.skills[skillName]?.persistentDpsSummary?.total).toBeCloseTo(
+      150,
+    );
+  });
+
+  test("physical damage modifier applies", () => {
+    // 100% increased physical damage: 100 * 2 = 200
+    const input = createPersistentInput(
+      affixLines([
+        { type: "DmgPct", value: 100, modType: "physical", addn: false },
+      ]),
+    );
+    const results = calculateOffense(input);
+    expect(results.skills[skillName]?.persistentDpsSummary?.total).toBeCloseTo(
+      200,
+    );
+  });
+
+  test("damage conversion applies", () => {
+    // 100% physical to cold: all damage becomes cold
+    const input = createPersistentInput(
+      affixLines([
+        { type: "ConvertDmgPct", from: "physical", to: "cold", value: 100 },
+      ]),
+    );
+    const results = calculateOffense(input);
+    const summary = results.skills[skillName]?.persistentDpsSummary;
+    expect(summary?.base.cold).toBeCloseTo(100);
+    expect(summary?.base.physical).toBeCloseTo(0);
+    expect(summary?.total).toBeCloseTo(100);
+  });
+
+  test("penetration applies with enemy armor", () => {
+    // Enemy armor reduces physical damage
+    const config: Configuration = {
+      ...createDefaultConfiguration(),
+      enemyArmor: 1000,
+    };
+    const input = createPersistentInput([], config);
+    const results = calculateOffense(input);
+    const summary = results.skills[skillName]?.persistentDpsSummary;
+    expect(summary?.total).toBeLessThan(100);
+  });
+
+  test("spell damage modifier applies", () => {
+    // Skill has "Spell" tag, so spell damage should apply
+    const input = createPersistentInput(
+      affixLines([
+        { type: "DmgPct", value: 100, modType: "spell", addn: false },
+      ]),
+    );
+    const results = calculateOffense(input);
+    expect(results.skills[skillName]?.persistentDpsSummary?.total).toBeCloseTo(
+      200,
+    );
+  });
+
+  test("non-persistent skill has no persistentDpsSummary", () => {
+    const input = {
+      loadout: initLoadout({
+        gearPage: { equippedGear: { mainHand: baseWeapon }, inventory: [] },
+        skillPage: simpleAttackSkillPage(),
+      }),
+      configuration: defaultConfiguration,
+    };
+    const results = calculateOffense(input);
+    const skill = results.skills["[Test] Simple Attack"];
+    expect(skill?.persistentDpsSummary).toBeUndefined();
   });
 });
