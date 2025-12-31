@@ -212,10 +212,10 @@ const emptyGearDmg = (): GearDmg => {
 export type DmgRanges = Record<DmgChunkType, DmgRange>;
 
 // Num damage values (single number per type, all optional)
-export type NumDmgValues = Partial<Record<DmgChunkType, number>>;
+type NumDmgValues = Partial<Record<DmgChunkType, number>>;
 
 // Union type for convertDmg input
-export type DmgInput = DmgRanges | NumDmgValues;
+type DmgInput = DmgRanges | NumDmgValues;
 
 const emptyDmgRanges = (): DmgRanges => {
   return {
@@ -611,7 +611,7 @@ const calculateChunkDmg = <T extends DmgRange | number>(
 
   for (const dmgType of allApplicableTypes) {
     dmgModTypes.push(dmgType);
-    if (dmgType === "cold" || dmgType === "lightning" || dmgType === "fire") {
+    if (["cold", "lightning", "fire"].includes(dmgType)) {
       dmgModTypes.push("elemental");
     }
   }
@@ -626,49 +626,117 @@ const calculateChunkDmg = <T extends DmgRange | number>(
 };
 
 // Sum all chunks in a pool, applying bonuses to each based on its history
-const calculatePoolTotalRange = (
-  pool: DmgChunk<DmgRange>[],
+const calculatePoolTotal = <T extends DmgRange | number>(
+  pool: DmgChunk<T>[],
   poolType: DmgChunkType,
   allDmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
   baseDmgModTypes: DmgModType[],
-): DmgRange => {
-  if (pool.length === 0) {
-    return { min: 0, max: 0 };
-  }
-  let total: DmgRange = { min: 0, max: 0 };
-  for (const chunk of pool) {
+  zero: T,
+): T => {
+  return pool.reduce((total, chunk) => {
     const chunkDmg = calculateChunkDmg(
       chunk,
       poolType,
       allDmgPctMods,
       baseDmgModTypes,
     );
-    total = addValue(total, chunkDmg);
-  }
-  return total;
+    return addValue(total, chunkDmg);
+  }, zero);
 };
 
-const calculatePoolTotalNum = (
-  pool: DmgChunk<number>[],
-  poolType: DmgChunkType,
-  allDmgPctMods: Extract<Mod, { type: "DmgPct" }>[],
+// Calculate totals for all damage pools
+const calculateAllPoolTotals = <T extends DmgRange | number>(
+  dmgPools: DmgPools<T>,
+  allDmgPcts: Extract<Mod, { type: "DmgPct" }>[],
   baseDmgModTypes: DmgModType[],
-): number => {
-  if (pool.length === 0) {
-    return 0;
-  }
-  let total = 0;
-  for (const chunk of pool) {
-    const chunkDmg = calculateChunkDmg(
-      chunk,
-      poolType,
-      allDmgPctMods,
+  zero: T,
+): Record<DmgChunkType, T> => ({
+  physical: calculatePoolTotal(
+    dmgPools.physical,
+    "physical",
+    allDmgPcts,
+    baseDmgModTypes,
+    zero,
+  ),
+  cold: calculatePoolTotal(
+    dmgPools.cold,
+    "cold",
+    allDmgPcts,
+    baseDmgModTypes,
+    zero,
+  ),
+  lightning: calculatePoolTotal(
+    dmgPools.lightning,
+    "lightning",
+    allDmgPcts,
+    baseDmgModTypes,
+    zero,
+  ),
+  fire: calculatePoolTotal(
+    dmgPools.fire,
+    "fire",
+    allDmgPcts,
+    baseDmgModTypes,
+    zero,
+  ),
+  erosion: calculatePoolTotal(
+    dmgPools.erosion,
+    "erosion",
+    allDmgPcts,
+    baseDmgModTypes,
+    zero,
+  ),
+});
+
+// Applies damage % bonuses and penetration to damage pools
+function applyDmgBonusesAndPen(
+  dmgPools: DmgPools<DmgRange>,
+  mods: Mod[],
+  baseDmgModTypes: DmgModType[],
+  config: Configuration,
+): DmgRanges;
+function applyDmgBonusesAndPen(
+  dmgPools: DmgPools<number>,
+  mods: Mod[],
+  baseDmgModTypes: DmgModType[],
+  config: Configuration,
+): NumDmgValues;
+function applyDmgBonusesAndPen(
+  dmgPools: DmgPools<DmgRange> | DmgPools<number>,
+  mods: Mod[],
+  baseDmgModTypes: DmgModType[],
+  config: Configuration,
+): DmgRanges | NumDmgValues {
+  const allDmgPcts = filterMod(mods, "DmgPct");
+
+  // Determine if we're working with DmgRange or number based on pool contents
+  const firstChunk =
+    dmgPools.physical[0] ??
+    dmgPools.cold[0] ??
+    dmgPools.lightning[0] ??
+    dmgPools.fire[0] ??
+    dmgPools.erosion[0];
+  const isRange =
+    firstChunk === undefined || typeof firstChunk.value !== "number";
+
+  if (isRange) {
+    const beforePen = calculateAllPoolTotals(
+      dmgPools as DmgPools<DmgRange>,
+      allDmgPcts,
       baseDmgModTypes,
-    );
-    total = addValue(total, chunkDmg);
+      { min: 0, max: 0 },
+    ) as DmgRanges;
+    return calculatePenetration(beforePen, mods, config);
   }
-  return total;
-};
+
+  const beforePen = calculateAllPoolTotals(
+    dmgPools as DmgPools<number>,
+    allDmgPcts,
+    baseDmgModTypes,
+    0,
+  ) as NumDmgValues;
+  return calculatePenetration(beforePen, mods, config);
+}
 
 interface SkillHitOverview {
   // Damage ranges of a single skill hit, not including crit
@@ -844,9 +912,6 @@ const calculateSkillHit = (
   );
   const skillBaseDmg = addDRs(skillWeaponDR, skillFlatDR);
 
-  // Damage conversion happens after flat damage, before % bonuses
-  const dmgPools = convertDmg(skillBaseDmg, mods);
-
   // Apply % bonuses to each pool, considering conversion history
   const addSpellTag =
     skill.tags.includes("Attack") &&
@@ -855,47 +920,13 @@ const calculateSkillHit = (
   const baseDmgModTypes: DmgModType[] = addSpellTag
     ? [...dmgModTypesForSkill(skill), "spell"]
     : dmgModTypesForSkill(skill);
-  const allDmgPcts = filterMod(mods, "DmgPct");
-  const physBeforePen = calculatePoolTotalRange(
-    dmgPools.physical,
-    "physical",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const coldBeforePen = calculatePoolTotalRange(
-    dmgPools.cold,
-    "cold",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const lightningBeforePen = calculatePoolTotalRange(
-    dmgPools.lightning,
-    "lightning",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const fireBeforePen = calculatePoolTotalRange(
-    dmgPools.fire,
-    "fire",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const erosionBeforePen = calculatePoolTotalRange(
-    dmgPools.erosion,
-    "erosion",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
 
-  const { physical, cold, lightning, fire, erosion } = calculatePenetration(
-    {
-      physical: physBeforePen,
-      cold: coldBeforePen,
-      lightning: lightningBeforePen,
-      fire: fireBeforePen,
-      erosion: erosionBeforePen,
-    },
+  // Damage conversion happens after flat damage, before % bonuses
+  const dmgPools = convertDmg(skillBaseDmg, mods);
+  const { physical, cold, lightning, fire, erosion } = applyDmgBonusesAndPen(
+    dmgPools,
     mods,
+    baseDmgModTypes,
     config,
   );
 
@@ -1925,49 +1956,13 @@ const calcAvgPersistentDps = (
   if (offense === undefined) return;
 
   const input: NumDmgValues = { [offense.dmgType]: offense.value };
-  const dmgPools = convertDmg(input, mods);
-
   const baseDmgModTypes: DmgModType[] = dmgModTypesForSkill(skill);
-  const allDmgPcts = filterMod(mods, "DmgPct");
-  const physBeforePen = calculatePoolTotalNum(
-    dmgPools.physical,
-    "physical",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const coldBeforePen = calculatePoolTotalNum(
-    dmgPools.cold,
-    "cold",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const lightningBeforePen = calculatePoolTotalNum(
-    dmgPools.lightning,
-    "lightning",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const fireBeforePen = calculatePoolTotalNum(
-    dmgPools.fire,
-    "fire",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const erosionBeforePen = calculatePoolTotalNum(
-    dmgPools.erosion,
-    "erosion",
-    allDmgPcts,
-    baseDmgModTypes,
-  );
-  const dmgValues = calculatePenetration(
-    {
-      physical: physBeforePen,
-      cold: coldBeforePen,
-      lightning: lightningBeforePen,
-      fire: fireBeforePen,
-      erosion: erosionBeforePen,
-    },
+
+  const dmgPools = convertDmg(input, mods);
+  const dmgValues = applyDmgBonusesAndPen(
+    dmgPools,
     mods,
+    baseDmgModTypes,
     config,
   );
 
