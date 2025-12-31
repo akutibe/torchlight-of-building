@@ -21,23 +21,11 @@ const formatRes = (res: Resistance): string => {
   return `${res.actual}%`;
 };
 
-const DMG_TYPE_COLORS: Record<string, string> = {
-  physical: "text-zinc-50",
-  cold: "text-cyan-400",
-  lightning: "text-yellow-400",
-  fire: "text-orange-400",
-  erosion: "text-fuchsia-400",
-};
-
 const PersistentDpsSection = ({
   summary,
 }: {
   summary: PersistentDpsSummary;
 }): React.ReactNode => {
-  const nonZeroDamageTypes = Object.entries(summary.base).filter(
-    ([, value]) => value > 0,
-  );
-
   return (
     <div className="mt-4 space-y-3">
       <div className="text-xs font-medium text-zinc-400">Persistent Damage</div>
@@ -55,22 +43,6 @@ const PersistentDpsSection = ({
           {formatStatValue.duration(summary.duration)}
         </div>
       </div>
-
-      {nonZeroDamageTypes.length > 0 && (
-        <div className="rounded bg-zinc-800 p-3">
-          <div className="mb-2 text-xs text-zinc-400">Damage Breakdown</div>
-          <div className="space-y-1">
-            {nonZeroDamageTypes.map(([type, value]) => (
-              <div key={type} className="flex justify-between text-sm">
-                <span className="capitalize text-zinc-400">{type}</span>
-                <span className={DMG_TYPE_COLORS[type]}>
-                  {formatStatValue.damage(value)}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 };
@@ -92,16 +64,16 @@ const ReapDpsSection = ({
       </div>
 
       <div className="rounded bg-zinc-800 p-3">
-        <div className="text-xs text-zinc-400">Duration Mult</div>
+        <div className="text-xs text-zinc-400">Duration Bonus</div>
         <div className="text-lg font-semibold text-zinc-50">
-          {formatStatValue.multiplier(summary.reapDurationMult)}
+          {formatStatValue.percentage(summary.reapDurationBonus)}
         </div>
       </div>
 
       <div className="rounded bg-zinc-800 p-3">
-        <div className="text-xs text-zinc-400">CDR Mult</div>
+        <div className="text-xs text-zinc-400">CDR Bonus</div>
         <div className="text-lg font-semibold text-zinc-50">
-          {formatStatValue.multiplier(summary.reapCdrMult)}
+          {formatStatValue.percentage(summary.reapCdrBonus)}
         </div>
       </div>
     </div>

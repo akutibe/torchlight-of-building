@@ -4386,7 +4386,7 @@ describe("reap mechanics", () => {
     const results = calculateOffense(input);
     const reapSummary = results.skills[skillName]?.totalReapDpsSummary;
 
-    expect(reapSummary?.reapDurationMult).toBeCloseTo(2);
+    expect(reapSummary?.reapDurationBonus).toBeCloseTo(1);
     expect(reapSummary?.reaps[0].duration).toBeCloseTo(1);
     expect(reapSummary?.reaps[0].dmgPerReap).toBeCloseTo(100);
   });
@@ -4404,7 +4404,7 @@ describe("reap mechanics", () => {
     const results = calculateOffense(input);
     const reapSummary = results.skills[skillName]?.totalReapDpsSummary;
 
-    expect(reapSummary?.reapCdrMult).toBeCloseTo(2);
+    expect(reapSummary?.reapCdrBonus).toBeCloseTo(1);
     expect(reapSummary?.reaps[0].rawCooldown).toBeCloseTo(0.5);
     expect(reapSummary?.reaps[0].reapsPerSecond).toBeCloseTo(2);
     expect(reapSummary?.reaps[0].reapDps).toBeCloseTo(100); // 50 dmg * 2 reaps/s
