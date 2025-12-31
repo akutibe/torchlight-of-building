@@ -1704,6 +1704,7 @@ const calculateAddedSkillLevels = (
         () => skill.name === loadout.skillPage.activeSkills[1]?.skillName,
       )
       .with("support", () => skill.type === "Support")
+      .with("active", () => skill.type === "Active")
       .exhaustive();
     if (matches) {
       addedSkillLevels += mod.value;

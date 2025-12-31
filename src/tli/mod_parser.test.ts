@@ -1192,6 +1192,17 @@ test("parse main skill level", () => {
   ]);
 });
 
+test("parse active skill level", () => {
+  const result = parseMod("+2 Active Skill Level");
+  expect(result).toEqual([
+    {
+      type: "SkillLevel",
+      value: 2,
+      skillLevelType: "active",
+    },
+  ]);
+});
+
 test("parse main skill level per sealed life at full mana", () => {
   const result = parseMod(
     "For every 11% Life Sealed when at Full Mana, Main Skill's level +1",
