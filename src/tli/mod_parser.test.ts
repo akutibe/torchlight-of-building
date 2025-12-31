@@ -1366,6 +1366,7 @@ test("parse reaping cooldown recovery speed", () => {
     {
       type: "ReapCdrPct",
       value: 24,
+      addn: false,
     },
   ]);
 });
@@ -1386,6 +1387,7 @@ test("parse affliction effect", () => {
     {
       type: "AfflictionEffectPct",
       value: 18,
+      addn: false,
     },
   ]);
 });

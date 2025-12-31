@@ -3425,7 +3425,7 @@ describe("penetration", () => {
     // 100 cold * (1 - 0.3 + 0.1) = 80
     const input = createDmgInput(100, "cold", {
       mods: affixLines([{ type: "ResPenPct", value: 10, penType: "cold" }]),
-      res: 0.3,
+      res: 30,
     });
     const results = calculateOffense(input);
     validate(results, skillName, { avgHit: 80 });
@@ -3437,7 +3437,7 @@ describe("penetration", () => {
       mods: affixLines([
         { type: "ResPenPct", value: 10, penType: "elemental" },
       ]),
-      res: 0.3,
+      res: 30,
     });
     const results = calculateOffense(input);
     validate(results, skillName, { avgHit: 80 });
@@ -3447,7 +3447,7 @@ describe("penetration", () => {
     // erosion damage with "all" penetration
     const input = createDmgInput(100, "erosion", {
       mods: affixLines([{ type: "ResPenPct", value: 10, penType: "all" }]),
-      res: 0.3,
+      res: 30,
     });
     const results = calculateOffense(input);
     validate(results, skillName, { avgHit: 80 });
@@ -3460,7 +3460,7 @@ describe("penetration", () => {
         { type: "ResPenPct", value: 5, penType: "cold" },
         { type: "ResPenPct", value: 5, penType: "elemental" },
       ]),
-      res: 0.3,
+      res: 30,
     });
     const results = calculateOffense(input);
     // 100 * (1 - 0.3 + 0.1) = 80
@@ -3471,7 +3471,7 @@ describe("penetration", () => {
     // cold damage with fire penetration - should not help
     const input = createDmgInput(100, "cold", {
       mods: affixLines([{ type: "ResPenPct", value: 10, penType: "fire" }]),
-      res: 0.3,
+      res: 30,
     });
     const results = calculateOffense(input);
     // 100 * (1 - 0.3) = 70 (pen doesn't apply)
@@ -3482,7 +3482,7 @@ describe("penetration", () => {
     // 10% resistance, 30% penetration -> -20% effective resistance = 120% damage
     const input = createDmgInput(100, "cold", {
       mods: affixLines([{ type: "ResPenPct", value: 30, penType: "cold" }]),
-      res: 0.1,
+      res: 10,
     });
     const results = calculateOffense(input);
     // 100 * (1 - 0.1 + 0.3) = 100 * 1.2 = 120
@@ -3548,7 +3548,7 @@ describe("penetration", () => {
     // Cold damage: 30% resistance, 30% armor mitigation (non-phys at 60% of 50%)
     // Damage = 100 * (1 - res) * (1 - armor_nonphys)
     // Damage = 100 * (1 - 0.3) * (1 - 0.3) = 100 * 0.7 * 0.7 = 49
-    const input = createDmgInput(100, "cold", { armor: 27273, res: 0.3 });
+    const input = createDmgInput(100, "cold", { armor: 27273, res: 30 });
     const results = calculateOffense(input);
     validate(results, skillName, { avgHit: 49 });
   });
@@ -3562,7 +3562,7 @@ describe("penetration", () => {
         { type: "ArmorPenPct", value: 10 },
       ]),
       armor: 27273,
-      res: 0.3,
+      res: 30,
     });
     const results = calculateOffense(input);
     // 100 * (1 - 0.3 + 0.1) * (1 - 0.3 + 0.1) = 100 * 0.8 * 0.8 = 64
@@ -3571,7 +3571,7 @@ describe("penetration", () => {
 
   test("physical damage only affected by armor, not resistance", () => {
     // Physical damage should ignore elemental resistance
-    const input = createDmgInput(100, "physical", { armor: 27273, res: 0.3 });
+    const input = createDmgInput(100, "physical", { armor: 27273, res: 30 });
     const results = calculateOffense(input);
     // 100 phys * (1 - 0.5) = 50 (resistance doesn't apply)
     validate(results, skillName, { avgHit: 50 });
