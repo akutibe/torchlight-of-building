@@ -566,6 +566,7 @@ const dmgModTypePerSkillTag: Partial<Record<SkillTag, DmgModType>> = {
   Spell: "spell",
   Melee: "melee",
   Area: "area",
+  Channeled: "channeled",
   "Shadow Strike": "shadow_strike_skill",
 };
 

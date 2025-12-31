@@ -227,6 +227,8 @@ interface ModDefinitions {
   // skill-specific
   MindControlMaxLink: { value: number };
   InitialMaxChannel: { value: number };
+  AfflictionInflictedPerSec: { value: number };
+  AfflictionEffectPct: { value: number };
   CannotInflictWilt: object;
 }
 

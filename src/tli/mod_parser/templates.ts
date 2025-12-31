@@ -130,6 +130,11 @@ export const allParsers = [
     dmgModType: "damage_over_time" as const,
     addn: c.additional !== undefined,
   })),
+  t("{value:dec%} [additional] damage for channeled skills").output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: "channeled" as const,
+    addn: c.additional !== undefined,
+  })),
   t("{value:dec%} [additional] [{modType:DmgModType}] damage").output("DmgPct", (c) => ({
     value: c.value,
     dmgModType: c.modType ?? "global",
@@ -303,4 +308,6 @@ export const allParsers = [
   ).output("Reap", (c) => ({ duration: c.duration, cooldown: c.cooldown })),
   t("{value:dec%} reaping duration").output("ReapDurationPct", (c) => ({ value: c.value })),
   t("{value:dec%} reaping cooldown recovery speed").output("ReapCdrPct", (c) => ({ value: c.value })),
+  t("{value:dec} affliction inflicted per second").output("AfflictionInflictedPerSec", (c) => ({ value: c.value })),
+  t("{value:dec%} affliction effect").output("AfflictionEffectPct", (c) => ({ value: c.value })),
 ];

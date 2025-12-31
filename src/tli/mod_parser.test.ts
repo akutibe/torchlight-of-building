@@ -193,6 +193,18 @@ test("parse additional damage over time", () => {
   ]);
 });
 
+test("parse damage for channeled skills", () => {
+  const result = parseMod("+27% damage for Channeled Skills");
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 27,
+      dmgModType: "channeled",
+      addn: false,
+    },
+  ]);
+});
+
 test("return undefined for invalid damage type", () => {
   const result = parseMod("+10% invalid damage");
   expect(result).toBeUndefined();
@@ -1354,6 +1366,26 @@ test("parse reaping cooldown recovery speed", () => {
     {
       type: "ReapCdrPct",
       value: 24,
+    },
+  ]);
+});
+
+test("parse affliction inflicted per second", () => {
+  const result = parseMod("+18 Affliction inflicted per second");
+  expect(result).toEqual([
+    {
+      type: "AfflictionInflictedPerSec",
+      value: 18,
+    },
+  ]);
+});
+
+test("parse affliction effect", () => {
+  const result = parseMod("+18% Affliction Effect");
+  expect(result).toEqual([
+    {
+      type: "AfflictionEffectPct",
+      value: 18,
     },
   ]);
 });
