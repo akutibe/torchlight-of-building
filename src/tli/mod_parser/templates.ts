@@ -310,4 +310,41 @@ export const allParsers = [
   t("{value:dec%} reaping cooldown recovery speed").output("ReapCdrPct", (c) => ({ value: c.value })),
   t("{value:dec} affliction inflicted per second").output("AfflictionInflictedPerSec", (c) => ({ value: c.value })),
   t("{value:dec%} affliction effect").output("AfflictionEffectPct", (c) => ({ value: c.value })),
+  // Sage's Insight resistance reduction mods
+  t(
+    "when a spell hit inflicts fire damage, {value:dec%} cold, lightning, and erosion resistance for the target for {dur:dec} s",
+  ).outputMany([
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "cold" as const, cond: "sages_insight_fire" as const })),
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "lightning" as const, cond: "sages_insight_fire" as const })),
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "erosion" as const, cond: "sages_insight_fire" as const })),
+  ]),
+  t(
+    "when a spell hit inflicts cold damage, {value:dec%} fire, lightning, and erosion resistance for the target for {dur:dec} s",
+  ).outputMany([
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "fire" as const, cond: "sages_insight_cold" as const })),
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "lightning" as const, cond: "sages_insight_cold" as const })),
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "erosion" as const, cond: "sages_insight_cold" as const })),
+  ]),
+  t(
+    "when a spell hit inflicts lightning damage, {value:dec%} fire, cold, and erosion resistance for the target for {dur:dec} s",
+  ).outputMany([
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "fire" as const, cond: "sages_insight_lightning" as const })),
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "cold" as const, cond: "sages_insight_lightning" as const })),
+    spec("EnemyRes", (c) => ({
+      value: c.value,
+      resType: "erosion" as const,
+      cond: "sages_insight_lightning" as const,
+    })),
+  ]),
+  t(
+    "when a spell hit inflicts erosion damage, {value:dec%} fire, cold, and lightning resistance for the target for {dur:dec} s",
+  ).outputMany([
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "fire" as const, cond: "sages_insight_erosion" as const })),
+    spec("EnemyRes", (c) => ({ value: c.value, resType: "cold" as const, cond: "sages_insight_erosion" as const })),
+    spec("EnemyRes", (c) => ({
+      value: c.value,
+      resType: "lightning" as const,
+      cond: "sages_insight_erosion" as const,
+    })),
+  ]),
 ];

@@ -1389,3 +1389,107 @@ test("parse affliction effect", () => {
     },
   ]);
 });
+
+test("parse sage's insight fire", () => {
+  const result = parseMod(
+    "When a Spell hit inflicts Fire Damage, -15% Cold, Lightning, and Erosion Resistance for the target for 3 s",
+  );
+  expect(result).toEqual([
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "cold",
+      cond: "sages_insight_fire",
+    },
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "lightning",
+      cond: "sages_insight_fire",
+    },
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "erosion",
+      cond: "sages_insight_fire",
+    },
+  ]);
+});
+
+test("parse sage's insight cold", () => {
+  const result = parseMod(
+    "When a Spell hit inflicts Cold Damage, -15% Fire, Lightning, and Erosion Resistance for the target for 3 s",
+  );
+  expect(result).toEqual([
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "fire",
+      cond: "sages_insight_cold",
+    },
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "lightning",
+      cond: "sages_insight_cold",
+    },
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "erosion",
+      cond: "sages_insight_cold",
+    },
+  ]);
+});
+
+test("parse sage's insight lightning", () => {
+  const result = parseMod(
+    "When a Spell hit inflicts Lightning Damage, -15% Fire, Cold, and Erosion Resistance for the target for 3 s",
+  );
+  expect(result).toEqual([
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "fire",
+      cond: "sages_insight_lightning",
+    },
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "cold",
+      cond: "sages_insight_lightning",
+    },
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "erosion",
+      cond: "sages_insight_lightning",
+    },
+  ]);
+});
+
+test("parse sage's insight erosion", () => {
+  const result = parseMod(
+    "When a Spell hit inflicts Erosion Damage, -15% Fire, Cold, and Lightning Resistance for the target for 3 s",
+  );
+  expect(result).toEqual([
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "fire",
+      cond: "sages_insight_erosion",
+    },
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "cold",
+      cond: "sages_insight_erosion",
+    },
+    {
+      type: "EnemyRes",
+      value: -15,
+      resType: "lightning",
+      cond: "sages_insight_erosion",
+    },
+  ]);
+});
