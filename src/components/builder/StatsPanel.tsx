@@ -186,6 +186,13 @@ export const StatsPanel = (): React.ReactNode => {
             <div className="font-medium text-zinc-50">{selectedSkill}</div>
           </div>
 
+          <div className="mb-4 rounded border border-amber-500/30 bg-zinc-800 p-3">
+            <div className="text-xs text-zinc-400">Total DPS</div>
+            <div className="text-2xl font-bold text-amber-400">
+              {formatStatValue.dps(offenseSummary.totalDps)}
+            </div>
+          </div>
+
           {offenseSummary.attackHitSummary !== undefined && (
             <div className="space-y-3">
               <div className="rounded bg-zinc-800 p-3">

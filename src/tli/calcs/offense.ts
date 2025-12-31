@@ -196,6 +196,7 @@ interface OffenseSummary {
   attackHitSummary?: OffenseAttackHitSummary;
   persistentDpsSummary?: PersistentDpsSummary;
   totalReapDpsSummary?: TotalReapDpsSummary;
+  totalDps: number;
   resolvedMods: Mod[];
 }
 
@@ -2213,10 +2214,16 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
         ? calcTotalReapDps(mods, persistentDpsSummary)
         : undefined;
 
+    const totalDps =
+      (attackHitSummary?.avgDps ?? 0) +
+      (persistentDpsSummary?.total ?? 0) +
+      (totalReapDpsSummary?.totalReapDps ?? 0);
+
     skills[slot.skillName as ImplementedActiveSkillName] = {
       attackHitSummary,
       persistentDpsSummary,
       totalReapDpsSummary,
+      totalDps,
       resolvedMods: mods,
     };
   }

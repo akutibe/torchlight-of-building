@@ -293,6 +293,20 @@ function CalculationsPage(): React.ReactNode {
         </div>
       </div>
 
+      {offenseSummary !== undefined &&
+        (offenseSummary.attackHitSummary !== undefined ||
+          offenseSummary.persistentDpsSummary !== undefined ||
+          offenseSummary.totalReapDpsSummary !== undefined) && (
+          <div className="rounded-lg border border-amber-500/50 bg-zinc-900 p-6">
+            <h3 className="mb-4 text-lg font-semibold text-amber-400">
+              Total DPS
+            </h3>
+            <div className="text-4xl font-bold text-amber-400">
+              {formatStatValue.dps(offenseSummary.totalDps)}
+            </div>
+          </div>
+        )}
+
       {offenseSummary?.attackHitSummary !== undefined && (
         <div className="rounded-lg border border-amber-500/30 bg-zinc-900 p-6">
           <h3 className="mb-4 text-lg font-semibold text-amber-400">
