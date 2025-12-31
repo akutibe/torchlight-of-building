@@ -260,6 +260,26 @@ function CalculationsPage(): React.ReactNode {
               {formatStatValue.integer(resourcePool.mercuryPts)}
             </div>
           </div>
+          <div className="rounded-lg bg-zinc-800 p-4">
+            <div className="text-sm text-zinc-400">Focus Blessings</div>
+            <div className="text-xl font-semibold text-sky-400">
+              {resourcePool.focusBlessings} / {resourcePool.maxFocusBlessings}
+            </div>
+          </div>
+          <div className="rounded-lg bg-zinc-800 p-4">
+            <div className="text-sm text-zinc-400">Agility Blessings</div>
+            <div className="text-xl font-semibold text-green-400">
+              {resourcePool.agilityBlessings} /{" "}
+              {resourcePool.maxAgilityBlessings}
+            </div>
+          </div>
+          <div className="rounded-lg bg-zinc-800 p-4">
+            <div className="text-sm text-zinc-400">Tenacity Blessings</div>
+            <div className="text-xl font-semibold text-amber-400">
+              {resourcePool.tenacityBlessings} /{" "}
+              {resourcePool.maxTenacityBlessings}
+            </div>
+          </div>
         </div>
       </div>
 
