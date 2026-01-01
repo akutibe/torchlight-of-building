@@ -1,6 +1,7 @@
 import * as R from "remeda";
 import { match } from "ts-pattern";
 import { CoreTalentMods } from "@/src/data/core_talent";
+import type { PactspiritName } from "@/src/data/pactspirit";
 import {
   type ActiveSkillName,
   ActiveSkills,
@@ -43,7 +44,6 @@ import { getSupportSkillMods } from "../skills/support_mods";
 import { getAllAffixes, getGearAffixes } from "./affix-collectors";
 import type { OffenseSkillName } from "./skill_confs";
 import { type ModWithValue, multModValue, multValue } from "./util";
-import { PactspiritName } from "@/src/data/pactspirit";
 
 const addDR = (dr1: DmgRange, dr2: DmgRange): DmgRange => {
   return {
