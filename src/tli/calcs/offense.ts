@@ -1022,6 +1022,7 @@ const filterModsByCond = (
         () => config.sagesInsightLightningActivated,
       )
       .with("sages_insight_erosion", () => config.sagesInsightErosionActivated)
+      .with("at_max_channeled_stacks", () => true)
       .exhaustive();
   });
 };

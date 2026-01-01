@@ -260,6 +260,21 @@ test("parse damage for channeled skills", () => {
   ]);
 });
 
+test("parse additional damage for channeled skills at max stacks", () => {
+  const result = parseMod(
+    "At max channeled stacks, +4% additional damage for Channeled Skills for 4 s",
+  );
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 4,
+      dmgModType: "channeled",
+      addn: true,
+      cond: "at_max_channeled_stacks",
+    },
+  ]);
+});
+
 test("return undefined for invalid damage type", () => {
   const result = parseMod("+10% invalid damage");
   expect(result).toBeUndefined();

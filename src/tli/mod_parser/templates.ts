@@ -21,6 +21,7 @@ const TARGET_ENEMY_IS_IN_PROXIMITY = "target_enemy_is_in_proximity" as const;
 const TARGET_ENEMY_IS_NEARBY = "target_enemy_is_nearby" as const;
 const ALL = "all" as const;
 const ADDITIONAL_MAX_CHANNEL_STACK = "additional_max_channel_stack" as const;
+const AT_MAX_CHANNELED_STACKS = "at_max_channeled_stacks" as const;
 
 const coreTalentNameSet = new Set(CoreTalentNames.map((name) => name.toLowerCase()));
 
@@ -159,6 +160,15 @@ export const allParsers = [
     dmgModType: GLOBAL,
     addn: true,
   })),
+  t("at max channeled stacks, {value:dec%} additional damage for channeled skills for {dur:int} s").output(
+    "DmgPct",
+    (c) => ({
+      value: c.value,
+      dmgModType: "channeled" as const,
+      addn: true,
+      cond: AT_MAX_CHANNELED_STACKS,
+    }),
+  ),
   t("{value:dec%} [additional] damage for channeled skills").output("DmgPct", (c) => ({
     value: c.value,
     dmgModType: "channeled" as const,

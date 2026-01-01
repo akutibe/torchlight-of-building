@@ -122,7 +122,8 @@ export type Condition =
   | "sages_insight_fire"
   | "sages_insight_cold"
   | "sages_insight_lightning"
-  | "sages_insight_erosion";
+  | "sages_insight_erosion"
+  | "at_max_channeled_stacks";
 
 export type ConditionThresholdTarget =
   | "num_enemies_nearby"
