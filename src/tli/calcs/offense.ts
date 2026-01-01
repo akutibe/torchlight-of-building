@@ -41,7 +41,6 @@ import { getActiveSkillMods } from "../skills/active_mods";
 import { getPassiveSkillMods } from "../skills/passive_mods";
 import { getSupportSkillMods } from "../skills/support_mods";
 import {
-  getAllAffixes,
   getCustomAffixes,
   getDivinityAffixes,
   getGearAffixes,
@@ -370,7 +369,7 @@ const calculateGearDmg = (loadout: Loadout, allMods: Mod[]): GearDmg => {
   if (mainhand === undefined) {
     return emptyGearDmg();
   }
-  const mainhandMods = collectModsFromAffixes(getAllAffixes(mainhand));
+  const mainhandMods = collectModsFromAffixes(getGearAffixes(mainhand));
   const basePhysDmgMod = mainhand.baseStats?.baseStatLines
     .flatMap((l) => l.mods ?? [])
     .find((m) => m.type === "GearBasePhysDmg");

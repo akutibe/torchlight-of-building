@@ -1,6 +1,6 @@
 import { Tooltip } from "@/src/components/ui/Tooltip";
 import { useTooltip } from "@/src/hooks/useTooltip";
-import { getAllAffixes } from "@/src/tli/calcs/affix-collectors";
+import { getGearAffixes } from "@/src/tli/calcs/affix-collectors";
 import type { Gear } from "@/src/tli/core";
 import { GearTooltipContent } from "./GearTooltipContent";
 
@@ -36,7 +36,7 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
           <span className="text-xs text-amber-400 font-medium">Legendary</span>
         )}
         <span className="text-xs text-zinc-500">
-          ({getAllAffixes(item).length} affixes)
+          ({getGearAffixes(item).length} affixes)
         </span>
         {isEquipped && (
           <span className="text-xs text-green-500 font-medium">Equipped</span>

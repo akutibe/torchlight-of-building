@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { SaveData } from "@/src/lib/save-data";
 import type { Loadout } from "@/src/tli/core";
+import { collectUnparseableAffixes } from "@/src/tli/storage/load-save";
 
-type DebugView = "saveData" | "loadout";
+type DebugView = "saveData" | "loadout" | "unparseable";
 
 // Find all paths in the JSON tree that contain or lead to matches
 const findMatchingPaths = (data: unknown, searchTerm: string): Set<string> => {
@@ -364,11 +365,30 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
   }, []);
 
   const currentData = view === "saveData" ? saveData : loadout;
-  const title = editMode
-    ? "Debug: SaveData (Edit Mode)"
-    : view === "saveData"
-      ? "Debug: SaveData (Raw)"
-      : "Debug: Loadout (Parsed)";
+  const unparseableAffixes = useMemo(
+    () => collectUnparseableAffixes(loadout),
+    [loadout],
+  );
+
+  const getTitle = (): string => {
+    if (editMode) return "Debug: SaveData (Edit Mode)";
+    if (view === "saveData") return "Debug: SaveData (Raw)";
+    if (view === "loadout") return "Debug: Loadout (Parsed)";
+    return `Debug: Unparseable Affixes (${unparseableAffixes.length})`;
+  };
+  const title = getTitle();
+
+  const cycleView = (): void => {
+    if (view === "saveData") setView("loadout");
+    else if (view === "loadout") setView("unparseable");
+    else setView("saveData");
+  };
+
+  const getViewButtonText = (): string => {
+    if (view === "saveData") return "View Parsed";
+    if (view === "loadout") return "View Unparseable";
+    return "View Raw";
+  };
 
   const matchingPaths = useMemo(() => {
     if (searchTerm === "") return undefined;
@@ -449,13 +469,11 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
             <>
               <button
                 type="button"
-                onClick={() =>
-                  setView(view === "saveData" ? "loadout" : "saveData")
-                }
+                onClick={cycleView}
                 className="px-3 py-1 bg-zinc-700 hover:bg-zinc-600 text-zinc-50 text-sm rounded transition-colors"
-                title="Toggle between SaveData and Loadout views"
+                title="Cycle between SaveData, Loadout, and Unparseable views"
               >
-                {view === "saveData" ? "View Parsed" : "View Raw"}
+                {getViewButtonText()}
               </button>
               {view === "saveData" && (
                 <button
@@ -505,6 +523,26 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
               className="w-full h-full bg-zinc-800 text-zinc-50 font-mono text-xs p-2 border border-zinc-700 rounded resize-none focus:outline-none focus:ring-1 focus:ring-amber-500"
               spellCheck={false}
             />
+          ) : view === "unparseable" ? (
+            <div className="space-y-2">
+              {unparseableAffixes.length === 0 ? (
+                <div className="text-zinc-400 text-sm">
+                  No unparseable affixes
+                </div>
+              ) : (
+                unparseableAffixes.map((affix, idx) => (
+                  <div
+                    key={`${affix.src}-${idx}`}
+                    className="flex items-start gap-2 text-sm"
+                  >
+                    <span className="shrink-0 px-2 py-0.5 bg-zinc-700 text-zinc-300 rounded text-xs font-medium">
+                      {affix.src}
+                    </span>
+                    <span className="font-mono text-red-400">{affix.text}</span>
+                  </div>
+                ))
+              )}
+            </div>
           ) : (
             <div className="text-xs font-mono">
               <JsonNode

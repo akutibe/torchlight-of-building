@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: don't care in test */
 import { expect, test } from "vitest";
 import type { SaveData } from "@/src/lib/save-data";
-import { getAllAffixes } from "../calcs/affix-collectors";
+import { getGearAffixes } from "../calcs/affix-collectors";
 import { getAffixMods, getAffixText } from "../core";
 import { loadSave } from "./load-save";
 
@@ -121,7 +121,7 @@ test("loadSave converts gear with parseable affix", () => {
   expect(loadout.gearPage.equippedGear.mainHand).toBeDefined();
   const mainHand = loadout.gearPage.equippedGear.mainHand!;
   expect(mainHand.equipmentType).toBe("One-Handed Sword");
-  const affixes = getAllAffixes(mainHand);
+  const affixes = getGearAffixes(mainHand);
   expect(affixes).toHaveLength(1);
 
   const affix = affixes[0];
@@ -151,7 +151,7 @@ test("loadSave handles affix that fails to parse", () => {
 
   expect(loadout.gearPage.equippedGear.helmet).toBeDefined();
   const helmet = loadout.gearPage.equippedGear.helmet!;
-  const affixes = getAllAffixes(helmet);
+  const affixes = getGearAffixes(helmet);
   expect(affixes).toHaveLength(1);
 
   const affix = affixes[0];
@@ -187,9 +187,9 @@ test("loadSave sets correct src for different gear slots", () => {
   const loadout = loadSave(saveData);
   const equippedGear = loadout.gearPage.equippedGear;
 
-  expect(getAllAffixes(equippedGear.helmet!)[0].src).toBe("Gear#helmet");
-  expect(getAllAffixes(equippedGear.leftRing!)[0].src).toBe("Gear#leftRing");
-  expect(getAllAffixes(equippedGear.offHand!)[0].src).toBe("Gear#offHand");
+  expect(getGearAffixes(equippedGear.helmet!)[0].src).toBe("Gear#helmet");
+  expect(getGearAffixes(equippedGear.leftRing!)[0].src).toBe("Gear#leftRing");
+  expect(getGearAffixes(equippedGear.offHand!)[0].src).toBe("Gear#offHand");
 });
 
 test("loadSave handles empty gear page", () => {
@@ -232,7 +232,7 @@ test("loadSave converts gear in inventory", () => {
 
   const sword = loadout.gearPage.inventory[0];
   expect(sword.equipmentType).toBe("One-Handed Sword");
-  const swordAffixes = getAllAffixes(sword);
+  const swordAffixes = getGearAffixes(sword);
   expect(swordAffixes).toHaveLength(1);
   expect(getAffixText(swordAffixes[0])).toBe("+20% cold damage");
   expect(swordAffixes[0].src).toBeUndefined();
@@ -243,7 +243,7 @@ test("loadSave converts gear in inventory", () => {
 
   const helmet = loadout.gearPage.inventory[1];
   expect(helmet.equipmentType).toBe("Helmet (STR)");
-  const helmetAffixes = getAllAffixes(helmet);
+  const helmetAffixes = getGearAffixes(helmet);
   expect(helmetAffixes).toHaveLength(2);
   expect(getAffixMods(helmetAffixes[0])).toHaveLength(0);
   expect(getAffixMods(helmetAffixes[1])).toHaveLength(1);

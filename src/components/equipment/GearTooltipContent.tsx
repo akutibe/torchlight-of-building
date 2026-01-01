@@ -2,12 +2,12 @@ import { CoreTalentInfoIcon } from "@/src/components/ui/CoreTalentInfoIcon";
 import { ModNotImplementedIcon } from "@/src/components/ui/ModNotImplementedIcon";
 import { TooltipTitle } from "@/src/components/ui/Tooltip";
 import { getCoreTalentNameFromText } from "@/src/lib/core-talent-utils";
-import { getAllAffixes } from "@/src/tli/calcs/affix-collectors";
+import { getGearAffixes } from "@/src/tli/calcs/affix-collectors";
 import type { Gear } from "@/src/tli/core";
 
 export const GearTooltipContent: React.FC<{ item: Gear }> = ({ item }) => {
   const isLegendary = item.rarity === "legendary";
-  const affixes = getAllAffixes(item);
+  const affixes = getGearAffixes(item);
 
   return (
     <>

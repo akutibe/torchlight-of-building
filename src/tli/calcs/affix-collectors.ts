@@ -22,35 +22,6 @@ const scaleAffixByInverseImage = (affix: Affix, multiplier: number): Affix => ({
   })),
 });
 
-export const getAllAffixes = (gear: Gear): Affix[] => {
-  const affixes: Affix[] = [];
-
-  // Include baseStats as an affix (baseStatLines have same structure as affixLines)
-  if (gear.baseStats?.baseStatLines) {
-    affixes.push({
-      affixLines: gear.baseStats.baseStatLines,
-      src: gear.baseStats.src,
-    });
-  }
-
-  if (gear.legendary_affixes !== undefined) {
-    // Legendary gear: blend first, then legendary affixes
-    if (gear.blend_affix !== undefined) affixes.push(gear.blend_affix);
-    affixes.push(...gear.legendary_affixes);
-  } else {
-    if (gear.base_affixes !== undefined) affixes.push(...gear.base_affixes);
-    if (gear.sweet_dream_affix !== undefined)
-      affixes.push(gear.sweet_dream_affix);
-    if (gear.tower_sequence_affix !== undefined)
-      affixes.push(gear.tower_sequence_affix);
-    if (gear.blend_affix !== undefined) affixes.push(gear.blend_affix);
-    if (gear.prefixes !== undefined) affixes.push(...gear.prefixes);
-    if (gear.suffixes !== undefined) affixes.push(...gear.suffixes);
-  }
-
-  return affixes;
-};
-
 export const getTalentAffixes = (talentPage: TalentPage): Affix[] => {
   const affixes: Affix[] = [];
   const { talentTrees: allocatedTalents } = talentPage;
@@ -107,10 +78,36 @@ export const getHeroAffixes = (heroPage: HeroPage): Affix[] => {
   return affixes;
 };
 
-export const getGearAffixes = (
-  gear: Loadout["gearPage"]["equippedGear"][keyof Loadout["gearPage"]["equippedGear"]],
-): Affix[] => {
-  return gear ? getAllAffixes(gear) : [];
+export const getGearAffixes = (gear: Gear | undefined): Affix[] => {
+  if (gear === undefined) {
+    return [];
+  }
+  const affixes: Affix[] = [];
+
+  // Include baseStats as an affix (baseStatLines have same structure as affixLines)
+  if (gear.baseStats?.baseStatLines) {
+    affixes.push({
+      affixLines: gear.baseStats.baseStatLines,
+      src: gear.baseStats.src,
+    });
+  }
+
+  if (gear.legendary_affixes !== undefined) {
+    // Legendary gear: blend first, then legendary affixes
+    if (gear.blend_affix !== undefined) affixes.push(gear.blend_affix);
+    affixes.push(...gear.legendary_affixes);
+  } else {
+    if (gear.base_affixes !== undefined) affixes.push(...gear.base_affixes);
+    if (gear.sweet_dream_affix !== undefined)
+      affixes.push(gear.sweet_dream_affix);
+    if (gear.tower_sequence_affix !== undefined)
+      affixes.push(gear.tower_sequence_affix);
+    if (gear.blend_affix !== undefined) affixes.push(gear.blend_affix);
+    if (gear.prefixes !== undefined) affixes.push(...gear.prefixes);
+    if (gear.suffixes !== undefined) affixes.push(...gear.suffixes);
+  }
+
+  return affixes;
 };
 
 export const getPactspiritAffixes = (

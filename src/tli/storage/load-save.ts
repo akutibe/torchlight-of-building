@@ -759,6 +759,163 @@ const convertDivinityPage = (
   };
 };
 
+export interface UnparseableAffix {
+  text: string;
+  src: string;
+}
+
+const collectUnparseableFromAffix = (
+  affix: Affix | undefined,
+  result: UnparseableAffix[],
+): void => {
+  if (affix === undefined) return;
+  const src = affix.src ?? "unknown";
+  for (const line of affix.affixLines) {
+    if (line.mods === undefined) {
+      result.push({ text: line.text, src });
+    }
+  }
+};
+
+const collectUnparseableFromAffixes = (
+  affixes: Affix[] | undefined,
+  result: UnparseableAffix[],
+): void => {
+  if (affixes === undefined) return;
+  for (const affix of affixes) {
+    collectUnparseableFromAffix(affix, result);
+  }
+};
+
+const collectUnparseableFromBaseStats = (
+  baseStats: BaseStats | undefined,
+  result: UnparseableAffix[],
+): void => {
+  if (baseStats === undefined) return;
+  const src = baseStats.src ?? "unknown";
+  for (const line of baseStats.baseStatLines) {
+    if (line.mods === undefined) {
+      result.push({ text: line.text, src });
+    }
+  }
+};
+
+const collectUnparseableFromGear = (
+  gear: Gear | undefined,
+  result: UnparseableAffix[],
+): void => {
+  if (gear === undefined) return;
+  collectUnparseableFromBaseStats(gear.baseStats, result);
+  collectUnparseableFromAffixes(gear.base_affixes, result);
+  collectUnparseableFromAffixes(gear.prefixes, result);
+  collectUnparseableFromAffixes(gear.suffixes, result);
+  collectUnparseableFromAffix(gear.blend_affix, result);
+  collectUnparseableFromAffix(gear.sweet_dream_affix, result);
+  collectUnparseableFromAffix(gear.tower_sequence_affix, result);
+  collectUnparseableFromAffixes(gear.legendary_affixes, result);
+};
+
+const collectUnparseableFromTalentTree = (
+  tree: TalentTree | undefined,
+  result: UnparseableAffix[],
+): void => {
+  if (tree === undefined) return;
+  for (const node of tree.nodes) {
+    collectUnparseableFromAffix(node.affix, result);
+    collectUnparseableFromAffixes(node.prismAffixes, result);
+  }
+  collectUnparseableFromAffixes(tree.selectedCoreTalents, result);
+  collectUnparseableFromAffix(tree.additionalCoreTalentPrismAffix, result);
+};
+
+const collectUnparseableFromPactspiritSlot = (
+  slot: PactspiritSlot | undefined,
+  result: UnparseableAffix[],
+): void => {
+  if (slot === undefined) return;
+  collectUnparseableFromAffix(slot.mainAffix, result);
+  for (const ringKey of RING_SLOT_KEYS) {
+    const ring = slot.rings[ringKey];
+    collectUnparseableFromAffix(ring.originalAffix, result);
+    if (ring.installedDestiny !== undefined) {
+      collectUnparseableFromAffix(ring.installedDestiny.affix, result);
+    }
+  }
+};
+
+export const collectUnparseableAffixes = (
+  loadout: Loadout,
+): UnparseableAffix[] => {
+  const result: UnparseableAffix[] = [];
+
+  // Gear page
+  const gearSlots: (keyof EquippedGear)[] = [
+    "helmet",
+    "chest",
+    "neck",
+    "gloves",
+    "belt",
+    "boots",
+    "leftRing",
+    "rightRing",
+    "mainHand",
+    "offHand",
+  ];
+  for (const slot of gearSlots) {
+    collectUnparseableFromGear(loadout.gearPage.equippedGear[slot], result);
+  }
+  for (const gear of loadout.gearPage.inventory) {
+    collectUnparseableFromGear(gear, result);
+  }
+
+  // Talent page
+  collectUnparseableFromTalentTree(
+    loadout.talentPage.talentTrees.tree1,
+    result,
+  );
+  collectUnparseableFromTalentTree(
+    loadout.talentPage.talentTrees.tree2,
+    result,
+  );
+  collectUnparseableFromTalentTree(
+    loadout.talentPage.talentTrees.tree3,
+    result,
+  );
+  collectUnparseableFromTalentTree(
+    loadout.talentPage.talentTrees.tree4,
+    result,
+  );
+
+  // Divinity page
+  for (const slate of loadout.divinityPage.inventory) {
+    collectUnparseableFromAffixes(slate.affixes, result);
+  }
+
+  // Hero page
+  for (const memory of Object.values(loadout.heroPage.memorySlots)) {
+    if (memory !== undefined) {
+      collectUnparseableFromAffixes(memory.affixes, result);
+    }
+  }
+  for (const memory of loadout.heroPage.memoryInventory) {
+    collectUnparseableFromAffixes(memory.affixes, result);
+  }
+
+  // Pactspirit page
+  collectUnparseableFromPactspiritSlot(loadout.pactspiritPage.slot1, result);
+  collectUnparseableFromPactspiritSlot(loadout.pactspiritPage.slot2, result);
+  collectUnparseableFromPactspiritSlot(loadout.pactspiritPage.slot3, result);
+
+  // Custom affix lines
+  for (const line of loadout.customAffixLines) {
+    if (line.mods === undefined) {
+      result.push({ text: line.text, src: "CustomAffix" });
+    }
+  }
+
+  return result;
+};
+
 export const loadSave = (unloadedSaveData: SaveData): Loadout => {
   const saveData = R.clone(unloadedSaveData);
   return {

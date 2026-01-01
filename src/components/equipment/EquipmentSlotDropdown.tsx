@@ -4,7 +4,7 @@ import {
   type SearchableSelectOption,
 } from "@/src/components/ui/SearchableSelect";
 import { Tooltip } from "@/src/components/ui/Tooltip";
-import { getAllAffixes } from "@/src/tli/calcs/affix-collectors";
+import { getGearAffixes } from "@/src/tli/calcs/affix-collectors";
 import type { Gear } from "@/src/tli/core";
 import type { GearSlot } from "../../lib/types";
 import { GearTooltipContent } from "./GearTooltipContent";
@@ -23,7 +23,7 @@ const OptionWithTooltip: React.FC<OptionWithTooltipProps> = ({
   const ref = useRef<HTMLDivElement>(null);
 
   const isLegendary = item.rarity === "legendary";
-  const affixes = getAllAffixes(item);
+  const affixes = getGearAffixes(item);
 
   return (
     <div
@@ -121,7 +121,7 @@ export const EquipmentSlotDropdown: React.FC<EquipmentSlotDropdownProps> = ({
           // biome-ignore lint/style/noNonNullAssertion: inventory items always have id
           value: item.id!,
           label: item.legendaryName ?? item.equipmentType,
-          sublabel: `${getAllAffixes(item).length} affixes`,
+          sublabel: `${getGearAffixes(item).length} affixes`,
         }))}
         placeholder="-- None --"
         className="flex-1"
