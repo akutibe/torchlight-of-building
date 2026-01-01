@@ -166,4 +166,25 @@ export const activeSkillModFactories: Partial<
       },
     ],
   }),
+  "Mana Boil": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        dmgModType: "spell",
+        addn: true,
+        value: v(vals.spellDmgPct, l),
+      },
+    ],
+  }),
+  "Arcane Circle": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        dmgModType: "spell",
+        addn: true,
+        value: v(vals.spellDmgPctPerStack, l),
+        per: { stackable: "arcane_circle_stack", limit: 15 },
+      },
+    ],
+  }),
 };

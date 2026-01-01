@@ -1,14 +1,18 @@
 import {
+  arcaneCircleParser,
   bullsRageParser,
   chargingWarcryParser,
   corruptionParser,
   entangledPainParser,
   frostSpikeParser,
   iceBondParser,
+  manaBoilParser,
   mindControlParser,
 } from "./active_parsers";
 import {
   corrosionFocusParser,
+  deepPainParser,
+  erosionAmplificationParser,
   preciseCrueltyParser,
   preciseDeepPainParser,
   preciseErosionAmplificationParser,
@@ -174,6 +178,26 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Corrosion Focus",
     categories: ["passive"],
     parser: corrosionFocusParser,
+  },
+  {
+    skillName: "Mana Boil",
+    categories: ["active"],
+    parser: manaBoilParser,
+  },
+  {
+    skillName: "Arcane Circle",
+    categories: ["active"],
+    parser: arcaneCircleParser,
+  },
+  {
+    skillName: "Deep Pain",
+    categories: ["passive"],
+    parser: deepPainParser,
+  },
+  {
+    skillName: "Erosion Amplification",
+    categories: ["passive"],
+    parser: erosionAmplificationParser,
   },
 ];
 

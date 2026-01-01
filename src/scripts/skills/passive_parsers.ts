@@ -139,3 +139,47 @@ export const corrosionFocusParser: SupportLevelParser = (input) => {
     BaseWiltFlatDmg: createConstantLevels(2),
   };
 };
+
+export const deepPainParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const dotDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    // Match "+15% additional Damage Over Time" or "35.5% additional Damage Over Time"
+    const dmgMatch = template("{value:dec%} additional damage over time").match(
+      text,
+      skillName,
+    );
+    dotDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(dotDmgPct, skillName);
+
+  return { dotDmgPct };
+};
+
+export const erosionAmplificationParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const erosionDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    // Match "+15% additional Erosion Damage" or "35.5% additional Erosion Damage"
+    const dmgMatch = template("{value:dec%} additional erosion damage").match(
+      text,
+      skillName,
+    );
+    erosionDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(erosionDmgPct, skillName);
+
+  return { erosionDmgPct };
+};

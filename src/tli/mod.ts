@@ -88,6 +88,7 @@ export type Stackable =
   | "channel_stack"
   // skill-specific
   | "mind_control_link"
+  | "arcane_circle_stack"
   // pactspirit-specific
   | "repentance";
 

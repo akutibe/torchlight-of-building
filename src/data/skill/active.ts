@@ -44,6 +44,14 @@ export const ActiveSkills = [
       "Gains 1 stack of buff for every enemy who enters the Arcane Circle for the first time",
     ],
     kinds: [],
+    levelValues: {
+      spellDmgPctPerStack: [
+        1.4, 1.45, 1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95, 2,
+        2.05, 2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.55, 2.6, 2.65,
+        2.7, 2.75, 2.8, 2.85, 2.9, 2.95, 3, 3.05, 3.1, 3.15, 3.2, 3.25, 3.3,
+        3.35,
+      ],
+    },
   },
   {
     type: "Active",
@@ -1196,6 +1204,14 @@ export const ActiveSkills = [
       "Gains Euphoria upon casting the skill:\n16.65% additional Spell Damage while the skill lasts\nConsumes 16.65% additional Spell Damage while the skill lasts Mana every second.\nLoses the Euphoria effect when Mana drops to 0.",
     ],
     kinds: [],
+    levelValues: {
+      spellDmgPct: [
+        10, 10.35, 10.7, 11.05, 11.4, 11.75, 12.1, 12.45, 12.8, 13.15, 13.5,
+        13.85, 14.2, 14.55, 14.9, 15.25, 15.6, 15.95, 16.3, 16.65, 17, 17.35,
+        17.7, 18.05, 18.4, 18.75, 19.1, 19.45, 19.8, 20.15, 20.5, 20.85, 21.2,
+        21.55, 21.9, 22.25, 22.6, 22.95, 23.3, 23.65,
+      ],
+    },
   },
   {
     type: "Active",

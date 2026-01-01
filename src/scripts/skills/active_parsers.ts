@@ -316,3 +316,45 @@ export const corruptionParser: SupportLevelParser = (input) => {
 
   return { dmgPct };
 };
+
+export const manaBoilParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const spellDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+    // Match "+10% additional Spell Damage" or "16.65% additional Spell Damage"
+    const match = template("{value:dec%} additional spell damage").match(
+      text,
+      skillName,
+    );
+    spellDmgPct[level] = match.value;
+  }
+
+  validateAllLevels(spellDmgPct, skillName);
+
+  return { spellDmgPct };
+};
+
+export const arcaneCircleParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const spellDmgPctPerStack: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+    // Match "1.4% additional Spell Damage" or "+2% additional Spell Damage"
+    const match = template("{value:dec%} additional spell damage").match(
+      text,
+      skillName,
+    );
+    spellDmgPctPerStack[level] = match.value;
+  }
+
+  validateAllLevels(spellDmgPctPerStack, skillName);
+
+  return { spellDmgPctPerStack };
+};

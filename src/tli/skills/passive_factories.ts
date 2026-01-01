@@ -76,4 +76,24 @@ export const passiveSkillModFactories: Partial<
       { type: "BaseWiltFlatDmg", value: v(vals.BaseWiltFlatDmg, l) },
     ],
   }),
+  "Deep Pain": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.dotDmgPct, l),
+        addn: true,
+        dmgModType: "damage_over_time",
+      },
+    ],
+  }),
+  "Erosion Amplification": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.erosionDmgPct, l),
+        addn: true,
+        dmgModType: "erosion",
+      },
+    ],
+  }),
 };
