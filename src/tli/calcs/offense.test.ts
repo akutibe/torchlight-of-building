@@ -1615,6 +1615,69 @@ describe("mod normalization with per-stack mods", () => {
     const results = calculateOffense(input);
     validate(results, skillName, { avgHit: 160 });
   });
+
+  test("multiplicative stacking compounds percentage bonuses", () => {
+    // 2 willpower stacks, 10% per stack multiplicative
+    // stackCount = 2
+    // newValue = (1 + 0.10)^2 - 1 = 0.21 (21%)
+    // avgHit = 100 * (1 + 0.21) = 121
+    const input = createModsInput(
+      affixLines([
+        { type: "MaxWillpowerStacks", value: 2 },
+        {
+          type: "DmgPct",
+          value: 10,
+          dmgModType: "global",
+          addn: false,
+          per: { stackable: "willpower", multiplicative: true },
+        },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validate(results, skillName, { avgHit: 121 });
+  });
+
+  test("multiplicative stacking with amt divides stacks correctly", () => {
+    // 6 willpower stacks, 10% per 2 willpower multiplicative
+    // stackCount = 6/2 = 3
+    // newValue = (1 + 0.10)^3 - 1 = 0.331 (33.1%)
+    // avgHit = 100 * (1 + 0.331) = 133.1
+    const input = createModsInput(
+      affixLines([
+        { type: "MaxWillpowerStacks", value: 6 },
+        {
+          type: "DmgPct",
+          value: 10,
+          dmgModType: "global",
+          addn: false,
+          per: { stackable: "willpower", amt: 2, multiplicative: true },
+        },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validate(results, skillName, { avgHit: 133.1 });
+  });
+
+  test("multiplicative stacking respects valueLimit", () => {
+    // 3 willpower stacks, 10% per stack multiplicative, valueLimit: 25
+    // stackCount = 3
+    // newValue = (1 + 0.10)^3 - 1 = 0.331 (33.1%), capped to 25%
+    // avgHit = 100 * (1 + 0.25) = 125
+    const input = createModsInput(
+      affixLines([
+        { type: "MaxWillpowerStacks", value: 3 },
+        {
+          type: "DmgPct",
+          value: 10,
+          dmgModType: "global",
+          addn: false,
+          per: { stackable: "willpower", multiplicative: true, valueLimit: 25 },
+        },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validate(results, skillName, { avgHit: 125 });
+  });
 });
 
 // Additional damage per stat tests

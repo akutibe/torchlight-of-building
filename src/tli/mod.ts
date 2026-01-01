@@ -103,6 +103,11 @@ export interface PerStackable {
   valueLimit?: number; // default infinite
   // how much to divide the stackable number by
   amt?: number; // default 1
+  // whether or not each stack causes the multiplier to compound
+  // this only applies to percentage-based mods, like DmgPct
+  // i.e. newvalue=(1+value)^(count)-1 instead of newvalue=value*count
+  // example: if mod value is 10%, and there's 2 stacks, the final mod value should be 21%
+  multiplicative?: boolean; // default false
 }
 
 export type Condition =

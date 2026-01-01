@@ -1083,8 +1083,15 @@ const normalizeStackable = <T extends Mod>(
   }
 
   const div = mod.per.amt || 1;
-  const mult = Math.min(stacks / div, mod.per.limit ?? Infinity);
-  const newModValue = multValue(mod.value, mult);
+  const stackCount = Math.min(stacks / div, mod.per.limit ?? Infinity);
+
+  let newModValue: number | DmgRange;
+  if (mod.per.multiplicative === true && typeof mod.value === "number") {
+    newModValue = ((1 + mod.value / 100) ** stackCount - 1) * 100;
+  } else {
+    newModValue = multValue(mod.value, stackCount);
+  }
+
   if (typeof newModValue === "number" && mod.per.valueLimit !== undefined) {
     return {
       ...mod,
@@ -1174,7 +1181,7 @@ const calculateImplicitMods = (): Mod[] => {
       value: 15,
       dmgModType: "damage_over_time",
       addn: true,
-      per: { stackable: "desecration" },
+      per: { stackable: "desecration", multiplicative: true },
       cond: "enemy_has_desecration",
       src: "Additional Damage over TIme from desecration (15% per stack)",
     },
