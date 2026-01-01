@@ -1651,7 +1651,10 @@ const resolveBuffSkillEffMults = (
   derivedCtx: DerivedCtx,
 ): { skillEffMult: number; auraEffMult: number; curseEffMult: number } => {
   const buffSkillEffMods = unresolvedModsFromParam.filter(
-    (m) => m.type === "AuraEffPct" || m.type === "SkillEffPct",
+    (m) =>
+      m.type === "AuraEffPct" ||
+      m.type === "SkillEffPct" ||
+      m.type === "CurseEffPct",
   );
   const prenormMods = filterModsByCondThreshold(
     filterModsByCond(buffSkillEffMods, loadout, config, derivedCtx),
