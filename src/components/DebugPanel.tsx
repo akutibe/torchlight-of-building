@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  collectUnimplementedItems,
+  collectUnparseableAffixes,
+} from "@/src/lib/debug-utils";
 import type { SaveData } from "@/src/lib/save-data";
 import { getAllAffixes } from "@/src/tli/calcs/affix-collectors";
 import type { Loadout } from "@/src/tli/core";
-import { collectUnparseableAffixes } from "@/src/tli/storage/load-save";
 
 type DebugView = "saveData" | "loadout" | "unparseable";
 
@@ -370,12 +373,17 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
     () => collectUnparseableAffixes(getAllAffixes(loadout)),
     [loadout],
   );
+  const unimplementedItems = useMemo(
+    () => collectUnimplementedItems(loadout),
+    [loadout],
+  );
+  const totalIssues = unparseableAffixes.length + unimplementedItems.length;
 
   const getTitle = (): string => {
     if (editMode) return "Debug: SaveData (Edit Mode)";
     if (view === "saveData") return "Debug: SaveData (Raw)";
     if (view === "loadout") return "Debug: Loadout (Parsed)";
-    return `Debug: Unparseable Affixes (${unparseableAffixes.length})`;
+    return `Debug: Unimplemented (${totalIssues})`;
   };
   const title = getTitle();
 
@@ -387,7 +395,7 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
 
   const getViewButtonText = (): string => {
     if (view === "saveData") return "View Parsed";
-    if (view === "loadout") return "View Unparseable";
+    if (view === "loadout") return "View Unimplemented";
     return "View Raw";
   };
 
@@ -525,23 +533,58 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
               spellCheck={false}
             />
           ) : view === "unparseable" ? (
-            <div className="space-y-2">
-              {unparseableAffixes.length === 0 ? (
-                <div className="text-zinc-400 text-sm">
-                  No unparseable affixes
-                </div>
-              ) : (
-                unparseableAffixes.map((affix, idx) => (
-                  <div
-                    key={`${affix.src}-${idx}`}
-                    className="flex items-start gap-2 text-sm"
-                  >
-                    <span className="shrink-0 px-2 py-0.5 bg-zinc-700 text-zinc-300 rounded text-xs font-medium">
-                      {affix.src}
-                    </span>
-                    <span className="font-mono text-red-400">{affix.text}</span>
+            <div className="space-y-4">
+              {/* Unimplemented Skills/Traits Section */}
+              {unimplementedItems.length > 0 && (
+                <div>
+                  <h4 className="text-xs font-semibold text-zinc-400 uppercase tracking-wide mb-2">
+                    Unimplemented Skills & Traits ({unimplementedItems.length})
+                  </h4>
+                  <div className="space-y-1">
+                    {unimplementedItems.map((item, idx) => (
+                      <div
+                        key={`${item.type}-${item.name}-${idx}`}
+                        className="flex items-start gap-2 text-sm"
+                      >
+                        <span className="shrink-0 px-2 py-0.5 bg-orange-900/50 text-orange-300 rounded text-xs font-medium">
+                          {item.type}
+                        </span>
+                        <span className="text-orange-400">{item.name}</span>
+                      </div>
+                    ))}
                   </div>
-                ))
+                </div>
+              )}
+
+              {/* Unparseable Affixes Section */}
+              {unparseableAffixes.length > 0 && (
+                <div>
+                  <h4 className="text-xs font-semibold text-zinc-400 uppercase tracking-wide mb-2">
+                    Unparseable Affixes ({unparseableAffixes.length})
+                  </h4>
+                  <div className="space-y-1">
+                    {unparseableAffixes.map((affix, idx) => (
+                      <div
+                        key={`${affix.src}-${idx}`}
+                        className="flex items-start gap-2 text-sm"
+                      >
+                        <span className="shrink-0 px-2 py-0.5 bg-zinc-700 text-zinc-300 rounded text-xs font-medium">
+                          {affix.src}
+                        </span>
+                        <span className="font-mono text-red-400">
+                          {affix.text}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Empty state */}
+              {totalIssues === 0 && (
+                <div className="text-zinc-400 text-sm">
+                  No unimplemented items or unparseable affixes
+                </div>
               )}
             </div>
           ) : (

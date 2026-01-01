@@ -759,26 +759,6 @@ const convertDivinityPage = (
   };
 };
 
-export interface UnparseableAffix {
-  text: string;
-  src: string;
-}
-
-export const collectUnparseableAffixes = (
-  allAffixes: Affix[],
-): UnparseableAffix[] => {
-  const result: UnparseableAffix[] = [];
-  for (const affix of allAffixes) {
-    const src = affix.src ?? "unknown";
-    for (const line of affix.affixLines) {
-      if (line.mods === undefined) {
-        result.push({ text: line.text, src });
-      }
-    }
-  }
-  return result;
-};
-
 export const loadSave = (unloadedSaveData: SaveData): Loadout => {
   const saveData = R.clone(unloadedSaveData);
   return {
