@@ -1848,6 +1848,7 @@ const calculateAddedSkillLevels = (
       .with("support", () => skill.type === "Support")
       .with("active", () => skill.type === "Active")
       .with("persistent", () => skill.tags.includes("Persistent"))
+      .with("erosion", () => skill.tags.includes("Erosion"))
       .exhaustive();
     if (matches) {
       addedSkillLevels += mod.value;
