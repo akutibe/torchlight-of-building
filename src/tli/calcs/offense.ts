@@ -2218,11 +2218,18 @@ const calcTotalReapDps = (
     filterMod(mods, "ReapDurationPct"),
   );
   const reapCdrMult = calculateEffMultiplier(filterMod(mods, "ReapCdrPct"));
+  const reapPurificationPct =
+    sumByValue(filterMod(mods, "ReapPurificationPct")) / 100;
   const reaps = filterMod(mods, "Reap").map((m) => {
     const duration = Math.min(m.duration * reapDurationMult, dotDuration);
     const rawCooldown = m.cooldown / reapCdrMult;
     const reapsPerSecond = calcReapsPerSecond(rawCooldown);
-    const dmgPerReap = dotDps * duration;
+    // Base reap damage from reaped duration
+    const baseReapDmg = dotDps * duration;
+    // Purification adds a portion of remaining DOT damage
+    const remainingDotDuration = dotDuration - duration;
+    const purificationDmg = remainingDotDuration * dotDps * reapPurificationPct;
+    const dmgPerReap = baseReapDmg + purificationDmg;
     const reapDps = dmgPerReap * reapsPerSecond;
     return {
       rawCooldown,
