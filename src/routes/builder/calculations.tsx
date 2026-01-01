@@ -288,6 +288,14 @@ function CalculationsPage(): React.ReactNode {
               </div>
             </div>
           )}
+          {resourcePool.additionalMaxChanneledStacks > 0 && (
+            <div className="rounded-lg bg-zinc-800 p-4">
+              <div className="text-sm text-zinc-400">+Max Channeled Stacks</div>
+              <div className="text-xl font-semibold text-teal-400">
+                {resourcePool.additionalMaxChanneledStacks}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 

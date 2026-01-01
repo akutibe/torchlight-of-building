@@ -1900,12 +1900,11 @@ const resolveModsForOffenseSkill = (
   const totalMainStats = calculateTotalMainStats(skill, stats);
   mods.push(...normalizeStackables(prenormMods, "main_stat", totalMainStats));
 
-  const additionalMaxChannel = sumByValue(filterMod(mods, "MaxChannel"));
   mods.push(
     ...normalizeStackables(
       prenormMods,
       "additional_max_channel_stack",
-      additionalMaxChannel,
+      resourcePool.additionalMaxChanneledStacks,
     ),
   );
 
@@ -2021,6 +2020,7 @@ export interface ResourcePool {
   tenacityBlessings: number;
   maxTenacityBlessings: number;
   desecration?: number;
+  additionalMaxChanneledStacks: number;
 }
 
 const calculateResourcePool = (
@@ -2064,6 +2064,10 @@ const calculateResourcePool = (
   const tenacityBlessings = calcNumTenacity(maxTenacityBlessings, config);
   const desecration = calcDesecration(mods, derivedCtx);
 
+  const additionalMaxChanneledStacks = Math.round(
+    sumByValue(filterMod(mods, "MaxChannel")),
+  );
+
   return {
     stats,
     maxLife,
@@ -2076,6 +2080,7 @@ const calculateResourcePool = (
     maxTenacityBlessings,
     tenacityBlessings,
     desecration,
+    additionalMaxChanneledStacks,
   };
 };
 
