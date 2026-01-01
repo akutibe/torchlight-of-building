@@ -296,6 +296,14 @@ function CalculationsPage(): React.ReactNode {
               </div>
             </div>
           )}
+          {resourcePool.hasFervor && (
+            <div className="rounded-lg bg-zinc-800 p-4">
+              <div className="text-sm text-zinc-400">Fervor</div>
+              <div className="text-xl font-semibold text-orange-400">
+                {resourcePool.fervorPts}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
