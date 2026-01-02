@@ -73,6 +73,7 @@ export const SearchableSelect = <T extends string | number>({
   renderSelectedTooltip,
 }: SearchableSelectProps<T>) => {
   const [query, setQuery] = useState("");
+  const [isInputFocused, setIsInputFocused] = useState(false);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [inputRect, setInputRect] = useState<DOMRect | undefined>(undefined);
   const inputWrapperRef = useRef<HTMLDivElement>(null);
@@ -159,6 +160,7 @@ export const SearchableSelect = <T extends string | number>({
   const handleChange = (option: SearchableSelectOption<T> | null) => {
     onChange(option?.value);
     setQuery("");
+    setIsInputFocused(false);
   };
 
   const isEmpty = value === undefined || value === "";
@@ -186,9 +188,14 @@ export const SearchableSelect = <T extends string | number>({
                 ${disabled ? "opacity-50 cursor-not-allowed" : ""}
               `}
               displayValue={(opt: SearchableSelectOption<T> | null) =>
-                opt?.label ?? ""
+                isInputFocused ? query : (opt?.label ?? "")
               }
               onChange={(e) => setQuery(e.target.value)}
+              onFocus={() => {
+                setIsInputFocused(true);
+                setQuery("");
+              }}
+              onBlur={() => setIsInputFocused(false)}
               onKeyDown={(e) => {
                 if (e.key === " ") e.stopPropagation();
               }}
