@@ -184,6 +184,12 @@ export interface BaseMagnificentSupportSkill extends BaseSkill {
 export interface BaseNobleSupportSkill extends BaseSkill {
   // name of skill that can be supported
   supportTarget: string;
+  // Tier-scaled values (tier 0-2 with min/max ranges) - same as magnificent
+  tierValues?: MagnificentTierValues;
+  // Rank-scaled values (5-element arrays for ranks 1-5) - same as magnificent
+  rankValues?: MagnificentRankValues;
+  // Constant values (don't change with tier/rank/value) - same as magnificent
+  constantValues?: MagnificentConstantValues;
 }
 
 export type SkillOffense =

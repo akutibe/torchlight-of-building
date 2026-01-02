@@ -15,20 +15,25 @@ import type {
   ActivationMediumSkillNmae,
   BaseActiveSkill,
   BaseMagnificentSupportSkill,
+  BaseNobleSupportSkill,
   BaseSkill,
   MagnificentSupportSkillName,
   NobleSupportSkillName,
   SupportSkillName,
 } from "@/src/data/skill/types";
-import { getWorstMagnificentDefaults } from "@/src/lib/magnificent-utils";
 import type {
   BaseSupportSkillSlot,
   MagnificentSupportSkillSlot,
+  NobleSupportSkillSlot,
 } from "@/src/lib/save-data";
 import { listAvailableSupports } from "@/src/lib/skill-utils";
-import { MagnificentEditModal } from "./MagnificentEditModal";
+import { getWorstSpecialDefaults } from "@/src/lib/special-support-utils";
 import { OptionWithSkillTooltip } from "./OptionWithSkillTooltip";
 import { SkillTooltipContent } from "./SkillTooltipContent";
+import {
+  SpecialSupportEditModal,
+  type SpecialSupportSlot,
+} from "./SpecialSupportEditModal";
 
 interface SupportSkillSelectorProps {
   mainSkill: BaseActiveSkill | BaseSkill | undefined;
@@ -67,6 +72,12 @@ const getMagnificentSkill = (
   return MagnificentSupportSkills.find((s) => s.name === skillName);
 };
 
+const getNobleSkill = (
+  skillName: string,
+): BaseNobleSupportSkill | undefined => {
+  return NobleSupportSkills.find((s) => s.name === skillName);
+};
+
 export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
   mainSkill,
   selectedSlot,
@@ -74,7 +85,8 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
   onChange,
   slotIndex,
 }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMagnificentModalOpen, setIsMagnificentModalOpen] = useState(false);
+  const [isNobleModalOpen, setIsNobleModalOpen] = useState(false);
 
   const selectedSkillName = selectedSlot?.name;
   const skillType = useMemo(
@@ -87,6 +99,13 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
     if (skillType !== "magnificent" || selectedSkillName === undefined)
       return undefined;
     return getMagnificentSkill(selectedSkillName);
+  }, [skillType, selectedSkillName]);
+
+  // Get noble skill data for modal
+  const nobleSkill = useMemo(() => {
+    if (skillType !== "noble" || selectedSkillName === undefined)
+      return undefined;
+    return getNobleSkill(selectedSkillName);
   }, [skillType, selectedSkillName]);
 
   const { options, groups } = useMemo(() => {
@@ -198,7 +217,7 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
       case "magnificent": {
         const magSkill = getMagnificentSkill(skillName);
         if (magSkill !== undefined) {
-          const defaults = getWorstMagnificentDefaults(magSkill);
+          const defaults = getWorstSpecialDefaults(magSkill);
           onChange({
             name: skillName as MagnificentSupportSkillName,
             tier: defaults.tier,
@@ -208,9 +227,19 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
         }
         break;
       }
-      case "noble":
-        onChange({ name: skillName as NobleSupportSkillName });
+      case "noble": {
+        const nobleSkillData = getNobleSkill(skillName);
+        if (nobleSkillData !== undefined) {
+          const defaults = getWorstSpecialDefaults(nobleSkillData);
+          onChange({
+            name: skillName as NobleSupportSkillName,
+            tier: defaults.tier,
+            rank: defaults.rank,
+            value: defaults.value,
+          });
+        }
         break;
+      }
       case "activationMedium":
         onChange({ name: skillName as ActivationMediumSkillNmae });
         break;
@@ -233,10 +262,12 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
     });
   };
 
-  const handleMagnificentConfirm = (
-    slot: MagnificentSupportSkillSlot,
-  ): void => {
-    onChange(slot);
+  const handleMagnificentConfirm = (slot: SpecialSupportSlot): void => {
+    onChange(slot as MagnificentSupportSkillSlot);
+  };
+
+  const handleNobleConfirm = (slot: SpecialSupportSlot): void => {
+    onChange(slot as NobleSupportSkillSlot);
   };
 
   const renderOption = (
@@ -295,9 +326,39 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
               </span>
               <button
                 type="button"
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => setIsMagnificentModalOpen(true)}
                 className="p-1 text-zinc-400 hover:text-zinc-200 transition-colors"
                 title="Edit magnificent support"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+                  <path d="m15 5 4 4" />
+                </svg>
+              </button>
+            </>
+          )}
+        {skillType === "noble" &&
+          selectedSlot !== undefined &&
+          "tier" in selectedSlot && (
+            <>
+              <span className="text-xs text-zinc-500 font-medium">
+                T{selectedSlot.tier} R{selectedSlot.rank}
+              </span>
+              <button
+                type="button"
+                onClick={() => setIsNobleModalOpen(true)}
+                className="p-1 text-zinc-400 hover:text-zinc-200 transition-colors"
+                title="Edit noble support"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -322,12 +383,27 @@ export const SupportSkillSelector: React.FC<SupportSkillSelectorProps> = ({
       {magnificentSkill !== undefined &&
         selectedSlot !== undefined &&
         "tier" in selectedSlot && (
-          <MagnificentEditModal
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
+          <SpecialSupportEditModal
+            isOpen={isMagnificentModalOpen}
+            onClose={() => setIsMagnificentModalOpen(false)}
             skill={magnificentSkill}
-            currentSlot={selectedSlot}
+            currentSlot={selectedSlot as MagnificentSupportSkillSlot}
             onConfirm={handleMagnificentConfirm}
+            skillType="magnificent"
+          />
+        )}
+
+      {/* Noble Edit Modal */}
+      {nobleSkill !== undefined &&
+        selectedSlot !== undefined &&
+        "tier" in selectedSlot && (
+          <SpecialSupportEditModal
+            isOpen={isNobleModalOpen}
+            onClose={() => setIsNobleModalOpen(false)}
+            skill={nobleSkill}
+            currentSlot={selectedSlot as NobleSupportSkillSlot}
+            onConfirm={handleNobleConfirm}
+            skillType="noble"
           />
         )}
     </>

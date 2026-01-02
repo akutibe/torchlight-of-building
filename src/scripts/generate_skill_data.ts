@@ -16,7 +16,11 @@ import {
 import { supportSkillModFactories } from "../tli/skills/support_factories";
 import { readAllTlidbSkills, type TlidbSkillFile } from "./lib/tlidb";
 import { classifyWithRegex } from "./skill_kind_patterns";
-import { getMagnificentParserForSkill, getParserForSkill } from "./skills";
+import {
+  getMagnificentParserForSkill,
+  getNobleParserForSkill,
+  getParserForSkill,
+} from "./skills";
 import {
   extractMagnificentProgressionTable,
   extractProgressionTable,
@@ -35,6 +39,7 @@ interface RawSkill {
   mainStats?: ("str" | "dex" | "int")[];
   parsedLevelModValues?: Record<string, Record<number, number>>;
   parsedMagnificentValues?: ParsedMagnificentValues;
+  parsedNobleValues?: ParsedMagnificentValues;
 }
 
 // Set for fast tag validation
@@ -573,6 +578,24 @@ const extractSkillFromTlidbHtml = (
     });
   }
 
+  // Check for noble support parser and extract tier values if available
+  const nobleParser = getNobleParserForSkill(name);
+  let parsedNobleValues: ParsedMagnificentValues | undefined;
+
+  if (nobleParser !== undefined) {
+    const progressionTable = extractMagnificentProgressionTable($);
+
+    if (progressionTable === undefined) {
+      throw new Error(`No noble progression table found for "${name}"`);
+    }
+
+    parsedNobleValues = nobleParser.parser({
+      skillName: name,
+      description,
+      progressionTable,
+    });
+  }
+
   return {
     type: skillType,
     name,
@@ -581,6 +604,7 @@ const extractSkillFromTlidbHtml = (
     mainStats,
     parsedLevelModValues,
     parsedMagnificentValues,
+    parsedNobleValues,
   };
 };
 
@@ -833,12 +857,24 @@ const main = async (): Promise<void> => {
     } else if (config.supportType === "noble") {
       const supportTarget = parseSkillSupportTarget(firstDescription);
 
+      // Use parsed noble values if available
+      const parsedValues = raw.parsedNobleValues;
+
       const skillEntry: BaseNobleSupportSkill = {
         type: raw.type as BaseNobleSupportSkill["type"],
         name: raw.name,
         tags: raw.tags as unknown as BaseNobleSupportSkill["tags"],
         description: raw.description,
         supportTarget,
+        ...(parsedValues?.tierValues !== undefined && {
+          tierValues: parsedValues.tierValues,
+        }),
+        ...(parsedValues?.rankValues !== undefined && {
+          rankValues: parsedValues.rankValues,
+        }),
+        ...(parsedValues?.constantValues !== undefined && {
+          constantValues: parsedValues.constantValues,
+        }),
       };
 
       if (!nobleSupportSkillGroups.has(skillType)) {

@@ -13,6 +13,7 @@ import {
   burningCombustionParser,
   mindControlConcentrateParser,
 } from "./magnificent_support_parsers";
+import { chainLightningLuckyParser } from "./noble_support_parsers";
 import {
   corrosionFocusParser,
   deepPainParser,
@@ -246,4 +247,24 @@ export const getMagnificentParserForSkill = (
   return MAGNIFICENT_SUPPORT_PARSERS.find(
     (entry) => entry.skillName === skillName,
   );
+};
+
+// ============================================
+// Noble Support Parsers
+// ============================================
+
+// Noble parsers use same type as Magnificent since they share tier/rank/value system
+export type NobleSkillParserEntry = MagnificentSkillParserEntry;
+
+export const NOBLE_SUPPORT_PARSERS: NobleSkillParserEntry[] = [
+  {
+    skillName: "Chain Lightning: Lucky (Noble)",
+    parser: chainLightningLuckyParser,
+  },
+];
+
+export const getNobleParserForSkill = (
+  skillName: string,
+): NobleSkillParserEntry | undefined => {
+  return NOBLE_SUPPORT_PARSERS.find((entry) => entry.skillName === skillName);
 };

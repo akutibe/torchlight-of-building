@@ -1,7 +1,15 @@
 import type {
   BaseMagnificentSupportSkill,
+  BaseNobleSupportSkill,
   MagnificentTierRange,
 } from "@/src/data/skill/types";
+
+/**
+ * Type union for any special support skill (Magnificent or Noble).
+ */
+export type SpecialSupportSkill =
+  | BaseMagnificentSupportSkill
+  | BaseNobleSupportSkill;
 
 /**
  * Get the number of decimal places in a number.
@@ -27,7 +35,7 @@ export const getRangeDecimalPlaces = (range: MagnificentTierRange): number => {
  * @param percentage - Value from 0-100 representing quality
  * @returns The interpolated value with appropriate decimal precision
  */
-export const interpolateMagnificentValue = (
+export const interpolateSpecialValue = (
   range: MagnificentTierRange,
   percentage: number,
 ): number => {
@@ -52,11 +60,11 @@ export const getQualityPercentage = (
 };
 
 /**
- * Get the tier range for a magnificent skill.
+ * Get the tier range for a special support skill (magnificent or noble).
  * Uses the first tier value key if multiple exist.
  */
 export const getTierRange = (
-  skill: BaseMagnificentSupportSkill,
+  skill: SpecialSupportSkill,
   tier: 0 | 1 | 2,
 ): MagnificentTierRange | undefined => {
   if (skill.tierValues === undefined) return undefined;
@@ -66,11 +74,11 @@ export const getTierRange = (
 };
 
 /**
- * Get the worst (lowest quality) defaults for a magnificent skill.
+ * Get the worst (lowest quality) defaults for a special support skill.
  * Defaults to tier 2, rank 1, and the minimum value for tier 2.
  */
-export const getWorstMagnificentDefaults = (
-  skill: BaseMagnificentSupportSkill,
+export const getWorstSpecialDefaults = (
+  skill: SpecialSupportSkill,
 ): { tier: 0 | 1 | 2; rank: 1 | 2 | 3 | 4 | 5; value: number } => {
   const tier = 2 as const;
   const rank = 1 as const;
@@ -78,3 +86,7 @@ export const getWorstMagnificentDefaults = (
   const value = tierRange?.min ?? 0;
   return { tier, rank, value };
 };
+
+// Backward compatibility aliases
+export const interpolateMagnificentValue = interpolateSpecialValue;
+export const getWorstMagnificentDefaults = getWorstSpecialDefaults;

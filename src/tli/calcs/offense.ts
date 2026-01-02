@@ -12,6 +12,9 @@ import {
   type BaseSupportSkill,
   type ImplementedActiveSkillName,
   type MagnificentSupportSkillName,
+  MagnificentSupportSkills,
+  type NobleSupportSkillName,
+  NobleSupportSkills,
   type PassiveSkillName,
   PassiveSkills,
   type SkillOffense,
@@ -29,6 +32,7 @@ import type {
   DmgRange,
   Loadout,
   MagnificentSupportSkillSlot,
+  NobleSupportSkillSlot,
   SkillSlot,
   SupportSkillSlot,
 } from "../core";
@@ -44,6 +48,7 @@ import type {
 } from "../mod";
 import { getActiveSkillMods } from "../skills/active_mods";
 import { getMagnificentSupportSkillMods } from "../skills/magnificent_support_mods";
+import { getNobleSupportSkillMods } from "../skills/noble_support_mods";
 import { getPassiveSkillMods } from "../skills/passive_mods";
 import { getSupportSkillMods } from "../skills/support_mods";
 import { getAllAffixes, getGearAffixes } from "./affix-collectors";
@@ -1487,7 +1492,23 @@ const isRegularSupportSlot = (
 const isMagnificentSupportSlot = (
   slot: BaseSupportSkillSlot,
 ): slot is MagnificentSupportSkillSlot => {
-  return "tier" in slot && "rank" in slot && "value" in slot;
+  return (
+    "tier" in slot &&
+    "rank" in slot &&
+    "value" in slot &&
+    MagnificentSupportSkills.some((s) => s.name === slot.name)
+  );
+};
+
+const isNobleSupportSlot = (
+  slot: BaseSupportSkillSlot,
+): slot is NobleSupportSkillSlot => {
+  return (
+    "tier" in slot &&
+    "rank" in slot &&
+    "value" in slot &&
+    NobleSupportSkills.some((s) => s.name === slot.name)
+  );
 };
 
 const resolveSelectedSkillSupportMods = (
@@ -1548,7 +1569,22 @@ const resolveSelectedSkillSupportMods = (
         });
       }
     }
-    // Noble and Activation Medium skills don't have mods implemented yet
+    // Handle noble support skills
+    else if (isNobleSupportSlot(ss)) {
+      const mods = getNobleSupportSkillMods(
+        ss.name as NobleSupportSkillName,
+        ss.tier,
+        ss.rank,
+        ss.value,
+      );
+      for (const mod of mods) {
+        supportMods.push({
+          ...mod,
+          src: `Noble: ${ss.name} T${ss.tier} R${ss.rank}`,
+        });
+      }
+    }
+    // Activation Medium skills don't have mods implemented yet
   }
   return supportMods;
 };

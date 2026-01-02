@@ -332,6 +332,9 @@ export interface MagnificentSupportSkillSlot {
 
 export interface NobleSupportSkillSlot {
   name: NobleSupportSkillName;
+  tier: 0 | 1 | 2; // lower is better (tier 0 is best)
+  rank: 1 | 2 | 3 | 4 | 5; // higher is better (rank 5 is max)
+  value: number; // specific value within the tier's range
 }
 
 export interface ActivationMediumSkillSlot {

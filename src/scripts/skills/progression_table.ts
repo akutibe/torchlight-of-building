@@ -200,16 +200,19 @@ export const validateAllTiers = (
 };
 
 /**
- * Parse a tier range from text like "+(19–23)%" or "+(16–18)%".
+ * Parse a tier range from text like "+(19–23)%" or "+(16–18)%" or "(-7–-5)%".
  * Returns { min, max } object.
  */
 export const parseTierRange = (
   text: string,
   skillName: string,
 ): { min: number; max: number } => {
-  // Match patterns like "+(19–23)%" or "(130–150)%" or "+(12-14)%"
+  // Match patterns like "+(19–23)%" or "(130–150)%" or "+(12-14)%" or "(-7–-5)%"
   // Handle both en-dash (–) and regular hyphen (-)
-  const rangeMatch = text.match(/\+?\(?(\d+(?:\.\d+)?)[–-](\d+(?:\.\d+)?)\)?/);
+  // Also handle negative numbers by capturing optional minus sign
+  const rangeMatch = text.match(
+    /\+?\(?(-?\d+(?:\.\d+)?)[–-](-?\d+(?:\.\d+)?)\)?/,
+  );
   if (rangeMatch === null) {
     throw new Error(
       `${skillName}: Failed to parse tier range from text: "${text}"`,

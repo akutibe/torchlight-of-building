@@ -2,14 +2,19 @@ import { useEffect, useState } from "react";
 import { SearchableSelect } from "@/src/components/ui/SearchableSelect";
 import type {
   BaseMagnificentSupportSkill,
+  BaseNobleSupportSkill,
   MagnificentSupportSkillName,
+  NobleSupportSkillName,
 } from "@/src/data/skill/types";
+import type {
+  MagnificentSupportSkillSlot,
+  NobleSupportSkillSlot,
+} from "@/src/lib/save-data";
 import {
   getQualityPercentage,
   getTierRange,
-  interpolateMagnificentValue,
-} from "@/src/lib/magnificent-utils";
-import type { MagnificentSupportSkillSlot } from "@/src/lib/save-data";
+  interpolateSpecialValue,
+} from "@/src/lib/special-support-utils";
 import {
   Modal,
   ModalActions,
@@ -17,12 +22,20 @@ import {
   ModalDescription,
 } from "../ui/Modal";
 
-interface MagnificentEditModalProps {
+export type SpecialSupportSkill =
+  | BaseMagnificentSupportSkill
+  | BaseNobleSupportSkill;
+export type SpecialSupportSlot =
+  | MagnificentSupportSkillSlot
+  | NobleSupportSkillSlot;
+
+interface SpecialSupportEditModalProps {
   isOpen: boolean;
   onClose: () => void;
-  skill: BaseMagnificentSupportSkill;
-  currentSlot: MagnificentSupportSkillSlot;
-  onConfirm: (slot: MagnificentSupportSkillSlot) => void;
+  skill: SpecialSupportSkill;
+  currentSlot: SpecialSupportSlot;
+  onConfirm: (slot: SpecialSupportSlot) => void;
+  skillType: "magnificent" | "noble";
 }
 
 const TIER_OPTIONS = [
@@ -39,13 +52,14 @@ const RANK_OPTIONS = [
   { value: 5 as const, label: "Rank 5" },
 ];
 
-export const MagnificentEditModal = ({
+export const SpecialSupportEditModal = ({
   isOpen,
   onClose,
   skill,
   currentSlot,
   onConfirm,
-}: MagnificentEditModalProps): React.ReactNode => {
+  skillType,
+}: SpecialSupportEditModalProps): React.ReactNode => {
   const [tier, setTier] = useState<0 | 1 | 2>(currentSlot.tier);
   const [rank, setRank] = useState<1 | 2 | 3 | 4 | 5>(currentSlot.rank);
   const [percentage, setPercentage] = useState(0);
@@ -56,7 +70,7 @@ export const MagnificentEditModal = ({
 
   // Calculate the value from percentage
   const value = hasTierValues
-    ? interpolateMagnificentValue(tierRange, percentage)
+    ? interpolateSpecialValue(tierRange, percentage)
     : 0;
 
   // Reset state when modal opens
@@ -81,12 +95,17 @@ export const MagnificentEditModal = ({
   };
 
   const handleConfirm = (): void => {
+    const slotName =
+      skillType === "magnificent"
+        ? (currentSlot.name as MagnificentSupportSkillName)
+        : (currentSlot.name as NobleSupportSkillName);
+
     onConfirm({
-      name: currentSlot.name as MagnificentSupportSkillName,
+      name: slotName,
       tier,
       rank,
       value,
-    });
+    } as SpecialSupportSlot);
     onClose();
   };
 
@@ -117,8 +136,15 @@ export const MagnificentEditModal = ({
     // Add constant values
     if (skill.constantValues !== undefined) {
       for (const [key, constValue] of Object.entries(skill.constantValues)) {
-        const formattedValue =
-          constValue >= 0 ? `+${constValue}%` : `${constValue}%`;
+        // Don't add % for non-percentage values (like jumpOnKill)
+        const isPercentage = key.toLowerCase().includes("pct");
+        const formattedValue = isPercentage
+          ? constValue >= 0
+            ? `+${constValue}%`
+            : `${constValue}%`
+          : constValue >= 0
+            ? `+${constValue}`
+            : `${constValue}`;
         lines.push(`${formattedValue} (${key})`);
       }
     }
@@ -126,13 +152,13 @@ export const MagnificentEditModal = ({
     return lines.join("\n");
   };
 
+  const modalTitle =
+    skillType === "magnificent"
+      ? "Edit Magnificent Support"
+      : "Edit Noble Support";
+
   return (
-    <Modal
-      isOpen={isOpen}
-      onClose={onClose}
-      title="Edit Magnificent Support"
-      maxWidth="md"
-    >
+    <Modal isOpen={isOpen} onClose={onClose} title={modalTitle} maxWidth="md">
       <ModalDescription>{skill.name}</ModalDescription>
 
       <div className="space-y-4">
