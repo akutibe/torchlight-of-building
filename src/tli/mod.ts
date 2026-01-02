@@ -188,6 +188,7 @@ interface ModDefinitions {
   MinionCritRatingPct: { value: number; addn?: boolean };
   // end minions
   ProjectileSpeedPct: { value: number; addn?: boolean };
+  ProjectileSizePct: { value: number };
   DoubleDmgChancePct: { value: number };
   Stat: { value: number; statModType: StatModType };
   StatPct: { value: number; statModType: StatModType };
@@ -297,6 +298,7 @@ interface ModDefinitions {
   AfflictionInflictedPerSec: { value: number };
   AfflictionEffectPct: { value: number; addn?: boolean };
   CannotInflictWilt: object;
+  IgniteDurationPct: { value: number; addn?: boolean };
   // enemy mods
   EnemyRes: { value: number; resType: ResType };
   // core talent specific

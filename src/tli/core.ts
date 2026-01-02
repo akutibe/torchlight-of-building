@@ -315,6 +315,13 @@ export interface SupportSkillSlot {
   level?: number; // default 20
 }
 
+export interface MagnificentSupportSkillSlot {
+  name: string;
+  tier: 0 | 1 | 2; // lower is better (tier 0 is best)
+  rank: 1 | 2 | 3 | 4 | 5; // higher is better (rank 5 is max)
+  value: number; // specific value within the tier's range
+}
+
 export interface SupportSkills {
   1?: SupportSkillSlot;
   2?: SupportSkillSlot;

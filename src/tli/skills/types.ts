@@ -49,3 +49,19 @@ export type PassiveSkillModFactory = (
   mods?: Mod[];
   buffMods?: Mod[];
 };
+
+// ============================================
+// Magnificent Support Skill Types
+// ============================================
+
+/**
+ * Factory function for magnificent support skill mods.
+ * Receives tier (0-2), rank (1-5), value (within tier range), and named value arrays.
+ * Values are 5-element arrays indexed by rank (constants are repeated 5 times).
+ */
+export type MagnificentSupportSkillModFactory = (
+  tier: 0 | 1 | 2,
+  rank: 1 | 2 | 3 | 4 | 5,
+  value: number,
+  values: Readonly<Record<string, readonly number[]>>,
+) => Mod[];

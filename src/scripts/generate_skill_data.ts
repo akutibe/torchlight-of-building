@@ -16,9 +16,16 @@ import {
 import { supportSkillModFactories } from "../tli/skills/support_factories";
 import { readAllTlidbSkills, type TlidbSkillFile } from "./lib/tlidb";
 import { classifyWithRegex } from "./skill_kind_patterns";
-import { getParserForSkill } from "./skills";
-import { extractProgressionTable } from "./skills/progression_table";
-import type { SkillCategory, SupportParserInput } from "./skills/types";
+import { getMagnificentParserForSkill, getParserForSkill } from "./skills";
+import {
+  extractMagnificentProgressionTable,
+  extractProgressionTable,
+} from "./skills/progression_table";
+import type {
+  ParsedMagnificentValues,
+  SkillCategory,
+  SupportParserInput,
+} from "./skills/types";
 
 interface RawSkill {
   type: string;
@@ -27,6 +34,7 @@ interface RawSkill {
   description: string[];
   mainStats?: ("str" | "dex" | "int")[];
   parsedLevelModValues?: Record<string, Record<number, number>>;
+  parsedMagnificentValues?: ParsedMagnificentValues;
 }
 
 // Set for fast tag validation
@@ -547,6 +555,24 @@ const extractSkillFromTlidbHtml = (
     parsedLevelModValues = parser.parser(parserInput);
   }
 
+  // Check for magnificent support parser and extract tier values if available
+  const magnificentParser = getMagnificentParserForSkill(name);
+  let parsedMagnificentValues: ParsedMagnificentValues | undefined;
+
+  if (magnificentParser !== undefined) {
+    const progressionTable = extractMagnificentProgressionTable($);
+
+    if (progressionTable === undefined) {
+      throw new Error(`No magnificent progression table found for "${name}"`);
+    }
+
+    parsedMagnificentValues = magnificentParser.parser({
+      skillName: name,
+      description,
+      progressionTable,
+    });
+  }
+
   return {
     type: skillType,
     name,
@@ -554,6 +580,7 @@ const extractSkillFromTlidbHtml = (
     description,
     mainStats,
     parsedLevelModValues,
+    parsedMagnificentValues,
   };
 };
 
@@ -779,12 +806,24 @@ const main = async (): Promise<void> => {
     } else if (config.supportType === "magnificent") {
       const supportTarget = parseSkillSupportTarget(firstDescription);
 
+      // Use parsed magnificent values if available
+      const parsedValues = raw.parsedMagnificentValues;
+
       const skillEntry: BaseMagnificentSupportSkill = {
         type: raw.type as BaseMagnificentSupportSkill["type"],
         name: raw.name,
         tags: raw.tags as unknown as BaseMagnificentSupportSkill["tags"],
         description: raw.description,
         supportTarget,
+        ...(parsedValues?.tierValues !== undefined && {
+          tierValues: parsedValues.tierValues,
+        }),
+        ...(parsedValues?.rankValues !== undefined && {
+          rankValues: parsedValues.rankValues,
+        }),
+        ...(parsedValues?.constantValues !== undefined && {
+          constantValues: parsedValues.constantValues,
+        }),
       };
 
       if (!magnificentSupportSkillGroups.has(skillType)) {

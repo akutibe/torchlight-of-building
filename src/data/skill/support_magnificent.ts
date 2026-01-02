@@ -118,6 +118,19 @@ export const MagnificentSupportSkills = [
       "+(16–18)% additional damage for the supported skill",
     ],
     supportTarget: "Burning Shot",
+    tierValues: {
+      tierDmgPct: {
+        0: { min: 19, max: 23 },
+        1: { min: 16, max: 18 },
+        2: { min: 12, max: 14 },
+      },
+    },
+    rankValues: { rankDmgPct: [0, 5, 10, 15, 20] },
+    constantValues: {
+      projectileSizePct: 25,
+      igniteDurationPct: 15,
+      durationPct: 15,
+    },
   },
   {
     type: "Support (Magnificent)",

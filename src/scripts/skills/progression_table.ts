@@ -118,3 +118,105 @@ export const getDescriptionPart = (
   }
   return descriptionPart;
 };
+
+// ============================================
+// Magnificent Support Progression Table
+// ============================================
+
+const EXPECTED_TIERS = 3;
+
+/**
+ * Extract the 3-tier progression table for magnificent support skills.
+ * Looks for "Progression /3" header instead of "Progression /40".
+ */
+export const extractMagnificentProgressionTable = (
+  $: CheerioAPI,
+): ProgressionColumn[] | undefined => {
+  const card = $("div.card-header:contains('Progression /3')").closest(
+    "div.card",
+  );
+  if (card.length === 0) {
+    return undefined;
+  }
+
+  const table = card.find("table");
+  if (table.length === 0) {
+    return undefined;
+  }
+
+  const headerRow = table.find("thead tr").first();
+  const headerCells = headerRow.find("th");
+
+  const headers: string[] = [];
+  headerCells.slice(1).each((_, cell) => {
+    headers.push($(cell).text().trim());
+  });
+
+  // Build column-centric structure: each column has all its tier values
+  const columns: ProgressionColumn[] = headers.map((header) => ({
+    header,
+    rows: {},
+  }));
+
+  table.find("tbody tr").each((_, row) => {
+    const cells = $(row).find("td");
+    if (cells.length < 2) return;
+
+    const tier = Number.parseInt($(cells[0]).text().trim(), 10);
+    if (Number.isNaN(tier)) return;
+
+    cells.slice(1).each((i, cell) => {
+      if (columns[i] !== undefined) {
+        columns[i].rows[tier] = $(cell).text().trim();
+      }
+    });
+  });
+
+  return columns;
+};
+
+/**
+ * Validate that all 3 tiers (0, 1, 2) are present in parsed data.
+ */
+export const validateAllTiers = (
+  tiers: Record<number, unknown>,
+  skillName: string,
+): void => {
+  const tierNumbers = Object.keys(tiers)
+    .map(Number)
+    .sort((a, b) => a - b);
+
+  if (tierNumbers.length !== EXPECTED_TIERS) {
+    throw new Error(
+      `Parser for "${skillName}" extracted ${tierNumbers.length} tiers, expected ${EXPECTED_TIERS}`,
+    );
+  }
+
+  for (const tier of [0, 1, 2]) {
+    if (!tierNumbers.includes(tier)) {
+      throw new Error(`Parser for "${skillName}" missing tier ${tier}`);
+    }
+  }
+};
+
+/**
+ * Parse a tier range from text like "+(19–23)%" or "+(16–18)%".
+ * Returns { min, max } object.
+ */
+export const parseTierRange = (
+  text: string,
+  skillName: string,
+): { min: number; max: number } => {
+  // Match patterns like "+(19–23)%" or "(130–150)%" or "+(12-14)%"
+  // Handle both en-dash (–) and regular hyphen (-)
+  const rangeMatch = text.match(/\+?\(?(\d+(?:\.\d+)?)[–-](\d+(?:\.\d+)?)\)?/);
+  if (rangeMatch === null) {
+    throw new Error(
+      `${skillName}: Failed to parse tier range from text: "${text}"`,
+    );
+  }
+  return {
+    min: Number.parseFloat(rangeMatch[1]),
+    max: Number.parseFloat(rangeMatch[2]),
+  };
+};

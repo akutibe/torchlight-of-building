@@ -9,6 +9,7 @@ import {
   manaBoilParser,
   mindControlParser,
 } from "./active_parsers";
+import { burningCombustionParser } from "./magnificent_support_parsers";
 import {
   corrosionFocusParser,
   deepPainParser,
@@ -37,7 +38,11 @@ import {
   wellFoughtBattleParser,
   willpowerParser,
 } from "./support_parsers";
-import type { SkillCategory, SkillParserEntry } from "./types";
+import type {
+  MagnificentSkillParserEntry,
+  SkillCategory,
+  SkillParserEntry,
+} from "./types";
 
 export const SKILL_PARSERS: SkillParserEntry[] = [
   {
@@ -214,5 +219,24 @@ export const getParserForSkill = (
   return SKILL_PARSERS.find(
     (entry) =>
       entry.skillName === skillName && entry.categories.includes(category),
+  );
+};
+
+// ============================================
+// Magnificent Support Parsers
+// ============================================
+
+export const MAGNIFICENT_SUPPORT_PARSERS: MagnificentSkillParserEntry[] = [
+  {
+    skillName: "Burning Shot: Combustion (Magnificent)",
+    parser: burningCombustionParser,
+  },
+];
+
+export const getMagnificentParserForSkill = (
+  skillName: string,
+): MagnificentSkillParserEntry | undefined => {
+  return MAGNIFICENT_SUPPORT_PARSERS.find(
+    (entry) => entry.skillName === skillName,
   );
 };
