@@ -611,6 +611,16 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             onChange={(e) => onUpdate({ blurEndedRecently: e.target.checked })}
             className="h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-amber-500"
           />
+
+          <label className="text-right text-zinc-50">
+            Mind Control Links Used
+            <InfoTooltip text="Defaults to max" />
+          </label>
+          <NumberInput
+            value={config.numMindControlLinksUsed}
+            onChange={(v) => onUpdate({ numMindControlLinksUsed: v })}
+            min={0}
+          />
         </div>
       </div>
 

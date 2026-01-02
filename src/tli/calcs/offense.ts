@@ -1976,6 +1976,20 @@ const resolveModsForOffenseSkill = (
     ),
   );
 
+  const maxChannelStacks =
+    (findMod(mods, "InitialMaxChannel")?.value ?? 0) +
+    additionalMaxChanneledStacks;
+  const mcMaxLinks = maxChannelStacks;
+  const mcLinks = config.numMindControlLinksUsed ?? mcMaxLinks;
+  mods.push(...normalizeStackables(prenormMods, "mind_control_link", mcLinks));
+  mods.push(
+    ...normalizeStackables(
+      prenormMods,
+      "unused_mind_control_link",
+      mcMaxLinks - mcLinks,
+    ),
+  );
+
   mods.push(...calculateTorment(config));
   mods.push(...calculateAffliction(mods, config));
 

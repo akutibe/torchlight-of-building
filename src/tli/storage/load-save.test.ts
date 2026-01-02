@@ -98,6 +98,7 @@ const createMinimalSaveData = (
     tormentStacks: 0,
     hasBlur: false,
     blurEndedRecently: false,
+    numMindControlLinksUsed: undefined,
   },
   calculationsPage: { selectedSkillName: undefined },
   ...overrides,

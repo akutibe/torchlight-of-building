@@ -103,6 +103,7 @@ export const createEmptyConfigurationPage = (): ConfigurationPage => ({
   tormentStacks: 0,
   hasBlur: false,
   blurEndedRecently: false,
+  numMindControlLinksUsed: undefined,
 });
 
 export const createEmptySkillPage = (): SkillPage => ({

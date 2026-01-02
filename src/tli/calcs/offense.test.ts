@@ -62,6 +62,7 @@ const createDefaultConfiguration = (): Configuration => ({
   tormentStacks: 0,
   hasBlur: false,
   blurEndedRecently: false,
+  numMindControlLinksUsed: undefined,
 });
 
 // Helper to create Affix objects from mods for tests
@@ -2350,6 +2351,7 @@ describe("resolveBuffSkillMods", () => {
         tormentStacks: 0,
         hasBlur: false,
         blurEndedRecently: false,
+        numMindControlLinksUsed: undefined,
       },
     });
     const actual = results.skills["[Test] Simple Attack"];

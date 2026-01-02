@@ -111,5 +111,6 @@ export const useConfiguration = (): Configuration => {
     tormentStacks: configPage.tormentStacks,
     hasBlur: configPage.hasBlur,
     blurEndedRecently: configPage.blurEndedRecently,
+    numMindControlLinksUsed: configPage.numMindControlLinksUsed,
   };
 };

@@ -117,6 +117,8 @@ export interface Configuration {
   hasBlur: boolean;
   // default to false
   blurEndedRecently: boolean;
+  // default to max
+  numMindControlLinksUsed: number | undefined;
 
   // --------------------
   // hero-specific config
