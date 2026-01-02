@@ -757,6 +757,14 @@ export const MagnificentSupportSkills = [
       "+(6.1–6.6)% additional damage for this skill for every link less than maximum links",
     ],
     supportTarget: "Mind Control",
+    tierValues: {
+      tierDmgPctPerMissingLink: {
+        0: { min: 7, max: 8 },
+        1: { min: 6.1, max: 6.6 },
+        2: { min: 5.2, max: 5.7 },
+      },
+    },
+    rankValues: { rankDmgPct: [0, 5, 10, 15, 20] },
   },
   {
     type: "Support (Magnificent)",

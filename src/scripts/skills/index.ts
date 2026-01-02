@@ -9,7 +9,10 @@ import {
   manaBoilParser,
   mindControlParser,
 } from "./active_parsers";
-import { burningCombustionParser } from "./magnificent_support_parsers";
+import {
+  burningCombustionParser,
+  mindControlConcentrateParser,
+} from "./magnificent_support_parsers";
 import {
   corrosionFocusParser,
   deepPainParser,
@@ -230,6 +233,10 @@ export const MAGNIFICENT_SUPPORT_PARSERS: MagnificentSkillParserEntry[] = [
   {
     skillName: "Burning Shot: Combustion (Magnificent)",
     parser: burningCombustionParser,
+  },
+  {
+    skillName: "Mind Control: Concentrate (Magnificent)",
+    parser: mindControlConcentrateParser,
   },
 ];
 

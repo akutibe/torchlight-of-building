@@ -92,3 +92,60 @@ export const burningCombustionParser: MagnificentLevelParser = (input) => {
       Object.keys(constantValues).length > 0 ? constantValues : undefined,
   };
 };
+
+/**
+ * Parser for "Mind Control: Concentrate (Magnificent)"
+ *
+ * Tier-scaled: additional damage per link less than maximum (from progression table)
+ * Rank-scaled: additional damage [0, 5, 10, 15, 20] for ranks 1-5
+ */
+export const mindControlConcentrateParser: MagnificentLevelParser = (input) => {
+  const { skillName, description, progressionTable } = input;
+
+  // Parse tier-scaled damage from progression table
+  // Column header is "name"
+  const dmgCol = progressionTable.find(
+    (col) => col.header.toLowerCase() === "name",
+  );
+  if (dmgCol === undefined) {
+    throw new Error(`${skillName}: no "name" column found`);
+  }
+
+  const tierDmgPctPerMissingLink: Record<number, TierRange> = {};
+  for (const [tierStr, text] of Object.entries(dmgCol.rows)) {
+    tierDmgPctPerMissingLink[Number(tierStr)] = parseTierRange(text, skillName);
+  }
+
+  validateAllTiers(tierDmgPctPerMissingLink, skillName);
+
+  const tierValues: ParsedMagnificentValues["tierValues"] = {
+    tierDmgPctPerMissingLink: {
+      0: tierDmgPctPerMissingLink[0],
+      1: tierDmgPctPerMissingLink[1],
+      2: tierDmgPctPerMissingLink[2],
+    },
+  };
+
+  // Parse rank-scaled damage from description
+  // The description shows max rank value (e.g., "+20% additional damage")
+  // Rank values are [0, 5, 10, 15, 20] for ranks 1-5
+  const firstDescription = getDescriptionPart(skillName, description, 0);
+  const rankDmgMatch = template(
+    "+{value:int}% additional damage for the supported skill",
+  ).tryMatch(firstDescription);
+
+  let rankValues: ParsedMagnificentValues["rankValues"];
+  if (rankDmgMatch !== undefined) {
+    const maxRankValue = rankDmgMatch.value;
+    const step = maxRankValue / 4; // 4 steps from rank 1 to rank 5
+    rankValues = {
+      rankDmgPct: [0, step, step * 2, step * 3, maxRankValue],
+    };
+  }
+
+  return {
+    tierValues,
+    rankValues,
+    constantValues: undefined,
+  };
+};

@@ -23,9 +23,34 @@ export const magnificentSupportSkillModFactories: Partial<
     vals,
   ): Mod[] => [
     { type: "DmgPct", value, dmgModType: "global", addn: true },
-    { type: "DmgPct", value: v(vals.rankDmgPct, rank), dmgModType: "global", addn: true },
+    {
+      type: "DmgPct",
+      value: v(vals.rankDmgPct, rank),
+      dmgModType: "global",
+      addn: true,
+    },
     { type: "ProjectileSizePct", value: v(vals.projectileSizePct, rank) },
     { type: "IgniteDurationPct", value: v(vals.igniteDurationPct, rank) },
     { type: "SkillEffDurationPct", value: v(vals.durationPct, rank) },
+  ],
+  "Mind Control: Concentrate (Magnificent)": (
+    _tier,
+    rank,
+    value,
+    vals,
+  ): Mod[] => [
+    {
+      type: "DmgPct",
+      value,
+      dmgModType: "global",
+      addn: true,
+      per: { stackable: "unused_mind_control_link" },
+    },
+    {
+      type: "DmgPct",
+      value: v(vals.rankDmgPct, rank),
+      dmgModType: "global",
+      addn: true,
+    },
   ],
 };
