@@ -64,12 +64,12 @@ src/tli/                 # Game engine (pure TypeScript, no React)
 │   └── skill_confs.ts   # Skill configurations
 ├── skills/              # Skill factories and mods
 │   ├── types.ts         # Skill type definitions
-│   ├── active_factories.ts
-│   ├── active_mods.ts
-│   ├── passive_factories.ts
-│   ├── passive_mods.ts
-│   ├── support_factories.ts
-│   └── support_mods.ts
+│   ├── active_factories.ts    # Active skill mod factories
+│   ├── active_mods.ts         # Active skill mod application
+│   ├── passive_factories.ts   # Passive skill mod factories
+│   ├── passive_mods.ts        # Passive skill mod application
+│   ├── support_mod_parsers.ts # Support skill mod parser (template → regex)
+│   └── is-implemented.ts      # Skill implementation status checks
 ├── hero/                # Hero-related logic
 │   └── hero_trait_mods.ts
 ├── storage/             # Save/load functionality
@@ -96,6 +96,8 @@ src/data/                # Generated TypeScript data (from scripts)
 ├── blend/               # Blend data
 └── destiny/             # Destiny data
 ```
+
+HTML sources from TLIDB are also cached in a gitignore'd directory: `.garbage`
 
 ## Code Style
 
@@ -188,7 +190,8 @@ generateItemId()               // crypto.randomUUID()
 |------|-----------|
 | Add mod type | `src/tli/mod.ts` → `mod_parser/templates.ts` → `calcs/offense.ts` → test |
 | Add skill | `src/tli/calcs/skill_confs.ts` (skill configurations) |
-| Add skill mods | `src/tli/skills/` (active, passive, or support mods/factories) |
+| Add skill mods | `src/tli/skills/` (active, passive, or support mods/factories) - use `/implementing-game-skill-parsers` skill |
+| Add support skill mods | `src/tli/skills/support_mod_parsers.ts` - uses template-based parsing |
 | Add utility helper | Create `src/lib/{feature}-utils.ts` |
 | Update talent trees | `pnpm exec tsx src/scripts/generate_talent_tree_data.ts` |
 | Regenerate affixes | `pnpm exec tsx src/scripts/generate_gear_affix_data.ts` |
@@ -226,6 +229,15 @@ describe("feature", () => {
 ## UI Development
 
 For UI work, read [docs/claude/ui-development.md](docs/claude/ui-development.md).
+
+## Claude Skills
+
+Guided workflows for common tasks (invoke with `/skill-name`):
+
+| Skill | Use For |
+|-------|---------|
+| `/adding-mod-parsers` | Adding new mod parsers (template → Mod objects) |
+| `/implementing-game-skill-parsers` | Adding active/passive skill data parsers |
 
 ## Gotchas
 

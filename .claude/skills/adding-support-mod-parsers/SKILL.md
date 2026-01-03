@@ -1,0 +1,219 @@
+---
+name: adding-support-mod-parsers
+description: Use when adding support mod parsers to convert support skill affix strings to typed SupportMod objects - guides the template-based parsing pattern (project)
+---
+
+# Adding Support Mod Parsers
+
+## Overview
+
+Support mod parsers convert raw support skill affix strings (e.g., `"+15% additional damage for the supported skill"`) into typed `SupportMod` objects at runtime. Unlike active/passive skills which use level-scaling factories, support skills parse their affixes directly using templates.
+
+## When to Use
+
+- Adding support for new support skill affix patterns
+- Extending support mod parsing to handle new variants
+
+## Project File Locations
+
+| Purpose | File Path |
+|---------|-----------|
+| Support mod parsers | `src/tli/skills/support_mod_parsers.ts` |
+| Mod type definitions | `src/tli/mod.ts` |
+| SupportMod type | `src/tli/core.ts` |
+| Template/spec helpers | `src/tli/mod_parser/` |
+| Calculation handlers | `src/tli/calcs/offense.ts` |
+
+## Implementation Checklist
+
+### 1. Check if Mod Type Exists
+
+Look in `src/tli/mod.ts` under `ModDefinitions`. If the mod type doesn't exist, add it first (see `adding-mod-parsers` skill).
+
+### 2. Add Template in `support_mod_parsers.ts`
+
+Templates use the same DSL as the main mod parser:
+
+```typescript
+// In allSupportParsers array
+t("{value:dec%} additional damage for the supported skill").output(
+  "DmgPct",
+  (c) => ({
+    value: c.value,
+    dmgModType: "global" as const,
+    addn: true,
+  }),
+),
+```
+
+**Template capture types:**
+- `{name:int}` - Integer (e.g., "5" → 5)
+- `{name:dec}` - Decimal (e.g., "21.5" → 21.5)
+- `{name:dec%}` - Percentage number (e.g., "96%" → 96)
+- `{name:int%}` - Integer percentage (e.g., "-30%" → -30)
+
+**Optional syntax:**
+- `[additional]` - Optional literal, sets `c.additional?: true`
+- `(effect|damage)` - Alternation (regex-style)
+- `\\(` and `\\)` - Escaped parentheses for literal matching
+
+### 3. SupportMod Structure
+
+Each parsed mod is wrapped in `SupportMod`:
+```typescript
+interface SupportMod {
+  mod: Mod;
+}
+```
+
+The `parseSupportAffix` function handles this wrapping:
+```typescript
+return mods.map((mod) => ({ mod }));
+```
+
+### 4. Multi-Output Parsers
+
+For affixes that produce multiple mods:
+```typescript
+t("{value:dec%} additional attack and cast speed for the supported skill")
+  .outputMany([
+    spec("AspdPct", (c) => ({ value: c.value, addn: true })),
+    spec("CspdPct", (c) => ({ value: c.value, addn: true })),
+  ]),
+```
+
+### 5. Verify
+
+Run tests to ensure parsing works:
+```bash
+pnpm test
+pnpm typecheck
+pnpm check
+```
+
+## Examples
+
+### Simple Damage Mod
+**Input:** `"+15% additional damage for the supported skill"`
+```typescript
+t("{value:dec%} additional damage for the supported skill").output(
+  "DmgPct",
+  (c) => ({
+    value: c.value,
+    dmgModType: "global" as const,
+    addn: true,
+  }),
+),
+```
+
+### Typed Damage Mod
+**Input:** `"+20% additional melee damage for the supported skill"`
+```typescript
+t("{value:dec%} additional melee damage for the supported skill").output(
+  "DmgPct",
+  (c) => ({
+    value: c.value,
+    dmgModType: "melee" as const,
+    addn: true,
+  }),
+),
+```
+
+### Conditional Mod
+**Input:** `"The supported skill deals +30% additional damage to cursed enemies"`
+```typescript
+t("the supported skill deals {value:dec%} additional damage to cursed enemies")
+  .output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: "global" as const,
+    addn: true,
+    cond: "enemy_is_cursed" as const,
+  })),
+```
+
+### Per-Stackable Mod
+**Input:** `"+5% additional damage for the supported skill for every stack of buffs while standing still"`
+```typescript
+t("{value:dec%} additional damage for the supported skill for every stack of buffs while standing still")
+  .output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: "global" as const,
+    addn: false,
+    per: { stackable: "willpower" as const },
+  })),
+```
+
+### Mod with No Value
+**Input:** `"The supported skill cannot inflict wilt"`
+```typescript
+t("the supported skill cannot inflict wilt").output("CannotInflictWilt"),
+```
+
+### Escaped Parentheses
+**Input:** `"Stacks up to 5 time(s)"`
+```typescript
+t("stacks up to {value:int} time(s)").output("MaxWillpowerStacks", (c) => ({
+  value: c.value,
+})),
+```
+
+Note: Literal `(` and `)` don't need escaping when they don't contain alternations.
+
+### Complex Pattern with Ignored Values
+**Input:** `"When the supported skill deals damage over time, it inflicts 10 affliction on the enemy. Effect cooldown: 3 s"`
+```typescript
+t("when the supported skill deals damage over time, it inflicts {value:int} affliction on the enemy. effect cooldown: {_:int} s")
+  .output("AfflictionInflictedPerSec", (c) => ({
+    value: c.value,
+  })),
+```
+
+Use `{_:type}` to capture but ignore values.
+
+## Template Ordering
+
+**IMPORTANT:** More specific patterns must come before generic ones in `allSupportParsers` array.
+
+```typescript
+// Good: specific before generic
+t("{value:dec%} additional melee damage for the supported skill").output(...),
+t("{value:dec%} additional damage for the supported skill").output(...),
+
+// Bad: generic would match first
+t("{value:dec%} additional damage for the supported skill").output(...),
+t("{value:dec%} additional melee damage for the supported skill").output(...),  // never matches
+```
+
+## Common Mistakes
+
+| Mistake | Fix |
+|---------|-----|
+| Generic template before specific | Move specific templates earlier in array |
+| Missing `as const` on string literals | Add `as const` for type narrowing |
+| Handler doesn't account for new mod type | Update `offense.ts` to handle new mod types |
+| Forgot the wrapper structure | `parseSupportAffix` already wraps in `{ mod }` |
+| Using wrong capture type | Use `dec%` for decimals like "21.5%", `int%` for integers like "-30%" |
+
+## Data Flow
+
+```
+Support skill affix: "+15% additional damage for the supported skill"
+    ↓ parseSupportAffixes()
+    ↓ normalize (lowercase, trim)
+"15% additional damage for the supported skill"
+    ↓ template matching (allSupportParsers)
+[{ mod: { type: "DmgPct", value: 15, dmgModType: "global", addn: true } }]
+    ↓ resolveSelectedSkillSupportMods() in offense.ts
+Applied to skill calculations
+```
+
+## Difference from Main Mod Parser
+
+| Aspect | Main Mod Parser | Support Mod Parser |
+|--------|-----------------|-------------------|
+| File | `src/tli/mod_parser/templates.ts` | `src/tli/skills/support_mod_parsers.ts` |
+| Source | Gear affixes, talents, etc. | Support skill affixes only |
+| Output | `Mod[]` | `SupportMod[]` (wrapped in `{ mod }`) |
+| Usage | `parseMod()` | `parseSupportAffixes()` |
+
+Both use the same template DSL (`t()`, `spec()`, `outputMany()`).

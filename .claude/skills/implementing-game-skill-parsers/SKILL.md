@@ -1,6 +1,6 @@
 ---
 name: implementing-game-skill-parsers
-description: Use when implementing skill data generation from HTML sources for game build planners - guides the parser-factory-generation pattern for extracting level-scaling values and tier/rank-scaling values for magnificent supports (project)
+description: Use when implementing skill data generation from HTML sources for game build planners - guides the parser-factory-generation pattern for extracting level-scaling values for active and passive skills (project)
 ---
 
 # Implementing Game Skill Parsers
@@ -14,9 +14,11 @@ Skill data generation follows a **parser-factory-generation** pattern:
 
 **Critical:** Parser keys MUST match factory key usage exactly.
 
+**Note:** This skill covers active and passive skills only. For support skills, see the `adding-support-mod-parsers` skill.
+
 ## When to Use
 
-- Adding new skills with level-scaling properties
+- Adding new active or passive skills with level-scaling properties
 - Extracting values from game data HTML pages
 
 ## Project File Locations
@@ -24,17 +26,15 @@ Skill data generation follows a **parser-factory-generation** pattern:
 | Purpose | File Path |
 |---------|-----------|
 | Active factories | `src/tli/skills/active_factories.ts` |
-| Support factories | `src/tli/skills/support_factories.ts` |
 | Passive factories | `src/tli/skills/passive_factories.ts` |
 | Factory types & helpers | `src/tli/skills/types.ts` |
 | Active parsers | `src/scripts/skills/active_parsers.ts` |
-| Support parsers | `src/scripts/skills/support_parsers.ts` |
 | Passive parsers | `src/scripts/skills/passive_parsers.ts` |
 | Parser registry | `src/scripts/skills/index.ts` |
 | Generation script | `src/scripts/generate_skill_data.ts` |
 | HTML data sources | `.garbage/tlidb/skill/{category}/{Skill_Name}.html` |
 
-**Categories:** `active`, `support`, `passive`, `activation_medium`, `support_magnificent`, `support_noble`
+**Categories:** `active`, `passive`, `activation_medium`
 
 ## Implementation Checklist
 
@@ -46,7 +46,7 @@ Skill data generation follows a **parser-factory-generation** pattern:
 
 ### 2. Define Factory (structure + key names)
 ```typescript
-// In active_factories.ts, support_factories.ts, or passive_factories.ts
+// In active_factories.ts or passive_factories.ts
 import { v } from "./types";
 
 "Ice Bond": (l, vals) => ({
@@ -64,7 +64,6 @@ import { v } from "./types";
 
 **Factory return types:**
 - **Active skills:** `{ offense?: SkillOffense[], mods?: Mod[], buffMods?: Mod[] }`
-- **Support skills:** `Mod[]`
 - **Passive skills:** `{ mods?: Mod[], buffMods?: Mod[] }`
 
 The `v(arr, level)` helper safely accesses `arr[level - 1]` with bounds checking.
@@ -75,7 +74,7 @@ The `v(arr, level)` helper safely accesses `arr[level - 1]` with bounds checking
 
 ### 3. Create Parser (extract values for those keys)
 ```typescript
-// In active_parsers.ts, support_parsers.ts, or passive_parsers.ts
+// In active_parsers.ts or passive_parsers.ts
 import { findColumn, validateAllLevels } from "./progression_table";
 import { template } from "./template-compiler";
 import type { SupportLevelParser } from "./types";
@@ -248,112 +247,3 @@ Runtime: Factory + levelValues → Mod objects
 2. **Order-independent:** Parser and factory don't need to agree on array order
 3. **Extensible:** Adding new values doesn't shift existing indices
 4. **Type-safe:** TypeScript can catch typos in key names
-
----
-
-## Magnificent Support Skills
-
-Magnificent support skills use **tier/rank/value** scaling instead of level scaling.
-
-### Scaling Dimensions
-
-| Dimension | Range | Description |
-|-----------|-------|-------------|
-| **Tier** | 0-2 | Lower is better (tier 0 = best values) |
-| **Rank** | 1-5 | Higher is better (rank 5 = max) |
-| **Value** | varies | Specific value within tier's min-max range |
-
-### Affix Types
-
-- **Tier-scaled**: Value ranges per tier from progression table (e.g., tier 0: 19-23%, tier 1: 16-18%). Passed as `value` parameter to factory.
-- **Rank-scaled**: 5-element arrays indexed by rank (e.g., `[0, 5, 10, 15, 20]` for ranks 1-5). The `rankDmgPct` mod is auto-included by `getMagnificentSupportSkillMods`.
-- **Constant**: Same value across all tiers/ranks (e.g., +25% Projectile Size). Passed as direct numbers in factory `vals`.
-
-### File Locations
-
-| Purpose | File Path |
-|---------|-----------|
-| Magnificent factories | `src/tli/skills/magnificent_support_factories.ts` |
-| Magnificent mods | `src/tli/skills/magnificent_support_mods.ts` |
-| Magnificent parsers | `src/scripts/skills/magnificent_support_parsers.ts` |
-| Parser registry | `src/scripts/skills/index.ts` (MAGNIFICENT_SUPPORT_PARSERS) |
-| HTML data sources | `.garbage/tlidb/skill/support_magnificent/{Skill_Name}.html` |
-
-### Parser Structure
-
-Parsers return `ParsedMagnificentValues`:
-
-```typescript
-export const burningCombustionParser: MagnificentLevelParser = (input) => {
-  const { skillName, description, progressionTable } = input;
-
-  // Parse tier ranges from progression table (3 rows, not 40)
-  const dmgCol = progressionTable.find((col) => col.header.toLowerCase() === "name");
-  const tierDmgPct: Record<number, TierRange> = {};
-  for (const [tierStr, text] of Object.entries(dmgCol.rows)) {
-    tierDmgPct[Number(tierStr)] = parseTierRange(text, skillName);
-  }
-  validateAllTiers(tierDmgPct, skillName);
-
-  // Parse rank values from description (max value, then compute steps)
-  const rankDmgMatch = template("+{value:int}% additional damage...").tryMatch(desc);
-  const maxRankValue = rankDmgMatch.value; // e.g., 20
-  const rankValues = { rankDmgPct: [0, 5, 10, 15, 20] }; // step = max/4
-
-  // Parse constants from description
-  const projMatch = template("+{value:int}% Projectile Size...").tryMatch(desc);
-  const constantValues = { projectileSizePct: projMatch.value };
-
-  return { tierValues, rankValues, constantValues };
-};
-```
-
-### Factory Structure
-
-Factory receives `(tier, value, vals)` where `vals` contains constants as direct numbers.
-The rank-based damage mod (`rankDmgPct`) is **auto-included** by `getMagnificentSupportSkillMods`.
-
-```typescript
-"Burning Shot: Combustion (Magnificent)": (_tier, value, vals): Mod[] => [
-  // Tier-scaled: use value parameter directly
-  { type: "DmgPct", value, dmgModType: "global", addn: true },
-  // rankDmgPct mod is auto-included by getMagnificentSupportSkillMods
-  // Constants: access directly from vals
-  { type: "ProjectileSizePct", value: vals.projectileSizePct },
-  { type: "IgniteDurationPct", value: vals.igniteDurationPct },
-  { type: "SkillEffDurationPct", value: vals.durationPct },
-],
-```
-
-### Runtime Function
-
-```typescript
-getMagnificentSupportSkillMods(
-  "Burning Shot: Combustion (Magnificent)",
-  0,    // tier (0 = best)
-  5,    // rank (5 = max)
-  23,   // value within tier 0's range (19-23)
-)
-// Returns: DmgPct 20% (rank), DmgPct 23% (tier), ProjectileSizePct 25%, etc.
-```
-
-### Registration
-
-```typescript
-// In index.ts
-export const MAGNIFICENT_SUPPORT_PARSERS: MagnificentSkillParserEntry[] = [
-  { skillName: "Burning Shot: Combustion (Magnificent)", parser: burningCombustionParser },
-];
-```
-
-### Key Differences from Regular Skills
-
-| Aspect | Regular Skills | Magnificent Skills |
-|--------|---------------|-------------------|
-| Scaling | Level 1-40 | Tier 0-2, Rank 1-5, Value |
-| Progression table | 40 rows | 3 rows (tiers) |
-| Values array | 40 elements | 5 elements (ranks) for `rankValues` |
-| Constants | `createConstantLevels(x)` → 40 elements | Direct numbers in factory `vals` |
-| Factory signature | `(level, vals)` | `(tier, value, vals)` |
-| Factory vals type | `Record<string, readonly number[]>` | `Record<string, number>` (constants only) |
-| Rank damage mod | N/A | Auto-included by `getMagnificentSupportSkillMods` |
