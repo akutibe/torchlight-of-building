@@ -100,13 +100,13 @@ const ReapDpsSummarySection = ({
         <div className="rounded-lg bg-zinc-800 p-4">
           <div className="text-sm text-zinc-400">Duration Bonus</div>
           <div className="text-xl font-semibold text-zinc-50">
-            {formatStatValue.percentage(summary.reapDurationBonus)}
+            {formatStatValue.pct(summary.reapDurationBonusPct)}
           </div>
         </div>
         <div className="rounded-lg bg-zinc-800 p-4">
           <div className="text-sm text-zinc-400">CDR Bonus</div>
           <div className="text-xl font-semibold text-zinc-50">
-            {formatStatValue.percentage(summary.reapCdrBonus)}
+            {formatStatValue.pct(summary.reapCdrBonusPct)}
           </div>
         </div>
       </div>

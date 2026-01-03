@@ -2342,8 +2342,8 @@ export interface ReapDpsSummary {
 export interface TotalReapDpsSummary {
   reaps: ReapDpsSummary[];
   totalReapDps: number;
-  reapDurationBonus: number;
-  reapCdrBonus: number;
+  reapDurationBonusPct: number;
+  reapCdrBonusPct: number;
 }
 
 const calcTotalReapDps = (
@@ -2383,8 +2383,8 @@ const calcTotalReapDps = (
   const totalReapDps = R.sumBy(reaps, (r) => r.reapDps);
   return {
     reaps,
-    reapDurationBonus: reapDurationMult - 1,
-    reapCdrBonus: reapCdrMult - 1,
+    reapDurationBonusPct: (reapDurationMult - 1) * 100,
+    reapCdrBonusPct: (reapCdrMult - 1) * 100,
     totalReapDps,
   };
 };

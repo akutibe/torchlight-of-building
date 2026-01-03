@@ -4284,6 +4284,7 @@ describe("resistance calculations", () => {
       lightningRes: { max: 60, potential: 0, actual: 0 },
       fireRes: { max: 60, potential: 0, actual: 0 },
       erosionRes: { max: 60, potential: 0, actual: 0 },
+      movementSpeedBonusPct: 0,
     });
   });
 
@@ -4614,7 +4615,7 @@ describe("reap mechanics", () => {
     const results = calculateOffense(input);
     const reapSummary = results.skills[skillName]?.totalReapDpsSummary;
 
-    expect(reapSummary?.reapDurationBonus).toBeCloseTo(1);
+    expect(reapSummary?.reapDurationBonusPct).toBeCloseTo(100);
     expect(reapSummary?.reaps[0].duration).toBeCloseTo(1);
     expect(reapSummary?.reaps[0].dmgPerReap).toBeCloseTo(100);
   });
@@ -4632,7 +4633,7 @@ describe("reap mechanics", () => {
     const results = calculateOffense(input);
     const reapSummary = results.skills[skillName]?.totalReapDpsSummary;
 
-    expect(reapSummary?.reapCdrBonus).toBeCloseTo(1);
+    expect(reapSummary?.reapCdrBonusPct).toBeCloseTo(100);
     expect(reapSummary?.reaps[0].rawCooldown).toBeCloseTo(0.5);
     expect(reapSummary?.reaps[0].reapsPerSecond).toBeCloseTo(2);
     expect(reapSummary?.reaps[0].reapDps).toBeCloseTo(100); // 50 dmg * 2 reaps/s

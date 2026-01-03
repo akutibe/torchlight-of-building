@@ -69,13 +69,13 @@ describe("offense golden tests", () => {
     expect(reapDps).toBeGreaterThan(expectedReapDps * (1 - tolerance));
     expect(reapDps).toBeLessThan(expectedReapDps * (1 + tolerance));
 
-    // Reap CDR Bonus: 2.36 (136% increased)
-    const reapCdr = mindControl.totalReapDpsSummary?.reapCdrBonus;
-    expect(reapCdr).toBeCloseTo(2.36, 2);
+    // Reap CDR Bonus: 236% (136% increased)
+    const reapCdr = mindControl.totalReapDpsSummary?.reapCdrBonusPct;
+    expect(reapCdr).toBeCloseTo(236, 0);
 
-    // Reap Duration Bonus: 1.82 (82% increased)
-    const reapDuration = mindControl.totalReapDpsSummary?.reapDurationBonus;
-    expect(reapDuration).toBeCloseTo(1.82, 2);
+    // Reap Duration Bonus: 182% (82% increased)
+    const reapDuration = mindControl.totalReapDpsSummary?.reapDurationBonusPct;
+    expect(reapDuration).toBeCloseTo(182, 0);
 
     // Total DPS: ~269.0 billion (DOT + Reap)
     const totalDps = mindControl.totalDps;
