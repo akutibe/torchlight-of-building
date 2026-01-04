@@ -123,7 +123,7 @@ export const BuilderLayout = ({ children }: BuilderLayoutProps) => {
               </svg>
             </button>
             <h1 className="text-3xl font-bold text-zinc-50">
-              TLI Character Build Planner
+              Torchlight of Building
             </h1>
             {currentSaveName !== undefined &&
               (isRenamingBuild ? (

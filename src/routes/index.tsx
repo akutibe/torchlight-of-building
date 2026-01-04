@@ -297,7 +297,7 @@ function SavesPage(): React.ReactNode {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-zinc-50">
-            TLI Character Build Planner
+            Torchlight Of Building
           </h1>
         </div>
 
