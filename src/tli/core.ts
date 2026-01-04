@@ -143,7 +143,7 @@ export interface Configuration {
   // enemy config
   // ------------
 
-  // default to 30
+  // default to 40
   enemyRes: number | undefined;
   // default to 27273 (effective phys dmg mitigation of 50%)
   enemyArmor: number | undefined;
