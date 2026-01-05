@@ -15,7 +15,7 @@ type SupportSlotKey = 1 | 2 | 3 | 4 | 5;
 
 const SUPPORT_SLOT_KEYS: SupportSlotKey[] = [1, 2, 3, 4, 5];
 
-const SKILL_LEVEL_OPTIONS = Array.from({ length: 20 }, (_, i) => ({
+const SKILL_LEVEL_OPTIONS = Array.from({ length: 21 }, (_, i) => ({
   value: i + 1,
   label: `Lv. ${i + 1}`,
 }));

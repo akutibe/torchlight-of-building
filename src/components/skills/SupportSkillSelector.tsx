@@ -57,7 +57,7 @@ interface SupportSkillSelectorProps {
   slotIndex: number; // 1-indexed
 }
 
-const SKILL_LEVEL_OPTIONS = Array.from({ length: 20 }, (_, i) => ({
+const SKILL_LEVEL_OPTIONS = Array.from({ length: 21 }, (_, i) => ({
   value: i + 1,
   label: `Lv. ${i + 1}`,
 }));
