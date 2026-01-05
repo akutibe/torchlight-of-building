@@ -1572,6 +1572,17 @@ test("parse spell skill level", () => {
   ]);
 });
 
+test("parse lightning skill level", () => {
+  const result = parseMod("+2 Lightning Skill Level");
+  expect(result).toEqual([
+    {
+      type: "SkillLevel",
+      value: 2,
+      skillLevelType: "lightning",
+    },
+  ]);
+});
+
 test("parse all skills level", () => {
   const result = parseMod("+1 all skills' level");
   expect(result).toEqual([
