@@ -117,7 +117,7 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
 
   // Projectile per frostbite_rating: "+1 Projectile Quantity for every 35 Frostbite Rating"
   const projectilePerFrostbiteRating = template(
-    "{value:int} projectile quantity for every",
+    "{value:+int} projectile quantity for every",
   ).match(descript, skillName).value;
 
   // Base Projectile: "fires 2 Projectiles in its base state"
@@ -128,7 +128,7 @@ export const frostSpikeParser: SupportLevelParser = (input) => {
 
   // DmgPct per projectile: "+8% additional Damage for every +1 Projectile"
   const dmgPctPerProjectile = template(
-    "{value:int%} additional damage for every +1 projectile",
+    "{value:+int%} additional damage for every +1 projectile",
   ).match(descript, skillName).value;
 
   validateAllLevels(weaponAtkDmgPct, skillName);
@@ -242,12 +242,12 @@ export const mindControlParser: SupportLevelParser = (input) => {
 
   // "+1 maximum link for every channeled stack"
   const maxLinkPerChannel = template(
-    "{value:int} maximum link for every channeled stack",
+    "{value:+int} maximum link for every channeled stack",
   ).match(descript, skillName).value;
 
   // "-30% Movement Speed while channeling this skill"
   const movementSpeedPctWhileChanneling = template(
-    "{value:int%} movement speed while channeling",
+    "{value:+int%} movement speed while channeling",
   ).match(descript, skillName).value;
 
   // "0.5% Max Life per second per link"
@@ -427,7 +427,7 @@ export const chainLightningParser: SupportLevelParser = (input) => {
   }
 
   // Jump: "+2 Jumps for this skill"
-  const jump = template("{value:int} jumps for this skill").match(
+  const jump = template("{value:+int} jumps for this skill").match(
     descript,
     skillName,
   ).value;

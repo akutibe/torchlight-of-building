@@ -9,14 +9,14 @@ describe("template-compiler", () => {
       expect(result).toEqual({ value: 50 });
     });
 
-    it("should match negative integer", () => {
-      const matcher = template("{value:int} attack speed");
+    it("should match signed negative integer", () => {
+      const matcher = template("{value:+int} attack speed");
       const result = matcher.tryMatch("-15 Attack Speed");
       expect(result).toEqual({ value: -15 });
     });
 
-    it("should match positive integer with sign", () => {
-      const matcher = template("{value:int} shadow quantity");
+    it("should match signed positive integer", () => {
+      const matcher = template("{value:+int} shadow quantity");
       const result = matcher.tryMatch("+50 Shadow Quantity");
       expect(result).toEqual({ value: 50 });
     });

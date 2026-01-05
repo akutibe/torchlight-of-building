@@ -2,18 +2,27 @@ import type { CompiledTemplate } from "./types";
 
 /**
  * Get the regex pattern for a capture type.
+ *
+ * Type syntax:
+ * - `int` - unsigned integer (no sign): "5" → 5
+ * - `+int` - signed integer (requires + or -): "+5" → 5, "-3" → -3
+ * - `dec` - unsigned decimal (no sign): "21.5" → 21.5
+ * - `+dec` - signed decimal (requires + or -): "+21.5" → 21.5
+ * - Add `%` suffix for percentage: `dec%`, `+dec%`, `int%`, `+int%`
  */
 const getCapturePattern = (type: string): string => {
   const isPercent = type.endsWith("%");
   const baseType = isPercent ? type.slice(0, -1) : type;
+  const isSigned = baseType.startsWith("+");
+  const numericType = isSigned ? baseType.slice(1) : baseType;
 
   let pattern: string;
-  switch (baseType) {
+  switch (numericType) {
     case "int":
-      pattern = "([+-]?\\d+)";
+      pattern = isSigned ? "([+-]\\d+)" : "(\\d+)";
       break;
     case "dec":
-      pattern = "([+-]?\\d+(?:\\.\\d+)?)";
+      pattern = isSigned ? "([+-]\\d+(?:\\.\\d+)?)" : "(\\d+(?:\\.\\d+)?)";
       break;
     default:
       // Unknown type - use word pattern
@@ -30,8 +39,10 @@ const getCapturePattern = (type: string): string => {
 const getExtractor = (type: string): ((s: string) => string | number) => {
   const isPercent = type.endsWith("%");
   const baseType = isPercent ? type.slice(0, -1) : type;
+  const isSigned = baseType.startsWith("+");
+  const numericType = isSigned ? baseType.slice(1) : baseType;
 
-  switch (baseType) {
+  switch (numericType) {
     case "int":
       return (s) => parseInt(s, 10);
     case "dec":

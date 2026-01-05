@@ -7,17 +7,20 @@ import type { TemplateMatcher } from "./types";
  * Uses substring matching - the pattern can appear anywhere in the input.
  *
  * Template syntax:
- * - `{name:int}` - Integer capture
- * - `{name:dec}` - Decimal capture
- * - `{name:dec%}` - Decimal with % suffix
+ * - `{name:int}` - Unsigned integer (no sign): "5" → 5
+ * - `{name:+int}` - Signed integer (requires +/-): "+5" → 5, "-3" → -3
+ * - `{name:dec}` - Unsigned decimal: "21.5" → 21.5
+ * - `{name:+dec}` - Signed decimal: "+21.5" → 21.5
+ * - `{name:dec%}` - Unsigned decimal percent: "96%" → 96
+ * - `{name:+dec%}` - Signed decimal percent: "+96%" → 96
  * - `[word]` - Optional literal word (captured as boolean)
  * - `(a|b)` - Alternation (non-capturing)
  *
  * @example
- * const matcher = template("{value:int} shadow quantity");
+ * const matcher = template("{value:+int} shadow quantity");
  * const result = matcher.match("Adds +50 Shadow Quantity", "Haunt");
  * // result = { value: 50 }
- * // throws if no match: "Haunt: no match for '{value:int} shadow quantity'"
+ * // throws if no match: "Haunt: no match for '{value:+int} shadow quantity'"
  */
 export const template = <T extends string>(
   templateStr: T,

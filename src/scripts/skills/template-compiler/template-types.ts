@@ -1,12 +1,26 @@
 /**
  * Basic type registry for template capture types.
  * Maps type specifiers to their TypeScript types.
+ *
+ * Unsigned types (no sign prefix):
+ * - `int` - unsigned integer: "5" → 5
+ * - `dec` - unsigned decimal: "21.5" → 21.5
+ *
+ * Signed types (requires + or - prefix):
+ * - `+int` - signed integer: "+5" → 5, "-3" → -3
+ * - `+dec` - signed decimal: "+21.5" → 21.5
+ *
+ * Add `%` suffix for percentage variants.
  */
 interface BasicCaptureTypeRegistry {
   int: number;
   dec: number;
   "int%": number;
   "dec%": number;
+  "+int": number;
+  "+dec": number;
+  "+int%": number;
+  "+dec%": number;
 }
 
 /**
