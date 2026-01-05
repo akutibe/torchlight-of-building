@@ -177,7 +177,7 @@ export const activeSkillModFactories: Partial<
       {
         type: "InflictWiltPct",
         isEnemyDebuff: true,
-        value: v(vals.dmgPct, l),
+        value: v(vals.inflictWiltPct, l),
       },
     ],
   }),
