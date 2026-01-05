@@ -698,6 +698,36 @@ describe("fervor mechanics", () => {
   });
 });
 
+describe("flat crit rating", () => {
+  const skillName = "[Test] Simple Attack" as const;
+
+  // Bespoke helper: 100 phys weapon + custom mods
+  const createModsInput = (mods: AffixLine[]) => ({
+    loadout: initLoadout({
+      gearPage: { equippedGear: { mainHand: baseWeapon }, inventory: [] },
+      customAffixLines: mods,
+      skillPage: simpleAttackSkillPage(),
+    }),
+    configuration: defaultConfiguration,
+  });
+
+  test("FlatCritRating with CritRatingPct", () => {
+    // Base crit rating: 500
+    // Added flat crit rating: 100
+    // Base crit chance: (500 + 100) / 100 / 100 = 0.06 (6%)
+    // Crit rating pct: 100% → multiplier = 1 + 1 = 2
+    // Final crit chance: 0.06 * 2 = 0.12 (12%)
+    const input = createModsInput(
+      affixLines([
+        { type: "FlatCritRating", value: 100, modType: "global" },
+        { type: "CritRatingPct", value: 100, modType: "global" },
+      ]),
+    );
+    const results = calculateOffense(input);
+    validate(results, skillName, { critChance: 0.12 });
+  });
+});
+
 describe("flat damage to attacks", () => {
   const skillName = "[Test] Simple Attack" as const;
 

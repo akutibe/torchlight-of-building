@@ -181,6 +181,7 @@ interface ModDefinitions {
   };
   FlatDmgToAtks: { value: DmgRange; dmgType: DmgChunkType };
   FlatDmgToSpells: { value: DmgRange; dmgType: DmgChunkType };
+  FlatCritRating: { value: number; modType: CritRatingModType };
   CritRatingPct: { value: number; modType: CritRatingModType };
   CritDmgPct: { value: number; addn: boolean; modType: CritDmgModType };
   AspdPct: { value: number; addn: boolean };

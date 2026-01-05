@@ -472,11 +472,16 @@ const calculateCritChance = (
   if (skill.tags.includes("Spell")) {
     modTypes.push("spell");
   }
+
+  const addedFlatCritRating = sumByValue(filterMod(allMods, "FlatCritRating"));
+  const baseCritRating = 500;
+  const baseCritChance = (baseCritRating + addedFlatCritRating) / 100 / 100;
+
   const critRatingPctMods = filterMod(allMods, "CritRatingPct").filter((m) =>
     modTypes.includes(m.modType),
   );
   const critRatingMult = calculateEffMultiplier(critRatingPctMods);
-  return Math.min(0.05 * critRatingMult, 1);
+  return Math.min(baseCritChance * critRatingMult, 1);
 };
 
 const calculateCritDmg = (allMods: Mod[], skill: BaseActiveSkill): number => {
@@ -2550,6 +2555,13 @@ const calcAvgSpellDps = (
     avgDps,
   };
 };
+
+const _calcAvgSpellBurstDps = (
+  mods: Mod[],
+  _loadout: Loadout,
+  config: Configuration,
+  avgHit: number,
+) => {};
 
 // Calculates offense for all enabled implemented skills
 export const calculateOffense = (input: OffenseInput): OffenseResults => {
