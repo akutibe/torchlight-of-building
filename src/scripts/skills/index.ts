@@ -10,6 +10,7 @@ import {
   iceBondParser,
   manaBoilParser,
   mindControlParser,
+  timidParser,
 } from "./active_parsers";
 import {
   corrosionFocusParser,
@@ -115,6 +116,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Biting Cold",
     categories: ["active"],
     parser: bitingColdParser,
+  },
+  {
+    skillName: "Timid",
+    categories: ["active"],
+    parser: timidParser,
   },
 ];
 

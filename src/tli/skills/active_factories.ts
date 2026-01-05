@@ -197,6 +197,17 @@ export const activeSkillModFactories: Partial<
       },
     ],
   }),
+  Timid: (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        dmgModType: "hit",
+        addn: true,
+        isEnemyDebuff: true,
+        value: v(vals.dmgPct, l),
+      },
+    ],
+  }),
   "Mana Boil": (l, vals) => ({
     buffMods: [
       {

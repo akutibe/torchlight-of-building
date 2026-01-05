@@ -480,3 +480,24 @@ export const bitingColdParser: SupportLevelParser = (input) => {
 
   return { dmgPct, inflictFrostbitePct };
 };
+
+export const timidParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const dmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+    // Match "+20% additional Hit Damage taken" or "49.5% additional Hit Damage taken"
+    const match = template("{value:dec%} additional hit damage taken").match(
+      text,
+      skillName,
+    );
+    dmgPct[level] = match.value;
+  }
+
+  validateAllLevels(dmgPct, skillName);
+
+  return { dmgPct };
+};

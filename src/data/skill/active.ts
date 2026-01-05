@@ -1954,6 +1954,13 @@ export const ActiveSkills = [
       "Casts the skill and Curses enemies within the target area.\n+39% additional Hit Damage taken by Cursed enemies\nLasts 5s.",
     ],
     kinds: [],
+    levelValues: {
+      dmgPct: [
+        20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
+        38, 39, 40, 40.5, 41, 41.5, 42, 42.5, 43, 43.5, 44, 44.5, 45, 45.5, 46,
+        46.5, 47, 47.5, 48, 48.5, 49, 49.5,
+      ],
+    },
   },
   {
     type: "Active",
