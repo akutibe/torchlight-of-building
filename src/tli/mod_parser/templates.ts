@@ -28,6 +28,7 @@ const ENEMY_IS_CURSED = "enemy_is_cursed" as const;
 const HAVE_BOTH_SEALED_MANA_AND_LIFE = "have_both_sealed_mana_and_life" as const;
 const TARGET_ENEMY_IS_ELITE = "target_enemy_is_elite" as const;
 const MOVEMENT_SPEED_BONUS_PCT = "movement_speed_bonus_pct" as const;
+const HAS_HIT_ENEMY_WITH_ELEMENTAL_DMG_RECENTLY = "has_hit_enemy_with_elemental_dmg_recently" as const;
 
 const coreTalentNameSet = new Set(CoreTalentNames.map((name) => name.toLowerCase()));
 
@@ -322,6 +323,20 @@ export const allParsers = [
     from: c.from,
     to: c.to,
     value: c.value,
+  })),
+  t(
+    "{value:+dec%} elemental resistance penetration when hitting an enemy with elemental damage, stacking up to {limit:int} times",
+  ).output("ResPenPct", (c) => ({
+    value: c.value,
+    penType: "elemental" as const,
+    per: { stackable: HAS_HIT_ENEMY_WITH_ELEMENTAL_DMG_RECENTLY, amt: 1, limit: c.limit },
+  })),
+  t(
+    "{value:dec%} elemental resistance penetration every time you hit an enemy with elemental damage recently. stacks up to {limit:int} times",
+  ).output("ResPenPct", (c) => ({
+    value: c.value,
+    penType: "elemental" as const,
+    per: { stackable: HAS_HIT_ENEMY_WITH_ELEMENTAL_DMG_RECENTLY, amt: 1, limit: c.limit },
   })),
   t("{value:+dec%} elemental and erosion resistance penetration").output("ResPenPct", (c) => ({
     value: c.value,

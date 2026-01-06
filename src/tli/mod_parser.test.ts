@@ -1099,6 +1099,42 @@ test("parse damage penetrates elemental resistance", () => {
   ]);
 });
 
+test("parse elemental resistance penetration with stackable (when hitting)", () => {
+  const result = parseMod(
+    "+1% Elemental Resistance Penetration when hitting an enemy with Elemental Damage, stacking up to 4 times",
+  );
+  expect(result).toEqual([
+    {
+      type: "ResPenPct",
+      value: 1,
+      penType: "elemental",
+      per: {
+        stackable: "has_hit_enemy_with_elemental_dmg_recently",
+        amt: 1,
+        limit: 4,
+      },
+    },
+  ]);
+});
+
+test("parse elemental resistance penetration with stackable (every time)", () => {
+  const result = parseMod(
+    "1.5% Elemental Resistance Penetration every time you hit an enemy with Elemental Damage recently. Stacks up to 4 times",
+  );
+  expect(result).toEqual([
+    {
+      type: "ResPenPct",
+      value: 1.5,
+      penType: "elemental",
+      per: {
+        stackable: "has_hit_enemy_with_elemental_dmg_recently",
+        amt: 1,
+        limit: 4,
+      },
+    },
+  ]);
+});
+
 test("parse armor dmg mitigation penetration", () => {
   const result = parseMod("+8% Armor DMG Mitigation Penetration");
   expect(result).toEqual([
