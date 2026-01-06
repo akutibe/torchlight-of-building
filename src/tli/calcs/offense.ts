@@ -777,16 +777,18 @@ const getLevelOffense = <T extends SkillOffenseType>(
   skill: BaseActiveSkill,
   skillOffenseType: T,
   level: number,
-): Extract<SkillOffense, { type: T }> => {
+): Extract<SkillOffense, { type: T }> | undefined => {
   const skillMods = getActiveSkillMods(skill.name as ActiveSkillName, level);
   if (skillMods.offense === undefined) {
-    throw new Error(`Skill "${skill.name}" has no levelOffense data`);
+    console.error(`Skill "${skill.name}" has no levelOffense data`);
+    return undefined;
   }
   const offense = skillMods.offense.find((o) => o.type === skillOffenseType);
   if (offense === undefined) {
-    throw new Error(
+    console.error(
       `Skill "${skill.name}" has no ${skillOffenseType} in levelOffense`,
     );
+    return undefined;
   }
   return offense as Extract<SkillOffense, { type: T }>;
 };
@@ -795,8 +797,8 @@ const getLevelOffenseValue = (
   skill: BaseActiveSkill,
   skillOffenseType: SkillOffenseType,
   level: number,
-): number | DmgRange => {
-  return getLevelOffense(skill, skillOffenseType, level).value;
+): number | DmgRange | undefined => {
+  return getLevelOffense(skill, skillOffenseType, level)?.value ?? undefined;
 };
 
 const calculateAddnDmgFromShadows = (
@@ -921,10 +923,15 @@ const calculateAtkHit = (
 ): SkillHitOverview | undefined => {
   const skillWeaponDR = match(skill.name as ActiveSkillName)
     .with("Frost Spike", () => {
-      return multDRs(
-        gearDmg.mainHand,
-        (getLevelOffenseValue(skill, "WeaponAtkDmgPct", level) as number) / 100,
+      const weaponAtkDmgPct = getLevelOffenseValue(
+        skill,
+        "WeaponAtkDmgPct",
+        level,
       );
+      if (typeof weaponAtkDmgPct !== "number") {
+        return undefined;
+      }
+      return multDRs(gearDmg.mainHand, weaponAtkDmgPct / 100);
     })
     .with("[Test] Simple Attack", () => {
       return gearDmg.mainHand;
@@ -933,11 +940,14 @@ const calculateAtkHit = (
       // either it's unimplemented, not an attack
       return;
     });
-  if (skillWeaponDR === undefined) return;
-  const skillFlatDR = multDRs(
-    flatDmg,
-    (getLevelOffenseValue(skill, "AddedDmgEffPct", level) as number) / 100,
-  );
+  if (skillWeaponDR === undefined) {
+    return;
+  }
+  const addedDmgEffPct = getLevelOffenseValue(skill, "AddedDmgEffPct", level);
+  if (typeof addedDmgEffPct !== "number") {
+    return undefined;
+  }
+  const skillFlatDR = multDRs(flatDmg, addedDmgEffPct / 100);
   const skillBaseDmg = addDRs(skillWeaponDR, skillFlatDR);
 
   // Apply % bonuses to each pool, considering conversion history
@@ -2630,10 +2640,12 @@ const calcSpellHit = (
     ...emptyDmgRanges(),
     [dmgType]: skillSpellDR,
   };
-  const skillFlatDRs = multDRs(
-    flatDmg,
-    (getLevelOffenseValue(skill, "AddedDmgEffPct", level) as number) / 100,
-  );
+
+  const addedDmgEffPct = getLevelOffenseValue(skill, "AddedDmgEffPct", level);
+  if (typeof addedDmgEffPct !== "number") {
+    return undefined;
+  }
+  const skillFlatDRs = multDRs(flatDmg, addedDmgEffPct / 100);
   const skillBaseDR = addDRs(skillSpellDRs, skillFlatDRs);
   const baseDmgModTypes = dmgModTypesForSkill(skill);
 
