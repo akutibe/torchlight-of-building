@@ -301,6 +301,10 @@ export const allParsers = [
     value: c.value,
     addn: c.additional !== undefined,
   })),
+  t("{value:+dec%} [additional] minion critical strike damage").output("MinionCritDmgPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+  })),
   t("{value:+dec%} [additional] minion {minionDmgModType:MinionDmgModType} damage").output("MinionDmgPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,
@@ -531,9 +535,11 @@ export const allParsers = [
   t("gains {value:int} stack\\(s\\) of focus blessing when reaping").output("GeneratesFocusBlessing", (c) => ({
     value: c.value,
   })),
+  t("{value:+dec%} focus blessing duration").output("FocusBlessingDurationPct", (c) => ({ value: c.value })),
   t("gains {value:int} stack of repentance when gaining any blessing").output("GeneratesRepentance", (c) => ({
     value: c.value,
   })),
+  t("{value:dec%} chance to gain spell aggression on defeat").output("GeneratesSpellAggression", () => ({})),
   t("{value:+dec%} [additional] movement speed").output("MovementSpeedPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,
@@ -560,6 +566,7 @@ export const allParsers = [
     per: { stackable: "sealed_life_pct" as const, amt: c.amt },
     cond: HAS_FULL_MANA,
   })),
+  t("{value:+int} skill cost").output("SkillCost", (c) => ({ value: c.value })),
   t("{value:+int} to hero trait level").output("HeroTraitLevel", (c) => ({ value: c.value })),
   t("{min:int} - {max:int} physical damage").output("GearBasePhysDmg", (c) => ({
     value: (c.min + c.max) / 2,
@@ -646,6 +653,7 @@ export const allParsers = [
   // Ailments
   t("{value:+dec%} chance to inflict frostbite").output("InflictFrostbitePct", (c) => ({ value: c.value })),
   t("{value:+dec%} freeze duration").output("FreezeDurationPct", (c) => ({ value: c.value })),
+  t("inflicts frail on spell hit").output("InflictFrail", () => ({})),
   // Infiltrations
   t("inflicts cold infiltration when dealing damage to frozen enemies").output("InflictsInfiltration", () => ({
     infiltrationType: "cold" as const,

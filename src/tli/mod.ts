@@ -224,6 +224,7 @@ interface ModDefinitions {
   MinionAspdPct: { value: number; addn: boolean };
   MinionCspdPct: { value: number; addn: boolean };
   MinionCritRatingPct: { value: number; addn?: boolean };
+  MinionCritDmgPct: { value: number; addn?: boolean };
   // end minions
   ProjectileSpeedPct: { value: number; addn?: boolean };
   ProjectileSizePct: { value: number };
@@ -320,13 +321,17 @@ interface ModDefinitions {
   MaxFocusBlessing: { value: number };
   MaxAgilityBlessing: { value: number };
   MaxTenacityBlessing: { value: number };
-  MaxChannel: { value: number };
+  FocusBlessingDurationPct: { value: number };
+  AgilityBlessingDurationPct: { value: number };
+  TenacityBlessingDurationPct: { value: number };
   GeneratesFocusBlessing: { value: number };
   GeneratesAgilityBlessing: object;
   GeneratesTenacityBlessing: object;
+  MaxChannel: { value: number };
   GeneratesBarrier: object;
   GeneratesTorment: object;
   GeneratesBlur: { value: number };
+  GeneratesSpellAggression: object;
   MaxRepentance: { value: number };
   GeneratesRepentance: { value: number };
   SkillLevel: { value: number; skillLevelType: SkillLevelType };
@@ -335,6 +340,7 @@ interface ModDefinitions {
   GearBasePhysDmg: { value: number };
   GearBaseCritRating: { value: number };
   GearBaseAttackSpeed: { value: number };
+  SkillCost: { value: number };
   // infiltrations
   InflictsInfiltration: { infiltrationType: InfiltrationType };
   // ailments
@@ -343,6 +349,7 @@ interface ModDefinitions {
   InflictFrostbitePct: { value: number; isEnemyDebugg?: boolean };
   InflictParalysisPct: { value: number };
   FreezeDurationPct: { value: number };
+  InflictFrail: object;
   // skill-specific
   MindControlMaxLink: { value: number };
   InitialMaxChannel: { value: number };

@@ -2455,3 +2455,52 @@ test("parse damage per highest stat", () => {
     },
   ]);
 });
+
+test("parse generates spell aggression on defeat", () => {
+  const result = parseMod("25% chance to gain Spell Aggression on defeat");
+  expect(result).toEqual([
+    {
+      type: "GeneratesSpellAggression",
+    },
+  ]);
+});
+
+test("parse skill cost", () => {
+  const result = parseMod("-4 Skill Cost");
+  expect(result).toEqual([
+    {
+      type: "SkillCost",
+      value: -4,
+    },
+  ]);
+});
+
+test("parse focus blessing duration", () => {
+  const result = parseMod("+30% Focus Blessing Duration");
+  expect(result).toEqual([
+    {
+      type: "FocusBlessingDurationPct",
+      value: 30,
+    },
+  ]);
+});
+
+test("parse minion critical strike damage", () => {
+  const result = parseMod("+15% Minion Critical Strike Damage");
+  expect(result).toEqual([
+    {
+      type: "MinionCritDmgPct",
+      value: 15,
+      addn: false,
+    },
+  ]);
+});
+
+test("parse inflicts frail on spell hit", () => {
+  const result = parseMod("Inflicts Frail on Spell hit");
+  expect(result).toEqual([
+    {
+      type: "InflictFrail",
+    },
+  ]);
+});
