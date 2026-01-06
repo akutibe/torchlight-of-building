@@ -79,6 +79,7 @@ export type Stackable =
   | "highest_stat"
   | "frostbite_rating"
   | "projectile"
+  | "jump"
   | "skill_use"
   | "skill_charges_on_use"
   | "cruelty_buff"
@@ -359,6 +360,8 @@ interface ModDefinitions {
   AfflictionEffectPct: { value: number; addn?: boolean };
   CannotInflictWilt: object;
   IgniteDurationPct: { value: number; addn?: boolean };
+  ChainLightningWebOfLightning: object;
+  ChainLightningMerge: { shotgunFalloffCoefficient: number };
   // enemy mods
   EnemyRes: { value: number; resType: ResType };
   // core talent specific

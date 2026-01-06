@@ -773,6 +773,16 @@ export const ConfigurationTab: React.FC<ConfigurationTabProps> = ({
             onChange={(v) => onUpdate({ numSpellSkillsUsedRecently: v ?? 0 })}
             min={0}
           />
+
+          <label className="text-right text-zinc-50">
+            Chain Lightning Instances on Target
+            <InfoTooltip text="Number of Chain Lightning instances hitting the target. Defaults to max." />
+          </label>
+          <NumberInput
+            value={config.chainLightningInstancesOnTarget}
+            onChange={(v) => onUpdate({ chainLightningInstancesOnTarget: v })}
+            min={1}
+          />
         </div>
       </div>
 

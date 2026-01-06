@@ -297,6 +297,14 @@ const allSupportParsers = [
     addn: true,
     per: { stackable: "focus_blessing" as const, limit: c.limit },
   })),
+  t(
+    "for every 1 jump, the supported skill releases 1 additional chain lightning \\(does not target the same enemy\\). each chain lightning can only jump 1 time\\(s\\)",
+  ).output("ChainLightningWebOfLightning"),
+  t(
+    "multiple chain lightnings released by the supported skill can target the same enemy, but will prioritize different enemies. the shotgun effect falloff coefficient of the supported skill is {value:int}%",
+  ).output("ChainLightningMerge", (c) => ({
+    shotgunFalloffCoefficient: c.value,
+  })),
 ];
 
 const parseSupportAffix = (text: string): SupportMod[] | undefined => {

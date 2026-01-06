@@ -75,6 +75,10 @@ export const ConfigurationPageSchema = z
       .number()
       .catch(d.hasHitEnemyWithElementalDmgRecently),
     numSpellSkillsUsedRecently: z.number().catch(d.numSpellSkillsUsedRecently),
+    chainLightningInstancesOnTarget: z
+      .number()
+      .optional()
+      .catch(d.chainLightningInstancesOnTarget),
     realmOfMercuryEnabled: z.boolean().catch(d.realmOfMercuryEnabled),
     baptismOfPurityEnabled: z.boolean().catch(d.baptismOfPurityEnabled),
     enemyColdRes: z.number().optional().catch(d.enemyColdRes),

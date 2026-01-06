@@ -13,6 +13,13 @@ export const findMod = <T extends Mod["type"]>(
   return mods.find((a) => a.type === type) as ModT<T> | undefined;
 };
 
+export const modExists = <T extends Mod["type"]>(
+  mods: Mod[],
+  type: T,
+): boolean => {
+  return findMod(mods, type) !== undefined;
+};
+
 export const filterMods = <T extends Mod["type"]>(
   mods: Mod[],
   type: T,

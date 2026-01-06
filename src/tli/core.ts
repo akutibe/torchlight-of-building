@@ -150,6 +150,8 @@ export interface Configuration {
   hasHitEnemyWithElementalDmgRecently: number;
   // default to 0
   numSpellSkillsUsedRecently: number;
+  // default to max
+  chainLightningInstancesOnTarget?: number;
 
   // --------------------
   // hero-specific config
@@ -226,6 +228,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   targetEnemyHasFireInfiltration: false,
   hasHitEnemyWithElementalDmgRecently: 0,
   numSpellSkillsUsedRecently: 0,
+  chainLightningInstancesOnTarget: undefined,
   realmOfMercuryEnabled: false,
   baptismOfPurityEnabled: false,
   enemyColdRes: undefined,

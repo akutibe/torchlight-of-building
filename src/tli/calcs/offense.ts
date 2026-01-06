@@ -67,6 +67,7 @@ import {
   filterModsByCondThreshold,
   filterOutPerMods,
   findMod,
+  modExists,
   normalizeStackables,
   resolveCoreTalentMods,
   sumByValue,
@@ -1229,6 +1230,20 @@ const calculateSkillLevelDmgMods = (skillLevel: number): ModT<"DmgPct">[] => {
   ];
 };
 
+const calcChainLightningInstances = (
+  mods: Mod[],
+  config: Configuration,
+  jumps: number,
+): number => {
+  if (!modExists(mods, "ChainLightningWebOfLightning")) {
+    return 1;
+  }
+  if (config.chainLightningInstancesOnTarget !== undefined) {
+    return Math.max(1, config.chainLightningInstancesOnTarget);
+  }
+  return 1 + jumps;
+};
+
 interface DerivedOffenseCtx {
   maxSpellBurst: number;
   movementSpeedBonusPct: number;
@@ -1312,6 +1327,29 @@ const resolveModsForOffenseSkill = (
       dmgModType: "hit",
       addn: true,
       src: "Squidnova",
+    });
+  }
+
+  const jumps = sumByValue(filterMods(mods, "Jump"));
+  mods.push(...normalizeStackables(prenormMods, "jump", jumps));
+
+  // chain lightning
+  const chainLightningInstances = calcChainLightningInstances(
+    mods,
+    config,
+    jumps,
+  );
+
+  const chainLightningMerge = findMod(mods, "ChainLightningMerge");
+  if (chainLightningMerge !== undefined) {
+    mods.push({
+      type: "DmgPct",
+      value:
+        (chainLightningInstances - 1) *
+        (100 - chainLightningMerge.shotgunFalloffCoefficient),
+      addn: true,
+      dmgModType: "global",
+      src: "Chain Lightning: Merge (Noble)",
     });
   }
 
