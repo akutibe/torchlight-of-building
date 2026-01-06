@@ -2317,3 +2317,15 @@ test("parse additional damage taken by enemies frozen by you recently", () => {
     },
   ]);
 });
+
+test("parse inflicts cold infiltration", () => {
+  const result = parseMod(
+    "Inflicts Cold Infiltration when dealing damage to Frozen enemies",
+  );
+  expect(result).toEqual([
+    {
+      type: "InflictsInfiltration",
+      infiltrationType: "cold",
+    },
+  ]);
+});

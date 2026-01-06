@@ -37,6 +37,10 @@ export const ResTypes = [
 
 export type ResType = (typeof ResTypes)[number];
 
+export const InfiltrationTypes = ["cold", "lightning", "fire"] as const;
+
+export type InfiltrationType = (typeof InfiltrationTypes)[number];
+
 export const SkillAreaModTypes = ["global", "curse"];
 
 export type SkillAreaModType = (typeof SkillAreaModTypes)[number];
@@ -314,7 +318,7 @@ interface ModDefinitions {
   GearBaseCritRating: { value: number };
   GearBaseAttackSpeed: { value: number };
   // infiltrations
-  InflictsInfiltration: object;
+  InflictsInfiltration: { infiltrationType: InfiltrationType };
   // ailments
   InflictWiltPct: { value: number; isEnemyDebuff?: boolean };
   BaseWiltFlatDmg: { value: number };

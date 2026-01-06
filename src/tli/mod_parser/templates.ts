@@ -613,6 +613,10 @@ export const allParsers = [
       cond: "sages_insight_erosion" as const,
     })),
   ]),
+  // Infiltrations
+  t("inflicts cold infiltration when dealing damage to frozen enemies").output("InflictsInfiltration", () => ({
+    infiltrationType: "cold" as const,
+  })),
   t("{value:+int%} all resistance when the enemy has max affliction").outputMany([
     spec("EnemyRes", (c) => ({
       value: c.value,
