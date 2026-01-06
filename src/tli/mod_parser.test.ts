@@ -2329,3 +2329,54 @@ test("parse inflicts cold infiltration", () => {
     },
   ]);
 });
+
+test("parse chance to inflict frostbite", () => {
+  const result = parseMod("+18% chance to inflict Frostbite");
+  expect(result).toEqual([
+    {
+      type: "InflictFrostbitePct",
+      value: 18,
+    },
+  ]);
+});
+
+test("parse freeze duration", () => {
+  const result = parseMod("+36% Freeze Duration");
+  expect(result).toEqual([
+    {
+      type: "FreezeDurationPct",
+      value: 36,
+    },
+  ]);
+});
+
+test("parse gear armor", () => {
+  const result = parseMod("+274 Gear Armor");
+  expect(result).toEqual([
+    {
+      type: "GearArmor",
+      value: 274,
+    },
+  ]);
+});
+
+test("parse energy shield charge speed", () => {
+  const result = parseMod("+4% Energy Shield Charge Speed");
+  expect(result).toEqual([
+    {
+      type: "EnergyShieldChargeSpeedPct",
+      value: 4,
+    },
+  ]);
+});
+
+test("parse unsigned movement speed", () => {
+  const result = parseMod("7.5% Movement Speed");
+  expect(result).toEqual([
+    {
+      type: "MovementSpeedPct",
+      value: 7.5,
+      addn: false,
+    },
+  ]);
+});

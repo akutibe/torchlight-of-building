@@ -253,6 +253,7 @@ interface ModDefinitions {
   MaxResistancePct: { value: number; resType: ResType };
   LifeRegainPct: { value: number };
   EnergyShieldRegainPct: { value: number };
+  EnergyShieldChargeSpeedPct: { value: number };
   RestoreLifePct: { value: number; interval: number };
   DmgTakenPct: { value: number; addn?: boolean };
   // end defenses
@@ -324,6 +325,7 @@ interface ModDefinitions {
   BaseWiltFlatDmg: { value: number };
   InflictFrostbitePct: { value: number; isEnemyDebugg?: boolean };
   InflictParalysisPct: { value: number };
+  FreezeDurationPct: { value: number };
   // skill-specific
   MindControlMaxLink: { value: number };
   InitialMaxChannel: { value: number };

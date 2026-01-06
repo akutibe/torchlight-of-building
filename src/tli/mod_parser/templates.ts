@@ -415,6 +415,8 @@ export const allParsers = [
   })),
   t("{value:+dec%} defense").output("DefensePct", (c) => ({ value: c.value })),
   t("{value:+int} gear energy shield").output("GearEnergyShield", (c) => ({ value: c.value })),
+  t("{value:+int} gear armor").output("GearArmor", (c) => ({ value: c.value })),
+  t("{value:+dec%} energy shield charge speed").output("EnergyShieldChargeSpeedPct", (c) => ({ value: c.value })),
   t("{value:+int} gear evasion").output("GearEvasion", (c) => ({ value: c.value })),
   t("{value:+int} armor and evasion").outputMany([
     spec("Armor", (c) => ({ value: c.value })),
@@ -511,6 +513,10 @@ export const allParsers = [
   t("{value:+dec%} [additional] movement speed").output("MovementSpeedPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,
+  })),
+  t("{value:dec%} movement speed").output("MovementSpeedPct", (c) => ({
+    value: c.value,
+    addn: false,
   })),
   t("{value:+dec%} [additional] projectile speed").output("ProjectileSpeedPct", (c) => ({
     value: c.value,
@@ -613,6 +619,9 @@ export const allParsers = [
       cond: "sages_insight_erosion" as const,
     })),
   ]),
+  // Ailments
+  t("{value:+dec%} chance to inflict frostbite").output("InflictFrostbitePct", (c) => ({ value: c.value })),
+  t("{value:+dec%} freeze duration").output("FreezeDurationPct", (c) => ({ value: c.value })),
   // Infiltrations
   t("inflicts cold infiltration when dealing damage to frozen enemies").output("InflictsInfiltration", () => ({
     infiltrationType: "cold" as const,
