@@ -2703,12 +2703,17 @@ export interface OffenseSpellBurstDpsSummary {
   burstsPerSec: number;
   maxSpellBurst: number;
   avgDps: number;
+  ingenuityOverload?: {
+    avgDps: number;
+    interval: number;
+  };
 }
 
 const calcAvgSpellBurstDps = (
   mods: Mod[],
   avgHit: number,
   maxSpellBurst: number,
+  derivedCtx: DerivedCtx,
 ): OffenseSpellBurstDpsSummary => {
   const playSafe = findMod(mods, "PlaySafe");
   const baseBurstsPerSec = 0.5;
@@ -2726,9 +2731,51 @@ const calcAvgSpellBurstDps = (
     filterMod(mods, "SpellBurstAdditionalDmgPct").map((m) => m.value),
   );
 
-  const avgDps = burstsPerSec * maxSpellBurst * avgHit * spellBurstDmgMult;
+  if (derivedCtx.hero !== bing2) {
+    const avgDps = burstsPerSec * maxSpellBurst * avgHit * spellBurstDmgMult;
+    return { burstsPerSec, maxSpellBurst, avgDps };
+  }
 
-  return { burstsPerSec, maxSpellBurst, avgDps };
+  // Everything after this is bing2 specific
+
+  // Bing2 Ingenuity Overload calculation:
+  // - Whimsy Essence accumulates over time and on each Spell Burst
+  // - At 100 Whimsy Essence, it resets and grants 25 Ingenuity Essence
+  // - At 100 Ingenuity Essence, it resets and triggers Ingenuity Overload
+  const baseWhimsyEssencePerSec = 20;
+  const whimsyEssenceOnBurst = sumByValue(
+    filterMod(mods, "RestoreWhimsyEssenceOnSpellBurst"),
+  );
+  const whimsyEssenceRecoverSpeedMult = calculateEffMultiplier(
+    filterMod(mods, "WhimsyEssenceRecoverySpeedPct"),
+  );
+
+  // Burst gains can overshoot 100 and waste essence. Assuming uniform
+  // position in cycle when burst occurs: efficiency ≈ 1 - W/200
+  const burstEfficiency = 1 - whimsyEssenceOnBurst / 200;
+  const whimsyEssencePerSec =
+    baseWhimsyEssencePerSec * whimsyEssenceRecoverSpeedMult +
+    whimsyEssenceOnBurst * burstsPerSec * burstEfficiency;
+
+  // 100 Whimsy → 25 Ingenuity, 100 Ingenuity → 1 Overload
+  // So 400 Whimsy Essence = 1 Ingenuity Overload
+  const ingenuityOverloadPerSec = whimsyEssencePerSec / 400;
+
+  const normalBurstsPerSec = burstsPerSec - 0.5 * ingenuityOverloadPerSec;
+  const normalAvgDps =
+    normalBurstsPerSec * maxSpellBurst * avgHit * spellBurstDmgMult;
+  // overload triggers +200% additional max spell burst
+  const overloadAvgDps =
+    ingenuityOverloadPerSec * (3 * maxSpellBurst) * avgHit * spellBurstDmgMult;
+  return {
+    burstsPerSec,
+    maxSpellBurst,
+    avgDps: normalAvgDps,
+    ingenuityOverload: {
+      avgDps: overloadAvgDps,
+      interval: 1 / ingenuityOverloadPerSec,
+    },
+  };
 };
 
 // Calculates offense for all enabled implemented skills
@@ -2823,6 +2870,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
             mods,
             spellDpsSummary.avgHitWithCrit,
             maxSpellBurst,
+            derivedCtx,
           )
         : undefined;
 
@@ -2843,6 +2891,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       (attackHitSummary?.avgDps ?? 0) +
       (spellDpsSummary?.avgDps ?? 0) +
       (spellBurstDpsSummary?.avgDps ?? 0) +
+      (spellBurstDpsSummary?.ingenuityOverload?.avgDps ?? 0) +
       (persistentDpsSummary?.total ?? 0) +
       (totalReapDpsSummary?.totalReapDps ?? 0);
 

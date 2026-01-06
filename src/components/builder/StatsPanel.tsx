@@ -139,6 +139,20 @@ const SpellBurstDpsSection = ({
         label="Max Spell Burst"
         value={formatStatValue.integer(summary.maxSpellBurst)}
       />
+      {summary.ingenuityOverload !== undefined && (
+        <>
+          <StatLine
+            label="Overload DPS"
+            value={formatStatValue.dps(summary.ingenuityOverload.avgDps)}
+            color="text-teal-400"
+          />
+          <StatLine
+            label="Overload Interval"
+            value={formatStatValue.duration(summary.ingenuityOverload.interval)}
+            color="text-teal-400"
+          />
+        </>
+      )}
     </>
   );
 };
