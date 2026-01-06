@@ -732,8 +732,20 @@ export const calculateCritDmg = (
   if (skill.tags.includes("Spell")) {
     modTypes.push("spell");
   }
+  if (skill.tags.includes("Physical")) {
+    modTypes.push("physical_skill");
+  }
+  if (skill.tags.includes("Cold")) {
+    modTypes.push("cold_skill");
+  }
   if (skill.tags.includes("Lightning")) {
     modTypes.push("lightning_skill");
+  }
+  if (skill.tags.includes("Fire")) {
+    modTypes.push("fire_skill");
+  }
+  if (skill.tags.includes("Erosion")) {
+    modTypes.push("erosion_skill");
   }
   const mods = filterMods(allMods, "CritDmgPct").filter((m) =>
     modTypes.includes(m.modType),

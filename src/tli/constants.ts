@@ -33,7 +33,11 @@ export const CRIT_DMG_MOD_TYPES = [
   "global",
   "attack",
   "spell",
+  "physical_skill",
+  "cold_skill",
   "lightning_skill",
+  "fire_skill",
+  "erosion_skill",
 ] as const;
 
 export type CritDmgModType = (typeof CRIT_DMG_MOD_TYPES)[number];

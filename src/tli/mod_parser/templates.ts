@@ -280,10 +280,30 @@ export const allParsers = [
       per: { stackable: "focus_blessing" as const },
     }),
   ),
+  t("{value:+dec%} [additional] physical skill critical strike damage").output("CritDmgPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+    modType: "physical_skill" as const,
+  })),
+  t("{value:+dec%} [additional] cold skill critical strike damage").output("CritDmgPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+    modType: "cold_skill" as const,
+  })),
   t("{value:+dec%} [additional] lightning skill critical strike damage").output("CritDmgPct", (c) => ({
     value: c.value,
     addn: c.additional !== undefined,
     modType: "lightning_skill" as const,
+  })),
+  t("{value:+dec%} [additional] fire skill critical strike damage").output("CritDmgPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+    modType: "fire_skill" as const,
+  })),
+  t("{value:+dec%} [additional] erosion skill critical strike damage").output("CritDmgPct", (c) => ({
+    value: c.value,
+    addn: c.additional !== undefined,
+    modType: "erosion_skill" as const,
   })),
   t("{value:+dec%} [additional] [{modType:CritDmgModType}] critical strike damage").output("CritDmgPct", (c) => ({
     value: c.value,

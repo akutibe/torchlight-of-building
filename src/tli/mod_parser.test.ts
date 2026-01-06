@@ -527,6 +527,30 @@ test("parse additional attack critical strike damage", () => {
   ]);
 });
 
+test("parse physical skill critical strike damage", () => {
+  const result = parseMod("+26% Physical Skill Critical Strike Damage");
+  expect(result).toEqual([
+    {
+      type: "CritDmgPct",
+      value: 26,
+      modType: "physical_skill",
+      addn: false,
+    },
+  ]);
+});
+
+test("parse cold skill critical strike damage", () => {
+  const result = parseMod("+26% Cold Skill Critical Strike Damage");
+  expect(result).toEqual([
+    {
+      type: "CritDmgPct",
+      value: 26,
+      modType: "cold_skill",
+      addn: false,
+    },
+  ]);
+});
+
 test("parse lightning skill critical strike damage", () => {
   const result = parseMod("+26% Lightning Skill Critical Strike Damage");
   expect(result).toEqual([
@@ -534,6 +558,30 @@ test("parse lightning skill critical strike damage", () => {
       type: "CritDmgPct",
       value: 26,
       modType: "lightning_skill",
+      addn: false,
+    },
+  ]);
+});
+
+test("parse fire skill critical strike damage", () => {
+  const result = parseMod("+26% Fire Skill Critical Strike Damage");
+  expect(result).toEqual([
+    {
+      type: "CritDmgPct",
+      value: 26,
+      modType: "fire_skill",
+      addn: false,
+    },
+  ]);
+});
+
+test("parse erosion skill critical strike damage", () => {
+  const result = parseMod("+26% Erosion Skill Critical Strike Damage");
+  expect(result).toEqual([
+    {
+      type: "CritDmgPct",
+      value: 26,
+      modType: "erosion_skill",
       addn: false,
     },
   ]);
