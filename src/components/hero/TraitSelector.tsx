@@ -64,17 +64,12 @@ const MemoryOptionWithTooltip: React.FC<MemoryOptionWithTooltipProps> = ({
   memory,
   label,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   return (
     <div ref={triggerRef} className="w-full">
       <span>{label}</span>
-      <Tooltip
-        isVisible={isVisible}
-        triggerRect={triggerRect}
-        width="lg"
-        {...tooltipHandlers}
-      >
+      <Tooltip isVisible={isVisible} triggerRect={triggerRect} width="lg">
         <MemoryTooltipContent memory={memory} />
       </Tooltip>
     </div>
@@ -109,7 +104,7 @@ const TraitItem = ({
   radioName,
   onSelect,
 }: TraitItemProps) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const content = (
     <div className="flex-1">
@@ -120,12 +115,7 @@ const TraitItem = ({
   const implemented = isHeroTraitImplemented(trait.name as HeroTraitName);
 
   const tooltip = (
-    <Tooltip
-      isVisible={isVisible}
-      triggerRect={triggerRect}
-      width="lg"
-      {...tooltipHandlers}
-    >
+    <Tooltip isVisible={isVisible} triggerRect={triggerRect} width="lg">
       <TooltipTitle>{trait.name}</TooltipTitle>
       <TooltipContent>
         <div className="max-h-64 overflow-y-auto">{trait.affix}</div>
@@ -321,7 +311,7 @@ const TraitRow = ({
                   />
                 );
               }}
-              renderSelectedTooltip={(option, triggerRect, tooltipHandlers) => {
+              renderSelectedTooltip={(option, triggerRect) => {
                 const memory = memoryById.get(option.value);
                 if (memory === undefined) return null;
                 return (
@@ -329,7 +319,6 @@ const TraitRow = ({
                     isVisible={true}
                     triggerRect={triggerRect}
                     width="lg"
-                    {...tooltipHandlers}
                   >
                     <MemoryTooltipContent memory={memory} />
                   </Tooltip>

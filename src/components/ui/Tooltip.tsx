@@ -9,8 +9,6 @@ interface TooltipProps {
   children: React.ReactNode;
   width?: "sm" | "md" | "lg";
   variant?: TooltipVariant;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
 }
 
 const widthClasses = {
@@ -103,16 +101,14 @@ export const Tooltip = ({
   children,
   width = "md",
   variant = "default",
-  onMouseEnter,
-  onMouseLeave,
 }: TooltipProps) => {
   const tooltipRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useLayoutEffect(() => {
-    if (!isVisible || !triggerRect) return;
+    if (!isVisible || triggerRect === undefined) return;
 
-    if (tooltipRef.current) {
+    if (tooltipRef.current !== null) {
       const rect = tooltipRef.current.getBoundingClientRect();
       const newPosition = calculateSmartPosition(
         triggerRect,
@@ -123,16 +119,18 @@ export const Tooltip = ({
     }
   }, [isVisible, triggerRect]);
 
-  if (!isVisible || !triggerRect || typeof document === "undefined")
+  if (
+    !isVisible ||
+    triggerRect === undefined ||
+    typeof document === "undefined"
+  )
     return null;
 
   return createPortal(
     <div
       ref={tooltipRef}
-      className={`fixed z-50 ${widthClasses[width]}`}
+      className={`fixed z-50 pointer-events-none ${widthClasses[width]}`}
       style={{ left: position.x, top: position.y }}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
     >
       <div
         className={`bg-zinc-950 text-zinc-50 p-3 rounded-lg shadow-xl border ${variantClasses[variant]}`}

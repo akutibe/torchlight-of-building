@@ -21,7 +21,7 @@ export const RingSlot: React.FC<RingSlotProps> = ({
   onInstallClick,
   onRevert,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const hasDestiny = !!ringState.installedDestiny;
   const isInner = isInnerRing(ringSlot);
@@ -87,11 +87,7 @@ export const RingSlot: React.FC<RingSlotProps> = ({
         </div>
       </div>
 
-      <Tooltip
-        isVisible={isVisible}
-        triggerRect={triggerRect}
-        {...tooltipHandlers}
-      >
+      <Tooltip isVisible={isVisible} triggerRect={triggerRect}>
         <TooltipTitle>
           {hasDestiny && destinyType
             ? `${destinyType}: ${displayName}`

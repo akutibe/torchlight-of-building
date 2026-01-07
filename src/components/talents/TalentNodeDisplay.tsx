@@ -59,7 +59,7 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
   // biome-ignore lint/correctness/noUnusedFunctionParameters: reserved for future visual styling
   isInSourceArea = false,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const allocated = node.points;
   const isFullyAllocated = allocated >= node.maxPoints;
@@ -155,7 +155,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           isVisible={isVisible}
           triggerRect={triggerRect}
           variant="prism"
-          {...tooltipHandlers}
         >
           <TooltipTitle>
             <span className="text-purple-400">
@@ -262,7 +261,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           isVisible={isVisible}
           triggerRect={triggerRect}
           variant="default"
-          {...tooltipHandlers}
         >
           <TooltipTitle>
             <span className="text-cyan-400">Inverse Image</span>
@@ -358,7 +356,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
           isVisible={isVisible}
           triggerRect={triggerRect}
           variant="default"
-          {...tooltipHandlers}
         >
           <TooltipTitle>
             <span className="text-cyan-400">{talentTypeName} (Reflected)</span>
@@ -494,7 +491,6 @@ export const TalentNodeDisplay: React.FC<TalentNodeDisplayProps> = ({
         isVisible={isVisible}
         triggerRect={triggerRect}
         variant={isLegendary ? "legendary" : "default"}
-        {...tooltipHandlers}
       >
         <TooltipTitle>{talentTypeName}</TooltipTitle>
         <TooltipContent>

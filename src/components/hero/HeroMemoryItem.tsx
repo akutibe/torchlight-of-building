@@ -15,7 +15,7 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
   onCopy,
   onDelete,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   return (
     <div
@@ -52,11 +52,7 @@ export const HeroMemoryItem: React.FC<HeroMemoryItemProps> = ({
         </button>
       </div>
 
-      <Tooltip
-        isVisible={isVisible}
-        triggerRect={triggerRect}
-        {...tooltipHandlers}
-      >
+      <Tooltip isVisible={isVisible} triggerRect={triggerRect}>
         <TooltipTitle>{memory.memoryType}</TooltipTitle>
         {memory.affixes.length > 0 ? (
           <div>

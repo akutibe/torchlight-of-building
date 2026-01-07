@@ -19,7 +19,7 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
   onEdit,
   onDelete,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
 
   const isLegendary = item.rarity === "legendary";
 
@@ -80,7 +80,6 @@ export const InventoryItem: React.FC<InventoryItemProps> = ({
         isVisible={isVisible}
         triggerRect={triggerRect}
         variant={isLegendary ? "legendary" : "default"}
-        {...tooltipHandlers}
       >
         <GearTooltipContent item={item} />
       </Tooltip>

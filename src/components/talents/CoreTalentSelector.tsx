@@ -124,7 +124,7 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
   selected,
   onSelect,
 }) => {
-  const { isVisible, triggerRef, triggerRect, tooltipHandlers } = useTooltip();
+  const { isVisible, triggerRef, triggerRect } = useTooltip();
   const [hoveredTalent, setHoveredTalent] = React.useState<
     BaseCoreTalent | undefined
   >();
@@ -171,7 +171,6 @@ const CoreTalentSlot: React.FC<CoreTalentSlotProps> = ({
         isVisible={isVisible && hoveredTalent !== undefined}
         triggerRect={triggerRect}
         variant="legendary"
-        {...tooltipHandlers}
       >
         {hoveredTalent !== undefined && (
           <>
