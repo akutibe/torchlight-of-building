@@ -364,6 +364,7 @@ interface ModDefinitions {
   EnemyRes: { value: number; resType: ResType };
   // core talent specific
   ReapPurificationPct: { value: number };
+  SpellRipple: { chancePct: number; pctOfHitDmg: number };
   // hero-specific mods
   Blasphemer: object;
   // bing2

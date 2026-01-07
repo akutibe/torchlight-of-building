@@ -151,32 +151,32 @@ describe("offense golden tests", () => {
 
     const tolerance = 0.01; // 1% tolerance
 
-    // Spell DPS: ~624.17 million
+    // Spell DPS: ~936.26 million
     const spellDps = chainLightning.spellDpsSummary?.avgDps;
-    const expectedSpellDps = 624.17e6;
+    const expectedSpellDps = 936.26e6;
     expect(spellDps).toBeGreaterThan(expectedSpellDps * (1 - tolerance));
     expect(spellDps).toBeLessThan(expectedSpellDps * (1 + tolerance));
 
-    // Spell Burst DPS: ~3.29 billion (dedupe: Beacon only counts once even if on gear + talents)
+    // Spell Burst DPS: ~4.94 billion (dedupe: Beacon only counts once even if on gear + talents)
     const spellBurstDps = chainLightning.spellBurstDpsSummary?.avgDps;
-    const expectedSpellBurstDps = 3.29e9;
+    const expectedSpellBurstDps = 4.94e9;
     expect(spellBurstDps).toBeGreaterThan(
       expectedSpellBurstDps * (1 - tolerance),
     );
     expect(spellBurstDps).toBeLessThan(expectedSpellBurstDps * (1 + tolerance));
 
-    // Ingenuity Overload DPS: ~549 million (dedupe: Beacon only counts once)
+    // Ingenuity Overload DPS: ~823.52 million (dedupe: Beacon only counts once)
     const ingenuityDps =
       chainLightning.spellBurstDpsSummary?.ingenuityOverload?.avgDps;
-    const expectedIngenuityDps = 549e6;
+    const expectedIngenuityDps = 823.52e6;
     expect(ingenuityDps).toBeGreaterThan(
       expectedIngenuityDps * (1 - tolerance),
     );
     expect(ingenuityDps).toBeLessThan(expectedIngenuityDps * (1 + tolerance));
 
-    // Total DPS: ~4.47 billion (dedupe: Beacon only counts once)
+    // Total DPS: ~6.70 billion (dedupe: Beacon only counts once)
     const totalDps = chainLightning.totalDps;
-    const expectedTotalDps = 4.47e9;
+    const expectedTotalDps = 6.70e9;
     expect(totalDps).toBeGreaterThan(expectedTotalDps * (1 - tolerance));
     expect(totalDps).toBeLessThan(expectedTotalDps * (1 + tolerance));
 

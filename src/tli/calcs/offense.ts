@@ -1834,6 +1834,15 @@ const calcSpellHit = (
   return { ...baseHitOverview, castTime };
 };
 
+const calcSpellRippleMult = (mods: Mod[]): number => {
+  const spellRipple = findMod(mods, "SpellRipple");
+  const spellRippleMult =
+    spellRipple !== undefined
+      ? 1 + (spellRipple.pctOfHitDmg / 100) * (spellRipple.chancePct / 100)
+      : 1;
+  return spellRippleMult;
+};
+
 export interface OffenseSpellDpsSummary {
   critChance: number;
   critDmgMult: number;
@@ -1871,10 +1880,12 @@ const calcAvgSpellDps = (
   const critDmgMult = calculateCritDmg(mods, skill);
   const doubleDmgMult = calculateDoubleDmgMult(mods);
   const extraMult = calculateExtraOffenseMults(mods, config);
+  const spellRippleMult = calcSpellRippleMult(mods);
 
   const avgHitWithCrit =
     avg * critChance * critDmgMult + avg * (1 - critChance);
-  const avgDps = avgHitWithCrit * doubleDmgMult * cspd * extraMult;
+  const avgDps =
+    avgHitWithCrit * doubleDmgMult * cspd * extraMult * spellRippleMult;
   return {
     critChance,
     critDmgMult,
@@ -1915,9 +1926,15 @@ const calcAvgSpellBurstDps = (
   const spellBurstDmgMult = calculateAddn(
     filterMods(mods, "SpellBurstAdditionalDmgPct").map((m) => m.value),
   );
+  const spellRippleMult = calcSpellRippleMult(mods);
 
   if (derivedCtx.hero !== bing2) {
-    const avgDps = burstsPerSec * maxSpellBurst * avgHit * spellBurstDmgMult;
+    const avgDps =
+      burstsPerSec *
+      maxSpellBurst *
+      avgHit *
+      spellBurstDmgMult *
+      spellRippleMult;
     return { burstsPerSec, maxSpellBurst, avgDps };
   }
 
@@ -1949,10 +1966,18 @@ const calcAvgSpellBurstDps = (
 
   const normalBurstsPerSec = burstsPerSec - 0.5 * ingenuityOverloadPerSec;
   const normalAvgDps =
-    normalBurstsPerSec * maxSpellBurst * avgHit * spellBurstDmgMult;
+    normalBurstsPerSec *
+    maxSpellBurst *
+    avgHit *
+    spellBurstDmgMult *
+    spellRippleMult;
   // overload triggers +200% additional max spell burst
   const overloadAvgDps =
-    ingenuityOverloadPerSec * (3 * maxSpellBurst) * avgHit * spellBurstDmgMult;
+    ingenuityOverloadPerSec *
+    (3 * maxSpellBurst) *
+    avgHit *
+    spellBurstDmgMult *
+    spellRippleMult;
   return {
     burstsPerSec,
     maxSpellBurst,
