@@ -43,6 +43,18 @@ const extractPrismData = (html: string): Prism[] => {
       }
     }
 
+    // Extract added core talent affix if present
+    const addedPrefix = "Adds an additional effect to the Core Talent";
+    if (item.affix.startsWith(addedPrefix)) {
+      const delimiter = "Advanced Talent Panel:\n";
+      const delimiterIndex = item.affix.indexOf(delimiter);
+      if (delimiterIndex !== -1) {
+        item.addedCoreTalentAffix = item.affix.slice(
+          delimiterIndex + delimiter.length,
+        );
+      }
+    }
+
     items.push(item);
   });
 

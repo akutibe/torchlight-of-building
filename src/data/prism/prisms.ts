@@ -6,72 +6,96 @@ export const Prisms: readonly Prism[] = [
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n-25% Elemental Resistance and Erosion Resistance for enemies when inflicting Ignite",
+    addedCoreTalentAffix:
+      "-25% Elemental Resistance and Erosion Resistance for enemies when inflicting Ignite",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+1% additional Damage per +10% Movement Speed, up to +10%\n+8% additional damage against Slow enemies\n+8% additional damage against Frostbitten enemies",
+    addedCoreTalentAffix:
+      "+1% additional Damage per +10% Movement Speed, up to +10%\n+8% additional damage against Slow enemies\n+8% additional damage against Frostbitten enemies",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+12% additional Attack Damage and Ailment Damage dealt by attacks while standing still. +5% additional damage taken\nAfter standing still for 0.5s, this effect is doubled",
+    addedCoreTalentAffix:
+      "+12% additional Attack Damage and Ailment Damage dealt by attacks while standing still. +5% additional damage taken\nAfter standing still for 0.5s, this effect is doubled",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+20% additional Attack Damage and Ailment Damage dealt by attacks when there are Elites within 10m nearby\n+50% Skill Area when there are no Elites within 10m nearby",
+    addedCoreTalentAffix:
+      "+20% additional Attack Damage and Ailment Damage dealt by attacks when there are Elites within 10m nearby\n+50% Skill Area when there are no Elites within 10m nearby",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+20% additional Attack Damage when holding a One-Handed Weapon\n+20% additional Base Damage for Two-Handed Weapons",
+    addedCoreTalentAffix:
+      "+20% additional Attack Damage when holding a One-Handed Weapon\n+20% additional Base Damage for Two-Handed Weapons",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n+8% Movement Speed and +4% additional damage for 8 s on defeat. Stacks up to 4 time(s)",
+    addedCoreTalentAffix:
+      "+8% Movement Speed and +4% additional damage for 8 s on defeat. Stacks up to 4 time(s)",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\n100% chance to gain 3 charge stack(s) when casting a Terra Skill",
+    addedCoreTalentAffix:
+      "100% chance to gain 3 charge stack(s) when casting a Terra Skill",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nEliminates enemies with less than 20% Life and at least 30 stack(s) of Wilt when dealing damage",
+    addedCoreTalentAffix:
+      "Eliminates enemies with less than 20% Life and at least 30 stack(s) of Wilt when dealing damage",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nFor every stack of Max Spell Burst, +6% additional Spell Damage, up to +24% additional Spell Damage",
+    addedCoreTalentAffix:
+      "For every stack of Max Spell Burst, +6% additional Spell Damage, up to +24% additional Spell Damage",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nInflicts Blind on enemies within 15 m when casting Dazzling Bloom\n+20% additional damage for Spirit Magi against Blinded enemies",
+    addedCoreTalentAffix:
+      "Inflicts Blind on enemies within 15 m when casting Dazzling Bloom\n+20% additional damage for Spirit Magi against Blinded enemies",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nInflicts 1 stack(s) of Numbed when dealing damage to Frozen enemies. Interval: 0.5s\nInflicts 20 Frostbite Rating when dealing damage to enemies with more than 3 stack(s) of Numbed. Interval: 0.5s",
+    addedCoreTalentAffix:
+      "Inflicts 1 stack(s) of Numbed when dealing damage to Frozen enemies. Interval: 0.5s\nInflicts 20 Frostbite Rating when dealing damage to enemies with more than 3 stack(s) of Numbed. Interval: 0.5s",
   },
   {
     type: "Base Affix",
     rarity: "",
     affix:
       "Adds an additional effect to the Core Talent on the God of Might/Goddess of Hunting/Goddess of Knowledge/God of War/Goddess of Deception/God of Machines Advanced Talent Panel:\nWhen channeling Harmonious Field, triggers the Sentry Main Skill if there are no Sentries within 10m. Interval: 1s\n+50% Empower Skill Effect for Harmonious Field",
+    addedCoreTalentAffix:
+      "When channeling Harmonious Field, triggers the Sentry Main Skill if there are no Sentries within 10m. Interval: 1s\n+50% Empower Skill Effect for Harmonious Field",
   },
   {
     type: "Base Affix",
