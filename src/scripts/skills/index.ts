@@ -10,6 +10,7 @@ import {
   iceBondParser,
   manaBoilParser,
   mindControlParser,
+  secretOriginUnleashParser,
   timidParser,
 } from "./active_parsers";
 import {
@@ -20,9 +21,12 @@ import {
   frigidDomainParser,
   preciseCrueltyParser,
   preciseDeepPainParser,
+  preciseElectricConversionParser,
   preciseErosionAmplificationParser,
   preciseFrigidDomainParser,
+  preciseSpellAmplificationParser,
   spellAmplificationParser,
+  summonFireMagusParser,
   summonThunderMagusParser,
 } from "./passive_parsers";
 import type { SkillCategory, SkillParserEntry } from "./types";
@@ -145,6 +149,26 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Summon Thunder Magus",
     categories: ["passive"],
     parser: summonThunderMagusParser,
+  },
+  {
+    skillName: "Secret Origin Unleash",
+    categories: ["active"],
+    parser: secretOriginUnleashParser,
+  },
+  {
+    skillName: "Precise: Electric Conversion",
+    categories: ["passive"],
+    parser: preciseElectricConversionParser,
+  },
+  {
+    skillName: "Precise: Spell Amplification",
+    categories: ["passive"],
+    parser: preciseSpellAmplificationParser,
+  },
+  {
+    skillName: "Summon Fire Magus",
+    categories: ["passive"],
+    parser: summonFireMagusParser,
   },
 ];
 

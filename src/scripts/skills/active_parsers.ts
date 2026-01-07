@@ -501,3 +501,37 @@ export const timidParser: SupportLevelParser = (input) => {
 
   return { dmgPct };
 };
+
+export const secretOriginUnleashParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const spellDmgPct: Record<number, number> = {};
+
+  // Extract constant cast speed per Focus Blessing from level 1
+  const level1Text = descriptCol.rows[1];
+  if (level1Text === undefined) {
+    throw new Error(`${skillName}: no descript found for level 1`);
+  }
+  const cspdMatch = template("{value:+int}% cast speed for every stack").match(
+    level1Text,
+    skillName,
+  );
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+    // Match "5.5% additional Spell Damage" or "+6% additional Spell Damage"
+    const match = template("{value:dec%} additional spell damage").match(
+      text,
+      skillName,
+    );
+    spellDmgPct[level] = match.value;
+  }
+
+  validateAllLevels(spellDmgPct, skillName);
+
+  return {
+    spellDmgPct,
+    cspdPctPerFocusBlessing: createConstantLevels(cspdMatch.value),
+  };
+};

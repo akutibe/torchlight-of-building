@@ -1638,6 +1638,17 @@ export const ActiveSkills = [
       "Casts the skill and gains Euphoria:\n+3% Cast Speed for every stack of Focus Blessing you have while the skill lasts. Stacks up to 8 time(s)\n+15% additional Spell Damage while the skill lasts\nLasts 6s.",
     ],
     kinds: [],
+    levelValues: {
+      spellDmgPct: [
+        5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13,
+        13.5, 14, 14.5, 15, 15.5, 15.8, 16.1, 16.4, 16.7, 17, 17.3, 17.6, 17.9,
+        18.2, 18.5, 18.8, 19.1, 19.4, 19.7, 20, 20.3, 20.6, 20.9, 21.2,
+      ],
+      cspdPctPerFocusBlessing: [
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+      ],
+    },
   },
   {
     type: "Active",

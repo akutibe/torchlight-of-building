@@ -272,3 +272,68 @@ export const summonThunderMagusParser: SupportLevelParser = (input) => {
     dmgPct,
   };
 };
+
+export const summonFireMagusParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const critRating: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    // Match "+58 Attack and Spell Critical Strike Rating"
+    const match = template(
+      "{value:+int} attack and spell critical strike rating",
+    ).match(text, skillName);
+    critRating[level] = match.value;
+  }
+
+  validateAllLevels(critRating, skillName);
+
+  return { critRating };
+};
+
+export const preciseElectricConversionParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const lightningDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    // Match "+21% additional Lightning Damage" or "50.5% additional Lightning Damage"
+    const dmgMatch = template("{value:dec%} additional lightning damage").match(
+      text,
+      skillName,
+    );
+    lightningDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(lightningDmgPct, skillName);
+
+  return { lightningDmgPct };
+};
+
+export const preciseSpellAmplificationParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const descriptCol = findColumn(progressionTable, "descript", skillName);
+  const spellDmgPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
+    const level = Number(levelStr);
+
+    // Match "+21% additional Spell Damage" or "50.5% additional Spell Damage"
+    const dmgMatch = template("{value:dec%} additional spell damage").match(
+      text,
+      skillName,
+    );
+    spellDmgPct[level] = dmgMatch.value;
+  }
+
+  validateAllLevels(spellDmgPct, skillName);
+
+  return { spellDmgPct };
+};

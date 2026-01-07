@@ -244,4 +244,20 @@ export const activeSkillModFactories: Partial<
     ],
     mods: [{ type: "Jump", value: v(vals.jump, l) }],
   }),
+  "Secret Origin Unleash": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.spellDmgPct, l),
+        addn: true,
+        dmgModType: "spell",
+      },
+      {
+        type: "CspdPct",
+        value: v(vals.cspdPctPerFocusBlessing, l),
+        addn: true,
+        per: { stackable: "focus_blessing", limit: 8 },
+      },
+    ],
+  }),
 };

@@ -148,4 +148,38 @@ export const passiveSkillModFactories: Partial<
       },
     ],
   }),
+  "Precise: Electric Conversion": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.lightningDmgPct, l),
+        addn: true,
+        dmgModType: "lightning",
+      },
+    ],
+  }),
+  "Precise: Spell Amplification": (l, vals) => ({
+    buffMods: [
+      {
+        type: "DmgPct",
+        value: v(vals.spellDmgPct, l),
+        addn: true,
+        dmgModType: "spell",
+      },
+    ],
+  }),
+  "Summon Fire Magus": (l, vals) => ({
+    buffMods: [
+      {
+        type: "FlatCritRating",
+        value: v(vals.critRating, l),
+        modType: "attack",
+      },
+      {
+        type: "FlatCritRating",
+        value: v(vals.critRating, l),
+        modType: "spell",
+      },
+    ],
+  }),
 };

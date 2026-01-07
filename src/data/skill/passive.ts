@@ -293,6 +293,13 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n21% additional Lightning Damage.",
       "Activates the Aura, you and allies within a certain area gain the following buff:\n+40% additional Lightning Damage",
     ],
+    levelValues: {
+      lightningDmgPct: [
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
+        39, 40, 41, 41.5, 42, 42.5, 43, 43.5, 44, 44.5, 45, 45.5, 46, 46.5, 47,
+        47.5, 48, 48.5, 49, 49.5, 50, 50.5,
+      ],
+    },
   },
   {
     type: "Passive",
@@ -428,6 +435,13 @@ export const PassiveSkills = [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n21% additional damage for Spell Skills.",
       "Activates the Aura, you and allies within a certain area gain the following buff:\n+40% additional Spell Damage",
     ],
+    levelValues: {
+      spellDmgPct: [
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
+        39, 40, 41, 41.5, 42, 42.5, 43, 43.5, 44, 44.5, 45, 45.5, 46, 46.5, 47,
+        47.5, 48, 48.5, 49, 49.5, 50, 50.5,
+      ],
+    },
   },
   {
     type: "Passive",
@@ -543,6 +557,13 @@ export const PassiveSkills = [
       "Fire Magus:\nBase Skill: Blazing Dance.\nEmpower Skill: Blazing Spin.\nEnhanced Skill: Blazing Incineration.\nUltimate: Rising Molten.",
     ],
     mainStats: ["str", "int"],
+    levelValues: {
+      critRating: [
+        58, 61, 64, 67, 70, 73, 76, 79, 82, 85, 88, 91, 94, 97, 100, 103, 106,
+        109, 112, 115, 118, 121, 124, 127, 130, 133, 136, 139, 142, 145, 148,
+        151, 154, 157, 160, 163, 166, 169, 172, 175,
+      ],
+    },
   },
   {
     type: "Passive",
