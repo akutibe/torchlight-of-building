@@ -374,6 +374,8 @@ interface ModDefinitions {
   InflictFrail: object;
   NumbedEffPct: { value: number };
   NumbedChancePct: { value: number };
+  InflictTrauma: object;
+  TraumaDmgPct: { value: number };
   // non-ailment debuffs
   InflictsMark: object;
   MarkEffPct: { value: number };

@@ -366,6 +366,18 @@ export const allParsers = [
     value: c.value,
     penType: c.penType,
   })),
+  t("{value:+dec%} elemental and erosion resistance penetration for minions").output("MinionResPenPct", (c) => ({
+    value: c.value,
+    penType: "all" as const,
+  })),
+  t("{value:+dec%} armor dmg mitigation penetration for minions").output("MinionArmorPenPct", (c) => ({
+    value: c.value,
+  })),
+  t("minions deal {value:dec%} additional damage to life").output("MinionDmgPct", (c) => ({
+    value: c.value,
+    addn: true,
+  })),
+  t("{value:+dec%} chance for minions to inflict trauma").output("InflictTrauma", () => ({})),
   t("{value:+dec%} [additional] attack and cast speed when at full mana").outputMany([
     spec("AspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: HAS_FULL_MANA })),
     spec("CspdPct", (c) => ({ value: c.value, addn: c.additional !== undefined, cond: HAS_FULL_MANA })),
@@ -764,6 +776,9 @@ export const allParsers = [
   t("{value:+dec%} chance to inflict frostbite").output("InflictFrostbitePct", (c) => ({ value: c.value })),
   t("{value:+dec%} freeze duration").output("FreezeDurationPct", (c) => ({ value: c.value })),
   t("inflicts frail on spell hit").output("InflictFrail", () => ({})),
+  // Trauma
+  t("{value:+dec%} chance to inflict trauma").output("InflictTrauma", () => ({})),
+  t("{value:+dec%} trauma damage").output("TraumaDmgPct", (c) => ({ value: c.value })),
   // Infiltrations
   t("inflicts cold infiltration when dealing damage to frozen enemies").output("InflictsInfiltration", () => ({
     infiltrationType: "cold" as const,

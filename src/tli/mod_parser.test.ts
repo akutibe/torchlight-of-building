@@ -2870,6 +2870,68 @@ test("parse chance to mark on critical strike", () => {
   ]);
 });
 
+test("parse chance to inflict trauma", () => {
+  const result = parseMod("+6% chance to inflict Trauma");
+  expect(result).toEqual([
+    {
+      type: "InflictTrauma",
+    },
+  ]);
+});
+
+test("parse chance for minions to inflict trauma", () => {
+  const result = parseMod("+10% chance for Minions to inflict Trauma");
+  expect(result).toEqual([
+    {
+      type: "InflictTrauma",
+    },
+  ]);
+});
+
+test("parse trauma damage", () => {
+  const result = parseMod("+8% Trauma Damage");
+  expect(result).toEqual([
+    {
+      type: "TraumaDmgPct",
+      value: 8,
+    },
+  ]);
+});
+
+test("parse minions deal additional damage to life", () => {
+  const result = parseMod("Minions deal 8% additional damage to Life");
+  expect(result).toEqual([
+    {
+      type: "MinionDmgPct",
+      value: 8,
+      addn: true,
+    },
+  ]);
+});
+
+test("parse elemental and erosion resistance penetration for minions", () => {
+  const result = parseMod(
+    "+8% Elemental and Erosion Resistance Penetration for Minions",
+  );
+  expect(result).toEqual([
+    {
+      type: "MinionResPenPct",
+      value: 8,
+      penType: "all",
+    },
+  ]);
+});
+
+test("parse armor dmg mitigation penetration for minions", () => {
+  const result = parseMod("+7% Armor DMG Mitigation Penetration for Minions");
+  expect(result).toEqual([
+    {
+      type: "MinionArmorPenPct",
+      value: 7,
+    },
+  ]);
+});
+
 test("parse additional damage after using mobility skills", () => {
   const result = parseMod(
     "+10% additional damage for 4s after using Mobility Skills",
