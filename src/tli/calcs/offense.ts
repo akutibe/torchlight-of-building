@@ -172,6 +172,9 @@ export interface Defenses {
   lightningRes: Resistance;
   fireRes: Resistance;
   erosionRes: Resistance;
+  attackBlockPct: number;
+  spellBlockPct: number;
+  blockRatioPct: number;
 }
 
 // === Blessing Calculations ===
@@ -1606,11 +1609,20 @@ export const calculateDefenses = (
     return { max, potential, actual };
   };
 
+  const attackBlockPct = sumByValue(filterMods(mods, "AttackBlockChancePct"));
+  const spellBlockPct = sumByValue(filterMods(mods, "SpellBlockChancePct"));
+  const blockRatioPct = Math.min(
+    30 + sumByValue(filterMods(mods, "BlockRatioPct")),
+  );
+
   return {
     coldRes: calcRes(["cold", "elemental"]),
     lightningRes: calcRes(["lightning", "elemental"]),
     fireRes: calcRes(["fire", "elemental"]),
     erosionRes: calcRes(["erosion"]),
+    attackBlockPct,
+    spellBlockPct,
+    blockRatioPct,
   };
 };
 
