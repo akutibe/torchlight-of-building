@@ -2181,3 +2181,38 @@ test("parse generates fortitude when using melee skill", () => {
   );
   expect(result).toEqual([{ type: "GeneratesFortitude" }]);
 });
+
+test("parse combined additional damage and minion damage", () => {
+  const result = parseMod(
+    "+7% additional damage; +7% additional Minion Damage",
+  );
+  expect(result).toEqual([
+    { type: "DmgPct", value: 7, dmgModType: "global", addn: true },
+    { type: "MinionDmgPct", value: 7, addn: true },
+  ]);
+});
+
+test("parse attack skills double damage chance", () => {
+  const result = parseMod("Attack Skills: a +4% chance to deal Double Damage");
+  expect(result).toEqual([
+    { type: "DoubleDmgChancePct", value: 4, doubleDmgModType: "attack" },
+  ]);
+});
+
+test("parse attack damage when dual wielding", () => {
+  const result = parseMod("+27% Attack Damage when Dual Wielding");
+  expect(result).toEqual([
+    {
+      type: "DmgPct",
+      value: 27,
+      dmgModType: "attack",
+      addn: false,
+      cond: "is_dual_wielding",
+    },
+  ]);
+});
+
+test("parse attack aggression on defeat", () => {
+  const result = parseMod("25% chance to gain Attack Aggression on defeat");
+  expect(result).toEqual([{ type: "GeneratesAttackAggression" }]);
+});

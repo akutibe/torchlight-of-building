@@ -7,7 +7,14 @@ import type {
   DmgModType,
 } from "../constants";
 import type { Configuration, DmgRange, Gear } from "../core";
-import type { AspdModType, DmgChunkType, Mod, ModT, ResType } from "../mod";
+import type {
+  AspdModType,
+  DmgChunkType,
+  DoubleDmgModType,
+  Mod,
+  ModT,
+  ResType,
+} from "../mod";
 import { getGearAffixes } from "./affix-collectors";
 import {
   calcEffMult,
@@ -740,8 +747,18 @@ export const calculateCritDmg = (
   return (1.5 + inc) * addn;
 };
 
-export const calculateDoubleDmgMult = (mods: Mod[]): number => {
-  const doubleDmgMods = filterMods(mods, "DoubleDmgChancePct");
+export const calculateDoubleDmgMult = (
+  mods: Mod[],
+  skill: BaseActiveSkill,
+): number => {
+  const modTypes: DoubleDmgModType[] = [];
+  if (skill.tags.includes("Attack")) {
+    modTypes.push("attack");
+  }
+  const doubleDmgMods = filterMods(mods, "DoubleDmgChancePct").filter(
+    (m) =>
+      m.doubleDmgModType === undefined || modTypes.includes(m.doubleDmgModType),
+  );
   // capped at 100% chance to deal double damage
   const inc = Math.min(1, calculateInc(doubleDmgMods.map((v) => v.value)));
   return 1 + inc;

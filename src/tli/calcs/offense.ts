@@ -2024,7 +2024,7 @@ const calcAvgAttackDps = (
       (mainhandAtk.avgHitWithCrit + offhandAtk.avgHitWithCrit) / fullInterval;
   }
 
-  const doubleDmgMult = calculateDoubleDmgMult(mods);
+  const doubleDmgMult = calculateDoubleDmgMult(mods, skill);
   const extraMult = calculateExtraOffenseMults(mods, config);
 
   const avgDps = avgDpsWithoutExtras * doubleDmgMult * extraMult;
@@ -2134,7 +2134,7 @@ const calcAvgSpellDps = (
   const cspd = (1 / castTime) * cspdMult;
   const critChance = calculateCritChance(mods, skill);
   const critDmgMult = calculateCritDmg(mods, skill);
-  const doubleDmgMult = calculateDoubleDmgMult(mods);
+  const doubleDmgMult = calculateDoubleDmgMult(mods, skill);
   const extraMult = calculateExtraOffenseMults(mods, config);
   const spellRippleMult = calcSpellRippleMult(mods);
 

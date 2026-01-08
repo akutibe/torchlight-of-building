@@ -58,6 +58,10 @@ export const AspdModTypes = ["melee"] as const;
 
 export type AspdModType = (typeof AspdModTypes)[number];
 
+export const DoubleDmgModTypes = ["attack"] as const;
+
+export type DoubleDmgModType = (typeof DoubleDmgModTypes)[number];
+
 export const SkillLevelTypes = [
   "main",
   "support",
@@ -245,7 +249,7 @@ interface ModDefinitions {
   // end minions
   ProjectileSpeedPct: { value: number; addn?: boolean };
   ProjectileSizePct: { value: number };
-  DoubleDmgChancePct: { value: number };
+  DoubleDmgChancePct: { value: number; doubleDmgModType?: DoubleDmgModType };
   Stat: { value: number; statModType: StatModType };
   StatPct: { value: number; statModType: StatModType };
   HaveFervor: object;

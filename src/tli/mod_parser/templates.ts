@@ -33,6 +33,10 @@ const NUM_SPELL_SKILLS_USED_RECENTLY = "num_spell_skills_used_recently" as const
 const HAS_USED_MOBILITY_SKILL_RECENTLY = "has_used_mobility_skill_recently" as const;
 
 export const allParsers = [
+  t("{dmgValue:+dec%} additional damage; {minionValue:+dec%} additional minion damage").outputMany([
+    spec("DmgPct", (c) => ({ value: c.dmgValue, dmgModType: GLOBAL, addn: true })),
+    spec("MinionDmgPct", (c) => ({ value: c.minionValue, addn: true })),
+  ]),
   t("{aspd:+dec%} gear attack speed. {dmg:+dec%} additional attack damage").outputMany([
     spec("GearAspdPct", (c) => ({ value: c.aspd })),
     spec("DmgPct", (c) => ({ value: c.dmg, addn: true, dmgModType: ATTACK })),
@@ -152,6 +156,12 @@ export const allParsers = [
     dmgModType: GLOBAL,
     addn: false,
     cond: HAS_BLOCKED_RECENTLY,
+  })),
+  t("{value:+dec%} attack damage when dual wielding").output("DmgPct", (c) => ({
+    value: c.value,
+    dmgModType: ATTACK,
+    addn: false,
+    cond: "is_dual_wielding" as const,
   })),
   t("{value:+dec%} additional damage taken by enemies frozen by you recently").output("DmgPct", (c) => ({
     value: c.value,
@@ -461,6 +471,10 @@ export const allParsers = [
     penType: c.penType,
   })),
   t("{value:+dec%} armor dmg mitigation penetration").output("ArmorPenPct", (c) => ({ value: c.value })),
+  t("attack skills: a {value:+dec%} chance to deal double damage").output("DoubleDmgChancePct", (c) => ({
+    value: c.value,
+    doubleDmgModType: ATTACK,
+  })),
   t("{value:+dec%} chance to deal double damage").output("DoubleDmgChancePct", (c) => ({ value: c.value })),
   t("adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks").output("FlatDmgToAtks", (c) => ({
     value: { min: c.min, max: c.max },
@@ -645,6 +659,7 @@ export const allParsers = [
     value: c.value,
   })),
   t("{value:dec%} chance to gain spell aggression on defeat").output("GeneratesSpellAggression", () => ({})),
+  t("{value:dec%} chance to gain attack aggression on defeat").output("GeneratesAttackAggression", () => ({})),
   t("gains spell aggression when casting a spell skill").output("GeneratesSpellAggression", () => ({})),
   t("{value:+dec%} spell aggression effect").output("SpellAggressionEffPct", (c) => ({ value: c.value })),
   t("{value:dec%} chance to gain a barrier for every {dist:int} m you move").output("GeneratesBarrier", () => ({})),
