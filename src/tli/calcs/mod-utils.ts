@@ -176,3 +176,16 @@ export const normalizeStackable = <T extends Mod>(
 export const filterOutPerMods = (mods: Mod[]): Mod[] => {
   return mods.filter((m) => !("per" in m && m.per !== undefined));
 };
+
+// Normalize a single stackable and push to target array
+// Skips if value is undefined
+export const pushNormalizedStackable = (
+  targetMods: Mod[],
+  prenormMods: Mod[],
+  stackable: Stackable,
+  value: number | undefined,
+): void => {
+  if (value !== undefined) {
+    targetMods.push(...normalizeStackables(prenormMods, stackable, value));
+  }
+};

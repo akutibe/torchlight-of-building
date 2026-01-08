@@ -29,7 +29,14 @@ import type {
   SkillSlot,
 } from "../core";
 import { getHeroTraitMods } from "../hero/hero_trait_mods";
-import type { DmgChunkType, Mod, ModT, ResType, StatType } from "../mod";
+import type {
+  DmgChunkType,
+  Mod,
+  ModT,
+  ResType,
+  Stackable,
+  StatType,
+} from "../mod";
 import { getActiveSkillMods } from "../skills/active_mods";
 import { getPassiveSkillMods } from "../skills/passive_mods";
 import { buildSupportSkillAffixes } from "../storage/load-save";
@@ -64,6 +71,7 @@ import {
   findMod,
   modExists,
   normalizeStackables,
+  pushNormalizedStackable,
   sumByValue,
 } from "./mod-utils";
 import type { OffenseSkillName } from "./skill_confs";
@@ -1113,21 +1121,14 @@ const resolveBuffSkillEffMults = (
     config,
     derivedCtx,
   );
-  const skillUse = 3;
-  mods.push(...normalizeStackables(prenormMods, "skill_use", skillUse));
 
-  const skillChargesOnUse = 2;
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "skill_charges_on_use",
-      skillChargesOnUse,
-    ),
-  );
-
-  const crueltyBuffStacks = config.crueltyBuffStacks ?? 40;
-  mods.push(
-    ...normalizeStackables(prenormMods, "cruelty_buff", crueltyBuffStacks),
+  pushNormalizedStackable(mods, prenormMods, "skill_use", 3);
+  pushNormalizedStackable(mods, prenormMods, "skill_charges_on_use", 2);
+  pushNormalizedStackable(
+    mods,
+    prenormMods,
+    "cruelty_buff",
+    config.crueltyBuffStacks ?? 40,
   );
 
   const skillEffMult = calcEffMult(mods, "SkillEffPct");
@@ -1190,9 +1191,7 @@ const calculateAddedSkillLevels = (
   );
 
   const sealedLifePct = config.sealedLifePct ?? 0;
-  mods.push(
-    ...normalizeStackables(prenormMods, "sealed_life_pct", sealedLifePct),
-  );
+  pushNormalizedStackable(mods, prenormMods, "sealed_life_pct", sealedLifePct);
 
   let addedSkillLevels = 0;
   for (const mod of filterMods(mods, "SkillLevel")) {
@@ -1523,121 +1522,77 @@ const resolveModsForOffenseSkill = (
   );
   const mods = [...baseMods, ...calculateSkillLevelDmgMods(skillLevel)];
 
-  mods.push(...normalizeStackables(prenormMods, "level", config.level));
+  // Local helper - captures mods and prenormMods in closure
+  const normalize = (stackable: Stackable, value: number | undefined): void => {
+    if (value !== undefined) {
+      mods.push(...normalizeStackables(prenormMods, stackable, value));
+    }
+  };
 
   const totalMainStats = calculateTotalMainStats(skill, stats);
-  mods.push(...normalizeStackables(prenormMods, "main_stat", totalMainStats));
-
   const highestStat = Math.max(stats.dex, stats.int, stats.str);
-  mods.push(...normalizeStackables(prenormMods, "highest_stat", highestStat));
-
   const sumStats = stats.dex + stats.int + stats.str;
-  mods.push(...normalizeStackables(prenormMods, "stat", sumStats));
+
+  normalize("level", config.level);
+  normalize("main_stat", totalMainStats);
+  normalize("highest_stat", highestStat);
+  normalize("stat", sumStats);
 
   pushWhimsy(mods, config);
-  // must happen before movement speed
-  pushAttackAggression(mods, config);
-  // must happen before spell burst charge speed calculation (adds CspdPct mods)
-  pushSpellAggression(mods, config);
+  pushAttackAggression(mods, config); // must happen before movement speed
+  pushSpellAggression(mods, config); // must happen before spell burst charge speed calculation
   pushMark(mods, config);
 
-  // must happen before max_spell_burst normalization
-  // must happen after attack aggression
+  // must happen before max_spell_burst normalization, after attack aggression
   const movementSpeedBonusPct =
     (calcEffMult(mods, "MovementSpeedPct") - 1) * 100;
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "movement_speed_bonus_pct",
-      movementSpeedBonusPct,
-    ),
-  );
+  normalize("movement_speed_bonus_pct", movementSpeedBonusPct);
 
   pushInfiltrations(mods, config);
   pushNumbed(mods, config);
   pushSquidnova(mods, config);
 
   const jumps = sumByValue(filterMods(mods, "Jump"));
-  mods.push(...normalizeStackables(prenormMods, "jump", jumps));
+  normalize("jump", jumps);
 
   pushChainLightning(mods, config, jumps);
   pushFrail(mods, config);
 
   // must happen after movement_speed_bonus_pct normalization
   const maxSpellBurst = sumByValue(filterMods(mods, "MaxSpellBurst"));
-  mods.push(
-    ...normalizeStackables(prenormMods, "max_spell_burst", maxSpellBurst),
-  );
-
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "additional_max_channel_stack",
-      additionalMaxChanneledStacks,
-    ),
-  );
+  normalize("max_spell_burst", maxSpellBurst);
+  normalize("additional_max_channel_stack", additionalMaxChanneledStacks);
 
   const maxChannelStacks =
     (findMod(mods, "InitialMaxChannel")?.value ?? 0) +
     additionalMaxChanneledStacks;
   const mcMaxLinks = maxChannelStacks;
   const mcLinks = config.numMindControlLinksUsed ?? mcMaxLinks;
-  mods.push(...normalizeStackables(prenormMods, "mind_control_link", mcLinks));
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "unused_mind_control_link",
-      mcMaxLinks - mcLinks,
-    ),
-  );
+  normalize("mind_control_link", mcLinks);
+  normalize("unused_mind_control_link", mcMaxLinks - mcLinks);
 
   mods.push(...calculateTorment(config));
   mods.push(...calculateAffliction(mods, config));
 
   const repentanceStacks = 4 + sumByValue(filterMods(mods, "MaxRepentance"));
-  mods.push(
-    ...normalizeStackables(prenormMods, "repentance", repentanceStacks),
-  );
-
-  mods.push(
-    ...normalizeStackables(prenormMods, "focus_blessing", focusBlessings),
-  );
-
-  mods.push(
-    ...normalizeStackables(prenormMods, "agility_blessing", agilityBlessings),
-  );
-
-  mods.push(
-    ...normalizeStackables(prenormMods, "tenacity_blessing", tenacityBlessings),
-  );
-
-  mods.push(
-    ...normalizeStackables(prenormMods, "desecration", desecration ?? 0),
-  );
-
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "has_hit_enemy_with_elemental_dmg_recently",
-      config.hasHitEnemyWithElementalDmgRecently,
-    ),
-  );
-
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "num_spell_skills_used_recently",
-      config.numSpellSkillsUsedRecently,
-    ),
-  );
-
   const willpowerStacks = calculateWillpower(prenormMods);
-  mods.push(...normalizeStackables(prenormMods, "willpower", willpowerStacks));
-
   const frostbitten = calculateEnemyFrostbitten(config);
-  mods.push(
-    ...normalizeStackables(prenormMods, "frostbite_rating", frostbitten.points),
+
+  normalize("repentance", repentanceStacks);
+  normalize("focus_blessing", focusBlessings);
+  normalize("agility_blessing", agilityBlessings);
+  normalize("tenacity_blessing", tenacityBlessings);
+  normalize("desecration", desecration ?? 0);
+  normalize(
+    "has_hit_enemy_with_elemental_dmg_recently",
+    config.hasHitEnemyWithElementalDmgRecently,
   );
+  normalize(
+    "num_spell_skills_used_recently",
+    config.numSpellSkillsUsedRecently,
+  );
+  normalize("willpower", willpowerStacks);
+  normalize("frostbite_rating", frostbitten.points);
 
   // Note: BaseProjectileQuant is NOT counted toward "projectile" stackable
   const maxProjectiles = findMod(mods, "MaxProjectile")?.value;
@@ -1647,13 +1602,11 @@ const resolveModsForOffenseSkill = (
       maxProjectiles ?? Infinity,
     ),
   );
-  mods.push(...normalizeStackables(prenormMods, "projectile", projectiles));
+  normalize("projectile", projectiles);
 
   if (resourcePool.hasFervor) {
     mods.push(calculateFervorCritRateMod(mods, resourcePool));
-    mods.push(
-      ...normalizeStackables(prenormMods, "fervor", resourcePool.fervorPts),
-    );
+    normalize("fervor", resourcePool.fervorPts);
   }
 
   if (skill.tags.includes("Shadow Strike")) {
@@ -1669,48 +1622,25 @@ const resolveModsForOffenseSkill = (
     }
   }
 
-  mods.push(...normalizeStackables(prenormMods, "max_mana", maxMana));
-  if (mercuryPts !== undefined) {
-    mods.push(...normalizeStackables(prenormMods, "mercury_pt", mercuryPts));
-  }
-
-  const manaConsumedRecently = config.manaConsumedRecently ?? 0;
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "mana_consumed_recently",
-      manaConsumedRecently,
-    ),
-  );
-
   const unsealedManaPct = 100 - (config.sealedManaPct ?? 0);
-  mods.push(
-    ...normalizeStackables(prenormMods, "unsealed_mana_pct", unsealedManaPct),
-  );
-
   const unsealedLifePct = 100 - (config.sealedLifePct ?? 0);
-  mods.push(
-    ...normalizeStackables(prenormMods, "unsealed_life_pct", unsealedLifePct),
-  );
 
-  const numEnemiesAffectedByWarcry = config.numEnemiesAffectedByWarcry;
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "num_enemies_affected_by_warcry",
-      numEnemiesAffectedByWarcry,
-    ),
+  normalize("max_mana", maxMana);
+  normalize("mercury_pt", mercuryPts);
+  normalize("mana_consumed_recently", config.manaConsumedRecently ?? 0);
+  normalize("unsealed_mana_pct", unsealedManaPct);
+  normalize("unsealed_life_pct", unsealedLifePct);
+  normalize(
+    "num_enemies_affected_by_warcry",
+    config.numEnemiesAffectedByWarcry,
   );
 
   // must happen after spell aggression and any other normalizations that can
   // affect cast speed
   const spellBurstChargeSpeedBonusPct = calcSpellBurstChargeSpeedBonusPct(mods);
-  mods.push(
-    ...normalizeStackables(
-      prenormMods,
-      "spell_burst_charge_speed_bonus_pct",
-      spellBurstChargeSpeedBonusPct,
-    ),
+  normalize(
+    "spell_burst_charge_speed_bonus_pct",
+    spellBurstChargeSpeedBonusPct,
   );
 
   return {
@@ -1738,13 +1668,13 @@ const calculateResourcePool = (
     false, // withCondThreshold
   );
 
-  mods.push(...normalizeStackables(prenormMods, "level", config.level));
+  pushNormalizedStackable(mods, prenormMods, "level", config.level);
 
   const stats = calculateStats(mods);
 
-  mods.push(...normalizeStackables(prenormMods, "str", stats.str));
-  mods.push(...normalizeStackables(prenormMods, "dex", stats.dex));
-  mods.push(...normalizeStackables(prenormMods, "int", stats.int));
+  pushNormalizedStackable(mods, prenormMods, "str", stats.str);
+  pushNormalizedStackable(mods, prenormMods, "dex", stats.dex);
+  pushNormalizedStackable(mods, prenormMods, "int", stats.int);
 
   const maxLifeFromMods = sumByValue(filterMods(mods, "MaxLife"));
   const maxLifeMult = calcEffMult(mods, "MaxLifePct");
@@ -1754,12 +1684,12 @@ const calculateResourcePool = (
   const maxManaMult = calcEffMult(mods, "MaxManaPct");
   const maxMana = (40 + config.level * 5 + maxManaFromMods) * maxManaMult;
 
-  mods.push(...normalizeStackables(prenormMods, "max_mana", maxMana));
+  // max_mana must be normalized before calculating mercuryPts
+  // (for mods with per: { stackable: "max_mana" })
+  pushNormalizedStackable(mods, prenormMods, "max_mana", maxMana);
 
   const mercuryPts = calculateMercuryPts(mods, loadout);
-  if (mercuryPts !== undefined) {
-    mods.push(...normalizeStackables(prenormMods, "mercury_pt", mercuryPts));
-  }
+  pushNormalizedStackable(mods, prenormMods, "mercury_pt", mercuryPts);
 
   const maxFocusBlessings = calcMaxBlessings(mods, "focus", derivedCtx);
   const focusBlessings = calcNumFocus(maxFocusBlessings, config);
