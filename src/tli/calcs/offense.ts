@@ -23,11 +23,13 @@ import type {
   BaseSupportSkillSlot,
   Configuration,
   DmgRange,
+  Gear,
   Loadout,
   MagnificentSupportSkillSlot,
   NobleSupportSkillSlot,
   SkillSlot,
 } from "../core";
+import type { EquipmentType } from "../gear_data_types";
 import { getHeroTraitMods } from "../hero/hero_trait_mods";
 import type {
   DmgChunkType,
@@ -310,6 +312,26 @@ const calculateImplicitMods = (): Mod[] => {
       addn: true,
       per: { stackable: "main_stat" },
       src: "Additional Damage from skill Main Stat (.5% per stat)",
+    },
+    // dual wield
+    {
+      type: "AspdPct",
+      value: 10,
+      addn: true,
+      cond: "is_dual_wielding",
+      src: "Dual Wielding",
+    },
+    {
+      type: "AttackBlockChancePct",
+      value: 30,
+      cond: "is_dual_wielding",
+      src: "Dual Wielding",
+    },
+    {
+      type: "SpellBlockChancePct",
+      value: 30,
+      cond: "is_dual_wielding",
+      src: "Dual Wielding",
     },
     {
       type: "DmgPct",
@@ -594,14 +616,37 @@ interface DerivedCtx {
   hasBlasphemer: boolean;
   hero?: HeroName;
   luckyDmg: boolean;
+  dualWielding: boolean;
 }
+
+const isOneHandedWeapon = (gear: Gear): boolean => {
+  const validEquipmentTypes: EquipmentType[] = [
+    "Claw",
+    "Dagger",
+    "One-Handed Sword",
+    "One-Handed Hammer",
+    "One-Handed Axe",
+    "Wand",
+    "Rod",
+    "Scepter",
+    "Cane",
+    "Pistol",
+  ];
+  return validEquipmentTypes.includes(gear.equipmentType);
+};
 
 const resolveDerivedCtx = (loadout: Loadout, mods: Mod[]): DerivedCtx => {
   const hasHasten = findMod(mods, "HasHasten") !== undefined;
   const hasBlasphemer = findMod(mods, "Blasphemer") !== undefined;
   const luckyDmg = findMod(mods, "LuckyDmg") !== undefined;
   const hero = loadout.heroPage.selectedHero;
-  return { hasHasten, hasBlasphemer, luckyDmg, hero };
+  const equippedGear = loadout.gearPage.equippedGear;
+  const dualWielding =
+    equippedGear.mainHand !== undefined &&
+    equippedGear.offHand !== undefined &&
+    isOneHandedWeapon(equippedGear.mainHand) &&
+    isOneHandedWeapon(equippedGear.offHand);
+  return { hasHasten, hasBlasphemer, luckyDmg, hero, dualWielding };
 };
 
 const hasPactspirit = (name: PactspiritName, loadout: Loadout): boolean => {
@@ -731,6 +776,7 @@ const filterModsByCond = (
         () => config.hasUsedMobilitySkillRecently,
       )
       .with("has_cast_curse_recently", () => config.hasCastCurseRecently)
+      .with("is_dual_wielding", () => derivedCtx.dualWielding)
       .exhaustive();
   });
 };

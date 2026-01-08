@@ -138,6 +138,7 @@ export interface PerStackable {
 
 export type Condition =
   | "holding_shield"
+  | "is_dual_wielding"
   | "enemy_frostbitten"
   | "realm_of_mercury"
   | "has_focus_blessing"
