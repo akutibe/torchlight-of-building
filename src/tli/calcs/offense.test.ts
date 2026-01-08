@@ -5439,4 +5439,35 @@ describe("dual wielding", () => {
     expect(summary?.offhand?.avgHitWithCrit).toBeCloseTo(107.5);
     expect(summary?.avgDps).toBeCloseTo(118.25);
   });
+
+  test("joined force adds 60% of offhand damage to mainhand and disables offhand attacks", () => {
+    // Joined Force:
+    // - Off-Hand Weapons do not participate in attacks while Dual Wielding
+    // - Adds 60% of Off-Hand Weapon damage to Main-Hand Weapon
+    // Mainhand: 100 phys dmg, Offhand: 200 phys dmg
+    // Both 1.0 base aspd, dual wielding +10% = 1.1 aspd
+    // Offhand avgHit = 200, 60% of that = 120
+    // Mainhand avgHit = 100 + 120 = 220
+    // avgHitWithCrit = 220 * 1.025 = 225.5
+    // Only mainhand attacks at 1.1 aspd: avgDps = 225.5 * 1.1 = 248.05
+    const input = createDualWieldInput(
+      { physDmg: 100, aspd: 1.0 },
+      { physDmg: 200, aspd: 1.0 },
+      affixLines([
+        { type: "JoinedForceAddOffhandToMainhandPct", value: 60 },
+        { type: "JoinedForceDisableOffhand" },
+      ]),
+    );
+    const results = calculateOffense(input);
+    const summary = results.skills[skillName]?.attackDpsSummary;
+
+    // Mainhand gets 60% of offhand's avgHit added
+    expect(summary?.mainhand.avgHit).toBeCloseTo(220);
+    expect(summary?.mainhand.avgHitWithCrit).toBeCloseTo(225.5);
+    expect(summary?.mainhand.aspd).toBeCloseTo(1.1);
+    // Offhand is undefined in output (doesn't participate in attacks)
+    expect(summary?.offhand).toBeUndefined();
+    // DPS only comes from mainhand: 225.5 * 1.1 = 248.05
+    expect(summary?.avgDps).toBeCloseTo(248.05);
+  });
 });

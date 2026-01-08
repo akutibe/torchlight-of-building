@@ -396,6 +396,8 @@ interface ModDefinitions {
   // core talent specific
   ReapPurificationPct: { value: number };
   SpellRipple: { chancePct: number; pctOfHitDmg: number };
+  JoinedForceDisableOffhand: object;
+  JoinedForceAddOffhandToMainhandPct: { value: number };
   // hero-specific mods
   Blasphemer: object;
   // bing2

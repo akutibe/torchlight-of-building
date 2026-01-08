@@ -1943,6 +1943,7 @@ interface CalcWeaponAttackInput {
 
 const calcWeaponAttack = (
   weapon: Gear,
+  extraJoinedForceAvgHitDmg: number,
   input: CalcWeaponAttackInput,
 ): WeaponAttackSummary | undefined => {
   const { mods, skill, skillLevel, derivedCtx, config, critDmgMult } = input;
@@ -1959,7 +1960,7 @@ const calcWeaponAttack = (
   );
   if (skillHit === undefined) return;
 
-  const avgHit = skillHit.avg;
+  const avgHit = skillHit.avg + extraJoinedForceAvgHitDmg;
   const aspd = calculateAspd(weapon, mods);
   const critChance = calculateCritChance(mods, skill);
   const avgHitWithCrit =
@@ -1990,18 +1991,29 @@ const calcAvgAttackDps = (
     config,
     critDmgMult,
   };
-  const mainhandAtk = calcWeaponAttack(mainhand, calcWeaponAttackInput);
-  if (mainhandAtk === undefined) {
-    return undefined;
-  }
   // Only calculate offhand attack if offhand is a one-handed weapon (not a shield)
   const offhandAtk =
     offhand !== undefined && isOneHandedWeapon(offhand)
-      ? calcWeaponAttack(offhand, calcWeaponAttackInput)
+      ? calcWeaponAttack(offhand, 0, calcWeaponAttackInput)
       : undefined;
+  const joinedForceAddedDmgPct = findMod(
+    mods,
+    "JoinedForceAddOffhandToMainhandPct",
+  );
+  const joinedForceAddedDmg =
+    ((joinedForceAddedDmgPct?.value ?? 0) / 100) * (offhandAtk?.avgHit ?? 0);
+  const mainhandAtk = calcWeaponAttack(
+    mainhand,
+    joinedForceAddedDmg,
+    calcWeaponAttackInput,
+  );
+  if (mainhandAtk === undefined) {
+    return undefined;
+  }
 
   let avgDpsWithoutExtras: number;
-  if (offhandAtk === undefined) {
+  const disableOffhand = modExists(mods, "JoinedForceDisableOffhand");
+  if (offhandAtk === undefined || disableOffhand) {
     avgDpsWithoutExtras = mainhandAtk.aspd * mainhandAtk.avgHitWithCrit;
   } else {
     const mainhandAtkInterval = 1 / mainhandAtk.aspd;
@@ -2015,7 +2027,12 @@ const calcAvgAttackDps = (
   const extraMult = calculateExtraOffenseMults(mods, config);
 
   const avgDps = avgDpsWithoutExtras * doubleDmgMult * extraMult;
-  return { mainhand: mainhandAtk, offhand: offhandAtk, critDmgMult, avgDps };
+  return {
+    mainhand: mainhandAtk,
+    offhand: disableOffhand ? undefined : offhandAtk,
+    critDmgMult,
+    avgDps,
+  };
 };
 
 interface CalcSpellHitOutput {
