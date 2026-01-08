@@ -11,6 +11,7 @@ import {
   manaBoilParser,
   mindControlParser,
   secretOriginUnleashParser,
+  thunderSpikeParser,
   timidParser,
 } from "./active_parsers";
 import {
@@ -145,6 +146,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Summon Fire Magus",
     categories: ["passive"],
     parser: summonFireMagusParser,
+  },
+  {
+    skillName: "Thunder Spike",
+    categories: ["active"],
+    parser: thunderSpikeParser,
   },
 ];
 

@@ -535,3 +535,43 @@ export const secretOriginUnleashParser: SupportLevelParser = (input) => {
     cspdPctPerFocusBlessing: createConstantLevels(cspdMatch.value),
   };
 };
+
+export const thunderSpikeParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  // Get columns
+  const addedDmgEffCol = findColumn(
+    progressionTable,
+    "effectiveness of added damage",
+    skillName,
+  );
+
+  const weaponAtkDmgPct: Record<number, number> = {};
+  const addedDmgEffPct: Record<number, number> = {};
+
+  // Extract values from "Effectiveness of added damage" column (levels 1-20)
+  // Both weaponAtkDmgPct and addedDmgEffPct use the same values for this skill
+  for (const [levelStr, text] of Object.entries(addedDmgEffCol.rows)) {
+    const level = Number(levelStr);
+    if (level <= 20 && text !== "") {
+      const value = parseNumericValue(text);
+      weaponAtkDmgPct[level] = value;
+      addedDmgEffPct[level] = value;
+    }
+  }
+
+  // Fill levels 21-40 with level 20 values
+  const level20Value = weaponAtkDmgPct[20];
+  if (level20Value === undefined) {
+    throw new Error(`${skillName}: level 20 value missing`);
+  }
+  for (let level = 21; level <= 40; level++) {
+    weaponAtkDmgPct[level] = level20Value;
+    addedDmgEffPct[level] = level20Value;
+  }
+
+  validateAllLevels(weaponAtkDmgPct, skillName);
+  validateAllLevels(addedDmgEffPct, skillName);
+
+  return { weaponAtkDmgPct, addedDmgEffPct };
+};

@@ -373,6 +373,7 @@ interface ModDefinitions {
   InflictParalysisPct: { value: number };
   FreezeDurationPct: { value: number };
   InflictFrail: object;
+  InflictNumbed: object;
   NumbedEffPct: { value: number };
   NumbedChancePct: { value: number };
   InflictTrauma: object;

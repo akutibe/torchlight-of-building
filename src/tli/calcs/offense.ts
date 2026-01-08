@@ -562,6 +562,17 @@ const calculateAtkHit = (
       }
       return multDRs(gearDmg.mainHand, weaponAtkDmgPct / 100);
     })
+    .with("Thunder Spike", () => {
+      const weaponAtkDmgPct = getLevelOffenseValue(
+        skill,
+        "WeaponAtkDmgPct",
+        level,
+      );
+      if (typeof weaponAtkDmgPct !== "number") {
+        return undefined;
+      }
+      return multDRs(gearDmg.mainHand, weaponAtkDmgPct / 100);
+    })
     .with("[Test] Simple Attack", () => {
       return gearDmg.mainHand;
     })

@@ -41,6 +41,16 @@ export const activeSkillModFactories: Partial<
       },
     ],
   }),
+  "Thunder Spike": (l, vals) => ({
+    offense: [
+      { type: "WeaponAtkDmgPct", value: v(vals.weaponAtkDmgPct, l) },
+      { type: "AddedDmgEffPct", value: v(vals.addedDmgEffPct, l) },
+    ],
+    mods: [
+      { type: "ConvertDmgPct", value: 100, from: "physical", to: "lightning" },
+      { type: "InflictNumbed" },
+    ],
+  }),
   "Frost Spike": (l, vals) => ({
     offense: [
       { type: "WeaponAtkDmgPct", value: v(vals.weaponAtkDmgPct, l) },
