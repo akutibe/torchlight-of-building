@@ -264,6 +264,7 @@ interface ModDefinitions {
   SweepSlashDmg: { value: number; addn: boolean };
   AddnMainHandDmgPct: { value: number };
   GearAspdPct: { value: number };
+  GearCritRatingPct: { value: number };
   FlatGearDmg: {
     value: DmgRange;
     modType:

@@ -2343,3 +2343,55 @@ test("parse additional numbed effect on critical strike", () => {
     { type: "NumbedEffPct", value: 24, cond: "has_crit_recently" },
   ]);
 });
+
+test("parse gear attack critical strike rating", () => {
+  const result = parseMod("+40% Attack Critical Strike Rating for this gear");
+  expect(result).toEqual([{ type: "GearCritRatingPct", value: 40 }]);
+});
+
+test("parse gear critical strike rating (global)", () => {
+  const result = parseMod("+25% Critical Strike Rating for this gear");
+  expect(result).toEqual([{ type: "GearCritRatingPct", value: 25 }]);
+});
+
+test("parse flat gear lightning damage", () => {
+  const result = parseMod("Adds 16 - 278 Lightning Damage to the gear");
+  expect(result).toEqual([
+    { type: "FlatGearDmg", value: { min: 16, max: 278 }, modType: "lightning" },
+  ]);
+});
+
+test("parse flat gear physical damage", () => {
+  const result = parseMod("Adds 10 - 50 Physical Damage to the gear");
+  expect(result).toEqual([
+    { type: "FlatGearDmg", value: { min: 10, max: 50 }, modType: "physical" },
+  ]);
+});
+
+test("parse flat gear elemental damage", () => {
+  const result = parseMod("Adds 5 - 100 Elemental Damage to the gear");
+  expect(result).toEqual([
+    { type: "FlatGearDmg", value: { min: 5, max: 100 }, modType: "elemental" },
+  ]);
+});
+
+test("parse flat gear fire damage", () => {
+  const result = parseMod("Adds 20 - 60 Fire Damage to the gear");
+  expect(result).toEqual([
+    { type: "FlatGearDmg", value: { min: 20, max: 60 }, modType: "fire" },
+  ]);
+});
+
+test("parse flat gear cold damage", () => {
+  const result = parseMod("Adds 30 - 80 Cold Damage to the gear");
+  expect(result).toEqual([
+    { type: "FlatGearDmg", value: { min: 30, max: 80 }, modType: "cold" },
+  ]);
+});
+
+test("parse flat gear erosion damage", () => {
+  const result = parseMod("Adds 15 - 45 Erosion Damage to the gear");
+  expect(result).toEqual([
+    { type: "FlatGearDmg", value: { min: 15, max: 45 }, modType: "erosion" },
+  ]);
+});

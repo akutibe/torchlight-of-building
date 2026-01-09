@@ -1410,4 +1410,20 @@ export const allParsers = [
   t(
     "{value:+dec%} additional attack damage when strength is no less than dexterity",
   ).output("TradeoffStrGteDexDmgPct", (c) => ({ value: c.value })),
+  // Gear-specific mods
+  t(
+    "{value:+dec%} [{modType:CritRatingModType}] critical strike rating for this gear",
+  ).output("GearCritRatingPct", (c) => ({ value: c.value })),
+  t(
+    "adds {min:int} - {max:int} {modType:GearDmgModType} damage to the gear",
+  ).output("FlatGearDmg", (c) => ({
+    value: { min: c.min, max: c.max },
+    modType: c.modType as
+      | "physical"
+      | "cold"
+      | "lightning"
+      | "fire"
+      | "erosion"
+      | "elemental",
+  })),
 ];

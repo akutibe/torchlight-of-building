@@ -33,6 +33,17 @@ registerEnum("SkillLevelType", SkillLevelTypes);
 registerEnum("ResType", ResTypes);
 registerEnum("InfiltrationType", InfiltrationTypes);
 
+// GearDmgModType for FlatGearDmg (includes "elemental" unlike DmgChunkType)
+export const GearDmgModTypes = [
+  "physical",
+  "cold",
+  "lightning",
+  "fire",
+  "erosion",
+  "elemental",
+] as const;
+registerEnum("GearDmgModType", GearDmgModTypes);
+
 // Custom word mappings for enums (input word -> output value)
 export const StatWordMapping: Record<string, string> = {
   strength: "str",
