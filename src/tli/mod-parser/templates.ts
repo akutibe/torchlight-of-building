@@ -1361,4 +1361,11 @@ export const allParsers = [
   t(
     "changes the base effect of numbed to: {value:+dec%} additional lightning damage taken",
   ).output("Conductive", (c) => ({ value: c.value })),
+  // Tradeoff mods (Impermanence core talent)
+  t(
+    "{value:+dec%} additional attack speed when dexterity is no less than strength",
+  ).output("TradeoffDexGteStrAspdPct", (c) => ({ value: c.value })),
+  t(
+    "{value:+dec%} additional attack damage when strength is no less than dexterity",
+  ).output("TradeoffStrGteDexDmgPct", (c) => ({ value: c.value })),
 ];

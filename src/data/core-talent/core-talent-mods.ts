@@ -708,9 +708,11 @@ export const CoreTalentMods: Record<CoreTalentName, Affix> = {
     affixLines: [
       {
         text: "+20% additional Attack Speed when Dexterity is no less than Strength",
+        mods: [{ type: "TradeoffDexGteStrAspdPct", value: 20 }],
       },
       {
         text: "+25% additional Attack Damage when Strength is no less than Dexterity",
+        mods: [{ type: "TradeoffStrGteDexDmgPct", value: 25 }],
       },
     ],
   },

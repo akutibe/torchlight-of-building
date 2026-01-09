@@ -411,6 +411,8 @@ interface ModDefinitions {
   JoinedForceDisableOffhand: object;
   JoinedForceAddOffhandToMainhandPct: { value: number };
   Conductive: { value: number };
+  TradeoffDexGteStrAspdPct: { value: number };
+  TradeoffStrGteDexDmgPct: { value: number };
   // hero-specific mods
   Blasphemer: object;
   // bing2

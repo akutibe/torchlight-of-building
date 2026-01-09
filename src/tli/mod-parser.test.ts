@@ -2279,3 +2279,17 @@ test("parse unsigned projectile speed", () => {
     { type: "ProjectileSpeedPct", value: 4.5, addn: false },
   ]);
 });
+
+test("parse tradeoff dex >= str attack speed", () => {
+  const result = parseMod(
+    "+20% additional Attack Speed when Dexterity is no less than Strength",
+  );
+  expect(result).toEqual([{ type: "TradeoffDexGteStrAspdPct", value: 20 }]);
+});
+
+test("parse tradeoff str >= dex attack damage", () => {
+  const result = parseMod(
+    "+25% additional Attack Damage when Strength is no less than Dexterity",
+  );
+  expect(result).toEqual([{ type: "TradeoffStrGteDexDmgPct", value: 25 }]);
+});

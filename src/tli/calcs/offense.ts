@@ -1601,6 +1601,29 @@ const pushMultistrikeDmgBonus = (
   });
 };
 
+const pushTradeoff = (mods: Mod[], resourcePool: ResourcePool) => {
+  const { str, dex } = resourcePool.stats;
+  const tradeoffDexGteStrAspdPct = findMod(mods, "TradeoffDexGteStrAspdPct");
+  const tradeoffStrGteDexDmgPct = findMod(mods, "TradeoffStrGteDexDmgPct");
+  if (tradeoffDexGteStrAspdPct !== undefined && dex >= str) {
+    mods.push({
+      type: "AspdPct",
+      addn: true,
+      value: tradeoffDexGteStrAspdPct.value,
+      src: "Tradeoff",
+    });
+  }
+  if (tradeoffStrGteDexDmgPct !== undefined && str >= dex) {
+    mods.push({
+      type: "DmgPct",
+      addn: true,
+      dmgModType: "attack",
+      value: tradeoffStrGteDexDmgPct.value,
+      src: "Tradeoff",
+    });
+  }
+};
+
 interface DerivedOffenseCtx {
   maxSpellBurst: number;
   spellBurstChargeSpeedBonusPct: number;
@@ -1652,6 +1675,7 @@ const resolveModsForOffenseSkill = (
   normalize("highest_stat", highestStat);
   normalize("stat", sumStats);
 
+  pushTradeoff(mods, resourcePool);
   pushWhimsy(mods, config);
   pushAttackAggression(mods, config); // must happen before movement speed
   pushSpellAggression(mods, config); // must happen before spell burst charge speed calculation
