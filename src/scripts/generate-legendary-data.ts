@@ -175,30 +175,58 @@ const parseAffix = (
   return affixText;
 };
 
+// biome-ignore lint/suspicious/noExplicitAny: cheerio internal type
+type CheerioCard = cheerio.Cheerio<any>;
+
+const extractNormalAffixes = (
+  card: CheerioCard,
+  $: cheerio.CheerioAPI,
+  choiceCards: Map<string, AffixChoiceCard>,
+): LegendaryAffix[] => {
+  const affixes: LegendaryAffix[] = [];
+  card.find("div.t1").each((_, el) => {
+    const affixText = cleanHtmlText($(el), $);
+    if (affixText) {
+      affixes.push(parseAffix(affixText, choiceCards, false));
+    }
+  });
+  return affixes;
+};
+
 const extractLegendary = (
   $: cheerio.CheerioAPI,
   filename: string,
   choiceCards: Map<string, AffixChoiceCard>,
 ): TlidbLegendary | undefined => {
-  // Find the SS11Season card (not the previousItem one)
-  // biome-ignore lint/suspicious/noExplicitAny: cheerio internal type
-  let mainCard: cheerio.Cheerio<any> | undefined;
+  // Find both SS11Season and SS10Season cards
+  let s11Card: CheerioCard | undefined;
+  let s10Card: CheerioCard | undefined;
 
   $(".card.ui_item").each((_, card) => {
     const $card = $(card);
-    // Skip if it's a previousItem (SS10 card)
-    if ($card.hasClass("previousItem")) return;
-    // Check if it has item_ver with SS11Season
     const itemVer = $card.find(".item_ver").text().trim();
-    if (itemVer === "SS11Season") {
-      mainCard = $card;
-      return false; // break loop
+    if (itemVer === "SS11Season" && !$card.hasClass("previousItem")) {
+      s11Card = $card;
+    } else if (itemVer === "SS10Season") {
+      s10Card = $card;
     }
   });
 
-  if (!mainCard) {
+  if (s11Card === undefined) {
     console.log(`  Skipping ${filename}: No SS11Season card found`);
     return undefined;
+  }
+
+  // Try SS11 card first, fall back to SS10 if no affixes
+  let mainCard = s11Card;
+  let normalAffixes = extractNormalAffixes(mainCard, $, choiceCards);
+
+  if (normalAffixes.length === 0 && s10Card !== undefined) {
+    console.log(
+      `  ${filename}: SS11 card has no affixes, falling back to SS10`,
+    );
+    mainCard = s10Card;
+    normalAffixes = extractNormalAffixes(mainCard, $, choiceCards);
   }
 
   // Extract name
@@ -229,15 +257,6 @@ const extractLegendary = (
     }
     nextElem = nextElem.next();
   }
-
-  // Extract normal affixes (div.t1)
-  const normalAffixes: LegendaryAffix[] = [];
-  mainCard.find("div.t1").each((_, el) => {
-    const affixText = cleanHtmlText($(el), $);
-    if (affixText) {
-      normalAffixes.push(parseAffix(affixText, choiceCards, false));
-    }
-  });
 
   // Find the Corroded card
   // biome-ignore lint/suspicious/noExplicitAny: cheerio internal type
