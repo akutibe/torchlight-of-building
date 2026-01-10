@@ -1567,13 +1567,17 @@ const pushMultistrikeDmgBonus = (
   if (multistrikeChancePct <= 0 || multistrikeIncDmgPct <= 0) {
     return;
   }
-  const maxHits = Math.floor(multistrikeChancePct / 100) + 2;
+  const initialCount = sumByValue(filterMods(mods, "InitialMultistrikeCount"));
+  const maxHits = initialCount + Math.floor(multistrikeChancePct / 100) + 2;
   let expectedDmgMult = 0;
-  for (let hitNumber = 0; hitNumber < maxHits; hitNumber++) {
+  for (let hitNumber = initialCount; hitNumber < maxHits; hitNumber++) {
     const hitProbability =
-      hitNumber === 0
+      hitNumber === initialCount
         ? 1.0
-        : Math.min(1.0, multistrikeChancePct / 100 - (hitNumber - 1));
+        : Math.min(
+            1.0,
+            multistrikeChancePct / 100 - (hitNumber - (1 + initialCount)),
+          );
 
     const hitDamageMultiplier = 1.0 + hitNumber * (multistrikeIncDmgPct / 100);
     expectedDmgMult += hitProbability * hitDamageMultiplier;
@@ -1646,7 +1650,7 @@ const pushErika1 = (
     addn: true,
     value: 13 * stacks,
   });
-  normalizeStackables(prenormMods, "stalker", stacks);
+  mods.push(...normalizeStackables(prenormMods, "stalker", stacks));
 };
 
 interface DerivedOffenseCtx {

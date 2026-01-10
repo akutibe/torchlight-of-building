@@ -5648,4 +5648,28 @@ describe("multistrike damage bonus", () => {
     const results = calculateOffense(input);
     validate(results, skillName, { aspd: 1.1 });
   });
+
+  test("100% multistrike with 30% increasing damage and initial count 2", () => {
+    // Initial count 2 means first hit uses hitNumber=2 (as if 3rd hit)
+    // 100% multistrike = always 2 hits
+    // hitNumber 2: prob=1.0, mult=1.6 → 1.6
+    // hitNumber 3: prob=1.0, mult=1.9 → 1.9
+    // expectedDmgMult = 3.5, expectedHits = 2.0
+    // avgDmgPerHit = 3.5 / 2.0 = 1.75, bonus = 75%
+    // Base 100 * 1.75 = 175
+    const input = {
+      loadout: initLoadout({
+        gearPage: { equippedGear: { mainHand: weaponWithAspd }, inventory: [] },
+        customAffixLines: affixLines([
+          { type: "MultistrikeChancePct", value: 100 },
+          { type: "MultistrikeIncDmgPct", value: 30 },
+          { type: "InitialMultistrikeCount", value: 2 },
+        ]),
+        skillPage: simpleAttackSkillPage(),
+      }),
+      configuration: defaultConfiguration,
+    };
+    const results = calculateOffense(input);
+    validate(results, skillName, { avgHit: 175 });
+  });
 });
