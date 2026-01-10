@@ -16,7 +16,3 @@ msgstr ""
 #: src/routes/index.tsx:326
 msgid "My Builds"
 msgstr "我的配装"
-
-#: src/routes/index.tsx:334
-#~ msgid "Your Builds"
-#~ msgstr "我的配装"
